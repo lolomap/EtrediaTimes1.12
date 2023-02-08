@@ -1,0 +1,443 @@
+d_wic = {
+    clear_array = global.wi_countries
+}
+d_mtest = {
+retire_country_leader = yes
+}
+
+####
+
+delete_dirian_militia = {
+    delete_units = {
+        division_template = "Democrat Militia"
+        disband = yes
+    }
+    delete_units = {
+        division_template = "Communist Militia"
+        disband = yes
+    }
+    delete_units = {
+        division_template = "Pupil Militia"
+        disband = yes
+    }
+    delete_units = {
+        division_template = "Syndicat militia"
+        disband = yes
+    }
+}
+
+
+d_calc_wi = {
+    set_variable = {division_inf_factor = num_divisions}
+    multiply_variable = {division_inf_factor = 0.025}
+
+    set_variable = {factories_inf_factor = num_of_factories}
+    multiply_variable = {factories_inf_factor = 0.03}
+
+    set_variable = {nuke_inf_factor = num_of_nukes}
+    multiply_variable = {nuke_inf_factor = 0.5}
+
+    set_temp_variable = {oil_inf_factor = resource_produced@oil}
+    multiply_temp_variable = {oil_inf_factor = 0.125}
+
+    set_temp_variable = {aluminium_inf_factor = resource_produced@aluminium}
+    multiply_temp_variable = {aluminium_inf_factor = 0.325}
+
+    set_temp_variable = {rubber_inf_factor = resource_produced@rubber}
+    multiply_temp_variable = {rubber_inf_factor = 0.125}
+
+    set_temp_variable = {tungsten_inf_factor = resource_produced@tungsten}
+    multiply_temp_variable = {tungsten_inf_factor = 0.8}
+
+    set_temp_variable = {steel_inf_factor = resource_produced@steel}
+    multiply_temp_variable = {steel_inf_factor = 0.1}
+
+    set_temp_variable = {chromium_inf_factor = resource_produced@chromium}
+    multiply_temp_variable = {chromium_inf_factor = 0.179}
+
+    set_temp_variable = {uranium_inf_factor = resource_produced@uranium}
+    multiply_temp_variable = {uranium_inf_factor = 3}
+
+    set_variable = {resources_inf_factor = 0}
+    add_to_variable = {resources_inf_factor = oil_inf_factor}
+    add_to_variable = {resources_inf_factor = aluminium_inf_factor}
+    add_to_variable = {resources_inf_factor = rubber_inf_factor}
+    add_to_variable = {resources_inf_factor = tungsten_inf_factor}
+    add_to_variable = {resources_inf_factor = steel_inf_factor}
+    add_to_variable = {resources_inf_factor = chromium_inf_factor}
+    add_to_variable = {resources_inf_factor = uranium_inf_factor}
+    multiply_variable = {resources_inf_factor = 0.015}
+
+
+    set_temp_variable = {eoil_inf_factor = resource_exported@oil}
+    multiply_temp_variable = {eoil_inf_factor = 0.125}
+
+    set_temp_variable = {ealuminium_inf_factor = resource_exported@aluminium}
+    multiply_temp_variable = {ealuminium_inf_factor = 0.325}
+
+    set_temp_variable = {erubber_inf_factor = resource_exported@rubber}
+    multiply_temp_variable = {erubber_inf_factor = 0.125}
+
+    set_temp_variable = {etungsten_inf_factor = resource_exported@tungsten}
+    multiply_temp_variable = {etungsten_inf_factor = 0.8}
+
+    set_temp_variable = {esteel_inf_factor = resource_exported@steel}
+    multiply_temp_variable = {esteel_inf_factor = 0.1}
+
+    set_temp_variable = {echromium_inf_factor = resource_exported@chromium}
+    multiply_temp_variable = {echromium_inf_factor = 0.179}
+
+    set_temp_variable = {euranium_inf_factor = resource_exported@uranium}
+    multiply_temp_variable = {euranium_inf_factor = 3}
+
+    set_variable = {eresources_inf_factor = 0}
+    add_to_variable = {eresources_inf_factor = eoil_inf_factor}
+    add_to_variable = {eresources_inf_factor = ealuminium_inf_factor}
+    add_to_variable = {eresources_inf_factor = erubber_inf_factor}
+    add_to_variable = {eresources_inf_factor = etungsten_inf_factor}
+    add_to_variable = {eresources_inf_factor = esteel_inf_factor}
+    add_to_variable = {eresources_inf_factor = echromium_inf_factor}
+    add_to_variable = {eresources_inf_factor = euranium_inf_factor}
+    multiply_variable = {eresources_inf_factor = 0.03}
+    
+
+    set_variable = {world_influence = 0}
+    add_to_variable = {world_influence = division_inf_factor}
+    add_to_variable = {world_influence = factories_inf_factor}
+    add_to_variable = {world_influence = nuke_inf_factor}
+    add_to_variable = {world_influence = resources_inf_factor}
+    add_to_variable = {world_influence = eresources_inf_factor}
+    multiply_variable = {world_influence = winfluence_cost}
+    
+    #add_to_array = {global.wi_values = world_influence}
+    #set_variable = {global.wi_countries^world_influence = THIS}
+}
+
+d_calc_wi_e = {
+    #clear_array = global.wi_values
+    every_country = {
+        #limit = {is_major = yes}
+        d_calc_wi = yes
+    }
+}
+
+d_sort_wi = {
+    #set_temp_variable = { table_qs_compare = 0 }
+    #set_variable = {high = global.wi_countries^num}
+    #subtract_from_variable = { high = 1 }
+    #set_variable = { low = 0 }
+    #table_quicksort = yes
+    #start_create_sorted_array = yes
+
+    for_each_loop = {
+		array = global.wi_countries
+		set_temp_variable = { j = i }
+		subtract_from_temp_variable = { j = 1 }
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					var = j
+					value = 0
+					compare = greater_than_or_equals
+				}
+                var:v = {
+                    var:global.wi_countries^j = {
+                        check_variable = {
+                            var = PREV.world_influence
+                            value = world_influence
+                            compare = greater_than
+                        }
+                    }
+                }
+			}
+			set_temp_variable = { j_plus_1 = j }
+			add_to_temp_variable = { j_plus_1 = 1 }
+			set_variable = { global.wi_countries^j_plus_1 = global.wi_countries^j }
+			subtract_from_temp_variable = { j = 1 }
+		}
+		set_temp_variable = { j_plus_1 = j }
+		add_to_temp_variable = { j_plus_1 = 1 }
+		set_variable = { global.wi_countries^j_plus_1 = v }
+	}
+
+}
+
+war_crysis_ban_factions = {
+    if = {
+        limit = {always = yes} #{not = {is_in_faction}}
+
+        if = {
+            limit = {has_rule = can_join_factions}
+            set_country_flag = wcrysis_can_join_factions
+        }
+        else = {clr_country_flag = wcrysis_can_join_factions}
+        
+        set_rule = {can_join_factions = no}
+    }
+    
+    set_country_flag = banned_for_factions
+}
+
+war_crysis_unban_factions = {
+    if = {
+        limit = {has_country_flag = wcrysis_can_join_factions}
+        set_rule = {can_join_factions = yes}
+        clr_country_flag = wcrysis_can_join_factions
+    }
+    clr_country_flag = banned_for_factions
+}
+
+encount_minors = {
+    every_owned_state = {
+        for_each_loop = {
+            array = THIS.core_countries
+            value = v
+            if = {
+                limit = {
+                    var:v = {not = {tag = PREV.owner}}
+                    owner = {not = {is_in_array = {minor_countries = v}}}
+                }
+                owner = {add_to_array = {minor_countries = v}}
+            }
+        }
+    }
+}
+
+encount_majors = {
+    var:global.sender_crysis = {add_threat = 8}
+    clear_array = global.crysis_senders
+    clear_array = global.crysis_tos
+    clear_array = global.crysis_majors
+    every_country = {
+        limit = {
+            not = {tag = global.sender_crysis}
+            not = {tag = global.to_crysis}
+            OR = {
+                AND = {
+                    var:global.sender_crysis = {is_major = yes}
+                    is_major = yes
+                }
+                AND = {
+                    var:global.sender_crysis = {is_major = no}
+                    OR = {
+                        var:global.sender_crysis = {is_in_array = {neighbors = PREV}}
+                        var:global.to_crysis = {is_in_array = {neighbors = PREV}}
+                    }
+                }
+            }
+            has_war = no
+            is_subject = no
+            
+            not = {is_in_array = {global.crysis_majors = THIS}}
+        }
+
+        add_to_array = {global.crysis_majors = THIS}
+    }
+    if = {
+        limit = {var:global.to_crysis = {is_subject = yes}}
+        var:global.to_crysis = {
+            OVERLORD = {add_to_array = {global.crysis_majors = THIS}}
+        }
+    }
+}
+
+d_calc_crysis = {
+
+    for_each_scope_loop = {
+        array = global.crysis_senders
+        set_variable = {is_highest_crysis = 1}
+    }
+    for_each_scope_loop = {
+        array = global.crysis_tos
+        set_variable = {is_highest_crysis = 1}
+    }
+
+    set_variable = {global.sender_crysis_op_status = 1}
+    set_variable = {global.to_crysis_op_status = 1}
+
+    set_variable = {global.cr_smax = 0}
+    set_variable = {global.cr_tmax = 0}
+
+    set_variable = {global.cr_send_op = global.sender_crysis}
+    set_variable = {global.cr_to_op = global.to_crysis}
+
+
+    set_variable = {global.crysis_s_totalwi = 0}
+    set_variable = {global.crysis_t_totalwi = 0}
+    for_each_scope_loop = {
+        array = global.crysis_senders
+        if = {
+            limit = {check_variable = {world_influence > global.cr_smax}}
+            set_variable = {global.cr_smax = world_influence}
+            set_variable = {global.cr_send_op = THIS}
+        }
+        add_to_variable = {global.crysis_s_totalwi = world_influence}
+    }
+    for_each_scope_loop = {
+        array = global.crysis_tos
+        if = {
+            limit = {check_variable = {world_influence > global.cr_tmax}}
+            set_variable = {global.cr_tmax = world_influence}
+            set_variable = {global.cr_to_op = THIS}
+        }
+        add_to_variable = {global.crysis_t_totalwi = world_influence}
+    }
+
+    var:global.sender_crysis = {
+        if = {
+            limit = {check_variable = {global.cr_smax > world_influence}}
+            var:global.cr_send_op = { set_variable = {is_highest_crysis = 2} }
+        }
+        else = {
+            set_variable = {global.cr_send_op = THIS}
+            set_variable = {global.sender_crysis_op_status = 2}
+        }
+        add_to_variable = {global.crysis_s_totalwi = world_influence}
+    }
+
+    var:global.to_crysis = {
+        if = {
+            limit = {check_variable = {global.cr_smax > world_influence}}
+            var:global.cr_to_op = { set_variable = {is_highest_crysis = 2} }
+        }
+        else = {
+            set_variable = {global.cr_to_op = THIS}
+            set_variable = {global.to_crysis_op_status = 2}
+        }
+        add_to_variable = {global.crysis_t_totalwi = world_influence}
+    }
+}
+
+d_crto = {
+    add_to_array = {global.crysis_tos = ROOT}
+    remove_from_array = {global.crysis_majors = ROOT}
+}
+
+d_crsend = {
+    add_to_array = {global.crysis_senders = ROOT}
+    remove_from_array = {global.crysis_majors = ROOT}
+}
+
+force_press = {
+    if = {
+        limit = {NOT = {check_variable = {global.cr_d_status = 3}}}
+        var:global.cr_to_op = {set_country_flag = crysis_press}
+    }
+    if = {
+        limit = {NOT = {check_variable = {global.cr_a_status = 3}}}
+        var:global.cr_send_op = {set_country_flag = crysis_press}
+    }
+}
+
+crysis_reward = {
+    if = { #марионетка
+        limit = {check_variable = {global.type_crysis = 0}}
+        var:global.sender_crysis = {puppet = global.to_crysis}
+
+        if = {
+            limit = {var:global.sender_crysis = {has_government = democratic}}
+            add_threat = -5
+        }
+    }
+    else_if = { #корки
+        limit = {check_variable = {global.type_crysis = 1}}
+        var:global.to_crysis = {
+            every_owned_state = {
+                limit = {
+                    OR = {
+                        is_claimed_by = global.sender_crysis
+                        is_core_of = global.sender_crysis
+                    }
+                }
+                var:global.sender_crysis = {
+                    transfer_state = PREV
+                }
+            }
+        }
+    }
+    else_if = { #минор
+        limit = {check_variable = {global.type_crysis = 2}}
+        var:global.to_crysis = {
+            release_on_controlled = global.minor_crysis
+        }
+    }
+}
+
+d_show_crysis = {
+    if = {
+        limit = {has_country_flag = cheat_show_cr_win}
+        clr_country_flag = cheat_show_cr_win
+    }
+    else = {
+        set_country_flag = cheat_show_cr_win
+    }
+}
+
+d_end_war_crysis = {
+    clr_global_flag = war_crysis
+    
+    if = {
+        limit = {
+            crysis_minor_occupy = yes
+            check_variable = {global.type_crysis = 2}
+        }
+        set_temp_variable = {cr_reward_wait = 1}
+    }
+    else_if = {
+        limit = {
+            crysis_cores_occupy = yes
+            check_variable = {global.type_crysis = 1}
+        }
+        set_temp_variable = {cr_reward_wait = 1}
+    }
+    else_if = {
+        limit = {
+            crysis_capitulated = yes
+        }
+        set_temp_variable = {cr_reward_wait = 1}
+    }
+
+
+    var:global.sender_crysis = {
+        white_peace = global.to_crysis
+        war_crysis_unban_factions = yes
+    }
+    for_each_scope_loop = {
+        array = global.crysis_senders
+        for_each_scope_loop = {
+            array = global.crysis_tos
+            white_peace = PREV
+            white_peace = global.sender_crysis
+            war_crysis_unban_factions = yes
+        }
+    }
+    for_each_scope_loop = {
+        array = global.crysis_senders
+        for_each_scope_loop = {
+            array = global.crysis_tos
+            white_peace = PREV
+            war_crysis_unban_factions = yes
+        }
+        white_peace = global.to_crysis
+    }
+    for_each_scope_loop = {
+        array = global.crysis_tos
+        for_each_scope_loop = {
+            array = global.crysis_senders
+            white_peace = PREV
+            war_crysis_unban_factions = yes
+        }
+        white_peace = global.sender_crysis
+    }
+    for_each_scope_loop = {
+        array = global.crysis_senders
+        white_peace = global.to_crysis
+        war_crysis_unban_factions = yes
+    }
+
+
+    if = {
+        limit = {check_variable = {cr_reward_wait = 1}}
+        crysis_reward = yes
+    }
+}

@@ -1,0 +1,67 @@
+﻿capital = 632
+
+OOB = "ECE_2014"
+
+set_research_slots = 1
+set_stability = 0.7
+set_war_support = 0.9
+
+add_ideas = {
+        WWW_bad_country
+        total_nonfree_press
+	fourth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+        basic_medium_tank = 1
+	advanced_medium_tank = 1
+	main_battle_tank = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 2
+        fascism = 11
+        communism = 0
+	neutrality = 87
+}
+
+set_convoys = 0
+
+
+recruit_character = ECE_alex_walker
+
+recruit_character = ECE_asnee_sintawichai
+
+recruit_character = ECE_supoj_traivut
+
+recruit_character = ECE_nawanthorn_shinawatra
+
+recruit_character = ECE_kaliq_salem
+
+recruit_character = ECE_disorn_tangwongsan
+
+recruit_character = ECE_sud_nitpattanasai
+
+recruit_character = ECE_qadim_benlabed
+

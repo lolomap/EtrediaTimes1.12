@@ -1,0 +1,56 @@
+﻿capital = 634
+
+OOB = "ZOG_2014"
+
+set_research_slots = 2
+set_stability = 0.7
+set_war_support = 0.7
+
+add_ideas = {
+        WWW_medium_country
+        nonfree_press
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	gwtank = 1
+        basic_medium_tank = 1
+	early_submarine = 1
+	early_light_cruiser = 1
+	early_destroyer = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 0
+        fascism = 0
+        communism = 0
+	neutrality = 100
+}
+
+set_convoys = 55
+
+
+recruit_character = ZOG_marcus_wilson
+
+recruit_character = ZOG_kaliq_salem
+
+recruit_character = ZOG_mavo_mazeona
+
+recruit_character = ZOG_qadim_benlabed
+

@@ -1,0 +1,72 @@
+characters={
+	DID_lyubcho_velizarov={
+		name="Lyubcho Velizarov"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DID_hubert_mazal={
+		name="Hubert Mazal"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DID_iom_haim={
+		name="Iom Haim"
+		portraits={
+			civilian={
+				large="gfx/leaders/DID/Portrait_did_democratic.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DID_turi_la_penta={
+		name="Turi La Penta"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DID_johannes_wilson={
+		name="Johannes Wilson"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			traits={ captain_of_industry financial_expert }
+			expire="2021.1.1.12"
+			id=-1
+		}
+	}
+}

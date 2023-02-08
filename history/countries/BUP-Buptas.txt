@@ -1,0 +1,47 @@
+﻿capital = 649
+
+OOB = "BUP_2014"
+
+set_research_slots = 1
+set_stability = 0.9
+set_war_support = 0.1
+
+add_ideas = {
+        WWW_bad_country
+        free_press
+	fifth_corruption_level
+}
+
+set_technology = {
+	infantry_weapons = 1
+	jeep_unit = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 0
+        fascism = 0
+        communism = 0
+	neutrality = 100
+}
+
+set_convoys = 2
+
+
+
+recruit_character = BUP_marcus_jones
+
+recruit_character = BUP_johannes_white
+
+recruit_character = BUP_alex_evans
+
+recruit_character = BUP_johannes_roberts
+
+recruit_character = BUP_king_bolampulalanogo_xiv
+

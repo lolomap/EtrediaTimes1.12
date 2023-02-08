@@ -1,0 +1,34 @@
+scripted_diplomatic_actions = {
+    accept_existance = {
+        visible = {
+            has_country_flag = BRAND_NEW_COUNTRY
+            ROOT = {NOT = {has_country_flag = ACCEPT_EXISTANCE_@PREV}}
+        }
+
+        show_acceptance_on_action_button = no
+		requires_acceptance = no
+
+        complete_effect = {
+            ROOT = {
+                set_country_flag = ACCEPT_EXISTANCE_@PREV
+            }
+        }
+
+        icon = 1
+        cost = 50
+
+        ai_desire = {
+            base = 1000
+            modifier = {
+                has_country_flag = ai_not_accept_existance
+                is_historical_focus_on = yes
+                add = -10000
+            }
+            modifier = {
+                has_country_flag = ai_not_accept_existance
+                is_historical_focus_on = no
+                add = -500
+            }
+        }
+    }
+}

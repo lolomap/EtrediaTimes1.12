@@ -1,0 +1,51 @@
+﻿capital = 745
+
+oob = "LOB_2014"
+
+set_research_slots = 2
+set_stability = 0.6
+set_war_support = 0.8
+
+add_ideas = {
+        www_bad_country
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+}
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2009.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 94
+        fascism = 0
+        communism = 6
+	neutrality = 0
+}
+#
+
+recruit_character = LOB_lucas_williams
+
+recruit_character = LOB_igmar_brits
+
+recruit_character = LOB_zandre_botha
+
+recruit_character = LOB_yerodin_opperman
+
+recruit_character = LOB_bern_van_rensburg
+
+recruit_character = LOB_renier_stander
+

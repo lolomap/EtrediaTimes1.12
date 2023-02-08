@@ -1,0 +1,32 @@
+
+state={
+	id=658
+	name="STATE_658"
+	manpower = 2800000
+	state_category = large_city
+	
+	resources={
+		oil = 48 # was: 54
+		uranium = 18 # was: 30
+	}
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 7
+                        industrial_complex = 5
+			arms_factory = 1
+			778 = {
+				naval_base = 8
+			}
+		}
+		add_core_of = PAL
+		victory_points = {
+			778 15
+		}
+
+	}
+	provinces={
+		752 770 778 790 792 808 824 837 
+	}
+}

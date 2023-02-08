@@ -1,0 +1,658 @@
+add_namespace = dirnews
+
+country_event = {
+	id = dirnews.1
+	title = dirnews.1.t
+	desc = dirnews.1.d
+	picture = GFX_news_even
+	
+    fire_only_once = yes
+
+	trigger = {
+        date > 2014.1.13
+        TAG = DIR
+    }
+    mean_time_to_happen = {
+        days = 1
+    }
+
+	option = {
+		name = dirnews.1.b
+        set_politics = {
+        ruling_party = communism 
+		}
+        set_country_flag = BRAND_NEW_COUNTRY
+        set_country_flag = ai_not_accept_existance
+        country_event = { days = 30 id = dirnews.2 }
+        news_event = {
+        id = newss.12
+        days = 1
+        }
+    }
+}
+
+country_event = {
+    id = dirnews.2
+    title = dirnews.2.t
+    desc = dirnews.2.d
+
+    fire_only_once = yes
+
+    trigger = {
+        TAG = DIR
+        date > 2014.1.30
+        NOT = { has_government = neutrality }
+	    NOT = { has_government = democratic }
+	}
+
+    option = {
+    name = dirnews.2.a
+    hidden_effect = {
+        DEM = {
+            transfer_state = 267
+			transfer_state = 270
+			transfer_state = 271
+			transfer_state = 272
+			transfer_state = 281
+			transfer_state = 277
+			transfer_state = 282
+			transfer_state = 283
+			transfer_state = 284
+			transfer_state = 280
+			transfer_state = 305
+			transfer_state = 306
+			transfer_state = 265
+			transfer_state = 279
+			transfer_state = 275
+			transfer_state = 276
+			transfer_state = 278
+			transfer_state = 826
+		    add_state_core = 265
+			add_state_core = 267
+			add_state_core = 307
+			add_state_core = 270
+			add_state_core = 271
+			add_state_core = 272
+			add_state_core = 275
+			add_state_core = 276
+			add_state_core = 277
+			add_state_core = 278
+			add_state_core = 279
+			add_state_core = 280
+			add_state_core = 281
+			add_state_core = 282
+			add_state_core = 283
+			add_state_core = 284
+			add_state_core = 305
+			add_state_core = 306
+			add_state_core = 256
+			add_state_core = 257
+			add_state_core = 258
+			add_state_core = 259
+			add_state_core = 260
+			add_state_core = 261
+			add_state_core = 262
+			add_state_core = 263
+			add_state_core = 264
+			add_state_core = 266
+			add_state_core = 268
+			add_state_core = 269
+			add_state_core = 285
+			add_state_core = 286
+			add_state_core = 287
+			add_state_core = 288
+			add_state_core = 786
+			add_state_core = 824
+			add_state_core = 825
+			add_state_core = 826
+            load_oob = DIR_democrat
+            }
+	}
+    DEM = { declare_war_on = { target = DIR type = annex_everything } }
+    DIR = {
+		load_oob = DIR_communist
+		add_ideas = { DIR_revolt }
+		add_ideas = { DEM_bad_economic }
+	}
+	DEM = {
+		add_ideas = { DIR_revolt }
+		add_ideas = { DEM_bad_economic }
+	}
+	KAR = { country_event = { days = 30 id = kar.1 } }
+	KAR = { country_event = { days = 240 id = kar.4 } }
+    DIR = {
+        every_state = {
+            limit = {is_core_of = DIR}
+            teleport_armies = {
+                to_state_array = owned_controlled_states
+            }
+        }
+	}
+	}
+	
+    option = {
+    name = dirnews.2.b
+    hidden_effect = {
+        DEM = {
+            transfer_state = 267
+			transfer_state = 270
+			transfer_state = 271
+			transfer_state = 272
+			transfer_state = 281
+			transfer_state = 277
+			transfer_state = 282
+			transfer_state = 283
+			transfer_state = 284
+			transfer_state = 280
+			transfer_state = 305
+			transfer_state = 306
+			transfer_state = 265
+			transfer_state = 279
+			transfer_state = 275
+			transfer_state = 276
+			transfer_state = 278
+			transfer_state = 826
+		    add_state_core = 265
+		    add_state_core = 307
+			add_state_core = 267
+			add_state_core = 270
+			add_state_core = 271
+			add_state_core = 272
+			add_state_core = 275
+			add_state_core = 276
+			add_state_core = 277
+			add_state_core = 278
+			add_state_core = 279
+			add_state_core = 280
+			add_state_core = 281
+			add_state_core = 282
+			add_state_core = 283
+			add_state_core = 284
+			add_state_core = 305
+			add_state_core = 306
+			add_state_core = 256
+			add_state_core = 257
+			add_state_core = 258
+			add_state_core = 259
+			add_state_core = 260
+			add_state_core = 261
+			add_state_core = 262
+			add_state_core = 263
+			add_state_core = 264
+			add_state_core = 266
+			add_state_core = 268
+			add_state_core = 269
+			add_state_core = 285
+			add_state_core = 286
+			add_state_core = 287
+			add_state_core = 288
+			add_state_core = 786
+			add_state_core = 824
+			add_state_core = 825
+			add_state_core = 826
+            load_oob = DIR_democrat
+        }
+	}
+	DEM = { change_tag_from = DIR }
+    DEM = { declare_war_on = { target = DIR type = annex_everything } }
+    DIR = {
+		load_oob = DIR_communist
+		add_ideas = { DIR_revolt}
+		add_ideas = { DEM_bad_economic }
+	}
+	DEM = {
+		add_ideas = { DIR_revolt }
+		add_ideas = { DEM_bad_economic }
+	}
+	KAR = { country_event = { days = 30 id = kar.1 } }
+	KAR = { country_event = { days = 240 id = kar.4 } }
+    DIR = {
+        every_state = {
+            limit = {is_core_of = DIR}
+            teleport_armies = {
+                to_state_array = owned_controlled_states
+            }
+        }
+	}
+	}
+}
+
+country_event = {
+	id = dirnews.3
+	title = dirnews.3.t
+	desc = dirnews.3.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+		name = dirnews.3.a
+		DEM = {
+			add_timed_idea = { idea = DIR_KAR_support days = 180 }
+		}
+        add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 10000
+			producer = KAR
+        }
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
+			producer = KAR
+        }
+		add_equipment_to_stockpile = {
+			type = mechanized_equipment
+			amount = 200
+			producer = KAR
+        }
+    }
+}
+
+country_event = {
+    id = dirnews.4
+    title = dirnews.4.t
+    desc = dirnews.4.d
+
+    is_triggered_only = yes
+
+    trigger = {
+        TAG = DEM
+	}
+
+    option = {
+    name = dirnews.4.a
+    hidden_effect = {
+		DEM = { country_event = { id = dirnews.10 days = 4 } }
+	}
+    SDI = {
+            transfer_state = 267
+			transfer_state = 270
+			transfer_state = 271
+			transfer_state = 272
+			transfer_state = 281
+			transfer_state = 277
+			transfer_state = 282
+		    add_state_core = 265
+			add_state_core = 267
+			add_state_core = 270
+			add_state_core = 271
+			add_state_core = 272
+			add_state_core = 275
+			add_state_core = 276
+            load_oob = DIR_syndicat
+			add_ideas = { DIR_revolt }
+    }
+    SDI = { declare_war_on = { target = DIR type = annex_everything } }
+	}
+	
+    option = {
+    name = dirnews.4.b
+    hidden_effect = {
+		DEM = { country_event = { id = dirnews.10 days = 4 } }
+		SDI = { change_tag_from = DEM }
+	}
+    SDI = {
+            transfer_state = 269
+			transfer_state = 270
+			transfer_state = 271
+			transfer_state = 272
+			transfer_state = 281
+			transfer_state = 267
+			transfer_state = 282
+			transfer_state = 277
+		    add_state_core = 269
+			add_state_core = 270
+			add_state_core = 271
+			add_state_core = 272
+			add_state_core = 281
+			add_state_core = 267
+			add_state_core = 282
+			add_state_core = 277
+            load_oob = DIR_syndicat
+			add_ideas = { DIR_revolt }
+    }
+    SDI = { declare_war_on = { target = DIR type = annex_everything } }
+	}
+}
+	
+country_event = {
+	id = dirnews.5
+	title = dirnews.5.t
+	desc = dirnews.5.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+		name = dirnews.5.a
+		DEM = {
+			load_oob = DIR_democrat_2
+			add_manpower = 20000
+		}
+    }
+}
+
+country_event = {
+	id = dirnews.6
+	title = dirnews.6.t
+	desc = dirnews.6.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+		name = dirnews.6.a
+		DEM = {
+			load_oob = DIR_democrat_2
+			add_manpower = 35000
+		}
+		DEM = { country_event = { days = 360 id = dirnews.5 } }
+    }
+}
+
+country_event = {
+	id = dirnews.8
+	title = dirnews.8.t
+	desc = dirnews.8.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+		name = dirnews.8.a
+		UCB = { country_event = { id = ucnb.15 days = 1 } }
+		add_ideas = { DIR_eik }
+		ai_chance = { 
+		factor = 0.9
+		}
+   	}
+	option = {
+		name = dirnews.8.b
+		ai_chance = {
+		factor = 0.1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+   	}
+}
+
+country_event = {
+	id = dirnews.9
+	title = dirnews.9.t
+	desc = dirnews.9.d
+	picture = GFX_news_even
+	
+    fire_only_once = yes
+
+	trigger = {
+        TAG = DIR
+	date < 2015.9.9
+	266 = { is_controlled_by = DEM }
+    }
+
+	option = {
+	name = dirnews.9.a
+		BLJ = {
+			transfer_state = 256
+			transfer_state = 257
+			add_state_core = 256
+			add_state_core = 257
+			add_state_core = 266
+			add_state_core = 260
+			add_state_core = 258
+			load_oob = BLJ_bonus
+			BLJ = { set_cosmetic_tag = BLJ_bonus_independent }
+			BLJ = { declare_war_on = { target = DIR type = annex_everything } }
+			BLJ = { declare_war_on = { target = DEM type = annex_everything } }
+			add_ideas = { DIR_revolt }	
+   		}
+	}
+}
+
+country_event = {
+	id = dirnews.10
+	title = dirnews.10.t
+	desc = dirnews.10.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.10.a
+		DEM = { add_stability = 0.1 }
+		SDI = { declare_war_on = { target = DEM type = annex_everything } }
+	}
+	option = {
+	name = dirnews.10.b
+		add_political_power = 150
+	}
+}
+
+country_event = {
+	id = dirnews.11
+	title = dirnews.11.t
+	desc = dirnews.11.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.11.a
+		add_stability = 0.07
+		add_manpower = 24000
+		275 = {
+			add_manpower = 127000
+		}
+		306 = {
+			add_manpower = 92000
+		}
+		279 = {
+			add_manpower = 34000
+		}
+	}
+}
+
+country_event = {
+	id = dirnews.12
+	title = dirnews.12.t
+	desc = dirnews.12.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.12.a
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = dirnews.13
+	title = dirnews.13.t
+	desc = dirnews.13.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.13.a
+		DEM = { add_ideas = { DEM_KAR_dept } }
+	}
+}
+
+country_event = {
+	id = dirnews.14
+	title = dirnews.14.t
+	desc = dirnews.14.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.14.a
+		add_political_power = -50
+	}
+}
+
+country_event = {
+	id = dirnews.15
+	title = dirnews.15.t
+	desc = dirnews.15.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.15.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 3600
+			producer = TRB
+        }
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 105
+			producer = TRB
+        }
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 80
+			producer = TRB
+        }
+		add_equipment_to_stockpile = {
+			type = mechanized_equipment
+			amount = 80
+			producer = TRB
+        }
+		add_equipment_to_stockpile = {
+			type = jeep_equipment
+			amount = 150
+			producer = TRB
+        }
+		add_equipment_to_stockpile = {
+			type = modern_tank_equipment
+			amount = 25
+			producer = TRB
+        }
+	}
+}
+country_event = {
+	id = dirnews.16
+	title = dirnews.16.t
+	desc = dirnews.16.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.16.a
+		DEM = { 
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+			}
+		}
+	}
+}
+country_event = {
+	id = dirnews.17
+	title = dirnews.17.t
+	desc = dirnews.17.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.17.a
+		DEM = { 
+			add_equipment_to_stockpile = {
+				type = modern_tank_equipment
+				amount = 25
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = 100
+			}
+		}
+	}
+}
+country_event = {
+	id = dirnews.18
+	title = dirnews.18.t
+	desc = dirnews.18.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.18.a
+		DEM = { 
+			add_political_power = 100
+			custom_effect_tooltip = wtire_reduce_20
+			subtract_from_variable = {wtire = 20}
+		}
+	}
+}

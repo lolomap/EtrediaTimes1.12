@@ -1,0 +1,71 @@
+characters={
+	NUR_adam_zambi={
+		name="Adam Zambi"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="2061.1.1.1"
+			id=-1
+		}
+	}
+	NUR_john_white={
+		name="John White"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			ideology=anti_revisionism
+			expire="2025.1.1.12"
+			id=-1
+		}
+	}
+	NUR_lucas_roberts={
+		name="Lucas Roberts"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			ideology=falangism
+			traits={ smooth_talking_charmer }
+			expire="2022.1.1.12"
+			id=-1
+		}
+	}
+	NUR_johannes_taylor={
+		name="Johannes Taylor"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ silent_mule }
+			expire="2019.1.1.12"
+			id=-1
+		}
+	}
+	NUR_johannes_smith={
+		name="Johannes Smith"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			traits={ dealbroker quartermaster_trainee }
+			expire="2032.1.1.12"
+			id=-1
+		}
+	}
+}

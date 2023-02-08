@@ -1,0 +1,174 @@
+guiTypes = {
+
+    containerWindowType = {
+        name = "winfluence_window"
+
+        position = {x = 300 y = 100}
+        orientation = UPPER_LEFT
+		moveable = yes
+		size = {width = 575 height = 600}
+
+        clipping = yes
+        verticalScrollbar = "right_vertical_slider"
+
+        background = { 
+            name = "Background"
+                quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
+        }
+
+        instantTextBoxType = {
+			name = "l1"
+			position = {x = 0 y = 50}
+			text = wi_title
+			font = hoi_36header
+			format = center
+            maxWidth = 575
+			
+			alwaystransparent = yes
+		}
+
+        gridboxtype = {
+            name = "countries_gb"
+            position = {x = 50 y = 100}
+            orientation = "UPPER_LEFT"
+            size = {width = 300 height = 300}
+            slotsize = {width = 300 height = 50}
+            add_horizontal = no
+        }
+    }
+
+    containerWindowType = {
+		name = "wi_countries_entry"
+		position = {x = 0 y = 0}
+		size = {width = 450 height = 100}
+        clipping = no
+
+        background = {
+            name = "entry_background"
+            quadTextureSprite = "GFX_base_entry_bg"
+        }
+
+        instantTextBoxType = {
+			name = "cNum"
+			position = {x = -40 y = 5}
+			text = wi_num
+			font = hoi_18mbs
+            maxWidth = 35
+			format = right
+			
+			alwaystransparent = yes
+		}
+		
+		buttonType = {
+			name = "cFlag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = {x = 10 y = 2}
+		}
+
+		iconType = {
+			name = "cFlagBorder"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = {x = 6 y = -1}
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "cName"
+			position = {x = 60 y = 5}
+			text = [THIS.GetNameDef]
+			font = hoi_18mbs
+			format = left
+			
+			alwaystransparent = yes
+		}
+
+        instantTextBoxType = {
+			name = "cWI"
+			position = {x = -250 y = 8}
+			text = [?world_influence]
+			font = hoi_18mbs
+			format = right
+			Orientation = "UPPER_RIGHT"
+
+			alwaystransparent = yes
+		}
+    }
+	
+	containerWindowType = {
+		name = "extra_topbar_window"
+        
+		position = { x=0 y=0 }	
+		size = { width=100%% height=100%% }
+
+        buttonType = {
+            name = "crysis_window_maximize"
+            spriteType = "GFX_casuality_icon"
+            frame = 2
+            position = { x=538 y=35 }
+        }
+
+		iconType ={
+			name ="world_influence_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=1080 y=5 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		buttonType = {
+			name ="world_influence_button"
+			spriteType = "GFX_world_influence_icon"
+			position = { x=1085 y =5 }
+            pdx_tooltip = world_influence_desc
+			pdx_tooltip_delayed = world_influence_delayed
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name ="world_influence_value"
+			position = { x=1101 y =9}
+			font = "hoi_18mbs"
+			text = world_influence_value
+			pdx_tooltip = world_influence_desc
+			pdx_tooltip_delayed = world_influence_delayed
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType ={
+			name ="war_tire_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=1152 y=5 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="war_tire_icon"
+			spriteType = "GFX_war_tire_icon"
+			position = { x=1157 y =5 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name ="war_tire_value"
+			position = { x=1176 y =9}
+			font = "hoi_18mbs"
+			text = war_tire_value
+			pdx_tooltip = war_tire_desc
+			pdx_tooltip_delayed = war_tire_effect
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "make_peace_alert_button"
+			spriteType = "GFX_make_peace_icon"	
+			position = { x = 980 y = 5 }
+			Orientation = "UPPER_LEFT"
+			oversound = ui_menu_over
+		}
+	}
+}

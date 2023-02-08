@@ -1,0 +1,64 @@
+﻿capital = 625
+
+OOB = "SOL_2014"
+
+set_research_slots = 1
+set_stability = 0.4
+set_war_support = 0.9
+
+add_ideas = {
+        WWW_bad_country
+        total_nonfree_press
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = {
+		has_start_date < 2014.01.02
+	}
+
+	declare_war_on = {
+		target = BSH
+		type = annex_everything
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 0
+        fascism = 27
+        communism = 0
+	neutrality = 73
+}
+
+set_convoys = 45
+
+
+recruit_character = SOL_jim_roberts
+
+recruit_character = SOL_sultan_isaev
+
+recruit_character = SOL_tursunbek_abdulov
+
+recruit_character = SOL_askarbek_sabirov
+
+recruit_character = SOL_irek_zaripov
+
+recruit_character = SOL_manas_anarbaev
+

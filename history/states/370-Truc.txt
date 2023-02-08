@@ -1,0 +1,32 @@
+
+state={
+	id=370
+	name="STATE_370"
+	manpower = 300000
+	
+	state_category = rural
+	
+	resources={
+        steel = 18 # was: 24
+        chromium = 20 # was: 22
+	tungsten = 6 # was: 8
+	}
+
+	history={
+		owner = DON
+		buildings = {
+			infrastructure = 3
+			2430 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = DON
+		victory_points = {
+			2360 1
+		}
+
+	}
+	provinces={
+		2214 2296 2333 2340 2360 2372 2373 2379 2390 2418 2430 2440 2462 2479 2488 2506 
+	}
+}

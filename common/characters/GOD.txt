@@ -1,0 +1,56 @@
+characters={
+	GOD_not_found={
+		name="Not Found"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GOD_alexander_smith={
+		name="Alexander Smith"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ war_profiteer lieutenant_of_industry }
+			expire="2026.1.1.12"
+			id=-1
+		}
+	}
+}

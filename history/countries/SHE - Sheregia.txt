@@ -1,0 +1,61 @@
+﻿capital = 153
+
+oob = "SHE_2014"
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.1
+
+add_ideas = {
+        www_medium_country
+        disarmed_nation
+        total_free_press
+        free_entry
+	third_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+}
+
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 15
+        democratic = 77
+        fascism = 6
+        communism = 2
+}
+
+#
+
+recruit_character = SHE_walter_weber
+
+recruit_character = SHE_germen_panrudbolf
+
+recruit_character = SHE_karm_vihten
+
+recruit_character = SHE_ivan_vissarionovich
+
+recruit_character = SHE_timur_nafikov
+
+recruit_character = SHE_daran_lemingauton
+
+recruit_character = SHE_daniil_shirokov
+

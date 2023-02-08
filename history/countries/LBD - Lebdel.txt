@@ -1,0 +1,53 @@
+﻿capital = 579
+
+oob = "LBD_2014"
+
+set_research_slots = 2
+set_stability = 0.8
+set_war_support = 0.9
+
+add_ideas = {
+        WWW_bad_country
+        nonfree_press
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	jeep_unit = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2010.3.5"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 29
+        fascism = 0
+        communism = 0
+	neutrality = 71
+}
+
+set_convoys = 0
+
+
+recruit_character = LBD_johannes_roberts
+
+recruit_character = LBD_mail_bin_putera
+
+recruit_character = LBD_lukman_budiarto
+
+recruit_character = LBD_zulkarnain_bin_dumadi
+
+recruit_character = LBD_atan_bin_jebat
+
+recruit_character = LBD_ubaida_bin_ghaamid
+

@@ -1,0 +1,77 @@
+﻿capital = 307
+
+oob = "DIR_2014"
+
+set_research_slots = 3
+set_stability = 0.3
+set_war_support = 0.4
+
+add_ideas = {
+        WWW_medium_country
+        total_nonfree_press
+        general_entry
+	DIR_government_crisis
+	DIR_popular_unrest
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	motorized_rocket_unit = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+        basic_medium_tank = 1
+	advanced_medium_tank = 1
+	main_battle_tank = 1
+	tech_mountaineers = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	synth_oil_experiments = 1
+}
+
+set_convoys = 150
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 20
+        democratic = 34
+        fascism = 13
+        communism = 33
+}
+
+#
+
+recruit_character = DIR_john_brown
+
+recruit_character = DIR_elena_vassental
+
+recruit_character = DIR_galchi_portasa
+
+recruit_character = DIR_tartabe_sinquer
+
+recruit_character = DIR_vikot_lobinov
+
+recruit_character = DIR_keren_lopuskay
+
+recruit_character = DIR_ilya_furman
+
+recruit_character = DIR_ostar_karbonal
+
+recruit_character = DIR_ardre_minh
+

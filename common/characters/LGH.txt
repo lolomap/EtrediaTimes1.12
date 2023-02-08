@@ -1,0 +1,71 @@
+characters={
+	LGH_alexander_roberts={
+		name="Alexander Roberts"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2029.1.1.12"
+			id=-1
+		}
+	}
+	LGH_alexander_evans={
+		name="Alexander Evans"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits={ smooth_talking_charmer }
+			expire="2025.1.1.12"
+			id=-1
+		}
+	}
+	LGH_jim_white={
+		name="Jim White"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			ideology=war_dictatorship
+			traits={ lieutenant_of_industry }
+			expire="2021.1.1.12"
+			id=-1
+		}
+	}
+	LGH_lucas_roberts={
+		name="Lucas Roberts"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			traits={ compassionate_gentleman war_industrialist }
+			expire="2033.1.1.12"
+			id=-1
+		}
+	}
+	LGH_jim_taylor={
+		name="Jim Taylor"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ economist war_profiteer }
+			expire="2029.1.1.12"
+			id=-1
+		}
+	}
+}

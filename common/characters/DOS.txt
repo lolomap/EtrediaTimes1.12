@@ -1,0 +1,70 @@
+characters={
+	DOS_jim_smith={
+		name="Jim Smith"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ silent_mule finance_graduate }
+			expire="2031.1.1.12"
+			id=-1
+		}
+	}
+	DOS_lucas_wilson={
+		name="Lucas Wilson"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="2021.1.1.12"
+			id=-1
+		}
+	}
+	DOS_john_evans={
+		name="John Evans"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ compassionate_gentleman }
+			expire="2026.1.1.12"
+			id=-1
+		}
+	}
+	DOS_alexander_evans={
+		name="Alexander Evans"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			expire="2032.1.1.12"
+			id=-1
+		}
+	}
+	DOS_john_roberts={
+		name="John Roberts"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ dealbroker }
+			expire="2022.1.1.12"
+			id=-1
+		}
+	}
+}

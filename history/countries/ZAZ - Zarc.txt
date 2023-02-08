@@ -1,0 +1,56 @@
+﻿capital = 646
+
+OOB = "ZAZ_2014"
+
+set_research_slots = 2
+set_stability = 0.8
+set_war_support = 0.5
+
+add_ideas = {
+        WWW_medium_country
+        free_press
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	gwtank = 1
+        basic_medium_tank = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 88
+        fascism = 0
+        communism = 12
+	neutrality = 0
+}
+
+set_convoys = 0
+
+
+recruit_character = ZAZ_peter_jones
+
+recruit_character = ZAZ_shahyar_qureshi
+
+recruit_character = ZAZ_nasrallah_chagatai
+
+recruit_character = ZAZ_kamel_rimitti
+
+recruit_character = ZAZ_baki_kalhoro
+

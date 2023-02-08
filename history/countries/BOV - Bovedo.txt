@@ -1,0 +1,65 @@
+﻿capital = 724
+
+OOB = "BOV_2014"
+set_naval_oob = "BOV_2014_naval_legacy"
+
+set_research_slots = 2
+set_stability = 0.7
+set_war_support = 0.5
+
+add_ideas = {
+        WWW_bad_country
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+
+	early_fighter = 1
+
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+
+	early_destroyer = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+    	neurtality = 86
+    	fascism = 2
+    	communism = 6
+	democratic = 6
+}
+
+set_convoys = 150
+
+
+
+recruit_character = BOV_peter_wilson
+
+recruit_character = BOV_lucas_taylor
+
+recruit_character = BOV_jonas_taylor
+
+recruit_character = BOV_peter_brown
+
+recruit_character = BOV_hanan_behired
+
+recruit_character = BOV_zaim_amrani
+

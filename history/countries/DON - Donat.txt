@@ -1,0 +1,59 @@
+﻿capital = 373
+
+oob = "DON_2014"
+set_naval_oob = "DON_2014_naval_legacy"
+
+set_research_slots = 2
+set_stability = 0.9
+set_war_support = 0.2
+
+add_ideas = {
+        www_medium_country
+        neutrality_idea
+        free_press
+        DON_politics
+	fourth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+	transport = 1
+	early_destroyer = 1
+        early_submarine = 1
+}
+
+set_convoys = 400
+
+
+
+set_politics = {
+	ruling_party = monarchism
+	last_election = "2009.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 0
+    democratic = 37
+    fascism = 0
+    communism = 0
+    monarchism = 63
+}
+
+#
+
+recruit_character = DON_anant_alexech
+
+recruit_character = DON_rolear_pighuan
+
+recruit_character = DON_titek_domonos
+
+recruit_character = DON_doronas_iv
+

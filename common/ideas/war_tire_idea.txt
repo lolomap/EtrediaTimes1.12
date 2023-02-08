@@ -1,0 +1,221 @@
+ideas = {
+		hidden_ideas = {
+			war_tire_idea1 = {
+				allowed = {
+					always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = -0.03
+					war_support_factor = -0.03
+					army_attack_factor = 0
+					army_defence_factor = 0
+					army_morale_factor = 0
+					training_time_army_factor = 0
+				}
+				cancel = {
+					OR = {
+						has_idea = war_tire_idea2
+						has_idea = war_tire_idea3
+						has_idea = war_tire_idea4
+						has_idea = war_tire_idea5
+					}
+				}
+			}
+			war_tire_idea2 = {
+				allowed = {
+					always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = -0.05
+					war_support_factor = -0.1
+					army_attack_factor = -0.05
+					army_defence_factor = -0.05
+					army_morale_factor = -0.05
+					training_time_army_factor = 0.05
+				}
+				cancel = {
+					OR = {
+						has_idea = war_tire_idea1
+						has_idea = war_tire_idea3
+						has_idea = war_tire_idea4
+						has_idea = war_tire_idea5
+					}
+				}
+			}
+			war_tire_idea3 = {
+				allowed = {
+					always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = -0.08
+					war_support_factor = -0.15
+					army_attack_factor = -0.08
+					army_defence_factor = -0.08
+					army_morale_factor = -0.1
+					training_time_army_factor = 0.1
+				}
+				cancel = {
+					OR = {
+						has_idea = war_tire_idea2
+						has_idea = war_tire_idea1
+						has_idea = war_tire_idea4
+						has_idea = war_tire_idea5
+					}
+				}
+			}
+			war_tire_idea4 = {
+				allowed = {
+					always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = -0.1
+					war_support_factor = -0.2
+					army_attack_factor = -0.15
+					army_defence_factor = -0.15
+					army_morale_factor = -0.2
+					training_time_army_factor = 0.15
+				}
+				cancel = {
+					OR = {
+						has_idea = war_tire_idea2
+						has_idea = war_tire_idea3
+						has_idea = war_tire_idea1
+						has_idea = war_tire_idea5
+					}
+				}
+			}
+			war_tire_idea5 = {
+				allowed = {
+					always = no
+				}
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = -0.15
+					war_support_factor = -0.3
+					army_attack_factor = -0.25
+					army_defence_factor = -0.25
+					army_morale_factor = -0.3
+					training_time_army_factor = 0.25
+				}
+				cancel = {
+					OR = {
+						has_idea = war_tire_idea2
+						has_idea = war_tire_idea3
+						has_idea = war_tire_idea4
+						has_idea = war_tire_idea1
+					}
+				}
+			}
+		}
+
+	country = {
+		##############################
+		#      WAR TIRE EFFECTS      #
+		##############################
+
+		wt_rebel = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.15
+				conscription_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				industry_repair_factor = -0.1
+			}
+		}
+
+		wt_production_rebel = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.3
+				production_factory_max_efficiency_factor = -0.25
+				production_speed_buildings_factor = -0.25
+				industry_repair_factor = -0.5
+				production_factory_efficiency_gain_factor = -0.5
+			}
+		}
+
+		wt_production_rebel2 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {	
+				consumer_goods_factor = 0.3
+				political_power_gain = -0.7
+				production_factory_max_efficiency_factor = -0.45
+				production_speed_buildings_factor = -0.45
+				industry_repair_factor = -0.8
+				production_factory_efficiency_gain_factor = -0.85
+			}
+		}
+
+		wt_desertion = {
+			allowed = {
+				always = no
+			}
+			picture = wt_army_desertion
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.1
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_morale_factor = -0.1
+				army_org = -0.1
+			}
+		}
+
+		wt_army_rebel = {
+			allowed = {
+				always = no
+			}
+			picture = wt_army_rebel
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.15
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_morale_factor = -0.15
+				army_speed_factor = -0.25
+			}
+		}
+
+		wt_army_rebel2 = {
+			allowed = {
+				always = no
+			}
+			picture = wt_army_rebel2
+			removal_cost = -1
+
+			modifier = {	
+				conscription_factor = -0.5
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+				army_morale_factor = -0.3
+				army_org = -0.3
+				army_speed_factor = -0.5
+			}
+		}
+	}
+}

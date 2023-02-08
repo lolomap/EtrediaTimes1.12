@@ -1,0 +1,90 @@
+characters={
+	FSC_vlad_solodov={
+		name="Vlad Solodov"
+		portraits={
+			civilian={
+				large="gfx/leaders/FSC/portrait_fsc_democratic_leader.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FSC_sork_banovar={
+		name="Sork Banovar"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FSC_harold_nartkhol={
+		name="Harold Nartkhol"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FSC_opogales_smoke={
+		name="Opogales Smoke"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FSC_carlos_malekich={
+		name="Carlos Malekich"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/SAU/Portrait_Araa_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FSC_chob_vairaho={
+		name="Chob Vairaho"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			expire="2023.1.1.12"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,64 @@
+characters={
+	ZOG_qadim_benlabed={
+		name="Qadim Benlabed"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ZOG_mavo_mazeona={
+		name="Mavo Mazeona"
+		portraits={
+			civilian={
+				large="gfx/leaders/ZOG/portrait_zog_neutrality.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ZOG_kaliq_salem={
+		name="Kaliq Salem"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ZOG_marcus_walker={
+		name="Marcus Walker"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ fortification_armchair_general captain_of_industry }
+			expire="2031.1.1.12"
+			id=-1
+		}
+	}
+}

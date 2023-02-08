@@ -1,0 +1,627 @@
+ideas = {
+    country = {	
+	SBU_siburian_star = {
+
+            picture = siburian_zvezda
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_gain = -0.2
+				production_speed_industrial_complex_factor = 0.1
+                production_speed_infrastructure_factor = 0.1
+				production_factory_start_efficiency_factor = 0.15
+			}
+	}
+
+    SBU_sz_uran = {
+        picture = siburian_zvezda
+
+        allowed = {
+            always = no
+        }
+        
+        removal_cost = -1
+
+
+        modifier = {
+            consumer_goods_factor = 0.08
+        }
+    }
+
+	SBU_glory_to_independence = {
+
+            picture = chi_war_of_resistance
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				stability_factor = -0.05
+				army_org_factor = -0.1
+			}
+	}
+
+	SBU_Hleria = {
+
+            picture = generic_intel_bonus
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+				has_government = fascism
+			}
+	
+
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = -0.1
+			}
+	}
+
+	SBU_SZ_support_revol = {
+		allowed = {always = no}
+		removal_cost = -1
+		cancel = {has_country_flag = sbu_try_success}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.5
+		}
+	}
+
+	SBU_Hleria_separatism = {
+
+            picture = generic_intel_bonus
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				stability_factor = -0.05
+				neutrality_drift = 0.01
+			}
+	}
+
+	SBU_RegionsSponsor = {
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+		production_speed_buildings_factor = -0.3
+	}
+	}
+	SBU_HlerianTraktori = {
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+		consumer_goods_factor = 0.2
+	}
+	}
+	SBU_HlerianHungry = {
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+		stability_factor = -0.05
+	}
+	}
+	SBU_MountsDay = {
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+		local_resources_factor = -1
+	}
+	}
+	SBU_AngryMiners = {
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+		local_resources_factor = -0.05
+	}
+	}
+	SBU_FailedHlerianNewYear = {
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+		stability_factor = -0.2
+	}
+	}
+
+	SBU_Elnia_separatism = {
+
+            picture = generic_intel_bonus
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			cancel = {
+				OR = {
+					not = {country_exists = TRB}
+					has_government = fascism
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				neutrality_drift = 0.01
+			}
+	}
+	
+	SBU_little_sburska_zvezda = {
+
+            picture = siburian_zvezda
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+            on_add = {
+                custom_effect_tooltip = world_influence_cost_5
+                add_to_variable = {winfluence_cost = -0.05}
+                SBU = {add_to_variable = {sz_little_count = 1}}
+            }
+            on_remove = {
+                custom_effect_tooltip = world_influence_cost_5n
+                add_to_variable = {winfluence_cost = 0.05}
+                
+                SBU = {add_to_variable = {sz_little_count = -1}}
+            }
+	
+
+			modifier = {
+                custom_modifier_tooltip = world_influence_cost_5
+				stability_factor = -0.05
+				democratic_drift = 0.01
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+	}
+	
+	SBU_medium_sburska_zvezda = {
+
+            picture = siburian_zvezda
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+            on_add = {
+                custom_effect_tooltip = world_influence_cost_10
+                add_to_variable = {winfluence_cost = -0.1}
+                SBU = {add_to_variable = {sz_little_count = 1}}
+                SBU = {add_to_variable = {sz_medium_count = 1}}
+            }
+            on_remove = {
+                custom_effect_tooltip = world_influence_cost_10n
+                add_to_variable = {winfluence_cost = 0.1}
+                SBU = {add_to_variable = {sz_little_count = -1}}
+                SBU = {add_to_variable = {sz_medium_count = -1}}
+            }
+	
+
+			modifier = {
+                custom_modifier_tooltip = world_influence_cost_10
+				stability_factor = -0.1
+				democratic_drift = 0.05
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.08
+				max_fuel_factor = 0.1
+				local_building_slots_factor = 0.15
+			}
+	}
+	
+	SBU_high_sburska_zvezda = {
+
+            picture = siburian_zvezda
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+            on_add = {
+                custom_effect_tooltip = world_influence_cost_15
+                add_to_variable = {winfluence_cost = -0.15}
+                SBU = {add_to_variable = {sz_little_count = 1}}
+                SBU = {add_to_variable = {sz_medium_count = 1}}
+                SBU = {add_to_variable = {sz_high_count = 1}}
+            }
+            on_remove = {
+                custom_effect_tooltip = world_influence_cost_15n
+                add_to_variable = {winfluence_cost = 0.15}
+                
+                SBU = {add_to_variable = {sz_little_count = -1}}
+                SBU = {add_to_variable = {sz_medium_count = -1}}
+                SBU = {add_to_variable = {sz_high_count = -1}}
+            }
+
+			modifier = {
+                custom_modifier_tooltip = world_influence_cost_15
+				stability_factor = -0.2
+				democratic_drift = 0.1
+				production_speed_buildings_factor = 0.4
+				consumer_goods_factor = -0.15
+				max_fuel_factor = 0.2
+				local_building_slots_factor = 0.4
+			}
+	}
+
+    SZ_debuff = {
+        picture = siburian_zvezda
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+                production_factory_efficiency_gain_factor = -0.05
+                industrial_capacity_factory = -0.05
+			}
+    }
+
+	SBU_five_years_plan = {
+
+            picture = jjj
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_gain = -0.5
+                                production_speed_buildings_factor = 0.5
+			}
+	}
+	
+	SBU_militarism = {
+
+            picture = extensive_conscription
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				conscription = 0.01
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+	}
+
+	SBU_tanks_modern = {
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+		equipment_bonus = {
+			armor = {
+				build_cost_ic = -0.1
+				reliability = 0.2
+			}
+		}
+	}
+	
+	SBU_yan_separatism = {
+
+            picture = extensive_conscription
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.15
+				democratic_drift = -0.06
+			}
+	}
+
+	SBU_eastblock_friend = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			fascism_drift = 0.01
+		}
+	}
+
+	SBU_SFL_lost_economic_war = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		cancel = {not = {country_exists = SFL}}
+
+		modifier = {
+			trade_opinion_factor = -0.1
+            production_speed_industrial_complex_factor = -0.05
+            production_speed_infrastructure_factor = -0.08
+            production_speed_synthetic_refinery_factor = -0.05
+		}
+	}
+
+	SBU_corruption_incident = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.15
+		}
+	}
+
+	SBU_arms_buy_from_sz_idea = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			industrial_capacity_factory = 0.1
+		}
+	}
+
+	SBU_fuel_from_sz = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			fuel_gain_factor  = 0.1
+		}
+	}
+
+	SBU_consumer_from_sz = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			war_stability_factor = -0.05
+		}
+	}
+
+	SBU_deliver_sz = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			convoy_escort_efficiency = 0.3
+			attrition = -0.05
+		}
+	}
+
+	SBU_tellurisIdea = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			army_attack_factor = 0.15
+			terrain_penalty_reduction = 0.2
+			naval_defense_factor = -0.35
+			defence = -0.1
+		}
+	}
+
+	SBU_tallasIdea = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			army_attack_factor = -0.1
+			special_forces_attack_factor = 0.25
+			special_forces_speed_factor = 0.1
+			terrain_penalty_reduction = 0.1
+			naval_defense_factor = 0.1
+			defence = 0.1
+		}
+	}
+
+	SBU_invasions = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			invasion_preparation = -1
+		}
+	}
+
+	SBU_far_war_idea = {
+		allowed = {always = no}
+		removal_cost = -1
+
+		modifier = {
+			production_speed_bunker_factor = 0.15
+			consumer_goods_factor = -0.05
+			industry_free_repair_factor = 0.15
+			army_attack_factor = -0.05
+
+		}
+	}
+
+    SBU_ISH_TRB = {
+        allowed = {always = no}
+		removal_cost = -1
+
+        cancel = {
+            all_controlled_state = {not = {is_core_of = TRB}}
+        }
+
+		modifier = {
+			stability_factor = -0.15
+            communism_drift = 0.02
+		}
+    }
+    SBU_ISH_SFL = {
+        allowed = {always = no}
+		removal_cost = -1
+        cancel = {
+            all_controlled_state = {not = {is_core_of = SFL}}
+        }
+
+		modifier = {
+			stability_factor = -0.15
+            democratic_drift = 0.02
+		}
+    }
+
+    SBU_ISH_TRB2 = {
+        allowed = {always = no}
+		removal_cost = -1
+
+        cancel = {
+            all_controlled_state = {not = {is_core_of = TRB}}
+        }
+
+		modifier = {
+			stability_factor = -0.08
+            communism_drift = 0.015
+		}
+    }
+    SBU_ISH_SFL2 = {
+        allowed = {always = no}
+		removal_cost = -1
+        cancel = {
+            all_controlled_state = {not = {is_core_of = SFL}}
+        }
+
+		modifier = {
+			stability_factor = -0.08
+            democratic_drift = 0.015
+		}
+    }
+
+    SBU_Modern_Empire = {
+        allowed = {always = no}
+		removal_cost = -1
+        cancel = {
+            all_controlled_state = {not = {is_core_of = SFL} not = {is_core_of TRB}}
+        }
+
+        modifier = {
+            resistance_activity = 0.3
+            resistance_target = 0.5
+            no_compliance_gain = 1
+        }
+    }
+    SBU_Modern_Empire2 = {
+        allowed = {always = no}
+		removal_cost = -1
+        cancel = {
+            all_controlled_state = {not = {is_core_of = SFL} not = {is_core_of TRB}}
+        }
+
+        modifier = {
+            resistance_activity = 0.05
+            resistance_target = 0.5
+            no_compliance_gain = 1
+        }
+    }
+    SBU_Modern_Empire3 = {
+        allowed = {always = no}
+		removal_cost = -1
+        cancel = {
+            all_controlled_state = {not = {is_core_of = SFL} not = {is_core_of TRB}}
+        }
+
+        modifier = {
+            resistance_activity = 0.035
+            resistance_target = 0.5
+        }
+    }
+    SBU_ohranka = {
+        allowed = {always = no}
+		removal_cost = -1
+
+        modifier = {
+            resistance_target = -0.4
+        }
+    }
+
+    SBU_golden_trillion_idea = {
+        allowed = {always = no}
+		removal_cost = -1
+
+        on_add = {
+            add_to_variable = {winfluence_cost = 0.5}
+        }
+
+        on_remove = {
+            add_to_variable = {winfluence_cost = -0.5}
+        }
+
+        modifier = {
+            political_power_gain = -1
+            boost_ideology_mission_factor = 0.5
+            boost_resistance_factor = 0.25
+            propaganda_mission_factor = 0.25
+            operation_coup_government_cost = -0.25
+            operation_coup_government_outcome = 0.5
+            custom_modifier_tooltip = world_influence_cost_50n
+        }
+    }
+}
+}

@@ -1,0 +1,91 @@
+characters={
+	KAS_nurkbultan_memrekaev={
+		name="Nurkbultan Memrekaev"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	KAS_kazarzhum_tahyrkaev={
+		name="Kazarzhum Tahyrkaev"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	KAS_kendri_losental={
+		name="Kendri Losental"
+		portraits={
+			civilian={
+				large="gfx/leaders/KAS/Portrait_kas_autority.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	KAS_ivan_vissarionovich={
+		name="Ivan Vissarionovich"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	KAS_zhibeka_lonaba={
+		name="Zhibeka Lonaba"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/SAU/Portrait_Araa_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=1
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	KAS_johannes_evans={
+		name="Johannes Evans"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			traits={ dealbroker }
+			expire="2024.1.1.12"
+			id=-1
+		}
+	}
+}

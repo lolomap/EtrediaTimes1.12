@@ -1,0 +1,51 @@
+﻿capital = 662
+
+OOB = "TRN_2014"
+
+set_research_slots = 2
+set_stability = 0.8
+set_war_support = 0.4
+
+add_ideas = {
+        WWW_medium_country
+}
+
+set_technology = {
+        tech_support = 1
+	infantry_weapons = 1
+	gw_artillery = 1
+	gwtank = 1
+	jeep_unit = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	early_light_cruiser = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2011.3.5"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+        democratic = 94
+        fascism = 0
+        communism = 0
+	neutrality = 6
+}
+
+set_convoys = 311
+
+
+recruit_character = TRN_bob_taylor
+
+recruit_character = TRN_maui_lala
+
+recruit_character = TRN_haupuehuehu_alohilani
+
+recruit_character = TRN_kapahu_mahiai
+
+recruit_character = TRN_maleko_keon
+

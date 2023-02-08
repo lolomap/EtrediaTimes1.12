@@ -1,0 +1,302 @@
+defined_text = {
+    name = TableGetVariableToSort
+    text = {localization_key = "world_influence"}
+}
+
+defined_text = {
+    name = tradestatus_sl
+    text = {
+        trigger = {
+            set_temp_variable = {forw = 100}
+            subtract_from_temp_variable = {forw = SFL.trade_war}
+            if = {
+                limit = {tag = SBU}
+                check_variable = {trade_war > forw}
+            }
+            else = {
+                check_variable = {forw > SBU.trade_war}
+            }
+        }
+        localization_key = tradestatus_g
+    }
+    text = {
+        trigger = {
+            set_temp_variable = {forw = 100}
+            subtract_from_temp_variable = {forw = SFL.trade_war}
+            if = {
+                limit = {tag = SBU}
+                check_variable = {trade_war < forw}
+            }
+            else = {
+                check_variable = {forw < SBU.trade_war}
+            }
+        }
+        localization_key = tradestatus_b
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = tradestatus_equal
+    }
+}
+
+defined_text = {
+    name = wicost_sl
+    text = {
+        trigger = {
+            check_variable = {winfluence_cost > 1}
+        }
+        localization_key = wicost_g
+    }
+    text = {
+        trigger = {
+            check_variable = {winfluence_cost < 1}
+        }
+        localization_key = wicost_b
+    }
+    text = {localization_key = wicost_n}
+}
+
+defined_text = {
+    name = sz_bonus_sl
+    text = {
+        trigger = {
+            FROM = {OWNER = {has_idea = SBU_medium_sburska_zvezda}}
+        }
+        localization_key = sz_bonus_tt2
+    }
+    text = {
+        trigger = {
+            FROM = {OWNER = {has_idea = SBU_high_sburska_zvezda}}
+        }
+        localization_key = sz_bonus_tt3
+    }
+    text = {localization_key = sz_bonus_tt1}
+}
+
+defined_text = {
+	name = GFX_goal_diria_war
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					not = {country_exists = DEM}
+					DIR = {has_government = communism}
+				}
+				DEM = {
+					surrender_progress > 0.7
+				}
+			}
+			
+		}
+        localization_key = "GFX_goal_eik_dir_war_com"
+	}
+	text = {
+		localization_key = "GFX_goal_eik_dir_war"
+	}
+}
+
+defined_text = {
+	name = peace_button_sloc
+	text = {
+		trigger = {
+			OR = {
+				check_variable = {wtire < 0}
+				has_country_flag = keep_peace
+				has_civil_war = yes
+				has_idea = DIR_revolt
+				has_capitulated = yes
+				not = {country_exists = ROOT}
+			}
+		}
+		localization_key = peace_button_bad
+	}
+	text = {
+		localization_key = peace_button_good
+	}
+}
+
+defined_text = {
+	name = peace_desc_sloc
+	text = {
+		trigger = {
+			is_in_faction = yes
+			is_faction_leader = no
+		}
+		localization_key = peace_desc_faction
+	}
+	text = {
+		localization_key = peace_desc
+	}
+}
+
+defined_text = {
+	name = nuke_request_accepted_sl
+	text = {
+		trigger = {
+			ROOT = {
+				OR = {
+					is_in_faction = no
+					is_faction_leader = yes
+					has_country_flag = nuke_request_accepted
+				}
+			}
+		}
+		localization_key = nuke_request_accepted_yes
+	}
+	text = {
+		localization_key = nuke_request_accepted_no
+	}
+}
+
+defined_text = {
+	name = nuke_has_any_sl
+	text = {
+		trigger = {
+			ROOT = {num_of_nukes > 0}
+		}
+		localization_key = nuke_has_any_yes
+	}
+	text = {
+		localization_key = nuke_has_any_no
+	}
+}
+
+#defined_text = {
+#	name = nuke_pro_sl
+#	text = {
+#		trigger = {
+#			owner = {
+#				check_variable = {num_of_nuke_anti < ROOT.num_of_nuke_rockets}
+#			}
+#		}
+#		localization_key = nuke_pro_yes
+#	}
+#	text = {
+#		trigger = {
+#			owner = {
+#				check_variable = {num_of_nuke_anti > ROOT.num_of_nuke_rockets}
+#			}
+#			localization_key = nuke_pro_no
+#		}
+#	}
+#	text = {
+#		localization_key = nuke_pro_mid
+#	}
+#}
+
+defined_text = {
+	name = is_world_influence_more_2_sl
+	text = {
+		trigger = {
+			set_temp_variable = {razn = ROOT.world_influence}
+			divide_temp_variable = {razn = world_influence}
+			check_variable = {razn > 1.9}
+		}
+		localization_key = is_world_influence_more_2_yes
+	}
+	text = {
+		localization_key = is_world_influence_more_2_no
+	}
+}
+
+defined_text = {
+	name = stab_cap_sl
+	text = {
+		trigger = {
+			OR = {
+				has_idea = stability_heaven_d
+				has_idea = stability_heaven_c
+				has_idea = stability_heaven_f
+				has_idea = stability_heaven_n
+				has_idea = stability_heaven_m
+			}
+		}
+		localization_key = stab_cap_h
+	}
+	text = {
+		localization_key = stab_cap_b
+	}
+}
+
+defined_text = {
+	name = random_party_name
+	text = {
+		trigger = {check_variable = {rand_ideology = 1}}
+		localization_key = "[Root.GetDemocraticParty]"
+	}
+	text = {
+		trigger = {check_variable = {rand_ideology = 2}}
+		localization_key = "[Root.GetFascistParty]"
+	}
+	text = {
+		trigger = {check_variable = {rand_ideology = 3}}
+		localization_key = "[Root.GetNeutralParty]"
+	}
+	text = {
+		trigger = {check_variable = {rand_ideology = 4}}
+		localization_key = "[Root.GetCommunistParty]"
+	}
+	text = {
+		trigger = {check_variable = {rand_ideology = 5}}
+		localization_key = "Монархизм"
+	}
+	text = {
+		localization_key = "_СЛУЧАЙНАЯ ПАРТИЯ_"
+	}
+}
+
+defined_text = {
+    name = cw_title_bot_sl
+    text = {
+        trigger = {check_variable = {global.type_crysis = 0}}
+        localization_key = "Смена правительства в [?global.to_crysis.GetNameDef]"
+    }
+    text = {
+        trigger = {check_variable = {global.type_crysis = 1}}
+        localization_key = "Территориальные претензии к [?global.to_crysis.GetNameDef] от [?global.sender_crysis.GetNameDef]"
+    }
+    text = {
+        trigger = {check_variable = {global.type_crysis = 2}}
+        localization_key = "Отделение [?global.minor_crysis.GetNameDef] от [?global.to_crysis.GetNameDef]"
+    }
+    text = {
+        localization_key = ""
+    }
+}
+
+defined_text = {
+    name = cw_cname_sl
+    text = {
+        trigger = {
+            is_in_array = {global.crysis_senders = THIS}
+        }
+        localization_key = cw_cname_hl
+    }
+    text = {
+        localization_key = cw_cname
+    }
+}
+
+defined_text = {
+    name = cw_allow_sl
+    text = {
+        trigger = {
+            has_country_flag = crysis_allow
+        }
+        localization_key = cw_allow_n
+    }
+    text = {localization_key = cw_allow_y}
+}
+
+defined_text = {
+    name = cw_press_sl
+    text = {
+        trigger = {
+            has_country_flag = crysis_press
+        }
+        localization_key = cw_press_n
+    }
+    text = {localization_key = cw_press_y}
+}

@@ -1,0 +1,71 @@
+characters={
+	CHO_espano_gildo={
+		name="Espano Gildo"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHO/portrait_cho_democratic.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CHO_joso_bobes={
+		name="Joso Bobes"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CHO_kendri_losental={
+		name="Kendri Losental"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CHO_nimali_redrizko={
+		name="Nimali Redrizko"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CHO_alexander_evans={
+		name="Alexander Evans"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			expire="2032.1.1.12"
+			id=-1
+		}
+	}
+}

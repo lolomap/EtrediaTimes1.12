@@ -1,0 +1,55 @@
+﻿capital = 628
+
+OOB = "BSH_2014"
+
+set_research_slots = 1
+set_stability = 0.4
+set_war_support = 0.9
+
+add_ideas = {
+        WWW_bad_country
+        total_nonfree_press
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	gwtank = 1
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 0
+        fascism = 100
+        communism = 0
+	neutrality = 0
+}
+
+set_convoys = 21
+
+
+recruit_character = BSH_lucas_taylor
+
+recruit_character = BSH_dhardon
+
+recruit_character = BSH_yungdrung_trengwa
+
+recruit_character = BSH_namgyal_wangchuk_gurung
+
+recruit_character = BSH_choedon_wangpo
+
+recruit_character = BSH_wangdue_nyingpo
+

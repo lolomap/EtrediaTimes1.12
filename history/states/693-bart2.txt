@@ -1,0 +1,33 @@
+
+state={
+	id=693
+	name="STATE_693"
+	manpower = 885000
+	
+	state_category = rural
+
+	history={
+		owner = BAR
+		buildings = {
+			infrastructure = 4
+                        industrial_complex = 1
+			483 = {
+				naval_base = 6
+			}
+			617 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = BAR
+		victory_points = {
+			483 5
+		}
+                victory_points = {
+                        617 1
+                }
+
+	}
+	provinces={
+		483 486 488 489 519 523 538 554 557 558 588 617 623 634 647 
+	}
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=488
+	name="STATE_488"
+	manpower = 200000
+
+	resources={
+		oil = 2 # was: 2
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = CHE
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CHE
+		add_core_of = KRT
+		victory_points = {
+			3807 1
+		}
+
+	}
+	provinces={
+		3734 3746 3773 3807 3851 
+	}
+}

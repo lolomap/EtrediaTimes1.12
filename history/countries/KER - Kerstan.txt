@@ -1,0 +1,49 @@
+﻿capital = 744
+
+oob = "KER_2014"
+
+set_research_slots = 2
+set_stability = 0.8
+set_war_support = 0.4
+
+add_ideas = {
+        www_bad_country
+	fourth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+}
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2011.1.1"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+        democratic = 62
+        fascism = 0
+        communism = 24
+	neutrality = 14
+}
+
+#
+
+recruit_character = KER_marcus_roberts
+
+recruit_character = KER_johannes_evans
+
+recruit_character = KER_bob_evans
+
+recruit_character = KER_alexander_wilson
+
+recruit_character = KER_chachi_dennis
+

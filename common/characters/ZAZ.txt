@@ -1,0 +1,82 @@
+characters={
+	ZAZ_baki_kalhoro={
+		name="Baki Kalhoro"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ZAZ_kamel_rimitti={
+		name="Kamel Rimitti"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ZAZ_nasrallah_chagatai={
+		name="Nasrallah Chagatai"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ZAZ_shahyar_qureshi={
+		name="Shahyar Qureshi"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/SAU/Portrait_Araa_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ZAZ_jim_brown={
+		name="Jim Brown"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			expire="2030.1.1.12"
+			id=-1
+		}
+	}
+}

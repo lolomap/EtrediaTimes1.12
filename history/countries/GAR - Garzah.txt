@@ -1,0 +1,59 @@
+﻿capital = 639
+
+OOB = "GAR_2014"
+
+set_research_slots = 1
+set_stability = 0.4
+set_war_support = 0.4
+
+add_ideas = {
+        WWW_bad_country
+        nonfree_press
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	gwtank = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 0
+        fascism = 0
+        communism = 44
+	neutrality = 56
+}
+
+set_convoys = 0
+
+
+recruit_character = GAR_johannes_roberts
+
+recruit_character = GAR_wadaan_rajpar
+
+recruit_character = GAR_gulab_hussaini
+
+recruit_character = GAR_pamir_tauqi
+
+recruit_character = GAR_zigar_khushk
+
+recruit_character = GAR_roshan_dall
+
+recruit_character = GAR_zalmay_zand
+
+recruit_character = GAR_malang_umarzai
+

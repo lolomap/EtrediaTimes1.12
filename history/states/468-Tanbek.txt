@@ -1,0 +1,24 @@
+
+state={
+	id=468
+	name="STATE_468"
+	manpower = 200000
+	
+	state_category = pastoral
+
+	history={
+		owner = CHE
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = CHE
+		add_core_of = NSH
+		victory_points = {
+			11699 1
+		}
+
+	}
+	provinces={
+		11098 11390 11638 11699 11740 11984 12317 12452 12701 
+	}
+}

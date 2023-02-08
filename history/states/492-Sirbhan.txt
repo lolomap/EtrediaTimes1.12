@@ -1,0 +1,28 @@
+
+state={
+	id=492
+	name="STATE_492"
+	manpower = 71000
+	
+	state_category = pastoral
+	
+	resources={
+		rubber = 10 # was: 12
+	}
+
+	history={
+		owner = CHE
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = CHE
+		add_core_of = EON
+		victory_points = {
+			3993 1
+		}
+
+	}
+	provinces={
+		3853 3993 4359 
+	}
+}

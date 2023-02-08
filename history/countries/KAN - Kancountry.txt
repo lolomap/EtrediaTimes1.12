@@ -1,0 +1,48 @@
+﻿capital = 753
+
+oob = "KAN_2014"
+
+set_research_slots = 2
+set_stability = 0.8
+set_war_support = 0.4
+
+add_ideas = {
+        www_bad_country
+	sixth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	jeep_unit = 1
+}
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2010.1.1"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+        democratic = 14
+        fascism = 10
+        communism = 32
+	neutrality = 44
+}
+
+#
+
+recruit_character = KAN_john_williams
+
+recruit_character = KAN_peter_walker
+
+recruit_character = KAN_johannes_wilson
+
+recruit_character = KAN_marcus_taylor
+
+recruit_character = KAN_yajeel_craigbeboban
+

@@ -1,0 +1,71 @@
+characters={
+	CTE_peter_evans={
+		name="Peter Evans"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ finance_graduate captain_of_industry }
+			expire="2027.1.1.12"
+			id=-1
+		}
+	}
+	CTE_john_roberts={
+		name="John Roberts"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=anarchist_communism
+			traits={ financial_expert ideological_groupie }
+			expire="2027.1.1.12"
+			id=-1
+		}
+	}
+	CTE_alexander_roberts={
+		name="Alexander Roberts"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			ideology=war_dictatorship
+			expire="2028.1.1.12"
+			id=-1
+		}
+	}
+	CTE_lucas_taylor={
+		name="Lucas Taylor"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ fortification_armchair_general ideological_crusader }
+			expire="2028.1.1.12"
+			id=-1
+		}
+	}
+	CTE_jim_brown={
+		name="Jim Brown"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ war_industrialist silent_mule }
+			expire="2028.1.1.12"
+			id=-1
+		}
+	}
+}

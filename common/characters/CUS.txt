@@ -1,0 +1,70 @@
+characters={
+	CUS_darkeem_pearson={
+		name="Darkeem Pearson"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CUS_jim_white={
+		name="Jim White"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ silent_workhorse }
+			expire="2028.1.1.12"
+			id=-1
+		}
+	}
+	CUS_jonas_roberts={
+		name="Jonas Roberts"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=anti_revisionism
+			traits={ compassionate_gentleman smooth_talking_charmer }
+			expire="2024.1.1.12"
+			id=-1
+		}
+	}
+	CUS_bob_brown={
+		name="Bob Brown"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=war_dictatorship
+			expire="2020.1.1.12"
+			id=-1
+		}
+	}
+	CUS_alex_williams={
+		name="Alex Williams"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			expire="2032.1.1.12"
+			id=-1
+		}
+	}
+}

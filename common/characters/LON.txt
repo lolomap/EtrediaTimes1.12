@@ -1,0 +1,64 @@
+characters={
+	LON_kim_tarnetilio={
+		name="Kim Tarnetilio"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LON_kendri_losental={
+		name="Kendri Losental"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LON_ivan_vissarionovich={
+		name="Ivan Vissarionovich"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LON_johannes_williams={
+		name="Johannes Williams"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			traits={ fortification_armchair_general armaments_organizer }
+			expire="2026.1.1.12"
+			id=-1
+		}
+	}
+}

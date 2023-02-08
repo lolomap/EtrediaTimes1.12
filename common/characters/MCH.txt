@@ -1,0 +1,70 @@
+characters={
+	MCH_nde_ntumba={
+		name="Nde Ntumba"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="2061.1.1.1"
+			id=-1
+		}
+	}
+	MCH_lucas_taylor={
+		name="Lucas Taylor"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			ideology=anti_revisionism
+			expire="2033.1.1.12"
+			id=-1
+		}
+	}
+	MCH_lucas_brown={
+		name="Lucas Brown"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=war_dictatorship
+			traits={ captain_of_industry quartermaster_trainee }
+			expire="2021.1.1.12"
+			id=-1
+		}
+	}
+	MCH_peter_jones={
+		name="Peter Jones"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ editor economist }
+			expire="2024.1.1.12"
+			id=-1
+		}
+	}
+	MCH_alex_taylor={
+		name="Alex Taylor"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="2027.1.1.12"
+			id=-1
+		}
+	}
+}

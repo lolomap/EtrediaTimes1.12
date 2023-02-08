@@ -1,0 +1,2263 @@
+add_namespace = randev
+add_namespace = randnews
+add_namespace = onactev
+add_namespace = debugmod
+add_namespace = mechanics
+
+country_event = { # YOU ARE FORCED TO EMBARGO
+	id = mechanics.1
+	title = mechanics.1.t
+	desc = mechanics.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.1.a
+
+		if = {
+			limit = {
+				is_major = yes
+			}
+			add_threat = 2
+		}
+		add_to_array = {embargoList = from_fembargo_country}
+		add_to_array = {forcedEmbargoList = from_fembargo_country}
+		var:from_fembargo_country = {
+			country_event = {id = onactev.2 days = 1}
+		}
+
+		FROM = {
+			country_event = {id = mechanics.3 days = 1}
+		}
+
+		#var:from_fembargo_country = {annex_country = {target = PREV}}
+		ai_chance = {
+			base = 50
+			modifier = {
+				set_temp_variable = {razn = FROM.world_influence}
+				divide_temp_variable = {razn = world_influence}
+				check_variable = {razn > 2.9}
+				add = 50
+			}
+			modifier = {
+				set_temp_variable = {razn = FROM.world_influence}
+				divide_temp_variable = {razn = world_influence}
+				check_variable = {razn > 3.9}
+				add = 50
+			}
+			modifier = {
+				set_temp_variable = {razn = FROM.world_influence}
+				divide_temp_variable = {razn = world_influence}
+				check_variable = {razn > 4.9}
+				add = 100
+			}
+		}
+	}
+	option = {
+		name = mechanics.1.b
+
+
+		set_temp_variable = {razn = FROM.world_influence}
+		divide_temp_variable = {razn = world_influence}
+
+		if = {
+			limit = {check_variable = {razn > 4.9}}
+			add_political_power = -200
+		}
+		else_if = {
+			limit = {check_variable = {razn > 3.9}}
+			add_political_power = -150	
+		}
+		else_if = {
+			limit = {check_variable = {razn > 2.9}}
+			add_political_power = -100
+		}
+		else = {
+			add_political_power = -50	
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { # YOU ARE FORCED TO CANCEL GUARANTEE
+	id = mechanics.2
+	title = mechanics.2.t
+	desc = mechanics.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.2.a
+
+		diplomatic_relation = {
+		    country = FROM
+		    relation = guarantee
+		    active = no
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				set_temp_variable = {razn = FROM.world_influence}
+				divide_temp_variable = {razn = world_influence}
+				check_variable = {razn > 3.9}
+				add = 50
+			}
+			modifier = {
+				set_temp_variable = {razn = FROM.world_influence}
+				divide_temp_variable = {razn = world_influence}
+				check_variable = {razn > 4.9}
+				add = 100
+			}
+		}
+	}
+	option = {
+		name = mechanics.2.b
+
+
+		set_temp_variable = {razn = FROM.world_influence}
+		divide_temp_variable = {razn = world_influence}
+
+		if = {
+			limit = {check_variable = {razn > 4.9}}
+			add_political_power = -200
+		}
+		else_if = {
+			limit = {check_variable = {razn > 3.9}}
+			add_political_power = -150	
+		}
+		else = {
+			add_political_power = -50	
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = { # SOMEONE ACCEPTED FORCED EMBARGO
+	id = mechanics.3
+	title = mechanics.3.t
+	desc = mechanics.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.3.a
+	}
+}
+
+country_event = {
+	id = debugmod.1
+    title = debugmod.1.t
+    desc = debugmod.1.d
+	is_triggered_only = yes
+	option = {
+		name = debugmod.1.a
+		every_country = {
+			set_country_flag = debug_nuke_mod
+		}
+	}
+}
+
+########################################################
+
+country_event = { #Пропагандисткая кампания против dem
+	id = mechanics.4
+	title = mechanics.4.t
+	desc = mechanics.4.d
+
+	is_triggered_only = yes
+
+	option = {name = mechanics.4.j}
+	option = {
+		name = mechanics.4.a
+		trigger = {not = {has_country_flag = corruption_incident_cd}}
+
+		set_temp_variable = {corrupt_chance = party_popularity_100@ruling_party}
+		divide_temp_variable = {corrupt_chance = 5}
+		multiply_temp_variable = {corrupt_chance = 7}
+		if = {
+			limit = {check_variable = {corrupt_chance > 90} }
+			set_temp_variable = {corrupt_chance = 90}
+		}
+		set_temp_variable = {corrupt_chance_fail = 100}
+		subtract_from_temp_variable = {corrupt_chance_fail = corrupt_chance}
+		set_country_flag = {flag = corruption_incident_cd days = 90 value = 1}
+		random_list = {
+			var:corrupt_chance = {
+				country_event = mechanics.9
+				set_temp_variable = {popularity_to_reduce = party_popularity_100@democratic}
+				multiply_temp_variable = {popularity_to_reduce = -0.003}
+				if = {limit = {check_variable = {popularity_to_reduce > -0.01}} set_temp_variable = {popularity_to_reduce = -0.01}}
+				add_popularity = {ideology = democratic popularity = popularity_to_reduce}
+			}
+			var:corrupt_chance_fail = {
+				country_event = mechanics.10
+				custom_effect_tooltip = people_discontent_effect_loc
+				hidden_effect = {
+					if = {limit = {has_government = democratic} add_timed_idea = {idea = people_discontent_dem days = 60}}
+					else_if = {limit = {has_government = fascism} add_timed_idea = {idea = people_discontent_fas days = 60}}
+					else_if = {limit = {has_government = neutrality} add_timed_idea = {idea = people_discontent_neu days = 60}}
+					else_if = {limit = {has_government = communism} add_timed_idea = {idea = people_discontent_com days = 60}}
+					else_if = {limit = {has_government = monarchism} add_timed_idea = {idea = people_discontent_mon days = 60}}
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = mechanics.4.b
+		trigger = {not = {has_country_flag = antireklama_cd}}
+
+		set_country_flag = {flag = antireklama_cd days = 90 value = 1}
+		if = {limit = {has_idea = total_free_press} set_temp_variable = {pp_to_reduce = 75}}
+		else_if = {limit = {has_idea = free_press} set_temp_variable = {pp_to_reduce = 50}}
+		else_if = {limit = {has_idea = nonfree_press} set_temp_variable = {pp_to_reduce = 30}}
+		else_if = {limit = {has_idea = total_nonfree_press} set_temp_variable = {pp_to_reduce = 10}}
+		else = {set_temp_variable = {pp_to_reduce = 50}}
+		multiply_temp_variable = {pp_to_reduce = -1}
+		add_political_power = pp_to_reduce
+		add_timed_idea = {idea = antipropoganda_against_dem days = 60}
+	}
+	option = {
+		name = mechanics.4.c
+		trigger = {not = {has_country_flag = party_discreditation_cd}}
+
+		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
+		add_popularity = {ideology = democratic popularity = -0.05}
+		custom_effect_tooltip = reduce_party_power_nontarget
+		add_to_variable = {dem_opposition = -1}
+	}
+}
+
+country_event = { #Пропагандисткая кампания против fas
+	id = mechanics.5
+	title = mechanics.5.t
+	desc = mechanics.5.d
+
+	is_triggered_only = yes
+
+	option = {name = mechanics.4.j}
+	option = {
+		name = mechanics.4.a
+		trigger = {not = {has_country_flag = corruption_incident_cd}}
+		
+		set_temp_variable = {corrupt_chance = party_popularity_100@ruling_party}
+		divide_temp_variable = {corrupt_chance = 5}
+		multiply_temp_variable = {corrupt_chance = 7}
+		if = {
+			limit = {check_variable = {corrupt_chance > 90} }
+			set_temp_variable = {corrupt_chance = 90}
+		}
+		set_temp_variable = {corrupt_chance_fail = 100}
+		subtract_from_temp_variable = {corrupt_chance_fail = corrupt_chance}
+		set_country_flag = {flag = corruption_incident_cd days = 90 value = 1}
+		random_list = {
+			var:corrupt_chance = {
+				country_event = mechanics.9
+				set_temp_variable = {popularity_to_reduce = party_popularity_100@fascism}
+				multiply_temp_variable = {popularity_to_reduce = -0.003}
+				if = {limit = {check_variable = {popularity_to_reduce > -0.01}} set_temp_variable = {popularity_to_reduce = -0.01}}
+				add_popularity = {ideology = fascism popularity = popularity_to_reduce}
+			}
+			var:corrupt_chance_fail = {
+				country_event = mechanics.10
+				custom_effect_tooltip = people_discontent_effect_loc
+				hidden_effect = {
+					if = {limit = {has_government = democratic} add_timed_idea = {idea = people_discontent_dem days = 60}}
+					else_if = {limit = {has_government = fascism} add_timed_idea = {idea = people_discontent_fas days = 60}}
+					else_if = {limit = {has_government = neutrality} add_timed_idea = {idea = people_discontent_neu days = 60}}
+					else_if = {limit = {has_government = communism} add_timed_idea = {idea = people_discontent_com days = 60}}
+					else_if = {limit = {has_government = monarchism} add_timed_idea = {idea = people_discontent_mon days = 60}}
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = mechanics.4.b
+		trigger = {not = {has_country_flag = antireklama_cd}}
+
+		set_country_flag = {flag = antireklama_cd days = 90 value = 1}
+		if = {limit = {has_idea = total_free_press} set_temp_variable = {pp_to_reduce = 75}}
+		else_if = {limit = {has_idea = free_press} set_temp_variable = {pp_to_reduce = 50}}
+		else_if = {limit = {has_idea = nonfree_press} set_temp_variable = {pp_to_reduce = 30}}
+		else_if = {limit = {has_idea = total_nonfree_press} set_temp_variable = {pp_to_reduce = 10}}
+		else = {set_temp_variable = {pp_to_reduce = 50}}
+		multiply_temp_variable = {pp_to_reduce = -1}
+		add_political_power = pp_to_reduce
+		add_timed_idea = {idea = antipropoganda_against_fas days = 60}
+
+	}
+	option = {
+		name = mechanics.4.c
+		trigger = {not = {has_country_flag = party_discreditation_cd}}
+
+		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
+		add_popularity = {ideology = fascism popularity = -0.05}
+		custom_effect_tooltip = reduce_party_power_nontarget
+		add_to_variable = {fas_opposition = -1}
+	}
+}
+
+country_event = { #Пропагандисткая кампания против neu
+	id = mechanics.6
+	title = mechanics.6.t
+	desc = mechanics.6.d
+
+	is_triggered_only = yes
+
+	option = {name = mechanics.4.j}
+	option = {
+		name = mechanics.4.a
+		trigger = {not = {has_country_flag = corruption_incident_cd}}
+		
+		set_temp_variable = {corrupt_chance = party_popularity_100@ruling_party}
+		divide_temp_variable = {corrupt_chance = 5}
+		multiply_temp_variable = {corrupt_chance = 7}
+		if = {
+			limit = {check_variable = {corrupt_chance > 90} }
+			set_temp_variable = {corrupt_chance = 90}
+		}
+		set_temp_variable = {corrupt_chance_fail = 100}
+		subtract_from_temp_variable = {corrupt_chance_fail = corrupt_chance}
+		set_country_flag = {flag = corruption_incident_cd days = 90 value = 1}
+		random_list = {
+			var:corrupt_chance = {
+				country_event = mechanics.9
+				set_temp_variable = {popularity_to_reduce = party_popularity_100@neutrality}
+				multiply_temp_variable = {popularity_to_reduce = -0.003}
+				if = {limit = {check_variable = {popularity_to_reduce > -0.01}} set_temp_variable = {popularity_to_reduce = -0.01}}
+				add_popularity = {ideology = neutrality popularity = popularity_to_reduce}
+			}
+			var:corrupt_chance_fail = {
+				country_event = mechanics.10
+				custom_effect_tooltip = people_discontent_effect_loc
+				hidden_effect = {
+					if = {limit = {has_government = democratic} add_timed_idea = {idea = people_discontent_dem days = 60}}
+					else_if = {limit = {has_government = fascism} add_timed_idea = {idea = people_discontent_fas days = 60}}
+					else_if = {limit = {has_government = neutrality} add_timed_idea = {idea = people_discontent_neu days = 60}}
+					else_if = {limit = {has_government = communism} add_timed_idea = {idea = people_discontent_com days = 60}}
+					else_if = {limit = {has_government = monarchism} add_timed_idea = {idea = people_discontent_mon days = 60}}
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = mechanics.4.b
+		trigger = {not = {has_country_flag = antireklama_cd}}
+
+		set_country_flag = {flag = antireklama_cd days = 90 value = 1}
+		if = {limit = {has_idea = total_free_press} set_temp_variable = {pp_to_reduce = 75}}
+		else_if = {limit = {has_idea = free_press} set_temp_variable = {pp_to_reduce = 50}}
+		else_if = {limit = {has_idea = nonfree_press} set_temp_variable = {pp_to_reduce = 30}}
+		else_if = {limit = {has_idea = total_nonfree_press} set_temp_variable = {pp_to_reduce = 10}}
+		else = {set_temp_variable = {pp_to_reduce = 50}}
+		multiply_temp_variable = {pp_to_reduce = -1}
+		add_political_power = pp_to_reduce
+		add_timed_idea = {idea = antipropoganda_against_neu days = 60}
+
+	}
+	option = {
+		name = mechanics.4.c
+		trigger = {not = {has_country_flag = party_discreditation_cd}}
+
+		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
+		add_popularity = {ideology = neutrality popularity = -0.05}
+		custom_effect_tooltip = reduce_party_power_nontarget
+		add_to_variable = {neu_opposition = -1}
+	}
+}
+
+country_event = { #Пропагандисткая кампания против com
+	id = mechanics.7
+	title = mechanics.7.t
+	desc = mechanics.7.d
+
+	is_triggered_only = yes
+
+	option = {name = mechanics.4.j}
+	option = {
+		name = mechanics.4.a
+		trigger = {not = {has_country_flag = corruption_incident_cd}}
+		
+		set_temp_variable = {corrupt_chance = party_popularity_100@ruling_party}
+		divide_temp_variable = {corrupt_chance = 5}
+		multiply_temp_variable = {corrupt_chance = 7}
+		if = {
+			limit = {check_variable = {corrupt_chance > 90} }
+			set_temp_variable = {corrupt_chance = 90}
+		}
+		set_temp_variable = {corrupt_chance_fail = 100}
+		subtract_from_temp_variable = {corrupt_chance_fail = corrupt_chance}
+		set_country_flag = {flag = corruption_incident_cd days = 90 value = 1}
+		random_list = {
+			var:corrupt_chance = {
+				country_event = mechanics.9
+				set_temp_variable = {popularity_to_reduce = party_popularity_100@communism}
+				multiply_temp_variable = {popularity_to_reduce = -0.003}
+				if = {limit = {check_variable = {popularity_to_reduce > -0.01}} set_temp_variable = {popularity_to_reduce = -0.01}}
+				add_popularity = {ideology = communism popularity = popularity_to_reduce}
+			}
+			var:corrupt_chance_fail = {
+				country_event = mechanics.10
+				custom_effect_tooltip = people_discontent_effect_loc
+				hidden_effect = {
+					if = {limit = {has_government = democratic} add_timed_idea = {idea = people_discontent_dem days = 60}}
+					else_if = {limit = {has_government = fascism} add_timed_idea = {idea = people_discontent_fas days = 60}}
+					else_if = {limit = {has_government = neutrality} add_timed_idea = {idea = people_discontent_neu days = 60}}
+					else_if = {limit = {has_government = communism} add_timed_idea = {idea = people_discontent_com days = 60}}
+					else_if = {limit = {has_government = monarchism} add_timed_idea = {idea = people_discontent_mon days = 60}}
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = mechanics.4.b
+		trigger = {not = {has_country_flag = antireklama_cd}}
+
+		set_country_flag = {flag = antireklama_cd days = 90 value = 1}
+		if = {limit = {has_idea = total_free_press} set_temp_variable = {pp_to_reduce = 75}}
+		else_if = {limit = {has_idea = free_press} set_temp_variable = {pp_to_reduce = 50}}
+		else_if = {limit = {has_idea = nonfree_press} set_temp_variable = {pp_to_reduce = 30}}
+		else_if = {limit = {has_idea = total_nonfree_press} set_temp_variable = {pp_to_reduce = 10}}
+		else = {set_temp_variable = {pp_to_reduce = 50}}
+		multiply_temp_variable = {pp_to_reduce = -1}
+		add_political_power = pp_to_reduce
+		add_timed_idea = {idea = antipropoganda_against_com days = 60}
+
+	}
+	option = {
+		name = mechanics.4.c
+		trigger = {not = {has_country_flag = party_discreditation_cd}}
+
+		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
+		add_popularity = {ideology = communism popularity = -0.05}
+		custom_effect_tooltip = reduce_party_power_nontarget
+		add_to_variable = {com_opposition = -1}
+	}
+}
+
+country_event = { #Пропагандисткая кампания против mon
+	id = mechanics.8
+	title = mechanics.8.t
+	desc = mechanics.8.d
+
+	is_triggered_only = yes
+
+	option = {name = mechanics.4.j}
+	option = {
+		name = mechanics.4.a
+		trigger = {not = {has_country_flag = corruption_incident_cd}}
+		
+		set_temp_variable = {corrupt_chance = party_popularity_100@ruling_party}
+		divide_temp_variable = {corrupt_chance = 5}
+		multiply_temp_variable = {corrupt_chance = 7}
+		if = {
+			limit = {check_variable = {corrupt_chance > 90} }
+			set_temp_variable = {corrupt_chance = 90}
+		}
+		set_temp_variable = {corrupt_chance_fail = 100}
+		subtract_from_temp_variable = {corrupt_chance_fail = corrupt_chance}
+		set_country_flag = {flag = corruption_incident_cd days = 90 value = 1}
+		random_list = {
+			var:corrupt_chance = {
+				country_event = mechanics.9
+				set_temp_variable = {popularity_to_reduce = party_popularity_100@monarchism}
+				multiply_temp_variable = {popularity_to_reduce = -0.003}
+				if = {limit = {check_variable = {popularity_to_reduce > -0.01}} set_temp_variable = {popularity_to_reduce = -0.01}}
+				add_popularity = {ideology = monarchism popularity = popularity_to_reduce}
+			}
+			var:corrupt_chance_fail = {
+				country_event = mechanics.10
+				custom_effect_tooltip = people_discontent_effect_loc
+				hidden_effect = {
+					if = {limit = {has_government = democratic} add_timed_idea = {idea = people_discontent_dem days = 60}}
+					else_if = {limit = {has_government = fascism} add_timed_idea = {idea = people_discontent_fas days = 60}}
+					else_if = {limit = {has_government = neutrality} add_timed_idea = {idea = people_discontent_neu days = 60}}
+					else_if = {limit = {has_government = communism} add_timed_idea = {idea = people_discontent_com days = 60}}
+					else_if = {limit = {has_government = monarchism} add_timed_idea = {idea = people_discontent_mon days = 60}}
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = mechanics.4.b
+		trigger = {not = {has_country_flag = antireklama_cd}}
+
+		set_country_flag = {flag = antireklama_cd days = 90 value = 1}
+		if = {limit = {has_idea = total_free_press} set_temp_variable = {pp_to_reduce = 75}}
+		else_if = {limit = {has_idea = free_press} set_temp_variable = {pp_to_reduce = 50}}
+		else_if = {limit = {has_idea = nonfree_press} set_temp_variable = {pp_to_reduce = 30}}
+		else_if = {limit = {has_idea = total_nonfree_press} set_temp_variable = {pp_to_reduce = 10}}
+		else = {set_temp_variable = {pp_to_reduce = 50}}
+		multiply_temp_variable = {pp_to_reduce = -1}
+		add_political_power = pp_to_reduce
+		add_timed_idea = {idea = antipropoganda_against_mon days = 60}
+	}
+	option = {
+		name = mechanics.4.c
+		trigger = {not = {has_country_flag = party_discreditation_cd}}
+
+		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
+		add_popularity = {ideology = monarchism popularity = -0.05}
+		custom_effect_tooltip = reduce_party_power_nontarget
+		add_to_variable = {mon_opposition = -1}
+	}
+}
+
+country_event = { # коррупц скандал норм
+	id = mechanics.9
+	title = mechanics.9.t
+	desc = mechanics.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.9.a
+	}
+}
+
+country_event = { # коррупц скандал фейл
+	id = mechanics.10
+	title = mechanics.10.t
+	desc = mechanics.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.10.a
+	}
+}
+
+country_event = {	# ивенты на коорупцию (случайные)
+	id = mechanics.24
+	title = mechanics.24.t
+	desc = mechanics.24.d
+
+	mean_time_to_happen = {days = 40}
+
+	#trigger = {is_ai = no}
+	hidden = yes
+
+	option = {name = mechanics.24.a}
+	immediate = {
+
+		if = {
+
+			random_list = {
+				4 = { if = {limit = {has_stability < 0.8} country_event = mechanics.26 } }
+				4 = { if = {limit = {has_stability < 0.5} country_event = mechanics.27 } }
+				4 = { if = {limit = {has_stability < 0.3} country_event = mechanics.28 } }
+				4 = { if = {limit = {has_stability < 0.1} country_event = mechanics.29 } }
+				2 = { if = {limit = {has_war_support < 0.5} country_event = mechanics.30 } }
+				2 = { if = {limit = {has_war_support < 0.1} country_event = mechanics.31 } }
+				2 = { if = {limit = {has_idea = total_nonfree_press} country_event = mechanics.32 } }
+				2 = { if = {limit = {has_idea = nonfree_press} country_event = mechanics.33 } }
+				2 = { if = {limit = {has_idea = closed_entry} country_event = mechanics.34 } }
+				2 = { if = {limit = {has_idea = total_free_press} country_event = mechanics.35 } }
+
+				72 = {
+
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Скандал из-за госзакупок
+	id = mechanics.25
+	title = mechanics.25.t
+	desc = mechanics.25.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.25.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # Скандал из-за госзакупок
+	id = mechanics.26
+	title = mechanics.26.t
+	desc = mechanics.26.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.26.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # государственный тенд
+	id = mechanics.27
+	title = mechanics.27.t
+	desc = mechanics.27.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.27.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # недобор бюджетных средств 
+	id = mechanics.28
+	title = mechanics.28.t
+	desc = mechanics.28.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.28.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # фиксация налоговых махинаций
+	id = mechanics.29
+	title = mechanics.29.t
+	desc = mechanics.29.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.29.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # устаревшая техника
+	id = mechanics.30
+	title = mechanics.30.t
+	desc = mechanics.30.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.30.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # утрата боеспособности армии
+	id = mechanics.31
+	title = mechanics.31.t
+	desc = mechanics.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.31.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # чиновники паразитируют на гос сми
+	id = mechanics.32
+	title = mechanics.32.t
+	desc = mechanics.32.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.32.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # нереалистичные расходы
+	id = mechanics.33
+	title = mechanics.33.t
+	desc = mechanics.33.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.33.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # организованная коррупция на границе
+	id = mechanics.34
+	title = mechanics.34.t
+	desc = mechanics.34.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.34.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = sixth_corruption_level
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = -0.08
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = -0.05
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = -0.03
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = -0.02
+		}
+	}
+}
+
+country_event = { # Скандал из-за госзакупок
+	id = mechanics.35
+	title = mechanics.35.t
+	desc = mechanics.35.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.35.a
+		
+		if = {
+			limit = { has_idea = sixth_corruption_level }
+			add_ideas = fifth_corruption_level
+			add_stability = 0.05
+		}
+		else_if = {
+			limit = { has_idea = fifth_corruption_level }
+			add_ideas = fourth_corruption_level
+			add_stability = 0.04
+		}
+		else_if = {
+			limit = { has_idea = fourth_corruption_level }
+			add_ideas = third_corruption_level
+			add_stability = 0.03
+		}
+		else_if = {
+			limit = { has_idea = third_corruption_level }
+			add_ideas = second_corruption_level
+			add_stability = 0.02
+		}
+		else_if = {
+			limit = { has_idea = second_corruption_level }
+			add_ideas = first_corruption_level
+			add_stability = 0.02
+		}
+		else_if = {
+			limit = { has_idea = first_corruption_level }
+			add_ideas = first_corruption_level
+			add_stability = 0.01
+		}
+	}
+}
+
+country_event = {	# ивенты от стабки на изменение силы и поддержки партий (случайные)
+	id = mechanics.11
+	title = mechanics.11.t
+	desc = mechanics.11.d
+
+	mean_time_to_happen = {days = 30}
+
+	#trigger = {is_ai = no}
+	hidden = yes
+
+	option = {name = mechanics.11.a}
+	immediate = {
+		random_list = {
+			1 = {set_variable = {rand_ideology = 1}}
+			1 = {set_variable = {rand_ideology = 2}}
+			1 = {set_variable = {rand_ideology = 3}}
+			1 = {set_variable = {rand_ideology = 4}}
+			1 = {set_variable = {rand_ideology = 5}}
+		}
+		if = {
+			limit = {
+				not = {
+					OR = {
+						#AND = {check_variable = {rand_ideology = 1} has_government = democratic}
+						#AND = {check_variable = {rand_ideology = 2} has_government = fascism}
+						#AND = {check_variable = {rand_ideology = 3} has_government = neutrality}
+						#AND = {check_variable = {rand_ideology = 4} has_government = communism}
+						#AND = {check_variable = {rand_ideology = 5} has_government = monarchism}
+					}
+				}
+                always = yes
+			}
+
+			random_list = {
+				15 = {
+					if = {limit = {has_stability < 0.8} set_temp_variable = {can_e1 = 1}} else = {set_temp_variable = {can_e1 = 0}}
+					if = {limit = {has_stability < 0.5} set_temp_variable = {can_e2 = 1}} else = {set_temp_variable = {can_e2 = 0}}
+					if = {limit = {has_stability < 0.3} set_temp_variable = {can_e3 = 1}} else = {set_temp_variable = {can_e3 = 0}}
+					if = {limit = {has_stability < 0.1} set_temp_variable = {can_e4 = 1}} else = {set_temp_variable = {can_e4 = 0}}
+
+					random_list = {
+						1 = {country_event = mechanics.12}
+						var:can_e1 = {country_event = mechanics.13}
+						var:can_e2 = {country_event = mechanics.14}
+						var:can_e3 = {country_event = mechanics.15}
+						var:can_e4 = {country_event = mechanics.16}
+					}
+				}
+				85 = {
+
+				}
+			}
+		}
+	}
+}
+
+country_event = { # изменение в полит поле
+	id = mechanics.12
+	title = mechanics.12.t
+	desc = mechanics.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.12.a
+		if = {
+			limit = {check_variable = {rand_ideology = 1}}
+			add_popularity = {ideology = democratic popularity = 0.03}
+			add_to_variable = {dem_opposition = 1}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 2}}
+			add_popularity = {ideology = fascism popularity = 0.03}
+			add_to_variable = {fas_opposition = 1}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 3}}
+			add_popularity = {ideology = neutrality popularity = 0.03}
+			add_to_variable = {neu_opposition = 1}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 4}}
+			add_popularity = {ideology = communism popularity = 0.03}
+			add_to_variable = {com_opposition = 1}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 5}}
+			add_popularity = {ideology = monarchism popularity = 0.03}
+			add_to_variable = {mon_opposition = 1}
+		}
+		custom_effect_tooltip = change_party_power
+	}
+}
+
+country_event = { # рост настроений
+	id = mechanics.13
+	title = mechanics.13.t
+	desc = mechanics.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.13.a
+		if = {
+			limit = {check_variable = {rand_ideology = 1}}
+			add_popularity = {ideology = democratic popularity = 0.06}
+			add_to_variable = {dem_opposition = 2}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 2}}
+			add_popularity = {ideology = fascism popularity = 0.06}
+			add_to_variable = {fas_opposition = 2}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 3}}
+			add_popularity = {ideology = neutrality popularity = 0.06}
+			add_to_variable = {neu_opposition = 2}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 4}}
+			add_popularity = {ideology = communism popularity = 0.06}
+			add_to_variable = {com_opposition = 2}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 5}}
+			add_popularity = {ideology = monarchism popularity = 0.06}
+			add_to_variable = {mon_opposition = 2}
+		}
+		custom_effect_tooltip = change_party_power
+	}
+}
+
+country_event = { # выступления партии
+	id = mechanics.14
+	title = mechanics.14.t
+	desc = mechanics.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.14.a
+		if = {
+			limit = {check_variable = {rand_ideology = 1}}
+			add_popularity = {ideology = democratic popularity = 0.08}
+			add_to_variable = {dem_opposition = 4}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 2}}
+			add_popularity = {ideology = fascism popularity = 0.08}
+			add_to_variable = {fas_opposition = 4}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 3}}
+			add_popularity = {ideology = neutrality popularity = 0.08}
+			add_to_variable = {neu_opposition = 4}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 4}}
+			add_popularity = {ideology = communism popularity = 0.08}
+			add_to_variable = {com_opposition = 4}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 5}}
+			add_popularity = {ideology = monarchism popularity = 0.08}
+			add_to_variable = {mon_opposition = 4}
+		}
+		custom_effect_tooltip = change_party_power
+	}
+}
+
+country_event = { # организованная опоз
+	id = mechanics.15
+	title = mechanics.15.t
+	desc = mechanics.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.15.a
+		if = {
+			limit = {check_variable = {rand_ideology = 1}}
+			add_popularity = {ideology = democratic popularity = 0.1}
+			add_to_variable = {dem_opposition = 6}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 2}}
+			add_popularity = {ideology = fascism popularity = 0.1}
+			add_to_variable = {fas_opposition = 6}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 3}}
+			add_popularity = {ideology = neutrality popularity = 0.1}
+			add_to_variable = {neu_opposition = 6}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 4}}
+			add_popularity = {ideology = communism popularity = 0.1}
+			add_to_variable = {com_opposition = 6}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 5}}
+			add_popularity = {ideology = monarchism popularity = 0.1}
+			add_to_variable = {mon_opposition = 6}
+		}
+		custom_effect_tooltip = change_party_power
+	}
+}
+
+country_event = { # требуют отставку
+	id = mechanics.16
+	title = mechanics.16.t
+	desc = mechanics.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.16.a
+		if = {
+			limit = {check_variable = {rand_ideology = 1}}
+			add_popularity = {ideology = democratic popularity = 0.1}
+			add_to_variable = {dem_opposition = 10}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 2}}
+			add_popularity = {ideology = fascism popularity = 0.1}
+			add_to_variable = {fas_opposition = 10}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 3}}
+			add_popularity = {ideology = neutrality popularity = 0.1}
+			add_to_variable = {neu_opposition = 10}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 4}}
+			add_popularity = {ideology = communism popularity = 0.1}
+			add_to_variable = {com_opposition = 10}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 5}}
+			add_popularity = {ideology = monarchism popularity = 0.1}
+			add_to_variable = {mon_opposition = 10}
+		}
+		custom_effect_tooltip = change_party_power
+	}
+}
+
+
+country_event = {	#дать корку конфликт
+	id = mechanics.20
+	title = mechanics.20.t
+	desc = mechanics.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.20.a
+
+	}
+}
+
+country_event = {	#не дать корку победа конфликт
+	id = mechanics.21
+	title = mechanics.21.t
+	desc = mechanics.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.21.a
+		add_political_power = -50
+		add_stability = -0.03
+	}
+}
+
+country_event = {	# не дать корку проигрыш конфликт
+	id = mechanics.22
+	title = mechanics.22.t
+	desc = mechanics.22.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.22.a
+		add_political_power = -150
+		add_stability = -0.05
+	}
+}
+
+country_event = { # конфликт защита
+	id = mechanics.23
+	title = mechanics.23.t
+	desc = mechanics.23.d
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.23.a
+	}
+}
+
+#####################################################
+
+country_event = { # Кризис закончился
+    id = mechanics.36
+    title = mechanics.36.t
+    desc = mechanics.36.d
+    hidden = yes
+    is_triggered_only = yes
+
+    option = {
+        name = mechanics.36.a
+    }
+
+    immediate = {
+        var:global.sender_crysis = {set_country_flag = {flag = crysis_delay days = 360 value = 1}}
+        if = { # Оба не уступили
+            limit = {
+                var:global.cr_send_op = {has_country_flag = crysis_press}
+                var:global.cr_to_op = {has_country_flag = crysis_press}
+            }
+            set_global_flag = {
+                flag = war_crysis
+                days = 90
+                value = 1
+            }
+            var:sender_crysis = {country_event = mechanics.38}
+            var:global.sender_crysis = {
+                war_crysis_ban_factions = yes
+
+                declare_war_on = {
+                    target = global.to_crysis
+                    type = annex_everything
+                }
+
+                var:global.to_crysis = {
+                    war_crysis_ban_factions = yes
+
+                    for_each_scope_loop = {
+                        array = global.crysis_senders
+
+                        war_crysis_ban_factions = yes
+
+                        set_temp_variable_to_random = scare_leave_chance
+                        if = {
+                            limit = {OR = {check_variable = {scare_leave_chance > 0.01} is_ai = no}}
+                            add_to_war = {
+                                targeted_alliance = PREV.PREV
+                                enemy = PREV
+                            }
+                        }
+                    }
+                    for_each_scope_loop = {
+                        array = global.crysis_tos
+
+                        war_crysis_ban_factions = yes
+
+                        set_temp_variable_to_random = scare_leave_chance
+                        if = {
+                            limit = {OR = {check_variable = {scare_leave_chance > 0.01} is_ai = no}}
+                            add_to_war = {
+                                targeted_alliance = PREV
+                                enemy = PREV.PREV
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else_if = { # Атака уступила
+            limit = {
+                var:global.cr_send_op = {not = {has_country_flag = crysis_press}}
+                var:global.cr_to_op = {has_country_flag = crysis_press}
+            }
+            for_each_scope_loop = {
+                array = global.crysis_senders
+                add_timed_idea = {idea = sender_loose_crysis days = 150}
+            }
+            var:global.sender_crysis = {
+                add_timed_idea = {idea = sender_loose_crysis days = 150}
+            }
+        }
+        else_if = { # Оборона уступила
+            limit = {
+                var:global.cr_send_op = {has_country_flag = crysis_press}
+                var:global.cr_to_op = {not = {has_country_flag = crysis_press}}
+            }
+            
+            crysis_reward = yes
+        }
+
+
+        ########
+        set_variable = {global.crysis_timer = 0}
+        clr_global_flag = political_crysis
+        every_country = {
+            clr_country_flag = crysis_allow
+            clr_country_flag = crysis_press
+            clr_country_flag = cr_ai_press
+            clr_country_flag = cr_ai_allow
+            clr_country_flag = crysis_scared
+            clr_country_flag = cr_ai_completed
+            clr_country_flag = crysis_angry
+        }
+        set_variable = {global.cr_press_clicked = 0}
+        
+        set_variable = {global.cr_smax = 0}
+        set_variable = {global.cr_tmax = 0}
+        set_variable = {global.cr_send_op = 0}
+        set_variable = {global.cr_to_op = 0}
+
+        clr_global_flag = cr_a_allow
+        clr_global_flag = cr_d_allow
+
+        set_variable = {global.cr_a_status = 1}
+        set_variable = {global.cr_d_status = 2}
+    }
+}
+
+country_event = {
+    id = mechanics.37
+    title = mechanics.37.t
+    desc = mechanics.37.d
+    hidden = yes
+    is_triggered_only = yes
+
+    option = {
+        name = mechanics.37.a
+    }
+
+    immediate = {
+        if = {
+            limit = {has_global_flag = political_crysis country_exists = var:sender_crysis}
+            add_to_variable = {global.crysis_timer = 1.666}
+            var:sender_crysis = {country_event = {id = mechanics.37 days = 1}}
+        }
+        else = {
+            force_press = yes
+            var:sender_crysis = {country_event = {id = mechanics.36 days = 2}}
+        }
+    }
+}
+
+country_event = {
+    id = mechanics.38
+    title = mechanics.38.t
+    desc = mechanics.38.d
+    hidden = yes
+
+    trigger = {
+        OR = {
+            NOT = {has_global_flag = war_crysis
+                var:global.sender_crysis = {surrender_progress < 0.1}
+                crysis_rewardable = no
+            }
+        }
+    }
+    mean_time_to_happen = {days = 7}
+
+    option = {
+        name = mechanics.38.a
+    }
+
+    immediate = {
+        d_end_war_crysis = yes
+    }
+}
+
+
+
+country_event = {#Аншлюз
+	id = onactev.1
+	title = onactev.1.t
+	desc = onactev.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = onactev.1.a
+		#nothing
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {
+		name = onactev.1.b
+		FROM = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+}
+
+country_event = {
+	id = onactev.2
+	title = onactev.2.t
+	desc = onactev.2.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {is_subject_of = FROM}
+
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = embargo_bitch
+				}
+			}
+
+			add_opinion_modifier = {
+				target = FROM
+				modifier = embargo_initiator
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = embargo_bitch
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = embargo_target
+				}
+			}
+		}
+	}
+	option = {
+		name = onactev.2.a
+	}
+}
+
+country_event = {
+	id = onactev.3
+	title = onactev.3.t
+	desc = onactev.3.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {is_subject_of = FROM}
+
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = embargo_bitch
+				}
+			}
+
+			remove_opinion_modifier = {
+				target = FROM
+				modifier = embargo_initiator
+			}
+			FROM = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = embargo_bitch
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = embargo_target
+				}
+			}
+		}
+	}
+	option = {
+		name = onactev.3.a
+	}
+}
+
+country_event = {
+	id = onactev.5
+	title = onactev.5.t
+	desc = onactev.5.d
+
+	hidden = yes
+	mean_time_to_happen = {days = 7}
+	trigger = {
+		has_idea = workers_supporting
+		has_idea = elite_supporting
+	}
+
+	immediate = {
+		remove_ideas = workers_supporting
+		remove_ideas = elite_supporting
+		add_timed_idea = {
+			idea = balance_supporting
+			days = 30
+		}
+	}
+}
+
+country_event = {
+    id = onactev.6
+    title = onactev.6.t
+    desc = onactev.6.d
+
+    hidden = yes
+    mean_time_to_happen = {days = 30}
+
+    trigger = {
+        check_variable = {world_influence > 10}
+        NOT = {has_idea = wi_trade_influence}
+    }
+
+    immediate = {
+        add_ideas = wi_trade_influence
+    }
+}
+
+country_event = {
+    id = onactev.7
+    title = onactev.7.t
+    desc = onactev.7.d
+
+    hidden = yes
+    
+    mean_time_to_happen = {days = 30}
+
+    trigger = {
+        check_variable = {faction_threat > 1}
+        is_faction_leader = yes
+    }
+
+    immediate = {
+        every_country = {
+            limit = {is_in_faction_with = ROOT}
+            remove_ideas = EconomicFaction
+        }
+    }
+}
+
+country_event = {
+    id = onactev.8
+    title = onactev.8.t
+    desc = onactev.8.d
+
+    
+    mean_time_to_happen = {days = 30}
+
+    hidden = yes
+
+    trigger = {
+        if= { limit = {is_in_faction = yes}
+            ROOT= {faction_leader = {check_variable = {faction_influence > 29}}}
+        }
+        else = {always = no}
+    }
+
+    immediate = {
+        if = {
+            limit = {not = {has_idea = wi_faction_trade_influence}}
+            add_ideas = wi_faction_trade_influence
+        }
+    }
+}
+
+country_event = {
+    id = onactev.9
+    title = onactev.9.t
+    desc = onactev.9.d
+
+    hidden = yes
+
+    trigger = {
+        if= { limit = {is_in_faction = yes}
+            ROOT = {faction_leader = {check_variable = {faction_influence > 49}}}
+        }
+        else = {always = no}
+    }
+
+    
+    mean_time_to_happen = {days = 30}
+
+    immediate = {
+        if = {
+            limit = {
+                not = {has_idea = wi_economic_faction_trade_influence}
+                has_idea = EconomicFaction
+            }
+            add_ideas = wi_economic_faction_trade_influence
+        }
+    }
+}
+
+country_event = {
+    id = onactev.10
+    title = onactev.10.t
+    desc = onactev.10.d
+
+    hidden = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        d_calc_wi_e = yes
+        set_variable = {num_of_nuke_anti = 0}
+        every_country = {
+            every_owned_state = {
+                owner = {add_to_variable = {num_of_nuke_anti = PREV.building_level@anti_nuclear_building}}
+            }
+            every_owned_state = {
+                set_variable = {num_of_nuke_anti = ROOT.num_of_nuke_anti}
+            }
+            set_variable = {num_of_nuke_rockets = 0}
+            every_owned_state = {
+                owner = {add_to_variable = {num_of_nuke_rockets = PREV.building_level@nuclear_rocket_site}}
+            }
+            every_owned_state = {
+                set_variable = {num_of_nuke_rockets = ROOT.num_of_nuke_rockets}
+            }
+        }
+    }
+}
+
+country_event = {
+	id = randev.2
+	title = randev.2.t
+	desc = randev.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = randev.2.a #игнор
+		custom_effect_tooltip = unknown_effect_tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {#Митинги прошли сами
+					country_event = {id = randev.4 days=7} 
+					modifier = {
+						factor = 4
+						OR = {
+							has_political_power > 200
+							AND = {
+								has_political_power > 0
+								check_variable = {world_influence > 4}
+							}
+							has_stability > 0.8
+						}
+					}
+				}
+				10 = {#Люди разошлись но будет хуже
+					country_event = {id = randev.5 days = 30} 
+					modifier = {
+						factor = 3
+						OR = {
+							has_political_power > 100
+							AND = {
+								has_political_power > 0
+								check_variable = {world_influence > 2.5}
+							}
+							has_stability > 0.6
+						}
+					}
+				}
+				2 = {#Вооруженное восстание
+					country_event = {id = randev.6 days = 120}
+					modifier = {
+						factor = 100
+						has_stability < 0.3
+						has_war = yes
+						has_war_support < 0.6
+					}
+					modifier = {
+						factor = 10
+						has_idea = elite_supporting
+					}
+					modifier = {
+						factor = 0.1
+						has_idea = workers_supporting
+					}
+				}
+				5 = {#Вынужденный отказ от престола
+					country_event = {id = randev.7 days = 30}
+					modifier = {
+						factor = 100
+						has_stability < 0.3
+						has_war = yes
+						has_war_support < 0.6
+					}
+					modifier = {
+						factor = 3
+						has_political_power < 0
+					}
+					modifier = {
+						factor = 10
+						has_idea = workers_supporting
+					}
+					modifier = {
+						factor = 0.1
+						has_idea = elite_supporting
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = randev.2.b #экономич. задобрить
+		add_ideas = less_workday
+		custom_effect_tooltip = unknown_effect_tooltip
+		hidden_effect = {
+			random_list = {
+				30 = {#Митинги прошли сами
+					country_event = {id = randev.4 days=7} 
+					modifier = {
+						factor = 4
+						OR = {
+							has_political_power > 200
+							AND = {
+								has_political_power > 0
+								check_variable = {world_influence > 4}
+							}
+							has_stability > 0.8
+						}
+					}
+				}
+				40 = {#Люди разошлись но будет хуже
+					country_event = {id = randev.5 days = 30} 
+					modifier = {
+						factor = 3
+						OR = {
+							has_political_power > 100
+							AND = {
+								has_political_power > 0
+								check_variable = {world_influence > 2.5}
+							}
+							has_stability > 0.6
+						}
+					}
+				}
+				5 = {#Вооруженное восстание
+					country_event = {id = randev.6 days = 120}
+					modifier = {
+						factor = 100
+						has_stability < 0.3
+						has_war = yes
+						has_war_support < 0.6
+					}
+					modifier = {
+						factor = 0.1
+						has_idea = workers_supporting
+					}
+					modifier = {
+						factor = 10
+						has_idea = elite_supporting
+					}
+				}
+				25 = {#Вынужденный отказ от престола
+					country_event = {id = randev.7 days = 30}
+					modifier = {
+						factor = 100
+						has_stability < 0.3
+						has_war = yes
+						has_war_support < 0.6
+					}
+					modifier = {
+						factor = 3
+						has_political_power < 0
+					}
+					modifier = {
+						factor = 10
+						has_idea = workers_supporting
+					}
+					modifier = {
+						factor = 0.1
+						has_idea = elite_supporting
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = randev.2.c #полит. задобрить
+		add_political_power = -50
+		custom_effect_tooltip = unknown_effect_tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {#Митинги прошли сами
+					country_event = {id = randev.4 days=7} 
+					modifier = {
+						factor = 4
+						OR = {
+							has_political_power > 200
+							AND = {
+								has_political_power > 0
+								check_variable = {world_influence > 4}
+							}
+							has_stability > 0.8
+						}
+					}
+				}
+				15 = {#Люди разошлись но будет хуже
+					country_event = {id = randev.5 days = 30} 
+					modifier = {
+						factor = 3
+						OR = {
+							has_political_power > 100
+							AND = {
+								has_political_power > 0
+								check_variable = {world_influence > 2.5}
+							}
+							has_stability > 0.6
+						}
+					}
+				}
+				5 = {#Вооруженное восстание
+					country_event = {id = randev.6 days = 120}
+					modifier = {
+						factor = 100
+						has_stability < 0.3
+						has_war = yes
+						has_war_support < 0.6
+					}
+					modifier = {
+						factor = 0.1
+						has_idea = workers_supporting
+					}
+					modifier = {
+						factor = 10
+						has_idea = elite_supporting
+					}
+				}
+				7 = {#Вынужденный отказ от престола
+					country_event = {id = randev.7 days = 30}
+					modifier = {
+						factor = 100
+						has_stability < 0.3
+						has_war = yes
+						has_war_support < 0.6
+					}
+					modifier = {
+						factor = 3
+						has_political_power < 0
+					}
+					modifier = {
+						factor = 10
+						has_idea = workers_supporting
+					}
+					modifier = {
+						factor = 0.1
+						has_idea = elite_supporting
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = randev.2.z
+		custom_effect_tooltip = show_other_options_tooltip
+		hidden_effect = {
+			country_event = {id = randev.3}
+		}
+	}
+}
+
+country_event = {
+	id = randev.3
+	title = randev.2.t
+	desc = randev.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = randev.2.d #конституция
+		news_event = {id = randnews.1}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.2
+		}
+		set_cosmetic_tag = original_tag@monarchism
+	}
+	option = {
+		name = randev.2.e #аресты
+	}
+	option = {
+		name = randev.2.f #РЕЗНЯ
+		add_manpower = -10000
+		add_command_power = -90
+		set_stability = 0
+		set_political_power = 50
+		custom_effect_tooltip = unknown_effect_tooltip
+		hidden_effect = {
+			random_list = {
+				50 = {#Вооруженное восстание
+					country_event = {id = randev.6 days = 1}
+				}
+				50 = {#Сопротивление подавленно
+					country_event = {id = randev.8 days = 14}
+				}
+			}
+		}
+	}	
+	option = {
+		name = randev.2.z
+		custom_effect_tooltip = show_other_options_tooltip
+		hidden_effect = {
+			country_event = {id = randev.2}
+		}
+	}
+}
+
+country_event = {
+	id = randev.4
+	title = randev.4.t
+	desc = randev.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = randev.4.a
+	}
+}
+
+country_event = {
+	id = randev.5
+	title = randev.5.t
+	desc = randev.5.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		random_list = {
+			2 = {#Вооруженное восстание
+				country_event = {id = randev.6 days = 120}
+				modifier = {
+					factor = 100
+					has_stability < 0.3
+					has_war = yes
+					has_war_support < 0.6
+				}
+				modifier = {
+						factor = 0.1
+						has_idea = workers_supporting
+					}
+					modifier = {
+						factor = 10
+						has_idea = elite_supporting
+					}
+			}
+			2 = {#Вынужденный отказ от престола
+				country_event = {id = randev.7 days = 30}
+				modifier = {
+					factor = 100
+					has_stability < 0.3
+					has_war = yes
+					has_war_support < 0.6
+				}
+				modifier = {
+					factor = 3
+					has_political_power < 0
+				}
+				modifier = {
+						factor = 10
+						has_idea = workers_supporting
+					}
+					modifier = {
+						factor = 0.1
+						has_idea = elite_supporting
+					}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = randev.6
+	title = randev.6.t
+	desc = randev.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = randev.6.a
+		custom_effect_tooltip = defend_monarchy_tooltip
+		hidden_effect = {
+			start_civil_war = {
+				ruling_party = monarchism
+				ideology = democratic
+				size = 0.2
+				
+			}
+		}
+	}
+	option = {
+		name = randev.6.b
+		custom_effect_tooltip = attack_for_dem_tooltip
+		hidden_effect = {
+			start_civil_war = {
+				ruling_party = democratic
+				ideology = monarchism
+				size = 0.8
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = randev.7
+	title = randev.7.t
+	desc = randev.7.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {retire_country_leader = yes}
+	}
+
+	option = {
+		name = randev.7.a
+	}
+	option = {
+		name = randev.7.b
+	}
+}
+
+country_event = {
+	id = randev.8
+	title = randev.8.t
+	desc = randev.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = randev.8.a
+	}
+}
+
+country_event = {
+	id = randev.9
+
+	hidden = yes
+
+	trigger = {
+		has_civil_war = no
+		has_government = monarchism
+	}
+
+	mean_time_to_happen = {
+		days = 360
+		modifier = {
+			factor = 1
+			always = yes
+		}
+	}
+
+	immediate = {
+		random_list = {
+			5 = {
+				country_event = {id = randev.10}
+			}
+			95 = {
+				#nothing
+			}
+		}
+	}
+	option = {name = randev.9.a}
+}
+
+country_event = {
+	id = randev.10
+	title = randev.10.t
+	desc = randev.10.d
+
+	is_triggered_only = yes
+
+	immediate = {hidden_effect = {kill_country_leader = yes}}
+	option = {
+		name = randev.10.a
+	}
+}
+
+news_event = { #Конституция
+	id = randnews.1
+	title = randnews.1.t
+	desc = randnews.1.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = randnews.1.a
+	}
+}
+
+country_event = {
+	id = randev.11
+	title = randev.11.t
+	desc = randev.11.d
+    hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = {
+				news_event = newss.20
+			}
+			99 = {
+				country_event = {id = randev.11 days = 360}
+			}
+		}
+	}
+}

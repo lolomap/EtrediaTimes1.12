@@ -1,0 +1,49 @@
+﻿capital = 273
+
+oob = "ZAM_2014"
+
+set_research_slots = 2
+set_stability = 0.8
+set_war_support = 0.5
+
+add_ideas = {
+        www_bad_country
+        total_nonfree_press
+        general_entry
+	fifth_corruption_level
+}
+
+set_technology = {
+	infantry_weapons = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+        early_fighter = 1
+        tech_engineers = 1
+        tech_support = 1
+	tech_mountaineers = 1
+}
+
+
+set_convoys = 30
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "2014.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 9
+        democratic = 6
+        fascism = 74
+        communism = 11
+}
+
+#
+
+recruit_character = ZAM_jim_white
+
+recruit_character = ZAM_name_name
+

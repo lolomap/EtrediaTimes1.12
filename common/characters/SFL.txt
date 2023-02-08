@@ -1,0 +1,91 @@
+characters={
+	SFL_deyan_boyko={
+		name="Deyan Boyko"
+		portraits={
+			civilian={
+				large="gfx/leaders/SFL/portrait_sfl_democratic.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SFL_mikhaylo_philippovic={
+		name="Mikhaylo Philippovic"
+		portraits={
+			civilian={
+				large="gfx/leaders/SFL/portrait_sfl_democratic.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=absolutism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SFL_anton_shishky={
+		name="Anton Shishky"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SFL_mikhail_zhevonic={
+		name="Mikhail Zhevonic"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SFL_varfolomei_zaboric={
+		name="Varfolomei Zaboric"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SFL_milosh_betovicko={
+		name="Milosh Betovicko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/SAU/Portrait_Araa_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+}

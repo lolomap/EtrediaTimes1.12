@@ -1,0 +1,74 @@
+scripted_gui = {
+	extra_topbar = {
+		window_name = "extra_topbar_window"
+		context_type = player_context
+		parent_window_token = top_bar
+
+		visible = {always = yes}
+
+		triggers = {
+			make_peace_alert_button_visible = {
+				#has_war = yes
+				always = no
+			}
+
+            crysis_window_maximize_visible = {
+                has_global_flag = political_crysis
+            }
+		}
+
+		effects = {
+            crysis_window_maximize_click = {
+                clr_country_flag = crysis_win_minimized
+            }
+
+            world_influence_button_click = {
+                if = {
+                    limit = {has_country_flag = winfluence_opened}
+                    clr_country_flag = winfluence_opened
+                }
+                else = {
+                    d_sort_wi = yes
+                    set_country_flag = winfluence_opened
+                }
+            }
+		}
+	}
+
+    winfluence = {
+        window_name = "winfluence_window"
+        context_type = player_context
+
+        visible = {has_country_flag = winfluence_opened}
+
+        dynamic_lists = {
+			countries_gb = {
+				array = global.wi_countries
+				entry_container = wi_countries_entry
+				change_scope = yes
+                index = wi_i
+			}
+		}
+
+        triggers = {
+            cName_visible = {
+                check_variable = {world_influence > 0}
+            }
+            cFlagBorder_visible = {
+                check_variable = {world_influence > 0}
+            }
+            cFlag_visible = {
+                check_variable = {world_influence > 0}
+            }
+            cWI_visible = {
+                check_variable = {world_influence > 0}
+            }
+        }
+
+        properties = {
+            cFlag = {
+				image = [THIS.GetFlag]
+			}
+        }
+    }
+}

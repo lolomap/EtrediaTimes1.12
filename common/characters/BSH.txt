@@ -1,0 +1,91 @@
+characters={
+	BSH_wangdue_nyingpo={
+		name="Wangdue Nyingpo"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BSH_choedon_wangpo={
+		name="Choedon Wangpo"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	BSH_namgyal_wangchuk_gurung={
+		name="Namgyal Wangchuk Gurung"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BSH_yungdrung_trengwa={
+		name="Yungdrung Trengwa"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BSH_dhardon={
+		name="Dhardon"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/SAU/Portrait_Araa_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	BSH_marcus_williams={
+		name="Marcus Williams"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			traits={ compassionate_commoner }
+			expire="2026.1.1.12"
+			id=-1
+		}
+	}
+}

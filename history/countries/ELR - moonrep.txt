@@ -1,0 +1,57 @@
+﻿capital = 170
+
+oob = "ELR_2014"
+
+set_research_slots = 3
+set_stability = 0.9
+set_war_support = 0.1
+
+add_ideas = {
+        WWW_best_country
+        total_free_press
+        general_entry
+        SBU_high_sburska_zvezda
+	first_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	jeep_unit_2 = 1
+	tech_military_police = 1
+}
+
+
+set_convoys = 150
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2013.3.5"
+	election_frequency = 55
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 3
+        democratic = 94
+        fascism = 3
+        communism = 0
+}
+
+#
+
+recruit_character = ELR_jonas_roberts
+
+recruit_character = ELR_ivan_vissarionovich
+
+recruit_character = ELR_petro_pedroshenko
+
+recruit_character = ELR_terine_narabel
+
+recruit_character = ELR_alisa_selistra
+

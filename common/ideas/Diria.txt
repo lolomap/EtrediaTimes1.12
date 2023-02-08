@@ -1,0 +1,233 @@
+ideas = {
+    country = {
+	
+	DIR_government_crisis = {
+
+            picture = polit_crisis
+
+			allowed = {
+				always = no
+			}
+			
+			cancel = {
+				has_government = communism
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				join_faction_tension = 1.00
+				surrender_limit = -0.1
+				political_power_factor = -0.5
+				stability_factor = -0.15
+				conscription_factor = -0.1
+			}
+	}
+	
+	DIR_popular_unrest = {
+
+            picture = chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+			
+			cancel = {
+				has_government = communism
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				conscription_factor = -0.15
+				communism_drift = 0.02
+				democratic_drift = 0.02
+				fascism_drift = 0.02
+				consumer_goods_factor = 0.1
+			}
+	}
+	
+	DIR_radical_lobby = {
+
+            picture = MEX_revolutionary_army
+
+			allowed = {
+				always = no
+			}
+			
+			cancel = {
+				OR = {
+					has_government = democratic
+					has_government = fascism
+					has_government = neutrality
+					has_government = monarchism
+				}
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.02
+				political_power_factor = -0.10
+				stability_factor = -0.05
+				army_org_factor = -0.08
+				experience_gain_army_factor = -0.10
+				max_planning_factor = -0.10
+			}
+	}
+	
+	DIR_revolt2 = {
+
+            picture = hol_liberation
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+            cancel = {
+                has_war = no
+            }
+            on_remove = {
+                delete_dirian_militia = yes
+            }
+
+			modifier = {
+                                planning_speed = -0.3
+                                army_org_factor = -0.1
+                                army_attack_factor = -0.3
+			}
+		}
+
+	DIR_holyoffensive = {
+
+        picture = FRA_scw_intervention_republicans_focus
+
+		allowed = {
+			always = no
+		}
+			
+		removal_cost = -1
+	
+
+		modifier = {
+			ai_focus_aggressive_factor = 0.5
+            planning_speed = 0.1
+            army_org_factor = 0.05
+		}
+		
+		targeted_modifier = {
+			tag = DEM
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.2
+		}
+	}
+
+	DIR_grand_offensive_idea = {
+
+        picture = cze_planning_bonus
+
+		allowed = {
+			always = no
+		}
+			
+		removal_cost = -1
+
+		modifier = {
+			ai_focus_aggressive_factor = 1
+			army_speed_factor = 0.15
+            planning_speed = 0.15
+			army_morale_factor = 0.1
+            army_org_factor = 0.1
+		}
+		targeted_modifier = {
+			tag = DEM
+			attack_bonus_against = 0.5
+			defense_bonus_against = 0.5
+		}
+	}
+	
+	DIR_slaves = {
+            picture = generic_exploit_mines
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+	}
+	
+	DIR_regional_autonomies = {
+            picture = generic_exploit_mines
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.02
+				stability_factor = 0.05
+				political_power_gain = 0.15
+			}
+	}
+	
+	DIR_fight_for_idea1 = {
+            picture = generic_exploit_mines
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				communism_drift = 0.02
+				stability_factor = 0.04
+			}
+			targeted_modifier = {
+				tag = DEM
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+	}
+	
+	DIR_fight_for_idea2 = {
+            picture = generic_exploit_mines
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				ai_focus_aggressive_factor = 0.8
+				communism_drift = 0.03
+				stability_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = DEM
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+	}
+	
+	DIR_fight_for_idea3 = {
+            picture = generic_exploit_mines
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				ai_focus_aggressive_factor = 1
+				communism_drift = 0.04
+				stability_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = DEM
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+	}
+	
+	}
+}

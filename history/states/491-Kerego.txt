@@ -1,0 +1,26 @@
+
+state={
+	id=491
+	name="STATE_491"
+	manpower = 120000
+	
+	state_category = pastoral
+
+	history={
+		owner = CHE
+		buildings = {
+			infrastructure = 3
+                        industrial_complex = 0
+                        arms_factory = 0
+		}
+		add_core_of = CHE
+		add_core_of = EON
+		victory_points = {
+			4125 1
+		}
+
+	}
+	provinces={
+		3992 4047 4102 4125 4154 
+	}
+}

@@ -1,0 +1,60 @@
+﻿capital = 504
+
+oob = "BOU_2014"
+
+set_research_slots = 3
+set_stability = 0.7
+set_war_support = 0.4
+
+add_ideas = {
+        www_best_country
+        total_free_press
+	second_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	synth_oil_experiments = 1
+        fuel_silos = 1
+	transport = 1
+}
+
+
+set_convoys = 200
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2012.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 0
+        democratic = 73
+        fascism = 0
+        communism = 27
+}
+
+#
+
+recruit_character = BOU_jim_jones
+
+recruit_character = BOU_artyom_kekulele
+
+recruit_character = BOU_shadovkizh_iusterema
+
+recruit_character = BOU_timur_nafikov
+
+recruit_character = BOU_lobek_keerizhbeza
+
+recruit_character = BOU_piker_demontue
+

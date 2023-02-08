@@ -1,0 +1,56 @@
+﻿capital = 528
+oob = "SBO_2014"
+
+set_research_slots = 2
+set_stability = 0.9
+set_war_support = 0.5
+
+add_ideas = {
+        WWW_medium_country
+	fourth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	gw_artillery = 1
+	synth_oil_experiments = 1
+	jeep_unit = 1
+	fuel_silos = 1
+	early_light_cruiser = 1
+	early_destroyer = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = monarchism
+	last_election = "2014.1.1"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+    monarchism = 100
+    fascism = 0
+    communism = 0
+    democratic = 0
+	neutrality = 0
+}
+
+set_convoys = 600
+
+recruit_character = SBO_bob_evans
+
+recruit_character = SBO_yoro_sonko
+
+recruit_character = SBO_karamba_ceesay
+
+recruit_character = SBO_dembo_marenah
+
+recruit_character = SBO_edrissa_kujabi
+
+recruit_character = SBO_kekoto_jobe
+

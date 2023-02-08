@@ -1,0 +1,82 @@
+﻿capital = 572
+
+oob = "TOR_2014"
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.7
+
+add_ideas = {
+        WWW_medium_country
+        total_nonfree_press
+        closed_entry
+	third_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	motorized_rocket_unit = 1
+	gw_artillery = 1
+	gwtank = 1
+	advanced_medium_tank = 1
+	main_battle_tank = 1
+	tech_mountaineers = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	early_submarine = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_destroyer = 1
+	transport = 1
+
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	CAS1 = 1
+}
+
+
+set_convoys = 200
+
+set_politics = {
+	ruling_party = communism
+	last_election = "2014.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 6
+        democratic = 39
+        fascism = 12
+        communism = 43
+}
+
+#
+
+recruit_character = TOR_lucas_brown
+
+recruit_character = TOR_general_3
+
+recruit_character = TOR_general_2
+
+recruit_character = TOR_general_1
+
+recruit_character = TOR_irapo_sini
+
+recruit_character = TOR_garold
+
+recruit_character = TOR_poupals_poup
+
+recruit_character = TOR_savkono_kirin
+

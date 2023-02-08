@@ -1,0 +1,71 @@
+characters={
+	BUP_king_bolampulalanogo_xiv={
+		name="King Bolampulalanogo XIV"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUP_bob_white={
+		name="Bob White"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ captain_of_industry fortification_engineer }
+			expire="2028.1.1.12"
+			id=-1
+		}
+	}
+	BUP_alex_white={
+		name="Alex White"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={ fortification_engineer war_profiteer }
+			expire="2030.1.1.12"
+			id=-1
+		}
+	}
+	BUP_johannes_walker={
+		name="Johannes Walker"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="2032.1.1.12"
+			id=-1
+		}
+	}
+	BUP_johannes_roberts={
+		name="Johannes Roberts"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ financial_expert fortification_engineer }
+			expire="2019.1.1.12"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,125 @@
+characters={
+	FIL_andrew_johans={
+		name="Andrew Johans"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIL_edward_muller={
+		name="Edward Muller"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=absolutism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIL_edvin_lofgren={
+		name="Edvin Lofgren"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=absolutism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIL_terine_narabel={
+		name="Terine Narabel"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIL_lui_erk={
+		name="Lui Erk"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIL_john_dort={
+		name="John Dort"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIL_aaron_lundqvist={
+		name="Aaron Lundqvist"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_land_1"
+			}
+		}
+		field_marshal={
+			traits={ offensive_doctrine }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FIL_isak_berggen={
+		name="Isak Berggen"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FIL/"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

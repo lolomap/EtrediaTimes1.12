@@ -1,0 +1,54 @@
+﻿capital = 445
+oob = "KAS_2014"
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.5
+
+add_ideas = {
+        www_bad_country
+        free_press
+        general_entry
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	gw_artillery = 1
+	jeep_unit = 1
+}
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2008.1.1"
+	election_frequency = 80
+	elections_allowed = yes
+}
+
+set_popularities = {
+    democratic = 45
+    fascism = 0
+    communism = 0
+	neutrality = 55
+}
+
+#
+
+recruit_character = KAS_alex_williams
+
+recruit_character = KAS_zhibeka_lonaba
+
+recruit_character = KAS_ivan_vissarionovich
+
+recruit_character = KAS_kendri_losental
+
+recruit_character = KAS_kazarzhum_tahyrkaev
+
+recruit_character = KAS_nurkbultan_memrekaev
+

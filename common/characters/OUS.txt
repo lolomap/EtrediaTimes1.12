@@ -1,0 +1,71 @@
+characters={
+	OUS_lethabo_goosen={
+		name="Lethabo Goosen"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	OUS_johannes_walker={
+		name="Johannes Walker"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ economist quartermaster_trainee }
+			expire="2031.1.1.12"
+			id=-1
+		}
+	}
+	OUS_marcus_smith={
+		name="Marcus Smith"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=rexism
+			expire="2031.1.1.12"
+			id=-1
+		}
+	}
+	OUS_john_smith={
+		name="John Smith"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			traits={ finance_graduate war_industrialist }
+			expire="2030.1.1.12"
+			id=-1
+		}
+	}
+	OUS_alexander_brown={
+		name="Alexander Brown"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			traits={ quartermaster_trainee }
+			expire="2029.1.1.12"
+			id=-1
+		}
+	}
+}

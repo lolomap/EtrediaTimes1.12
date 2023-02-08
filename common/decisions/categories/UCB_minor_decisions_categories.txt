@@ -1,0 +1,83 @@
+IND_decisions = {
+	icon = generic_independence
+	allowed = {
+		original_tag = IND
+	}
+	visible = {
+	9 = { is_owned_and_controlled_by = IND }
+	}
+}
+
+ARS_decisions = {
+	icon = generic_independence
+	allowed = {
+	    original_tag = ARS
+	}
+	visible = {
+	10 = { is_owned_and_controlled_by = ARS }
+	}
+}
+
+ucbminors_decisions = {
+	icon = generic_independence
+	allowed = {
+		OR = {
+				original_tag = DIN
+				original_tag = RAN
+				original_tag = MIN
+				original_tag = NIK
+				original_tag = KOS
+				original_tag = TRI
+				original_tag = PER
+				original_tag = ZER
+				original_tag = EDD
+				original_tag = IND
+				original_tag = BER
+				original_tag = LEV
+				original_tag = RET
+				original_tag = AKV
+				original_tag = ARS
+				original_tag = ORB
+				original_tag = KUR
+				original_tag = TIR
+				original_tag = SRA
+				original_tag = NRA
+				original_tag = SGO
+				original_tag = SVE
+				original_tag = GLE
+				original_tag = KIM
+				original_tag = FLR
+				original_tag = KOL
+			}
+	}
+	visible = {
+		OR = {
+				original_tag = DIN
+				original_tag = RAN
+				original_tag = MIN
+				original_tag = NIK
+				original_tag = KOS
+				original_tag = TRI
+				original_tag = PER
+				original_tag = ZER
+				original_tag = EDD
+				original_tag = IND
+				original_tag = BER
+				original_tag = LEV
+				original_tag = RET
+				original_tag = AKV
+				original_tag = ARS
+				original_tag = ORB
+				original_tag = KUR
+				original_tag = TIR
+				original_tag = SRA
+				original_tag = NRA
+				original_tag = SGO
+				original_tag = SVE
+				original_tag = GLE
+				original_tag = KIM
+				original_tag = FLR
+				original_tag = KOL
+			}
+	}
+}

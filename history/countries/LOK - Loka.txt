@@ -1,0 +1,50 @@
+﻿capital = 743
+
+OOB = "LOK_2014"
+
+set_research_slots = 2
+set_stability = 0.8
+set_war_support = 0.4
+
+add_ideas = {
+        WWW_bad_country
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+
+	jeep_unit = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+    	neutrality = 100
+    	fascism = 0
+    	communism = 0
+	democratic = 0
+}
+
+set_convoys = 0
+
+
+
+recruit_character = LOK_jim_smith
+
+recruit_character = LOK_alexander_walker
+
+recruit_character = LOK_alexander_williams
+
+recruit_character = LOK_john_walker
+
+recruit_character = LOK_nay_derrida
+

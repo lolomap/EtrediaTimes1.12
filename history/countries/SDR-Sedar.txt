@@ -1,0 +1,57 @@
+﻿capital = 655
+
+OOB = "SDR_2014"
+
+set_research_slots = 2
+set_stability = 0.9
+set_war_support = 0.4
+
+add_ideas = {
+        WWW_medium_country
+	third_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	jeep_unit_2 = 1
+	gw_artillery = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2013.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+        democratic = 81
+        fascism = 9
+        communism = 10
+	neutrality = 0
+}
+
+set_convoys = 607
+
+
+recruit_character = SDR_peter_taylor
+
+recruit_character = SDR_silvano_albergo
+
+recruit_character = SDR_ansari_benguigui
+
+recruit_character = SDR_fathi_gamouh
+
+recruit_character = SDR_khayyat_hmida
+
+recruit_character = SDR_kadir_attali
+

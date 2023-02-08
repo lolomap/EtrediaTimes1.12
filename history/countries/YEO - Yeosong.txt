@@ -1,0 +1,55 @@
+﻿capital = 629
+
+OOB = "YEO_2014"
+
+set_research_slots = 1
+set_stability = 0.9
+set_war_support = 0.5
+
+add_ideas = {
+        WWW_medium_country
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	early_destroyer = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 0
+        fascism = 0
+        communism = 0
+	neutrality = 100
+}
+
+set_convoys = 50
+
+
+recruit_character = YEO_john_williams
+
+recruit_character = YEO_sandile_mandela
+
+recruit_character = YEO_fezekile_ntsokwana
+
+recruit_character = YEO_songezo_ngubenani
+
+recruit_character = YEO_vile_dumalisile
+
+recruit_character = YEO_jongephi_mbizo
+

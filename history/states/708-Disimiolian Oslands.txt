@@ -1,0 +1,37 @@
+state={
+	id=708
+	name="STATE_708"
+	manpower = 105000
+	state_category = pastoral
+	
+	resources={
+	}
+
+	history={
+		owner = UCB
+		buildings = {
+			infrastructure = 3
+			1829 = {
+				naval_base = 6
+			}
+			2101 = {
+				naval_base = 1
+			}
+			1339 = {
+				naval_base = 1
+			}
+			1401 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = UCB
+		add_core_of = CTE
+		victory_points = {
+			1829 1
+		}
+
+	}
+	provinces={
+		1339 1401 1829 2101 
+	}
+}

@@ -1,0 +1,89 @@
+characters={
+	BOV_zaim_amrani={
+		name="Zaim Amrani"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="2061.1.1.1"
+			id=-1
+		}
+	}
+	BOV_hanan_behired={
+		name="Hanan Behired"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	BOV_jonas_smith={
+		name="Jonas Smith"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ fortification_engineer financial_expert }
+			expire="2029.1.1.12"
+			id=-1
+		}
+	}
+	BOV_jim_taylor={
+		name="Jim Taylor"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=anti_revisionism
+			expire="2022.1.1.12"
+			id=-1
+		}
+	}
+	BOV_lucas_brown={
+		name="Lucas Brown"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="2032.1.1.12"
+			id=-1
+		}
+	}
+	BOV_peter_brown={
+		name="Peter Brown"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ fortification_armchair_general }
+			expire="2025.1.1.12"
+			id=-1
+		}
+	}
+}

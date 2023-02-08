@@ -1,0 +1,758 @@
+add_namespace = greatminor
+add_namespace = greatrandom
+
+country_event = {
+	id = greatrandom.1
+	title = greatrandom.1.t
+	desc = greatrandom.1.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_country = {
+			random_country = {
+				PREV = {set_variable = {moving_to = PREV}}
+				every_owned_state = {
+					set_variable = {move_to = PREV.PREV}
+				}
+			}
+			every_owned_state = {
+				set_variable = {move_to = PREV.moving_to}
+				PREV = {delete_unit = {state = PREV disband = no}}
+			}
+		}
+		every_state = {
+			var:move_to = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+		}
+        every_state = {
+            meta_effect = {
+                text = {
+                    every_country = {
+                        delete_unit = {
+                            state = [STT]
+                            disband = no
+                        } 
+                    }
+                    
+                }
+                STT = "[THIS.GetID]"
+            }
+        }
+
+        every_country = {
+            load_oob = KOL_rebels
+            23 = {
+                teleport_armies = {
+                    limit = {tag = THIS}
+                }
+            }
+        }
+	}
+}
+
+country_event = {
+   id = greatminor.7
+	title = greatminor.7.t
+	desc = greatminor.7.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+        country_event = greatminor.1
+        country_event = greatminor.2
+        country_event = greatminor.3
+        country_event = greatminor.4
+        country_event = greatminor.5
+        country_event = greatminor.6
+        country_event = greatminor.8
+        country_event = greatminor.9
+        country_event = greatminor.10
+        country_event = greatminor.11
+        country_event = greatminor.12
+        country_event = greatminor.13
+
+        every_state = {
+            meta_effect = {
+                text = {
+                    every_country = {
+                        delete_unit = {
+                            state = [STT]
+                            disband = no
+                        } 
+                    }
+                    
+                }
+                STT = "[THIS.GetID]"
+            }
+        }
+
+        every_country = {
+            load_oob = KOL_rebels
+            23 = {
+                teleport_armies = {
+                    limit = {tag = THIS}
+                }
+            }
+        }
+    } 
+}
+
+#Разминоривание ОсНБ
+country_event = {
+	id = greatminor.1
+	title = greatminor.1.t
+	desc = greatminor.1.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = TIR
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			TIR = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = KUR
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			KUR = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = NRA
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			NRA = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SRA
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			SRA = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ARS
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			ARS = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SVE
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			SVE = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = PER
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			PER = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = KIM
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			KIM = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = KOL
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			KOL = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = BER
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			BER = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = TRI
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			TRI = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = KOS
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			KOS = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = NIK
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			NIK = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = IND
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			IND = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = EDD
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			EDD = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = LEV
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			LEV = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = RET
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			RET = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = GLE
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			GLE = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SGO
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			SGO = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = FLR
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			FLR = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = RAN
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			RAN = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = DIN
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			DIN = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = AKV
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			AKV = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ZER
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			ZER = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = MIN
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			MIN = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ORB
+				is_owned_by = UCB
+			}
+			UCB = {delete_unit = {state = PREV disband = no}}
+			ORB = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание ФШКБ
+country_event = {
+	id = greatminor.2
+	title = greatminor.2.t
+	desc = greatminor.2.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = ORB
+				is_owned_by = FSC
+			}
+			FSC = {delete_unit = {state = PREV disband = no}}
+			ORB = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = NER
+				is_owned_by = FSC
+			}
+			FSC = {delete_unit = {state = PREV disband = no}}
+			NER = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ANR
+				is_owned_by = FSC
+			}
+			FSC = {delete_unit = {state = PREV disband = no}}
+			ANR = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = KUL
+				is_owned_by = FSC
+			}
+			FSC = {delete_unit = {state = PREV disband = no}}
+			KUL = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Тербии
+country_event = {
+	id = greatminor.3
+	title = greatminor.3.t
+	desc = greatminor.3.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		TRB = {
+			delete_unit = {state = 222 disband = no}
+			delete_unit = {state = 230 disband = no}
+			delete_unit = {state = 219 disband = no}
+			delete_unit = {state = 231 disband = no}
+			delete_unit = {state = 221 disband = no}
+			delete_unit = {state = 197 disband = no}
+		}
+		ESB = {
+			transfer_state = 222
+			add_state_core = 222
+		}
+		ELN = {
+			transfer_state = 230
+                        transfer_state = 229
+			load_oob = ELN_2014
+			add_manpower = 44999
+		}
+		BAK = {
+			transfer_state = 219
+			add_state_core = 219
+			transfer_state = 218
+			add_state_core = 218
+                        transfer_state = 220
+                        add_state_core = 220
+			load_oob = BAK_2014
+			add_manpower = 7999
+		}
+		KRA = {
+			transfer_state = 231
+			add_state_core = 231
+			load_oob = KRA_2014
+			add_manpower = 8145
+		}
+		LCH = {
+			transfer_state = 221
+			add_state_core = 221
+			load_oob = LCH_2014
+			add_manpower = 21999
+		}
+		SIN = {
+			transfer_state = 197
+			add_state_core = 197
+                        transfer_state = 196
+                        add_state_core = 196
+		}
+	}
+}
+
+#Разминоривание Саффлии
+country_event = {
+	id = greatminor.4
+	title = greatminor.4.t
+	desc = greatminor.4.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = SZE
+				is_owned_by = SFL
+			}
+			SFL = {delete_unit = {state = PREV disband = no}}
+			SZE = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = HLR
+				is_owned_by = SFL
+			}
+			SFL = {delete_unit = {state = PREV disband = no}}
+			HLR = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Сибурленда
+country_event = {
+	id = greatminor.5
+	title = greatminor.5.t
+	desc = greatminor.5.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = ELN
+				is_owned_by = SBU
+			}
+			SBU = {delete_unit = {state = PREV disband = no}}
+			ELN = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = HLR
+				is_owned_by = SBU
+			}
+			SBU = {delete_unit = {state = PREV disband = no}}
+			HLR = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SVT
+				is_owned_by = SBU
+			}
+			SBU = {delete_unit = {state = PREV disband = no}}
+			SVT = {transfer_state = PREV}
+		}
+		every_state = {
+			limit = {
+				is_core_of = MOF
+				is_owned_by = SBU
+			}
+			SBU = {delete_unit = {state = PREV disband = no}}
+			MOF = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Каспы
+country_event = {
+	id = greatminor.6
+	title = greatminor.6.t
+	desc = greatminor.6.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = TAL
+				is_owned_by = KAS
+			}
+			KAS = {delete_unit = {state = PREV disband = no}}
+			TAL = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = NSH
+				is_owned_by = KAS
+			}
+			KAS = {delete_unit = {state = PREV disband = no}}
+			NSH = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание ИИД
+country_event = {
+	id = greatminor.8
+	title = greatminor.8.t
+	desc = greatminor.8.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = BKH
+				is_owned_by = IID
+			}
+			IID = {delete_unit = {state = PREV disband = no}}
+			BKH = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = SKT
+				is_owned_by = IID
+			}
+			IID = {delete_unit = {state = PREV disband = no}}
+			SKT = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = TUO
+				is_owned_by = IID
+			}
+			IID = {delete_unit = {state = PREV disband = no}}
+			TUO = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = TUO
+				is_owned_by = GKD
+			}
+			GKD = {delete_unit = {state = PREV disband = no}}
+			TUO = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Картилии
+country_event = {
+	id = greatminor.9
+	title = greatminor.9.t
+	desc = greatminor.9.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = FSF
+				is_owned_by = KAR
+			}
+			KAR = {delete_unit = {state = PREV disband = no}}
+			FSF = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Дирии
+country_event = {
+	id = greatminor.10
+	title = greatminor.10.t
+	desc = greatminor.10.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = BLJ
+				is_owned_by = DIR
+			}
+			DIR = {delete_unit = {state = PREV disband = no}}
+			BLJ = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = REK
+				is_owned_by = DIR
+			}
+			DIR = {delete_unit = {state = PREV disband = no}}
+			REK = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = HEK
+				is_owned_by = DIR
+			}
+			DIR = {delete_unit = {state = PREV disband = no}}
+			HEK = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Янтхала
+country_event = {
+	id = greatminor.11
+	title = greatminor.11.t
+	desc = greatminor.11.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = EST
+				is_owned_by = YAN
+			}
+			YAN = {delete_unit = {state = PREV disband = no}}
+			EST = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Эйкла
+country_event = {
+	id = greatminor.12
+	title = greatminor.12.t
+	desc = greatminor.12.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = SKB
+				is_owned_by = EIK
+			}
+			EIK = {delete_unit = {state = PREV disband = no}}
+			SKB = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = KNL
+				is_owned_by = EIK
+			}
+			EIK = {delete_unit = {state = PREV disband = no}}
+			KNL = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = TSH
+				is_owned_by = EIK
+			}
+			EIK = {delete_unit = {state = PREV disband = no}}
+			TSH = {transfer_state = PREV}
+		}
+	}
+}
+
+#Разминоривание Чеспа
+country_event = {
+	id = greatminor.13
+	title = greatminor.13.t
+	desc = greatminor.13.d
+	picture = GFX_news_event
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				is_core_of = SAN
+				is_owned_by = CHE
+			}
+			CHE = {delete_unit = {state = PREV disband = no}}
+			SAN = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = KRT
+				is_owned_by = CHE
+			}
+			CHE = {delete_unit = {state = PREV disband = no}}
+			KRT = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = EON
+				is_owned_by = CHE
+			}
+			CHE = {delete_unit = {state = PREV disband = no}}
+			EON = {transfer_state = PREV}
+		}
+        every_state = {
+			limit = {
+				is_core_of = EYC
+				is_owned_by = CHE
+			}
+			CHE = {delete_unit = {state = PREV disband = no}}
+			EYC = {transfer_state = PREV}  
+		}
+        every_state = {
+			limit = {
+				is_core_of = NSH
+				is_owned_by = CHE
+			}
+			CHE = {delete_unit = {state = PREV disband = no}}
+			NSH = {transfer_state = PREV}
+		}
+	}
+}

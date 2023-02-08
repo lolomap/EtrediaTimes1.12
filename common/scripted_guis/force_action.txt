@@ -1,0 +1,638 @@
+scripted_gui = {
+    crysis = {
+        window_name = "crysis_window"
+        
+        visible = {
+            has_global_flag = political_crysis
+            not = {has_country_flag = crysis_win_minimized}
+            OR = {
+                is_in_array = {global.crysis_majors = THIS}
+                is_in_array = {global.crysis_senders = THIS}
+                is_in_array = {global.crysis_tos = THIS}
+                tag = global.sender_crysis
+                tag = global.to_crysis
+                has_country_flag = cheat_show_cr_win
+            }
+        }
+
+        ai_enabled = {
+			has_game_rule = {
+                rule = allow_crysis
+                option = FREE
+            }	
+		}
+        ai_check = {
+            has_global_flag = political_crysis
+        }
+        ai_test_interval = 240 #Every 10 days
+        ai_weights = {
+            sender_choose_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        set_temp_variable_to_random = cr_ai_random_choose
+                        check_variable = {cr_ai_random_choose < 0.05}
+                        add = 10
+                    }
+
+                    modifier = {
+						has_war_support < 0.3
+						var:global.sender_crysis = {ROOT = {not = {has_opinion = {target = PREV value > 99}}}}
+                        add = -99
+                    }
+					modifier = {
+						var:global.sender_crysis = {ROOT = {has_opinion = {target = PREV value > 99}}}
+                        add = 100
+                    }
+                    modifier = {
+						var:global.sender_crysis = {ROOT = {has_opinion = {target = PREV value > 45}}}
+                        add = 15
+                    }
+					modifier = {
+						has_war_support > 0.29
+						add = 5
+					}
+					modifier = {
+						var:global.to_crysis = {any_owned_state = {OR = {is_claimed_by = ROOT is_core_of = ROOT}}}
+						add = 50
+					}
+					modifier = {
+						is_ally_with = var:global.sender_crysis
+						add = 50
+					}
+                    modifier = {
+                        OR = {
+                            has_government = democratic
+                            has_government = communism
+                        }
+                        var:global.sender_crysis = {
+                            OR = {
+                                has_government = fascism
+                                has_government = monarchism
+                                has_government = neutrality
+                            }
+                        }
+                        add = -30
+                    }
+                    modifier = {
+                        has_government = democratic
+                        any_of_scopes = {
+                            array = global.crysis_senders
+                            has_government = fascism
+                            has_government = communism
+                        }
+                        add = -15
+                    }
+
+                    modifier = {
+                        OR = {
+                            tag = SFL
+                            tag = MOF
+                        }
+                        OR = {
+                            var:global.sender_crysis = {tag = ELR}
+                            var:global.minor_crysis = {tag = ELR}
+                        }
+                        add = -10
+                    }
+                    modifier = {
+                        OR = {
+                            tag = SBU
+                        }
+                        OR = {
+                            var:global.sender_crysis = {tag = ELR}
+                            var:global.minor_crysis = {tag = ELR}
+                        }
+                        add = 10
+                    }
+                }
+            }
+
+            to_choose_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        set_temp_variable_to_random = cr_ai_random_choose
+                        check_variable = {cr_ai_random_choose < 0.05}
+                        add = 10
+                    }
+
+                    modifier = {
+						has_war_support < 0.3
+						var:global.to_crysis = {ROOT = {not = {has_opinion = {target = PREV value > 99}}}}
+                        add = -99
+                    }
+					modifier = {
+						var:global.to_crysis = {ROOT = {has_opinion = {target = PREV value > 99}}}
+                        add = 100
+                    }
+                    modifier = {
+						var:global.to_crysis = {ROOT = {has_opinion = {target = PREV value > 45}}}
+                        add = 15
+                    }
+					modifier = {
+						has_war_support > 0.29
+						add = 5
+					}
+					modifier = {
+						var:global.sender_crysis = {any_owned_state = {OR = {is_claimed_by = ROOT is_core_of = ROOT}}}
+						add = 50
+					}
+					modifier = {
+						is_ally_with = var:global.to_crysis
+						add = 50
+					}
+                    modifier = {
+                        OR = {
+                            has_government = democratic
+                            has_government = communism
+                        }
+                        var:global.to_crysis = {
+                            OR = {
+                                has_government = fascism
+                                has_government = monarchism
+                                has_government = neutrality
+                            }
+                        }
+                        add = -30
+                    }
+                    modifier = {
+                        has_government = democratic
+                        any_of_scopes = {
+                            array = global.crysis_tos
+                            has_government = fascism
+                            has_government = communism
+                        }
+                        add = -15
+                    }
+
+                    modifier = {
+                        OR = {
+                            tag = SFL
+                            tag = MOF
+                        }
+                        OR = {
+                            var:global.to_crysis = {tag = ELR}
+                        }
+                        add = -10
+                    }
+                    modifier = {
+                        OR = {
+                            tag = SBU
+                        }
+                        OR = {
+                            var:global.to_crysis = {tag = ELR}
+                        }
+                        add = 10
+                    }
+                }
+            }
+
+            press_button_click = {
+                ai_will_do = {
+                    base = 0
+                    modifier = {
+                        has_country_flag = cr_ai_press
+                        add = 100
+                    }
+                    modifier = {
+                        has_country_flag = cr_ai_completed
+                        add = -1000000
+                    }
+                }
+            }
+
+            allow_button_click = {
+                ai_will_do = {
+                    base = 0
+                    modifier = {
+                        has_country_flag = cr_ai_allow
+                        add = 100
+                    }
+                    modifier = {
+                        has_country_flag = cr_ai_completed
+                        add = -1000000
+                    }
+                }
+            }
+        }
+
+        triggers = {
+            sender_choose_button_click_enabled = {
+                NOT = {or = {tag = global.sender_crysis tag = global.to_crysis}}
+                NOT = {is_in_array = {global.crysis_senders = THIS}}
+                NOT = {is_in_array = {global.crysis_tos = THIS}}
+            }
+            to_choose_button_click_enabled = {
+                NOT = {or = {tag = global.sender_crysis tag = global.to_crysis}}
+                NOT = {is_in_array = {global.crysis_senders = THIS}}
+                NOT = {is_in_array = {global.crysis_tos = THIS}}
+            }
+
+            press_button_click_enabled = {
+                OR = {tag = global.cr_send_op tag = global.cr_to_op}
+                NOT = {has_country_flag = crysis_allow}
+                OR = {
+                    is_in_array = {global.crysis_senders = THIS}
+                    is_in_array = {global.crysis_tos = THIS}
+                    tag = global.sender_crysis
+                    tag = global.to_crysis
+                }
+            }
+            allow_button_click_enabled = {
+                NOT = {has_country_flag = crysis_press}
+                OR = {
+                    is_in_array = {global.crysis_senders = THIS}
+                    is_in_array = {global.crysis_tos = THIS}
+                    tag = global.sender_crysis
+                    tag = global.to_crysis
+                }
+            }
+
+            attackIcon_visible = {
+                OR = {
+                    var:global.cr_send_op = {has_country_flag = crysis_press}
+                    check_variable = {global.cr_a_status = 3}
+                }
+            }
+            defIcon_visible = {
+                OR = {
+                    var:global.cr_to_op = {has_country_flag = crysis_press}
+                    check_variable = {global.cr_d_status = 3}
+                }
+            }
+
+            send_allow_visible = {
+                var:global.sender_crysis = {has_country_flag = crysis_allow}
+            }
+            to_allow_visible = {
+                var:global.to_crysis = {has_country_flag = crysis_allow}
+            }
+        }
+
+        effects = {
+            winmode_button_click = {
+                set_country_flag = crysis_win_minimized
+            }
+
+            sender_choose_button_click = {
+                add_to_array = {global.crysis_senders = ROOT}
+                remove_from_array = {global.crysis_majors = ROOT}
+                d_calc_crysis = yes
+            }
+            to_choose_button_click = {
+                add_to_array = {global.crysis_tos = ROOT}
+                remove_from_array = {global.crysis_majors = ROOT}
+                d_calc_crysis = yes
+            }
+
+            press_button_click = {
+                if = {
+                    limit = {NOT = {has_country_flag = crysis_press}}
+                    add_to_variable = {global.cr_press_clicked = 1}
+                    set_country_flag = crysis_press
+                    set_country_flag = cr_ai_completed
+                    if = {
+                        limit = {check_variable = {global.cr_press_clicked > 1}}
+                        force_press = yes
+                        var:sender_crysis = {country_event = {id = mechanics.36 days = 2}}
+                    }
+                }
+                else = {
+                    clr_country_flag = crysis_press
+                    subtract_from_variable = {global.cr_press_clicked = 1}
+                }
+            }
+            allow_button_click = {
+                if = {
+                    limit = {NOT = {has_country_flag = crysis_allow}}
+                    set_country_flag = crysis_allow
+                    set_country_flag = cr_ai_completed
+                }
+                else = {clr_country_flag = crysis_allow}
+
+                set_temp_variable = {cr_a_count = 0}
+                set_temp_variable = {cr_d_count = 0}
+
+                for_each_scope_loop = {
+                    array = global.crysis_senders
+                    if = {
+                        limit = {has_country_flag = crysis_allow}
+                        add_to_temp_variable = {cr_a_count = 1}
+                    }
+                }
+                for_each_scope_loop = {
+                    array = global.crysis_tos
+                    if = {
+                        limit = {has_country_flag = crysis_allow}
+                        add_to_temp_variable = {cr_d_count = 1}
+                    }
+                }
+                if = {limit = {var:global.sender_crysis = {has_country_flag = crysis_allow}} add_to_temp_variable = {cr_a_count = 1}}
+                if = {limit = {var:global.to_crysis = {has_country_flag = crysis_allow}} add_to_temp_variable = {cr_d_count = 1}}
+
+                set_temp_variable = {cr_a_max = global.crysis_senders^num}
+                add_to_temp_variable = {cr_a_max = 1}
+                set_temp_variable = {cr_d_max = global.crysis_tos^num}
+                add_to_temp_variable = {cr_d_max = 1}
+
+                if = {
+                    limit = {check_variable = {cr_a_count = cr_a_max}}
+                    set_variable = {global.cr_a_status = 3}
+                    set_global_flag = cr_a_allow
+                    force_press = yes
+                    var:sender_crysis = {country_event = {id = mechanics.36 days = 2}}
+                }
+                else = {set_variable = {global.cr_a_status = 1}}
+
+                if = {
+                    limit = {check_variable = {cr_d_count = cr_d_max}}
+                    set_variable = {global.cr_d_status = 3}
+                    set_global_flag = cr_d_allow
+                    force_press = yes
+                    var:sender_crysis = {country_event = {id = mechanics.36 days = 2}}
+                }
+                else = {set_variable = {global.cr_d_status = 2}}
+            }
+        }
+
+        properties = {
+			senderFlag = {
+				image = [?global.sender_crysis.GetFlag]
+			}
+            toFlag = {
+				image = [?global.to_crysis.GetFlag]
+			}
+            senderFlagBorder = {
+                frame = global.sender_crysis_op_status
+            }
+            toFlagBorder = {
+                frame =  global.to_crysis_op_status
+            }
+
+            pb = {
+                frame = global.crysis_timer
+            }
+
+            attackIcon = {frame = global.cr_a_status}
+            defIcon = {frame = global.cr_d_status}
+		}
+    }
+    crysis_senders = {
+        window_name = "sender_help_window"
+        parent_window_name = "crysis_window"
+
+        dynamic_lists = {
+			senders_gb = {
+				array = global.crysis_senders
+				entry_container = major_entry
+				change_scope = yes
+			}
+		}
+
+        triggers = {
+            cAllow_visible = {
+                has_country_flag = crysis_allow
+            }
+        }
+
+        properties = {
+			cFlag = {
+				image = [THIS.GetFlag]
+			}
+            cFlagBorder = {
+                frame = is_highest_crysis
+            }
+		}
+    }
+    crysis_tos = {
+        window_name = "to_help_window"
+        parent_window_name = "crysis_window"
+
+        dynamic_lists = {
+			tos_gb = {
+				array = global.crysis_tos
+				entry_container = major_entry
+				change_scope = yes
+			}
+		}
+
+        triggers = {
+            cAllow_visible = {
+                has_country_flag = crysis_allow
+            }
+        }
+
+        properties = {
+			cFlag = {
+				image = [THIS.GetFlag]
+			}
+            cFlagBorder = {
+                frame = is_highest_crysis
+            }
+		}
+    }
+    crysis_waiters = {
+        window_name = "waiters_window"
+        parent_window_name = "crysis_window"
+
+        dynamic_lists = {
+			waiters_gb = {
+				array = global.crysis_majors
+				entry_container = major_entry
+				change_scope = yes
+			}
+		}
+
+        triggers = {
+            cAllow_visible = {
+                always = no
+            }
+        }
+
+        properties = {
+			cFlag = {
+				image = [THIS.GetFlag]
+			}
+		}
+    }
+
+    force_action = {
+        window_name = "force_action_window"
+        parent_window_token = selected_country_view 
+        context_type = selected_country_context
+
+        ai_enabled = {
+            has_game_rule = {
+                rule = allow_crysis
+                option = FREE
+            }
+        }
+        #ai_test_interval = 336 #Every 14 days
+        ai_test_scopes = test_neighbouring_countries
+        ai_weights = {
+            faw_exit_button_click = {ai_will_do = {base = 0 modifier = {crysis_startable = no add = 100}}}
+            cRelease_click = {
+                ai_will_do = {
+                    base = 0
+                    modifier = {
+                        var:ROOT.cr_ai_minor_target = {ROOT = {has_country_flag = crysis_ai_minor@PREV}}
+                        any_controlled_state = {
+                            is_core_of = var:ROOT.cr_ai_minor_target
+                        }
+                        add = 10000
+                    }
+                }
+            }
+            puppet_button_click = {
+                ai_will_do = {
+                    base = 0
+                    modifier = {
+                        ROOT = {has_country_flag = crysis_ai_puppet@PREV}
+                        add = 10000
+                    }
+                }
+            }
+            cores_button_click = {
+                ai_will_do = {
+                    base = 0
+                    modifier = {
+                        ROOT = {has_country_flag = crysis_ai_cores@PREV}
+                        add = 100000
+                    }
+                }
+            }
+        }
+
+
+		visible = {
+			ROOT = {has_country_flag = force_action_win_opened}
+			#always = yes
+		}
+
+        effects = {
+			faw_exit_button_click = {
+				ROOT = {clr_country_flag = force_action_win_opened}
+			}
+
+            cRelease_click = {
+                if = {
+                    limit = {always = yes}
+
+                    set_global_flag = {
+                        flag = political_crysis
+                        days = 60
+                        value = 1
+                    }
+                    set_variable = {global.to_crysis = THIS}
+                    set_variable = {global.sender_crysis = ROOT}
+                    #set_variable = {global.minor_crysis = ROOT.cr_ai_minor_target}
+                    set_variable = {global.minor_crysis = v}
+
+                    set_variable = {global.type_crysis = 2}
+                    
+                    var:sender_crysis = {country_event = {id = mechanics.37 days = 1}}
+                    encount_majors = yes
+                    d_calc_crysis = yes
+
+                    ROOT = {clr_country_flag = force_action_win_opened}
+                    var:ROOT.cr_ai_minor_target = {ROOT = {clr_country_flag = crysis_ai_minor@PREV}}
+                    ROOT = {clr_country_flag = crysis_ai_ready@PREV}
+                }
+            }
+
+            cores_button_click = {
+                set_global_flag = {
+                    flag = political_crysis
+                    days = 60
+                    value = 1
+                }
+                set_variable = {global.to_crysis = THIS}
+                set_variable = {global.sender_crysis = ROOT}
+                set_variable = {global.minor_crysis = 0}
+
+                set_variable = {global.type_crysis = 1}
+
+                var:sender_crysis = {country_event = {id = mechanics.37 days = 1}}
+                encount_majors = yes
+                d_calc_crysis = yes
+
+                ROOT = {clr_country_flag = force_action_win_opened}
+                ROOT = {clr_country_flag = crysis_ai_cores@PREV}
+                ROOT = {clr_country_flag = crysis_ai_ready@PREV}
+            }
+
+            puppet_button_click = {
+                set_global_flag = {
+                    flag = political_crysis
+                    days = 60
+                    value = 1
+                }
+                set_variable = {global.to_crysis = THIS}
+                set_variable = {global.sender_crysis = ROOT}
+                set_variable = {global.minor_crysis = 0}
+
+                set_variable = {global.type_crysis = 0}
+
+                var:sender_crysis = {country_event = {id = mechanics.37 days = 1}}
+                encount_majors = yes
+                d_calc_crysis = yes
+
+                ROOT = {clr_country_flag = force_action_win_opened}
+                ROOT = {clr_country_flag = crysis_ai_puppet@PREV}
+                ROOT = {clr_country_flag = crysis_ai_ready@PREV}
+            }
+        }
+
+        triggers = {
+            cRelease_visible = {
+                NOT = {ROOT = {tag = PREV}}
+			}
+            cFlag_visible = {
+                NOT = {ROOT = {tag = PREV}}
+			}
+            cFlagBorder_visible = {
+                NOT = {ROOT = {tag = PREV}}
+			}
+            cName_visible = {
+                NOT = {ROOT = {tag = PREV}}
+			}
+
+            #l2_visible = {always = no} cores_button_visible = {always = no}
+            
+            cRelease_click_enabled = {
+                crysis_startable = yes
+            }
+            puppet_button_click_enabled = {
+                crysis_startable = yes
+            }
+			cores_button_click_enabled = {
+                crysis_startable = yes
+				any_owned_state = {
+                    OR = {
+                        is_claimed_by = ROOT
+                        is_core_of = ROOT
+                    }
+                }
+			}
+		}
+
+        dynamic_lists = {
+			minors_gb = {
+				array = minor_countries
+				entry_container = minors_entry
+				change_scope = no
+                value = v
+			}
+		}
+
+		properties = {
+			cFlag = {
+				image = [?v.GetFlag]
+			}
+            
+		}
+    }
+}

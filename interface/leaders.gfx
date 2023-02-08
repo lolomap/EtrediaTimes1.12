@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_zhmin"
+		texturefile = "gfx/leaders/UCB/portrait_ucb_anatoly.dds"
+	}
+}

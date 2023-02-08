@@ -1,0 +1,25 @@
+
+state={
+	id=786
+	name="STATE_786"
+
+	history={
+		owner = DIR
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = DIR
+		victory_points = {
+			13146 1 
+		}
+
+	}
+
+	provinces={
+		12730 12852 12875 12876 12904 12905 12962 12963 12973 12983 13042 13057 13069 13085 13093 13098 13109 13110 13146 13168 13223 13236 13237 13245 13246 13282 13362 13363 13475 
+	}
+	manpower=160000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

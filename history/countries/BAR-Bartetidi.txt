@@ -1,0 +1,82 @@
+﻿capital = 699
+
+OOB = "BAR_2014"
+
+set_research_slots = 3
+set_stability = 0.7
+set_war_support = 0.6
+
+add_ideas = {
+        WWW_medium_country
+	third_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_fighter = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+	motorized_rocket_unit = 1
+
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+        basic_medium_tank = 1
+	advanced_medium_tank = 1
+	main_battle_tank = 1
+
+	tech_mountaineers = 1
+	tactical_bomber1 = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	early_submarine = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_destroyer = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2010.3.5"
+	election_frequency = 65
+	elections_allowed = yes
+}
+
+set_popularities = {
+        democratic = 4
+        fascism = 10
+        communism = 0
+	neutrality = 86
+}
+
+set_convoys = 419
+
+
+recruit_character = BAR_alexander_smith
+
+recruit_character = BAR_dukker_arnold
+
+recruit_character = BAR_quidico_codman
+
+recruit_character = BAR_aberana_newlands
+
+recruit_character = BAR_octavianus_babudis
+
+recruit_character = BAR_silvano_venom
+
+recruit_character = BAR_ion_swan
+
+recruit_character = BAR_kantiris_veksha
+
+recruit_character = BAR_luri_pekarize
+
+recruit_character = BAR_braks_joustanou
+
+recruit_character = BAR_garrinno_iostaner
+

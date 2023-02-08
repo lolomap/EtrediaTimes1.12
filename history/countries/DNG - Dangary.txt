@@ -1,0 +1,69 @@
+﻿capital = 622
+
+OOB = "DNG_2014"
+
+set_research_slots = 1
+set_stability = 0.4
+set_war_support = 0.7
+
+add_ideas = {
+        WWW_bad_country
+        total_nonfree_press
+	fifth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	gwtank = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	early_destroyer = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 4
+        fascism = 28
+        communism = 0
+	neutrality = 68
+}
+
+set_convoys = 60
+
+
+recruit_character = DNG_jim_evans
+
+recruit_character = DNG_gelek_manriwa
+
+recruit_character = DNG_tseten
+
+recruit_character = DNG_wangdak
+
+recruit_character = DNG_sangey_sambhota
+
+recruit_character = DNG_ngawang_damdul
+
+recruit_character = DNG_choedon_dhanacktsang
+
+recruit_character = DNG_sangyal
+
+recruit_character = DNG_jungney_wangpok
+
+recruit_character = DNG_lhakpa_damdul
+
+recruit_character = DNG_jamtso_bhutia
+

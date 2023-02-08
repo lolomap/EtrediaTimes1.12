@@ -1,0 +1,60 @@
+﻿capital = 191
+
+oob = "RGY_2014"
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.3
+
+add_ideas = {
+        WWW_medium_country
+        total_free_press
+        general_entry
+        SBU_little_sburska_zvezda
+	fourth_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+        mechanised_infantry = 1
+}
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2013.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+        democratic = 78
+        fascism = 0
+        communism = 0
+	neutrality = 22
+}
+
+#
+
+recruit_character = RGY_jonas_jones
+
+recruit_character = RGY_eugeny_urusinh
+
+recruit_character = RGY_karl_simvols
+
+recruit_character = RGY_keren_lopuskay
+
+recruit_character = RGY_ilya_furman
+
+recruit_character = RGY_ostar_karbonal
+
+recruit_character = RGY_varvara_dibult
+

@@ -1,0 +1,56 @@
+﻿capital = 60
+
+oob = "TRP_2014"
+
+set_research_slots = 3
+set_stability = 0.7
+set_war_support = 0.1
+
+add_ideas = {
+        www_best_country
+        total_free_press
+	second_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	advanced_medium_tank = 1
+	main_battle_tank = 1
+	jeep_unit = 1
+	jeep_unit_2 = 1
+}
+
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2013.1.1"
+	election_frequency = 45
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 5
+        democratic = 74
+        fascism = 11
+        communism = 10
+}
+
+#
+
+recruit_character = TRP_lucas_jones
+
+recruit_character = TRP_marcos_pena
+
+recruit_character = TRP_aleix_artigas
+
+recruit_character = TRP_hector_gistain
+
+recruit_character = TRP_oleg_legachi
+

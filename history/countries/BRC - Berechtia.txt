@@ -1,0 +1,68 @@
+﻿capital = 751
+
+oob = "BRC_2014"
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.8
+
+add_ideas = {
+        www_bad_country
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+        basic_medium_tank = 1
+	advanced_medium_tank = 1
+	tech_mountaineers = 1
+	early_submarine = 1
+	transport = 1
+	early_light_cruiser = 1
+	early_destroyer = 1
+}
+
+set_convoys = 60
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "2005.3.5"
+	election_frequency = 58
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 16
+        democratic = 3
+        fascism = 73
+        communism = 8
+}
+
+#
+
+
+recruit_character = BRC_lucas_williams
+
+recruit_character = BRC_bob_wilson
+
+recruit_character = BRC_john_brown
+
+recruit_character = BRC_peter_smith
+
+recruit_character = BRC_boris_weqtreopapa
+
+recruit_character = BRC_mika_sovuad
+
+recruit_character = BRC_koora_derejuantar
+
+recruit_character = BRC_momamo_tundra
+

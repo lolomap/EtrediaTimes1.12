@@ -1,0 +1,25 @@
+state={
+	id=40
+	name="STATE_40"
+	manpower = 56000
+	
+	state_category = pastoral
+
+	history={
+		owner = OIK
+		buildings = {
+			infrastructure = 2
+			11745 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = OIK
+		victory_points = {
+			11745 1
+		}
+
+	}
+	provinces={
+		11745 
+	}
+}

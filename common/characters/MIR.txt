@@ -1,0 +1,70 @@
+characters={
+	MIR_nazir_ammar={
+		name="Nazir Ammar"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="2061.1.1.1"
+			id=-1
+		}
+	}
+	MIR_jim_taylor={
+		name="Jim Taylor"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2021.1.1.12"
+			id=-1
+		}
+	}
+	MIR_alexander_wilson={
+		name="Alexander Wilson"
+		portraits={
+			civilian={
+				large="GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="2027.1.1.12"
+			id=-1
+		}
+	}
+	MIR_bob_walker={
+		name="Bob Walker"
+		portraits={
+			civilian={
+				large="GFX_Portrait_europe_generic_7"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ quartermaster_general }
+			expire="2033.1.1.12"
+			id=-1
+		}
+	}
+	MIR_alex_white={
+		name="Alex White"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ compassionate_gentleman }
+			expire="2023.1.1.12"
+			id=-1
+		}
+	}
+}

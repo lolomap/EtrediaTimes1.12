@@ -1,0 +1,72 @@
+characters={
+	MOF_cassandra_caso={
+		name="Cassandra Caso"
+		portraits={
+			civilian={
+				large="gfx/leaders/MOF/Portrait_mof_democratic.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MOF_terine_narabel={
+		name="Terine Narabel"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MOF_petro_pedroshenko={
+		name="Petro Pedroshenko"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MOF_ivan_vissarionovich={
+		name="Ivan Vissarionovich"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MOF_marcus_smith={
+		name="Marcus Smith"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=teocracy
+			traits={ quartermaster_general }
+			expire="2023.1.1.12"
+			id=-1
+		}
+	}
+}

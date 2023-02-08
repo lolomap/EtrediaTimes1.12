@@ -1,0 +1,92 @@
+﻿capital = 537
+
+OOB = "MOA_2014"
+set_naval_oob = "MOA_2014_naval_legacy"
+
+set_research_slots = 3
+set_stability = 0.9
+set_war_support = 0.4
+
+add_ideas = {
+        WWW_best_country
+        MOA_recrut
+        neutrality_idea
+        total_free_press
+        free_entry
+	third_corruption_level
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_recon = 1
+        tech_support = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_fighter = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	motorized_rocket_unit = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+        basic_medium_tank = 1
+	advanced_medium_tank = 1
+	main_battle_tank = 1
+	main_battle_tank_2 = 1
+	tech_mountaineers = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	early_submarine = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_destroyer = 1
+        early_battleship = 1
+	transport = 1
+
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	naval_bomber1 = 1
+	cv_CAS1 = 1
+	cv_fighter1 = 1
+	CAS1 = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2011.3.5"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+        democratic = 81
+        fascism = 5
+        communism = 11
+	neutrality = 3
+}
+
+set_convoys = 1100
+
+
+recruit_character = MOA_jim_jones
+
+recruit_character = MOA_apa_sifu
+
+recruit_character = MOA_tataio_papani
+
+recruit_character = MOA_tamati_lotomau
+
+recruit_character = MOA_loto_faaeteete
+
+recruit_character = MOA_apineru_fanene
+
+recruit_character = MOA_aleki_multiauaopele
+

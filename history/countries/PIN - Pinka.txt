@@ -1,0 +1,73 @@
+﻿capital = 142
+
+oob = "PIN_2014"
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.7
+
+add_ideas = {
+        www_medium_country
+        free_press
+        general_entry
+}
+
+set_technology = {
+        tech_engineers = 1
+        tech_support = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+        mechanised_infantry = 1
+	jeep_unit = 1
+	jeep_unit_2 = 1
+	motorized_rocket_unit = 1
+	gw_artillery = 1
+	gwtank = 1
+	advanced_medium_tank = 1
+	main_battle_tank = 1
+	tactical_bomber1 = 1
+	transport = 1
+
+	early_fighter = 1
+	fighter1 = 1
+	CAS1 = 1
+}
+
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "2010.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+        democratic = 34
+        fascism = 51
+        communism = 15
+	neutrality = 0
+}
+
+#
+
+recruit_character = PIN_heinz_rall
+
+recruit_character = PIN_ombihunt_yantes
+
+recruit_character = PIN_boras_joks
+
+recruit_character = PIN_kopili_nayer
+
+recruit_character = PIN_biyalos_tere
+
+recruit_character = PIN_ivan_vissarionovich
+
+recruit_character = PIN_timur_nafikov
+
+recruit_character = PIN_daran_lemingauton
+
+recruit_character = PIN_anatoly_zhmirinovan
+

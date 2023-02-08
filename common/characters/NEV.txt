@@ -1,0 +1,71 @@
+characters={
+	NEV_marcus_white={
+		name="Marcus White"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="2022.1.1.12"
+			id=-1
+		}
+	}
+	NEV_johannes_smith={
+		name="Johannes Smith"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={ armaments_aficionado economist }
+			expire="2031.1.1.12"
+			id=-1
+		}
+	}
+	NEV_bob_brown={
+		name="Bob Brown"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_4"
+			}
+		}
+		country_leader={
+			ideology=war_dictatorship
+			traits={ quartermaster_general war_industrialist }
+			expire="2023.1.1.12"
+			id=-1
+		}
+	}
+	NEV_jonas_williams={
+		name="Jonas Williams"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=absolutism
+			traits={ lieutenant_of_industry }
+			expire="2032.1.1.12"
+			id=-1
+		}
+	}
+	NEV_alex_williams={
+		name="Alex Williams"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_5"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			traits={ editor }
+			expire="2025.1.1.12"
+			id=-1
+		}
+	}
+}
