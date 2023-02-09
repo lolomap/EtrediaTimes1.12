@@ -8,7 +8,7 @@ state={
 		oil = 34 # was: 40
 	}
 	
-	state_category = psatoral
+	state_category = pastoral
 	history={
 		owner = CHE
 		buildings = {
