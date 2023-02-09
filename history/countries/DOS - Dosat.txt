@@ -2,7 +2,8 @@ capital = 651
 
 oob = "DOS_2014"
 
-set_technology = {
+set_technology = {basic_train = 1
+
 	infantry_weapons = 1
 	jeep_unit = 1
 }

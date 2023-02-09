@@ -1,4 +1,42 @@
 spriteTypes = {	
+	SpriteType = {
+		name = "GFX_railway_gun_medium"
+		texturefile = "gfx/interface/technologies/generic_railway_gun.dds"
+	}
+
+
+    SpriteType = {
+		name = "GFX_archetype_train_medium"
+		texturefile = "gfx/interface/archetypes/archetype_train.dds"
+	}
+    SpriteType = {
+		name = "GFX_train_equipment_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_train_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_train_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_train_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_3.dds"
+	}	
+    SpriteType = {
+		name = "GFX_basic_train_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_wartime_train_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_armored_train_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_3.dds"
+	}
 
 	### generic equipment archetypes ###
 

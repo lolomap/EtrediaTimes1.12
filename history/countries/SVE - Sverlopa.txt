@@ -9,7 +9,8 @@ set_war_support = 0.5
 add_ideas = {
 }
 
-set_technology = {
+set_technology = {basic_train = 1
+
 	infantry_weapons = 1
 
 	early_fighter = 1

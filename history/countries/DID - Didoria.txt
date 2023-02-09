@@ -14,7 +14,8 @@ add_ideas = {
 	fourth_corruption_level
 }
 
-set_technology = {
+set_technology = {basic_train = 1
+
 	infantry_weapons = 1
 	jeep_unit = 1
         tech_engineers = 1

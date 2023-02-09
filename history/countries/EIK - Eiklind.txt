@@ -20,7 +20,8 @@ add_ideas = {
 	sixth_corruption_level
 }
 
-set_technology = {
+set_technology = {basic_train = 1
+
 	nukes = 1
 	nuclear_reactor = 1
 	nuclear_rockets = 1

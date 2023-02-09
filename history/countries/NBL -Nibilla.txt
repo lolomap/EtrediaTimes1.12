@@ -11,7 +11,8 @@ add_ideas = {
 	sixth_corruption_level
 }
 
-set_technology = {
+set_technology = {basic_train = 1
+
 	infantry_weapons = 1
 	motorised_infantry = 1
 	gw_artillery = 1
