@@ -1,0 +1,115 @@
+defined_text = {
+	name = GetCustomAchievementName
+
+	text = {
+		trigger = {
+			set_temp_variable = { achievement_category = 1 }
+			set_temp_variable = { achievement_id = v }
+			is_custom_achievement_in_category = yes
+		}
+		localization_key = "[This.GetCustomAchievementNameVanilla]"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { achievement_category = 2 }
+			set_temp_variable = { achievement_id = v }
+			is_custom_achievement_in_category = yes
+		}
+		localization_key = "[This.GetCustomAchievementNameSteam]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetCustomAchievementDesc
+
+	text = {
+		trigger = {
+			set_temp_variable = { achievement_category = 1 }
+			set_temp_variable = { achievement_id = v }
+			is_custom_achievement_in_category = yes
+		}
+		localization_key = "[This.GetCustomAchievementDescVanilla]"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { achievement_category = 2 }
+			set_temp_variable = { achievement_id = v }
+			is_custom_achievement_in_category = yes
+		}
+		localization_key = "[This.GetCustomAchievementDescSteam]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetCustomAchievementIcon
+
+	text = {
+		trigger = {
+			set_temp_variable = { achievement_category = 1 }
+			set_temp_variable = { achievement_id = v }
+			is_custom_achievement_in_category = yes
+		}
+		localization_key = "[This.GetCustomAchievementIconVanilla]"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { achievement_category = 2 }
+			set_temp_variable = { achievement_id = v }
+			is_custom_achievement_in_category = yes
+		}
+		localization_key = "[This.GetCustomAchievementIconSteam]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetCustomAchievementCurrentSelectedAchievementsCategory
+
+	text = {
+		trigger = {
+			check_variable = { show_achievements_list_selection = 1 }
+		}
+		localization_key = CUSTOM_VANILLA_ACHIEVEMENTS
+	}
+	text = {
+		trigger = {
+			check_variable = { show_achievements_list_selection = 2 }
+		}
+		localization_key = CUSTOM_STEAM_ACHIEVEMENTS
+	}
+}
+
+defined_text = {
+	name = GetCustomAchievementDebugTooltip
+
+	text = {
+		trigger = {
+			is_debug = yes
+			has_global_flag = custom_achievements_debug
+		}
+		localization_key = CUSTOM_ACHIEVEMENT_DEBUG_TT
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
