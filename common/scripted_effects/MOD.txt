@@ -2,7 +2,9 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-retire_country_leader = yes
+    SBU = {set_country_flag = tradewar}
+    SFL = {set_country_flag = tradewar}
+    SFL = {set_variable = {trade_war = 100}}
 }
 
 ####
