@@ -99,10 +99,6 @@ on_actions = {
 
 			every_country = {
                 encount_minors = yes
-                add_equipment_to_stockpile = {
-                    type = train_equipment
-                    amount = 50
-                }
 			}
 
 

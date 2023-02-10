@@ -1,0 +1,1931 @@
+defined_text = {
+	name = GetCustomAchievementNameVanilla
+
+	# Vanilla Achievements:
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 1 }
+		}
+		localization_key = custom_vanilla_achievement_1_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 2 }
+		}
+		localization_key = custom_vanilla_achievement_2_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 3 }
+		}
+		localization_key = custom_vanilla_achievement_3_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 4 }
+		}
+		localization_key = custom_vanilla_achievement_4_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 5 }
+		}
+		localization_key = custom_vanilla_achievement_5_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 6 }
+		}
+		localization_key = custom_vanilla_achievement_6_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 7 }
+		}
+		localization_key = custom_vanilla_achievement_7_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 8 }
+		}
+		localization_key = custom_vanilla_achievement_8_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 9 }
+		}
+		localization_key = custom_vanilla_achievement_9_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 10 }
+		}
+		localization_key = custom_vanilla_achievement_10_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 11 }
+		}
+		localization_key = custom_vanilla_achievement_11_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 12 }
+		}
+		localization_key = custom_vanilla_achievement_12_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 13 }
+		}
+		localization_key = custom_vanilla_achievement_13_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 14 }
+		}
+		localization_key = custom_vanilla_achievement_14_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 15 }
+		}
+		localization_key = custom_vanilla_achievement_15_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 16 }
+		}
+		localization_key = custom_vanilla_achievement_16_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 17 }
+		}
+		localization_key = custom_vanilla_achievement_17_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 18 }
+		}
+		localization_key = custom_vanilla_achievement_18_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 19 }
+		}
+		localization_key = custom_vanilla_achievement_19_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 20 }
+		}
+		localization_key = custom_vanilla_achievement_20_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 21 }
+		}
+		localization_key = custom_vanilla_achievement_21_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 22 }
+		}
+		localization_key = custom_vanilla_achievement_22_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 23 }
+		}
+		localization_key = custom_vanilla_achievement_23_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 24 }
+		}
+		localization_key = custom_vanilla_achievement_24_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 25 }
+		}
+		localization_key = custom_vanilla_achievement_25_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 26 }
+		}
+		localization_key = custom_vanilla_achievement_26_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 27 }
+		}
+		localization_key = custom_vanilla_achievement_27_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 28 }
+		}
+		localization_key = custom_vanilla_achievement_28_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 29 }
+		}
+		localization_key = custom_vanilla_achievement_29_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 30 }
+		}
+		localization_key = custom_vanilla_achievement_30_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 31 }
+		}
+		localization_key = custom_vanilla_achievement_31_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 32 }
+		}
+		localization_key = custom_vanilla_achievement_32_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 33 }
+		}
+		localization_key = custom_vanilla_achievement_33_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 34 }
+		}
+		localization_key = custom_vanilla_achievement_34_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 35 }
+		}
+		localization_key = custom_vanilla_achievement_35_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 36 }
+		}
+		localization_key = custom_vanilla_achievement_36_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 37 }
+		}
+		localization_key = custom_vanilla_achievement_37_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 38 }
+		}
+		localization_key = custom_vanilla_achievement_38_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 39 }
+		}
+		localization_key = custom_vanilla_achievement_39_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 40 }
+		}
+		localization_key = custom_vanilla_achievement_40_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 41 }
+		}
+		localization_key = custom_vanilla_achievement_41_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 42 }
+		}
+		localization_key = custom_vanilla_achievement_42_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 43 }
+		}
+		localization_key = custom_vanilla_achievement_43_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 44 }
+		}
+		localization_key = custom_vanilla_achievement_44_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 45 }
+		}
+		localization_key = custom_vanilla_achievement_45_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 46 }
+		}
+		localization_key = custom_vanilla_achievement_46_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 47 }
+		}
+		localization_key = custom_vanilla_achievement_47_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 48 }
+		}
+		localization_key = custom_vanilla_achievement_48_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 49 }
+		}
+		localization_key = custom_vanilla_achievement_49_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 50 }
+		}
+		localization_key = custom_vanilla_achievement_50_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 51 }
+		}
+		localization_key = custom_vanilla_achievement_51_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 52 }
+		}
+		localization_key = custom_vanilla_achievement_52_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 53 }
+		}
+		localization_key = custom_vanilla_achievement_53_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 54 }
+		}
+		localization_key = custom_vanilla_achievement_54_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 55 }
+		}
+		localization_key = custom_vanilla_achievement_55_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 56 }
+		}
+		localization_key = custom_vanilla_achievement_56_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 57 }
+		}
+		localization_key = custom_vanilla_achievement_57_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 58 }
+		}
+		localization_key = custom_vanilla_achievement_58_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 59 }
+		}
+		localization_key = custom_vanilla_achievement_59_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 60 }
+		}
+		localization_key = custom_vanilla_achievement_60_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 61 }
+		}
+		localization_key = custom_vanilla_achievement_61_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 62 }
+		}
+		localization_key = custom_vanilla_achievement_62_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 63 }
+		}
+		localization_key = custom_vanilla_achievement_63_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 64 }
+		}
+		localization_key = custom_vanilla_achievement_64_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 65 }
+		}
+		localization_key = custom_vanilla_achievement_65_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 66 }
+		}
+		localization_key = custom_vanilla_achievement_66_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 67 }
+		}
+		localization_key = custom_vanilla_achievement_67_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 68 }
+		}
+		localization_key = custom_vanilla_achievement_68_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 69 }
+		}
+		localization_key = custom_vanilla_achievement_69_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 70 }
+		}
+		localization_key = custom_vanilla_achievement_70_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 71 }
+		}
+		localization_key = custom_vanilla_achievement_71_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 72 }
+		}
+		localization_key = custom_vanilla_achievement_72_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 73 }
+		}
+		localization_key = custom_vanilla_achievement_73_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 74 }
+		}
+		localization_key = custom_vanilla_achievement_74_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 75 }
+		}
+		localization_key = custom_vanilla_achievement_75_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 76 }
+		}
+		localization_key = custom_vanilla_achievement_76_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 77 }
+		}
+		localization_key = custom_vanilla_achievement_77_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 78 }
+		}
+		localization_key = custom_vanilla_achievement_78_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 79 }
+		}
+		localization_key = custom_vanilla_achievement_79_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 80 }
+		}
+		localization_key = custom_vanilla_achievement_80_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 81 }
+		}
+		localization_key = custom_vanilla_achievement_81_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 82 }
+		}
+		localization_key = custom_vanilla_achievement_82_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 83 }
+		}
+		localization_key = custom_vanilla_achievement_83_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 84 }
+		}
+		localization_key = custom_vanilla_achievement_84_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 85 }
+		}
+		localization_key = custom_vanilla_achievement_85_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 86 }
+		}
+		localization_key = custom_vanilla_achievement_86_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 87 }
+		}
+		localization_key = custom_vanilla_achievement_87_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 88 }
+		}
+		localization_key = custom_vanilla_achievement_88_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 89 }
+		}
+		localization_key = custom_vanilla_achievement_89_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 90 }
+		}
+		localization_key = custom_vanilla_achievement_90_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 91 }
+		}
+		localization_key = custom_vanilla_achievement_91_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 92 }
+		}
+		localization_key = custom_vanilla_achievement_92_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 93 }
+		}
+		localization_key = custom_vanilla_achievement_93_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 94 }
+		}
+		localization_key = custom_vanilla_achievement_94_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 95 }
+		}
+		localization_key = custom_vanilla_achievement_95_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 96 }
+		}
+		localization_key = custom_vanilla_achievement_96_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 97 }
+		}
+		localization_key = custom_vanilla_achievement_97_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 98 }
+		}
+		localization_key = custom_vanilla_achievement_98_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 99 }
+		}
+		localization_key = custom_vanilla_achievement_99_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 100 }
+		}
+		localization_key = custom_vanilla_achievement_100_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 101 }
+		}
+		localization_key = custom_vanilla_achievement_101_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 102 }
+		}
+		localization_key = custom_vanilla_achievement_102_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 103 }
+		}
+		localization_key = custom_vanilla_achievement_103_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 104 }
+		}
+		localization_key = custom_vanilla_achievement_104_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 105 }
+		}
+		localization_key = custom_vanilla_achievement_105_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 106 }
+		}
+		localization_key = custom_vanilla_achievement_106_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 107 }
+		}
+		localization_key = custom_vanilla_achievement_107_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 108 }
+		}
+		localization_key = custom_vanilla_achievement_108_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 109 }
+		}
+		localization_key = custom_vanilla_achievement_109_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 110 }
+		}
+		localization_key = custom_vanilla_achievement_110_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 111 }
+		}
+		localization_key = custom_vanilla_achievement_111_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 112 }
+		}
+		localization_key = custom_vanilla_achievement_112_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 113 }
+		}
+		localization_key = custom_vanilla_achievement_113_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 114 }
+		}
+		localization_key = custom_vanilla_achievement_114_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 115 }
+		}
+		localization_key = custom_vanilla_achievement_115_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 116 }
+		}
+		localization_key = custom_vanilla_achievement_116_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 117 }
+		}
+		localization_key = custom_vanilla_achievement_117_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 118 }
+		}
+		localization_key = custom_vanilla_achievement_118_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 119 }
+		}
+		localization_key = custom_vanilla_achievement_119_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 120 }
+		}
+		localization_key = custom_vanilla_achievement_120_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 121 }
+		}
+		localization_key = custom_vanilla_achievement_121_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 122 }
+		}
+		localization_key = custom_vanilla_achievement_122_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 123 }
+		}
+		localization_key = custom_vanilla_achievement_123_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 124 }
+		}
+		localization_key = custom_vanilla_achievement_124_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 125 }
+		}
+		localization_key = custom_vanilla_achievement_125_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 126 }
+		}
+		localization_key = custom_vanilla_achievement_126_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 127 }
+		}
+		localization_key = custom_vanilla_achievement_127_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 128 }
+		}
+		localization_key = custom_vanilla_achievement_128_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 129 }
+		}
+		localization_key = custom_vanilla_achievement_129_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 130 }
+		}
+		localization_key = custom_vanilla_achievement_130_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 131 }
+		}
+		localization_key = custom_vanilla_achievement_131_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 132 }
+		}
+		localization_key = custom_vanilla_achievement_132_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 133 }
+		}
+		localization_key = custom_vanilla_achievement_133_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 134 }
+		}
+		localization_key = custom_vanilla_achievement_134_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 135 }
+		}
+		localization_key = custom_vanilla_achievement_135_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 136 }
+		}
+		localization_key = custom_vanilla_achievement_136_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 137 }
+		}
+		localization_key = custom_vanilla_achievement_137_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 138 }
+		}
+		localization_key = custom_vanilla_achievement_138_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 139 }
+		}
+		localization_key = custom_vanilla_achievement_139_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 140 }
+		}
+		localization_key = custom_vanilla_achievement_140_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 141 }
+		}
+		localization_key = custom_vanilla_achievement_141_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 142 }
+		}
+		localization_key = custom_vanilla_achievement_142_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 143 }
+		}
+		localization_key = custom_vanilla_achievement_143_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 144 }
+		}
+		localization_key = custom_vanilla_achievement_144_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 145 }
+		}
+		localization_key = custom_vanilla_achievement_145_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 146 }
+		}
+		localization_key = custom_vanilla_achievement_146_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 147 }
+		}
+		localization_key = custom_vanilla_achievement_147_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 148 }
+		}
+		localization_key = custom_vanilla_achievement_148_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 149 }
+		}
+		localization_key = custom_vanilla_achievement_149_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 150 }
+		}
+		localization_key = custom_vanilla_achievement_150_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 151 }
+		}
+		localization_key = custom_vanilla_achievement_151_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 152 }
+		}
+		localization_key = custom_vanilla_achievement_152_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 153 }
+		}
+		localization_key = custom_vanilla_achievement_153_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 154 }
+		}
+		localization_key = custom_vanilla_achievement_154_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 155 }
+		}
+		localization_key = custom_vanilla_achievement_155_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 156 }
+		}
+		localization_key = custom_vanilla_achievement_156_NAME
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 157 }
+		}
+		localization_key = custom_vanilla_achievement_157_NAME
+	}
+
+	# Fallback:
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = "Unknown Achievement"
+	}
+}
+
+defined_text = {
+	name = GetCustomAchievementDescVanilla
+
+	# Vanilla Achievements:
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 1 }
+		}
+		localization_key = custom_vanilla_achievement_1_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 2 }
+		}
+		localization_key = custom_vanilla_achievement_2_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 3 }
+		}
+		localization_key = custom_vanilla_achievement_3_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 4 }
+		}
+		localization_key = custom_vanilla_achievement_4_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 5 }
+		}
+		localization_key = custom_vanilla_achievement_5_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 6 }
+		}
+		localization_key = custom_vanilla_achievement_6_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 7 }
+		}
+		localization_key = custom_vanilla_achievement_7_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 8 }
+		}
+		localization_key = custom_vanilla_achievement_8_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 9 }
+		}
+		localization_key = custom_vanilla_achievement_9_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 10 }
+		}
+		localization_key = custom_vanilla_achievement_10_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 11 }
+		}
+		localization_key = custom_vanilla_achievement_11_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 12 }
+		}
+		localization_key = custom_vanilla_achievement_12_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 13 }
+		}
+		localization_key = custom_vanilla_achievement_13_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 14 }
+		}
+		localization_key = custom_vanilla_achievement_14_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 15 }
+		}
+		localization_key = custom_vanilla_achievement_15_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 16 }
+		}
+		localization_key = custom_vanilla_achievement_16_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 17 }
+		}
+		localization_key = custom_vanilla_achievement_17_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 18 }
+		}
+		localization_key = custom_vanilla_achievement_18_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 19 }
+		}
+		localization_key = custom_vanilla_achievement_19_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 20 }
+		}
+		localization_key = custom_vanilla_achievement_20_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 21 }
+		}
+		localization_key = custom_vanilla_achievement_21_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 22 }
+		}
+		localization_key = custom_vanilla_achievement_22_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 23 }
+		}
+		localization_key = custom_vanilla_achievement_23_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 24 }
+		}
+		localization_key = custom_vanilla_achievement_24_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 25 }
+		}
+		localization_key = custom_vanilla_achievement_25_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 26 }
+		}
+		localization_key = custom_vanilla_achievement_26_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 27 }
+		}
+		localization_key = custom_vanilla_achievement_27_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 28 }
+		}
+		localization_key = custom_vanilla_achievement_28_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 29 }
+		}
+		localization_key = custom_vanilla_achievement_29_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 30 }
+		}
+		localization_key = custom_vanilla_achievement_30_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 31 }
+		}
+		localization_key = custom_vanilla_achievement_31_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 32 }
+		}
+		localization_key = custom_vanilla_achievement_32_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 33 }
+		}
+		localization_key = custom_vanilla_achievement_33_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 34 }
+		}
+		localization_key = custom_vanilla_achievement_34_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 35 }
+		}
+		localization_key = custom_vanilla_achievement_35_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 36 }
+		}
+		localization_key = custom_vanilla_achievement_36_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 37 }
+		}
+		localization_key = custom_vanilla_achievement_37_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 38 }
+		}
+		localization_key = custom_vanilla_achievement_38_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 39 }
+		}
+		localization_key = custom_vanilla_achievement_39_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 40 }
+		}
+		localization_key = custom_vanilla_achievement_40_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 41 }
+		}
+		localization_key = custom_vanilla_achievement_41_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 42 }
+		}
+		localization_key = custom_vanilla_achievement_42_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 43 }
+		}
+		localization_key = custom_vanilla_achievement_43_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 44 }
+		}
+		localization_key = custom_vanilla_achievement_44_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 45 }
+		}
+		localization_key = custom_vanilla_achievement_45_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 46 }
+		}
+		localization_key = custom_vanilla_achievement_46_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 47 }
+		}
+		localization_key = custom_vanilla_achievement_47_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 48 }
+		}
+		localization_key = custom_vanilla_achievement_48_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 49 }
+		}
+		localization_key = custom_vanilla_achievement_49_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 50 }
+		}
+		localization_key = custom_vanilla_achievement_50_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 51 }
+		}
+		localization_key = custom_vanilla_achievement_51_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 52 }
+		}
+		localization_key = custom_vanilla_achievement_52_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 53 }
+		}
+		localization_key = custom_vanilla_achievement_53_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 54 }
+		}
+		localization_key = custom_vanilla_achievement_54_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 55 }
+		}
+		localization_key = custom_vanilla_achievement_55_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 56 }
+		}
+		localization_key = custom_vanilla_achievement_56_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 57 }
+		}
+		localization_key = custom_vanilla_achievement_57_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 58 }
+		}
+		localization_key = custom_vanilla_achievement_58_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 59 }
+		}
+		localization_key = custom_vanilla_achievement_59_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 60 }
+		}
+		localization_key = custom_vanilla_achievement_60_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 61 }
+		}
+		localization_key = custom_vanilla_achievement_61_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 62 }
+		}
+		localization_key = custom_vanilla_achievement_62_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 63 }
+		}
+		localization_key = custom_vanilla_achievement_63_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 64 }
+		}
+		localization_key = custom_vanilla_achievement_64_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 65 }
+		}
+		localization_key = custom_vanilla_achievement_65_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 66 }
+		}
+		localization_key = custom_vanilla_achievement_66_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 67 }
+		}
+		localization_key = custom_vanilla_achievement_67_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 68 }
+		}
+		localization_key = custom_vanilla_achievement_68_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 69 }
+		}
+		localization_key = custom_vanilla_achievement_69_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 70 }
+		}
+		localization_key = custom_vanilla_achievement_70_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 71 }
+		}
+		localization_key = custom_vanilla_achievement_71_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 72 }
+		}
+		localization_key = custom_vanilla_achievement_72_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 73 }
+		}
+		localization_key = custom_vanilla_achievement_73_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 74 }
+		}
+		localization_key = custom_vanilla_achievement_74_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 75 }
+		}
+		localization_key = custom_vanilla_achievement_75_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 76 }
+		}
+		localization_key = custom_vanilla_achievement_76_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 77 }
+		}
+		localization_key = custom_vanilla_achievement_77_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 78 }
+		}
+		localization_key = custom_vanilla_achievement_78_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 79 }
+		}
+		localization_key = custom_vanilla_achievement_79_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 80 }
+		}
+		localization_key = custom_vanilla_achievement_80_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 81 }
+		}
+		localization_key = custom_vanilla_achievement_81_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 82 }
+		}
+		localization_key = custom_vanilla_achievement_82_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 83 }
+		}
+		localization_key = custom_vanilla_achievement_83_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 84 }
+		}
+		localization_key = custom_vanilla_achievement_84_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 85 }
+		}
+		localization_key = custom_vanilla_achievement_85_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 86 }
+		}
+		localization_key = custom_vanilla_achievement_86_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 87 }
+		}
+		localization_key = custom_vanilla_achievement_87_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 88 }
+		}
+		localization_key = custom_vanilla_achievement_88_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 89 }
+		}
+		localization_key = custom_vanilla_achievement_89_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 90 }
+		}
+		localization_key = custom_vanilla_achievement_90_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 91 }
+		}
+		localization_key = custom_vanilla_achievement_91_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 92 }
+		}
+		localization_key = custom_vanilla_achievement_92_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 93 }
+		}
+		localization_key = custom_vanilla_achievement_93_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 94 }
+		}
+		localization_key = custom_vanilla_achievement_94_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 95 }
+		}
+		localization_key = custom_vanilla_achievement_95_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 96 }
+		}
+		localization_key = custom_vanilla_achievement_96_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 97 }
+		}
+		localization_key = custom_vanilla_achievement_97_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 98 }
+		}
+		localization_key = custom_vanilla_achievement_98_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 99 }
+		}
+		localization_key = custom_vanilla_achievement_99_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 100 }
+		}
+		localization_key = custom_vanilla_achievement_100_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 101 }
+		}
+		localization_key = custom_vanilla_achievement_101_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 102 }
+		}
+		localization_key = custom_vanilla_achievement_102_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 103 }
+		}
+		localization_key = custom_vanilla_achievement_103_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 104 }
+		}
+		localization_key = custom_vanilla_achievement_104_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 105 }
+		}
+		localization_key = custom_vanilla_achievement_105_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 106 }
+		}
+		localization_key = custom_vanilla_achievement_106_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 107 }
+		}
+		localization_key = custom_vanilla_achievement_107_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 108 }
+		}
+		localization_key = custom_vanilla_achievement_108_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 109 }
+		}
+		localization_key = custom_vanilla_achievement_109_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 110 }
+		}
+		localization_key = custom_vanilla_achievement_110_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 111 }
+		}
+		localization_key = custom_vanilla_achievement_111_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 112 }
+		}
+		localization_key = custom_vanilla_achievement_112_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 113 }
+		}
+		localization_key = custom_vanilla_achievement_113_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 114 }
+		}
+		localization_key = custom_vanilla_achievement_114_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 115 }
+		}
+		localization_key = custom_vanilla_achievement_115_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 116 }
+		}
+		localization_key = custom_vanilla_achievement_116_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 117 }
+		}
+		localization_key = custom_vanilla_achievement_117_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 118 }
+		}
+		localization_key = custom_vanilla_achievement_118_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 119 }
+		}
+		localization_key = custom_vanilla_achievement_119_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 120 }
+		}
+		localization_key = custom_vanilla_achievement_120_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 121 }
+		}
+		localization_key = custom_vanilla_achievement_121_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 122 }
+		}
+		localization_key = custom_vanilla_achievement_122_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 123 }
+		}
+		localization_key = custom_vanilla_achievement_123_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 124 }
+		}
+		localization_key = custom_vanilla_achievement_124_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 125 }
+		}
+		localization_key = custom_vanilla_achievement_125_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 126 }
+		}
+		localization_key = custom_vanilla_achievement_126_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 127 }
+		}
+		localization_key = custom_vanilla_achievement_127_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 128 }
+		}
+		localization_key = custom_vanilla_achievement_128_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 129 }
+		}
+		localization_key = custom_vanilla_achievement_129_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 130 }
+		}
+		localization_key = custom_vanilla_achievement_130_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 131 }
+		}
+		localization_key = custom_vanilla_achievement_131_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 132 }
+		}
+		localization_key = custom_vanilla_achievement_132_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 133 }
+		}
+		localization_key = custom_vanilla_achievement_133_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 134 }
+		}
+		localization_key = custom_vanilla_achievement_134_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 135 }
+		}
+		localization_key = custom_vanilla_achievement_135_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 136 }
+		}
+		localization_key = custom_vanilla_achievement_136_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 137 }
+		}
+		localization_key = custom_vanilla_achievement_137_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 138 }
+		}
+		localization_key = custom_vanilla_achievement_138_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 139 }
+		}
+		localization_key = custom_vanilla_achievement_139_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 140 }
+		}
+		localization_key = custom_vanilla_achievement_140_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 141 }
+		}
+		localization_key = custom_vanilla_achievement_141_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 142 }
+		}
+		localization_key = custom_vanilla_achievement_142_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 143 }
+		}
+		localization_key = custom_vanilla_achievement_143_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 144 }
+		}
+		localization_key = custom_vanilla_achievement_144_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 145 }
+		}
+		localization_key = custom_vanilla_achievement_145_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 146 }
+		}
+		localization_key = custom_vanilla_achievement_146_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 147 }
+		}
+		localization_key = custom_vanilla_achievement_147_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 148 }
+		}
+		localization_key = custom_vanilla_achievement_148_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 149 }
+		}
+		localization_key = custom_vanilla_achievement_149_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 150 }
+		}
+		localization_key = custom_vanilla_achievement_150_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 151 }
+		}
+		localization_key = custom_vanilla_achievement_151_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 152 }
+		}
+		localization_key = custom_vanilla_achievement_152_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 153 }
+		}
+		localization_key = custom_vanilla_achievement_153_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 154 }
+		}
+		localization_key = custom_vanilla_achievement_154_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 155 }
+		}
+		localization_key = custom_vanilla_achievement_155_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 156 }
+		}
+		localization_key = custom_vanilla_achievement_156_DESC
+	}
+	text = {
+		trigger = {
+			check_variable = { achievement_id = 157 }
+		}
+		localization_key = custom_vanilla_achievement_157_DESC
+	}
+
+	# Fallback:
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = "Unknown Achievement"
+	}
+}
+
+defined_text = {
+	name = GetCustomAchievementIconVanilla
+
+	# Vanilla Achievements:
+	text = {
+		trigger = {
+			check_variable = { achievement_id > 0 }
+		}
+		localization_key = "GFX_custom_vanilla_achievement_icon_[?achievement_id]"
+	}
+
+	# Fallback:
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = "GFX_unknown_custom_vanilla_achievement_icon"
+	}
+}

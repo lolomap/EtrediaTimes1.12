@@ -1,0 +1,352 @@
+unique_id = etredia_ach
+
+etredia_ach_1 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = light_warriors_ach
+	}
+}
+
+etredia_ach_2 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_3 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_4 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_5 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_6 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_7 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_8 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_9 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_10 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_11 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_12 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_13 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_14 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_15 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_16 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_17 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_18 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_19 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_20 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_21 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_22 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_23 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_24 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_25 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_26 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_27 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_28 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_29 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_30 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_31 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_32 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_33 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_34 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_35 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_36 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_37 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_38 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
+
+etredia_ach_39 = {
+	possible = {
+		hidden_trigger = {always = yes}
+	}
+	happened = {
+		has_country_flag = debug_ach
+	}
+}
