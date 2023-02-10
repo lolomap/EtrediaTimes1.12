@@ -3,8 +3,6 @@
 generic_light_tanks = {
 	category = land
 
-	blocked_for = {GER SOV ENG USA FRA JAP ITA}
-
 	available_for = {}
 
 	roles = {
@@ -18,9 +16,9 @@ generic_light_tanks = {
 	great_war_tank_default = {
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = basic_light_tank_chassis
-				factor = 0 #let's not waste XP here
+			modifier = {
+				has_tech = main_battle_tank
+				factor = -5000
 			}
 		}
 
@@ -61,10 +59,14 @@ generic_light_tanks = {
 
 	basic_light_tank_default = {
 		priority = {
-			factor = 100
+			factor = 50
 			modifier = { 
 				has_tech = improved_light_tank_chassis 
 				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				has_tech = main_battle_tank
+				factor = -5000
 			}
 		}
 
@@ -125,6 +127,10 @@ generic_light_tanks = {
 			modifier = { 
 				has_tech = advanced_light_tank_chassis 
 				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				has_tech = main_battle_tank
+				factor = -5000
 			}
 		}
 
@@ -197,6 +203,10 @@ generic_light_tanks = {
 	advanced_light_tank_default = {
 		priority = {
 			factor = 10
+			modifier = {
+				has_tech = main_battle_tank
+				factor = -5000
+			}
 		}
 
 		target_variant = {
@@ -677,8 +687,6 @@ generic_light_tank_anti_air = {
 generic_medium_tanks = {
 	category = land
 
-	blocked_for = {GER SOV ENG USA FRA JAP ITA}
-
 	available_for = {}
 
 	roles = {
@@ -686,14 +694,14 @@ generic_medium_tanks = {
 	}
 
 	priority = {
-		factor = 1500
+		factor = 500
 		modifier = {
-			num_of_factories < 100
-			factor = 0.5
+			num_of_factories < 25
+			factor = 1000
 		}
 		modifier = {
-			num_of_factories < 50
-			factor = 0
+			has_tech = main_battle_tank
+			factor = -2000
 		}
 	}
 
@@ -703,6 +711,10 @@ generic_medium_tanks = {
 			modifier = { 
 				has_tech = improved_medium_tank_chassis
 				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				has_tech = main_battle_tank
+				factor = -2000
 			}
 		}
 
@@ -764,6 +776,10 @@ generic_medium_tanks = {
 			modifier = { 
 				has_tech = advanced_medium_tank_chassis 
 				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				has_tech = main_battle_tank
+				factor = -2000
 			}
 		}
 
@@ -838,6 +854,10 @@ generic_medium_tanks = {
 	advanced_medium_tank_default = {
 		priority = {
 			factor = 100
+			modifier = {
+				has_tech = main_battle_tank
+				factor = -2000
+			}
 		}
 
 		target_variant = {
@@ -2118,8 +2138,6 @@ generic_heavy_tank_anti_air = {
 generic_super_heavy_tanks = {
 	category = land
 
-	blocked_for = {GER SOV ENG USA FRA JAP ITA}
-
 	available_for = {}
 
 	roles = {
@@ -2210,8 +2228,6 @@ generic_super_heavy_tanks = {
 generic_modern_tanks = {
 	category = land
 
-	blocked_for = {GER SOV ENG USA FRA JAP ITA}
-
 	available_for = {}
 
 	roles = {
@@ -2221,7 +2237,7 @@ generic_modern_tanks = {
 	priority = {
 		factor = 2000
 		modifier = {
-			num_of_factories < 50
+			num_of_factories < 25
 			factor = -1000
 		}
 	}

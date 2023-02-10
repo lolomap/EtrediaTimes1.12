@@ -350,7 +350,7 @@ focus_tree = {
 			focus = YAN_newgenerals
 		}
 		completion_reward = {
-		YAN = { add_timed_idea = { idea = YAN_poor_production days = 360 } }
+		YAN = { add_timed_idea { idea = YAN_poor_production days = 360 } }
 		}
 		x = 17
 		y = 6
@@ -437,7 +437,7 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			YAN = { add_timed_idea = { idea = YAN_poor_production days = 180 } }
+			YAN = { add_timed_idea { idea = YAN_poor_production days = 180 } }
 		}
 		x = 17
 		y = 10
@@ -1175,6 +1175,9 @@ focus_tree = {
 		prerequisite = {
 			focus = YAN_Karcih_plan
 		}
+		available = {
+			YAN = { has_completed_focus = YAN_armiya }
+		}
 		ai_will_do = {
 			factor = 5
 	    }
@@ -1194,11 +1197,17 @@ focus_tree = {
 		prerequisite = {
 			focus = YAN_ocean_countries
 		}
+		available = {
+			YAN = { 
+				has_completed_focus = YAN_contract
+				has_completed_focus = YAN_metall1
+			}
+		}
 		ai_will_do = {
 			factor = 7
 	    }
 		completion_reward = {
-		YAN = { add_timed_idea = { idea = YAN_prepare_for_war days = 230 } }
+		YAN = { add_timed_idea { idea = YAN_prepare_for_war days = 230 } }
 		}
 		x = 41
 		y = 5
@@ -1216,7 +1225,7 @@ focus_tree = {
 			factor = 10
 	    }
 		completion_reward = {
-			YAN = { country_event = { id = yan.5 days = 1 } }
+			YAN = { country_event { id = yan.5 days = 1 } }
 			add_state_claim = 362
 			hidden_effect = {news_event = {id = newss.18 days = 1}}
 		}
@@ -1236,7 +1245,7 @@ focus_tree = {
 			factor = 10
 	    }
 		completion_reward = {
-		YAN = { country_event = { id = yan.6 days = 1 } }
+		YAN = { country_event { id = yan.6 days = 1 } }
 		add_state_claim = 375
 		add_state_claim = 377
 		add_state_claim = 378
@@ -1267,7 +1276,7 @@ focus_tree = {
 			factor = 10
 	    }
 		completion_reward = {
-		YAN = { country_event = { id = yan.7 days = 1 } }
+		YAN = { country_event { id = yan.7 days = 1 } }
 		add_state_claim = 373
 		add_state_claim = 374
 		}
@@ -1318,7 +1327,7 @@ focus_tree = {
 			focus = YAN_prepare_for_war2
 		}
 		completion_reward = {
-		YAN = { country_event = { id = yan.8 days = 1 } }
+		YAN = { country_event { id = yan.8 days = 1 } }
 		}
 		ai_will_do = {
 			factor = 3
