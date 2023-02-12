@@ -1747,22 +1747,6 @@ country_event = {
 
     immediate = {
         d_calc_wi_e = yes
-        set_variable = {num_of_nuke_anti = 0}
-        every_country = {
-            every_owned_state = {
-                owner = {add_to_variable = {num_of_nuke_anti = PREV.building_level@anti_nuclear_building}}
-            }
-            every_owned_state = {
-                set_variable = {num_of_nuke_anti = ROOT.num_of_nuke_anti}
-            }
-            set_variable = {num_of_nuke_rockets = 0}
-            every_owned_state = {
-                owner = {add_to_variable = {num_of_nuke_rockets = PREV.building_level@nuclear_rocket_site}}
-            }
-            every_owned_state = {
-                set_variable = {num_of_nuke_rockets = ROOT.num_of_nuke_rockets}
-            }
-        }
     }
 }
 
