@@ -1324,6 +1324,62 @@ on_actions = {
 		effect = {
 			clr_country_flag = nuke_request_accepted
             ROOT = {clr_country_flag = nuke_request_accepted}
+            if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = UCB 
+                            is_in_faction_with = UCB
+                        }
+                    }
+                    FROM = {tag = EIK}
+                    has_global_flag = WORLD_WAR
+                }
+                set_country_flag = light_warriors_ach
+            }
+            else_if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = EIK 
+                            is_in_faction_with = EIK
+                        }
+                    }
+                    FROM = {tag = UCB}
+                    has_global_flag = WORLD_WAR
+                }
+                set_country_flag = dark_warriors_ach
+            }
+            else_if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = SBU 
+                            is_in_faction_with = SBU
+                        }
+                    }
+                    SBU = {has_government = fascism is_faction_leader = yes}
+                }
+                if = {
+                    limit = {FROM = {tag = UCB}}
+                    set_country_flag = sbu_fas_win_ww_ucb
+                }
+                if = {
+                    limit = {FROM = {tag = EIK}}
+                    set_country_flag = sbu_fas_win_ww_eik
+                }
+                if = {
+                    limit = {
+                        has_country_flag = sbu_fas_win_ww_eik
+                        has_country_flag = sbu_fas_win_ww_ucb
+                    }
+                    set_country_flag = third_way_ach
+                }
+            }
+            if = {
+                limit = {ROOT = {has_country_flag = nibba}}
+                ROOT = {faction_leader = {dismantle_faction  = yes}}
+            }
 			if = {
 				limit = {
 					FROM = {
@@ -1660,6 +1716,77 @@ on_actions = {
 			}
 		}
 	}
+
+    on_declare_war = {
+        effect = {
+            if = {
+                limit = {
+                    FROM = {
+                        OR = {
+                            tag = EIK
+                            tag = UCB
+                        }
+                    }
+                    ROOT = {
+                        OR = {
+                            tag = EIK
+                            tag = UCB
+                        }
+                    }
+                    EIK = {is_faction_leader = yes}
+                    UCB = {is_faction_leader = yes}
+                }
+                set_global_flag = WORLD_WAR
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        any_owned_state = {
+                            OR = {
+                                is_on_continent = africa
+                                is_on_continent = north_america
+                            }
+                        }
+                    }
+                    ROOT = {
+                        NOT = {
+                            any_owned_state = {
+                                OR = {
+                                    is_on_continent = africa
+                                    is_on_continent = north_america
+                                }
+                            }
+                        }
+                    }
+                }
+                FROM = {create_faction = NIBBA_FRONT}
+                FROM = {set_country_flag = nibba}
+                hidden_effect = {
+                    every_other_country = {
+                        limit = {
+                            any_owned_state = {
+                                OR = {
+                                    is_on_continent = africa
+                                    is_on_continent = north_america
+                                }
+                            }
+                        }
+                        set_country_flag = nibba
+                        FROM = {add_to_faction = PREV}
+                    }
+                }
+            }
+        }
+    }
+
+    on_offer_join_faction = {
+        effect = {
+            if = {
+                limit = {FROM = {has_government = democratic} ROOT = {tag = EIK}}
+                FROM = {set_country_flag = whoami_ach}
+            }
+        }
+    }
 
 ######################################################
 #VANILLA

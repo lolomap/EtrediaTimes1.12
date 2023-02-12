@@ -2154,14 +2154,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = has_world_war
 
-				has_war_with = EIK
-				is_in_faction_with = UCB
-				EIK = {is_in_faction = yes}
-				OR = {
-					EIK = {is_faction_leader = yes}
-					YAN = {is_faction_leader = yes is_in_faction_with = EIK}
-					CHE = {is_faction_leader = yes is_in_faction_with = EIK}
-				}
+				has_global_flag = WORLD_WAR
 			}
 			surrender_progress < 0.3
 			has_government = democratic
