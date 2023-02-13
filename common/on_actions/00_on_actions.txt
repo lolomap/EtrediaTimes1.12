@@ -25,6 +25,27 @@ on_actions = {
                 
 				set_variable = {uranium_cost = 2}
 				set_variable = {winfluence_cost = 1}
+
+                if = {
+                    limit = {has_government = fascism}
+                    set_country_flag = fascism_move
+                }
+                else_if = {
+                    limit = {has_government = neutrality}
+                    set_country_flag = neutrality_move
+                }
+                else_if = {
+                    limit = {has_government = communism}
+                    set_country_flag = communism_move
+                }
+                else_if = {
+                    limit = {has_government = monarchism}
+                    set_country_flag = monarchism_move
+                }
+                else_if = {
+                    limit = {has_government = democratic}
+                    set_country_flag = democratic_move
+                }
             }
             #SZ INFLUENCE
             ELR = {add_to_variable = {winfluence_cost = -0.15}}
@@ -1376,6 +1397,40 @@ on_actions = {
                     set_country_flag = third_way_ach
                 }
             }
+
+            if = {
+                limit = {ROOT = {tag = BAE}}
+                if = {
+                    limit = {FROM = {tag = EIK}}
+                    set_country_flag = bae_eik_kill
+                }
+                else_if = {
+                    limit = {FROM = {OR = {tag = DIR tag = DEM}}}
+                    set_country_flag = bae_dir_kill
+                }
+                else_if = {
+                    limit = {FROM = {tag = TOL}}
+                    set_country_flag = bae_tol_kill
+                }
+
+                if = {
+                    limit = {
+                        has_country_flag = bae_eik_kill
+                        has_country_flag = bae_dir_kill
+                        has_country_flag = bae_tol_kill
+                    }
+                    set_country_flag = hold_my_beer_ach
+                }
+            }
+            else_if = {
+                limit = {
+                    ROOT = {OR = {tag = LOK tag = BOK}}
+                    FROM = {OR = {tag = LOK tag = BOK}}
+                    ROOT = {has_idea = scraping_the_barrel}
+                }
+                set_country_flag = loka_ach
+            }
+
             if = {
                 limit = {ROOT = {has_country_flag = nibba}}
                 ROOT = {faction_leader = {dismantle_faction  = yes}}
@@ -1611,9 +1666,36 @@ on_actions = {
                 }
 
                 add_threat = -2.5
+                set_country_flag = democratic_move
             }
             else = {
                 add_threat = 2.5
+                if = {
+                    limit = {has_government = fascism}
+                    set_country_flag = fascism_move
+                }
+                else_if = {
+                    limit = {has_government = neutrality}
+                    set_country_flag = neutrality_move
+                }
+                else_if = {
+                    limit = {has_government = communism}
+                    set_country_flag = communism_move
+                }
+                else_if = {
+                    limit = {has_government = monarchism}
+                    set_country_flag = monarchism_move
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = democratic_move
+                    has_country_flag = fascism_move
+                    has_country_flag = communism_move
+                    has_country_flag = neutrality_move
+                    has_country_flag = monarchism_move
+                }
+                set_country_flag = experiments_ach
             }
 
 			if = {
@@ -1714,11 +1796,34 @@ on_actions = {
 					transfer_state_to = DON
 				}
 			}
+            else_if = {
+                limit = {
+                    tag = TOL
+                    controls_state = 319
+                    date < 2018.1.1
+                }
+                set_country_flag = tolch_ach
+            }
 		}
 	}
 
     on_declare_war = {
         effect = {
+            if = {
+                limit = {
+                    tag = TOB
+                    FROM = {
+                        OR = {
+                            tag = EIK
+                            tag = UCB
+                        }
+                    }
+                    has_global_flag = WORLD_WAR
+                    num_divisions < 3
+                }
+
+                set_country_flag = shop_security_ach
+            }
             if = {
                 limit = {
                     FROM = {
