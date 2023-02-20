@@ -13,7 +13,7 @@ state={
 	history={
 		owner = YAN
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
 			anti_nuclear_building = 1
                         arms_factory = 1
 		}

@@ -12,7 +12,7 @@ state={
 	history={
 		owner = FSC
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 		}
 		add_core_of = FSC
 		add_core_of = KUL

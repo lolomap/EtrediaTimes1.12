@@ -13,7 +13,7 @@ state={
 	history={
 		owner = TOR
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
                         industrial_complex = 0
                         arms_factory = 1
 		}

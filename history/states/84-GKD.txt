@@ -7,7 +7,7 @@ state={
 	history={
 		owner = GKD
 		buildings = {
-			infrastructure = 9
+			infrastructure = 4
 			industrial_complex = 4
 
 		}

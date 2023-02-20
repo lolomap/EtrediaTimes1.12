@@ -6,7 +6,7 @@ state={
 	history={
 		owner = ESS
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			industrial_complex = 2
 			arms_factory = 3
 

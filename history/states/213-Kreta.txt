@@ -10,7 +10,7 @@ state={
 	history={
 		owner = SBU
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
                         industrial_complex = 0
                         arms_factory = 0
 		}

@@ -9,7 +9,7 @@ state={
 	history={
 		owner = CHE
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
 			7548 = {
 				naval_base = 1
 			}

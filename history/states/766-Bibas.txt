@@ -11,7 +11,7 @@ state={
 	history={
 		owner = NBL
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 		}
 		add_core_of = NBL
 		victory_points = {

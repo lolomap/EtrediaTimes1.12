@@ -8,7 +8,7 @@ state={
 	history={
 		owner = UCB
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
 			industrial_complex = 2
 		}
 		add_core_of = UCB

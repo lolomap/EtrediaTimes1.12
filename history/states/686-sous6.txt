@@ -9,7 +9,7 @@ state={
 	history={
 		owner = SOU
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
                         industrial_complex = 1
 		}
 		add_core_of = SOU

@@ -13,7 +13,7 @@ state={
 	history={
 		owner = DID
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			1782 = {
 				naval_base = 1
 			}

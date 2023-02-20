@@ -13,7 +13,7 @@ state={
 	history={
 		owner = KLU
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
                         arms_factory = 2
 		}
 		add_core_of = KLU

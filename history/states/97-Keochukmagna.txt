@@ -7,7 +7,7 @@ state={
 	history={
 		owner = IID
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
 		}
 		add_core_of = IID
 		victory_points = {

@@ -9,7 +9,7 @@ state={
 	history={
 		owner = CHE
 		buildings = {
-			infrastructure = 7
+			infrastructure = 3
 		}
 		add_core_of = CHE
 		victory_points = {
