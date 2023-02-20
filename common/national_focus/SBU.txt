@@ -84,10 +84,10 @@ focus_tree = {
                 add_opinion_modifier { target = ROOT modifier = SFL_tradewar }
                 add_ideas = SFL_tradewar_idea
             }
-            SBU = {set_country_flag = tradewar}
+            SFL = {set_country_flag = tradewar}
             set_country_flag = tradewar
             set_country_flag = tradewar_starter
-            set_variable = {trade_war = 20}
+            SFL = {set_variable = {trade_war = 100}}
 		}
 
 	}
@@ -172,7 +172,7 @@ focus_tree = {
                 num_of_civilian_factories > 14
             }
             IID = {
-                has_idea = IID_neutrality
+                has_idea = IID_neutrality_idea
             }
         }
 
@@ -922,7 +922,7 @@ focus_tree = {
 	focus = {
 		id = SBU_demonstration_of_power
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 30
 		prerequisite = {
 			focus = SBU_war_with_SFL
 		}
@@ -1782,7 +1782,10 @@ focus_tree = {
 
 		completion_reward = {
 			RGY = {
-				add_timed_idea = {idea = SBU_little_sburska_zvezda days = 720}
+                swap_ideas = {
+                    remove_idea = SBU_little_sburska_zvezda
+                    add_idea = SBU_medium_sburska_zvezda
+                }
 				add_political_power = -200
 			}
 		}
@@ -1942,19 +1945,20 @@ focus_tree = {
 		y = 4
 
         bypass = {
-            UCB = {
+            RGY = {
                 OR = {
-                    has_idea = SBU_medium_sburska_zvezda
                     has_idea = SBU_high_sburska_zvezda
                 }
             }
         }
 
+        available = {RGY = {has_idea = SBU_medium_sburska_zvezda}}
+
 		completion_reward = {
 			RGY = {
 				swap_ideas = {
-					remove_idea = SBU_little_sburska_zvezda
-					add_idea = SBU_medium_sburska_zvezda
+					remove_idea = SBU_medium_sburska_zvezda
+					add_idea = SBU_high_sburska_zvezda
 				}
 			}
 		}
@@ -2154,7 +2158,14 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = has_world_war
 
-				has_global_flag = WORLD_WAR
+				has_war_with = EIK
+				is_in_faction_with = UCB
+				EIK = {is_in_faction = yes}
+				OR = {
+					EIK = {is_faction_leader = yes}
+					YAN = {is_faction_leader = yes is_in_faction_with = EIK}
+					CHE = {is_faction_leader = yes is_in_faction_with = EIK}
+				}
 			}
 			surrender_progress < 0.3
 			has_government = democratic

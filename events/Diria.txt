@@ -22,6 +22,7 @@ country_event = {
         ruling_party = communism 
 		}
         set_country_flag = BRAND_NEW_COUNTRY
+        add_ideas = leadership_c
         set_country_flag = ai_not_accept_existance
         country_event = { days = 30 id = dirnews.2 }
         news_event = {
@@ -41,8 +42,8 @@ country_event = {
     trigger = {
         TAG = DIR
         date > 2014.1.30
-        NOT = { has_government = neutrality }
-	    NOT = { has_government = democratic }
+        NOT = { has_goverment = neutrality }
+	    NOT = { has_goverment = democratic }
 	}
 
     option = {
@@ -124,7 +125,7 @@ country_event = {
         every_state = {
             limit = {is_core_of = DIR}
             teleport_armies = {
-                to_state_array = owned_controlled_states
+                to_state = 307
             }
         }
 	}

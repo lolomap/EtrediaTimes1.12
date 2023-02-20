@@ -5,6 +5,7 @@ idea_categories = {
 	
 		cost = 0
 		removal_cost = -1
+		ledger = hidden
 	}
 
 	country = {
@@ -12,22 +13,21 @@ idea_categories = {
 		
 		cost = 0
 		removal_cost = -1
-
-        ledger = hidden
+		ledger = hidden
 	}
 	
 	government = {
 		slot = mobilization_laws
 		slot = trade_laws
 		slot = economy
-		character_slot = political_advisor
-		character_slot = political_advisor
-		character_slot = political_advisor
-
-        ledger = civilian
+		slot = political_advisor
+		slot = political_advisor
+		slot = political_advisor
 		
 		cost = 150
 		removal_cost = 0
+
+		ledger = civilian
 	}
 
 	government_1 = {
@@ -36,11 +36,12 @@ idea_categories = {
 		slot = corruption_laws
         slot = country_type_status
         slot = stability_modifiers
-
-        ledger = civilian
+        slot = political_form
 		
 		cost = 150
 		removal_cost = 0
+
+		ledger = civilian
 	}
 	
 	research_production = {
@@ -49,29 +50,26 @@ idea_categories = {
 		slot = aircraft_manufacturer
 		slot = materiel_manufacturer
 		slot = industrial_concern
-		character_slot = theorist
-
-        ledger = civilian
+		slot = theorist
 
 		cost = 150
 		removal_cost = 0
+		ledger = civilian
 
 	}
 	
 	military_staff = {
-		character_slot = army_chief 
-		character_slot = navy_chief 
-		character_slot = air_chief
-		character_slot = high_command
-		character_slot = high_command
-		character_slot = high_command
-        
+		slot = army_chief 
+		slot = navy_chief 
+		slot = air_chief
+		slot = high_command
+		slot = high_command
+		slot = high_command
 		
 		cost = 150
 		removal_cost = 0
 	}
-
-    academy_spirit = {
+	academy_spirit = {
 		type = army_spirit
 
 		cost = 20
@@ -189,6 +187,9 @@ slot_ledgers = {
 	tank_manufacturer = army
 	naval_manufacturer = navy
 	aircraft_manufacturer = air
+	
+	theorist = invalid # must be overridden
+	high_command = invalid # must be overridden
 	
 	
 	mobilization_laws = civilian

@@ -12,6 +12,7 @@ add_ideas = {
         nonfree_press
         limited_entry
 	fifth_corruption_level
+    continuity_f
 }
 
 	set_autonomy = {
@@ -54,7 +55,7 @@ set_technology = {basic_train = 1
 	CAS1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
-	strategic_bomber1 = 1
+	
 }
 
 

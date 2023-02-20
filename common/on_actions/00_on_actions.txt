@@ -27,6 +27,14 @@ on_actions = {
 				set_variable = {winfluence_cost = 1}
 
                 if = {
+                    limit = {has_idea = fractionism}
+                    set_variable = {change_pf_cost = 30}
+                }
+                else = {
+                    set_variable = {change_pf_cost = 180}
+                }
+
+                if = {
                     limit = {has_government = fascism}
                     set_country_flag = fascism_move
                 }
@@ -126,23 +134,11 @@ on_actions = {
 			#########################
 			# ASIAN MINORS WANT WAR #
 			#########################
-			every_country = {
+			if = {limit = {always = no}
+            every_country = {
 				limit = {
-					OR = {
-						original_tag = UNC
-						original_tag = GAR
-						original_tag = KCE
-						original_tag = LOD
-						original_tag = ZOG
-						original_tag = HOR
-						original_tag = ECE
-						original_tag = GWA
-						original_tag = KYU
-						original_tag = DNG
-						original_tag = KLU
-						original_tag = BSH
-						original_tag = SOL
-						original_tag = YEO
+					any_owned_state = {
+						is_on_continent = asia
 					}
 				}
 				set_rule = {
@@ -150,67 +146,16 @@ on_actions = {
 				}
 				random_neighbor_country = {
 					limit = {
-						OR = {
-							original_tag = UNC
-							original_tag = GAR
-							original_tag = KCE
-							original_tag = LOD
-							original_tag = ZOG
-							original_tag = HOR
-							original_tag = ECE
-							original_tag = GWA
-							original_tag = KYU
-							original_tag = DNG
-							original_tag = KLU
-							original_tag = BSH
-							original_tag = SOL
-							original_tag = YEO
+						any_owned_state = {
+							is_on_continent = asia
 						}
 					}
-					PREV = {
-						every_owned_state = {
-							add_claim_by = PREV.PREV
-						}
-					}
-
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = PREV
-						value = 10
-					}
-
-					add_ai_strategy = {
-						type = declare_war
-						id = PREV
-						value = 100
-					}
-				}
-				random_neighbor_country = {
-					limit = {
-						OR = {
-							original_tag = UNC
-							original_tag = GAR
-							original_tag = KCE
-							original_tag = LOD
-							original_tag = ZOG
-							original_tag = HOR
-							original_tag = ECE
-							original_tag = GWA
-							original_tag = KYU
-							original_tag = DNG
-							original_tag = KLU
-							original_tag = BSH
-							original_tag = SOL
-							original_tag = YEO
-						}
-					}
-					PREV = {
-						every_owned_state = {
-							add_claim_by = PREV.PREV
-						}
-					}
+                    every_owned_state = {
+                        add_claim_by = PREV
+                    }
 				}
 			}
+            }
 
             #################
             # START NUCLEAR #
@@ -733,6 +678,10 @@ on_actions = {
                         multiply_variable = {wtire_to_add = 0.85}
                     }
                     if = {
+                        limit = {has_country_flag = do_cost_wtire}
+                        multiply_variable = {wtire_to_add = 1.15}
+                    }
+                    if = {
                         limit = {has_country_flag = do_reduce_wtire_advisor}
                         multiply_variable = {wtire_to_add = 0.85}
                     }
@@ -1102,7 +1051,7 @@ on_actions = {
 
                 SBU = {remove_ideas = {SFL_tradewar_b20 SFL_tradewar_b40 SFL_tradewar_b70 SFL_tradewar_g20 SFL_tradewar_g40 SFL_tradewar_g70}}
                 SFL = {remove_ideas = {SFL_tradewar_b20 SFL_tradewar_b40 SFL_tradewar_b70 SFL_tradewar_g20 SFL_tradewar_g40 SFL_tradewar_g70}}
-                
+
                 set_temp_variable = {tdif = 100}
                 subtract_from_temp_variable = {tdif = SFL.trade_war}
                 SFL = {set_variable = {trade_reverse = tdif}}
@@ -1171,6 +1120,7 @@ on_actions = {
             }
         }
     }
+
 
 	on_weekly = {
 		effect = {
@@ -1434,6 +1384,34 @@ on_actions = {
             if = {
                 limit = {ROOT = {has_country_flag = nibba}}
                 ROOT = {faction_leader = {dismantle_faction  = yes}}
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = MOF
+                    }
+                    ROOT = {
+                        OR = {
+                            tag = SFL
+                            tag = SBU
+                        }
+                    }
+                    SBU = {has_country_flag = SFL_accepted_MOF_dividing}
+                }
+                SBU = {
+                    transfer_state = 178
+                    transfer_state = 179
+                    transfer_state = 180
+                    transfer_state = 175
+                    transfer_state = 176
+                }
+                SFL = {
+                    transfer_state = 173
+                    transfer_state = 174
+                    transfer_state = 177
+                    transfer_state = 169
+                    transfer_state = 172
+                }
             }
 			if = {
 				limit = {

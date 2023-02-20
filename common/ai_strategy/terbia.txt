@@ -1,0 +1,67 @@
+trb_ally = {
+	enable = {
+		tag = TRB
+		SBU = { has_completed_focus = SBU_terbia_compromiss }
+		country_exists = SBU
+	}
+	abort = {
+		NOT = { country_exists = SBU }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SBU"			
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SBU"			
+		value = 100
+	}
+}
+
+trb_commi_make_divisions = {
+	enable = {
+		tag = TRB
+		TRB = { has_government = communism }
+	}
+	abort = {
+		TRB = { NOT = { has_government = communism } }
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 25
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = jeep
+		value = 2
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SBU"			
+		value = 25
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "YAN"			
+		value = 25
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SBU"			
+		value = 5
+	}
+}

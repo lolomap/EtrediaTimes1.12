@@ -12,6 +12,7 @@ add_ideas = {
         nonfree_press
         general_entry
 	fourth_corruption_level
+    leadership_n
 }
 
 set_technology = {basic_train = 1
@@ -49,7 +50,7 @@ set_technology = {basic_train = 1
 	fighter1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
-	strategic_bomber1 = 1
+	
 	naval_bomber1 = 1
 }
 

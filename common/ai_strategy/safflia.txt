@@ -1,0 +1,106 @@
+SFL_neria = {
+	enable = {
+		original_tag = SFL
+	}
+	abort = {
+		NOT = { country_exists = NER }
+	}
+	
+	ai_strategy = {
+		type = puppet 
+		id = "NER"
+		value = -100000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "NER"
+		value = 500
+	}
+}
+
+SFL_template_design_1 = {
+	enable = {
+		original_tag = SFL			
+	}
+	abort = { 
+		always = no
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 150
+	}
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 20
+	}
+}
+
+alliance_with_etredia1 = {
+	allowed = {
+		original_tag = SFL
+	}
+    enable = {
+        original_tag = SFL
+    }
+	abort = {
+		OR = {
+		SBU = { surrender_progress > 0.3 }
+		SFL = { has_war_with = EIK }
+		}
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = UCB	
+		value = -100000
+	}
+	ai_strategy = {
+		type = alliance
+		id = SBU	
+		value = -100000
+	}
+	ai_strategy = {
+		type = alliance
+		id = KAR	
+		value = -100000
+	}
+	ai_strategy = {
+        type = diplo_action_acceptance
+        id = UCB
+        value = -100000
+        target = join_allies
+    }
+}
+
+sfl_world_war = {
+	enable = {
+		original_tag = SFL
+		SFL = { has_government = democratic }
+	}
+	abort = {
+			is_historical_focus_on = no
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "SHE"
+		value = -9999
+	}
+	ai_strategy = {
+		type = protect
+		id = "KAS"
+		value = -9999
+	}
+	ai_strategy = {
+		type = protect
+		id = "DEM"
+		value = -9999
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -9999
+	}
+}

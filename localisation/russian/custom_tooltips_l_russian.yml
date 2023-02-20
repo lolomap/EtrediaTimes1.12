@@ -1,6 +1,4 @@
 ﻿l_russian:
-  IRONMAN_ENABLED_TOOLTIP: "Игра в режиме §YIronman§!"
-
   SBU_division_press_rebel_cost: "£army_experience §Y30§! £command_power  §Y50§!"
   SBU_division_press_rebel_cost_blocked: "£army_experience §R30§! £command_power §R50§!"
   SBU_create_police_cost: "£command_power  §Y100§!"
@@ -25,6 +23,16 @@
   SBU_var_tooltip: "[?SBU.trade_war]"
   sz_more_then_5m: "Как минимум §Y5§! стран со §Yсредним§! влиянием SZ и выше"
 
+  politform_change_available: "Доступно изменение политического строя"
+  corruption_cost_10_tooltip: "Стоимость антикоррупционных мероприятий: §R+10%§!"
+  reduce_pfchange_cost: "Сокращает смену политического строя до §Y30§! дней"
+  
+  YAN_planes_production_tooltip:0 "Станет доступен концерн «CVT_Toika»"
+  YAN_tank_concern:0 "Станет доступен концерн «CREDORA»"
+  YAN_electronika_concern:0 "Станет доступен концерн «Omnish Inovation Group»"
+  EIK_scientific_concern:0 "Станет доступен ислледовательский центр «MontaGp Scientific»"
+  EIK_production_concern:0 "Станет доступен концерн «Rashin»"
+
   pra_nation_tooltip: "Праетерская культура"
   all_nation_tooltip: "Многонациональная культура"
   bkh_nation_tooltip: "Баркханская культура"
@@ -41,6 +49,7 @@
   wtire_reduce_20:0 "Военная усталость уменьшится на §G20§!\n"
   wtire_reduce_10:0 "Военная усталость уменьшится на §G10§!\n"
   wtire_reduce_focus:0 "Рост военной усталости: §G-15%§!\n"
+  wtire_cost_focus: "Рост военной усталости: §R15%§!\n"
   world_influence_cost_5:0 "Штраф к мировому влиянию : §R5%§!\n"
   world_influence_cost_10:0 "Штраф к мировому влиянию : §R10%§!\n"
   world_influence_cost_15:0 "Штраф к мировому влиянию : §R15%§!\n"

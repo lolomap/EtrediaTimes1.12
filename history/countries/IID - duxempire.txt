@@ -13,10 +13,11 @@ add_ideas = {
         IID_recrut
 	IID_democrats
 	IID_eco_crisis
-	IID_neutrality
+	IID_neutrality_idea
         total_nonfree_press
         limited_entry
 	fourth_corruption_level
+    leadership_m
 }
 
 set_autonomy = {
