@@ -12,7 +12,7 @@ state={
 	history={
 		owner = FIL
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
 			11960 = {
 				naval_base = 4
 			}

@@ -19,7 +19,19 @@
   trade_g15: "Очков торговли: §G+15§!"
   trade_g20: "Очков торговли: §G+20§!"
   trade_gSZ: "Очков торговли: §G+2§! за каждый уровень влияния Sburska Zvezda"
+  SFL_var_tooltip: "[?SFL.trade_reverse]"
+  SBU_var_tooltip: "[?SBU.trade_war]"
   sz_more_then_5m: "Как минимум §Y5§! стран со §Yсредним§! влиянием SZ и выше"
+
+  politform_change_available: "Доступно изменение политического строя"
+  corruption_cost_10_tooltip: "Стоимость антикоррупционных мероприятий: §R+10%§!"
+  reduce_pfchange_cost: "Сокращает смену политического строя до §Y30§! дней"
+  
+  YAN_planes_production_tooltip:0 "Станет доступен концерн «CVT_Toika»"
+  YAN_tank_concern:0 "Станет доступен концерн «CREDORA»"
+  YAN_electronika_concern:0 "Станет доступен концерн «Omnish Inovation Group»"
+  EIK_scientific_concern:0 "Станет доступен ислледовательский центр «MontaGp Scientific»"
+  EIK_production_concern:0 "Станет доступен концерн «Rashin»"
 
   pra_nation_tooltip: "Праетерская культура"
   all_nation_tooltip: "Многонациональная культура"
@@ -37,6 +49,7 @@
   wtire_reduce_20:0 "Военная усталость уменьшится на §G20§!\n"
   wtire_reduce_10:0 "Военная усталость уменьшится на §G10§!\n"
   wtire_reduce_focus:0 "Рост военной усталости: §G-15%§!\n"
+  wtire_cost_focus: "Рост военной усталости: §R15%§!\n"
   world_influence_cost_5:0 "Штраф к мировому влиянию : §R5%§!\n"
   world_influence_cost_10:0 "Штраф к мировому влиянию : §R10%§!\n"
   world_influence_cost_15:0 "Штраф к мировому влиянию : §R15%§!\n"
@@ -44,6 +57,7 @@
   world_influence_cost_10n:0 "Штраф к мировому влиянию : §G-10%§!\n"
   world_influence_cost_15n:0 "Штраф к мировому влиянию : §G-15%§!\n"
   world_influence_cost_50n:0 "Штраф к мировому влиянию : §G-50%§!\n"
+  world_influence_cost_clamp:0 "§RДругие модификаторы влияния не работают§!"
 
   DEM_train_modern_army_tooltip:0 "§CНам станет доступна подготовка новых войск при поддержке Картилии§"
   kar_political_support_tooltip:0 "§Мы поможем Дирии сохранить внутренную стабильность государства.§"

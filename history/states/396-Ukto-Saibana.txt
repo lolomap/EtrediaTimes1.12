@@ -13,7 +13,7 @@ state={
 	history={
 		owner = EIK
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 		}
 		add_core_of = EIK
 		victory_points = {

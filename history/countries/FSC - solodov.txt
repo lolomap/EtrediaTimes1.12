@@ -12,6 +12,7 @@ add_ideas = {
         total_free_press
         general_entry
 	third_corruption_level
+    regionalism
 }
 
 set_technology = {basic_train = 1
@@ -46,7 +47,7 @@ set_technology = {basic_train = 1
 	fighter1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
-	strategic_bomber1 = 1
+	
 	naval_bomber1 = 1
 
 	early_submarine = 1

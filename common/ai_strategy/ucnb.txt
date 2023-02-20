@@ -1,0 +1,208 @@
+UCB_annex_minors = {
+	enable = {
+		original_tag = UCB
+	}
+
+	ai_strategy = {
+		type = annex
+		id = "KOL"
+		value = 10000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KOL"
+		value = 10000
+	}
+	ai_strategy = {
+		type = annex
+		id = "KIM"
+		value = 10000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KIM"
+		value = 10000
+	}
+	ai_strategy = {
+		type = annex
+		id = "DIN"
+		value = 10000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "DIN"
+		value = 10000
+	}
+	ai_strategy = {
+		type = annex
+		id = "ARS"
+		value = 10000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ARS"
+		value = 10000
+	}
+	ai_strategy = {
+		type = annex
+		id = "NRA"
+		value = 10000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "NRA"
+		value = 10000
+	}
+	ai_strategy = {
+		type = annex
+		id = "SRA"
+		value = 10000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SRA"
+		value = 10000
+	}
+}
+
+ucb_protect_democratic_sheregia = {
+	enable = {
+		original_tag = UCB
+		UCB = { has_government = democratic }
+	}
+	abort = {
+		SHE = { has_government = fascism }
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "SHE"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SHE"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "SHE"
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SHE"
+		value = 100
+	}
+}
+
+ucb_protect_democratic_diria = {
+	enable = {
+		original_tag = UCB
+		NOT = { UCB = { has_government = fascism } }
+		NOT = { surrender_progress > 0.3 }
+		date > 2017.1.1
+	}
+	abort = {
+		UCB = { has_government = communism }
+		EIK = { has_completed_focus = EIK_war_with_kaspa }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DEM"
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = "DEM"
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "DIR"
+		value = -500
+	}
+}
+
+ucb_dem_alliance = {
+	enable = {
+		original_tag = UCB
+		EIK = { has_completed_focus = EIK_war_with_kaspa }
+	}
+	abort = {
+		UCB = { has_government = communism }
+	}
+	ai_strategy = {
+		type = alliance
+		id = "DEM"
+		value = 500
+	}
+}
+
+UCB_template_design_1 = {
+	enable = {
+		original_tag = UCB			
+	}
+	abort = { 
+		always = no
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 70
+	}
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -100
+	}
+}
+
+UCB_template_design_2 = {
+	enable = {
+		original_tag = UCB			
+	}
+	abort = { 
+		always = no
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 70
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -200
+	}
+}
+
+UCB_world_war = {
+	enable = {
+		original_tag = UCB			
+	}
+	abort = { 
+		is_historical_focus_on = no
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = TRB
+		value = 20
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = RTT
+		value = 20
+	}
+	ai_strategy = {
+		type = invade
+		id = YAN
+		value = -50
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = DIR
+		value = 15
+	}
+}

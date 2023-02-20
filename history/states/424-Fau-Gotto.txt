@@ -13,7 +13,7 @@ state={
 	history={
 		owner = VRO
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
                         industrial_complex = 0
                         arms_factory = 0
 		}

@@ -62,6 +62,7 @@ country_event = {
 
         option = {
 		name = eik.3.a
+		TAG = EIK
             create_wargoal = {
                 type = annex_everything
                 target = DIR
@@ -87,6 +88,7 @@ country_event = {
 
         option = {
 		name = eik.4.a
+		        TAG = EIK
                 create_wargoal = {
                 type = annex_everything
                 target = KAS
@@ -356,7 +358,7 @@ country_event = { # Олигархи у власти
 			elections_allowed = yes
 			election_frequency = 72
 		}
-		load_focus_tree = generic_focus
+		#load_focus_tree = generic_focus
 	}
 }
 

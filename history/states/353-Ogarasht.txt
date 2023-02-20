@@ -12,7 +12,7 @@ state={
 	history={
 		owner = YAN
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			6463 = {
 				naval_base = 2
 			}

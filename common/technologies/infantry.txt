@@ -1,7 +1,6 @@
 technologies = {
 	
 	@1996 = 0
-    @1998 = 0
 	@2014 = 2
 	@2016 = 4
 	@2017 = 6
@@ -530,13 +529,13 @@ technologies = {
 			name = infantry_folder
 			position = { x = 1 y = @2014 }
 		}
-        on_research_complete_limit = {
-            NOT = {
-                has_template_containing_unit = paratrooper
-            }
-        }
 		
 		on_research_complete = {
+			limit = {
+				NOT = {
+					has_template_containing_unit = paratrooper
+				}
+			}
 			hidden_effect = {
 				load_oob = "unlock_paratroopers"
 			}
@@ -653,14 +652,13 @@ technologies = {
 		enable_subunits = {
 			marine
 		}
-
-        on_research_complete_limit = {
-            NOT = {
-					has_template_containing_unit = marine
-				}
-        }
 		
 		on_research_complete = {
+			limit = {
+				NOT = {
+					has_template_containing_unit = marine
+				}
+			}
 			hidden_effect = {
 				load_oob = "unlock_marines"
 			}			
@@ -774,13 +772,12 @@ technologies = {
 			mountaineers
 		}
 
-        on_research_complete_limit = {
-            NOT = {
+		on_research_complete = {
+			limit = {
+				NOT = {
 					has_template_containing_unit = mountaineers
 				}
-        }
-
-		on_research_complete = {
+			}
 			hidden_effect = {
 				load_oob = "unlock_mountineers"
 			}
@@ -1566,13 +1563,12 @@ technologies = {
 			motorized_equipment_1
 		}
 
-        on_research_complete_limit = {
-            NOT = {
+		on_research_complete = {
+			limit = {
+				NOT = {
 					has_template_containing_unit = motorized
 				}
-        }
-
-		on_research_complete = {
+			}
 			hidden_effect = {
 				load_oob = "unlock_motorized"
 			}			
@@ -1674,6 +1670,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		spriteTypes = {
+			SpriteType = {
+					name = "GFX_motorized_rocket_unit_2"
+					texturefile = "gfx/interface/technologies/motorized_rocket_unit_2.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 2
@@ -1703,6 +1705,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		spriteTypes = {
+			SpriteType = {
+					name = "GFX_motorized_rocket_unit_3"
+					texturefile = "gfx/interface/technologies/motorized_rocket_unit_3.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 2
@@ -1727,6 +1735,12 @@ technologies = {
 			position = { x = 1 y = 13 }
 		}
 		
+		spriteTypes = {
+			SpriteType = {
+					name = "GFX_motorized_rocket_unit_4"
+					texturefile = "gfx/interface/technologies/motorized_rocket_unit_4.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 4
@@ -1759,6 +1773,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		spriteTypes = {
+			SpriteType = {
+				name = "GFX_jeep_unit_1_medium"
+				texturefile = "gfx/interface/technologies/jeep_unit_1.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 4
@@ -1788,6 +1808,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		spriteTypes = {
+			SpriteType = {
+					name = "GFX_jeep_unit_2"
+					texturefile = "gfx/interface/technologies/jeep_unit_2.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 4
@@ -1817,6 +1843,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		spriteTypes = {
+			SpriteType = {
+					name = "GFX_jeep_unit_3"
+					texturefile = "gfx/interface/technologies/jeep_unit_3.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 4
@@ -1846,6 +1878,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+		spriteTypes = {
+			SpriteType = {
+					name = "GFX_jeep_unit_4"
+					texturefile = "gfx/interface/technologies/jeep_unit_4.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 4
@@ -1871,6 +1909,12 @@ technologies = {
 		}
 
 		
+		spriteTypes = {
+			SpriteType = {
+					name = "GFX_jeep_unit_5"
+					texturefile = "gfx/interface/technologies/jeep_unit_5.dds"
+		    }
+		}
 		
 		ai_will_do = {
 			factor = 4

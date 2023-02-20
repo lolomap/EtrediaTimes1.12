@@ -11,7 +11,7 @@ state={
 	history={
 		owner = BOV
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			965 = {
 				naval_base = 2
 			}

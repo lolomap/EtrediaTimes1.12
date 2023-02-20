@@ -11,7 +11,7 @@ state={
 	history={
 		owner = VRO
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			5157 = {
 				naval_base = 3
 			}

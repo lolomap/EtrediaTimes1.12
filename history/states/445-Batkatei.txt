@@ -13,7 +13,7 @@ state={
 	history={
 		owner = KAS
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
                         industrial_complex = 4
                         arms_facotry = 0
 		}

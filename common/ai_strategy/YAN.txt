@@ -1,0 +1,109 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+less_trucks_1_YAN = {
+	enable = {
+		tag = YAN
+		date < 2014.1.1
+	}
+	abort = { 
+		date > 2017.1.1
+	}
+
+	ai_strategy = { 
+		type = role_ratio
+		id = infantry
+		value = 30
+	}
+	
+	ai_strategy = { 
+		type = role_ratio
+		id = mechanized
+		value = 30
+	}
+	
+	ai_strategy = { 
+		type = role_ratio
+		id = garrison
+		value = 12
+	}
+	
+	ai_strategy = { 
+		type = role_ratio
+		id = suppression
+		value = 8
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 20
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = 15
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 5
+	}
+}
+
+less_naval_invasions_YAN = {
+	enable = {
+		tag = YAN
+	}
+	abort = {
+		is_historical_focus_on = no
+	}
+	
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -25
+	}
+	ai_strategy = {
+		type = invade
+		id = SBU
+		value = -100
+	}
+	ai_strategy = {
+		type = invade
+		id = SFL
+		value = -100
+	}
+	ai_strategy = {
+		type = invade
+		id = TRB
+		value = -50
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = TRB
+		value = 2
+	}
+}

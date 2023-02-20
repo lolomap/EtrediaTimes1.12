@@ -11,7 +11,7 @@ state={
 	history={
 		owner = TRP
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3
 		}
 		add_core_of = TRP
 		victory_points = {

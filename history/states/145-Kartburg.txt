@@ -12,7 +12,7 @@ state={
 	history={
 		owner = PIN
 		buildings = {
-			infrastructure = 7
+			infrastructure = 3
 		}
 		add_core_of = PIN
 		victory_points = {

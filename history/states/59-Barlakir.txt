@@ -12,7 +12,7 @@ state={
 	history={
 		owner = TRP
 		buildings = {
-			infrastructure = 7
+			infrastructure = 3
 			7225 = {
 				naval_base = 2
 			}

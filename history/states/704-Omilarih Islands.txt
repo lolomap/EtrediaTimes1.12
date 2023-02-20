@@ -10,7 +10,7 @@ state={
 	history={
 		owner = KTL
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			1156 = {
 				naval_base = 1
 			}

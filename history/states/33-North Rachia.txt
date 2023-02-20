@@ -12,7 +12,7 @@ state={
 	history={
 		owner = UCB
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
                         industrial_complex = 0
                         arms_factory = 1
 		}

@@ -13,7 +13,7 @@ state={
 	history={
 		owner = TUB
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 		}
 		add_core_of = TUB
 		victory_points = {
