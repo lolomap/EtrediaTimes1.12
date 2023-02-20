@@ -2,20 +2,6 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-    if = {
-        limit = {
-            all_owned_state = {
-                has_railway_level = {
-                    state = THIS
-                    level = 1
-                }
-            }
-        }
-        log = "[OIK.GetTag]"
-    }
-    else= {
-        log = "[EIK.GetTag]"
-    }
 }
 
 ####
