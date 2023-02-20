@@ -27,6 +27,8 @@ equipments = {
 			rubber = 1
 			steel = 1
 		}
+        
+		supply_truck = yes
 	}
 
 	motorized_equipment_1 = {
