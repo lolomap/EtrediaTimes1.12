@@ -1,0 +1,21 @@
+state={
+	id=793
+	name="STATE_793"
+	manpower=55000
+	state_category=rural
+
+	history={
+		owner = DIR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = DIR
+		victory_points = {
+			11442 1 
+		}
+
+	}
+	provinces={
+		11442 11606 11607 11753 11809 11884 12000 12069 
+	}
+}

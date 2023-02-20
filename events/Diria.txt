@@ -67,7 +67,7 @@ country_event = {
 			transfer_state = 275
 			transfer_state = 276
 			transfer_state = 278
-			transfer_state = 826
+			transfer_state = 791
 		    add_state_core = 265
 			add_state_core = 267
 			add_state_core = 307
@@ -103,9 +103,15 @@ country_event = {
 			add_state_core = 287
 			add_state_core = 288
 			add_state_core = 786
-			add_state_core = 824
-			add_state_core = 825
-			add_state_core = 826
+			add_state_core = 789
+			add_state_core = 790
+			add_state_core = 791
+			add_state_core = 792
+			add_state_core = 793
+			add_state_core = 794
+			add_state_core = 795
+			add_state_core = 796
+			add_state_core = 797
             load_oob = DIR_democrat
             }
 	}
@@ -188,9 +194,15 @@ country_event = {
 			add_state_core = 287
 			add_state_core = 288
 			add_state_core = 786
-			add_state_core = 824
-			add_state_core = 825
-			add_state_core = 826
+			add_state_core = 789
+			add_state_core = 790
+			add_state_core = 791
+			add_state_core = 792
+			add_state_core = 793
+			add_state_core = 794
+			add_state_core = 795
+			add_state_core = 796
+			add_state_core = 797
             load_oob = DIR_democrat
         }
 	}
