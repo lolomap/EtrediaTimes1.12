@@ -117,14 +117,14 @@ etredia_ach_13 = {
 	}
 }
 
-etredia_ach_14 = {
-	possible = {
-		hidden_trigger = {is_ironman = no} custom_trigger_tooltip = {is_ironman = no tooltip = IRONMAN_ENABLED_TOOLTIP }
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = lego_ach}
-	}
-}
+#etredia_ach_14 = { Тяжелая оптимизационно ачивка
+#	possible = {
+#		hidden_trigger = {is_ironman = no} custom_trigger_tooltip = {is_ironman = no tooltip = IRONMAN_ENABLED_TOOLTIP }
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = lego_ach}
+#	}
+#}
 
 etredia_ach_15 = {
 	possible = {

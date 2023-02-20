@@ -1,4 +1,5 @@
 GKZ_moment = {
+    allowed = {original_tag = IID}
 	visible = {
 		always = yes
 	}

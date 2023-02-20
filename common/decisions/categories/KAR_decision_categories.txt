@@ -1,4 +1,5 @@
 KAR_dirian_civil_war = {
+    allowed = {original_tag = KAR}
 	visible = {
 		DEM = { has_war_with = DIR }
 	}

@@ -1,5 +1,6 @@
 FSC_subj_integration = {
 	icon = generic_democracy
+    allowed = {original_tag = FSC}
 	visible = {
 		always = yes
 	}
