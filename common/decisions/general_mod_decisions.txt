@@ -262,17 +262,8 @@ political_actions = {
 	left_pressure = {
 		available = {
 			has_government = democratic
-			custom_trigger_tooltip = {
-				tooltip = has_centrism_tooltip
-				OR = {
-					has_country_leader = {name = "Парламент"}
-					has_country_leader = {name = "Anatoly Zhmirinovan"}
-					has_country_leader = {name = "Sebastien Olorezio"}
-					has_country_leader = {name = "kim Tarnetilio"}
-					has_country_leader = {name = "Nurkbultan Memrekaev"}
-					has_country_leader = {name = "Espano Gildo"}
-				}
-			}
+			
+			has_country_leader_ideology = centrism
 		}
 		visible = {
 			has_government = democratic
@@ -299,21 +290,7 @@ political_actions = {
 	right_pressure = {
 		available = {
 			has_government = democratic
-			#any_character = {
-            #    is_country_leader = yes
-            #    has_ideology = centrism
-            #}
-            custom_trigger_tooltip = {
-				tooltip = has_centrism_tooltip
-				OR = {
-					has_country_leader = {name = "Парламент"}
-					has_country_leader = {name = "Anatoly Zhmirinovan"}
-					has_country_leader = {name = "Sebastien Olorezio"}
-					has_country_leader = {name = "kim Tarnetilio"}
-					has_country_leader = {name = "Nurkbultan Memrekaev"}
-					has_country_leader = {name = "Espano Gildo"}
-				}
-			}
+			has_country_leader_ideology = centrism
 		}
 		visible = {
 			has_government = democratic
