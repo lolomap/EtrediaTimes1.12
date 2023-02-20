@@ -1,6 +1,9 @@
 scripted_diplomatic_actions = {
 	embargo = {
 		visible = {
+            NOT = {
+                has_dlc = "By Blood Alone"
+            }
 			ROOT = {
 				not = {
 					is_in_array = {
@@ -35,7 +38,7 @@ scripted_diplomatic_actions = {
 				add_to_array = {embargoList = PREV}
 			}
 			THIS = {
-				#country_event = {id = onactev.2 days = 1}
+				country_event = {id = onactev.2 days = 1}
                 every_country = {
                     limit = {is_subject_of = FROM}
 
@@ -101,6 +104,9 @@ scripted_diplomatic_actions = {
 	}
 	end_embargo = {
 		visible = {
+            NOT = {
+                has_dlc = "By Blood Alone"
+            }
 			ROOT = {
 				is_in_array = {
 					array = embargoList
@@ -187,9 +193,17 @@ scripted_diplomatic_actions = {
                 
                 check_variable = {razn > 1.9}
             }
-            custom_trigger_tooltip = {
-                tooltip = has_any_embargo
-                ROOT = {check_variable = {embargolist^num > 0}}
+            if = {
+                limit = {NOT = {has_dlc = "By Blood Alone"}}
+                custom_trigger_tooltip = {
+                    tooltip = has_any_embargo
+                    ROOT = {check_variable = {embargolist^num > 0}}
+                }
+            }
+            else = {
+                any_other_country = {
+                    is_embargoed_by = ROOT
+                }
             }
 		}
 		show_acceptance_on_action_button = no

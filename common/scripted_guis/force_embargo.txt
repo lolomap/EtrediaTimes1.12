@@ -49,6 +49,11 @@ scripted_gui = {
 				entry_container = embargo_countries_entry
 				change_scope = yes
 			}
+            embargo_countries_gb_dlc = {
+				array = Root.embargoListDLC
+				entry_container = embargo_countries_entry
+				change_scope = yes
+			}
 		}
 
 		properties = {

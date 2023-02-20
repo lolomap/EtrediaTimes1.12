@@ -1137,6 +1137,16 @@ on_actions = {
 
 	on_weekly = {
 		effect = {
+            #Подсчет эмбарго
+            if = {
+                limit = {has_dlc = "By Blood Alone"}
+                clear_array = embargoListDLC
+                every_other_country = {
+                    limit = {is_embargoed_by = ROOT}
+                    add_to_array = {ROOT.embargoListDLC = THIS}
+                }
+            }
+
             #Уступить или возразить в кризисе
             if = {
                 limit = {

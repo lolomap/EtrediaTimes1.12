@@ -14,21 +14,25 @@ country_event = { # YOU ARE FORCED TO EMBARGO
 	option = {
 		name = mechanics.1.a
 
-		if = {
-			limit = {
-				is_major = yes
-			}
-			add_threat = 2
-		}
-		add_to_array = {embargoList = from_fembargo_country}
-		add_to_array = {forcedEmbargoList = from_fembargo_country}
-		var:from_fembargo_country = {
-			country_event = {id = onactev.2 days = 1}
-		}
+        if = {
+            limit = {
+                NOT = {has_dlc = "By Blood Alone"}
+            }
+            add_to_array = {embargoList = from_fembargo_country}
+            add_to_array = {forcedEmbargoList = from_fembargo_country}
+            var:from_fembargo_country = {
+                country_event = {id = onactev.2 days = 1}
+            }
 
-		FROM = {
-			country_event = {id = mechanics.3 days = 1}
-		}
+            
+        }
+        else = {
+            send_embargo = var:from_fembargo_country
+        }
+        FROM = {
+            country_event = {id = mechanics.3 days = 1}
+        }
+
 
 		#var:from_fembargo_country = {annex_country = {target = PREV}}
 		ai_chance = {

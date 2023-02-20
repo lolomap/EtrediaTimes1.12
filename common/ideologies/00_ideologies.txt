@@ -10,7 +10,6 @@ ideologies = {
 			}
 
 			centrism = {
-				can_be_randomly_selected = no
 			}
 
 			parlament_monarchism = {

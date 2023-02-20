@@ -1,20 +1,20 @@
 nuclear_war = {
 	icon = generic_crisis
 	allowed = {
-        has_game_rule = {
-            rule = allow_nuking
-            option = FREE
-        }
+        #has_game_rule = {
+        #    rule = allow_nuking
+        #    option = FREE
+        #}
     }
 	visible = {always = yes}
 }
 
 nuclear_construction = {
     allowed = {
-        has_game_rule = {
-            rule = allow_nuking
-            option = FREE
-        }
+        #has_game_rule = {
+        #    rule = allow_nuking
+        #    option = FREE
+        #}
     }
 	available = {nuclear_reactor > 0}
 	visible = {has_tech = nukes}
