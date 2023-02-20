@@ -3,4 +3,5 @@ UCB_subj_integration = {
 	visible = {
 		always = yes
 	}
+    allowed = {tag = UCB}
 }

@@ -105,7 +105,6 @@ foreign_support = {
                     limit = {is_capital = yes}
                     OWNER = {
                         is_in_faction_with = ROOT
-                        check_variable = {FROM.world_influence < ROOT.world_influence}
                     }
                 }
 			}
@@ -189,44 +188,6 @@ war_measures = {
 }
 
 foreign_influence = {
-    
-
-	close_guarantee ={
-		#available = {
-		#	not = {has_government = democratic}
-		#	not = {has_flag = cgevduring}
-		#}
-
-		#visible = {
-		#	not = {has_government = democratic}
-		#	not = {has_flag = cgevduring}
-		#}
-		available = {always = no} #В разработке
-		visible = {always = no}
-
-		target_trigger = {
-			any_country = {
-				ROOT = {is_justifying_wargoal_against = PREV}
-				is_guaranteed_by = FROM
-			}
-		}
-
-		cost = 150
-
-		complete_effect = {
-			set_country_flag = cgevduring
-			set_variable = {cgpartner = FROM}
-			random_country = {
-				limit = {
-					ROOT = {is_justifying_wargoal_against = PREV}
-					is_guaranteed_by = FROM
-				}
-				ROOT = {set_variable = {cgtarget@FROM = PREV}}
-			}
-
-			country_event = {id = wjmod.1 days = 1}
-		}
-	}
 
 	make_loyal = {
 		available = {
@@ -338,17 +299,7 @@ political_actions = {
 	right_pressure = {
 		available = {
 			has_government = democratic
-			custom_trigger_tooltip = {
-				tooltip = has_centrism_tooltip
-				OR = {
-					has_country_leader = {name = "Парламент"}
-					has_country_leader = {name = "Anatoly Zhmirinovan"}
-					has_country_leader = {name = "Sebastien Olorezio"}
-					has_country_leader = {name = "kim Tarnetilio"}
-					has_country_leader = {name = "Nurkbultan Memrekaev"}
-					has_country_leader = {name = "Espano Gildo"}
-				}
-			}
+			has_ideology = centrism
 		}
 		visible = {
 			has_government = democratic

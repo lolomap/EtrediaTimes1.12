@@ -1913,21 +1913,26 @@ on_actions = {
                         }
                     }
                 }
-                FROM = {create_faction = NIBBA_FRONT}
-                FROM = {set_country_flag = nibba}
-                hidden_effect = {
-                    every_other_country = {
-                        limit = {
-                            any_owned_state = {
-                                OR = {
-                                    is_on_continent = africa
-                                    is_on_continent = north_america
+                random_list = {
+                    85 = {
+                        FROM = {create_faction = NIBBA_FRONT}
+                        FROM = {set_country_flag = nibba}
+                        hidden_effect = {
+                            every_other_country = {
+                                limit = {
+                                    any_owned_state = {
+                                        OR = {
+                                            is_on_continent = africa
+                                            is_on_continent = north_america
+                                        }
+                                    }
                                 }
+                                set_country_flag = nibba
+                                FROM = {add_to_faction = PREV}
                             }
                         }
-                        set_country_flag = nibba
-                        FROM = {add_to_faction = PREV}
                     }
+                    15 = {}
                 }
             }
         }
