@@ -1,6 +1,8 @@
 trb_ally = {
+    allowed = {
+        tag = TRP
+    }
 	enable = {
-		tag = TRB
 		SBU = { has_completed_focus = SBU_terbia_compromiss }
 		country_exists = SBU
 	}
@@ -20,9 +22,43 @@ trb_ally = {
 	}
 }
 
+trb_nonally = {
+    allowed = {
+        tag = TRP
+    }
+    enable = {always = yes}
+	abort = {
+		SBU = { has_completed_focus = SBU_terbia_compromiss }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "SBU"			
+		value = -1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SBU"			
+		value = -1000
+	}
+    ai_strategy = {
+		type = befriend
+		id = "YAN"			
+		value = -1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = "YAN"			
+		value = -1000
+	}
+}
+
+
 trb_commi_make_divisions = {
+    allowed = {
+        tag = TRP
+    }
 	enable = {
-		tag = TRB
 		TRB = { has_government = communism }
 	}
 	abort = {

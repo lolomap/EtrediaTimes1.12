@@ -371,7 +371,7 @@ country_event = { # Генерал у власти
 
 	option = {
 		name = eik.15.a
-		retire_country_leader = yes
+		promote_character = EIK_jakili_nobarans
 		set_variable = {eik_army = 1}
 		set_variable = {eik_oligarchism = 0.2}
 		add_timed_idea  = {idea = EIK_oligarchismpartizan days = 720 }

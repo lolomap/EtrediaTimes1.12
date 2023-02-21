@@ -222,14 +222,14 @@ focus_tree = {
 
         bypass = {
             OR = {
-                has_country_leader = {name = "Anatoly Zhmirinovan"}
-                has_country_leader = {name = "Terine Narabel"}
+                has_country_leader = {character = UCB_anatoly_zhmirinovan ruling_only = yes}
+                has_country_leader = {character = UCB_terine_narabel ruling_only = yes}
             }
         }
 
 		completion_reward = {
 			UCB = {
-                retire_country_leader = yes
+                promote_character = UCB_anatoly_zhmirinovan
 				remove_ideas = UCB_polit_crisis
 				country_event = { id = ucnb.1 days = 1 }
 			}

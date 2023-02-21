@@ -215,8 +215,7 @@ country_event = {
 
 	option = {
 	name = ucb.3.b
-	retire_country_leader = yes
-    retire_country_leader = yes
+    promote_character = UCB_Parlament
 	hidden_effect = {
         #retire_country_leader = yes
 	    UCB = { country_event = { id = ucb.4 days = 1 } }
@@ -349,6 +348,7 @@ country_event = {
 		set_politics = {
 	        ruling_party = neutrality
         }
+        promote_character = {character = UCB_dmirin_randerko ideology = oligarchism}
 		hidden_effect = {
 			load_focus_tree = {	tree = UCB_bndrnk keep_completed = no }
 		}
@@ -374,9 +374,7 @@ country_event = {
             popularity = 0.05
         }
 		add_stability = 0.05
-		hidden_effect = {
-		retire_country_leader = yes
-		}
+		promote_character = UCB_oleje_prigat
 	}
 }
 
@@ -458,9 +456,8 @@ country_event = {
 
 	option = {
         name = ucb.21.b
-        retire_country_leader = yes
+        promote_character = UCB_Parlament
         hidden_effect = {
-            retire_country_leader = yes
             UCB = { country_event = { id = ucb.4 days = 1 } }
         }
 	    ai_chance = {
@@ -890,6 +887,10 @@ country_event = {
             }
         }
         UCB = {load_oob = UCB_parlament}
+        UCB = {UCB_terine_narabel = {set_nationality = NCU}}
+        NCU = {
+            promote_character = UCB_terine_narabel
+        }
         NCU = {
             transfer_state = 9
 			transfer_state = 29
@@ -938,6 +939,10 @@ country_event = {
 			declare_war_on = { target = GLE type = annex_everything }
 			declare_war_on = { target = KIM type = annex_everything }
 			add_ideas = UCB_raskol
+        }
+        UCB = {UCB_jimas_beldpo = {set_nationality = BDA}}
+        NCU = {
+            promote_character = UCB_jimas_beldpo
         }
 			BDA = {
 				transfer_state = 11

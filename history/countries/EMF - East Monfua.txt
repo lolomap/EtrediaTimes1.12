@@ -48,47 +48,4 @@ set_popularities = {
 }
 
 #
-create_country_leader = {
-	name = "Alexandra Rybka"
-	desc = "POLITICS_MOH_ZAHIR_SHAH_DESC"
-	picture = "Portrait_mof_democratic.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Terine Narabel"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_taganrog_ivan_ishenko.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Petro Pedroshenko"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_bydlo_yaroslav_obryg.dds"
-	expire = "1965.1.1"
-	ideology = oligarchism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ivan Vissarionovich"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_bydlo_yaroslav_obryga.dds"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		#
-	}
-}
 

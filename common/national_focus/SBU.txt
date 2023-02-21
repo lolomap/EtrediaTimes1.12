@@ -1096,7 +1096,7 @@ focus_tree = {
                     ruling_party = neutrality
                     elections_allowed = no
                 }
-                retire_country_leader = yes
+                promote_character = {character = SBU_dragan_kzhachich ideology = conservatism}
                 set_cosmetic_tag = SBU_democratic
             }
 		}
@@ -1228,11 +1228,7 @@ focus_tree = {
                 elections_allowed = yes
                 election_frequency = 72
             }
-			hidden_effect = {
-                retire_country_leader = yes
-                retire_country_leader = yes
-                retire_country_leader = yes
-            }
+			promote_character = SBU_alexech_aalankat
 		}
 	}
 
@@ -2504,7 +2500,11 @@ focus_tree = {
 				add_state_core = 180
 				add_state_core = 175
 				add_state_core = 176
-				load_oob = EMF_separatist
+                hidden_effect = {
+				    load_oob = EMF_separatist
+                    MOF = {MOF_alexandra_rybka = {set_nationality = EMF}}
+                }
+                promote_character = MOF_alexandra_rybka
 			}
 			SBU = {puppet = EMF}
             SFL = {

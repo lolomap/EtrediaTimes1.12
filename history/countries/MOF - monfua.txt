@@ -52,13 +52,12 @@ set_popularities = {
 
 #
 
-recruit_character = MOF_marcus_white
-
 recruit_character = MOF_ivan_vissarionovich
 
 recruit_character = MOF_petro_pedroshenko
 
-recruit_character = MOF_terine_narabel
 
 recruit_character = MOF_cassandra_caso
+
+recruit_character = MOF_alexandra_rybka
 

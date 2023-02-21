@@ -274,7 +274,7 @@ units = {
 	division = {
 		name = "Infantry Division"
 		location = 6692
-		division_template = "MInfantry Division"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.9
     }
@@ -282,7 +282,7 @@ units = {
 	division = {
 		name = "Infantry Division"
 		location = 6692
-		division_template = "MInfantry Division"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.9
     }
@@ -290,7 +290,7 @@ units = {
 	division = {
 		name = "Infantry Division"
 		location = 6692
-		division_template = "MInfantry Division"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.9
     }
@@ -298,7 +298,7 @@ units = {
 	division = {
 		name = "Infantry Division"
 		location = 6692
-		division_template = "MInfantry Division"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.9
     }
@@ -306,7 +306,7 @@ units = {
 	division = {
 		name = "Infantry Division"
 		location = 6692
-		division_template = "MInfantry Division"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.9
     }
@@ -314,7 +314,7 @@ units = {
 	division = {
 		name = "Infantry Division"
 		location = 6692
-		division_template = "MInfantry Division"
+		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.9
     }

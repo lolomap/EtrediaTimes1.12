@@ -642,9 +642,6 @@ country_event = {
                 limit = {has_government = democratic}
                 retire_country_leader = yes
             }
-            else = {
-                load_focus_tree = generic
-            }
             
         }
     }
