@@ -660,7 +660,13 @@ country_event = {
 			add_state_core = 287
 			add_state_core = 288
 			add_state_core = 786
-			add_state_core = 836
+			add_state_core = 791
+			add_state_core = 792
+			add_state_core = 793
+			add_state_core = 794
+			add_state_core = 795
+			add_state_core = 796
+			add_state_core = 797
 		}
 		}
 		DIB = {

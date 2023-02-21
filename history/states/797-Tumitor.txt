@@ -1,0 +1,27 @@
+state={
+	id=797
+	name="STATE_797"
+	manpower=100
+	state_category=rural
+	resources={
+		steel=54.000
+	}
+
+	history={
+		owner = DIR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = DIR
+		victory_points = {
+			12506 3 
+		}
+		victory_points = {
+			12212 1 
+		}
+
+	}
+	provinces={
+		11934 11935 11996 12067 12096 12112 12139 12195 12212 12273 12282 12309 12355 12371 12372 12373 12428 12464 12490 12506 12528 12538 12577 
+	}
+}

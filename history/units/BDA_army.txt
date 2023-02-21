@@ -1,7 +1,7 @@
 division_template = {
 	name = "Infantry Division"
 
-	division_names_group = BDA_inf_01
+	division_names_group = BDA_INF_01
 
 	regiments = {
 		mechanized = { x = 0 y = 0 }
@@ -25,7 +25,7 @@ division_template = {
 division_template = {
 	name = "Militia Brigade"
 
-	division_names_group = BDA_inf_02
+	division_names_group = BDA_INF_02
 
 	regiments = {
 		mechanized = { x = 0 y = 0 }
@@ -41,7 +41,7 @@ division_template = {
 division_template = {
 	name = "Main Tank-Division"
 
-	division_names_group = BDA_arm_01
+	division_names_group = BDA_ARM_01
 
 	regiments = {
 		motorized_rocket_brigade = { x = 0 y = 0 }
@@ -65,7 +65,7 @@ division_template = {
 division_template = {
 	name = "UCNB motorized"
 
-	division_names_group = BDA_arm_02
+	division_names_group = BDA_ARM_02
 
 	regiments = {
 		motorized = { x = 0 y = 0 }
@@ -84,7 +84,7 @@ division_template = {
 division_template = {
 	name = "Mot. Rifl. Brigade"
 
-	division_names_group = BDA_arm_03
+	division_names_group = BDA_ARM_03
 
 	regiments = {
 		mechanized = { x = 0 y = 0 }
@@ -103,7 +103,7 @@ division_template = {
 division_template = {
 	name = "Mech. Rocket Brigade"
 
-	division_names_group = BDA_arm_04
+	division_names_group = BDA_ARM_04
 
 	regiments = {
 		motorized_rocket_brigade = { x = 0 y = 0 }
@@ -123,7 +123,7 @@ division_template = {
 
 division_template = {
 	name = "MNT division"		
-	division_names_group = BDA_mnt_01
+	division_names_group = BDA_MNT_01
 
 	regiments = {
 		mountaineers = { x = 0 y = 0 }	
