@@ -1,6 +1,8 @@
 kar_protect_democratic_diria = {
-	enable = {
+    allowed = {
 		original_tag = KAR
+    }
+	enable = {
 		NOT = { KAR = { has_government = communism } }
 		NOT = { surrender_progress > 0.3 }
 	}
@@ -32,9 +34,9 @@ kar_protect_democratic_diria = {
 }
 
 KAR_template_design_1 = {
-	enable = {
-		original_tag = KAR			
-	}
+	allowed = {
+		original_tag = KAR
+    }
 	abort = { 
 		always = no
 	}
@@ -51,9 +53,9 @@ KAR_template_design_1 = {
 }
 
 KAR_template_design_2 = {
-	enable = {
-		original_tag = KAR			
-	}
+	allowed = {
+		original_tag = KAR
+    }
 	abort = { 
 		always = no
 	}
@@ -76,9 +78,9 @@ KAR_template_design_2 = {
 }
 
 UCB_world_war = {
-	enable = {
-		original_tag = KAR			
-	}
+	allowed = {
+		original_tag = KAR
+    }
 	abort = { 
 		is_historical_focus_on = no
 	}

@@ -1268,7 +1268,7 @@ country_event = {
 
     option = {
 	name = sbu.48.a
-	ai_chance = { factor = 30 }
+	ai_chance = { factor = 30 modifier = {is_historical_focus_on = yes factor = 0}}
 
 	SBU = {
 	    give_guarantee = SMA

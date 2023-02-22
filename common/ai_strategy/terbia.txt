@@ -1,6 +1,6 @@
 trb_ally = {
     allowed = {
-        tag = TRP
+        tag = TRB
     }
 	enable = {
 		SBU = { has_completed_focus = SBU_terbia_compromiss }
@@ -24,7 +24,7 @@ trb_ally = {
 
 trb_nonally = {
     allowed = {
-        tag = TRP
+        tag = TRB
     }
     enable = {always = yes}
 	abort = {
@@ -56,7 +56,7 @@ trb_nonally = {
 
 trb_commi_make_divisions = {
     allowed = {
-        tag = TRP
+        tag = TRB
     }
 	enable = {
 		TRB = { has_government = communism }

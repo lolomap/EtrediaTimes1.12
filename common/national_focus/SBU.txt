@@ -87,6 +87,7 @@ focus_tree = {
             SFL = {set_country_flag = tradewar}
             set_country_flag = tradewar
             set_country_flag = tradewar_starter
+            SFL = {country_event = {id = mechanics.39 days = 1}}
             SFL = {set_variable = {trade_war = 100}}
 		}
 

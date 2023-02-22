@@ -1,10 +1,7 @@
 	
 EIK_template_design_1 = {
-	enable = {
+	allowed = {
 		original_tag = EIK			
-	}
-	abort = { 
-		always = no
 	}
 	ai_strategy = {
 		type = template_prio
@@ -19,11 +16,8 @@ EIK_template_design_1 = {
 }
 
 EIK_template_design_2 = {
-	enable = {
+	allowed = {
 		original_tag = EIK			
-	}
-	abort = { 
-		always = no
 	}
 	ai_strategy = {
 		type = role_ratio

@@ -1,6 +1,8 @@
 DIR_war = {
-	enable = {
+    allowed = {
 		original_tag = DIR
+    }
+	enable = {
 		EIK = { has_war_with = KAS }
 	}
 
@@ -12,8 +14,10 @@ DIR_war = {
 }
 
 DIR_war_dem = {
-	enable = {
+    allowed = {
 		original_tag = DEM
+    }
+	enable = {
 		EIK = { has_war_with = KAS }
 	}
 
@@ -25,8 +29,10 @@ DIR_war_dem = {
 }
 
 DIR_dont_join_war = {
-	enable = {
+    allowed = {
 		original_tag = DEM
+    }
+	enable = {
 		UCB = { has_war_with = EIK }
 	}
 
@@ -56,7 +62,7 @@ DIR_dont_join_war = {
 }
 
 dem_world_war = {
-	enable = {
+	allowed = {
 		original_tag = DEM
 	}
 	abort = {
