@@ -4,7 +4,7 @@ scripted_gui = {
 		context_type = selected_state_context
 		parent_window_name = province_info_window
 
-		visible = {always = yes}
+		visible = {always = no}
 
 		dynamic_lists = {
 			province_buttons_gb = {

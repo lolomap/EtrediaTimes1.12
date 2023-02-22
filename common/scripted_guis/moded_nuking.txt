@@ -4,104 +4,25 @@ scripted_gui = {
 		context_type = selected_state_context
 		parent_window_name = province_info_window
 
-		visible = {always = yes}
-
-		triggers = {
-			nuke_province_moded_visible = {
-				not = {is_controlled_by = ROOT}
-				#always = no
-			}
-			nuke_province_moded_click_enabled = {
-                has_game_rule = {
-                    rule = allow_nuking
-                    option = FREE
-                }
-				owner = {
-					has_war_with = ROOT
-				}
-                ROOT = {
-                    OR = {
-                        is_in_faction = no
-                        is_faction_leader = yes
-                        has_country_flag = nuke_request_accepted
-                    }
-                    num_of_nukes > 0
-                    PREV = {
-                        owner = {
-                            check_variable = {num_of_nuke_anti < ROOT.num_of_nuke_rockets}
-                        }
-                    }
-                }
-			}
-		}
+		visible = {owner = {NOT = {tag = ROOT}}}
 
 		effects = {
-			nuke_province_moded_click = {
-				ROOT = {
-					if = {
-						limit = {
-							always = yes
-						}
-						if = {
-							limit = {
-                                #is_ai = yes
-                            }
-                            if = {
-                                limit = {
-                                    is_ai = no
-                                    check_variable = {selected_prov > 0}
-                                }
-                                launch_nuke = {
-                                    state = PREV
-                                    use_nuke = yes
-                                    province = selected_prov
-                                }
-                                set_variable = {selected_prov = 0}
-                            }
-                            else = {
-                                launch_nuke = {
-                                    state = PREV
-                                    use_nuke = yes
-                                }
-                            }
-						}
-						
-					}
-				}
-			}
-		}
-
-		ai_enabled = {
-			has_game_rule = {
-                rule = allow_nuking
-                option = FREE
+            nuke_province_moded_click = {
+                if = {limit = {has_state_flag = nuke_target_for_@ROOT}
+                    clr_state_flag = nuke_target_for_@ROOT
+                }
+                else = {
+                    set_state_flag = nuke_target_for_@ROOT
+                }
+                force_update_map_mode = {
+                    mapmode = nuking
+                }
             }
-		}
-        ai_check = {
-            OR = {
-                is_in_faction = no
-                is_faction_leader = yes
-                has_country_flag = nuke_request_accepted
-            }
-            num_of_nukes > 0
         }
-        ai_test_scopes = test_enemy_controlled_states
-
-		ai_weights = {
-			nuke_province_moded_click = {
-				ai_will_do = {
-					factor = 10000
-					modifier = {
-						factor = 0
-						OR = {
-							ROOT = {not = {has_country_flag = nuke_request_accepted}}
-							not = {owner = {has_war_with = ROOT}}
-							not = {owner = {ROOT = {has_war_with = PREV}}}
-						}
-						ROOT = {not = {has_country_flag = debug_nuke_mod}}
-					}
-				}
-			}
-		}
 	}
+    red_button = {
+        window_name = "red_button_window"
+        
+        visible = {always = yes}
+    }
 }
