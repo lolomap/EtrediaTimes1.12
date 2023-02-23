@@ -37,14 +37,20 @@ scripted_gui = {
                 }
             }
             launch_nukes_click = {
+            
+                set_temp_variable = {rockets_available = 0}
+                ROOT = {
+                    set_country_flag = {flag = nuke_cd days = 14 value = 1}
+                    every_owned_state = {
+                        add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
+                        add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
+                    }
+                }
                 every_state = {
                     limit = {has_state_flag = nuke_target_for_@ROOT}
 
                     if = {
                         limit = {OWNER = {tag = var:ROOT.nuke_country}}
-
-                        set_temp_variable = {rockets_available = 0}
-                        ROOT = {every_owned_state = {add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}}}
 
                         for_loop_effect = {
                             end = ROOT.nuke_per_state
@@ -110,6 +116,8 @@ scripted_gui = {
         }
 
         triggers = {
+            launch_nukes_click_enabled = {NOT = {has_country_flag = nuke_cd}}
+
             red_button_main_visible = {has_country_flag = nukemaximized}
             launch_nukes_visible = {has_country_flag = nukemaximized}
         }
