@@ -13,20 +13,6 @@ characters={
 			id=-1
 		}
 	}
-	MOF_terine_narabel={
-		name="Terine Narabel"
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_6"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 	MOF_petro_pedroshenko={
 		name="Petro Pedroshenko"
 		portraits={
@@ -69,4 +55,23 @@ characters={
 			id=-1
 		}
 	}
+    MOF_alexandra_rybka = {
+        name="Alexandra Rybka"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+                small="GFX_portrait_unknown"
+			}
+		}
+
+        advisor = {
+            slot = political_advisor
+            idea_token = alexandra_rybka
+            ledger = civilian
+        }
+		country_leader={
+			ideology=nazism
+			id=-1
+		}
+    }
 }

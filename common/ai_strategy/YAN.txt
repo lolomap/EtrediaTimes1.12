@@ -11,8 +11,10 @@
 # influence
 
 less_trucks_1_YAN = {
+    allowed = {
+		original_tag = YAN
+    }
 	enable = {
-		tag = YAN
 		date < 2014.1.1
 	}
 	abort = { 
@@ -75,7 +77,7 @@ less_trucks_1_YAN = {
 }
 
 less_naval_invasions_YAN = {
-	enable = {
+	allowed = {
 		tag = YAN
 	}
 	abort = {

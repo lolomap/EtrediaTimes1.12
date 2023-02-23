@@ -1,6 +1,8 @@
 sheregia_war_goal = {
+    allowed = {
+		original_tag = PIN
+    }
 	enable = {
-		tag = PIN
 		country_exists = SHE
 		SHE = {
 		subject = no
@@ -20,8 +22,10 @@ sheregia_war_goal = {
 }
 
 fillrussia_war_goal = {
+    allowed = {
+		original_tag = PIN
+    }
 	enable = {
-		tag = PIN
 		country_exists = FIL
 		FIL = {
 		subject = no
@@ -41,8 +45,10 @@ fillrussia_war_goal = {
 }
 
 sheregia_war1 = {
+    allowed = {
+		original_tag = PIN
+    }
     enable = {
-	    tag = PIN
 		country_exists = SHE
 		SHE = {
 		subject = no
@@ -62,8 +68,10 @@ sheregia_war1 = {
 }
 
 sheregia_war1 = {
+    allowed = {
+		original_tag = PIN
+    }
     enable = {
-	    tag = PIN
 		country_exists = SHE
 		SHE = {
 		subject = no
@@ -83,8 +91,10 @@ sheregia_war1 = {
 }
 
 eik_not_ally = {
+    allowed = {
+		original_tag = PIN
+    }
 	enable = {
-		tag = PIN
 		EIK = { has_completed_focus = EIK_ultimatum_to_sheregia }
 	}
 	abort = {

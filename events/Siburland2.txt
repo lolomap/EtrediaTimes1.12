@@ -1268,7 +1268,7 @@ country_event = {
 
     option = {
 	name = sbu.48.a
-	ai_chance = { factor = 30 }
+	ai_chance = { factor = 30 modifier = {is_historical_focus_on = yes factor = 0}}
 
 	SBU = {
 	    give_guarantee = SMA
@@ -1408,7 +1408,7 @@ news_event = {
 
 	immediate = {
 		hidden_effect = {
-			SBU = {retire_country_leader = yes}
+			SBU = {promote_character = SBU_iret_kolert}
 		}
 	}
 	option = {
@@ -1645,15 +1645,12 @@ country_event = {
 
 	option = {
 		name = sbu.64.a
-		custom_effect_tooltip = klyachek_choose
-		hidden_effect = {retire_country_leader = yes}
+		promote_character = SBU_charvik_klyachek
 	}
 	option = {
 		name = sbu.64.b
-		custom_effect_tooltip = alankat_choose
+        promote_character = SBU_alexech_aalankat
 		hidden_effect = {
-			retire_country_leader = yes
-			retire_country_leader = yes
 			set_party_name = {
 				ideology = democratic
 				long_name = SBU_democratic_party_ahagon_long

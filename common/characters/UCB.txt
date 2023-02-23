@@ -1,6 +1,6 @@
 characters={
 	UCB_oleje_prigat={
-		name="Oleje Prigat"
+		name="Oleje Prigejo"
 		portraits={
 			civilian={
 				large="gfx/leaders/UCB/portrait_ucb_oleg.dds"
@@ -123,6 +123,12 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			legacy_id=-1
+		}
+        country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 	UCB_silvano_albergo={

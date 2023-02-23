@@ -1,8 +1,10 @@
 
 
 alliance_rtt_ucb = {
+    allowed = {
+		original_tag = RTT
+    }
 	enable = {
-		tag = RTT
 		YAN = { has_war_with = TRB } 
 		country_exists = TRB
 	}

@@ -1,5 +1,5 @@
 SFL_neria = {
-	enable = {
+	allowed = {
 		original_tag = SFL
 	}
 	abort = {
@@ -19,7 +19,7 @@ SFL_neria = {
 }
 
 SFL_template_design_1 = {
-	enable = {
+	allowed = {
 		original_tag = SFL			
 	}
 	abort = { 
@@ -41,9 +41,6 @@ alliance_with_etredia1 = {
 	allowed = {
 		original_tag = SFL
 	}
-    enable = {
-        original_tag = SFL
-    }
 	abort = {
 		OR = {
 		SBU = { surrender_progress > 0.3 }
@@ -75,8 +72,10 @@ alliance_with_etredia1 = {
 }
 
 sfl_world_war = {
-	enable = {
+    allowed = {
 		original_tag = SFL
+    }
+	enable = {
 		SFL = { has_government = democratic }
 	}
 	abort = {

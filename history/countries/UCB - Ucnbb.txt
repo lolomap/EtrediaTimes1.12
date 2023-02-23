@@ -94,10 +94,6 @@ set_popularities = {
 
 set_convoys = 600
 
-
-
-recruit_character = UCB_anot_zarchih
-
 recruit_character = UCB_silvano_albergo
 
 recruit_character = UCB_jimas_beldpo

@@ -4,104 +4,128 @@ scripted_gui = {
 		context_type = selected_state_context
 		parent_window_name = province_info_window
 
-		visible = {always = yes}
+		visible = {owner = {NOT = {tag = ROOT}}}
 
-		triggers = {
-			nuke_province_moded_visible = {
-				not = {is_controlled_by = ROOT}
-				#always = no
-			}
-			nuke_province_moded_click_enabled = {
-                has_game_rule = {
-                    rule = allow_nuking
-                    option = FREE
+		effects = {
+            nuke_province_moded_click = {
+                if = {limit = {has_state_flag = nuke_target_for_@ROOT}
+                    clr_state_flag = nuke_target_for_@ROOT
                 }
-				owner = {
-					has_war_with = ROOT
-				}
+                else = {
+                    set_state_flag = nuke_target_for_@ROOT
+                }
+                force_update_map_mode = {
+                    mapmode = nuking
+                }
+            }
+        }
+	}
+    red_button = {
+        window_name = "red_button_window"
+        
+        visible = {always = yes}
+
+        effects = {
+            maximize_btn_click = {
+                if = {limit = {has_country_flag = nukemaximized}
+                    clr_country_flag = nukemaximized
+                    set_variable = {red_button_hook_x = 0}
+                }
+                else = {
+                    set_country_flag = nukemaximized
+                    set_variable = {red_button_hook_x = -300}
+                }
+            }
+            launch_nukes_click = {
+            
+                set_temp_variable = {rockets_available = 0}
                 ROOT = {
-                    OR = {
-                        is_in_faction = no
-                        is_faction_leader = yes
-                        has_country_flag = nuke_request_accepted
+                    set_country_flag = {flag = nuke_cd days = 14 value = 1}
+                    every_owned_state = {
+                        add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
+                        add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
                     }
-                    num_of_nukes > 0
-                    PREV = {
-                        owner = {
-                            check_variable = {num_of_nuke_anti < ROOT.num_of_nuke_rockets}
+                }
+                every_state = {
+                    limit = {has_state_flag = nuke_target_for_@ROOT}
+
+                    if = {
+                        limit = {OWNER = {tag = var:ROOT.nuke_country}}
+
+                        for_loop_effect = {
+                            end = ROOT.nuke_per_state
+                            if = {
+                                limit = {check_variable = {rockets_available > 0}}
+                                if = {
+                                    limit = {anti_nuclear_building < 1}
+                                    ROOT = {
+                                        launch_nuke = {
+                                            controller = var:ROOT.nuke_country
+                                            state = PREV
+                                            use_nuke = yes
+                                        }
+                                        add_to_temp_variable = {nukes_reached = 1}
+                                    }
+                                }
+                                else = {
+                                    random_list = {
+                                        70 = {ROOT = {add_nuclear_bombs = -1}}
+                                        30 = {
+                                            ROOT = {
+                                                launch_nuke = {
+                                                    controller = var:ROOT.nuke_country
+                                                    state = PREV
+                                                    use_nuke = yes
+                                                }
+                                                add_to_temp_variable = {nukes_reached = 1}
+                                            }
+                                        }
+                                    }
+                                }
+                                add_to_temp_variable = {rockets_available = -1}
+                            }
+                        }
+                        
+                        divide_temp_variable = {nukes_reached = 2}
+                        subtract_from_temp_variable = {nukes_reached = 0.5}
+
+                        if = {
+                            limit = {check_variable = {nukes_reached > 0}}
+                            set_temp_variable = {nnbr = 1}
+                            set_variable_to_random = {var = ROOT.nuke_building min = 1 max = 16 integer = yes}
+                        }
+
+                        meta_effect = {
+                            text = {
+                                remove_building = {
+                                    type = [BTYPE]
+                                    level = nukes_reached
+                                }
+                            }
+                            BTYPE = "[building_id_sl]"
+                        }
+
+                        if = {
+                            limit = {check_variable = {nnbr > 0}}
+                            set_temp_variable = {nnbr = 0}
+                            set_variable = {ROOT.nuke_building = 0}
                         }
                     }
                 }
-			}
-		}
-
-		effects = {
-			nuke_province_moded_click = {
-				ROOT = {
-					if = {
-						limit = {
-							always = yes
-						}
-						if = {
-							limit = {
-                                #is_ai = yes
-                            }
-                            if = {
-                                limit = {
-                                    is_ai = no
-                                    check_variable = {selected_prov > 0}
-                                }
-                                launch_nuke = {
-                                    state = PREV
-                                    use_nuke = yes
-                                    province = selected_prov
-                                }
-                                set_variable = {selected_prov = 0}
-                            }
-                            else = {
-                                launch_nuke = {
-                                    state = PREV
-                                    use_nuke = yes
-                                }
-                            }
-						}
-						
-					}
-				}
-			}
-		}
-
-		ai_enabled = {
-			has_game_rule = {
-                rule = allow_nuking
-                option = FREE
             }
-		}
-        ai_check = {
-            OR = {
-                is_in_faction = no
-                is_faction_leader = yes
-                has_country_flag = nuke_request_accepted
-            }
-            num_of_nukes > 0
         }
-        ai_test_scopes = test_enemy_controlled_states
 
-		ai_weights = {
-			nuke_province_moded_click = {
-				ai_will_do = {
-					factor = 10000
-					modifier = {
-						factor = 0
-						OR = {
-							ROOT = {not = {has_country_flag = nuke_request_accepted}}
-							not = {owner = {has_war_with = ROOT}}
-							not = {owner = {ROOT = {has_war_with = PREV}}}
-						}
-						ROOT = {not = {has_country_flag = debug_nuke_mod}}
-					}
-				}
+        triggers = {
+            launch_nukes_click_enabled = {NOT = {has_country_flag = nuke_cd}}
+
+            red_button_main_visible = {has_country_flag = nukemaximized}
+            launch_nukes_visible = {has_country_flag = nukemaximized}
+        }
+
+        properties = {
+			maximize_btn = {
+				x = red_button_hook_x
 			}
 		}
-	}
+    }
 }

@@ -110,14 +110,14 @@ guiTypes = {
 		iconType ={
 			name ="world_influence_value_bg"
 			spriteType = "GFX_generic_box_smallest"
-			position = { x=1080 y=5 }
+			position = { x=1090 y=5 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		buttonType = {
 			name ="world_influence_button"
 			spriteType = "GFX_world_influence_icon"
-			position = { x=1085 y =5 }
+			position = { x=1095 y =5 }
             pdx_tooltip = world_influence_desc
 			pdx_tooltip_delayed = world_influence_delayed
 			Orientation = "UPPER_LEFT"
@@ -125,7 +125,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name ="world_influence_value"
-			position = { x=1101 y =9}
+			position = { x=1111 y =9}
 			font = "hoi_18mbs"
 			text = world_influence_value
 			pdx_tooltip = world_influence_desc
@@ -139,20 +139,20 @@ guiTypes = {
 		iconType ={
 			name ="war_tire_value_bg"
 			spriteType = "GFX_generic_box_smallest"
-			position = { x=1152 y=5 }
+			position = { x=1162 y=5 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 		iconType = {
 			name ="war_tire_icon"
 			spriteType = "GFX_war_tire_icon"
-			position = { x=1157 y =5 }
+			position = { x=1167 y =5 }
 			Orientation = "UPPER_LEFT"
 		}		
 		
 		instantTextBoxType = {
 			name ="war_tire_value"
-			position = { x=1176 y =9}
+			position = { x=1186 y =9}
 			font = "hoi_18mbs"
 			text = war_tire_value
 			pdx_tooltip = war_tire_desc

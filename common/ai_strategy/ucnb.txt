@@ -1,5 +1,5 @@
 UCB_annex_minors = {
-	enable = {
+	allowed = {
 		original_tag = UCB
 	}
 
@@ -66,8 +66,10 @@ UCB_annex_minors = {
 }
 
 ucb_protect_democratic_sheregia = {
-	enable = {
+	allowed = {
 		original_tag = UCB
+    }
+    enable = {
 		UCB = { has_government = democratic }
 	}
 	abort = {
@@ -97,8 +99,10 @@ ucb_protect_democratic_sheregia = {
 }
 
 ucb_protect_democratic_diria = {
-	enable = {
+    allowed = {
 		original_tag = UCB
+    }
+	enable = {
 		NOT = { UCB = { has_government = fascism } }
 		NOT = { surrender_progress > 0.3 }
 		date > 2017.1.1
@@ -126,8 +130,10 @@ ucb_protect_democratic_diria = {
 }
 
 ucb_dem_alliance = {
-	enable = {
+    allowed = {
 		original_tag = UCB
+    }
+	enable = {
 		EIK = { has_completed_focus = EIK_war_with_kaspa }
 	}
 	abort = {
@@ -141,9 +147,9 @@ ucb_dem_alliance = {
 }
 
 UCB_template_design_1 = {
-	enable = {
-		original_tag = UCB			
-	}
+	allowed = {
+		original_tag = UCB
+    }
 	abort = { 
 		always = no
 	}
@@ -160,9 +166,9 @@ UCB_template_design_1 = {
 }
 
 UCB_template_design_2 = {
-	enable = {
-		original_tag = UCB			
-	}
+	allowed = {
+		original_tag = UCB
+    }
 	abort = { 
 		always = no
 	}
@@ -179,9 +185,9 @@ UCB_template_design_2 = {
 }
 
 UCB_world_war = {
-	enable = {
-		original_tag = UCB			
-	}
+	allowed = {
+		original_tag = UCB
+    }
 	abort = { 
 		is_historical_focus_on = no
 	}

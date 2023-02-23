@@ -26,6 +26,10 @@ on_actions = {
 				set_variable = {uranium_cost = 2}
 				set_variable = {winfluence_cost = 1}
 
+                set_variable = {nuke_country = UCB}
+                set_variable = {nuke_per_state = 1}
+                set_variable = {nuke_building = 0}
+
                 if = {
                     limit = {has_idea = fractionism}
                     set_variable = {change_pf_cost = 30}
@@ -600,22 +604,6 @@ on_actions = {
                 d_calc_wi_e = yes
             }
 
-            # Подсчет ШПУ и ПРО
-            #set_variable = {num_of_nuke_anti = 0}
-            #every_owned_state = {
-            #    owner = {add_to_variable = {num_of_nuke_anti = PREV.building_level@anti_nuclear_building}}
-            #}
-            #every_owned_state = {
-            #    set_variable = {num_of_nuke_anti = ROOT.num_of_nuke_anti}
-            #}
-            #set_variable = {num_of_nuke_rockets = 0}
-            #every_owned_state = {
-            #    owner = {add_to_variable = {num_of_nuke_rockets = PREV.building_level@nuclear_rocket_site}}
-            #}
-            #every_owned_state = {
-            #    set_variable = {num_of_nuke_rockets = ROOT.num_of_nuke_rockets}
-            #}
-
             #Замена стабильности
             if = {
                 limit = { has_stability > 0.83 }
@@ -1050,85 +1038,6 @@ on_actions = {
                     }
                     clr_country_flag = tradewar
                     SBU = {clr_country_flag = tradewar}
-                }
-            }
-        }
-    }
-
-    on_daily_SFL = {
-        effect = {
-            if = {
-                limit = {has_country_flag = tradewar}
-                SBU = {set_variable = {winfluence_cost = 1}}
-                SFL = {set_variable = {winfluence_cost = 1}}
-
-                SBU = {remove_ideas = {SFL_tradewar_b20 SFL_tradewar_b40 SFL_tradewar_b70 SFL_tradewar_g20 SFL_tradewar_g40 SFL_tradewar_g70}}
-                SFL = {remove_ideas = {SFL_tradewar_b20 SFL_tradewar_b40 SFL_tradewar_b70 SFL_tradewar_g20 SFL_tradewar_g40 SFL_tradewar_g70}}
-
-                set_temp_variable = {tdif = 100}
-                subtract_from_temp_variable = {tdif = SFL.trade_war}
-                SFL = {set_variable = {trade_reverse = tdif}}
-                subtract_from_temp_variable = {tdif = SBU.trade_war}
-                if = {
-                    limit = {check_variable = {tdif > 69}}
-                    SFL = {
-                        add_ideas = SFL_tradewar_g70
-                    }
-                    SBU = {
-                        add_ideas = SFL_tradewar_b70
-                    }
-                }
-                else_if = {
-                    limit = {check_variable = {tdif > 39}}
-                    SFL = {
-                        add_ideas = SFL_tradewar_g40
-                    }
-                    SBU = {
-                        add_ideas = SFL_tradewar_b40
-                    }
-                }
-                else_if = {
-                    limit = {check_variable = {tdif > 19}}
-                    SFL = {
-                        add_ideas = SFL_tradewar_g20
-                    }
-                    SBU = {
-                        add_ideas = SFL_tradewar_b20
-                    }
-                }
-                else = {
-
-                    set_temp_variable = {tdif = SBU.trade_war}
-                    subtract_from_temp_variable = {tdif = SFL.trade_war}
-                    add_to_temp_variable = {tdif = 100}
-                    if = {
-                        limit = {check_variable = {tdif > 69}}
-                        SBU = {
-                            add_ideas = SFL_tradewar_g70
-                        }
-                        SFL = {
-                            add_ideas = SFL_tradewar_b70
-                        }
-                    }
-                    else_if = {
-                        limit = {check_variable = {tdif > 39}}
-                        SBU = {
-                            add_ideas = SFL_tradewar_g40
-                        }
-                        SFL = {
-                            add_ideas = SFL_tradewar_b40
-                        }
-                    }
-                    else_if = {
-                        limit = {check_variable = {tdif > 19}}
-                        SBU = {
-                            add_ideas = SFL_tradewar_g20
-                        }
-                        SFL = {
-                            add_ideas = SFL_tradewar_b20
-                        }
-                    }
-
                 }
             }
         }

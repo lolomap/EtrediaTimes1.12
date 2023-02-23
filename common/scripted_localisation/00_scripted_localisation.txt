@@ -4,6 +4,58 @@ defined_text = {
 }
 
 defined_text = {
+    name = building_id_sl
+    text = { trigger = {check_variable = {ROOT.nuke_building = 16}}
+        localization_key = "nuclear_rocket_site"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 15}}
+        localization_key = "nuclear_reactor"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 14}}
+        localization_key = "rocket_site"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 13}}
+        localization_key = "radar_station"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 12}}
+        localization_key = "fuel_silo"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 11}}
+        localization_key = "synthetic_refinery"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 10}}
+        localization_key = "anti_air_building"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 9}}
+        localization_key = "dockyard"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 8}}
+        localization_key = "bunker"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 7}}
+        localization_key = "naval_base"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 6}}
+        localization_key = "rail_way"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 5}}
+        localization_key = "supply_node"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 4}}
+        localization_key = "air_base"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 3}}
+        localization_key = "infrastructure"
+    }
+    text = { trigger = {check_variable = {ROOT.nuke_building = 2}}
+        localization_key = "arms_factory"
+    }
+    text = {
+        localization_key = "industrial_complex"
+    }
+}
+
+defined_text = {
     name = tradestatus_sl
     text = {
         trigger = {

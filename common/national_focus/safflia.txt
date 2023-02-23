@@ -384,6 +384,7 @@ focus_tree = {
             }
             SBU = {set_country_flag = tradewar}
             set_country_flag = tradewar
+            hidden_effect = {country_event = {id = mechanics.39 days = 1}}
             set_variable = {trade_war = 100}
 		}
 		x = 26

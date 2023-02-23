@@ -1,4 +1,31 @@
 guiTypes = {
+    containerWindowType = {
+		name = "red_button_window"
+		position = {x=-24 y=50%%}
+		orientation = upper_right
+		size = { width=436 height=496 }
+
+		buttonType = {
+			name = "maximize_btn"
+			quadTextureSprite ="GFX_minimap_handle_pinged"
+			position = { x = 0 y = 0 }
+		}
+
+        iconType = {
+            name = "red_button_main"
+            position = { x=-280 y=0 }
+            #size = {width = 650 height = 600}
+
+            quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
+        }
+
+        buttonType = {
+			name = "launch_nukes"
+			quadTextureSprite ="GFX_nuke_button"
+			position = { x = -250 y = 0 }
+		}
+    }
+
 	containerWindowType = {
 		name = "nuking_replace_window"
 		position = {x=0 y=0}
@@ -8,7 +35,6 @@ guiTypes = {
 		buttonType = {
 			name = "nuke_province_moded"
 			quadTextureSprite ="GFX_nuke_button"
-			pdx_tooltip = nuke_province_desc
 			position = { x= 13 y = 280 }
 		}
 		

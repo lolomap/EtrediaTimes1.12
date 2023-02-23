@@ -1,6 +1,8 @@
-trb_ally = {
+sbu_trb_ally = {
+    allowed = {
+		original_tag = SBU
+    }
 	enable = {
-		tag = SBU
 		has_completed_focus = SBU_terbia_compromiss
 		country_exists = TRB
 	}
@@ -21,7 +23,7 @@ trb_ally = {
 }
 
 SBU_template_design_1 = {
-	enable = {
+	allowed = {
 		original_tag = SBU			
 	}
 	abort = { 
@@ -40,7 +42,7 @@ SBU_template_design_1 = {
 }
 
 SBU_template_design_2 = {
-	enable = {
+	allowed = {
 		original_tag = SBU			
 	}
 	abort = { 
