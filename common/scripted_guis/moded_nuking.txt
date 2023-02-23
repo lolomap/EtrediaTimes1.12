@@ -46,6 +46,9 @@ scripted_gui = {
                         add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
                     }
                 }
+                var:ROOT.nuke_country = {
+                    country_event = {id = onactev.11 hours = 1}
+                }
                 every_state = {
                     limit = {has_state_flag = nuke_target_for_@ROOT}
 
