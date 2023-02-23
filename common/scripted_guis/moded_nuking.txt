@@ -24,5 +24,100 @@ scripted_gui = {
         window_name = "red_button_window"
         
         visible = {always = yes}
+
+        effects = {
+            maximize_btn_click = {
+                if = {limit = {has_country_flag = nukemaximized}
+                    clr_country_flag = nukemaximized
+                    set_variable = {red_button_hook_x = 0}
+                }
+                else = {
+                    set_country_flag = nukemaximized
+                    set_variable = {red_button_hook_x = -300}
+                }
+            }
+            launch_nukes_click = {
+                every_state = {
+                    limit = {has_state_flag = nuke_target_for_@ROOT}
+
+                    if = {
+                        limit = {OWNER = {tag = var:ROOT.nuke_country}}
+
+                        set_temp_variable = {rockets_available = 0}
+                        ROOT = {every_owned_state = {add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}}}
+
+                        for_loop_effect = {
+                            end = ROOT.nuke_per_state
+                            if = {
+                                limit = {check_variable = {rockets_available > 0}}
+                                if = {
+                                    limit = {anti_nuclear_building < 1}
+                                    ROOT = {
+                                        launch_nuke = {
+                                            controller = var:ROOT.nuke_country
+                                            state = PREV
+                                            use_nuke = yes
+                                        }
+                                        add_to_temp_variable = {nukes_reached = 1}
+                                    }
+                                }
+                                else = {
+                                    random_list = {
+                                        70 = {ROOT = {add_nuclear_bombs = -1}}
+                                        30 = {
+                                            ROOT = {
+                                                launch_nuke = {
+                                                    controller = var:ROOT.nuke_country
+                                                    state = PREV
+                                                    use_nuke = yes
+                                                }
+                                                add_to_temp_variable = {nukes_reached = 1}
+                                            }
+                                        }
+                                    }
+                                }
+                                add_to_temp_variable = {rockets_available = -1}
+                            }
+                        }
+                        
+                        divide_temp_variable = {nukes_reached = 2}
+                        subtract_from_temp_variable = {nukes_reached = 0.5}
+
+                        if = {
+                            limit = {check_variable = {nukes_reached > 0}}
+                            set_temp_variable = {nnbr = 1}
+                            set_variable_to_random = {var = ROOT.nuke_building min = 1 max = 16 integer = yes}
+                        }
+
+                        meta_effect = {
+                            text = {
+                                remove_building = {
+                                    type = [BTYPE]
+                                    level = nukes_reached
+                                }
+                            }
+                            BTYPE = "[building_id_sl]"
+                        }
+
+                        if = {
+                            limit = {check_variable = {nnbr > 0}}
+                            set_temp_variable = {nnbr = 0}
+                            set_variable = {ROOT.nuke_building = 0}
+                        }
+                    }
+                }
+            }
+        }
+
+        triggers = {
+            red_button_main_visible = {has_country_flag = nukemaximized}
+            launch_nukes_visible = {has_country_flag = nukemaximized}
+        }
+
+        properties = {
+			maximize_btn = {
+				x = red_button_hook_x
+			}
+		}
     }
 }

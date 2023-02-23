@@ -223,7 +223,7 @@ buildings = {
 
 	nuclear_rocket_site = {
 		show_on_map = 1
-		base_cost = 6400
+		base_cost = 4400
 		icon_frame = 12
 		max_level = 1
 		shares_slots = yes
@@ -233,7 +233,7 @@ buildings = {
 
 	anti_nuclear_building = {
 		show_on_map = 3
-		base_cost = 4000
+		base_cost = 3000
 		icon_frame = 9
 		max_level = 1
 		value = 1
