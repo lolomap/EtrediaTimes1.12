@@ -1872,6 +1872,27 @@ country_event = {
 }
 
 country_event = {
+    id = onactev.12
+    title = onactev.12.t
+    desc = onactev.12.d
+
+
+    is_triggered_only = yes
+
+    option = {
+        name = onactev.12.a
+        declare_war_on = {
+            target = FROM
+            type = puppet_wargoal_focus
+        }
+        set_country_flag = ai_want_nuke_@FROM
+    }
+    option = {
+        name = onactev.12.b
+    }
+}
+
+country_event = {
 	id = randev.11
 	title = randev.11.t
 	desc = randev.11.d
