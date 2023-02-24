@@ -16,12 +16,12 @@ peace_ai_desires = {
         peace_action_type = { puppet }
 
         enable = {
-            if = {
-                limit = { has_government = democratic }
-            }
-            else = {
-                always = no
-            }
+			ROOT = {
+				has_government = democratic
+			}
+        }
+        else = {
+            always = no
         }
         ai_desire = 50
     }
@@ -401,7 +401,7 @@ peace_ai_desires = {
                 always = no
             }
         }
-        ai_desire = -50
+        ai_desire = -200
     }
 
 
@@ -776,37 +776,6 @@ peace_ai_desires = {
             }
         }
         ai_desire = 70 #Acceptable values
-    }
-
-    allies_dont_liberate_on_sov = {
-        peace_action_type = { liberate puppet }
-        enable = {
-            ROOT = {
-                OR = {
-                    has_government = democratic
-                    has_government = neutrality
-                }
-            }
-            ROOT.FROM.FROM = {
-                tag = SOV
-                is_major = yes
-            }
-        }
-        ai_desire = -50
-    }
-
-    allies_force_gov_on_sov = {
-        peace_action_type = force_government
-        enable = {
-            ROOT = {
-                has_government = democratic
-            }
-            ROOT.FROM.FROM = {
-                tag = SOV
-                is_major = yes
-            }
-        }
-        ai_desire = 30
     }
 
     civil_war_participants_dont_accept_each_other = {
