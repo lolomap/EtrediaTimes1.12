@@ -158,6 +158,12 @@ equipments = {
 			plane_engine_upgrade
 			plane_reliability_upgrade
 		}
+        allow_mission_type = {
+            training
+			cas
+			attack_logistics
+			naval_bomber
+		}
 
 		air_superiority = 1
 		reliability = 0.8
@@ -201,6 +207,11 @@ equipments = {
 			plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
+		}
+        allow_mission_type = {
+            training
+			port_strike
+            naval_bomber
 		}
 
 		air_superiority = 1
@@ -286,6 +297,7 @@ equipments = {
 			plane_engine_upgrade
 			plane_reliability_upgrade
 		}
+		allow_mission_type = {training air_superiority interception}
 
 		air_superiority = 1
 		reliability = 0.9
