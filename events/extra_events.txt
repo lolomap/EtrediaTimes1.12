@@ -1859,6 +1859,19 @@ country_event = {
 
 
 country_event = {
+    id = onactev.11
+    title = onactev.11.t
+    desc = onactev.11.d
+
+
+    is_triggered_only = yes
+
+    option = {
+        name = onactev.11.a
+    }
+}
+
+country_event = {
 	id = randev.11
 	title = randev.11.t
 	desc = randev.11.d

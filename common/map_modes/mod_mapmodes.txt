@@ -1,0 +1,117 @@
+scripted_map_modes = {
+    nuking = {
+        bottom = {
+            type = state
+
+            color = {
+                if = {
+                    limit = {FROM = {has_state_flag = nuke_target_for_@PREV}}
+
+                    set_temp_variable = { red = 255.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                    
+                    
+                    # if set border will pulsate
+                    set_temp_variable = { highlighted = 1.0 }
+                }
+                else = {
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                    
+                    
+                    # if set border will pulsate
+                    set_temp_variable = { highlighted = 0.0 }
+                }
+ 		    }
+        }
+        update_daily = no
+    }
+
+    influence_map = {
+        bottom = {
+            type = country
+
+            color = {
+                set_temp_variable = {wi = FROM.world_influence}
+                divide_temp_variable = {wi = 5}
+                set_temp_variable = {rest = 1}
+                subtract_from_temp_variable = {rest = wi}
+  
+                if = {
+                    limit = {check_variable = {FROM.world_influence > 15}}
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 1.0 }
+                    set_temp_variable = { green = 0.0 }
+                    set_temp_variable = { alpha = 1.0 }    
+                }
+                else = {
+                    set_temp_variable = { red = rest }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = wi }
+                    set_temp_variable = { alpha = 1.0 }  
+                }
+ 		    }
+        }
+        update_daily = no
+    }
+
+    corruption_map = {
+        bottom = {
+            type = country
+
+            color = {
+                if = {
+                    limit = {FROM = {has_idea = sixth_corruption_level}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = fifth_corruption_level}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.6 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = fourth_corruption_level}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.8 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = third_corruption_level}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = second_corruption_level}}
+
+                    set_temp_variable = { red = 0.8 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else = {
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+ 		    }
+        }
+        update_daily = no
+    }
+}

@@ -1,6 +1,7 @@
 name="EtrediaTimes1.12"
 replace_path="history/countries"
 replace_path="history/states"
+replace_path="history/generic"
 replace_path="history/units"
 replace_path="common/countries"
 replace_path="common/country_tags"
@@ -53,4 +54,4 @@ tags={
 	"Utilities"
 }
 supported_version="1.12.*"
-path="mod/EtrediaTimes1.12"
+path="C:/Users/lolom/Documents/Paradox Interactive/Hearts of Iron IV/mod/EtrediaTimes1.12"

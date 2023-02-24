@@ -1009,6 +1009,13 @@ on_actions = {
                     }
                 }
             }
+
+            #Обновление карт
+            if = {
+                limit = {is_ai = no}
+                force_update_map_mode = {mapmode = influence_map}
+                force_update_map_mode = {mapmode = corruption_map}
+            }
             
             #Ачивки
             if = {
