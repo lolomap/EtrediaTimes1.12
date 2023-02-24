@@ -46,10 +46,10 @@ ideologies = {
 		
 		modifiers = {
 			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.3
+			join_faction_tension = 0.4
 			lend_lease_tension = 0.2
 			send_volunteers_tension = 0.1
-			guarantee_tension = 0.05
+			guarantee_tension = 0.1
 			annex_cost_factor = 0.05
 			annex_cost_factor = 0.25
 			puppet_cost_factor = -0.3
@@ -57,6 +57,8 @@ ideologies = {
 			army_intel_to_others = 5.0
 			navy_intel_to_others = 20.0
 			airforce_intel_to_others = 5
+			embargo_cost_factor = -0.25
+			embargo_threshold_factor = -0.25
 		}
 		
 		faction_modifiers = {
