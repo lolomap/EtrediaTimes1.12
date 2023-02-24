@@ -15,15 +15,31 @@ peace_ai_desires = {
 	DO_PUPPET_SUKA = {
         peace_action_type = { puppet }
 
-        enable = {
-			ROOT = {
-				has_government = democratic
-			}
-        }
+		enable = {
+            if = {
+                limit = { has_government = democratic }
+                ROOT.FROM.FROM = { pc_is_forced_government_to = democratic }
+            }
+		}
         else = {
             always = no
         }
-        ai_desire = 50
+        ai_desire = 25
+    }
+	
+	DONT_PUPPET_KOUL = {
+        peace_action_type = { puppet }
+
+		enable = {
+            if = {
+                limit = { has_government = fascism }
+                ROOT.FROM.FROM = { pc_is_forced_government_to = fascism }
+            }
+		}
+        else = {
+            always = no
+        }
+        ai_desire = -25
     }
 
     generic_influence_cutoff = { #Only do force gov and liberate outside influence range
@@ -495,6 +511,22 @@ peace_ai_desires = {
         ai_desire = 50
     }
 
+    dont_take_land_if_sov_government_is_forced = {
+        peace_action_type = { take_states puppet }
+        enable = {
+            ROOT = { has_government = democratic }
+            ROOT.FROM.FROM = {
+                original_tag = SOV
+                pc_is_forced_government = yes
+            }
+            ROOT.FROM.FROM.FROM = {
+                NOT = { is_claimed_by = ROOT.FROM }
+            }
+        }
+
+        ai_desire = -50
+    }
+
 
     liberate_if_already_exists = {
         peace_action_type = liberate
@@ -778,6 +810,37 @@ peace_ai_desires = {
         ai_desire = 70 #Acceptable values
     }
 
+    allies_dont_liberate_on_sov = {
+        peace_action_type = { liberate puppet }
+        enable = {
+            ROOT = {
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                }
+            }
+            ROOT.FROM.FROM = {
+                tag = SOV
+                is_major = yes
+            }
+        }
+        ai_desire = -50
+    }
+
+    allies_force_gov_on_sov = {
+        peace_action_type = force_government
+        enable = {
+            ROOT = {
+                has_government = democratic
+            }
+            ROOT.FROM.FROM = {
+                tag = SOV
+                is_major = yes
+            }
+        }
+        ai_desire = 30
+    }
+
     civil_war_participants_dont_accept_each_other = {
         peace_action_type = { force_government puppet liberate }
         enable = {
@@ -868,7 +931,7 @@ peace_ai_desires = {
                 }
             }
         }
-        ai_desire = -50
+        ai_desire = -30
     }
 
     dont_do_other_things_if_we_should_liberate = {
@@ -880,7 +943,7 @@ peace_ai_desires = {
                 }
             }
         }
-        ai_desire = -50 #This value has to be highly weighted to offset some other things
+        ai_desire = -200 #This value has to be highly weighted to offset some other things
     }
 
     minors_dont_fragment_as_much = {
@@ -899,7 +962,7 @@ peace_ai_desires = {
             is_major = no
             ROOT.FROM = { pc_is_liberated = no }
         }
-        ai_desire = -20
+        ai_desire = -100
     }
 
     majors_dont_fragment_as_much_less = {
@@ -912,7 +975,7 @@ peace_ai_desires = {
                 NOT = { original_tag = GER }
             }
         }
-        ai_desire = -25
+        ai_desire = -50
     }
 
     minors_follow_your_leader_when_forcing_gov = {
@@ -979,7 +1042,7 @@ peace_ai_desires = {
         enable = {
             ROOT.FROM.FROM = { check_variable = { num_owned_states > 30 } }
         }
-        ai_desire = -30
+        ai_desire = -200
     }
 
     dont_liberate_if_puppeted = { ###Too messy
