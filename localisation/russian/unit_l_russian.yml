@@ -385,7 +385,7 @@
  category_heavy_fighter:0 "Тяжелый истребитель"
  category_cas:0 "Штурмовик"
  category_nav_bomber:0 "Морские бомбардировщики"
- category_tac_bomber:0 "Тактические бомбардировщики"
+ category_tac_bomber:0 "Многоцелевые бомбардировщики"
  category_strat_bomber:0 "Стратегические бомбардировщики"
  TRANSPORT_ALREADY_ACTIVE:0 "Мы уже находимся в пути"
  TRANSPORT_NO_NAVAL_BASE:0 "Нельзя отправить транспорт в точку без морской базы"

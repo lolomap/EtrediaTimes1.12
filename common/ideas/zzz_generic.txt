@@ -1,6 +1,21 @@
 ideas = {
 
 	hidden_ideas = {
+		
+		league_of_nations_member_idea = { 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
 
 		continuous_naval_production = {
 			allowed = {
@@ -31,55 +46,47 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				jet_fighter_equipment = {
+				small_plane_cas_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				cv_CAS_equipment = {
+				cv_small_plane_cas_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				CAS_equipment = {
+				small_plane_naval_bomber_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				nav_bomber_equipment = {
+				cv_small_plane_naval_bomber_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				cv_nav_bomber_equipment = {
+				medium_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				rocket_interceptor_equipment = {
+				medium_plane_fighter_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				tac_bomber_equipment = {
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.10	
+				}
+				large_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				jet_tac_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				jet_strat_bomber_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				heavy_fighter_equipment = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				strat_bomber_equipment = {
+				large_plane_maritime_patrol_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
@@ -91,17 +98,55 @@ ideas = {
 					instant = yes
 					build_cost_ic = -0.10
 				}
-				scout_plane_equipment = {
-					instant = yes
-					build_cost_ic = -0.10	
-				}
 			}		
 		}
 	}
 
 	# Special ones that can be applied on other countries through focus system.
 	country = {
-	
+		
+		TO_chose_neutrality = {
+
+			picture = generic_pp_unity_bonus
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			#on_add = {
+			#	set_rule = { can_join_factions = no }
+			#}
+			#
+			#on_remove = {
+			#	set_rule = { can_join_factions = yes }
+			#}
+
+			modifier = {
+				trade_opinion_factor = 0.25
+				democratic_acceptance = -300
+				communism_acceptance = 100
+				#custom_modifier_tooltip = SOV_shocked_by_surprise_attack_cant_join_factions_tt
+			}
+		}
+		
+		TO_nato_ratified = {
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				operative_slot = 1
+				communism_acceptance = -15
+			}
+		}
+		
 		nationalism = {
 			
 			allowed = {
@@ -235,6 +280,91 @@ ideas = {
 			modifier = {
 				neutrality_drift = 0.1
 				neutrality_acceptance = 85
+			}
+		}
+
+		#Weaker version
+		fascist_influence_weak = {
+			name = fascist_influence
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.1
+				fascism_acceptance = 35
+			}
+		}
+		
+		communist_influence_weak = {
+			name = communist_influence
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				communism_acceptance = 35
+			}
+		}
+
+		democratic_influence_weak = {
+			name = democratic_influence
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.1
+				democratic_acceptance = 35
+			}
+		}
+
+		neutrality_influence_weak = {
+			name = neutrality_influence
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				neutrality_drift = 0.1
+				neutrality_acceptance = 35
 			}
 		}
 		
@@ -589,6 +719,7 @@ ideas = {
 				#lend_lease_tension = 0.50
 				send_volunteers_tension = 0.20
 				guarantee_tension = 1.0
+				embargo_threshold_factor = 2.5
 				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
 				ai_get_ally_desire_factor = -100
 			}
@@ -1096,175 +1227,23 @@ ideas = {
 				production_cost_max_ship_hull_carrier = 10750
 			}
 		}
-	}
-	
-	political_advisor = {
-		# POLITICAL	
-		generic_communist_revolutionary = {
-			
+
+		organization_of_african_unity_member_idea = { 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR } }
-				NOT = {
-					has_available_idea_with_traits = { idea = communist_revolutionary limit = 1 }
-				}
-				if = {
-					limit = { has_dlc = "Battle for the Bosporus" }
-					NOT = { tag = TUR tag = GRE }
-				}
+				always = no
 			}
 
-			available = {
-				
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
+			allowed_civil_war = {
+				always = yes
 			}
 			
-			traits = { communist_revolutionary }
-	
-			on_add = {
-				#country_event = political.1
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			#TODO_ASD: Set correct icon - idea_generic_org_of_african_unity
+			modifier = {
 			}
-	
-			do_effect = {
-				NOT = {
-					has_government = communism
-				}
-			}
-	
-			ai_will_do = {
-				factor = 0
-			}
-		}
-			
-		generic_democratic_reformer = {
-			
-			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR } }
-				NOT = {
-					has_available_idea_with_traits = { idea = democratic_reformer limit = 1 }
-				}
-				if = {
-					limit = { has_dlc = "Battle for the Bosporus" }
-					NOT = { tag = TUR tag = GRE }
-				}
-			}
-			
-			available = {
-				
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-
-			
-			traits = { democratic_reformer }
-	
-			on_add = {
-				#country_event = political.13
-			}
-	
-			do_effect = {
-				NOT = {
-					has_government = democratic
-				}
-			}
-	
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		
-		generic_fascist_demagogue = {
-			
-			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POR } }
-				NOT = {
-					has_available_idea_with_traits = { idea = fascist_demagogue limit = 1 }
-				}
-				if = {
-					limit = { has_dlc = "Battle for the Bosporus" }
-					NOT = { tag = TUR tag = GRE }
-				}
-			}
-			
-			available = {
-				
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}				
-			}
-			
-			traits = { fascist_demagogue }
-	
-			on_add = {
-				#country_event = political.7
-			}
-	
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-	
-			ai_will_do = {
-				factor = 0
-			}
-		}
-
-		generic_head_of_intelligence = {
-			allowed = { 
-				has_dlc = "La Resistance"
-				# china gets a special one via focus
-				NOT = { original_tag = CHI }
-				NOT = { is_chinese_warlord = yes }
-				if = {
-					limit = {
-						has_dlc = "Battle for the Bosporus"
-					}
-					NOT = {
-						tag = GRE
-						tag = TUR
-					}
-				}
-			}
-			visible = {
-				OR = {
-					has_idea = generic_head_of_intelligence
-					NOT = {
-						OR = {
-							# ignore if a (historical) minister already available
-							has_allowed_idea_with_traits = { 
-								idea = head_of_intelligence 
-								limit = 1
-								ignore = generic_head_of_intelligence
-							}
-							# ignore if the other one is already taken
-							has_idea_with_trait = head_of_intelligence
-						}
-					}
-				}
-			}
-			available = {
-				has_intelligence_agency = yes
-			}
-			traits = { head_of_intelligence }
-
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					has_intelligence_agency = no
-					factor = 0
-				}
-			}
-
 		}
 	}
-		
-	
 
 	# TECHNOLOGY
 	tank_manufacturer = { 
@@ -1305,6 +1284,12 @@ ideas = {
 					AND = {
 						OR = { tag = BUL tag = GRE tag = TUR }
 						has_dlc = "Battle for the Bosporus"
+					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH tag = SWI }
+						has_dlc = "By Blood Alone"
 					}
 				}
 			}
@@ -1363,6 +1348,12 @@ ideas = {
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH tag = SWI }
+						has_dlc = "By Blood Alone"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1378,13 +1369,14 @@ ideas = {
 
 	aircraft_manufacturer = { 
 	
-		designer = yes	
-		
+		designer = yes
+	
 		generic_light_aircraft_manufacturer = {
 			
 			picture = generic_air_manufacturer_1
 
 			allowed = {
+				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA } }
 				NOT = {
 					has_available_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
@@ -1392,25 +1384,36 @@ ideas = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
+					NOT = { tag = ROM } NOT = { tag = YUG }
 				}
 				NOT = {
 					AND = {
+						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
 						has_dlc = "Waking the Tiger"
 					}
 				}
 				NOT = {
 					AND = {
+						OR = { tag = MEX tag = HOL }
 						has_dlc = "Man the Guns"
 					}
 				}
 				NOT = {
 					AND = {
+						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR}
 						has_dlc = "La Resistance"
 					}
 				}
 				NOT = {
 					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
 						has_dlc = "Battle for the Bosporus"
+					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH tag = SWI }
+						has_dlc = "By Blood Alone"
 					}
 				}
 			}
@@ -1430,6 +1433,7 @@ ideas = {
 			picture = generic_air_manufacturer_3
 
 			allowed = {
+				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = ROM } }
 				NOT = {
 					has_available_idea_with_traits = { idea = medium_aircraft_manufacturer limit = 1 }
 				}
@@ -1437,25 +1441,36 @@ ideas = {
 					limit = {
 						has_dlc = "Death or Dishonor"
 					}
+					NOT = { tag = YUG }
 				}
 				NOT = {
 					AND = {
+						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
 						has_dlc = "Waking the Tiger"
 					}
 				}
 				NOT = {
 					AND = {
+						OR = { tag = MEX tag = HOL }
 						has_dlc = "Man the Guns"
 					}
 				}
 				NOT = {
 					AND = {
+						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
 						has_dlc = "La Resistance"
 					}
 				}
 				NOT = {
 					AND = {
+						OR = { tag = BUL tag = GRE tag = TUR }
 						has_dlc = "Battle for the Bosporus"
+					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH tag = SWI }
+						has_dlc = "By Blood Alone"
 					}
 				}
 			}
@@ -1475,7 +1490,7 @@ ideas = {
 			picture = generic_air_manufacturer_2
 			
 			allowed = {
-				NOT = { OR = { tag = YAN } }
+				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CAN tag = ROM } }
 				NOT = {
 					has_available_idea_with_traits = { idea = heavy_aircraft_manufacturer limit = 1 }
 				}
@@ -1507,6 +1522,12 @@ ideas = {
 					AND = {
 						OR = { tag = BUL tag = GRE tag = TUR }
 						has_dlc = "Battle for the Bosporus"
+					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH tag = SWI }
+						has_dlc = "By Blood Alone"
 					}
 				}
 			}
@@ -1556,6 +1577,12 @@ ideas = {
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH tag = SWI }
+						has_dlc = "By Blood Alone"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1576,7 +1603,7 @@ ideas = {
 			picture = generic_industrial_concern_1
 
 			allowed = {
-				NOT = { OR = { tag = SBU tag = YAN } }
+				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN } }
 				NOT = {
 					has_available_idea_with_traits = { idea = industrial_concern limit = 1 }
 				}
@@ -1604,6 +1631,12 @@ ideas = {
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH }
+						has_dlc = "By Blood Alone"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1621,7 +1654,7 @@ ideas = {
 			picture = generic_electronics_concern_1
 
 			allowed = {
-				NOT = { OR = { tag = YAN } }
+				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA } }
 				NOT = {
 					has_available_idea_with_traits = { idea = electronics_concern limit = 1 }
 				}
@@ -1650,6 +1683,12 @@ ideas = {
 					AND = {
 						OR = { tag = BUL tag = GRE tag = TUR }
 						has_dlc = "Battle for the Bosporus"
+					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH tag = SWI }
+						has_dlc = "By Blood Alone"
 					}
 				}
 			}
@@ -1702,6 +1741,12 @@ ideas = {
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH }
+						has_dlc = "By Blood Alone"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1745,6 +1790,12 @@ ideas = {
 					AND = {
 						OR = { tag = BUL tag = GRE tag = TUR }
 						has_dlc = "Battle for the Bosporus"
+					}
+				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH }
+						has_dlc = "By Blood Alone"
 					}
 				}
 			}
@@ -1792,6 +1843,12 @@ ideas = {
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
+				NOT = {
+					AND = {
+						OR = { tag = ETH }
+						has_dlc = "By Blood Alone"
+					}
+				}
 			}
 			
 			cost = 150
@@ -1803,185 +1860,6 @@ ideas = {
 			
 			traits = { artillery_manufacturer }
 		}
-	}
-
-	political_advisor = {
-
-		generic_captain_of_industry = {
-
-			allowed = {
-				
-				always = yes
-			}
-			
-			traits = { captain_of_industry }
-		}
-		
-		generic_fortification_engineer = {
-
-			allowed = {
-				
-				always = yes
-			}
-			
-			traits = { fortification_engineer }
-		}
-
-		generic_war_industrialist = {
-
-			allowed = {
-				
-				always = yes
-			}
-			
-			traits = { war_industrialist }
-		}
-	}
-
-	army_chief = {
-		
-		generic_army_chief_off = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			traits = { army_chief_offensive_1 }
-		}
-
-		generic_army_chief_def = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			traits = { army_chief_defensive_1 }
-		}
-	}
-
-	navy_chief = {		
-
-		generic_navy_chief_decisive_bat = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			traits = { navy_chief_decisive_battle_2 }
-		}
-
-		generic_navy_anti_submarine = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			traits = { navy_anti_submarine_2 }
-		}
-	}
-
-	air_chief = {
-
-		generic_air_close_air_sup = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			traits = { air_close_air_support_2 }
-		}
-	
-		generic_air_chief_all_weather = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			traits = { air_chief_all_weather_2 }			
-		}
-	}
-
-	high_command = {
-
-		generic_army_art = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			traits = { army_artillery_1 }			
-		}
-		
-		generic_army_log = {
-
-			allowed = {
-				always = yes
-			}
-			
-			traits = { army_logistics_2 }			
-		}
-
-		generic_navy_fleet_log = {
-
-			allowed = {
-				always = yes
-			}
-			
-			traits = { navy_fleet_logistics_1 }			
-		}
-
-		generic_air_air_combat_trainer = {
-
-			allowed = {
-				always = yes
-			}
-			
-			traits = { air_air_combat_training_2 }			
-		}
-	}
-
-	theorist = {
-
-		generic_military_theorist = {
-			
-			allowed = {
-				#always = yes
-				always = yes
-			}
-			
-			research_bonus = {
-				land_doctrine = 0.10
-			}
-			
-			traits = { military_theorist }
-		}
-	
-		generic_naval_theorist = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			research_bonus = {
-				naval_doctrine = 0.10
-			}
-			
-			traits = { naval_theorist }
-		}
-
-		generic_air_warfare_theorist = {
-			
-			allowed = {
-				always = yes
-			}
-			
-			research_bonus = {
-				air_doctrine = 0.10
-			}
-			
-			traits = { air_warfare_theorist }
-		}
-
 	}
 
 }
