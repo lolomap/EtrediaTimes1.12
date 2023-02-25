@@ -10,9 +10,17 @@ scripted_gui = {
             nuke_province_moded_click = {
                 if = {limit = {has_state_flag = nuke_target_for_@ROOT}
                     clr_state_flag = nuke_target_for_@ROOT
+                    if = {
+                        limit = {OWNER = {is_in_array = ROOT.nuke_possible}}
+                        remove_from_array = {ROOT.nuke_possible = OWNER}
+                    }
                 }
                 else = {
                     set_state_flag = nuke_target_for_@ROOT
+                    if = {
+                        limit = {OWNER = {NOT = {is_in_array = ROOT.nuke_possible}}}
+                        add_to_array = {ROOT.nuke_possible = OWNER}
+                    }
                 }
                 force_update_map_mode = {
                     mapmode = nuking
@@ -33,7 +41,7 @@ scripted_gui = {
                 }
                 else = {
                     set_country_flag = nukemaximized
-                    set_variable = {red_button_hook_x = -300}
+                    set_variable = {red_button_hook_x = -500}
                 }
             }
             launch_nukes_click = {
@@ -128,6 +136,50 @@ scripted_gui = {
         properties = {
 			maximize_btn = {
 				x = red_button_hook_x
+			}
+            cFlag = {
+                image = [THIS.GetFlag]
+            }
+		}
+
+        dynamic_lists = {
+			nuke_countries_gb = {
+				array = nuke_possible
+				entry_container = nuke_countries_entry
+				change_scope = yes
+			}
+		}
+    }
+
+    red_button_dial = {
+        window_name = "nuke_per_state_dial"
+        parent_window_name = "red_button_window"
+
+        visible = {always = yes}
+
+        effects = {
+            left_button_click = {
+				subtract_from_variable = {
+					SAMPLE_half_dial_value = 10
+				}
+				clamp_variable = { var = SAMPLE_half_dial_value min = 0 max = 100 }
+                add_to_variable = {nuke_per_state = -1}
+                clamp_variable = { var = nuke_per_state min = 1 max = 10 }
+			}
+			right_button_click = {
+				add_to_variable = {
+					SAMPLE_half_dial_value = 10
+				}
+				clamp_variable = { var = SAMPLE_half_dial_value min = 0 max = 100 }
+                
+                add_to_variable = {nuke_per_state = 1}
+                clamp_variable = { var = nuke_per_state min = 1 max = 10 }
+			}
+        }
+
+        properties = {
+			half_dial_hand = {
+				frame = SAMPLE_half_dial_value
 			}
 		}
     }
