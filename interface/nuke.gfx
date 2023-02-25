@@ -1,0 +1,19 @@
+spriteTypes = {
+    SpriteType = {
+		name = "GFX_nuke_red_btn"
+		texturefile = "gfx/interface/custom_gui/nuke_red_btn.dds"
+	}
+    SpriteType = {
+		name = "GFX_nuke_btn"
+		texturefile = "gfx/interface/custom_gui/nuke_btn.dds"
+        noOfFrames = 15
+	}
+    SpriteType = {
+		name = "GFX_nuke_bg"
+		texturefile = "gfx/interface/custom_gui/bg.dds"
+	}
+    SpriteType = {
+		name = "GFX_nuke_bag"
+		texturefile = "gfx/interface/custom_gui/bag.dds"
+	}
+}

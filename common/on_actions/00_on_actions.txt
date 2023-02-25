@@ -1881,6 +1881,15 @@ on_actions = {
         }
     }
 
+    on_capitulation = {
+        effect = {
+            if = {
+                limit = {ROOT = {tag = YAN is_in_faction_with = EIK}}
+                #YAN = {}
+            }
+        }
+    }
+
 ######################################################
 #VANILLA
 ######################################################

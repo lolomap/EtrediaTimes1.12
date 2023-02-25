@@ -1,120 +1,5 @@
 guiTypes = {
     containerWindowType = {
-		name = "red_button_window"
-		position = {x=-24 y=30%%}
-		orientation = upper_right
-		size = { width=436 height=496 }
-
-		buttonType = {
-			name = "maximize_btn"
-			quadTextureSprite ="GFX_minimap_handle_pinged"
-			position = { x = 0 y = 0 }
-		}
-
-        iconType = {
-            name = "red_button_main"
-            position = { x=-480 y=-100 }
-            #size = {width = 650 height = 600}
-
-            quadTextureSprite ="GFX_trade_filter_bg"
-        }
-
-        buttonType = {
-			name = "launch_nukes"
-			quadTextureSprite ="GFX_nuke_button"
-			position = { x = -250 y = 200 }
-		}
-
-        gridboxtype = {
-			name = "nuke_countries_gb"
-			position = {x = -450 y = -100}
-			orientation = "UPPER_LEFT"
-			size = {width = 200 height = 200}
-			slotsize = {width = 100 height = 50}
-			add_horizontal = no
-	
-            background = { 
-                name = "Background"
-                quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
-            }
-		}
-    }
-
-    containerWindowType = {
-			name = "nuke_per_state_dial"
-			position = { x = -450 y = 200 }	
-
-			iconType = {
-				name = "half_dial_back"
-				spriteType = "GFX_Dial_Back_Half"
-				position = { x = 0 y = 0 }
-			}
-			iconType = {
-				name = "half_dial_hand"
-				spriteType = "GFX_Half_Dial"
-				position = { x = 2 y = 2 }
-			}
-			iconType = {
-				name = "half_dial_dot"
-				spriteType = "GFX_Dial_Dot"
-				position = { x = 1 y = 3 }
-			}
-
-			buttonType = {
-				name = "left_button"
-				spriteType = "GFX_production_line_arrow_left"
-				position = { x = 20 y = 120 }
-			}
-			buttonType = {
-				name = "right_button"
-				spriteType = "GFX_production_line_arrow_right"
-				position = { x = 150 y = 120 }
-			}
-		}
-		
-		# Utility buttons for demo, not needed for radar graph
-		buttonType = {
-			name = "close_button"
-			spriteType = "GFX_closebutton"
-			position = { x = 398 y = 20 }
-		}
-		buttonType = {
-			name = "refresh_button"
-			spriteType = "GFX_browser_refresh"
-			position = { x = 16 y = 16 }
-		}
-	}
-
-    containerWindowType = {
-        name = "nuke_countries_entry"
-        position = {x = 0 y = 0}
-        size = {width = 200 height = 100}
-
-        
-        buttonType = {
-            name = "cFlag"
-            quadTextureSprite = "GFX_flag_small2"
-            position = {x = 0 y = 5}
-        }
-
-        iconType = {
-            name = "cFlagBorder"
-            quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
-            position = {x = -4 y = 2}
-            alwaystransparent = yes
-        }
-
-        instantTextBoxType = {
-            name = "cName"
-            position = {x = 50 y = 8}
-            text = "[?THIS.GetNameDef]"
-            font = hoi_18mbs
-            format = left
-            alwaystransparent = yes
-        }
-    }
-
-	containerWindowType = {
 		name = "nuking_replace_window"
 		position = {x=0 y=0}
 		orientation = lower_left
@@ -139,4 +24,182 @@ guiTypes = {
 		#	position = { x=15 y= 286 }	
 		#}
 	}
+
+    containerWindowType = {
+        name = "red_button_mover"
+        position = {x = -24 y = 30%%}
+        orientation = upper_right
+        
+		size = { width=436 height=496 }
+
+        buttonType = {
+			name = "maximize_btn"
+			quadTextureSprite ="GFX_minimap_handle_pinged"
+			position = { x = 0 y = 0 }
+		}
+    }
+
+    containerWindowType = {
+		name = "red_button_window"
+		position = {x=-24 y=30%%}
+		orientation = upper_right
+		size = { width=436 height=496 }
+
+        iconType = {
+            name = "red_button_main"
+            position = { x=-480 y=-100 }
+            #size = {width = 650 height = 600}
+
+            quadTextureSprite ="GFX_nuke_bg"
+        }
+        iconType = {
+            name = "red_button_main_l"
+            position = { x=-480 y=-100 }
+            #size = {width = 650 height = 600}
+
+            quadTextureSprite ="GFX_nuke_bag"
+        }
+
+        buttonType = {
+            name = "cFlag"
+            quadTextureSprite = "GFX_flag_small2"
+            position = {x = -346 y = 253}
+        }
+
+        iconType = {
+            name = "cFlagBorder"
+            quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+            position = {x = -350 y = 250}
+            alwaystransparent = yes
+        }
+
+        buttonType = {
+            name = "left_button"
+            spriteType = "GFX_production_line_arrow_left"
+            position = { x = -355 y = 290 }
+        }
+        buttonType = {
+            name = "right_button"
+            spriteType = "GFX_production_line_arrow_right"
+            position = { x = -325 y = 290 }
+        }
+        
+
+        buttonType = {
+			name = "launch_nukes"
+			quadTextureSprite ="GFX_nuke_red_btn"
+			position = { x = -270 y = 250 }
+		}
+
+        buttonType = {
+            name = "bn11"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -66 y = 220}
+        }
+        buttonType = {
+            name = "bn12"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -63 y = 245}
+        }
+        buttonType = {
+            name = "bn13"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -60 y = 270}
+        }
+        buttonType = {
+            name = "bn14"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -57 y = 295}
+        }
+        buttonType = {
+            name = "bn15"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -54 y = 320}
+        }
+
+        buttonType = {
+            name = "bn6"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -98 y = 220}
+        }
+        buttonType = {
+            name = "bn7"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -95 y = 245}
+        }
+        buttonType = {
+            name = "bn8"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -92 y = 270}
+        }
+        buttonType = {
+            name = "bn9"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -89 y = 295}
+        }
+        buttonType = {
+            name = "bn10"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -86 y = 320}
+        }
+
+        buttonType = {
+            name = "bn1"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -130 y = 220}
+        }
+        buttonType = {
+            name = "bn2"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -127 y = 245}
+            frame = 2
+        }
+        buttonType = {
+            name = "bn3"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -124 y = 270}
+        }
+        buttonType = {
+            name = "bn4"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -121 y = 295}
+        }
+        buttonType = {
+            name = "bn5"
+            quadTextureSprite = "GFX_nuke_btn"
+            position = {x = -118 y = 320}
+        }
+    }
+
+    containerWindowType = {
+        name = "nuke_per_state_dial"
+        position = { x = -315 y = 10 }	
+
+        iconType = {
+            name = "half_dial_back"
+            spriteType = "GFX_Dial_Back_Half"
+            position = { x = 0 y = 0 }
+        }
+        iconType = {
+            name = "half_dial_hand"
+            spriteType = "GFX_Half_Dial"
+            position = { x = 2 y = 2 }
+        }
+        iconType = {
+            name = "half_dial_dot"
+            spriteType = "GFX_Dial_Dot"
+            position = { x = 1 y = 3 }
+        }
+
+        buttonType = {
+            name = "left_button"
+            spriteType = "GFX_production_line_arrow_left"
+            position = { x = 20 y = 120 }
+        }
+        buttonType = {
+            name = "right_button"
+            spriteType = "GFX_production_line_arrow_right"
+            position = { x = 150 y = 120 }
+        }
+    }
 }
