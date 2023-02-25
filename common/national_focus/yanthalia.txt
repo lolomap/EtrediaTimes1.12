@@ -1608,6 +1608,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { hours = 6 id = newss.13 }
 			}
+            custom_effect_tooltip = yan_swea_alert_tooltip
 			set_country_flag = yan_swea
 		}
 		ai_will_do = {

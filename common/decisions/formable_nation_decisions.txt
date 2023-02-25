@@ -191,6 +191,10 @@ form_msas_category = {
 
 		complete_effect = {
 			set_cosmetic_tag = MSA_UNIFIED
+            set_portraits = {
+                character = SFL_deyan_boyko
+                civilian = { large ="gfx/leaders/SFL/Portrait_msas_democratic.dds" }
+            }
 			custom_effect_tooltip = form_country_norway_coring_states_tt
 			hidden_effect = {
 				198 = { add_core_of = ROOT }

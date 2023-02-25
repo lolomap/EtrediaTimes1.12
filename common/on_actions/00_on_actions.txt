@@ -1026,8 +1026,16 @@ on_actions = {
                     limit = {
                         always = no
                     }
-                    set_variable = i_love_trains_ach
+                    set_country_flag = i_love_trains_ach
                 }
+            }
+            if = {
+                limit = {
+                    date > 2020.1.1
+                    check_variable = {pi_master > 70}
+                    threat < 0.6
+                }
+                set_country_flag = go_away_ach
             }
         }
 	}
@@ -1869,6 +1877,15 @@ on_actions = {
             if = {
                 limit = {FROM = {has_government = democratic} ROOT = {tag = EIK}}
                 FROM = {set_country_flag = whoami_ach}
+            }
+        }
+    }
+
+    on_capitulation = {
+        effect = {
+            if = {
+                limit = {ROOT = {tag = YAN is_in_faction_with = EIK}}
+                YAN = {country_event = {id = yan.24 days = 1}}
             }
         }
     }

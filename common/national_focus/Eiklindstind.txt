@@ -656,10 +656,10 @@ focus_tree = {
 		completion_reward = { 
 			YAN = { country_event = { id = yan.2 } }
         }
-		available = { 
-			YAN = { has_government = fascism }
+        bypass = {
+            YAN = { has_government = fascism }
 			YAN = { NOT = { has_country_flag = yan_swea } }
-		}
+        }
 		ai_will_do = {
 			factor = 1
 			modifier = {

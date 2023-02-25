@@ -16,30 +16,29 @@ peace_ai_desires = {
         peace_action_type = { puppet }
 
 		enable = {
-            if = {
-                limit = { has_government = democratic }
-                ROOT.FROM.FROM = { pc_is_forced_government_to = democratic }
-            }
+            has_government = democratic
 		}
-        else = {
-            always = no
-        }
-        ai_desire = 25
+        ai_desire = 2500
     }
 	
-	DONT_PUPPET_KOUL = {
+	DONT_PUPPET_SUKA = {
         peace_action_type = { puppet }
 
 		enable = {
-            if = {
-                limit = { has_government = fascism }
-                ROOT.FROM.FROM = { pc_is_forced_government_to = fascism }
+            OR = {
+                has_government = fascism
+                AND = {tag = SBU has_government = monarchism}
             }
 		}
-        else = {
-            always = no
-        }
         ai_desire = -25
+    }
+    DONT_PUPPET_KOUL = {
+        peace_action_type = { puppet }
+
+		enable = {
+            tag = KLU
+		}
+        ai_desire = -200
     }
 
     generic_influence_cutoff = { #Only do force gov and liberate outside influence range

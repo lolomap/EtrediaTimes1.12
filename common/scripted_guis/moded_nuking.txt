@@ -4,38 +4,78 @@ scripted_gui = {
 		context_type = selected_state_context
 		parent_window_name = province_info_window
 
-		visible = {owner = {NOT = {tag = ROOT}}}
+		#visible = {owner = {NOT = {tag = ROOT}}}
+        visible = {always = yes}
 
 		effects = {
             nuke_province_moded_click = {
                 if = {limit = {has_state_flag = nuke_target_for_@ROOT}
                     clr_state_flag = nuke_target_for_@ROOT
+                    if = {
+                        limit = {OWNER = {is_in_array = {ROOT.nuke_possible = THIS}}}
+                        if = {
+                            limit = {OWNER = {every_owned_state = {NOT = {has_state_flag = nuke_target_for_@ROOT}}}}
+                            remove_from_array = {ROOT.nuke_possible = OWNER}
+                        }
+                    }
                 }
                 else = {
                     set_state_flag = nuke_target_for_@ROOT
+                    if = {
+                        limit = {OWNER = {NOT = {is_in_array = {ROOT.nuke_possible = THIS}}}}
+                        add_to_array = {ROOT.nuke_possible = OWNER}
+                    }
                 }
                 force_update_map_mode = {
                     mapmode = nuking
                 }
             }
         }
+
+        triggers = {
+            nuke_is_selected_visible = {has_state_flag = nuke_target_for_@ROOT}
+        }
 	}
     red_button = {
         window_name = "red_button_window"
         
-        visible = {always = yes}
+        visible = {has_country_flag = nukemaximized}
 
         effects = {
-            maximize_btn_click = {
-                if = {limit = {has_country_flag = nukemaximized}
-                    clr_country_flag = nukemaximized
-                    set_variable = {red_button_hook_x = 0}
-                }
-                else = {
-                    set_country_flag = nukemaximized
-                    set_variable = {red_button_hook_x = -300}
-                }
+
+            left_button_click = {
+                add_to_variable = {nuke_index = -1}
+                set_temp_variable = {mx = nuke_possible^num}
+                add_to_temp_variable = {mx = -1}
+				clamp_variable = { var = nuke_index min = 0 max = mx }
+
+                set_variable = {nuke_country = nuke_possible^nuke_index}
             }
+            right_button_click = {
+                add_to_variable = {nuke_index = 1}
+				set_temp_variable = {mx = nuke_possible^num}
+                add_to_temp_variable = {mx = -1}
+				clamp_variable = { var = nuke_index min = 0 max = mx }
+
+                set_variable = {nuke_country = nuke_possible^nuke_index}
+            }
+
+            bn1_click = {set_variable = {nuke_building = 1}}
+            bn2_click = {set_variable = {nuke_building = 2}}
+            bn3_click = {set_variable = {nuke_building = 3}}
+            bn4_click = {set_variable = {nuke_building = 4}}
+            bn5_click = {set_variable = {nuke_building = 5}}
+            bn6_click = {set_variable = {nuke_building = 6}}
+            bn7_click = {set_variable = {nuke_building = 7}}
+            bn8_click = {set_variable = {nuke_building = 8}}
+            bn9_click = {set_variable = {nuke_building = 9}}
+            bn10_click = {set_variable = {nuke_building = 10}}
+            bn11_click = {set_variable = {nuke_building = 11}}
+            bn12_click = {set_variable = {nuke_building = 12}}
+            bn13_click = {set_variable = {nuke_building = 13}}
+            bn14_click = {set_variable = {nuke_building = 14}}
+            bn15_click = {set_variable = {nuke_building = 15}}
+            
             launch_nukes_click = {
             
                 set_temp_variable = {rockets_available = 0}
@@ -45,10 +85,11 @@ scripted_gui = {
                         add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
                         add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
                     }
+                    var:nuke_country = {
+                        country_event = {id = onactev.11 hours = 1}
+                    }
                 }
-                var:ROOT.nuke_country = {
-                    country_event = {id = onactev.11 hours = 1}
-                }
+                
                 every_state = {
                     limit = {has_state_flag = nuke_target_for_@ROOT}
 
@@ -119,15 +160,73 @@ scripted_gui = {
         }
 
         triggers = {
-            launch_nukes_click_enabled = {NOT = {has_country_flag = nuke_cd}}
+            launch_nukes_click_enabled = {
+                NOT = {has_country_flag = nuke_cd}
+                has_war_with = var:nuke_country
+            }
+        }
 
-            red_button_main_visible = {has_country_flag = nukemaximized}
-            launch_nukes_visible = {has_country_flag = nukemaximized}
+        properties = {
+            cFlag = {
+                image = "[?nuke_country.GetFlag]"
+            }
+        }
+    }
+
+    red_button_mover_ = {
+        window_name = "red_button_mover"
+        
+        visible = {always = yes}
+
+        effects = {
+            maximize_btn_click = {
+                if = {limit = {has_country_flag = nukemaximized}
+                    clr_country_flag = nukemaximized
+                    set_variable = {red_button_hook_x = 0}
+                }
+                else = {
+                    set_country_flag = nukemaximized
+                    set_variable = {red_button_hook_x = -500}
+                }
+            }
         }
 
         properties = {
 			maximize_btn = {
 				x = red_button_hook_x
+			}
+        }
+    }
+
+    red_button_dial = {
+        window_name = "nuke_per_state_dial"
+        parent_window_name = "red_button_window"
+
+        visible = {has_country_flag = nukemaximized}
+
+        effects = {
+            left_button_click = {
+				subtract_from_variable = {
+					SAMPLE_half_dial_value = 10
+				}
+				clamp_variable = { var = SAMPLE_half_dial_value min = 0 max = 100 }
+                add_to_variable = {nuke_per_state = -1}
+                clamp_variable = { var = nuke_per_state min = 1 max = 10 }
+			}
+			right_button_click = {
+				add_to_variable = {
+					SAMPLE_half_dial_value = 10
+				}
+				clamp_variable = { var = SAMPLE_half_dial_value min = 0 max = 100 }
+                
+                add_to_variable = {nuke_per_state = 1}
+                clamp_variable = { var = nuke_per_state min = 1 max = 10 }
+			}
+        }
+
+        properties = {
+			half_dial_hand = {
+				frame = SAMPLE_half_dial_value
 			}
 		}
     }

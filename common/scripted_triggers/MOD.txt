@@ -1,3 +1,7 @@
+achievs_available = {
+    is_ironman = yes
+}
+
 crysis_startable = {
     not = {has_global_flag = political_crysis}
     not = {has_global_flag = war_crysis}

@@ -113,3 +113,4 @@ recruit_character = YAN_regzho_ontrilat
 
 recruit_character = YAN_gulyas_szilveszter
 
+recruit_character = YAN_atar_onodar

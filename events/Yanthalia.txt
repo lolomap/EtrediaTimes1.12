@@ -488,3 +488,16 @@ country_event = {
 			add_war_support = 0.5
 		}
 }
+
+country_event = {
+    id = yan.24
+    title = yan.24.t
+    desc = yan.24.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = yan.24.a
+        promote_character = YAN_atar_onodar
+    }
+}
