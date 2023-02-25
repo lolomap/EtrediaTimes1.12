@@ -18,7 +18,19 @@ scripted_diplomatic_actions = {
         cost = 50
 
         ai_desire = {
-            base = 1000
+            base = 0
+            modifier = {
+                is_subject_of = ROOT
+                add = 10000
+            }
+            modifier = {
+                is_in_faction_with = ROOT
+                add = 10000
+            }
+            modifier = {
+                ROOT = {has_opinion = {target = PREV value > 29}}
+                add = 1000
+            }
             modifier = {
                 has_country_flag = ai_not_accept_existance
                 is_historical_focus_on = yes
