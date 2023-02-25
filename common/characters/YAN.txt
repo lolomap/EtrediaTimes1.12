@@ -33,6 +33,20 @@ characters={
 			id=-1
 		}
 	}
+    YAN_atar_onodar = {
+        name="Atar Onodar"
+		portraits={
+			civilian={
+				large="gfx/leaders/YAN/Portrait_yan_fascism2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+    }
 	YAN_borbely_bertalat={
 		name="Borbely Bertalat"
 		portraits={

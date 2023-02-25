@@ -5,9 +5,6 @@ defined_text = {
 
 defined_text = {
     name = building_id_sl
-    text = { trigger = {check_variable = {ROOT.nuke_building = 16}}
-        localization_key = "nuclear_rocket_site"
-    }
     text = { trigger = {check_variable = {ROOT.nuke_building = 15}}
         localization_key = "nuclear_reactor"
     }
@@ -36,7 +33,7 @@ defined_text = {
         localization_key = "naval_base"
     }
     text = { trigger = {check_variable = {ROOT.nuke_building = 6}}
-        localization_key = "rail_way"
+        localization_key = "nuclear_rocket_site"
     }
     text = { trigger = {check_variable = {ROOT.nuke_building = 5}}
         localization_key = "supply_node"

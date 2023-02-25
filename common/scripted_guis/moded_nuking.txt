@@ -31,6 +31,10 @@ scripted_gui = {
                 }
             }
         }
+
+        triggers = {
+            nuke_is_selected_visible = {has_state_flag = nuke_target_for_@ROOT}
+        }
 	}
     red_button = {
         window_name = "red_button_window"
@@ -55,6 +59,22 @@ scripted_gui = {
 
                 set_variable = {nuke_country = nuke_possible^nuke_index}
             }
+
+            bn1_click = {set_variable = {nuke_building = 1}}
+            bn2_click = {set_variable = {nuke_building = 2}}
+            bn3_click = {set_variable = {nuke_building = 3}}
+            bn4_click = {set_variable = {nuke_building = 4}}
+            bn5_click = {set_variable = {nuke_building = 5}}
+            bn6_click = {set_variable = {nuke_building = 6}}
+            bn7_click = {set_variable = {nuke_building = 7}}
+            bn8_click = {set_variable = {nuke_building = 8}}
+            bn9_click = {set_variable = {nuke_building = 9}}
+            bn10_click = {set_variable = {nuke_building = 10}}
+            bn11_click = {set_variable = {nuke_building = 11}}
+            bn12_click = {set_variable = {nuke_building = 12}}
+            bn13_click = {set_variable = {nuke_building = 13}}
+            bn14_click = {set_variable = {nuke_building = 14}}
+            bn15_click = {set_variable = {nuke_building = 15}}
             
             launch_nukes_click = {
             
@@ -140,7 +160,10 @@ scripted_gui = {
         }
 
         triggers = {
-            launch_nukes_click_enabled = {NOT = {has_country_flag = nuke_cd}}
+            launch_nukes_click_enabled = {
+                NOT = {has_country_flag = nuke_cd}
+                has_war_with = var:nuke_country
+            }
         }
 
         properties = {

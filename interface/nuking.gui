@@ -9,6 +9,13 @@ guiTypes = {
 			name = "nuke_province_moded"
 			quadTextureSprite ="GFX_nuke_button"
 			position = { x= 13 y = 280 }
+            pdx_tooltip = select_state_to_nuke
+		}
+
+        iconType = {
+			name = "nuke_is_selected"
+			spriteType = "GFX_trigger_yes"
+			position = { x=90 y= 286 }	
 		}
 		
 		#iconType = {
@@ -89,6 +96,7 @@ guiTypes = {
 			name = "launch_nukes"
 			quadTextureSprite ="GFX_nuke_red_btn"
 			position = { x = -270 y = 250 }
+            pdx_tooltip = launch_nukes_tooltip
 		}
 
         buttonType = {
