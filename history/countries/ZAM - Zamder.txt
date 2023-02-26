@@ -44,7 +44,5 @@ set_popularities = {
 
 #
 
-recruit_character = ZAM_jim_white
-
 recruit_character = ZAM_name_name
 

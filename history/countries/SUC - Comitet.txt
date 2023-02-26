@@ -85,7 +85,7 @@ set_convoys = 80
 create_country_leader = {
 	name = "Karlos Fongrade"
 	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = ""
+	picture = "gfx/leaders/Europe/Portrait_suc_neutrality.dds"
 	expire = "2022.1.1"
 	ideology = conservatism
 	traits = {
@@ -94,7 +94,7 @@ create_country_leader = {
 }
 
 create_corps_commander = {
-	name = "Ponti Sasal"
+	name = "Ponti Sas'al"
 	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 	skill = 2
 	attack_skill = 2

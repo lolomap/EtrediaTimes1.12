@@ -31,7 +31,7 @@ characters={
 		name="Jungney Wangpok"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_8"
+				large="GFX_Portrait_dng_neutrality"
 			}
 		}
 		country_leader={

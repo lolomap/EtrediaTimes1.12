@@ -100,7 +100,12 @@ characters={
 		}
 	}
 	YAN_general_1={
-		name="General 1"
+		name="Vikram Kumarasetz"
+		portraits={
+			civilian={
+				large="GFX_portrait_vikram_kumarasetz"
+			}
+		}
 		portraits={
 			army={
 				small="skill_small"
@@ -116,20 +121,6 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
-		}
-	}
-	YAN_johannes_roberts={
-		name="Johannes Roberts"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=absolutism
-			traits={ appeaser }
-			expire="2028.1.1.12"
-			id=-1
 		}
 	}
 }
