@@ -46,17 +46,8 @@ set_popularities = {
 	neutrality = 0
 }
 
-#
-
-recruit_character = IRI_john_wilson
-
 recruit_character = IRI_konstantin_ufimav
 
 recruit_character = IRI_viliem_barok
 
-recruit_character = IRI_ivan_vissarionovich
-
-recruit_character = IRI_kendri_losental
-
-recruit_character = IRI_sergey_kazhatov
-
+recruit_character = IRI_bakhram_bisar

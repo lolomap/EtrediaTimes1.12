@@ -1,9 +1,9 @@
 characters={
 	ZAM_name_name={
-		name="Name Name"
+		name="Horto Manerem"
 		portraits={
 			civilian={
-				large="GFX_Portrait_europe_generic_7"
+				large="GFX_Portrait_zam_fascism"
 			}
 		}
 		corps_commander={
@@ -36,20 +36,6 @@ characters={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=oligarchism
 			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	ZAM_lucas_smith={
-		name="Lucas Smith"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			traits={ quartermaster_trainee }
-			expire="2029.1.1.12"
 			id=-1
 		}
 	}
