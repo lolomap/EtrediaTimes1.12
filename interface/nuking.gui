@@ -181,7 +181,7 @@ guiTypes = {
 
     containerWindowType = {
         name = "nuke_per_state_dial"
-        position = { x = -315 y = 10 }	
+        position = { x = -315 y = 100 }	
 
         iconType = {
             name = "half_dial_back"
