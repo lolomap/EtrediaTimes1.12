@@ -99,8 +99,6 @@ set_popularities = {
 
 #
 
-recruit_character = YAN_jonas_roberts
-
 recruit_character = YAN_general_1
 
 recruit_character = YAN_mearal_garbac
