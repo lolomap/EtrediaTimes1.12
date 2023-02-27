@@ -45,12 +45,12 @@ division_template = {
 	division_names_group = SVT_arm_01
 
 	regiments = {
-		medium_armor = { x = 0 y = 0 }
-		medium_armor = { x = 0 y = 1 }
-        medium_armor = { x = 1 y = 0 }
-		medium_armor = { x = 1 y = 1 }
-		medium_armor = { x = 2 y = 0 }
-		medium_armor = { x = 2 y = 1 }
+		modern_armor = { x = 0 y = 0 }
+		modern_armor = { x = 0 y = 1 }
+        modern_armor = { x = 1 y = 0 }
+		modern_armor = { x = 1 y = 1 }
+		modern_armor = { x = 2 y = 0 }
+		modern_armor = { x = 2 y = 1 }
 		mechanized = { x = 3 y = 0 }
         mechanized = { x = 3 y = 1 }
         mechanized = { x = 3 y = 2 }
@@ -88,7 +88,7 @@ division_template = {
 units = {
 	division = {
 		name = "Medium Tank-Division"
-		location = 5650
+		location = 5045
 		division_template = "Medium Tank-Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.7
@@ -96,7 +96,7 @@ units = {
 	
 	division = {
 		name = "Infantry Division"
-		location = 5717
+		location = 5045
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -104,7 +104,7 @@ units = {
 	
 	division = {
 		name = "Infantry Division"
-		location = 6679
+		location = 5045
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -112,7 +112,7 @@ units = {
 	
 	division = {
 		name = "Infantry Division"
-		location = 5623
+		location = 5045
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -120,7 +120,7 @@ units = {
 	
 	division = {
 		name = "SVT Mechanized"
-		location = 6265
+		location = 5045
 		division_template = "SVT Mechanized"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -128,7 +128,7 @@ units = {
 	
 	division = {
 		name = "SVT Mechanized"
-		location = 5717
+		location = 5045
 		division_template = "SVT Mechanized"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -136,7 +136,7 @@ units = {
 	
 	division = {
 		name = "SVT Mechanized"
-		location = 6558
+		location = 5045
 		division_template = "SVT Mechanized"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -144,7 +144,7 @@ units = {
 	
 	division = {
 		name = "SVT Mechanized"
-		location = 5608
+		location = 5045
 		division_template = "SVT Mechanized"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -152,7 +152,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 6264
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -160,7 +160,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 6264
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -168,7 +168,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 6264
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -176,7 +176,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 6264
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -184,7 +184,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 6264
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -192,7 +192,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 6264
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -200,7 +200,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -208,7 +208,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -216,7 +216,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -224,7 +224,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -232,7 +232,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -240,7 +240,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -248,7 +248,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -256,7 +256,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -264,7 +264,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -272,7 +272,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 5717
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -280,7 +280,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 6558
+		location = 5045
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1

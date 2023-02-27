@@ -41,12 +41,15 @@ division_template = {
 	division_names_group = HLR_mnt_01
 
 	regiments = {
-		mountaineers = { x = 0 y = 0 }	
-		mountaineers = { x = 0 y = 1 }
-		mountaineers = { x = 0 y = 2 }	
+		modern_armor = { x = 0 y = 0 }	
+		modern_armor = { x = 0 y = 1 }
+		modern_armor = { x = 0 y = 2 }	
 		mountaineers = { x = 1 y = 0 }
 		mountaineers = { x = 1 y = 1 }
-		mountaineers = { x = 1 y = 2 }	
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
 	}
 	support = {
         engineer = { x = 0 y = 0 }
@@ -58,7 +61,7 @@ division_template = {
 units = {
 	division = {
 		name = "MNT division"
-		location = 7035
+		location = 7149
 		division_template = "MNT division"
 		start_experience_factor = 0.3
         start_equipment_factor = 1
@@ -66,7 +69,7 @@ units = {
 	
 	division = {
 		name = "MNT division"
-		location = 7035
+		location = 7149
 		division_template = "MNT division"
 		start_experience_factor = 0.3
         start_equipment_factor = 1
@@ -74,7 +77,7 @@ units = {
 	
 	division = {
 		name = "Infantry Division"
-		location = 7035
+		location = 7149
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -82,7 +85,23 @@ units = {
 	
 	division = {
 		name = "Infantry Division"
-		location = 7035
+		location = 7149
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Infantry Division"
+		location = 7149
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Infantry Division"
+		location = 7149
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
@@ -90,7 +109,7 @@ units = {
 
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -98,7 +117,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -106,7 +125,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -114,7 +133,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -122,7 +141,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -130,7 +149,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -138,7 +157,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
@@ -146,7 +165,7 @@ units = {
 	
 	division = {
 		name = "Militia Brigade"
-		location = 7035
+		location = 7149
 		division_template = "Militia Brigade"
 		start_experience_factor = 0.1
         start_equipment_factor = 1
