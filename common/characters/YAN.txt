@@ -102,11 +102,9 @@ characters={
 	YAN_general_1={
 		name="Vikram Kumarasetz"
 		portraits={
-			civilian={
-				large="GFX_portrait_vikram_kumarasetz"
+            civilian={
+				large="gfx/leaders/YAN/portrait_vikram_kumarasetz.dds"
 			}
-		}
-		portraits={
 			army={
 				small="skill_small"
 			}

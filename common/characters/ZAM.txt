@@ -3,7 +3,7 @@ characters={
 		name="Horto Manerem"
 		portraits={
 			civilian={
-				large="GFX_Portrait_zam_fascism"
+				large="gfx/leaders/ZAM/Portrait_zam_fascism.dds"
 			}
 		}
 		corps_commander={

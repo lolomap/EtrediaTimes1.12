@@ -3,7 +3,7 @@ characters={
 		name="Bakrham Bisar"
 		portraits={
 			civilian={
-				large="GFX_Portrait_iri_fascism"
+				large="gfx/leaders/IRI/Portrait_iri_fascism.dds"
 			}
 		}
 		country_leader={
