@@ -1884,7 +1884,7 @@ on_actions = {
     on_capitulation = {
         effect = {
             if = {
-                limit = {ROOT = {tag = YAN is_in_faction_with = EIK}}
+                limit = {ROOT = {tag = YAN is_in_faction_with = EIK has_war_with = SBU}}
                 YAN = {country_event = {id = yan.24 days = 1}}
             }
         }

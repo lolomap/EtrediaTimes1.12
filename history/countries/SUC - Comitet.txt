@@ -81,24 +81,5 @@ set_popularities = {
 
 set_convoys = 80
 
-
-create_country_leader = {
-	name = "Karlos Fongrade"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "gfx/leaders/Europe/Portrait_suc_neutrality.dds"
-	expire = "2022.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Ponti Sas'al"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
+recruit_character = SUC_karlos_fongrade
+recruit_character = SUC_ponti_sasal

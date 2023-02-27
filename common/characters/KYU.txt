@@ -31,7 +31,7 @@ characters={
 		name="Teng Guanting"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_8"
+				large="gfx/leaders/KYU/Portrait_kyu_neutrality_leader.dds"
 			}
 		}
 		country_leader={

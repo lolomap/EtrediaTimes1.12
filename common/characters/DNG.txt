@@ -31,7 +31,7 @@ characters={
 		name="Jungney Wangpok"
 		portraits={
 			civilian={
-				large="GFX_Portrait_dng_neutrality"
+				large="gfx/leaders/DNG/Portrait_dng_neutrality.dds"
 			}
 		}
 		country_leader={

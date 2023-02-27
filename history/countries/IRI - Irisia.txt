@@ -46,8 +46,8 @@ set_popularities = {
 	neutrality = 0
 }
 
+recruit_character = IRI_bakhram_bisar
+
 recruit_character = IRI_konstantin_ufimav
 
 recruit_character = IRI_viliem_barok
-
-recruit_character = IRI_bakhram_bisar
