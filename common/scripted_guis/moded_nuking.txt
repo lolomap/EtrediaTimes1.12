@@ -209,7 +209,7 @@ scripted_gui = {
                 }
                 else = {
                     set_country_flag = nukemaximized
-                    set_variable = {red_button_hook_x = -500}
+                    set_variable = {red_button_hook_x = -490}
                 }
             }
         }
