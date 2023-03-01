@@ -164,11 +164,21 @@ scripted_gui = {
                 NOT = {has_country_flag = nuke_cd}
                 has_war_with = var:nuke_country
             }
+
+            left_button_click_enabled = {  
+                check_variable = {nuke_possible^num > 0}
+            }
+            right_button_click_enabled = {  
+                check_variable = {nuke_possible^num > 0}
+            }
         }
 
         properties = {
             cFlag = {
                 image = "[?nuke_country.GetFlag]"
+            }
+            currentB = {
+                frame = nuke_building
             }
         }
     }

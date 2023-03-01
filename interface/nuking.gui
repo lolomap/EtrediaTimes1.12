@@ -57,7 +57,7 @@ guiTypes = {
             position = { x=-480 y=-100 }
             #size = {width = 650 height = 600}
 
-            quadTextureSprite ="GFX_nuke_bg"
+            quadTextureSprite ="GFX_trade_filter_bg"
         }
         iconType = {
             name = "red_button_main_l"
@@ -70,25 +70,25 @@ guiTypes = {
         buttonType = {
             name = "cFlag"
             quadTextureSprite = "GFX_flag_small2"
-            position = {x = -346 y = 253}
+            position = {x = -346 y = 273}
         }
 
         iconType = {
             name = "cFlagBorder"
             quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
-            position = {x = -350 y = 250}
+            position = {x = -350 y = 270}
             alwaystransparent = yes
         }
 
         buttonType = {
             name = "left_button"
             spriteType = "GFX_production_line_arrow_left"
-            position = { x = -355 y = 290 }
+            position = { x = -355 y = 310 }
         }
         buttonType = {
             name = "right_button"
             spriteType = "GFX_production_line_arrow_right"
-            position = { x = -325 y = 290 }
+            position = { x = -325 y = 310 }
         }
         
 
@@ -99,94 +99,108 @@ guiTypes = {
             pdx_tooltip = launch_nukes_tooltip
 		}
 
+        iconType = {
+            name = "currentB"
+			quadTextureSprite ="GFX_buildings_ordered"
+			position = { x = -105 y = 150 }
+        }
+        #iconType = {
+        #    name = "cbFrame"
+        #    quadTextureSprite = "GFX_nuke_bscreen"
+        #    position = {x = -105 y = 150}
+        #    alwaystransparent = yes
+        #}
+
         buttonType = {
             name = "bn11"
-            quadTextureSprite = "GFX_nuke_btn"
+            quadTextureSprite = "GFX_btn_11"
             position = {x = -66 y = 220}
         }
         buttonType = {
             name = "bn12"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -63 y = 245}
+            quadTextureSprite = "GFX_btn_12"
+            position = {x = -66 y = 245}
         }
         buttonType = {
             name = "bn13"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -60 y = 270}
+            quadTextureSprite = "GFX_btn_13"
+            position = {x = -66 y = 270}
         }
         buttonType = {
             name = "bn14"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -57 y = 295}
+            quadTextureSprite = "GFX_btn_14"
+            position = {x = -66 y = 295}
         }
         buttonType = {
             name = "bn15"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -54 y = 320}
+            quadTextureSprite = "GFX_btn_15"
+            position = {x = -66 y = 320}
         }
 
         buttonType = {
             name = "bn6"
-            quadTextureSprite = "GFX_nuke_btn"
+            quadTextureSprite = "GFX_btn_6"
             position = {x = -98 y = 220}
         }
         buttonType = {
             name = "bn7"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -95 y = 245}
+            quadTextureSprite = "GFX_btn_7"
+            position = {x = -98 y = 245}
         }
         buttonType = {
             name = "bn8"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -92 y = 270}
+            quadTextureSprite = "GFX_btn_8"
+            position = {x = -98 y = 270}
         }
         buttonType = {
             name = "bn9"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -89 y = 295}
+            quadTextureSprite = "GFX_btn_9"
+            position = {x = -98 y = 295}
         }
         buttonType = {
             name = "bn10"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -86 y = 320}
+            quadTextureSprite = "GFX_btn_10"
+            position = {x = -98 y = 320}
         }
 
         buttonType = {
             name = "bn1"
-            quadTextureSprite = "GFX_nuke_btn"
+            quadTextureSprite = "GFX_btn_1"
             position = {x = -130 y = 220}
         }
         buttonType = {
             name = "bn2"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -127 y = 245}
-            frame = 2
+            quadTextureSprite = "GFX_btn_2"
+            position = {x = -130 y = 245}
         }
         buttonType = {
             name = "bn3"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -124 y = 270}
+            quadTextureSprite = "GFX_btn_3"
+            position = {x = -130 y = 270}
         }
         buttonType = {
             name = "bn4"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -121 y = 295}
+            quadTextureSprite = "GFX_btn_4"
+            position = {x = -130 y = 295}
         }
         buttonType = {
             name = "bn5"
-            quadTextureSprite = "GFX_nuke_btn"
-            position = {x = -118 y = 320}
+            quadTextureSprite = "GFX_btn_5"
+            position = {x = -130 y = 320}
         }
     }
 
     containerWindowType = {
         name = "nuke_per_state_dial"
-        position = { x = -315 y = 100 }	
+        position = { x = -405 y = 100 }	
+        size = {width = 300 height = 150}
+        clipping = yes
 
         iconType = {
             name = "half_dial_back"
             spriteType = "GFX_Dial_Back_Half"
             position = { x = 0 y = 0 }
+            alwaystransparent = yes
         }
         iconType = {
             name = "half_dial_hand"
@@ -202,12 +216,12 @@ guiTypes = {
         buttonType = {
             name = "left_button"
             spriteType = "GFX_production_line_arrow_left"
-            position = { x = 20 y = 120 }
+            position = { x = 40 y = 120 }
         }
         buttonType = {
             name = "right_button"
             spriteType = "GFX_production_line_arrow_right"
-            position = { x = 150 y = 120 }
+            position = { x = 130 y = 120 }
         }
     }
 }

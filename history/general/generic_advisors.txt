@@ -106,7 +106,7 @@ every_possible_country = {
 		token_base = generic_army_chief_off # token will be TAG_token_base
 		advisor = {
 			slot = army_chief
-			traits = { army_chief_offensive_1 }
+			traits = { army_chief_offensive_2 }
 			cost = 50
 		}
 		portraits = { 
@@ -117,7 +117,7 @@ every_possible_country = {
 		token_base = generic_army_chief_def # token will be TAG_token_base
 		advisor = {
 			slot = army_chief
-			traits = { army_chief_defensive_1 }
+			traits = { army_chief_defensive_2 }
 			cost = 50
 		}
 		portraits = { 

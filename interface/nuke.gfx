@@ -1,12 +1,91 @@
 spriteTypes = {
     SpriteType = {
+		name = "GFX_nuke_bscreen"
+		texturefile = "gfx/interface/custom_gui/screen.dds"
+	}
+    SpriteType = {
 		name = "GFX_nuke_red_btn"
 		texturefile = "gfx/interface/custom_gui/nuke_red_btn.dds"
 	}
     SpriteType = {
-		name = "GFX_nuke_btn"
-		texturefile = "gfx/interface/custom_gui/nuke_btn.dds"
+		name = "GFX_buildings_ordered"
+		texturefile = "gfx/interface/custom_gui/building_ordered.dds"
         noOfFrames = 15
+	}
+    SpriteType = {
+		name = "GFX_btn_1"
+		texturefile = "gfx/interface/custom_gui/btn_1.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_2"
+		texturefile = "gfx/interface/custom_gui/btn_2.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_3"
+		texturefile = "gfx/interface/custom_gui/btn_3.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_4"
+		texturefile = "gfx/interface/custom_gui/btn_4.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_5"
+		texturefile = "gfx/interface/custom_gui/btn_5.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_6"
+		texturefile = "gfx/interface/custom_gui/btn_6.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_7"
+		texturefile = "gfx/interface/custom_gui/btn_7.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_8"
+		texturefile = "gfx/interface/custom_gui/btn_8.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_9"
+		texturefile = "gfx/interface/custom_gui/btn_9.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_10"
+		texturefile = "gfx/interface/custom_gui/btn_10.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_11"
+		texturefile = "gfx/interface/custom_gui/btn_11.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_12"
+		texturefile = "gfx/interface/custom_gui/btn_12.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_13"
+		texturefile = "gfx/interface/custom_gui/btn_13.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_14"
+		texturefile = "gfx/interface/custom_gui/btn_14.dds"
+        noOfFrames = 2
+	}
+    SpriteType = {
+		name = "GFX_btn_15"
+		texturefile = "gfx/interface/custom_gui/btn_15.dds"
+        noOfFrames = 2
 	}
     SpriteType = {
 		name = "GFX_nuke_bg"

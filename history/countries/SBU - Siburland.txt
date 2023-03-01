@@ -91,6 +91,11 @@ set_popularities = {
 	neutrality = 4
 }
 
+recruit_character = SBU_darko_dikrich
+
+recruit_character = SBU_vitutas_bredikis
+
+recruit_character = SBU_vader_sveril
 
 recruit_character = SBU_ombihunt_yantes
 
