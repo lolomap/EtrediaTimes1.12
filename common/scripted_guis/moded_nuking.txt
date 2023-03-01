@@ -14,7 +14,7 @@ scripted_gui = {
                     if = {
                         limit = {OWNER = {is_in_array = {ROOT.nuke_possible = THIS}}}
                         if = {
-                            limit = {OWNER = {every_owned_state = {NOT = {has_state_flag = nuke_target_for_@ROOT}}}}
+                            limit = {OWNER = {all_owned_state = {NOT = {has_state_flag = nuke_target_for_@ROOT}}}}
                             remove_from_array = {ROOT.nuke_possible = OWNER}
                         }
                     }
@@ -131,19 +131,28 @@ scripted_gui = {
                         }
                         
                         divide_temp_variable = {nukes_reached = 2}
-                        subtract_from_temp_variable = {nukes_reached = 0.5}
+                        round_temp_variable = nukes_reached
 
                         if = {
-                            limit = {check_variable = {nukes_reached > 0}}
+                            limit = {check_variable = {nukes_reached = 0}}
                             set_temp_variable = {nnbr = 1}
                             set_variable_to_random = {var = ROOT.nuke_building min = 1 max = 16 integer = yes}
                         }
 
+                        
+                                log = "[?nukes_reached]"
+                                log = "[building_id_sl]"
                         meta_effect = {
                             text = {
-                                remove_building = {
-                                    type = [BTYPE]
-                                    level = nukes_reached
+                                if = {
+                                    limit = {
+                                        NOT = {check_variable = {nuke_building = 5}}
+                                        NOT = {check_variable = {nuke_building = 7}}
+                                    }
+                                    remove_building = {
+                                        type = [BTYPE]
+                                        level = nukes_reached
+                                    }
                                 }
                             }
                             BTYPE = "[building_id_sl]"
@@ -171,6 +180,10 @@ scripted_gui = {
             right_button_click_enabled = {  
                 check_variable = {nuke_possible^num > 0}
             }
+
+            currentB_visible = {check_variable = {nuke_building > 0}}
+            btn5_click_enabled = {always = no}
+            btn7_click_enabled = {always = no}
         }
 
         properties = {
