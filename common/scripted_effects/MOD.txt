@@ -2,6 +2,12 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
+11 = {
+    remove_building = {
+    type = supply_node
+    level = 1
+    }
+    }
 }
 
 ####

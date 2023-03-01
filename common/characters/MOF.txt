@@ -59,8 +59,8 @@ characters={
         name="Alexandra Rybka"
 		portraits={
 			civilian={
-				large="GFX_portrait_unknown"
-                small="GFX_portrait_unknown"
+				large= GFX_portrait_unknown
+                small= GFX_idea_generic_democratic_reformer
 			}
 		}
 
@@ -68,6 +68,14 @@ characters={
             slot = political_advisor
             idea_token = alexandra_rybka
             ledger = civilian
+
+            allowed = {
+				original_tag = MOF
+			}
+			available = {
+				not = {country_exists = EMF}
+			}
+			traits = { fascist_demagogue }
         }
 		country_leader={
 			ideology=nazism

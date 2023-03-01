@@ -1,9 +1,66 @@
 characters={
+    SBU_vader_sveril = {
+        name=vader_sveril
+		portraits={
+			civilian={
+                small= GFX_idea_generic_democratic_reformer
+			}
+		}
+
+        advisor = {
+            slot = political_advisor
+            modifier = {
+                drift_defence_factor = 0.1
+				stability_factor = 0.05
+            }
+            ledger = civilian
+            idea_token = vader_sveril
+        }
+    }
+    SBU_vitutas_bredikis = {
+        name=vitutas_bredikis
+		portraits={
+			army={
+                small= GFX_idea_generic_democratic_reformer
+			}
+		}
+
+        advisor = {
+            slot = army_chief
+            cost = 175
+            modifier = {
+                army_fuel_consumption_factor = -0.1
+                air_fuel_consumption_factor = -0.05
+                supply_consumption_factor = -0.05
+            }
+            idea_token = vitutas_bredikis
+        }
+    }
+    SBU_darko_dikrich = {
+        name=darko_dikrich
+		portraits={
+			army={
+                small= GFX_idea_generic_democratic_reformer
+			}
+		}
+
+        advisor = {
+            slot = navy_chief
+            modifier = {
+                invasion_preparation = -0.1
+                naval_detection = 0.1
+            }
+            idea_token = darko_dikrich
+        }
+    }
+
+
 	SBU_alexech_aalankat={
-		name="Alexech Aalankat"
+		name=alexech_aalankat
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
+                small= GFX_idea_generic_democratic_reformer
 			}
 		}
 		country_leader={
@@ -11,12 +68,23 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+        advisor = {
+            slot = political_advisor
+            ledger = civilian
+            cost = 200
+            modifier = {
+                stability_factor = 0.1
+            }
+            traits = {democratic_reformer}
+            idea_token = alexech_aalankat
+        }
 	}
 	SBU_charvik_klyachek={
-		name="Charvik Klyachek"
+		name=charvik_klyachek
 		portraits={
 			civilian={
 				large="gfx/leaders/SBU/Portrait_sbu_klyachek.dds"
+                small= GFX_idea_generic_democratic_reformer
 			}
 		}
 		country_leader={
@@ -24,6 +92,16 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+        
+        advisor = {
+            slot = political_advisor
+            ledger = civilian
+            modifier = {
+                political_power_gain = 0.2
+				drift_defence_factor = -0.1
+            }
+            idea_token = charvik_klyachek
+        }
 	}
 	SBU_iret_kolert={
 		name="Iret Kolert"
