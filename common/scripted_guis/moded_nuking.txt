@@ -182,8 +182,8 @@ scripted_gui = {
             }
 
             currentB_visible = {check_variable = {nuke_building > 0}}
-            btn5_click_enabled = {always = no}
-            btn7_click_enabled = {always = no}
+            bn5_click_enabled = {always = no}
+            bsn7_click_enabled = {always = no}
         }
 
         properties = {
