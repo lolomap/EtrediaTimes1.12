@@ -1,4 +1,22 @@
-﻿l_english:
+﻿l_english: 
+ ZHE_anti_koul:0 "Mutual Aid Block"
+ sbu_org_new_faction: "SET"
+ NIBA_FRONT: "Lordin-Arstildian Front"
+ USB_scuit_ally:0 "Ethredian Commonwealth"
+ AYK_blog_ally:0 "Eastern Block"
+ YAN_swea_faction:0 "SWEA"
+ ZAZ_faction:0 "Belgatte Block"
+ moa_block:0 "Southern Defensive Block"
+ Kouli:0 "Kouli Empire"
+ SFL_communist_party:0 "People's Ethredian Pact"
+ SFL_savatia_pact:0 "Sevastian Pact"
+ SBU_anti_yan:0 "Anti-Yanthal Coalition"
+ SBU_fascist_action:0 "Central Ethredian Alliance"
+ SBU_TRB_monarch_faction:0 "Savvati Pact"
+ ORT_KINGDOM:0 "Kingdom of Orthostan"
+ YAN_democratic_action:0 "Yanthalian Block"
+ USB_EVRO_GRAND_ETREDIA:0 "Trans-Ethredian Block"
+ 
  FACTION_LEADER:0 "Faction leader: §Y$COUNTRY$§!"
  FACTION_MEMBER:0 "Faction member: §Y$COUNTRY$§!"
  FACTION_CREATED_UNDER_MASTER_TITLE:0 "Joined Master's Faction"
