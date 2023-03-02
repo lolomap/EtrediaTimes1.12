@@ -18,4 +18,10 @@ spriteTypes = {
         texturefile = "gfx/interface/diplo_countrylist_flag_frame_mini.dds"
         noOfFrames = 2
     }
+
+    spriteType = {
+		name = "GFX_resources_strip"
+		texturefile = "gfx/interface/resources_strip.dds"
+		noOfFrames = 7
+	}
 }
