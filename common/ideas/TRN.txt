@@ -1,0 +1,32 @@
+ideas = {
+    country = {	
+	    corp_influence = {
+        picture = generic_spy_coup
+	        allowed = {
+			    always = no
+		    }
+		    removal_cost = -1
+			
+		    modifier = {
+				political_power_factor = -0.15
+				command_power_gain_mult = -0.15
+		    }
+	    }
+		
+	    thousand_year_of_failure = {
+        picture = the_war_to_end_all_wars
+	        allowed = {
+			    always = no
+		    }
+		    removal_cost = -1
+			
+		    modifier = {
+				ai_focus_defense_factor = 0.5
+				mobilization_laws_cost_factor = 1
+				war_support_factor = -0.35
+				surrender_limit = -0.1
+				conscription_factor = -0.25
+		    }
+	    }
+    }
+}

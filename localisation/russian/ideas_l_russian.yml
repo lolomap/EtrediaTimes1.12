@@ -3,6 +3,9 @@
  corruption_laws: "Уровень коррупции"
  stability_modifiers: "Уровень легитимности"
  political_form: "Политический строй"
+ 
+ corp_influence:0 "Власть корпораций"
+ thousand_year_of_failure:0 "1000 лет неудач"
 
  SFL_tradewar_g20: "Положение в торговой войне"
  SFL_tradewar_g40: "Положение в торговой войне"
