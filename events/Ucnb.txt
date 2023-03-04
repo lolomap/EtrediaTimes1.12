@@ -404,13 +404,8 @@ country_event = {
 	option = {
 		name = ucnb.15.a
             UCB = {
-            add_to_faction = DIR
-            }
-            UCB = {
             add_to_faction = DEM
             }
-		add_opinion_modifier = { target = DIR modifier = rtt_ucb_deal }
-	DIR = {	add_opinion_modifier = { target = UCB modifier = rtt_ucb_deal } }
 	ai_chance = { factor = 100 }
 	}
 	option = {
