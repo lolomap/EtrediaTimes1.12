@@ -12,16 +12,16 @@ state={
 		owner = BAR
 		buildings = {
 			infrastructure = 1
-			872 = {
+			614 = {
 				naval_base = 2
 			}
-			937 = {
+			671 = {
 				naval_base = 1
 			}
 		}
 		add_core_of = BAR
 		victory_points = {
-			872 1
+			614 1
 		}
 
 	}

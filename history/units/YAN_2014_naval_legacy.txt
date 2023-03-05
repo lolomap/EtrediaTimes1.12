@@ -65,7 +65,7 @@ units = {
 		}					
 		task_force = {					
 			name = "First Submarine Unity"				
-			location = 6315
+			location = 6184
 			ship = { name = "SYAN Dryer" definition = submarine equipment = { submarine_1 = { amount = 1 owner = YAN } } }
 			ship = { name = "SYAN Troll" definition = submarine equipment = { submarine_1 = { amount = 1 owner = YAN } } }
 			ship = { name = "SYAN Gerald" definition = submarine equipment = { submarine_1 = { amount = 1 owner = YAN } } }
