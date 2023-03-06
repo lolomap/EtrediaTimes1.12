@@ -144,7 +144,7 @@ etredia_ach_16 = { #
 	}
 }
 
-etredia_ach_17 = {
+etredia_ach_17 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -153,7 +153,7 @@ etredia_ach_17 = {
 	}
 }
 
-etredia_ach_18 = {
+etredia_ach_18 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -162,7 +162,7 @@ etredia_ach_18 = {
 	}
 }
 
-etredia_ach_19 = {
+etredia_ach_19 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -171,12 +171,12 @@ etredia_ach_19 = {
 	}
 }
 
-etredia_ach_20 = {
+etredia_ach_20 = {#
 	possible = {
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = minor_ach}
+		hidden_trigger = {has_global_flag = minor_ach}
 	}
 }
 
@@ -207,16 +207,16 @@ etredia_ach_23 = {
 	}
 }
 
-etredia_ach_24 = {
+etredia_ach_24 = { #
 	possible = {
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = friendship_ach}
+		hidden_trigger = {has_global_flag = friendship_ach}
 	}
 }
 
-etredia_ach_25 = {
+etredia_ach_25 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -234,7 +234,7 @@ etredia_ach_26 = {
 	}
 }
 
-etredia_ach_27 = {
+etredia_ach_27 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -243,7 +243,7 @@ etredia_ach_27 = {
 	}
 }
 
-etredia_ach_28 = {
+etredia_ach_28 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -252,7 +252,7 @@ etredia_ach_28 = {
 	}
 }
 
-etredia_ach_29 = {
+etredia_ach_29 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -261,7 +261,7 @@ etredia_ach_29 = {
 	}
 }
 
-etredia_ach_30 = {
+etredia_ach_30 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -270,7 +270,7 @@ etredia_ach_30 = {
 	}
 }
 
-etredia_ach_31 = {
+etredia_ach_31 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -279,7 +279,7 @@ etredia_ach_31 = {
 	}
 }
 
-etredia_ach_32 = {
+etredia_ach_32 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -288,7 +288,7 @@ etredia_ach_32 = {
 	}
 }
 
-etredia_ach_33 = {
+etredia_ach_33 = { #
 	possible = {
 		achievs_available = yes
 	}

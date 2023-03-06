@@ -1,5 +1,5 @@
 ucb_region_ideology = {
-	icon = regionalism
+	icon = GFX_idea_regionalism
 	
 	democratic_drift = ucb_reg_dem
 	fascism_drift = ucb_reg_fas
