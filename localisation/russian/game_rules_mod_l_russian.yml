@@ -1,5 +1,7 @@
 ﻿l_russian:
+  RULE_GROUP_MOD: "Механики"
   RULE_ALLOW_CRYSIS:0 "Разрешить полит. кризисы"
+  RULE_ALLOW_FORCE_EMBARGO:0 "Разрешить принуждение к эмбарго"
   RULE_ALLOW_NUKING:0 "Разрешить ядерные удары"
   
 
@@ -12,3 +14,14 @@
   SBU_AI_BEHAVIOR:0 "Сибурленд"
   SFL_AI_BEHAVIOR:0 "Саффлия"
   IID_AI_BEHAVIOR:0 "ИИД"
+
+  custom_diff_strong_eik:0 "Усилить Эйклиндстинд"
+  custom_diff_strong_yan:0 "Усилить Янтхалию"
+  custom_diff_strong_che:0 "Усилить Чеспень"
+  custom_diff_strong_sfl:0 "Усилить Саффлию"
+  custom_diff_strong_sbu:0 "Усилить Сибурленд"
+  custom_diff_strong_ucb:0 "Усилить ОсНБ"
+  custom_diff_strong_dir:0 "Усилить Дирию"
+  custom_diff_strong_tol:0 "Усилить Толчкоград"
+  custom_diff_strong_klu:0 "Усилить Коульскую Империю"
+  custom_diff_strong_kar:0 "Усилить Картилию"

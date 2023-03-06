@@ -296,8 +296,10 @@ scripted_gui = {
                     set_country_flag = cr_ai_completed
                     if = {
                         limit = {check_variable = {global.cr_press_clicked > 1}}
-                        force_press = yes
+                        #force_press = yes
                         var:sender_crysis = {country_event = {id = mechanics.36 days = 2}}
+                        #set_variable = {global.crysis_timer = 101}
+                        
                     }
                 }
                 else = {
