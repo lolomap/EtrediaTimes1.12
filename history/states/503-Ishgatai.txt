@@ -13,8 +13,6 @@ state={
 		owner = KAS
 		buildings = {
 			infrastructure = 1
-                        industrial_complex = 0
-                        arms_facotry = 0
 		}
 		add_core_of = KAS
 		add_core_of = NSH
