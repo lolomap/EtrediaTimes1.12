@@ -104,7 +104,7 @@ guiTypes = {
             name = "crysis_window_maximize"
             spriteType = "GFX_casuality_icon"
             frame = 2
-            position = { x=538 y=35 }
+            position = { x=965 y=3 }
         }
 
 		iconType ={

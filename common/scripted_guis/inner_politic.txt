@@ -1,10 +1,75 @@
 scripted_gui = {
+    UCB_politic_button = {
+		window_name = "UCB_inner_politic_window"
+		context_type = player_context
+		parent_window_token = politics_tab
+
+		visible = {original_tag = UCB}
+
+		effects = {
+			party_button_click = {
+				#add_political_power = 10
+				if = {
+					limit = {not = {has_country_flag = inner_politic_window_opened}}
+					set_country_flag = inner_politic_window_opened
+				}
+				else = {
+					clr_country_flag = inner_politic_window_opened
+				}
+			}
+		}		
+	}
+    UCB_inner_politic = {
+		window_name = "UCB_inner_politic_opened_window"
+		context_type = player_context
+
+		visible = {
+			has_country_flag = inner_politic_window_opened
+            original_tag = UCB
+		}
+
+
+		effects = {
+            ip_winmode_button_click = {
+                clr_country_flag = inner_politic_window_opened
+            }
+		}
+
+		triggers = {
+		}
+
+        properties = {
+            cFlag = {
+                image = "[THIS.GetFlag]"
+            }
+        }
+
+        dynamic_lists = {
+            ucb_region_gb = {
+                array = UCB.minor_countries
+				entry_container = UCB_region_info_window
+				change_scope = yes
+                #value = v
+            }
+        }
+	}
+
+
+
+
+
+
+
+
+
+
+
 	politic_button = {
 		window_name = "inner_politic_window"
 		context_type = player_context
 		parent_window_token = politics_tab
 
-		visible = {always = yes}
+		visible = {NOT = {original_tag = UCB}}
 
 		effects = {
 			party_button_click = {
@@ -26,6 +91,7 @@ scripted_gui = {
 
 		visible = {
 			has_country_flag = inner_politic_window_opened
+            NOT = {original_tag = UCB}
 		}
 
 
@@ -45,6 +111,10 @@ scripted_gui = {
 			party_mon_incident_btn_click = {
 				country_event = mechanics.8
 			}
+
+            ip_winmode_button_click = {
+                clr_country_flag = inner_politic_window_opened
+            }
 		}
 
 		triggers = {

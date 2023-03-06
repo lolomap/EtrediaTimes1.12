@@ -1,0 +1,97 @@
+guiTypes = {
+    containerWindowType = {
+        name = "UCB_region_info_window"
+        position = {x = 0 y = 0}
+        size = {width = 580 height = 200}
+        clipping = yes
+
+        background = {
+            quadTextureSprite = "GFX_tiled_bg_1_scrollbar"
+        }
+
+        
+        buttonType = {
+            name = "cFlag"
+            quadTextureSprite = "GFX_flag_small2"
+            position = {x = 200 y = 37}
+        }
+
+        iconType = {
+            name = "cFlagBorder"
+            quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+            position = {x = 196 y = 34}
+            alwaystransparent = yes
+        }
+
+        instantTextBoxType = {
+            name = "cName"
+            position = {x = 255 y = 42}
+            text = "[?v.GetNameDef]"
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+        }
+    }
+
+	containerWindowType = {
+		name = "UCB_inner_politic_window"
+		position = {x=0 y=0}
+		orientation = upper_left
+		size = { width=436 height=496 }
+
+		buttonType = {
+			name = "party_button"
+			position = {x = 355 y = 10}
+			quadTextureSprite = "GFX_button_94x31"
+
+			buttonText = UCB_parties_button_loc
+			buttonFont = hoi_18mbs
+		}
+	}
+
+	containerWindowType = {
+		name = "UCB_inner_politic_opened_window"
+		position = { x=550 y=300 }	
+		orientation = UPPER_LEFT
+		moveable = yes
+		size = {width = 650 height = 600}
+		margin = {
+			top = 6
+			left = 0
+			bottom = 5
+			right = 0
+		}
+
+		clipping = yes
+        
+        verticalScrollbar = "right_vertical_slider"
+
+		background = { 
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
+		}
+
+        buttonType = {
+			name = "ip_winmode_button"
+			quadTextureSprite = "GFX_cancel_button"
+			position = {x = 10 y = 0}
+		}
+
+		instantTextBoxType = {
+			name = "parties_header"
+			text = UCB_parties_header_loc
+			position {x = 230 y = 15}
+			maxWidth = 500
+			font = hoi_36header
+		}
+
+		gridboxtype = {
+			name = "ucb_region_gb"
+			position = {x = 20 y = 60}
+			orientation = "UPPER_LEFT"
+			size = {width = 600 height = 500}
+			slotsize = {width = 600 height = 200}
+			add_horizontal = no
+		}
+	}
+}

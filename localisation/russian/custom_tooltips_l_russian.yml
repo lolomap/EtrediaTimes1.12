@@ -30,6 +30,9 @@
   politform_change_available: "Доступно изменение политического строя"
   corruption_cost_10_tooltip: "Стоимость антикоррупционных мероприятий: §R+10%§!"
   reduce_pfchange_cost: "Сокращает смену политического строя до §Y30§! дней"
+
+  change_region_ideology_factor_tooltip: "Влияние регионов на идеологию: $RIGHT|Y=$"
+  add_region_democratic_tooltip: "Демократия в регионе: $RIGHT|Y=$"
   
   YAN_planes_production_tooltip:0 "Станет доступен концерн «CVT_Toika»"
   YAN_tank_concern:0 "Станет доступен концерн «CREDORA»"

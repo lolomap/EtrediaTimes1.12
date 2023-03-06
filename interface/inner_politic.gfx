@@ -7,4 +7,12 @@ spriteTypes = {
 		name = "GFX_party_discussion_button"
 		texturefile = "gfx/interface/party_discussion_button.dds"
 	}
+    SpriteType = {
+		name = "GFX_bop_UCB_president_side"
+		texturefile = "gfx/interface/bop/bop_UCB_president_side.dds"
+	}
+    SpriteType = {
+		name = "GFX_bop_UCB_parlament_side"
+		texturefile = "gfx/interface/bop/bop_UCB_parlament_side.dds"
+	}
 }

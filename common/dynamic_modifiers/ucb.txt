@@ -1,0 +1,10 @@
+ucb_region_ideology = {
+	icon = regionalism
+	
+	democratic_drift = ucb_reg_dem
+	fascism_drift = ucb_reg_fas
+	communism_drift = ucb_reg_com
+	neutrality_drift = ucb_reg_neu
+	monarchism_drift = ucb_reg_mon
+	
+}

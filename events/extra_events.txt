@@ -1055,7 +1055,7 @@ country_event = {	# ивенты от стабки на изменение си�
 
 	mean_time_to_happen = {days = 30}
 
-	#trigger = {is_ai = no}
+	trigger = {NOT = {original_tag = UCB}}
 	hidden = yes
 
 	option = {name = mechanics.11.a}

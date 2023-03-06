@@ -4,6 +4,29 @@ defined_text = {
 }
 
 defined_text = {
+    name = region_ideology
+    text = {
+        trigger = {check_variable = {UCB.max_i_@THIS = 1}}
+        localization_key = i_fa
+    }
+    text = {
+        trigger = {check_variable = {UCB.max_i_@THIS = 2}}
+        localization_key = i_co
+    }
+    text = {
+        trigger = {check_variable = {UCB.max_i_@THIS = 3}}
+        localization_key = i_ne
+    }
+    text = {
+        trigger = {check_variable = {UCB.max_i_@THIS = 4}}
+        localization_key = i_mo
+    }
+    text = {
+        localization_key = i_dm
+    }
+}
+
+defined_text = {
     name = building_id_sl
     text = { trigger = {check_variable = {ROOT.nuke_building = 15}}
         localization_key = "nuclear_reactor"

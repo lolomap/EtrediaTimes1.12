@@ -126,13 +126,45 @@ on_actions = {
 				}
 			}
 
-            UCB = {
-                country_event = {id = ucnb.26 days = 790}
-            }
-
-			every_country = {
+            every_country = {
                 encount_minors = yes
 			}
+
+            UCB = {
+                country_event = {id = ucnb.26 days = 790}
+                set_power_balance = {
+                    id = UCB_parlament_balance
+                    left_side = UCB_parlament_side
+                    right_side = UCB_president_side
+                    set_value = -0.3
+                }
+				add_dynamic_modifier = {modifier = ucb_region_ideology}
+
+                for_each_scope_loop = {
+                    array = minor_countries
+                    UCB = {
+                        set_temp_variable = {rest_rand = 1}
+                        set_variable = {max_i_@PREV = 0}
+                        set_temp_variable = {maxi = 0}
+                        set_variable_to_random = dem_@PREV set_temp_variable = {maxi = dem_@PREV}
+                        subtract_from_temp_variable = {rest_rand = dem_@PREV}
+                        set_variable_to_random = {var = fas_@PREV max = rest_rand}
+                        if = {limit = {check_variable = {fas_@PREV > maxi}} set_variable = {max_i_@PREV = 1} set_temp_variable = {maxi = fas_@PREV}}
+                        subtract_from_temp_variable = {rest_rand = fas_@PREV}
+                        set_variable_to_random = {var = com_@PREV max = rest_rand}
+                        if = {limit = {check_variable = {com_@PREV > maxi}} set_variable = {max_i_@PREV = 2} set_temp_variable = {maxi = com_@PREV}}
+                        subtract_from_temp_variable = {rest_rand = com_@PREV}
+                        set_variable_to_random = {var = neu_@PREV max = rest_rand}
+                        if = {limit = {check_variable = {neu_@PREV > maxi}} set_variable = {max_i_@PREV = 3} set_temp_variable = {maxi = neu_@PREV}}
+                        subtract_from_temp_variable = {rest_rand = neu_@PREV}
+                        set_variable = {mon_@PREV = rest_rand}
+                        if = {limit = {check_variable = {mon_@PREV > maxi}} set_variable = {max_i_@PREV = 4} set_temp_variable = {maxi = mon_@PREV}}
+
+                        set_variable_to_random = oppos_@PREV
+                        set_variable_to_random = {var = sep_@PREV max = 0.5}
+                    }
+                }
+            }
 
 
 			#########################
@@ -1058,6 +1090,40 @@ on_actions = {
         }
     }
 
+	on_weekly_UCB = {  
+		effect = {
+			set_variable = {ucb_reg_dem = 0}
+			set_variable = {ucb_reg_fas = 0}
+			set_variable = {ucb_reg_com = 0}
+			set_variable = {ucb_reg_neu = 0}
+			set_variable = {ucb_reg_mon = 0}
+
+			for_each_scope_loop = {
+				array = minor_countries
+				UCB = {
+					if = {
+						limit = {check_variable = {max_i_@PREV = 0}}
+						add_to_variable = {ucb_reg_dem = region_ideology_factor}
+					}
+                    else_if = {
+						limit = {check_variable = {max_i_@PREV = 1}}
+						add_to_variable = {ucb_reg_fas = region_ideology_factor}
+					}
+                    else_if = {
+						limit = {check_variable = {max_i_@PREV = 2}}
+						add_to_variable = {ucb_reg_com = region_ideology_factor}
+					}
+                    else_if = {
+						limit = {check_variable = {max_i_@PREV = 3}}
+						add_to_variable = {ucb_reg_neu = region_ideology_factor}
+					}
+                    else = {
+						add_to_variable = {ucb_reg_mon = region_ideology_factor}
+					}
+				}
+			}
+		}
+	}
 
 	on_weekly = {
 		effect = {

@@ -1,0 +1,109 @@
+# Scripted GUI Pie Chart example by Yard1
+# Feel free to use in your mods, but give credits to Yard1 (both in code, with comments; and on your download page)
+
+guiTypes = {
+	containerWindowType = {
+        name = "UCB_region_info_window"
+        position = {x = 0 y = 0}
+        size = {width = 580 height = 200}
+        clipping = yes
+
+        background = {
+            quadTextureSprite = "GFX_tiled_bg_1_scrollbar"
+        }
+
+        
+        buttonType = {
+            name = "cFlag"
+            quadTextureSprite = "GFX_flag_small2"
+            position = {x = 200 y = 37}
+        }
+
+        iconType = {
+            name = "cFlagBorder"
+            quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+            position = {x = 196 y = 34}
+            alwaystransparent = yes
+        }
+
+        instantTextBoxType = {
+            name = "cName"
+            position = {x = 255 y = 42}
+            text = "[THIS.GetNameDef]"
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+        }
+
+        instantTextBoxType = {
+            name = "dem"
+            position = {x = 30 y = 42}
+            text = dem_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "fas"
+            position = {x = 30 y = 62}
+            text = fas_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "com"
+            position = {x = 30 y = 82}
+            text = com_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "neu"
+            position = {x = 30 y = 102}
+            text = neu_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextBoxType = {
+            name = "mon"
+            position = {x = 30 y = 122}
+            text = mon_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+        }
+
+        instantTextBoxType = {
+            name = "opposition"
+            position = {x = 200 y = 72}
+            text = opp_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+            maxWidth = 300
+        }
+        instantTextBoxType = {
+            name = "separatism"
+            position = {x = 200 y = 92}
+            text = sep_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+            maxWidth = 300
+        }
+        instantTextBoxType = {
+            name = "change"
+            position = {x = 200 y = 112}
+            text = change_region_l
+            font = hoi_18mbs
+            format = left
+            alwaystransparent = yes
+            maxWidth = 300
+        }
+    }
+
+    
+}

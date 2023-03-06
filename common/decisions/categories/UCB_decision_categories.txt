@@ -5,3 +5,5 @@ UCB_subj_integration = {
 	}
     allowed = {tag = UCB}
 }
+
+UCB_bop_category = {allowed = {tag = UCB}}

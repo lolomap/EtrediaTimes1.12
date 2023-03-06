@@ -1,0 +1,79 @@
+UCB_parlament_balance = {
+    initial_value = 0
+    left_side = UCB_parlament_side
+    right_side = UCB_president_side
+    decision_category = UCB_bop_category
+
+    side = {
+        id = UCB_parlament_side
+        icon = GFX_bop_UCB_parlament_side
+        range = {
+            id = UCB_parlament_total_range
+			min = -1
+			max = -0.9
+			on_activate = {
+				set_variable = {
+					var = region_ideology_factor
+					value = 0.1
+					tooltip = change_region_ideology_factor_tooltip
+				}
+			}
+
+			modifier = {
+				disabled_ideas = 1
+			}
+        }
+		range = {
+            id = UCB_parlament_mid_range
+			min = -0.9
+			max = -0.5
+			on_activate = {
+				set_variable = {
+					var = region_ideology_factor
+					value = 0.06
+					tooltip = change_region_ideology_factor_tooltip
+				}
+			}
+        }
+        range = {
+            id = UCB_parlament_range
+			min = -0.5
+			max = 0
+
+			on_activate = {
+				set_variable = {
+					var = region_ideology_factor
+					value = 0.03
+					tooltip = change_region_ideology_factor_tooltip
+				}
+			}
+        }
+    }
+
+    side = {
+        id = UCB_president_side
+        icon = GFX_bop_UCB_president_side
+        range = {
+            id = UCB_president_total_range
+			min = 0.9
+			max = 1
+        }
+		range = {
+            id = UCB_president_mid_range
+			min = 0.5
+			max = 0.9
+        }
+        range = {
+            id = UCB_president_range
+			min = 0
+			max = 0.5
+			on_activate = {
+				set_variable = {
+					var = region_ideology_factor
+					value = 0.01
+					tooltip = change_region_ideology_factor_tooltip
+				}
+			}
+        }
+    }
+}

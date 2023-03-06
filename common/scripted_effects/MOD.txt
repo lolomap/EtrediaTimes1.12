@@ -2,15 +2,52 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-11 = {
-    remove_building = {
-    type = supply_node
-    level = 1
-    }
-    }
+    add_power_balance_value = {
+    id = ucb_parlament_balance
+    value = -1
+}
 }
 
 ####
+
+boost_region_dem = {
+    add_to_variable = {var = UCB.dem_@THIS value = temp tooltip = add_region_democratic_tooltip}
+    set_temp_variable = {to_reduce = temp}
+    if = {
+        limit = {check_variable = {UCB.fas_@THIS < to_reduce}}
+        subtract_from_temp_variable = {to_reduce = UCB.fas_@THIS}
+        set_variable = {UCB.fas_@THIS = 0}
+
+        if = {
+            limit = {check_variable = {UCB.com_@THIS < to_reduce}}
+            subtract_from_temp_variable = {to_reduce = UCB.com_@THIS}
+            set_variable = {UCB.com_@THIS = 0}
+
+            if = {
+                limit = {check_variable = {UCB.neu_@THIS < to_reduce}}
+                subtract_from_temp_variable = {to_reduce = UCB.neu_@THIS}
+                set_variable = {UCB.neu_@THIS = 0}
+
+                if = {
+                    limit = {check_variable = {UCB.mon_@THIS < to_reduce}}
+                    set_variable = {UCB.mon_@THIS = 0}
+                }
+                else = {
+                    subtract_from_variable = {UCB.mon_@THIS = to_reduce}
+                }
+            }
+            else = {
+                subtract_from_variable = {UCB.neu_@THIS = to_reduce}
+            }
+        }
+        else = {
+            subtract_from_variable = {UCB.com_@THIS = to_reduce}
+        }
+    }
+    else = {
+        subtract_from_variable = {UCB.fas_@THIS = to_reduce}
+    }
+}
 
 delete_dirian_militia = {
     delete_units = {

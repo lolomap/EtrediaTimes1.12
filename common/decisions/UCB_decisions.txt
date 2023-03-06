@@ -41,3 +41,21 @@ UCB_subj_integration = {
 		ai_will_do = {factor = 1000}
 	}
 }
+UCB_bop_category = {
+    UCB_boost_ideology = {
+        cost = 75
+        days_remove = 30
+        modifier = {
+            power_balance_daily = 0.001
+        }
+        remove_effect = {
+            UCB = {
+                random_scope_in_array = {
+                    array = minor_countries
+                    set_temp_variable = {temp = 0.15}
+                    boost_region_dem = yes
+                }
+            }
+        }
+    }
+}

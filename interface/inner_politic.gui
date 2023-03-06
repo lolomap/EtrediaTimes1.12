@@ -7,7 +7,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "party_button"
-			position = {x = 425 y = 255}
+			position = {x = 355 y = 10}
 			quadTextureSprite = "GFX_button_94x31"
 
 			buttonText = parties_button_loc
@@ -17,7 +17,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "inner_politic_opened_window"
-		position = { x=0 y=0 }	
+		position = { x=550 y=300 }	
 		orientation = UPPER_LEFT
 		moveable = yes
 		size = {width = 650 height = 600}
@@ -33,6 +33,12 @@ guiTypes = {
 		background = { 
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
+		}
+
+        buttonType = {
+			name = "ip_winmode_button"
+			quadTextureSprite = "GFX_cancel_button"
+			position = {x = 10 y = 0}
 		}
 
 		instantTextBoxType = {
