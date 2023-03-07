@@ -1483,7 +1483,8 @@ country_event = {
             add_to_variable = {global.crysis_timer = 1.666}
             var:global.sender_crysis = {country_event = {id = mechanics.37 days = 1}}
         }
-        else = {
+        else_if = {
+            limit = {check_variable = {global.crysis_timer > 100}}
             force_press = yes
             var:global.sender_crysis = {country_event = {id = mechanics.36 days = 2}}
         }
@@ -1498,10 +1499,9 @@ country_event = {
 
     trigger = {
         OR = {
-            NOT = {has_global_flag = war_crysis
-                var:global.sender_crysis = {surrender_progress < 0.1}
-                crysis_rewardable = no
-            }
+            NOT = {has_global_flag = war_crysis}
+            var:global.sender_crysis = {surrender_progress > 0.1}
+            crysis_rewardable = yes
         }
     }
     mean_time_to_happen = {days = 7}

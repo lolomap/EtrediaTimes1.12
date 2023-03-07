@@ -182,7 +182,10 @@ scripted_diplomatic_actions = {
 			not = {has_war_with = ROOT}
 		}
 		selectable = {
-			
+			has_game_rule = {
+                rule = allow_fembargo
+                option = FREE
+            }
             custom_trigger_tooltip = {
                 tooltip = is_world_influence_more_2
                 set_temp_variable = {razn = ROOT.world_influence}
