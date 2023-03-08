@@ -38,6 +38,13 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
             always = no
         }
     }
+    if = {
+        limit = {has_country_flag = banned_ucb_bop}
+        custom_trigger_tooltip = {
+            tooltip = ALLOW_BANNES_UCB_BOP_tooltip
+            always = no
+        }
+    }
 }
 
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
@@ -48,6 +55,14 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
             always = no
         }
     }
+    if = {
+        limit = {FROM = {has_country_flag = banned_ucb_bop}}
+        custom_trigger_tooltip = {
+            tooltip = ALLOW_BANNED_UCB_BOP_OUT_tooltip
+            always = no
+        }
+    }
+    
 }
 
 DIPLOMACY_CALL_ALL_ALLIES_ENABLE_TRIGGER = {
