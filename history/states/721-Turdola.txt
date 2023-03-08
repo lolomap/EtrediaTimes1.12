@@ -15,13 +15,13 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 			dockyard = 1
-			1783 = {
+			1293 = {
 				naval_base = 1
 			}
 		}
 		add_core_of = BOV
 		victory_points = {
-			1783 5
+			1293 5
 		}
 
 	}

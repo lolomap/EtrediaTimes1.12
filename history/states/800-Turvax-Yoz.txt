@@ -1,0 +1,31 @@
+state={
+	id=800
+	name="STATE_800"
+	manpower = 744000
+	
+	state_category = town
+
+	resources={
+        	steel = 8 # was: 12
+		tungsten = 1 # was: 2
+	}
+
+	history={
+		owner = YBA
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 2
+		}
+		add_core_of = YBA
+		add_claim_by = MIR
+		add_claim_by = ZHI
+		victory_points = {
+			1477 5
+		}
+
+	}
+	provinces={
+		1361 1436 1477 1495 
+	}
+}

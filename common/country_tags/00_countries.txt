@@ -179,3 +179,7 @@ SAN = "countries/Sandubacha.txt"
 EON = "countries/Eontubacha.txt"
 EYC = "countries/Eychen.txt"
 NSH = "countries/Nashka-Tapu.txt"
+
+STB = "countries/Shoruntubval.txt"
+YBA = "countries/Yuzbundbava.txt"
+LFS = "countries/Liberation Front of Sembstvall.txt"

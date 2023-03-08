@@ -1,0 +1,30 @@
+state={
+	id=799
+	name="STATE_799"
+	manpower = 1446000
+	
+	state_category = large_town
+
+	resources={
+        	steel = 4 # was: 14
+		chromium = 9 # was: 16
+	}
+
+	history={
+		owner = LFS
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+			arms_factory = 3
+		}
+		add_core_of = LFS
+		add_claim_by = ZHI
+		victory_points = {
+			1263 5
+		}
+
+	}
+	provinces={
+		1143 1155 1199 1263 1274 1294 1300 
+	}
+}
