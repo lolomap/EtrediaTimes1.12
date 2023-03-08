@@ -56,7 +56,7 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
         }
     }
     if = {
-        limit = {FROM = {has_country_flag = banned_ucb_bop}}
+        limit = {FROM = {has_country_flag = banned_ucb_bop} NOT = {tag = SHE}}
         custom_trigger_tooltip = {
             tooltip = ALLOW_BANNED_UCB_BOP_OUT_tooltip
             always = no
