@@ -164,6 +164,66 @@ on_actions = {
                         set_variable_to_random = {var = sep_@PREV max = 0.5}
                     }
                 }
+
+                #DIN
+                set_variable = {dem_din = 0.6}
+                set_variable = {fas_din = 0.4}
+                set_variable = {com_din = 0}
+                set_variable = {neu_din = 0}
+                set_variable = {mon_din = 0}
+                set_variable = {oppos_din = 0.78}
+                set_variable = {sep_din = 0.3}
+                DIN = {calc_max_ideology = yes}
+
+                #IND
+                set_variable = {dem_ind = 0.9}
+                set_variable = {fas_ind = 0.1}
+                set_variable = {com_ind = 0}
+                set_variable = {neu_ind = 0}
+                set_variable = {mon_ind = 0}
+                set_variable = {oppos_ind = 0.9}
+                set_variable = {sep_ind = 0.02}
+                IND = {calc_max_ideology = yes}
+
+                #KIM
+                set_variable = {dem_kim = 0.3}
+                set_variable = {fas_kim = 0.65}
+                set_variable = {com_kim = 0}
+                set_variable = {neu_kim = 0.05}
+                set_variable = {mon_kim = 0}
+                set_variable = {oppos_kim = 0.35}
+                set_variable = {sep_kim = 0.44}
+                KIM = {calc_max_ideology = yes}
+
+                #KOL
+                set_variable = {dem_kol = 0.16}
+                set_variable = {fas_kol = 0.84}
+                set_variable = {com_kol = 0}
+                set_variable = {neu_kol = 0}
+                set_variable = {mon_kol = 0}
+                set_variable = {oppos_kol = 0.18}
+                set_variable = {sep_kol = 0.55}
+                KOL = {calc_max_ideology = yes}
+
+                #ARS
+                set_variable = {dem_ars = 0.55}
+                set_variable = {fas_ars = 0.45}
+                set_variable = {com_ars = 0}
+                set_variable = {neu_ars = 0}
+                set_variable = {mon_ars = 0}
+                set_variable = {oppos_ars = 0.5}
+                set_variable = {sep_ars = 0.22}
+                ARS = {calc_max_ideology = yes}
+
+                #ORB
+                set_variable = {dem_orb = 0.48}
+                set_variable = {fas_orb = 0.52}
+                set_variable = {com_orb = 0}
+                set_variable = {neu_orb = 0}
+                set_variable = {mon_orb = 0}
+                set_variable = {oppos_orb = 0.48}
+                set_variable = {sep_orb = 0.18}
+                ORB = {calc_max_ideology = yes}
             }
 
 
@@ -1121,6 +1181,49 @@ on_actions = {
 						add_to_variable = {ucb_reg_mon = region_ideology_factor}
 					}
 				}
+
+
+                if = {
+                    limit = {check_variable = {UCB.sep_@THIS > 0.6}}
+                    set_country_flag = sep_sep
+                    every_state = {
+                        limit = {is_core_of = PREV}
+                        force_enable_resistance = UCB
+                        start_resistance = UCB
+                    }
+                }
+                else_if = {
+                    limit = {has_country_flag = sep_sep}
+                    clr_country_flag = sep_sep
+                    every_state = {
+                        limit = {is_core_of = PREV}
+                        force_disable_resistance = UCB
+                        cancel_resistance = UCB
+                    }
+                }
+                if = {
+                    limit = {check_variable = {UCB.sep_@THIS > 0.9}}
+                    UCB = {
+                        set_variable = {country_to_release = PREV}
+                        country_event = {id = onactev.13 days = 1}
+                    }
+                }
+                if = {
+                    limit = {has_idea = UCB_poroh_blet}
+                    random_scope_in_array = {
+                        array = minor_countries
+                        add_to_variable = {UCB.sep_@THIS = 0.05}
+                        clamp_variable = {var = UCB.sep_@THIS max = 1}
+                    }
+                }
+                if = {
+                    limit = {has_idea = UCB_polit_crisis}
+                    random_scope_in_array = {
+                        array = minor_countries
+                        add_to_variable = {UCB.oppos_@THIS = -0.03}
+                        clamp_variable = {var = UCB.oppos_@THIS min = 0}
+                    }
+                }
 			}
 		}
 	}

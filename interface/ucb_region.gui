@@ -78,7 +78,7 @@ guiTypes = {
 
         instantTextBoxType = {
             name = "opposition"
-            position = {x = 200 y = 72}
+            position = {x = 200 y = 92}
             text = opp_region_l
             font = hoi_18mbs
             format = left
@@ -87,7 +87,7 @@ guiTypes = {
         }
         instantTextBoxType = {
             name = "separatism"
-            position = {x = 200 y = 92}
+            position = {x = 200 y = 112}
             text = sep_region_l
             font = hoi_18mbs
             format = left
@@ -96,12 +96,46 @@ guiTypes = {
         }
         instantTextBoxType = {
             name = "change"
-            position = {x = 200 y = 112}
+            position = {x = 200 y = 132}
             text = change_region_l
             font = hoi_18mbs
             format = left
             alwaystransparent = yes
             maxWidth = 300
+        }
+
+        buttonType = {
+            name = "sep_btn1"
+            quadTextureSprite = GFX_party_incident_button
+            buttonText = " "
+            buttonFont = hoi_18mbs
+            position = {x = 440 y = 20}
+            pdx_tooltip = ucb_sep_btn1_loc
+            pdx_tooltip_delayed = ucb_sep_btn1_delay
+        }
+        buttonType = {
+            name = "sep_btn2"
+            quadTextureSprite = GFX_party_incident_button
+            buttonText = " "
+            buttonFont = hoi_18mbs
+            position = {x = 440 y = 70}
+            pdx_tooltip = ucb_sep_btn2_loc
+        }
+        buttonType = {
+            name = "sep_btn3"
+            quadTextureSprite = GFX_party_incident_button
+            buttonText = " "
+            buttonFont = hoi_18mbs
+            position = {x = 490 y = 20}
+            pdx_tooltip = ucb_sep_btn3_loc
+        }
+        buttonType = {
+            name = "sep_btn4"
+            quadTextureSprite = GFX_party_incident_button
+            buttonText = " "
+            buttonFont = hoi_18mbs
+            position = {x = 490 y = 70}
+            pdx_tooltip = ucb_sep_btn4_loc
         }
     }
 

@@ -1893,6 +1893,31 @@ country_event = {
 }
 
 country_event = {
+    id = onactev.13
+    title = onactev.13.t
+    desc = onactev.13.d
+
+
+    is_triggered_only = yes
+
+    option = {
+        name = onactev.13.a
+        release = var:country_to_release
+        var:country_to_release = {ROOT = {set_variable = {sep_@PREV = 0.8}}}
+        declare_war_on = {target = var:country_to_release type = annex_everything}
+        encount_minors = yes
+    }
+    option = {
+        name = onactev.13.b
+        release = var:country_to_release
+        var:country_to_release = {ROOT = {set_country_flag = ACCEPT_EXISTANCE_@PREV}}
+        
+        encount_minors = yes
+    }
+}
+
+
+country_event = {
 	id = randev.11
 	title = randev.11.t
 	desc = randev.11.d

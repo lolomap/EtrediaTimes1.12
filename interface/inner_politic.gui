@@ -98,15 +98,15 @@ guiTypes = {
 					pdx_tooltip = party_incident_btn_loc
 				}
 
-				buttonType = {
-					name = "party_dem_aggitation_btn"
-					quadTextureSprite = GFX_party_incident_button
-					buttonText = " "
-					buttonFont = hoi_18mbs
-					position = {x = 400 y = 25}
-					orientation = UPPER_RIGHT
-					pdx_tooltip = party_aggitation_btn_loc
-				}
+				#buttonType = {
+				#	name = "party_dem_aggitation_btn"
+				#	quadTextureSprite = GFX_party_incident_button
+				#	buttonText = " "
+				#	buttonFont = hoi_18mbs
+				#	position = {x = 400 y = 25}
+				#	orientation = UPPER_RIGHT
+				#	pdx_tooltip = party_aggitation_btn_loc
+				#}
 			}
 
 			
