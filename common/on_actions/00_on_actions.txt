@@ -683,6 +683,23 @@ on_actions = {
 		}
 	}
 
+    on_monthly_SBU = {
+        effect = {
+            if = {
+                limit = {
+                    all_other_country = {
+                        OR = {
+                            has_government = communism
+                            has_idea = closed_economy
+                            has_idea = SBU_high_sburska_zvezda
+                        }
+                    }
+                }
+                SBU = {set_country_flag = sz_total_ach}
+            }
+        }
+    }
+
 	on_monthly = {
         effect = {
             # Подсчет мирового влияния
@@ -1457,6 +1474,23 @@ on_actions = {
                 }
                 set_global_flag = friendship_ach
             }
+            if = {
+                limit = {
+                    THIS = {tag = SMA}
+                }
+                if = {
+                    limit = {
+                        date < 2018.1.1
+                        is_in_faction = no
+                        NOT = {has_global_flag = sbu_garanted_sma}
+                        YAN = {
+                            has_completed_focus = YAN_operation_tischatka
+                            NOT = {has_wargoal_against = SMA}
+                        }
+                    }
+                    SMA = {set_country_flag = macar_ach}
+                }
+            }
         }
     }
 
@@ -1476,6 +1510,12 @@ on_actions = {
                     has_global_flag = WORLD_WAR
                 }
                 set_country_flag = light_warriors_ach
+                if = {
+                    limit = {
+                        has_global_flag = {flag = WORLD_WAR days < 370}
+                    }
+                    set_country_flag = speedrun_ach
+                }
             }
             if = {
                 limit = {
@@ -1489,6 +1529,12 @@ on_actions = {
                     has_global_flag = WORLD_WAR
                 }
                 set_country_flag = dark_warriors_ach
+                if = {
+                    limit = {
+                        has_global_flag = {flag = WORLD_WAR days < 370}
+                    }
+                    set_country_flag = speedrun_ach
+                }
             }
             if = {
                 limit = {
@@ -1514,6 +1560,12 @@ on_actions = {
                         has_country_flag = sbu_fas_win_ww_ucb
                     }
                     set_country_flag = third_way_ach
+                    if = {
+                        limit = {
+                            has_global_flag = {flag = WORLD_WAR days < 370}
+                        }
+                        set_country_flag = speedrun_ach
+                    }
                 }
             }
             if = {
@@ -1628,6 +1680,34 @@ on_actions = {
                     }
                 }
                 set_country_flag = comitet_ach
+            }
+
+            if = {
+                limit = {
+                    tag = GKD
+                    FROM = {tag = IID}
+                    is_in_faction = no
+                }
+                GKD = {set_country_flag = gkd_ach}
+            }
+
+            if = {
+                limit = {tag = FBU FROM = {tag = SBU}}
+                FBU = {set_country_flag = sweet_home_ach}
+            }
+
+            if = {
+                limit = {
+                    tag = CTE
+                }
+                set_temp_variable = {cnum = 0}
+                every_country = {
+                    add_to_temp_variable = {cnum = 1}
+                }
+                if = {
+                    limit = {check_variable = {cnum = 1}}
+                    CTE = {set_country_flag = cteven_total_ach}
+                }
             }
 
             if = {

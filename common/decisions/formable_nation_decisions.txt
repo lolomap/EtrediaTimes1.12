@@ -444,6 +444,7 @@ form_monfua_ish_category = {
 
 		complete_effect = {
 			set_cosmetic_tag = MIS_UNIFIED
+            set_country_flag = mof_ish_ach
 			# monfua
 			custom_effect_tooltip = form_mof_coring
 			hidden_effect = {

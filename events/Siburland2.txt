@@ -1277,6 +1277,7 @@ country_event = {
 		amount = 5000
 		target = SMA
 	    }
+        set_global_flag = sbu_garanted_sma
 	}
     }
     option = {
@@ -1686,6 +1687,28 @@ country_event = { # удачный переворот
 			}
 		}
 	}
+    option = {
+        name = sbu.65.b
+
+        hidden_effect = {
+            set_politics = {
+                ruling_party = fascism
+            }
+            add_political_power = 100
+            add_war_support = 0.15
+            set_country_flag = sbu_try_success
+            FBU = {transfer_state = 72}
+            UCB = {give_guarantee = FBU}
+
+            SBU = {
+                every_owned_state = {
+                    add_core_of = FBU
+                }
+            }
+        }
+
+        FBU = {change_tag_from = SBU}
+    }
 }
 
 country_event = {

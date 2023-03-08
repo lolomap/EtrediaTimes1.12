@@ -180,7 +180,7 @@ etredia_ach_20 = {#
 	}
 }
 
-etredia_ach_21 = {
+etredia_ach_21 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -297,7 +297,7 @@ etredia_ach_33 = { #
 	}
 }
 
-etredia_ach_34 = {
+etredia_ach_34 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -306,7 +306,7 @@ etredia_ach_34 = {
 	}
 }
 
-etredia_ach_35 = {
+etredia_ach_35 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -315,7 +315,7 @@ etredia_ach_35 = {
 	}
 }
 
-etredia_ach_36 = {
+etredia_ach_36 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -324,7 +324,7 @@ etredia_ach_36 = {
 	}
 }
 
-etredia_ach_37 = {
+etredia_ach_37 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -333,7 +333,7 @@ etredia_ach_37 = {
 	}
 }
 
-etredia_ach_38 = {
+etredia_ach_38 = { #
 	possible = {
 		achievs_available = yes
 	}
@@ -342,7 +342,7 @@ etredia_ach_38 = {
 	}
 }
 
-etredia_ach_39 = {
+etredia_ach_39 = { #
 	possible = {
 		achievs_available = yes
 	}
