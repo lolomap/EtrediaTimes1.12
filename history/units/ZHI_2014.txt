@@ -44,7 +44,21 @@ units = {
 		location = 967
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
+        start_equipment_factor = 0.6
+    }
+	division = {
+		name = "Infantry Division"
+		location = 967
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.6
+    }
+	division = {
+		name = "Infantry Division"
+		location = 967
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.6
     }
 	division = {
 		name = "Infantry Division"
@@ -97,7 +111,21 @@ units = {
     }
 	division = {
 		name = "Infantry Division"
-		location = 967
+		location = 1139
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Infantry Division"
+		location = 1138
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Infantry Division"
+		location = 1029
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.8
@@ -107,39 +135,11 @@ units = {
 		location = 967
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
-    }
-	division = {
-		name = "Infantry Division"
-		location = 967
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
-    }
-	division = {
-		name = "Infantry Division"
-		location = 967
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
-    }
-	division = {
-		name = "Infantry Division"
-		location = 967
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
-    }
-	division = {
-		name = "Infantry Division"
-		location = 967
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
+        start_equipment_factor = 0.7
     }
 	division = {
 		name = "Main Tank-Division"
-		location = 967
+		location = 1205
 		division_template = "Main Tank-Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.8
@@ -149,25 +149,25 @@ units = {
 		location = 967
 		division_template = "Main Tank-Division"
 		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
+        start_equipment_factor = 0.4
     }
 	division = {
 		name = "Main Tank-Division"
 		location = 967
 		division_template = "Main Tank-Division"
 		start_experience_factor = 0.2
-        start_equipment_factor = 0.8
+        start_equipment_factor = 0.6
     }
 	division = {
 		name = "Main Tank-Division"
-		location = 967
+		location = 1053 
 		division_template = "Main Tank-Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.8
     }
 	division = {
 		name = "Main Tank-Division"
-		location = 967
+		location = 1042 
 		division_template = "Main Tank-Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.8

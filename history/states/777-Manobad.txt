@@ -15,7 +15,7 @@ state={
 		}
 		add_core_of = MIR
 		victory_points = {
-			2380 3
+			1735 3
 		}
 
 	}

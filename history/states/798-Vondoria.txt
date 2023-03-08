@@ -1,0 +1,30 @@
+state={
+	id=798
+	name="STATE_798"
+	manpower = 306000
+	
+	state_category = rural
+
+	resources={
+        	steel = 2 # was: 8
+		chromium = 1 # was: 4
+	}
+
+	history={
+		owner = STB
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = STB
+		add_claim_by = MIR
+		victory_points = {
+			1377 1
+		}
+
+	}
+	provinces={
+		1351 1377 1405 1435 
+	}
+}

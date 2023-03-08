@@ -12,13 +12,10 @@ state={
 		owner = KTL
 		buildings = {
 			infrastructure = 1
-			1890 = {
-				naval_base = 2
-			}
 		}
 		add_core_of = KTL
 		victory_points = {
-			1890 3
+			1468 3
 		}
 
 	}
