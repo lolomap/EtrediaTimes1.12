@@ -49,6 +49,14 @@ boost_region_dem = {
     }
 }
 
+debuff_region_dem = {
+    add_to_variable = {var = UCB.dem_@THIS value = temp tooltip = add_region_democratic_tooltip}
+    if = {limit = {check_variable = {UCB.dem_@THIS < 0}} add_to_temp_variable = {to_reduce = UCB.dem_@THIS}}
+    clamp_variable = {var = UCB.dem_@THIS min = 0}
+    add_to_variable = {UCB.fas_@THIS = to_reduce}
+    clamp_variable = {var = UCB.fas_@THIS max = 1}
+}
+
 delete_dirian_militia = {
     delete_units = {
         division_template = "Democrat Militia"
@@ -396,6 +404,7 @@ force_press = {
 }
 
 crysis_reward = {
+    log = "CREWARD"
     if = { #марионетка
         limit = {check_variable = {global.type_crysis = 0}}
         var:global.sender_crysis = {puppet = global.to_crysis}
@@ -440,7 +449,7 @@ d_show_crysis = {
 }
 
 d_end_war_crysis = {
-    clr_global_flag = war_crysis
+    #clr_global_flag = war_crysis
     
     if = {
         limit = {

@@ -31,8 +31,11 @@
   corruption_cost_10_tooltip: "Стоимость антикоррупционных мероприятий: §R+10%§!"
   reduce_pfchange_cost: "Сокращает смену политического строя до §Y30§! дней"
 
-  change_region_ideology_factor_tooltip: "Влияние регионов на идеологию: $RIGHT|Y=$"
-  add_region_democratic_tooltip: "Демократия в регионе: $RIGHT|Y=$"
+  change_region_ideology_factor_tooltip: "Влияние регионов на идеологию: $RIGHT|Y=$\n"
+  add_region_democratic_tooltip: "Демократия в регионе: $RIGHT|Y=$\n"
+  add_region_opposition_tooltip: "Поддержка Президента в регионе: $RIGHT|Y=$\n"
+  add_region_separatism_tooltip: "Сепаратизм в регионе: $RIGHT|R=$\n"
+  randomize_region_ideology_tooltip: "Идеологии регионов изменятся случайным образом\n"
   
   YAN_planes_production_tooltip:0 "Станет доступен концерн «CVT_Toika»"
   YAN_tank_concern:0 "Станет доступен концерн «CREDORA»"
@@ -47,6 +50,10 @@
 
   ALLOW_ACCEPT_EXISTANCE_tooltip: "Мы должны признать независимость этого государства"
   ALLOW_BANNED_CRYSIS_tooltip: "Нельзя во время войны из-за кризиса"
+  ALLOW_BANNED_UCB_BOP_tooltip: "Невозможно возразить Парламенту"
+  ALLOW_BANNED_UCB_BOP_OUT_tooltip: "Эта страна не может возразить Парламенту"
+  banned_ucb_bop_tooltip: "§RВето Парламента§!"
+  banned_ucb_bop_close_tooltip: "§GСнимается Вето Парламента§!"
 
   has_world_war:0 "§RУчаствует в мировой войне§!\n"
 
@@ -56,6 +63,7 @@
   wtire_reduce_20:0 "Военная усталость уменьшится на §G20§!\n"
   wtire_reduce_10:0 "Военная усталость уменьшится на §G10§!\n"
   wtire_reduce_focus:0 "Рост военной усталости: §G-15%§!\n"
+  wtire_change: "Военная усталость: $RIGHT|-=$"
   wtire_cost_focus: "Рост военной усталости: §R15%§!\n"
   world_influence_cost_5:0 "Штраф к мировому влиянию : §R5%§!\n"
   world_influence_cost_10:0 "Штраф к мировому влиянию : §R10%§!\n"

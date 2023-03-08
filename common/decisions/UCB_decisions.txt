@@ -43,7 +43,8 @@ UCB_subj_integration = {
 }
 UCB_bop_category = {
     UCB_boost_ideology = {
-        cost = 75
+        cost = 30
+        fixed_random_seed = no
         days_remove = 30
         modifier = {
             power_balance_daily = 0.001
@@ -55,6 +56,243 @@ UCB_bop_category = {
                     set_temp_variable = {temp = 0.15}
                     boost_region_dem = yes
                 }
+            }
+        }
+    }
+    UCB_support_vote_company = {
+        cost = 50
+        fixed_random_seed = no
+        days_remove = 7
+        modifier = {
+            power_balance_daily = -0.007
+        }
+
+        remove_effect = {
+            UCB = {
+                random_scope_in_array = {
+                    array = minor_countries
+                    set_temp_variable = {prev_c = THIS}
+                    set_temp_variable = {temp = 0.1}
+                    boost_region_dem = yes
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {prev_c = THIS}
+                    set_temp_variable = {temp = 0.1}
+                    boost_region_dem = yes
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {temp = 0.1}
+                    boost_region_dem = yes
+                }
+            }
+        }
+    }
+
+    UCB_support_citizens = {
+        cost = 50
+
+        complete_effect = {
+            every_possible_country = {
+                #array = minor_countries
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+        }
+    }
+
+    UCB_visit_regions = {
+        cost = 25
+        fixed_random_seed = no
+
+        complete_effect = {
+            random_scope_in_array = {
+                array = minor_countries
+                set_temp_variable = {prev_c = THIS}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+            random_scope_in_array = {
+                array = minor_countries
+                limit = {
+                    NOT = {tag = var:prev_c}
+                }
+                set_temp_variable = {prev_c = THIS}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+            random_scope_in_array = {
+                array = minor_countries
+                limit = {
+                    NOT = {tag = var:prev_c}
+                }
+                set_temp_variable = {prev_c = THIS}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+        }
+    }
+
+    UCB_extend_parlament = {
+        cost = 50
+
+        complete_effect = {
+            add_power_balance_value = {id = UCB_parlament_balance value = -0.05}
+            add_to_variable = {var = wtire value = -25 tooltip = wtire_change}
+        }
+    }
+
+    UCB_support_olig = {
+        cost = 100
+
+        days_remove = 30
+        modifier = {
+            power_balance_daily = 0.008
+        }
+        fixed_random_seed = no
+        remove_effect = {
+            UCB = {
+                random_scope_in_array = {
+                    array = minor_countries
+                    set_temp_variable = {prev_c = THIS}
+                    set_temp_variable = {temp = -0.15}
+                    debuff_region_dem = yes
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {prev_c = THIS}
+                    set_temp_variable = {temp = -0.15}
+                    debuff_region_dem = yes
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {prev_c2 = THIS}
+                    set_temp_variable = {temp = -0.15}
+                    debuff_region_dem = yes
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                        NOT = {tag = var:prev_c2}
+                    }
+                    set_temp_variable = {prev_c3 = THIS}
+                    set_temp_variable = {temp = -0.15}
+                    debuff_region_dem = yes
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                        NOT = {tag = var:prev_c2}
+                        NOT = {tag = var:prev_c3}
+                    }
+                    set_temp_variable = {temp = -0.15}
+                    debuff_region_dem = yes
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+            }
+        }
+    }
+
+    UCB_extra_voting = {
+        cost = 100
+        fixed_random_seed = no
+
+        complete_effect = {
+            add_power_balance_value = {
+                id = UCB_parlament_balance
+                value = -0.05
+            }
+            custom_effect_tooltip = randomize_region_ideology_tooltip
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = minor_countries
+                    UCB = {
+                        set_temp_variable = {rest_rand = 1}
+                        set_variable = {max_i_@PREV = 0}
+                        set_temp_variable = {maxi = 0}
+                        set_variable_to_random = dem_@PREV set_temp_variable = {maxi = dem_@PREV}
+                        subtract_from_temp_variable = {rest_rand = dem_@PREV}
+                        set_variable_to_random = {var = fas_@PREV max = rest_rand}
+                        if = {limit = {check_variable = {fas_@PREV > maxi}} set_variable = {max_i_@PREV = 1} set_temp_variable = {maxi = fas_@PREV}}
+                        subtract_from_temp_variable = {rest_rand = fas_@PREV}
+                        set_variable_to_random = {var = com_@PREV max = rest_rand}
+                        if = {limit = {check_variable = {com_@PREV > maxi}} set_variable = {max_i_@PREV = 2} set_temp_variable = {maxi = com_@PREV}}
+                        subtract_from_temp_variable = {rest_rand = com_@PREV}
+                        set_variable_to_random = {var = neu_@PREV max = rest_rand}
+                        if = {limit = {check_variable = {neu_@PREV > maxi}} set_variable = {max_i_@PREV = 3} set_temp_variable = {maxi = neu_@PREV}}
+                        subtract_from_temp_variable = {rest_rand = neu_@PREV}
+                        set_variable = {mon_@PREV = rest_rand}
+                        if = {limit = {check_variable = {mon_@PREV > maxi}} set_variable = {max_i_@PREV = 4} set_temp_variable = {maxi = mon_@PREV}}
+
+                        set_variable_to_random = oppos_@PREV
+                        set_variable_to_random = {var = sep_@PREV max = 0.5}
+                    }
+                }
+            }
+        }
+    }
+
+    UCB_state_of_emergancy = {
+        available = {has_war = yes}
+
+        cost = 25
+        fixed_random_seed = no
+        days_remove = -1
+        modifier = {
+            power_balance_daily = 0.001
+        }
+
+        complete_effect = {
+            add_power_balance_value = {
+                id = UCB_parlament_balance
+                value = 0.1
+            }
+
+            random_scope_in_array = {
+                set_temp_variable = {prev_c = THIS
+                add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.sep_@THIS max = 1}
+            }
+            random_scope_in_array = {
+                limit = {
+                    NOT = {tag = var:prev_c}
+                }
+                set_temp_variable = {prev_c = THIS}
+                add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.sep_@THIS max = 1}
+            }
+            random_scope_in_array = {
+                limit = {
+                    NOT = {tag = var:prev_c}
+                }
+                set_temp_variable = {prev_c = THIS}
+                add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
         }
     }

@@ -11,13 +11,28 @@ UCB_parlament_balance = {
             id = UCB_parlament_total_range
 			min = -1
 			max = -0.9
+            modifier = {
+                guarantee_cost = 0.1
+                guarantee_tension = 0.1
+                send_volunteers_tension = 0.3
+            }
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
 					value = 0.1
 					tooltip = change_region_ideology_factor_tooltip
 				}
+                custom_effect_tooltip = banned_ucb_bop_tooltip
+                hidden_effect = {
+                    set_country_flag = banned_ucb_bop
+                }
 			}
+            on_deactivate = {
+                custom_effect_tooltip = banned_ucb_bop_close_tooltip
+                hidden_effect = {
+                    clr_country_flag = banned_ucb_bop
+                }
+            }
 
 			modifier = {
 				disabled_ideas = 1
@@ -27,18 +42,38 @@ UCB_parlament_balance = {
             id = UCB_parlament_mid_range
 			min = -0.9
 			max = -0.5
+            modifier = {
+                guarantee_cost = 0.1
+                guarantee_tension = 0.1
+                send_volunteers_tension = 0.15
+            }
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
 					value = 0.06
 					tooltip = change_region_ideology_factor_tooltip
 				}
+                custom_effect_tooltip = banned_ucb_bop_tooltip
+                hidden_effect = {
+                    set_country_flag = banned_ucb_bop
+                }
 			}
+            on_deactivate = {
+                custom_effect_tooltip = banned_ucb_bop_close_tooltip
+                hidden_effect = {
+                    clr_country_flag = banned_ucb_bop
+                }
+            }
         }
         range = {
             id = UCB_parlament_range
 			min = -0.5
 			max = 0
+            modifier = {
+                guarantee_cost = 0.1
+                guarantee_tension = 0.1
+                send_volunteers_tension = 0.1
+            }
 
 			on_activate = {
 				set_variable = {
@@ -67,6 +102,9 @@ UCB_parlament_balance = {
             id = UCB_president_range
 			min = 0
 			max = 0.5
+            modifier = {
+                send_volunteers_tension = 0.05
+            }
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor

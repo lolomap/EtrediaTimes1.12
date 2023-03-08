@@ -13,6 +13,7 @@ ideas = {
 
 			modifier = {
                 political_power_gain = -0.6
+                power_balance_daily = -0.0014
 			}
 		}
 		
