@@ -1916,6 +1916,22 @@ country_event = {
     }
 }
 
+country_event = {
+    id = onactev.14
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = {
+                check_variable = {pi_master > 70}
+                threat < 0.6
+            }
+            set_country_flag = go_away_ach
+        }
+    }
+}
+
 
 country_event = {
 	id = randev.11

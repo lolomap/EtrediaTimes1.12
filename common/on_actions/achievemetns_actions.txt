@@ -1,0 +1,556 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            country_event = {id = onactev.14 days = 2190}
+        }
+    }
+
+    on_monthly_SBU = {
+        effect = {
+            if = {
+                limit = {
+                    all_other_country = {
+                        OR = {
+                            has_government = communism
+                            has_idea = closed_economy
+                            has_idea = SBU_high_sburska_zvezda
+                        }
+                    }
+                }
+                SBU = {set_country_flag = sz_total_ach}
+            }
+        }
+    }
+
+    on_peace = {
+        effect = {
+            if = {limit = {tag = MOF}
+                
+                if = {
+                    limit = {
+                        SBU = {
+                            has_completed_focus = SBU_divide_MOF
+                            NOT = {has_wargoal_against = MOF}
+                        }
+                    }
+                    MOF = {set_country_flag = rybka_ach}
+                }
+            }
+            else_if = { limit = {tag = TRB}
+
+                if = {
+                    limit = {
+                        SBU = {
+                            has_completed_focus = SBU_aldeko_operation
+                            NOT = {has_wargoal_against = TRB}
+                        }
+                        YAN = {
+                            has_completed_focus = YAN_TRB_war
+                            NOT = {has_wargoal_against = TRB}
+                        }
+                    }
+                    TRB = {set_country_flag = mansur_ach}
+                }
+            }
+            else_if = { limit = {tag = SHE}
+
+                if = {
+                    limit = {
+                        EIK = {
+                            has_completed_focus = EIK_ultimatum_to_sheregia
+                            NOT = {has_wargoal_against = SHE}
+                        }
+                        NOT = {has_global_flag = WORLD_WAR}
+                    }
+                    SHE = {set_country_flag = shield_ach}
+                }
+            }
+            else_if = { limit = {tag = SMA}
+
+                if = {
+                    limit = {
+                        date < 2018.1.1
+                        is_in_faction = no
+                        NOT = {has_global_flag = sbu_garanted_sma}
+                        YAN = {
+                            has_completed_focus = YAN_operation_tischatka
+                            NOT = {has_wargoal_against = SMA}
+                        }
+                    }
+                    SMA = {set_country_flag = macar_ach}
+                }
+            }
+            
+            if = {
+                limit = {
+                    country_exists = DIR
+                    country_exists = DEM
+                    country_exists = SOL
+                    country_exists = BSH
+                    DIR = {has_war = no}
+                    DEM = {has_war = no}
+                    SOL = {has_war = no}
+                    BSH = {has_war = no}
+                }
+                set_global_flag = friendship_ach
+            }
+            
+        }
+    }
+
+    on_peaceconference_ended = {
+        effect = {
+            if = { limit = {tag = UCB}
+
+                if = {
+                    limit = {
+                        FROM = {
+                            OR = {
+                                tag = BDA
+                                tag = SUC
+                                tag = NCU
+                            }
+                        }
+                        NOT = {country_exists = BDA}
+                        NOT = {country_exists = SUC}
+                        NOT = {country_exists = NCU}
+                    }
+
+                    set_country_flag = parlament_win_civilwar
+                }
+                if = {
+                    limit = {
+                        ROOT = {has_country_flag = parlament_win_civilwar}
+                        FROM = {tag = FSC}
+                    }
+                    set_country_flag = unstable_ach
+                }
+            }
+            else_if = { limit = {tag = SUC}
+
+                if = {
+                    limit = {
+                        FROM = {
+                            OR = {
+                                tag = BDA
+                                tag = UCB
+                                tag = NCU
+                            }
+                        }
+                        NOT = {country_exists = BDA}
+                        NOT = {country_exists = UCB}
+                        NOT = {country_exists = NCU}
+                    }
+
+                    set_country_flag = comitet_win_civilwar
+                    set_cosmetic_tag = UCB_SUC_WIN
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_state = {
+                                is_core_of = UCB
+                                OWNER = {NOT = {tag = SUC}}
+                            }
+                        }
+                    }
+                    set_country_flag = comitet_ach
+                }
+            }
+            else_if = { limit = {tag = BDA}
+
+                if = {
+                    limit = {
+                        FROM = {
+                            OR = {
+                                tag = SUC
+                                tag = UCB
+                                tag = NCU
+                            }
+                        }
+                        NOT = {country_exists = SUC}
+                        NOT = {country_exists = UCB}
+                        NOT = {country_exists = NCU}
+                    }
+
+                    set_country_flag = beldpo_win_civilwar
+                    set_cosmetic_tag = UCB_BDA_WIN
+                }
+            }
+            else_if = { limit = {tag = GKD}
+
+                if = {
+                    limit = {
+                        FROM = {tag = IID}
+                        is_in_faction = no
+                    }
+                    GKD = {set_country_flag = gkd_ach}
+                }
+            }
+            else_if = { limit = {tag = FBU}
+
+                if = {
+                    limit = {FROM = {tag = SBU}}
+                    FBU = {set_country_flag = sweet_home_ach}
+                }
+            }
+            else_if = { limit = {tag = CTE}
+
+                set_temp_variable = {cnum = 0}
+                every_country = {
+                    add_to_temp_variable = {cnum = 1}
+                }
+                if = {
+                    limit = {check_variable = {cnum = 1}}
+                    CTE = {set_country_flag = cteven_total_ach}
+                }
+            }
+            else_if = { limit = {tag = TAL}
+
+                if = {
+                    limit = {
+                        FROM = {
+                            OR = {
+                                tag = LON
+                                tag = VRO
+                                tag = CHE
+                            }
+                        }
+                        NOT = {country_exists = LON}
+                        NOT = {country_exists = VRO}
+                        NOT = {country_exists = CHE}
+                    }
+                    set_country_flag = talshik_ach
+                }
+            }
+            else_if = { limit = {tag = BAE}
+
+                if = {
+                    limit = {FROM = {tag = EIK}}
+                    set_country_flag = bae_eik_kill
+                }
+                else_if = {
+                    limit = {FROM = {OR = {tag = DIR tag = DEM}}}
+                    set_country_flag = bae_dir_kill
+                }
+                else_if = {
+                    limit = {FROM = {tag = TOL}}
+                    set_country_flag = bae_tol_kill
+                }
+
+                if = {
+                    limit = {
+                        has_country_flag = bae_eik_kill
+                        has_country_flag = bae_dir_kill
+                        has_country_flag = bae_tol_kill
+                    }
+                    set_country_flag = hold_my_beer_ach
+                }
+            }
+            else_if = { limit = {tag = TRP}
+
+                if = {
+                    limit = {
+                        FROM = {tag = IID}
+                    }
+                    set_country_flag = trp_iid_ach
+                }
+
+                if = {
+                    limit = {
+                        has_government = fascism
+                        NOT = {
+                            any_state = {
+                                OR = {
+                                    is_core_of = UCB
+                                    is_core_of = FSC
+                                }
+                                NOT = {OWNER = {tag = TRP}}
+                            }
+                        }
+                    }
+                    set_state_flag = oleg_ach
+                }
+            }
+            else_if = { limit = {tag = SDI}
+
+                if = {
+                    limit = {
+                        NOT = {country_exists = DIR}
+                        NOT = {country_exists = DEM}
+                        NOT = {country_exists = BLJ}
+                        NOT = {country_exists = DIB}
+                    }
+                    set_country_flag = ancap_ach
+                }
+            }
+            else_if = { limit = {tag = DIB}
+
+                if = {
+                    limit = {
+                        NOT = {country_exists = DIR}
+                        NOT = {country_exists = DEM}
+                        NOT = {country_exists = BLJ}
+                        NOT = {country_exists = SDI}
+                    }
+                    set_country_flag = chuchkhe_ach
+                }
+            }
+            else_if = { limit = {OR = {tag = LOK tag = BOK}
+
+                if = {
+                    limit = {
+                        FROM = {OR = {tag = LOK tag = BOK}}
+                        ROOT = {has_idea = scraping_the_barrel}
+                    }
+                    set_country_flag = loka_ach
+                }
+            }
+            
+
+            if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = UCB 
+                            is_in_faction_with = UCB
+                        }
+                    }
+                    FROM = {tag = EIK}
+                    has_global_flag = WORLD_WAR
+                }
+                set_country_flag = light_warriors_ach
+                if = {
+                    limit = {
+                        has_global_flag = {flag = WORLD_WAR days < 370}
+                    }
+                    set_country_flag = speedrun_ach
+                }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = EIK 
+                            is_in_faction_with = EIK
+                        }
+                    }
+                    FROM = {tag = UCB}
+                    has_global_flag = WORLD_WAR
+                }
+                set_country_flag = dark_warriors_ach
+                if = {
+                    limit = {
+                        has_global_flag = {flag = WORLD_WAR days < 370}
+                    }
+                    set_country_flag = speedrun_ach
+                }
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        OR = {
+                            tag = SBU 
+                            is_in_faction_with = SBU
+                        }
+                    }
+                    SBU = {has_government = fascism is_faction_leader = yes}
+                }
+                if = {
+                    limit = {FROM = {tag = UCB}}
+                    set_country_flag = sbu_fas_win_ww_ucb
+                }
+                if = {
+                    limit = {FROM = {tag = EIK}}
+                    set_country_flag = sbu_fas_win_ww_eik
+                }
+                if = {
+                    limit = {
+                        has_country_flag = sbu_fas_win_ww_eik
+                        has_country_flag = sbu_fas_win_ww_ucb
+                    }
+                    set_country_flag = third_way_ach
+                    if = {
+                        limit = {
+                            has_global_flag = {flag = WORLD_WAR days < 370}
+                        }
+                        set_country_flag = speedrun_ach
+                    }
+                }
+            }
+
+            if = {
+                limit = {
+                    ROOT = {
+                        any_owned_state = {is_core_of = ROOT is_on_continent = asia}
+                    }
+                }
+                if = {
+                    limit = {
+                        all_state = {
+                            OR = {
+                                NOT = {is_on_continent = asia}
+                                controller = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {set_country_flag = plot_twist_ach}
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        any_owned_state = {OR = {is_on_continent = africa is_on_continent = north_america}}
+                    }
+                }
+                if = {
+                    limit = {
+                        ROOT = {
+                            NOT = {any_owned_state = {OR = {is_on_continent = africa is_on_continent = north_america}}}
+                        }
+                        all_state = {
+                            OR = {
+                                AND = {
+                                    NOT = {is_on_continent = africa}
+                                    NOT = {is_on_continent = north_america}
+                                }
+                                controller = ROOT
+                            }
+                        }
+                    }
+                    ROOT = {set_country_flag = colonize_ach}
+                }
+            }
+        }
+    }
+
+    on_release_as_free = {
+        effect = {
+            if = {
+                limit = {
+                    all_country = {
+                        num_occupied_states < 1
+                    }
+                }
+                set_global_flag = minor_ach
+            }
+        }
+    }
+
+    on_ruling_party_change = {
+        effect = {
+            if = {
+                limi = {has_government = democratic}
+                set_country_flag = democratic_move
+            }
+            if = {
+                limit = {has_government = fascism}
+                set_country_flag = fascism_move
+                if = {
+                    limit = {
+                        UCB = {has_completed_focus = UCB_fasc_podelit}
+                    }
+                    if = {
+                        limit = {
+                            all_country = {
+                                OR = {
+                                    NOT = {any_owned_state = {is_on_continent = etredia}}
+                                    has_government = fascism
+                                }
+                            }
+                        }
+                        UCB = {set_country_flag = narabel_dream_ach}
+                    }
+                }
+            }
+            else_if = {
+                limit = {has_government = neutrality}
+                set_country_flag = neutrality_move
+            }
+            else_if = {
+                limit = {has_government = communism}
+                set_country_flag = communism_move
+            }
+            else_if = {
+                limit = {has_government = monarchism}
+                set_country_flag = monarchism_move
+            }
+
+            
+            if = {
+                limit = {
+                    has_country_flag = democratic_move
+                    has_country_flag = fascism_move
+                    has_country_flag = communism_move
+                    has_country_flag = neutrality_move
+                    has_country_flag = monarchism_move
+                }
+                set_country_flag = experiments_ach
+            }
+
+        }
+    }
+
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = {controls_state = 319}
+                if = {
+                    limit = {
+                        tag = TOL
+                        date < 2018.1.1
+                    }
+                    set_country_flag = tolch_ach
+                }
+            }
+        }
+    }
+
+    on_declare_war = {
+        effect = {
+            if = {limit = {tag = TOB}
+
+                if = {
+                    limit = {
+                        FROM = {
+                            OR = {
+                                tag = EIK
+                                tag = UCB
+                            }
+                        }
+                        has_global_flag = WORLD_WAR
+                        num_divisions < 3
+                    }
+                    set_country_flag = shop_security_ach
+                }
+            }
+            else_if = { limit = {tag = BDA}
+
+                if = {
+                    limit = {
+                        FROM = {
+                            OR = {
+                                tag = EIK
+                                tag = UCB
+                                is_in_faction_with = EIK
+                                is_in_faction_with = UCB
+                            }
+                        }
+                        has_global_flag = WORLD_WAR
+                        has_country_flag = beldpo_win_civilwar
+                    }
+                    set_country_flag = beldpo_ach
+                }
+            }
+        }
+    }
+
+    on_offer_join_faction = {
+        effect = {
+            if = {
+                limit = {FROM = {has_government = democratic} ROOT = {tag = EIK}}
+                FROM = {set_country_flag = whoami_ach}
+            }
+        }
+    }
+}
