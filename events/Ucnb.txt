@@ -641,3 +641,14 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = ucnb.27
+    title = ucnb.27.t
+    desc = ucnb.27.d
+    
+    is_triggered_only = yes
+
+    option = {name = ucnb.27.a}
+    option = {name = ucnb.27.b}
+}

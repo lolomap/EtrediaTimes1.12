@@ -31,11 +31,13 @@
   corruption_cost_10_tooltip: "Стоимость антикоррупционных мероприятий: §R+10%§!"
   reduce_pfchange_cost: "Сокращает смену политического строя до §Y30§! дней"
 
-  change_region_ideology_factor_tooltip: "Влияние регионов на идеологию: $RIGHT|Y=$\n"
+  change_region_ideology_factor_tooltip: "Влияние регионов на идеологию: $RIGHT|Y=%$\n"
   add_region_democratic_tooltip: "Демократия в регионе: $RIGHT|Y=$\n"
   add_region_opposition_tooltip: "Поддержка Президента в регионе: $RIGHT|Y=$\n"
   add_region_separatism_tooltip: "Сепаратизм в регионе: $RIGHT|R=$\n"
   randomize_region_ideology_tooltip: "Идеологии регионов изменятся случайным образом\n"
+  ucb_sep_rise_tooltip: "§RРост§! сепаратизма в регионах"
+  ucb_opp_rise_tooltip: "§RСнижение§! поддержки Президента в регионах"
   
   YAN_planes_production_tooltip:0 "Станет доступен концерн «CVT_Toika»"
   YAN_tank_concern:0 "Станет доступен концерн «CREDORA»"

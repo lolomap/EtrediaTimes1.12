@@ -457,6 +457,7 @@ country_event = {
 	option = {
         name = ucb.21.b
         promote_character = UCB_Parlament
+        remove_power_balance = {id = UCB_parlament_bonus}
         hidden_effect = {
             UCB = { country_event = { id = ucb.4 days = 1 } }
         }

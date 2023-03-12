@@ -25,6 +25,12 @@
   UCB_president_mid_range: "Главенствующая роль"
   UCB_president_total_range: "Президентская республика"
 
+  ucb_sep_btn1_loc: "Пропаганда единства"
+  ucb_sep_btn1_delay: "Сепаратизм в регионе: §G-10%§!\n£pol_power §Y50§!"
+  ucb_sep_btn2_loc: "Бюджетные привелегии"
+  ucb_sep_btn3_loc: "Разгон региональных объединений"
+  ucb_sep_btn4_loc: "Рейды на штабы сепаратистов"
+
   parties_header_loc:0 "[Root.GetAdjective] партии"
   parties_button_loc:0 "Партии"
   UCB_parties_header_loc:0 "Объединенные страны"

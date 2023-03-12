@@ -10,6 +10,31 @@ d_mtest = {
 
 ####
 
+calc_max_ideology = {
+    set_variable = {UCB.max_i_@THIS = 0}
+    set_temp_variable = {ttt = UCB.dem_@THIS}
+    if = {
+        limit = {check_variable = {UCB.fas_@THIS > ttt}}
+        set_temp_variable = {ttt = UCB.fas_@THIS}
+        set_variable = {UCB.max_i_@THIS = 1}
+    }
+    if = {
+        limit = {check_variable = {UCB.com_@THIS > ttt}}
+        set_temp_variable = {ttt = UCB.com_@THIS}
+        set_variable = {UCB.max_i_@THIS = 2}
+    }
+    if = {
+        limit = {check_variable = {UCB.neu_@THIS > ttt}}
+        set_temp_variable = {ttt = UCB.neu_@THIS}
+        set_variable = {UCB.max_i_@THIS = 3}
+    }
+    if = {
+        limit = {check_variable = {UCB.mon_@THIS > ttt}}
+        set_temp_variable = {ttt = UCB.mon_@THIS}
+        set_variable = {UCB.max_i_@THIS = 4}
+    }
+}
+
 boost_region_dem = {
     add_to_variable = {var = UCB.dem_@THIS value = temp tooltip = add_region_democratic_tooltip}
     set_temp_variable = {to_reduce = temp}
@@ -47,6 +72,8 @@ boost_region_dem = {
     else = {
         subtract_from_variable = {UCB.fas_@THIS = to_reduce}
     }
+
+    calc_max_ideology = yes
 }
 
 debuff_region_dem = {
@@ -55,6 +82,8 @@ debuff_region_dem = {
     clamp_variable = {var = UCB.dem_@THIS min = 0}
     add_to_variable = {UCB.fas_@THIS = to_reduce}
     clamp_variable = {var = UCB.fas_@THIS max = 1}
+
+    calc_max_ideology = yes
 }
 
 delete_dirian_militia = {
@@ -262,6 +291,7 @@ war_crysis_unban_factions = {
 }
 
 encount_minors = {
+    clear_array = minor_countries
     every_owned_state = {
         for_each_loop = {
             array = THIS.core_countries

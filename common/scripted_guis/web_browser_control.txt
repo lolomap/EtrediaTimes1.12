@@ -1,0 +1,50 @@
+scripted_gui = {
+	web_browser = {
+        context_type = player_context
+		
+		window_name = "web_browser"
+		
+		visible = {
+			always = yes
+		}
+		
+		effects = {
+			button_enter_click = {
+				#sound_effect = confirm_dog
+				if = {
+				}
+			}
+		}
+        
+		triggers = {
+			
+		}
+	}
+
+    web_browser2 = {
+        context_type = player_context
+		
+		window_name = "web_browser2"
+        parent_window_token = politics_tab
+		
+		visible = {
+			always = yes
+		}
+
+        triggers = {
+            ucb_help_visible = {
+                tag = UCB
+            }
+            sbu_help_visible = {
+                tag = SBU
+            }
+            sfl_help_visible = {
+                tag = SFL
+            }
+            che_help_visible = {
+                tag = CHE
+            }
+        }
+    }
+}
+

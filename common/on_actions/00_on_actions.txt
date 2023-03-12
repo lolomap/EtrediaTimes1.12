@@ -164,6 +164,66 @@ on_actions = {
                         set_variable_to_random = {var = sep_@PREV max = 0.5}
                     }
                 }
+
+                #DIN
+                set_variable = {dem_din = 0.6}
+                set_variable = {fas_din = 0.4}
+                set_variable = {com_din = 0}
+                set_variable = {neu_din = 0}
+                set_variable = {mon_din = 0}
+                set_variable = {oppos_din = 0.78}
+                set_variable = {sep_din = 0.3}
+                DIN = {calc_max_ideology = yes}
+
+                #IND
+                set_variable = {dem_ind = 0.9}
+                set_variable = {fas_ind = 0.1}
+                set_variable = {com_ind = 0}
+                set_variable = {neu_ind = 0}
+                set_variable = {mon_ind = 0}
+                set_variable = {oppos_ind = 0.9}
+                set_variable = {sep_ind = 0.02}
+                IND = {calc_max_ideology = yes}
+
+                #KIM
+                set_variable = {dem_kim = 0.3}
+                set_variable = {fas_kim = 0.65}
+                set_variable = {com_kim = 0}
+                set_variable = {neu_kim = 0.05}
+                set_variable = {mon_kim = 0}
+                set_variable = {oppos_kim = 0.35}
+                set_variable = {sep_kim = 0.44}
+                KIM = {calc_max_ideology = yes}
+
+                #KOL
+                set_variable = {dem_kol = 0.16}
+                set_variable = {fas_kol = 0.84}
+                set_variable = {com_kol = 0}
+                set_variable = {neu_kol = 0}
+                set_variable = {mon_kol = 0}
+                set_variable = {oppos_kol = 0.18}
+                set_variable = {sep_kol = 0.55}
+                KOL = {calc_max_ideology = yes}
+
+                #ARS
+                set_variable = {dem_ars = 0.55}
+                set_variable = {fas_ars = 0.45}
+                set_variable = {com_ars = 0}
+                set_variable = {neu_ars = 0}
+                set_variable = {mon_ars = 0}
+                set_variable = {oppos_ars = 0.5}
+                set_variable = {sep_ars = 0.22}
+                ARS = {calc_max_ideology = yes}
+
+                #ORB
+                set_variable = {dem_orb = 0.48}
+                set_variable = {fas_orb = 0.52}
+                set_variable = {com_orb = 0}
+                set_variable = {neu_orb = 0}
+                set_variable = {mon_orb = 0}
+                set_variable = {oppos_orb = 0.48}
+                set_variable = {sep_orb = 0.18}
+                ORB = {calc_max_ideology = yes}
             }
 
 
@@ -623,6 +683,8 @@ on_actions = {
 		}
 	}
 
+    
+
 	on_monthly = {
         effect = {
             # Подсчет мирового влияния
@@ -1049,26 +1111,7 @@ on_actions = {
                 force_update_map_mode = {mapmode = corruption_map}
             }
             
-            #Ачивки
-            if = {
-                limit = {
-                    tag = OIK
-                }
-                if = {
-                    limit = {
-                        always = no
-                    }
-                    set_country_flag = i_love_trains_ach
-                }
-            }
-            if = {
-                limit = {
-                    date > 2020.1.1
-                    check_variable = {pi_master > 70}
-                    threat < 0.6
-                }
-                set_country_flag = go_away_ach
-            }
+            
         }
 	}
 
@@ -1121,6 +1164,49 @@ on_actions = {
 						add_to_variable = {ucb_reg_mon = region_ideology_factor}
 					}
 				}
+
+
+                if = {
+                    limit = {check_variable = {UCB.sep_@THIS > 0.6}}
+                    set_country_flag = sep_sep
+                    every_state = {
+                        limit = {is_core_of = PREV}
+                        force_enable_resistance = UCB
+                        start_resistance = UCB
+                    }
+                }
+                else_if = {
+                    limit = {has_country_flag = sep_sep}
+                    clr_country_flag = sep_sep
+                    every_state = {
+                        limit = {is_core_of = PREV}
+                        force_disable_resistance = UCB
+                        cancel_resistance = UCB
+                    }
+                }
+                if = {
+                    limit = {check_variable = {UCB.sep_@THIS > 0.9}}
+                    UCB = {
+                        set_variable = {country_to_release = PREV}
+                        country_event = {id = onactev.13 days = 1}
+                    }
+                }
+                if = {
+                    limit = {has_idea = UCB_poroh_blet}
+                    random_scope_in_array = {
+                        array = minor_countries
+                        add_to_variable = {UCB.sep_@THIS = 0.05}
+                        clamp_variable = {var = UCB.sep_@THIS max = 1}
+                    }
+                }
+                if = {
+                    limit = {has_idea = UCB_polit_crisis}
+                    random_scope_in_array = {
+                        array = minor_countries
+                        add_to_variable = {UCB.oppos_@THIS = -0.03}
+                        clamp_variable = {var = UCB.oppos_@THIS min = 0}
+                    }
+                }
 			}
 		}
 	}
@@ -1304,321 +1390,12 @@ on_actions = {
 		}
 	}
 
-    on_peace = {
-        effect = {
-            if = {
-                limit = {
-                    THIS = {tag = MOF}
-                    SBU = {
-                        has_completed_focus = SBU_divide_MOF
-                        NOT = {has_wargoal_against = MOF}
-                    }
-                }
-                MOF = {set_country_flag = rybka_ach}
-            }
-            if = {
-                limit = {
-                    THIS = {tag = TRB}
-                    SBU = {
-                        has_completed_focus = SBU_aldeko_operation
-                        NOT = {has_wargoal_against = TRB}
-                    }
-                    YAN = {
-                        has_completed_focus = YAN_TRB_war
-                        NOT = {has_wargoal_against = TRB}
-                    }
-                }
-                TRB = {set_country_flag = mansur_ach}
-            }
-            if = {
-                limit = {
-                    THIS = {tag = SHE}
-                    EIK = {
-                        has_completed_focus = EIK_ultimatum_to_sheregia
-                        NOT = {has_wargoal_against = SHE}
-                    }
-                    NOT = {has_global_flag = WORLD_WAR}
-                }
-                SHE = {set_country_flag = shield_ach}
-            }
-            if = {
-                limit = {
-                    country_exists = DIR
-                    country_exists = DEM
-                    country_exists = SOL
-                    country_exists = BSH
-                    DIR = {has_war = no}
-                    DEM = {has_war = no}
-                    SOL = {has_war = no}
-                    BSH = {has_war = no}
-                }
-                set_global_flag = friendship_ach
-            }
-        }
-    }
+    
 
 	on_peaceconference_ended = {
 		effect = {
 			clr_country_flag = nuke_request_accepted
             ROOT = {clr_country_flag = nuke_request_accepted}
-            if = {
-                limit = {
-                    ROOT = {
-                        OR = {
-                            tag = UCB 
-                            is_in_faction_with = UCB
-                        }
-                    }
-                    FROM = {tag = EIK}
-                    has_global_flag = WORLD_WAR
-                }
-                set_country_flag = light_warriors_ach
-            }
-            if = {
-                limit = {
-                    ROOT = {
-                        OR = {
-                            tag = EIK 
-                            is_in_faction_with = EIK
-                        }
-                    }
-                    FROM = {tag = UCB}
-                    has_global_flag = WORLD_WAR
-                }
-                set_country_flag = dark_warriors_ach
-            }
-            if = {
-                limit = {
-                    ROOT = {
-                        OR = {
-                            tag = SBU 
-                            is_in_faction_with = SBU
-                        }
-                    }
-                    SBU = {has_government = fascism is_faction_leader = yes}
-                }
-                if = {
-                    limit = {FROM = {tag = UCB}}
-                    set_country_flag = sbu_fas_win_ww_ucb
-                }
-                if = {
-                    limit = {FROM = {tag = EIK}}
-                    set_country_flag = sbu_fas_win_ww_eik
-                }
-                if = {
-                    limit = {
-                        has_country_flag = sbu_fas_win_ww_eik
-                        has_country_flag = sbu_fas_win_ww_ucb
-                    }
-                    set_country_flag = third_way_ach
-                }
-            }
-            if = {
-                limit = {
-                    ROOT = {
-                        any_owned_state = {is_core_of = ROOT is_on_continent = asia}
-                    }
-                }
-                if = {
-                    limit = {
-                        all_state = {
-                            OR = {
-                                NOT = {is_on_continent = asia}
-                                controller = ROOT
-                            }
-                        }
-                    }
-                    ROOT = {set_country_flag = plot_twist_ach}
-                }
-            }
-            if = {
-                limit = {
-                    FROM = {
-                        any_owned_state = {OR = {is_on_continent = africa is_on_continent = north_america}}
-                    }
-                }
-                if = {
-                    limit = {
-                        ROOT = {
-                            NOT = {any_owned_state = {OR = {is_on_continent = africa is_on_continent = north_america}}}
-                        }
-                        all_state = {
-                            OR = {
-                                AND = {
-                                    NOT = {is_on_continent = africa}
-                                    NOT = {is_on_continent = north_america}
-                                }
-                                controller = ROOT
-                            }
-                        }
-                    }
-                    ROOT = {set_country_flag = colonize_ach}
-                }
-            }
-
-            if = {
-                limit = {
-                    ROOT = {tag = UCB}
-                    FROM = {
-                        OR = {
-                            tag = BDA
-                            tag = SUC
-                            tag = NCU
-                        }
-                    }
-                    NOT = {country_exists = BDA}
-                    NOT = {country_exists = SUC}
-                    NOT = {country_exists = NCU}
-                }
-
-                set_country_flag = parlament_win_civilwar
-            }
-            else_if = {
-                limit = {
-                    ROOT = {tag = SUC}
-                    FROM = {
-                        OR = {
-                            tag = BDA
-                            tag = UCB
-                            tag = NCU
-                        }
-                    }
-                    NOT = {country_exists = BDA}
-                    NOT = {country_exists = UCB}
-                    NOT = {country_exists = NCU}
-                }
-
-                set_country_flag = comitet_win_civilwar
-                set_cosmetic_tag = UCB_SUC_WIN
-            }
-            else_if = {
-                limit = {
-                    ROOT = {tag = BDA}
-                    FROM = {
-                        OR = {
-                            tag = SUC
-                            tag = UCB
-                            tag = NCU
-                        }
-                    }
-                    NOT = {country_exists = SUC}
-                    NOT = {country_exists = UCB}
-                    NOT = {country_exists = NCU}
-                }
-
-                set_country_flag = beldpo_win_civilwar
-                set_cosmetic_tag = UCB_BDA_WIN
-            }
-
-            if = {
-                limit = {ROOT = {tag = UCB has_country_flag = parlament_win_civilwar} FROM = {tag = FSC}}
-                set_country_flag = unstable_ach
-            }
-            if = {
-                limit = {
-                    ROOT = {tag = SUC}
-                    NOT = {
-                        any_state = {
-                            is_core_of = UCB
-                            OWNER = {NOT = {tag = SUC}}
-                        }
-                    }
-                }
-                set_country_flag = comitet_ach
-            }
-
-            if = {
-                limit = {
-                    ROOT = {tag = TAL}
-                    FROM = {
-                        OR = {
-                            tag = LON
-                            tag = VRO
-                            tag = CHE
-                        }
-                    }
-                    NOT = {country_exists = LON}
-                    NOT = {country_exists = VRO}
-                    NOT = {country_exists = CHE}
-                }
-                set_country_flag = talshik_ach
-            }
-
-            if = {
-                limit = {ROOT = {tag = BAE}}
-                if = {
-                    limit = {FROM = {tag = EIK}}
-                    set_country_flag = bae_eik_kill
-                }
-                else_if = {
-                    limit = {FROM = {OR = {tag = DIR tag = DEM}}}
-                    set_country_flag = bae_dir_kill
-                }
-                else_if = {
-                    limit = {FROM = {tag = TOL}}
-                    set_country_flag = bae_tol_kill
-                }
-
-                if = {
-                    limit = {
-                        has_country_flag = bae_eik_kill
-                        has_country_flag = bae_dir_kill
-                        has_country_flag = bae_tol_kill
-                    }
-                    set_country_flag = hold_my_beer_ach
-                }
-            }
-            if = {
-                limit = {
-                    ROOT = {tag = TRP}
-                    FROM = {tag = IID}
-                }
-
-                set_country_flag = trp_iid_ach
-            }
-            if = {
-                limit = {
-                    ROOT = {tag = TRP has_government = fascism}
-                    NOT = {
-                        any_state = {
-                            OR = {
-                                is_core_of = UCB
-                                is_core_of = FSC
-                            }
-                            NOT = {OWNER = {tag = TRP}}
-                        }
-                    }
-                }
-                set_state_flag = oleg_ach
-            }
-            if = {
-                limit = {
-                    tag = SDI
-                    NOT = {country_exists = DIR}
-                    NOT = {country_exists = DEM}
-                    NOT = {country_exists = BLJ}
-                    NOT = {country_exists = DIB}
-                }
-                set_country_flag = ancap_ach
-            }
-            if = {
-                limit = {
-                    tag = DIB
-                    NOT = {country_exists = DIR}
-                    NOT = {country_exists = DEM}
-                    NOT = {country_exists = BLJ}
-                    NOT = {country_exists = SDI}
-                }
-                set_country_flag = chuchkhe_ach
-            }
-            if = {
-                limit = {
-                    ROOT = {OR = {tag = LOK tag = BOK}}
-                    FROM = {OR = {tag = LOK tag = BOK}}
-                    ROOT = {has_idea = scraping_the_barrel}
-                }
-                set_country_flag = loka_ach
-            }
 
             if = {
                 limit = {ROOT = {has_country_flag = nibba}}
@@ -1778,15 +1555,6 @@ on_actions = {
 				}
 				ORB = { set_cosmetic_tag = ORB_UCB }
 			}
-
-            if = {
-                limit = {
-                    all_country = {
-                        num_occupied_states < 1
-                    }
-                }
-                set_global_flag = minor_ach
-            }
 		}
 	}
 	on_release_as_puppet = {
@@ -1890,54 +1658,11 @@ on_actions = {
                 limit = {
                     has_government = democratic
                 }
-
                 add_threat = -2.5
-                set_country_flag = democratic_move
             }
             else = {
                 add_threat = 2.5
-                if = {
-                    limit = {has_government = fascism}
-                    set_country_flag = fascism_move
-                    if = {
-                        limit = {
-                            UCB = {has_completed_focus = UCB_fasc_podelit}
-                        }
-                        if = {
-                            limit = {
-                                all_country = {
-                                    OR = {
-                                        NOT = {any_owned_state = {is_on_continent = etredia}}
-                                        has_government = fascism
-                                    }
-                                }
-                            }
-                            UCB = {set_country_flag = narabel_dream_ach}
-                        }
-                    }
-                }
-                else_if = {
-                    limit = {has_government = neutrality}
-                    set_country_flag = neutrality_move
-                }
-                else_if = {
-                    limit = {has_government = communism}
-                    set_country_flag = communism_move
-                }
-                else_if = {
-                    limit = {has_government = monarchism}
-                    set_country_flag = monarchism_move
-                }
-            }
-            if = {
-                limit = {
-                    has_country_flag = democratic_move
-                    has_country_flag = fascism_move
-                    has_country_flag = communism_move
-                    has_country_flag = neutrality_move
-                    has_country_flag = monarchism_move
-                }
-                set_country_flag = experiments_ach
+                
             }
 
 			if = {
@@ -2038,34 +1763,12 @@ on_actions = {
 					transfer_state_to = DON
 				}
 			}
-            else_if = {
-                limit = {
-                    tag = TOL
-                    controls_state = 319
-                    date < 2018.1.1
-                }
-                set_country_flag = tolch_ach
-            }
+            
 		}
 	}
 
     on_declare_war = {
         effect = {
-            if = {
-                limit = {
-                    tag = TOB
-                    FROM = {
-                        OR = {
-                            tag = EIK
-                            tag = UCB
-                        }
-                    }
-                    has_global_flag = WORLD_WAR
-                    num_divisions < 3
-                }
-
-                set_country_flag = shop_security_ach
-            }
             if = {
                 limit = {
                     FROM = {
@@ -2080,24 +1783,10 @@ on_actions = {
                             tag = UCB
                         }
                     }
-                    EIK = {is_faction_leader = yes}
-                    UCB = {is_faction_leader = yes}
+                    EIK = {is_in_faction = yes}
+                    UCB = {is_in_faction = yes}
                 }
                 set_global_flag = WORLD_WAR
-            }
-            if = {
-                limit = {
-                    tag = BDA
-                    FROM = {
-                        OR = {
-                            tag = EIK
-                            tag = UCB
-                        }
-                    }
-                    has_global_flag = WORLD_WAR
-                    has_country_flag = beldpo_win_civilwar
-                }
-                set_country_flag = beldpo_ach
             }
             if = {
                 limit = {
@@ -2141,15 +1830,6 @@ on_actions = {
                     }
                     15 = {}
                 }
-            }
-        }
-    }
-
-    on_offer_join_faction = {
-        effect = {
-            if = {
-                limit = {FROM = {has_government = democratic} ROOT = {tag = EIK}}
-                FROM = {set_country_flag = whoami_ach}
             }
         }
     }

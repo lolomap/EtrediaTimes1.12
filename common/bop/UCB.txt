@@ -19,7 +19,7 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.1
+					value = 0.05
 					tooltip = change_region_ideology_factor_tooltip
 				}
                 custom_effect_tooltip = banned_ucb_bop_tooltip
@@ -50,7 +50,7 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.06
+					value = 0.03
 					tooltip = change_region_ideology_factor_tooltip
 				}
                 custom_effect_tooltip = banned_ucb_bop_tooltip
@@ -78,7 +78,7 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.03
+					value = 0.02
 					tooltip = change_region_ideology_factor_tooltip
 				}
 			}
@@ -108,7 +108,7 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.01
+					value = 0.005
 					tooltip = change_region_ideology_factor_tooltip
 				}
 			}

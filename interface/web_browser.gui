@@ -1,0 +1,64 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "web_browser"
+		position = { x = -28 y = 33 }
+		orientation = upper_right
+		
+		moveable = no
+		
+		buttonType = {
+            name = "button_enter"
+            position = {x = 0 y = 0}
+            spriteType = "GFX_help_button"
+            clicksound = click_chat
+
+			pdx_tooltip = "ENTER_BUTT"
+			web_link = "https://vk.com/@etredia-informacionnyi-zakrep"
+        }
+    }
+    
+    containerWindowType = {
+		name = "web_browser2"
+		position = { x =150 y = 15 }
+		
+		moveable = no
+		
+		buttonType = {
+            name = "ucb_help"
+            position = {x = 0 y = 0}
+            spriteType = "GFX_help_button"
+            clicksound = click_chat
+
+			pdx_tooltip = "ENTER_BUTT"
+			web_link = "https://vk.com/@etredia-osnb-obedinennye-strany-neirsta-berta"
+        }
+        buttonType = {
+            name = "sbu_help"
+            position = {x = 0 y = 0}
+            spriteType = "GFX_help_button"
+            clicksound = click_chat
+
+			pdx_tooltip = "ENTER_BUTT"
+			web_link = "https://vk.com/@etredia-siburland"
+        }
+        buttonType = {
+            name = "sfl_help"
+            position = {x = 0 y = 0}
+            spriteType = "GFX_help_button"
+            clicksound = click_chat
+
+			pdx_tooltip = "ENTER_BUTT"
+			web_link = "https://vk.com/@etredia-saffliya"
+        }
+        buttonType = {
+            name = "che_help"
+            position = {x = 0 y = 0}
+            spriteType = "GFX_help_button"
+            clicksound = click_chat
+
+			pdx_tooltip = "ENTER_BUTT"
+			web_link = "https://vk.com/@etredia-chespen"
+        }
+    }
+}
