@@ -1,5 +1,5 @@
 achievs_available = {
-    is_ironman = yes
+    is_ironman = no
 }
 
 crysis_startable = {
