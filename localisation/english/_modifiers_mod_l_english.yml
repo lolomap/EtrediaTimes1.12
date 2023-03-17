@@ -1,0 +1,30 @@
+﻿l_english:
+ embargo_bitch:0 "Embargo"
+ embargo_initiator:0 "Embargo initiator"
+ embargo_target:0 "Embargo target"
+
+ political_form_cost_factor: "The cost of changing the political regime"
+ press_laws_cost_factor: "Costs of media laws"
+
+ IID_pressureTRP:0 "Pressure from the END"
+
+ war_tire_value:0 "[?wtire|0]"
+ war_tire_desc:0 "§War Fatigue§!\n"
+ war_tire_effect:0 "War fatigue\nLegitimacy: [?wtire_stability|%+0]\nWarfare: [?wtire_warsup|%+0]\nAttack Division: [?wtire_attack|%+0]nDivision Defense: [?wtire_deffence|%+0]nDivision Recovery Rate: [?wtire_restore|%+0]nDivision training speed: [?wtire_mobolize|%+0]"
+ 
+ 
+ UCB_hateIID:0 "Sanctions from the UcNB"
+ SFL_hateIID:0 "Sanctions from Safflia"
+ KAR_hateIID:0 "Kartilia Sanctions"
+ SBU_hateIID:0 "Sanctions from Siburland"
+ EIK_hateIID:0 "Sanctions from Eiklindstind"
+
+ SBU_eik_relations:0 "Southern partner"
+ SBU_democracy_enemy:0 "Traitor to Democracy"
+ SBU_democracy_friendly:0 "Forced authoritarianism"
+ SBU_UCB_fascist_enemy:0 "Broken diplomatic relations"
+
+ SBU_annex_RGY_SFL: "Annexation of Gy"
+ SBU_east_monfua_SFL: "Presence in Monfua"
+
+ ORB_DemExample_opinion:0 "Democracy stronghold"

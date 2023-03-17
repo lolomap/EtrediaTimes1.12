@@ -1562,7 +1562,7 @@ focus_tree = {
 			focus = UCB_dem_infrastructure3
 		}
 		completion_reward = {
-			remove_ideas = UCB_des_army
+			remove_ideas = UCB_des_army2
 			army_experience = 25
 		}
 		x = 9

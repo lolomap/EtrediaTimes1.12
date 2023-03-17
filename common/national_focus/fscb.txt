@@ -1,12 +1,12 @@
 focus_tree = {
-	id = fscb
+	id = sex
 	country = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = FSC
+			tag = BEB
 		}
-        }
+    }
 	default = no
 	continuous_focus_position = {x = 0 y = 30}
 	focus = {

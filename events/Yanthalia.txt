@@ -168,12 +168,12 @@ country_event = {
 
 	option = {
 	name = yan.8.a
-            YAN = {
+        YAN = {
 			create_wargoal = {
 				type = annex_everything
 				target = TRB
 			}
-            }
+        }
     }
 }
 
@@ -181,7 +181,7 @@ country_event = {
 	id = yan.9
 	title = yan.9.t
 	desc = yan.9.d
-	picture = GFX_news_even
+	picture = GFX_report_event_communist_leader
 	
 	is_triggered_only = yes
 
@@ -228,21 +228,21 @@ country_event = {
 
 	option = {
 	name = yan.12.a
-	add_stability = 0.3
-	add_ideas = { YAN_min_taxes }
-	ai_chance = { factor = 25 }
+		add_stability = 0.3
+		add_ideas = { YAN_min_taxes }
+	ai_chance = { factor = 20 }
     }
 	option = {
 	name = yan.12.b
-	add_stability = 0.1
-	add_ideas = { YAN_medium_taxes }
-	ai_chance = { factor = 60 }
+		add_stability = 0.1
+		add_ideas = { YAN_medium_taxes }
+	ai_chance = { factor = 80 }
     }
 	option = {
 	name = yan.12.c
-	add_stability = -0.1
-	add_ideas = { YAN_max_taxes }
-	ai_chance = { factor = 15 }
+		add_stability = -0.1
+		add_ideas = { YAN_max_taxes }
+	ai_chance = { factor = 0 }
     }
 }
 

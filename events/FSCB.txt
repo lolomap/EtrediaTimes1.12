@@ -560,3 +560,70 @@ country_event = {
         }
     }
 }
+
+country_event = {
+	id = fscb.19
+	title = fscb.19.t
+	desc = fscb.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = fscb.19.a
+		IID = { country_event = { dux.11 days = 1 } }
+		ai_chance ={
+			factor = 0.2
+		}
+	}
+	option = {
+		name = fscb.19.b
+		IID = { country_event = { dux.12 days = 1 } }
+		ai_chance ={
+			factor = 0.6
+		}
+	}
+	option = {
+		name = fscb.19.c
+		IID = { country_event = { dux.13 days = 1 } }
+		ai_chance ={
+			factor = 0.2
+		}
+	}
+}
+
+country_event = {
+	id = fscb.20
+	title = fscb.20.t
+	desc = fscb.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = fscb.20.a
+		FSC = {
+			diplomatic_relation = {
+    			country = IID
+    			relation = non_aggression_pact
+    			active = no
+			}
+		}
+		TRP = {
+			diplomatic_relation = {
+    			country = IID
+    			relation = non_aggression_pact
+    			active = no
+			}
+		}
+	}
+}
+country_event = {
+	id = fscb.21
+	title = fscb.21.t
+	desc = fscb.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = fscb.21.a
+	}
+}
