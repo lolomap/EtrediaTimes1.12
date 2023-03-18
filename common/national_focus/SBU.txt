@@ -2543,7 +2543,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SBU_war_with_MOF
-		icon = GFX_goal_unknown
+		icon = GFX_goal_sbu_war_with_mof
 		cost = 15
 		prerequisite = {
 			focus = SBU_east_monfua
@@ -2687,7 +2687,7 @@ focus_tree = {
 
     focus = {
 		id = SBU_third_way
-		icon = GFX_goal_unknown
+		icon = GFX_goal_sbu_third_way
 		cost = 5
 		prerequisite = {
 			focus = SBU_kar_pressure
