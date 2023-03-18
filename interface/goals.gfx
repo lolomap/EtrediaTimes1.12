@@ -1,5 +1,17 @@
 spriteTypes = {
 
+SpriteType = {
+	name = "GFX_goal_sbu_third_way"
+	texturefile="gfx/interface/goals/goal_sbu_third_way.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sbu_war_with_mof"
+	texturefile="gfx/interface/goals/goal_sbu_war_with_mof.dds"
+}
+
+
     SpriteType = {
         name = "GFX_goal_sbu_east_monfua"
         texturefile="gfx/interface/goals/goal_sbu_east_monfua.dds"

@@ -22,6 +22,11 @@ UCB_parlament_balance = {
 					value = 0.05
 					tooltip = change_region_ideology_factor_tooltip
 				}
+                set_variable = {
+                    var = region_event_factor
+                    value = 1.7
+                    tooltip = change_region_event_factor_tooltip
+                }
                 custom_effect_tooltip = banned_ucb_bop_tooltip
                 hidden_effect = {
                     set_country_flag = banned_ucb_bop
@@ -53,6 +58,11 @@ UCB_parlament_balance = {
 					value = 0.03
 					tooltip = change_region_ideology_factor_tooltip
 				}
+                set_variable = {
+                    var = region_event_factor
+                    value = 1.7
+                    tooltip = change_region_event_factor_tooltip
+                }
                 custom_effect_tooltip = banned_ucb_bop_tooltip
                 hidden_effect = {
                     set_country_flag = banned_ucb_bop
@@ -81,6 +91,11 @@ UCB_parlament_balance = {
 					value = 0.02
 					tooltip = change_region_ideology_factor_tooltip
 				}
+                set_variable = {
+                    var = region_event_factor
+                    value = 1.3
+                    tooltip = change_region_event_factor_tooltip
+                }
 			}
         }
     }
@@ -97,6 +112,13 @@ UCB_parlament_balance = {
             id = UCB_president_mid_range
 			min = 0.5
 			max = 0.9
+            on_activate = {
+                set_variable = {
+                    var = region_event_factor
+                    value = 0.4
+                    tooltip = change_region_event_factor_tooltip
+                }
+            }
         }
         range = {
             id = UCB_president_range
@@ -111,6 +133,11 @@ UCB_parlament_balance = {
 					value = 0.005
 					tooltip = change_region_ideology_factor_tooltip
 				}
+                set_variable = {
+                    var = region_event_factor
+                    value = 0.7
+                    tooltip = change_region_event_factor_tooltip
+                }
 			}
         }
     }

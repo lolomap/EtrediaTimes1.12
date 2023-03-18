@@ -27,6 +27,34 @@ defined_text = {
 }
 
 defined_text = {
+    name = region_event_sl
+    text = {
+        trigger = {check_variable = {UCB.region_event_type = 0}}
+        localization_key = ucnb.27.d0
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_event_type = 1}}
+        localization_key = ucnb.27.d1
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_event_type = 2}}
+        localization_key = ucnb.27.d2
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_event_type = 3}}
+        localization_key = ucnb.27.d3
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_event_type = 4}}
+        localization_key = ucnb.27.d4
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_event_type = 5}}
+        localization_key = ucnb.27.d5
+    }
+}
+
+defined_text = {
     name = building_id_sl
     text = { trigger = {check_variable = {ROOT.nuke_building = 15}}
         localization_key = "nuclear_reactor"

@@ -1,0 +1,163 @@
+on_actions = {
+    on_monthly = {
+        effect = {
+            # Подсчет усталости
+            if = {
+                limit = {
+                    OR = {
+                        ROOT = {has_war = yes}
+                        ROOT = {has_border_war = yes}
+                    }
+                }
+                ROOT = {
+                    set_variable = {wtire_to_add = 4.2}
+                    if = {
+                        limit = {has_country_flag = do_reduce_wtire}
+                        multiply_variable = {wtire_to_add = 0.85}
+                    }
+                    if = {
+                        limit = {has_country_flag = do_cost_wtire}
+                        multiply_variable = {wtire_to_add = 1.15}
+                    }
+                    if = {
+                        limit = {has_country_flag = do_reduce_wtire_advisor}
+                        multiply_variable = {wtire_to_add = 0.85}
+                    }
+                    
+                    add_to_variable = {wtire = wtire_to_add}
+                }
+            }
+            else = {
+                if = {
+                    limit = {ROOT = {check_variable = {wtire > 4.1}}}
+                    ROOT = {subtract_from_variable = {wtire = 4.2}}
+                }
+            }
+            # Эффкты от усталости
+            ROOT = {
+                if = {
+                    limit = {
+                        check_variable = {wtire > 20}
+                        check_variable = {wtire < 50}
+                    }
+                    set_variable = {wtire_stability = -0.05}
+                    set_variable = {wtire_warsup = -0.05}
+                    set_variable = {wtire_attack = 0}
+                    set_variable = {wtire_deffence = 0}
+                    set_variable = {wtire_restore = 0}
+                    set_variable = {wtire_mobolize = 0}
+
+                    if = {
+                        limit = {not = {has_idea = war_tire_idea1}}
+                        add_ideas = war_tire_idea1
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = {wtire  > 50}
+                        check_variable = {wtire  < 100}
+                    }
+                    set_variable = {wtire_stability = -0.1}
+                    set_variable = {wtire_warsup = -0.1}
+                    set_variable = {wtire_attack = -0.05}
+                    set_variable = {wtire_deffence = -0.05}
+                    set_variable = {wtire_restore = -0.08}
+                    set_variable = {wtire_mobolize = 0.05}
+
+                    if = {
+                        limit = {not = {has_idea = war_tire_idea2}}
+                        add_ideas = war_tire_idea2
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = {wtire  > 100}
+                        check_variable = {wtire  < 150}
+                    }
+                    set_variable = {wtire_stability = -0.2}
+                    set_variable = {wtire_warsup = -0.2}
+                    set_variable = {wtire_attack = -0.1}
+                    set_variable = {wtire_deffence = -0.1}
+                    set_variable = {wtire_restore = -0.15}
+                    set_variable = {wtire_mobolize = 0.1}
+
+                    if = {
+                        limit = {not = {has_idea = war_tire_idea3}}
+                        add_ideas = war_tire_idea3
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = {wtire  > 150}
+                        check_variable = {wtire  < 200}
+                    }
+                    set_variable = {wtire_stability = -0.3}
+                    set_variable = {wtire_warsup = -0.3}
+                    set_variable = {wtire_attack = -0.15}
+                    set_variable = {wtire_deffence = -0.15}
+                    set_variable = {wtire_restore = -0.2}
+                    set_variable = {wtire_mobolize = 0.15}
+
+                    if = {
+                        limit = {not = {has_idea = war_tire_idea4}}
+                        add_ideas = war_tire_idea4
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = {wtire  > 200}
+                    }
+                    set_variable = {wtire_stability = -0.3}
+                    set_variable = {wtire_warsup = -0.3}
+                    set_variable = {wtire_attack = -0.25}
+                    set_variable = {wtire_deffence = -0.25}
+                    set_variable = {wtire_restore = -0.3}
+                    set_variable = {wtire_mobolize = 0.25}
+
+                    if = {
+                        limit = {not = {has_idea = war_tire_idea5}}
+                        add_ideas = war_tire_idea5
+                    }
+                }
+                else = {
+                    if = {
+                        limit = {
+                            OR = {
+                                has_idea = war_tire_idea1
+                                has_idea = war_tire_idea2
+                                has_idea = war_tire_idea3
+                                has_idea = war_tire_idea4
+                                has_idea = war_tire_idea5
+                            }
+                        }
+
+                        set_variable = {wtire_stability = 0}
+                        set_variable = {wtire_warsup = 0}
+                        set_variable = {wtire_attack = 0}
+                        set_variable = {wtire_deffence = 0}
+                        set_variable = {wtire_restore = 0}
+                        set_variable = {wtire_mobolize = 0}
+                    }
+                    if = {
+                        limit = {
+                            or = {
+                                has_idea = war_tire_idea1
+                                has_idea = war_tire_idea2
+                                has_idea = war_tire_idea3
+                                has_idea = war_tire_idea4
+                                has_idea = war_tire_idea5
+                            }
+                        }
+                        remove_ideas = {
+                            war_tire_idea1
+                            war_tire_idea2
+                            war_tire_idea3
+                            war_tire_idea4
+                            war_tire_idea5
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
