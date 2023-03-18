@@ -2,10 +2,6 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-    add_power_balance_value = {
-    id = ucb_parlament_balance
-    value = -1
-}
 }
 
 ####
@@ -441,7 +437,6 @@ crysis_reward = {
 
         if = {
             limit = {var:global.sender_crysis = {has_government = democratic}}
-            add_threat = -5
         }
     }
     else_if = { #корки

@@ -281,11 +281,12 @@ guiTypes = {
 	containerWindowType = {
 		name = "EventWindow_News"
 		position = { x=-282 y=-310 }	
-		size = { width = 528 height = 595 }
+		size = { width = 528 height = 695 }
 		moveable = yes
 		Orientation = CENTER
 		show_sound = world_news_effect
 		hide_sound = menu_close_window
+        clipping = no
 		
 		background = {
 			name = "Background"	
@@ -361,7 +362,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 25 y = 50 }
+				position = { x = 75 y = 100 }
 				size = { width = 300 height = 30 }
 				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1
