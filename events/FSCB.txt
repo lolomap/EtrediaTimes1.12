@@ -636,5 +636,8 @@ country_event = {
 
 	option = {
 		name = fscb.22.a
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_political_power = 50
 	}
 }

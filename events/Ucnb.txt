@@ -695,7 +695,7 @@ country_event = {
 			add_state_core = 31
 		}
 
-		FSC = { country_event = { id = fsc.22 days = 1 } }
+		FSC = { country_event = { id = fscb.22 days = 1 } }
 
 		hidden_effect = {
 			FSC = {

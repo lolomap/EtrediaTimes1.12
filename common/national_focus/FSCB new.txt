@@ -327,7 +327,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			UCB = { country_event = { id = ucb.28 days = 1 } }
+			UCB = { country_event = { id = ucnb.28 days = 1 } }
 			FSC = { 
 				add_opinion_modifier = {
 					target = UCB
@@ -402,7 +402,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
         prerequisite = {
-			focus = FSC_Alende_group
+			focus = FSC_agreement_of_free_borders
 		}
 		completion_reward = {
 			FSC = { remove_ideas = { FSC_divided_ortostan }}
@@ -447,7 +447,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = { id = fscb.1 days = 1 }
-			UCB = { country_event = { id = ucb.29 days = 1} }
+			UCB = { country_event = { id = ucnb.29 days = 1} }
 			add_threat = 10
 		}
         ai_will_do = {

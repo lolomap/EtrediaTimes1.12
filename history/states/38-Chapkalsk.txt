@@ -3,7 +3,7 @@ state={
 	name="STATE_38"
 	manpower = 4980000
 	
-	state_category = metropolis
+	state_category = megalopolis
 	
 	resources={
 	
@@ -13,8 +13,8 @@ state={
 		owner = OIK
 		buildings = {
 			infrastructure = 4
-                        industrial_complex = 3
-                        arms_factory = 2
+                        industrial_complex = 4
+                        arms_factory = 3
                         dockyard = 3
                         air_base = 8
 			12342 = {
