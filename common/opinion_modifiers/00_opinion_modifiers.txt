@@ -26,6 +26,9 @@ opinion_modifiers = {
 		value = 15
 		min_trust = 15
 	}
+	UCB_FSC_Ortostan_question = {
+		value = -20
+	}
     SBU_annex_RGY_SFL = {
         value = -25
     }

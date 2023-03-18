@@ -652,3 +652,73 @@ country_event = {
     option = {name = ucnb.27.a}
     option = {name = ucnb.27.b}
 }
+country_event = {
+    id = ucnb.28
+    title = ucnb.28.t
+    desc = ucnb.28.d
+    
+    is_triggered_only = yes
+
+    option = {
+		name = ucnb.28.a
+		add_stability = -0.05
+		UCB = { 
+			add_opinion_modifier = {
+				target = FSC
+    			modifier = UCB_FSC_Ortostan_question
+			} 
+		}
+	}
+}
+country_event = {
+    id = ucnb.29
+    title = ucnb.29.t
+    desc = ucnb.29.d
+    
+    is_triggered_only = yes
+
+    option = {
+		name = ucnb.29.a
+		add_political_power = 50
+		add_war_support = 0.15
+		ai_chance ={
+			factor = 0.8
+		}
+	}
+	option = {
+		name = ucnb.29.b
+
+		add_stability = -0.1
+		add_war_support = -0.1
+		FSC = { 
+			transfer_state = 31
+			add_state_core = 31
+		}
+
+		FSC = { country_event = { id = fsc.22 days = 1 } }
+
+		hidden_effect = {
+			FSC = {
+				remove_wargoal = {
+    				type = take_state
+					generator = { 31 }
+    				target = UCB
+				}
+			}
+			UCB = {
+				white_peace = {
+    				tag = FSC
+				}
+				remove_state_core = 31
+			}
+			FSC = {
+				white_peace = {
+    				tag = UCB
+				}
+			}
+		}
+		ai_chance ={
+			factor = 0.2
+		}
+	}
+}

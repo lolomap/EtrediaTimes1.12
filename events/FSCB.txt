@@ -570,21 +570,21 @@ country_event = {
 
 	option = {
 		name = fscb.19.a
-		IID = { country_event = { dux.11 days = 1 } }
+		IID = { country_event = { id = dux.11 days = 1 } }
 		ai_chance ={
 			factor = 0.2
 		}
 	}
 	option = {
 		name = fscb.19.b
-		IID = { country_event = { dux.12 days = 1 } }
+		IID = { country_event = { id = dux.12 days = 1 } }
 		ai_chance ={
 			factor = 0.6
 		}
 	}
 	option = {
 		name = fscb.19.c
-		IID = { country_event = { dux.13 days = 1 } }
+		IID = { country_event = { id = dux.13 days = 1 } }
 		ai_chance ={
 			factor = 0.2
 		}
@@ -604,14 +604,14 @@ country_event = {
 			diplomatic_relation = {
     			country = IID
     			relation = non_aggression_pact
-    			active = no
+    			active = yes
 			}
 		}
 		TRP = {
 			diplomatic_relation = {
     			country = IID
     			relation = non_aggression_pact
-    			active = no
+    			active = yes
 			}
 		}
 	}
@@ -625,5 +625,16 @@ country_event = {
 
 	option = {
 		name = fscb.21.a
+	}
+}
+country_event = {
+	id = fscb.22
+	title = fscb.22.t
+	desc = fscb.22.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = fscb.22.a
 	}
 }
