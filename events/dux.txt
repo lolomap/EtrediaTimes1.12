@@ -233,3 +233,105 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = dux.11
+	title = dux.11.t
+	desc = dux.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = dux.11.a
+		IID = {
+            if = {
+                limit = { TRP = { owns_state = 63 controls_state = 63 } } 
+		        transfer_state = 63
+                limit = { TRP = { owns_state = 62 controls_state = 62 } } 
+		        transfer_state = 62
+		    }
+		}
+		hidden_effect = {
+			IID = { set_country_flag = IID_FSC_TRP_agree }
+		}
+		FSC = { country_event = { id = fscb.20 days = 1 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = dux.11.b
+		FSC = { country_event = { id = fscb.21 days = 1 } }
+		hidden_effect = {
+			IID = { clr_country_flag = FSC_guarentee_trp_flag }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = dux.12
+	title = dux.12.t
+	desc = dux.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = dux.11.a
+		TRP = {
+            give_resource_rights = {
+    			receiver = IID
+    			state = 63
+    			resources = { oil }
+			}
+		}
+		FSC = { country_event = { id = fscb.20 days = 1 } }
+		hidden_effect = {
+			IID = { set_country_flag = IID_FSC_TRP_agree }
+		}
+		ai_chance = {
+			factor = 0.8
+		}
+	}
+	option = {
+		name = dux.11.b
+		FSC = { country_event = { id = fscb.21 days = 1 } }
+		hidden_effect = {
+			IID = { clr_country_flag = FSC_guarentee_trp_flag }
+		}
+		ai_chance = {
+			factor = 0.2
+		}
+	}
+}
+
+country_event = {
+	id = dux.13
+	title = dux.13.t
+	desc = dux.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = dux.13.a
+		FSC = { country_event = { id = fscb.20 days = 1 } }
+		hidden_effect = {
+			IID = { set_country_flag = IID_FSC_TRP_agree }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = dux.13.b
+		FSC = { country_event = { id = fscb.21 days = 1 } }
+		hidden_effect = {
+			IID = { clr_country_flag = FSC_guarentee_trp_flag }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

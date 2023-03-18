@@ -139,7 +139,11 @@ focus_tree = {
 			factor = 1
 	    }
 		completion_reward = {
-		country_event = { id = yan.9 days = 1 }
+			add_political_power = 50
+			add_stability = 0.05
+			hidden_effect = {
+				country_event = { id = yan.9 days = 135 }
+			}
 		}
 
 	}

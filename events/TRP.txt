@@ -157,3 +157,33 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = trp.6
+	title = trp.6.t
+	desc = trp.6.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = trp.6.a
+	FSC = { add_to_faction = TRP }
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				has_government = fascism
+				factor = -1
+			}
+		}
+	}
+	option = {
+	name = trp.6.b
+		ai_chance = { 
+			factor = 0
+			modifier = {
+				has_government = fascism
+				factor = 1
+			}
+		}
+	}
+}

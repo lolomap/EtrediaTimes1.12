@@ -396,6 +396,9 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_big_country_in_the_big_politics
 		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
+		}
 
 		completion_reward = {
 			add_opinion_modifier = {
@@ -409,6 +412,17 @@ focus_tree = {
 				}
 				country_event = {id = trp.3 days = 1}
 			}
+			ai_will_do = {
+			factor = 0
+				modifier = {
+					factor = -1
+					IID = { has_country_flag = FSC_guarentee_trp_flag }
+				}
+				modifier = {
+					factor = 0.2
+					date > 2015.6.1
+				}
+			}
 		}
 	}
 	
@@ -421,12 +435,26 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_pressure_to_trp
 		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
+		}
 		mutually_exclusive = {
 			focus = IID_begin_trp_integration
 		}
 
 		completion_reward = {
 			country_event = {id = dux.1 days = 1}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = -1
+				IID = { has_country_flag = FSC_guarentee_trp_flag }
+			}
+			modifier = {
+				factor = 0.5
+				date > 2015.6.1
+			}
 		}
 	}
 	
@@ -485,6 +513,9 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_Require_the_eastern_trp
 		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
+		}
 
 		completion_reward = {
 			TRP = {
@@ -502,6 +533,9 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_pressure_to_trp
 		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
+		}
 		mutually_exclusive = {
 			focus = IID_Require_the_eastern_trp
 		}
@@ -509,6 +543,17 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = iid_integrating_trp
 			TRP = {set_country_flag = iid_integrating}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = -1
+				IID = { has_country_flag = FSC_guarentee_trp_flag }
+			}
+			modifier = {
+				factor = 0.5
+				date > 2015.6.1
+			}
 		}
 	}
 	
@@ -523,6 +568,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus =	IID_infastructure_projects
+		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
 		}
 		available = {
 			TRP = {
@@ -552,6 +600,9 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_construction_in_assental
 		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
+		}
 
 		completion_reward = {
 			add_resource = {
@@ -571,6 +622,9 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_explore_oilproduction
 		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
+		}
 
 		completion_reward = {
 			TRP = {add_ideas = TRP_GovUpset}
@@ -586,6 +640,9 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_sponsor_instability
 			focus = IID_Require_the_eastern_trp
+		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
 		}
 		mutually_exclusive = {
 			focus = IID_invade_to_kulishtia
@@ -612,6 +669,9 @@ focus_tree = {
 			focus = IID_sponsor_instability
 			focus = IID_Require_the_eastern_trp
 		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
+		}
 		mutually_exclusive = {
 			focus = IID_support_kulishtia
 		}
@@ -633,6 +693,9 @@ focus_tree = {
 		prerequisite = {
 			focus = IID_invade_to_kulishtia
 			focus = IID_support_kulishtia
+		}
+		bypass = { 
+			IID = { has_country_flag = IID_FSC_TRP_agree }
 		}
 
 		completion_reward = {

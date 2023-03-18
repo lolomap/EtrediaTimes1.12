@@ -695,7 +695,7 @@ country_event = { #неугодное производство
 	option = {
 		name = eik.16.a
 		custom_effect_tooltip = eik_oligarchism_change
-		add_to_variable = {eik_oligarchism = 0.05}
+		add_to_variable = {eik_oligarchism = 0.1}
 		random_owned_state = {
 			limit = {industrial_complex > 0}
 			remove_building = {
