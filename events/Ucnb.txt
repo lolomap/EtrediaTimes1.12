@@ -649,6 +649,15 @@ country_event = {
     
     is_triggered_only = yes
 
-    option = {name = ucnb.27.a}
+    option = {
+        name = ucnb.27.a
+
+        meta_effect = {
+            text = {
+                add_ideas = [NEW_LAW_ACCEPTED]
+            }
+            NEW_LAW_ACCEPTED = "[?region_idea_change.GetTokenKey]"
+        }
+    }
     option = {name = ucnb.27.b}
 }
