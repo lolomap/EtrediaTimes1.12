@@ -190,7 +190,7 @@ ideas = {
                 democratic_drift = 0.02
 
                 drift_defence = 0.25
-				political_power_factor = -0.2
+				political_power_factor = -0.15
                 
             }
 
@@ -208,7 +208,7 @@ ideas = {
                 communism_drift = 0.02
 
                 drift_defence = 0.25
-				political_power_factor = -0.2
+				political_power_factor = -0.15
                 
             }
 
@@ -226,7 +226,7 @@ ideas = {
                 fascism_drift = 0.02
 
                 drift_defence = 0.25
-				political_power_factor = -0.2
+				political_power_factor = -0.15
                 
             }
 
@@ -244,7 +244,7 @@ ideas = {
                 neutrality_drift = 0.02
 
                 drift_defence = 0.25
-				political_power_factor = -0.2
+				political_power_factor = -0.15
                 
             }
 
@@ -262,7 +262,7 @@ ideas = {
                 monarchism_drift = 0.02
 
                 drift_defence = 0.25
-				political_power_factor = -0.2
+				political_power_factor = -0.15
                 
             }
 

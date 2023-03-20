@@ -4,7 +4,7 @@ oob = "FSC_2014"
 set_naval_oob = "FSC_2014_naval_legacy"
 
 set_research_slots = 3
-set_stability = 0.7
+set_stability = 0.4
 set_war_support = 0.5
 
 add_ideas = {
@@ -12,7 +12,10 @@ add_ideas = {
         total_free_press
         general_entry
 	third_corruption_level
-    regionalism
+    	continuity_d
+	FSC_federalization_problem_idea
+	FSC_language_problem
+	FSC_divided_ortostan
 }
 
 set_technology = {basic_train = 1

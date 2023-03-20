@@ -1,179 +1,71 @@
 ideas = {
     country = {
-	FSC_edinaya_army = {
-
-            picture = generic_political_advisor_europe_5
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                                army_morale_factor = 0.1
-                                training_time_army_factor = -0.1
-                                conscription = 0.005
-			}
-		}
-
-	fsc.economicreform = {
-
-            picture = generic_political_advisor_europe_5
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                            production_speed_buildings_factor = 0.3
-		            production_factory_efficiency_gain_factor = 0.25
-			}
-		}
-
-	fsc.radicalism = {
-
-            picture = generic_political_advisor_europe_5
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                            fascism_drift = 0.05
-                            communism_drift = 0.02
-			}
-		}
-
-
-	fsc.fascism.army1 = {
-
-            picture = generic_political_advisor_europe_5
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                        conscription = 0.005
-			}
-		}
-
-	fsc.civilsector = {
-
-            picture = generic_political_advisor_europe_5
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                            production_speed_industrial_complex_factor = 0.5
-			}
-		}
-
-	fsc.armssector = {
-
-            picture = generic_political_advisor_europe_5
-
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                            production_speed_arms_factory_factor = 0.5
-			}
-		}
-
 	fsc.iidinvestition = {
+		picture = generic_political_advisor_europe_5
 
-            picture = generic_political_advisor_europe_5
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
 
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                            production_speed_buildings_factor = 0.3
-			}
+		modifier = {
+			production_speed_buildings_factor = 0.3
+		}
 	}
 
 
 	FSC_lose = {
+		picture = idea_ENG_the_war_to_end_all_wars
 
-            picture = idea_ENG_the_war_to_end_all_wars
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
 
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                            planning_speed = -0.1
-                            army_morale_factor = -0.2
-                            army_attack_factor = -0.4
-                            army_defence_factor = -0.4
-			}
+		modifier = {
+			planning_speed = -0.1
+			army_morale_factor = -0.2
+			army_attack_factor = -0.4
+			army_defence_factor = -0.4
+		}
 	}
 
 	FSC_army_bund = {
+		picture = idea_ENG_the_war_to_end_all_wars
 
-            picture = idea_ENG_the_war_to_end_all_wars
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
 
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
-
-			modifier = {
-                            planning_speed = -0.5
-                            army_morale_factor = -0.5
-                            army_attack_factor = -0.5
-                            army_defence_factor = -0.5
-                            conscription_factor = -0.9
-                            war_support_weekly = -0.05
-                            stability_weekly = -0.01
-			}
+		modifier = {
+			planning_speed = -0.5
+			army_morale_factor = -0.5
+			army_attack_factor = -0.5
+			army_defence_factor = -0.5
+			conscription_factor = -0.9
+			war_support_weekly = -0.05
+			stability_weekly = -0.01
+		}
 	}
 
 	FSC_desperate_defense = {
+		picture = idea_ENG_the_war_to_end_all_wars
 
-            picture = idea_ENG_the_war_to_end_all_wars
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
 
-			allowed = {
-				always = no
-			}
-			
-			removal_cost = -1
-	
 
-			modifier = {
-                            army_morale_factor = 0.1
-                            army_defence_factor = 0.15
-			}
+		modifier = {
+			army_morale_factor = 0.1
+			army_defence_factor = 0.15
+		}
 	}
 
 	FSC_HelpingTRP = {
@@ -190,6 +82,73 @@ ideas = {
 
 		modifier = {
 			political_power_gain = -0.4
+		}
+	}
+	
+	FSC_federalization_problem_idea = {
+		picture = idea
+
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+		modifier = {
+			political_power_factor = -0.1
+			stability_factor = -0.1
+			fascism_drift = 0.01
+		}
+	}
+	FSC_language_problem = {
+		picture = idea
+
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.05
+			conscription_factor = -0.1
+			army_attack_factor = -0.08
+			army_defence_factor = -0.08
+			army_org_factor = -0.1
+			training_time_army_factor = 0.1
+		}
+	}
+	FSC_divided_ortostan = {
+		picture = idea
+
+		allowed = {
+			always = no
+		}
+		cancel = {
+			31 = { is_controlled_by = FSC }
+		}
+		
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.05
+			fascism_drift = 0.01
+			war_support_factor = 0.1
+		}
+	}
+	FSC_karatenia_defender = {
+		picture = idea
+
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+		modifier = {
+			war_support_factor = 0.1
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
 		}
 	}
 }

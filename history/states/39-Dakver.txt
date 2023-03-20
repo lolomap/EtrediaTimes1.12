@@ -4,7 +4,7 @@ state={
 	name="STATE_39"
 	manpower = 2400000
 	
-	state_category = town
+	state_category = large_city
 	
 	resources={
 	steel = 24 # was: 32
@@ -14,7 +14,8 @@ state={
 		owner = OIK
 		buildings = {
 			infrastructure = 4
-                        industrial_complex = 2
+                        industrial_complex = 3
+			arms_factory = 1
                         dockyard = 2
 			11757 = {
 				naval_base = 8
