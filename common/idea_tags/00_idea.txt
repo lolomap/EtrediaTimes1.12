@@ -43,6 +43,13 @@ idea_categories = {
 
 		ledger = civilian
 	}
+
+    government_2 = {
+        slot = social_economy
+        slot = security_forces
+        character_slot = min_vd
+        character_slot = min_o
+    }
 	
 	research_production = {
 		slot = tank_manufacturer

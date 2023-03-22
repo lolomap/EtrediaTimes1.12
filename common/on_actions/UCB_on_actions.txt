@@ -184,10 +184,11 @@ on_actions = {
 		}
 	}
 
-    on_monthlhy_UCB = {
+    on_monthly_UCB = {
         effect = {
             if = {
-                limit = {has_any_power_balance = yes}
+                #limit = {has_any_power_balance = yes}
+                limit = {always = yes}
 
                 set_temp_variable = {ych = 0}
 
@@ -227,7 +228,6 @@ on_actions = {
 
                 random = {
                     chance = var:ych
-                    log = "HERE"
 
                     random_list = {
                         1 = {  #ивент по закону

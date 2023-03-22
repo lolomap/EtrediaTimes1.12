@@ -34,7 +34,7 @@
   change_region_ideology_factor_tooltip: "Влияние регионов на идеологию: $RIGHT|Y=%$\n"
   change_region_event_factor_tooltip: "Возмущения в регионе: $RIGHT|Y%0$\n"
   add_region_democratic_tooltip: "Демократия в регионе: $RIGHT|Y=$\n"
-  add_region_opposition_tooltip: "Поддержка Президента в регионе: $RIGHT|Y=$\n"
+  add_region_opposition_tooltip: "Поддержка Президента в регионе: $RIGHT|Y=%$\n"
   add_region_separatism_tooltip: "Сепаратизм в регионе: $RIGHT|R=$\n"
   randomize_region_ideology_tooltip: "Идеологии регионов изменятся случайным образом\n"
   ucb_sep_rise_tooltip: "§RРост§! сепаратизма в регионах"
