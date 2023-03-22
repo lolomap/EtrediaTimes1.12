@@ -94,5 +94,21 @@ ideas = {
 				political_power_gain = 0.25
 			}
 		}
+		SMA_starOfRevolution = {
+			removal_cost = -1 
+			allowed = { always = no }
+			picture = SMA_starOfRevolution
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				political_power_gain = 0.15
+				naval_morale_factor = 0.3
+				critical_receive_chance = -0.15
+				naval_accidents_chance = -0.3
+				navy_anti_air_attack_factor = 0.1
+				naval_coordination = 0.2
+				naval_defense_factor = 0.15
+			}
+		}
 	}
 }
