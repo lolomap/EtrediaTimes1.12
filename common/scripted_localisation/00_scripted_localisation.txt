@@ -55,6 +55,30 @@ defined_text = {
 }
 
 defined_text = {
+    name = region_law_sl
+    text = {
+        trigger = {check_variable = {UCB.region_law_change = 0}}
+        localization_key = "Закон о СМИ"
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_law_change = 1}}
+        localization_key = "Закон об ограничениях на въезд"
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_law_change = 2}}
+        localization_key = "Закон о призыве на военную службу"
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_law_change = 3}}
+        localization_key = "Закон о финансировании промышленности"
+    }
+    text = {
+        trigger = {check_variable = {UCB.region_law_change = 4}}
+        localization_key = "Закон об экспорте"
+    }
+}
+
+defined_text = {
     name = building_id_sl
     text = { trigger = {check_variable = {ROOT.nuke_building = 15}}
         localization_key = "nuclear_reactor"

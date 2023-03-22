@@ -10,6 +10,10 @@ ideas = {
                  removal_cost = -1
                  level = 4
 
+                on_add = {
+                    set_variable = {press_law = token:total_free_press}
+                }
+
                  modifier = {
                          stability_factor = 0.1
                          research_speed_factor = 0.10
@@ -32,6 +36,10 @@ ideas = {
                          research_speed_factor = 0.05
                  }
 
+                 on_add = {
+                    set_variable = {press_law = token:free_press}
+                }
+
                  cancel_if_invalid = no 
             }
 
@@ -42,6 +50,10 @@ ideas = {
                  cost = 150
                  removal_cost = -1
                  level = 2
+
+                 on_add = {
+                    set_variable = {press_law = token:nonfree_press}
+                }
 
                  modifier = {
 			 conscription_factor = 0.02
@@ -68,6 +80,10 @@ ideas = {
                  has_government = neutrality
                  }
                  }
+
+                 on_add = {
+                    set_variable = {press_law = token:total_nonfree_press}
+                }
 
                  modifier = {
 						 conscription_factor = 0.05

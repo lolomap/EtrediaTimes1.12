@@ -70,6 +70,9 @@ ideas = {
 		
 		civilian_economy = {
 			
+            on_add = {
+                set_variable = {economy_law = token:civilian_economy}
+            }
 		
 			cost = 150
 			removal_cost = -1
@@ -90,12 +93,12 @@ ideas = {
 		}
 		
 		low_economic_mobilisation = {
+            on_add = {
+                set_variable = {economy_law = token:low_economic_mobilisation}
+            }
 			
 			available = {
 				has_war_support > 0.15	
-			}
-			on_add = {
-				
 			}
 			
 			cost = 150
@@ -127,6 +130,9 @@ ideas = {
 		
 		partial_economic_mobilisation = {
 			
+            on_add = {
+                set_variable = {economy_law = token:partial_economic_mobilisation}
+            }
 			available = {
 				has_war_support > 0.25
 			}
@@ -143,9 +149,6 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-			on_add = {
-				
-			}
 			ai_will_do = {
    				factor = 2
 
@@ -159,6 +162,9 @@ ideas = {
 		
 		war_economy = {
 			
+            on_add = {
+                set_variable = {economy_law = token:war_economy}
+            }
 			
 			available = {
 				has_war_support > 0.5
@@ -189,9 +195,6 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-			on_add = {
-				
-			}
 			ai_will_do = {
    				factor = 5
 
@@ -205,6 +208,9 @@ ideas = {
 		
 		tot_economic_mobilisation = {
 			
+            on_add = {
+                set_variable = {economy_law = token:tot_economic_mobilisation}
+            }
 			
 			available = {
 				has_war = yes
@@ -215,9 +221,6 @@ ideas = {
 						ratio > 0.5
 					}
 				}
-			}
-			on_add = {
-				
 			}
 			ai_will_do = {
    				factor = 1
@@ -267,6 +270,9 @@ ideas = {
 						
 			cost = 150
 			removal_cost = -1
+            on_add = {
+                set_variable = {trade_law = token:free_trade}
+            }
 			
 			modifier = {
 				min_export = 0.8
@@ -302,6 +308,9 @@ ideas = {
 			}
 			
 			default = yes
+            on_add = {
+                set_variable = {trade_law = token:export_focus}
+            }
 			
 			cancel_if_invalid = no
 
@@ -344,6 +353,9 @@ ideas = {
 				}
 
 			}
+            on_add = {
+                set_variable = {trade_law = token:limited_export}
+            }
 		
 			cost = 150
 			removal_cost = -1
@@ -404,6 +416,7 @@ ideas = {
 			
 			on_add = {
 				custom_effect_tooltip = closed_economy_TT
+                set_variable = {trade_law = token:closed_economy}
 			}
 			
 			cancel_if_invalid = no

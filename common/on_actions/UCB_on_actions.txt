@@ -4,6 +4,12 @@ on_actions = {
             UCB = {
                 country_event = {id = ucnb.26 days = 790}
                 set_variable = {region_event_factor = 1.3}
+                set_variable = {press_law = token:total_free_press}
+                set_variable = {migration_law = token:limited_entry}
+                set_variable = {mobilization_law = token:volunteer_only}
+                set_variable = {economy_law = token:civilian_economy}
+                set_variable = {trade_law = token:export_focus}
+
                 set_power_balance = {
                     id = UCB_parlament_balance
                     left_side = UCB_parlament_side
@@ -221,14 +227,17 @@ on_actions = {
 
                 random = {
                     chance = var:ych
+                    log = "HERE"
 
                     random_list = {
-                        1 = {set_variable = {region_event_type = 0}} #ивент по закону
-                        1 = {set_variable = {region_event_type = 1}} #ивент по коррупции
-                        1 = {set_variable = {region_event_type = 2}} #ивент по балансу
-                        1 = {set_variable = {region_event_type = 3}} #ивент по советнику
-                        1 = {set_variable = {region_event_type = 4}} #ивент по торговле
-                        1 = {set_variable = {region_event_type = 5}} #ивент по напряженности
+                        1 = {  #ивент по закону
+                            region_event_change_law = yes
+                        }
+                        0 = {set_variable = {region_event_type = 1}} #ивент по коррупции
+                        0 = {set_variable = {region_event_type = 2}} #ивент по балансу
+                        0 = {set_variable = {region_event_type = 3}} #ивент по советнику
+                        0 = {set_variable = {region_event_type = 4}} #ивент по торговле
+                        0 = {set_variable = {region_event_type = 5}} #ивент по напряженности
                     }
                     country_event = ucnb.27
                 }
