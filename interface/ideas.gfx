@@ -16,6 +16,15 @@ spriteTypes = {
 		name = "GFX_idea_leadership"
 		texturefile = "gfx/interface/ideas/Vozhdestvo.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_SMA_starOfRevolution"
+		texturefile = "gfx/interface/ideas/idea_SMA_starOfRevolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UCB_society_resistance"
+		texturefile = "gfx/interface/ideas/idea_UCB_society_resistance.dds"
+	}
 
     spriteType = {
 		name = "GFX_idea_economic_faction"

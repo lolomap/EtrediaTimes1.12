@@ -277,7 +277,7 @@ ideas = {
 
         UCB_resist = {
 	
-        picture = ss
+        picture = UCB_society_resistance
 		 
                 allowed = {
                        always = no
