@@ -96,7 +96,7 @@ static const float3 FAKE_CUBEMAP_COLOR 			= float3(0.0f, 0.0f, 0.0f);
 // SEVERE_WINTER_VALUE = ###,					defines.lua   (reload defines)
 
 
-static const float 	BORDER_TILE					= 0.4f;
+static const float 	BORDER_TILE					= 0.3f;
 // BORDER_WIDTH		= ###						defines.lua   (reload defines)
 
 
