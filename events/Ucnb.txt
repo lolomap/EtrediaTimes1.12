@@ -658,8 +658,15 @@ country_event = {
             }
             NEW_LAW_ACCEPTED = "[?region_idea_change.GetTokenKey]"
         }
+        
+        var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}}
     }
-    option = {name = ucnb.27.b}
+    option = {
+        name = ucnb.27.b
+
+        add_political_power = -50
+        var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = -0.1 tooltip = add_region_opposition_tooltip}}
+    }
 }
 country_event = {
     id = ucnb.28

@@ -1,6 +1,38 @@
 # For minor countries where advisors are not defined
 # Generate them from a generic template
 
+#Ministers
+every_possible_country = {
+    limit = {always = yes}
+    generate_character = {
+        token_base = minister_token
+        advisor = {
+            slot = min_vd
+            available = {
+                always = no
+            }
+        }
+        portraits = {
+			army = { small = GFX_idea_generic_democratic_reformer }
+        }
+    }
+}
+every_possible_country = {
+    limit = {always = yes}
+    generate_character = {
+        token_base = minister2_token
+        advisor = {
+            slot = min_o
+            available = {
+                always = no
+            }
+        }
+        portraits = {
+			army = { small = GFX_idea_generic_democratic_reformer }
+        }
+    }
+}
+
 # Political advisors
 every_possible_country = {
 	limit = {
