@@ -8,6 +8,7 @@
  FACTION_NAME_IDEOLOGY_DEFAULT:0 "Приверженцы идеологии $IDEOLOGY$"
  ZHE_anti_koul:0 "Блок взаимопомощи"
  FSC_help_bloc_alliance:0 "Блок взаимопомощи"
+ FSC_Karathenian_coalition_faction:0 "Каратенская коалиция"
  french_alliance:0 "Французский Союз"
  the_berlin_moscow_axis:0 "Ось Берлин-Москва"
  domination_francaise:0 "Французский Доминион"

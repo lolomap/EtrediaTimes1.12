@@ -352,7 +352,8 @@ focus_tree = {
 			focus = FSC_save_TRP_alt
 		}
 		completion_reward = {
-			#
+			create_faction = FSC_Karathenian_coalition_faction
+			add_to_faction = TRP
 		}
         ai_will_do = {
 			factor = 0.2

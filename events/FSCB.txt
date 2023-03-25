@@ -120,7 +120,6 @@ country_event = {
 			}
 		}
     }
-	
 	option = {
 		name = fscb.5.b
 		FSC = {
@@ -374,8 +373,8 @@ country_event = {
 		ai_chance = { factor = 100 }
     }
 	option = {
-	name = fscb.13.b
-	ai_chance = { factor = 0 }
+		name = fscb.13.b
+		ai_chance = { factor = 0 }
     }
 }
 
