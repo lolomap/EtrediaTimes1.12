@@ -6,12 +6,11 @@ country_event = {
 	desc = fscb.1.d
 	picture = GFX_news_even
 	
-        is_triggered_only = yes
+	is_triggered_only = yes
 
 	trigger = {
         TAG = FSC
     }
-        mean_time_to_happen = { days = 1 }
 
 	option = {
 		name = fscb.1.a
@@ -23,12 +22,12 @@ country_event = {
 			}
 		}
 		UCB = {
-		add_timed_idea = { idea = UCB_fsc_at
-                                   days = 30
-                         }
-        FSC = { country_event = { days = 15 id = fscb.2 } }
+			add_timed_idea = { 
+				idea = UCB_fsc_at
+                days = 30
+            } 
 		}
-        }
+    }
 }
 
 
@@ -38,15 +37,15 @@ country_event = {
 	desc = fscb.2.d
 	picture = GFX_news_even
 
-        is_triggered_only = yes
+	is_triggered_only = yes
 
-        trigger = {
+    trigger = {
         TAG = FSC
-        }
+    }
 		
 	option = {
 	    name = fscb.2.a
-		       FSC = { declare_war_on = { target = UCB type = annex_everything } }
+		FSC = { declare_war_on = { target = UCB type = annex_everything } }
 	}
 }
 
@@ -177,7 +176,7 @@ country_event = {
 			}
 		    KUL = { declare_war_on = { target = FSC type = annex_everything } }
 			country_event = { id = fscb.7 days = 5 }
-			IID = { country_event = { id = dux.4 days = 60 } }
+			IID = { country_event = { id = dux.4 days = 200 } }
         }
 	}
 }
@@ -241,7 +240,7 @@ country_event = {
 				set_rule = {can_join_factions = no}
 			}
 		    NER = { declare_war_on = { target = FSC type = annex_everything } }
-			SFL = { country_event = { id = sfl.1 days = 40 } }
+			SFL = { country_event = { id = sfl.1 days = 240 } }
         }	
 	}
 }
@@ -639,5 +638,20 @@ country_event = {
 		add_stability = 0.1
 		add_war_support = 0.1
 		add_political_power = 50
+	}
+}
+country_event = {
+	id = fscb.23
+	title = fscb.23.t
+	desc = fscb.23.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = fscb.23.a
+		create_wargoal = {
+            type = annex_everything
+            target = TRP
+		}
 	}
 }
