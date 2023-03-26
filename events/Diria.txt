@@ -664,8 +664,7 @@ country_event = {
 	name = dirnews.18.a
 		DEM = { 
 			add_political_power = 100
-			custom_effect_tooltip = wtire_reduce_20
-			subtract_from_variable = {wtire = 20}
+			add_to_variable = {var = wtire value = -20 tooltip = wtire_boost}
 		}
 	}
 }

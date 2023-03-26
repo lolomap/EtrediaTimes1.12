@@ -89,8 +89,7 @@ SBU_sburska_zvezda_war = {
 		cost = 50
 		complete_effect = {
 			add_ideas = SBU_consumer_from_sz
-			custom_effect_tooltip = wtire_reduce_20
-			subtract_from_variable = {wtire = 20}
+			add_to_variable = {var = wtire value = -20 tooltip = wtire_boost}
 		}
 		ai_will_do = {
 			factor = 100

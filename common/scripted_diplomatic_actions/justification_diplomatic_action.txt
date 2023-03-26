@@ -1,0 +1,24 @@
+scripted_diplomatic_actions = {
+    justification_war = {
+        visible = {always = no}
+        selectable = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = allow_wargoals
+                        option = FOCUSES_ONLY
+                    }
+                }
+                custom_trigger_tooltip = {
+                    tooltip = RULE_WARGOALS_BLOCKED_TT
+                    always = no
+                }
+            }
+
+            if = {
+                limit = {ROOT = {has_government = democratic}}
+                threat > 0.3
+            }
+        }
+    }
+}

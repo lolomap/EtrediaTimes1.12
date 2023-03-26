@@ -45,8 +45,8 @@ ideologies = {
 		faction_impact_on_world_tension = 0.05
 		
 		modifiers = {
-			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4
+			generate_wargoal_tension = 0.3
+			join_faction_tension = 0.1
 			lend_lease_tension = 0.2
 			send_volunteers_tension = 0.1
 			guarantee_tension = 0.1
@@ -211,7 +211,6 @@ ideologies = {
 		
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
-			generate_wargoal_tension = -0.2
 			join_faction_tension = -0.1
 			lend_lease_tension = -0.1
 			send_volunteers_tension = -0.1
@@ -274,7 +273,6 @@ ideologies = {
 		
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
-			generate_wargoal_tension = -0.1
 			join_faction_tension = 0.15
 			lend_lease_tension = 0.05
 			send_volunteers_tension = 0.1

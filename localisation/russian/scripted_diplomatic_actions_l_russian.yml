@@ -1,4 +1,7 @@
 ﻿l_russian:
+  JUSTIFICATION_WAR_TITLE: "Оправдать цель войны"
+  JUSTIFICATION_WAR_ACTION_DESC: ""
+
   EMBARGO_TITLE:0 "Ввести эмбарго"
   EMBARGO_ACTION_DESC:0 "Это государство не сможет закупать у вас ресурсы"
   END_EMBARGO_TITLE:0 "Прекратить эмбарго"
