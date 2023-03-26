@@ -1368,59 +1368,9 @@ country_event = { # Кризис закончился
                 var:global.cr_send_op = {has_country_flag = crysis_press}
                 var:global.cr_to_op = {has_country_flag = crysis_press}
             }
-            set_global_flag = {
-                flag = war_crysis
-                days = 90
-                value = 1
-            }
-            set_global_flag = {
-                flag = war_crysis_helper
-                days = 95
-                value = 1
-            }
-            #country_event = {id = mechanics.38 days = 90}
-            var:global.sender_crysis = {country_event = mechanics.38}
-            var:global.sender_crysis = {
-                war_crysis_ban_factions = yes
 
-                declare_war_on = {
-                    target = global.to_crysis
-                    type = annex_everything
-                }
+            #TODO
 
-                var:global.to_crysis = {
-                    war_crysis_ban_factions = yes
-
-                    for_each_scope_loop = {
-                        array = global.crysis_senders
-
-                        war_crysis_ban_factions = yes
-
-                        set_temp_variable_to_random = scare_leave_chance
-                        if = {
-                            limit = {OR = {check_variable = {scare_leave_chance > 0.01} is_ai = no}}
-                            add_to_war = {
-                                targeted_alliance = PREV.PREV
-                                enemy = PREV
-                            }
-                        }
-                    }
-                    for_each_scope_loop = {
-                        array = global.crysis_tos
-
-                        war_crysis_ban_factions = yes
-
-                        set_temp_variable_to_random = scare_leave_chance
-                        if = {
-                            limit = {OR = {check_variable = {scare_leave_chance > 0.01} is_ai = no}}
-                            add_to_war = {
-                                targeted_alliance = PREV
-                                enemy = PREV.PREV
-                            }
-                        }
-                    }
-                }
-            }
         }
         else_if = { # Атака уступила
             limit = {
@@ -1494,33 +1444,6 @@ country_event = {
             force_press = yes
             var:global.sender_crysis = {country_event = {id = mechanics.36 days = 2}}
         }
-    }
-}
-
-country_event = {
-    id = mechanics.38
-    title = mechanics.38.t
-    desc = mechanics.38.d
-    hidden = yes
-
-    trigger = {
-        OR = {
-            var:global.sender_crysis = {surrender_progress > 0.1}
-            crysis_rewardable = yes
-            AND = {
-                NOT = {has_global_flag = war_crysis}
-                has_global_flag = war_crysis_helper
-            }
-        }
-    }
-    mean_time_to_happen = {days = 2}
-
-    option = {
-        name = mechanics.38.a
-    }
-
-    immediate = {
-        d_end_war_crysis = yes
     }
 }
 

@@ -1,0 +1,9 @@
+scripted_gui = {
+    justification_wargoal = {
+		window_name = "justification_window"
+	    context_type = player_context
+		parent_window_name = generate_wargoal
+
+        visible = {always = no}
+    }
+}

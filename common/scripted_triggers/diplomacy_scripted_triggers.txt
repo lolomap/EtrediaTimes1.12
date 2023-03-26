@@ -753,6 +753,7 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
     }
 }
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+    #always = no
 	if = {
 		limit = {
 			has_game_rule = {

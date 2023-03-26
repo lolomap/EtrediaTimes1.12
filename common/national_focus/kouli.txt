@@ -57,10 +57,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			country_event = { id = klu.7 days = 1 }
-			custom_effect_tooltip = wtire_reduce_10
-			hidden_effect = {
-				subtract_from_variable = {wtire = 10}
-			}
+			add_to_variable = {var = wtire value = -10 tooltip = wtire_boost}
 			hidden_effect = {
 				news_event = {id = newss.21 days = 1}
 			}
@@ -424,10 +421,7 @@ focus_tree = {
 	            add_idea = WWW_medium_country
 	            }
 			}
-			custom_effect_tooltip = wtire_reduce_10
-			hidden_effect = {
-				subtract_from_variable = {wtire = 10}
-			}
+			add_to_variable = {var = wtire value = -10 tooltip = wtire_boost}
 		}
 	}
 	
@@ -570,10 +564,8 @@ focus_tree = {
         	BHI = { country_event = { id = minor.7 days = 1 } }
 			KVU = { country_event = { id = minor.8 days = 1 } }
 			TUB = { country_event = { id = minor.9 days = 1 } }
-			custom_effect_tooltip = wtire_reduce_20
-			hidden_effect = {
-				subtract_from_variable = {wtire = 20}
-			}
+            
+			add_to_variable = {var = wtire value = -20 tooltip = wtire_boost}
 		}
 	}
 	
