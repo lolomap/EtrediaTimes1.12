@@ -82,3 +82,4 @@ recruit_character = IID_alehandeer_lisnyak
 
 recruit_character = IID_nikita_dvoshevsky
 
+recruit_character = IID_Nero_Kvatini

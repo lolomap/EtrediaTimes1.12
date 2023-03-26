@@ -1,5 +1,5 @@
 ideas = {
-    country = {	
+    country = {
 		IID_ucbsbupolit = {
             picture = polit_cris
 			allowed = {
@@ -253,4 +253,27 @@ ideas = {
 			}
         }
 	}
+	
+political_advisor = {
+	
+	IID_Nero_Kvatini = {
+	
+		picture = generic_political_advisor_europe_1
+		
+		allowed = {
+			original_tag = IID
+		} 
+		
+		modifier = { 
+			consumer_goods_factor = -0.05
+			production_speed_buildings_factor = 0.1
+			war_support_factor = -0.1
+			democratic_drift = 0.01
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+}
 }
