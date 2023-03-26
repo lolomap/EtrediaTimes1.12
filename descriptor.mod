@@ -54,4 +54,4 @@ tags={
 	"Utilities"
 }
 supported_version="1.12.*"
-path="C:/Users/lolom/Documents/Paradox Interactive/Hearts of Iron IV/mod/EtrediaTimes1.12"
+path="mod/EtrediaTimes1.12"

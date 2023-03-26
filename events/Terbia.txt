@@ -279,3 +279,46 @@ country_event = {
 		ai_chance = { factor = 20 }
 	}
 }
+
+country_event = {
+    id = terbia.12
+    title = terbia.12.t
+    desc = terbia.12.d
+    picture = GFX_news_event
+
+    is_triggered_only = yes
+
+    option = {
+	name = terbia.12.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 5000
+			producer = FSC
+        }
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 200
+			producer = FSC
+        }
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 200
+			producer = FSC
+        }
+		add_equipment_to_stockpile = {
+			type = mechanized_equipment
+			amount = 200
+			producer = FSC
+        }
+		add_equipment_to_stockpile = {
+			type = jeep_equipment
+			amount = 100
+			producer = FSC
+        }
+		add_equipment_to_stockpile = {
+			type = modern_tank_equipment
+			amount = 25
+			producer = FSC
+        }
+	}
+}

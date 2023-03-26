@@ -428,16 +428,16 @@ country_event = {
 			transfer_state = 31
 			transfer_state = 28
 			transfer_state = 27
-			transfer_state = 23
+			transfer_state = 29
 		}
 		UCB = {
 			white_peace = FSC
 		}
-	ai_chance = { factor = 70 }
+	ai_chance = { factor = 50 }
 	}
 	option = {
 	name = ucnb.16.b
-	ai_chance = { factor = 30 }
+	ai_chance = { factor = 50 }
 	}
 }
 

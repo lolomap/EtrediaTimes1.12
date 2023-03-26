@@ -123,6 +123,115 @@ focus_tree = {
 		x = 17
 		y = 4
 	}
+	focus = {
+		id = FSC_save_language_balance
+		icon = GFX_goal_support_democracy
+		cost = 10
+        prerequisite = {
+			focus = FSC_federalization_or_death
+		}
+        mutually_exclusive = {
+			focus = FSC_anraksian_language
+	    }
+		mutually_exclusive = {
+			focus = FSC_karathenian_language
+	    }
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.5
+		}
+		x = 14
+		y = 5
+	}
+	focus = {
+		id = FSC_anraksian_language
+		icon = GFX_goal_support_democracy
+		cost = 10
+        prerequisite = {
+			focus = FSC_federalization_or_death
+			focus = FSC_way_to_unitarization
+		}
+        mutually_exclusive = {
+			focus = FSC_save_language_balance
+	    }
+		mutually_exclusive = {
+			focus = FSC_karathenian_language
+	    }
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.5
+		}
+		x = 16
+		y = 5
+	}
+	focus = {
+		id = FSC_karathenian_language
+		icon = GFX_goal_support_democracy
+		cost = 10
+        prerequisite = {
+			focus = FSC_way_to_unitarization
+		}
+        mutually_exclusive = {
+			focus = FSC_anraksian_language
+	    }
+		mutually_exclusive = {
+			focus = FSC_save_language_balance
+	    }
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.5
+		}
+		x = 18
+		y = 5
+	}
+	focus = {
+		id = FSC_federal_police
+		icon = GFX_goal_support_democracy
+		cost = 10
+        prerequisite = {
+			focus = FSC_save_language_balance
+			focus = FSC_anraksian_language
+			focus = FSC_karathenian_language
+		}
+        mutually_exclusive = {
+			focus = FSC_regional_police
+	    }
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.5
+		}
+		x = 17
+		y = 6
+	}
+	focus = {
+		id = FSC_regional_police
+		icon = GFX_goal_support_democracy
+		cost = 10
+        prerequisite = {
+			focus = FSC_save_language_balance
+			focus = FSC_anraksian_language
+			focus = FSC_karathenian_language
+		}
+        mutually_exclusive = {
+			focus = FSC_federal_police
+	    }
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.5
+		}
+		x = 15
+		y = 6
+	}
     focus = {
 		id = FSC_great_mission
 		icon = GFX_focus_generic_military_mission
@@ -145,6 +254,507 @@ focus_tree = {
 		}
 		x = 17
 		y = 2
+	}
+	focus = {
+		id = FSC_save_LigurTorgal
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_great_mission
+		}
+		available = {
+			FSC = { has_government = fascism }
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 28
+		y = 3
+	}
+	focus = {
+		id = FSC_Holy_Siburia
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_save_LigurTorgal
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 28
+		y = 4
+	}
+	focus = {
+		id = FSC_invite_narabel
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_great_mission
+		}
+		available = {
+			FSC = { has_government = fascism }
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 26
+		y = 3
+	}
+	focus = {
+		id = FSC_Ortostan_revansch
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_invite_narabel
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 26
+		y = 4
+	}
+	focus = {
+		id = FSC_save_TRP_alt
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_great_mission
+		}
+		bypass = {
+			NOT = { country_exists = TRP }
+		}
+		completion_reward = {
+			FSC = { give_guarantee = TRP }
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 24
+		y = 3
+	}
+	focus = {
+		id = FSC_Karathenian_coalition
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_save_TRP_alt
+		}
+		completion_reward = {
+			create_faction = FSC_Karathenian_coalition_faction
+			add_to_faction = TRP
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 24
+		y = 4
+	}
+	focus = {
+		id = FSC_our_main_enemy
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_Karathenian_coalition
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 24
+		y = 5
+	}
+	focus = {
+		id = FSC_integrate_TRP
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_our_main_enemy
+		}
+		bypass = {
+			NOT = { country_exists = TRP }
+		}
+		available = {
+			FSC = { has_government = fascism }
+		}
+		completion_reward = {
+			TRP = { country_event = { id = trp.2 days = 1 } }
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 24
+		y = 6
+	}
+	focus = {
+		id = FSC_fire_Empire
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_integrate_TRP
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 24
+		y = 7
+	}
+	focus = {
+		id = FSC_support_Barkhan_separatists
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_fire_Empire
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 24
+		y = 8
+	}
+	focus = {
+		id = FSC_idea_of_united_Karathenia
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_great_mission
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+    			ideology = fascism
+   				popularity = 0.05
+			}
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 20
+		y = 3
+	}
+	focus = {
+		id = FSC_unification_people_of_FSKB
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+        prerequisite = {
+			focus = FSC_great_mission
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+    			ideology = fascism
+   				popularity = 0.05
+			}
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 22
+		y = 3
+	}
+	focus = {
+		id = FSC_revanchism_ideas
+		icon = GFX_focus_generic_military_mission
+		cost = 8
+        prerequisite = {
+			focus = FSC_unification_people_of_FSKB
+		}
+		prerequisite = {
+			focus = FSC_idea_of_united_Karathenia
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_popularity = {
+    			ideology = fascism
+   				popularity = 0.1
+			}
+			add_ideas = FSC_revanchism
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 21
+		y = 4
+	}
+	focus = {
+		id = FSC_government_discreditation
+		icon = GFX_focus_generic_military_mission
+		cost = 8
+        prerequisite = {
+			focus = FSC_revanchism_ideas
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+    			ideology = fascism
+   				popularity = 0.1
+			}
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 20
+		y = 5
+	}
+	focus = {
+		id = FSC_young_military_organizations
+		icon = GFX_focus_generic_military_mission
+		cost = 8
+        prerequisite = {
+			focus = FSC_revanchism_ideas
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+    			ideology = fascism
+   				popularity = 0.1
+			}
+			add_ideas = FSC_lil_fascists
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 22
+		y = 5
+	}
+	focus = {
+		id = FSC_early_president_elections
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		bypass = {
+			has_government = fascism
+		}
+		cancel_if_invalid = yes
+        prerequisite = {
+			focus = FSC_government_discreditation
+		}
+		prerequisite = {
+			focus = FSC_young_military_organizations
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+    			elections_allowed = yes
+			}
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 21
+		y = 6
+	}
+	focus = {
+		id = FSC_Glanvish_corpus
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = FSC_early_president_elections
+		}
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = FSC_lil_fascists
+				add_idea = FSC_Glanvich_corpus
+			}
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 20
+		y = 7
+	}
+	focus = {
+		id = FSC_anti_siburian_policy
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = FSC_Glanvish_corpus
+			focus = FSC_ortostan_ultimatum
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 15
+		y = 8
+	}
+	focus = {
+		id = FSC_support_safflia
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = FSC_anti_siburian_policy
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 13
+		y = 9
+	}
+	focus = {
+		id = FSC_support_terbia
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		available = {
+			TRB = { has_war_with = SBU }
+		}
+		prerequisite = {
+			focus = FSC_anti_siburian_policy
+		}
+		completion_reward = {
+			TRB = { country_event = terbia.12 days = 1 }
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 15
+		y = 9
+	}
+	focus = {
+		id = FSC_claim_langat
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = FSC_anti_siburian_policy
+		}
+		bypass = {
+			72 = { is_controlled_by = FSC }
+		}
+		completion_reward = {
+			add_state_claim = 72
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 17
+		y = 9
+	}
+	focus = {
+		id = FSC_agency_network_in_UCNB
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		bypass = {
+			NOT = { country_exists = UCB }
+		}
+		prerequisite = {
+			focus = FSC_early_president_elections
+		}
+		prerequisite = {
+			focus = FSC_integrate_TRP
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 22
+		y = 7
+	}
+	focus = {
+		id = FSC_fuel_desire_to_be_free
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		bypass = {
+			NOT = { country_exists = UCB }
+		}
+		prerequisite = {
+			focus = FSC_agency_network_in_UCNB
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 22
+		y = 8
+	}
+	focus = {
+		id = FSC_arms_eatern
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		bypass = {
+			NOT = { country_exists = UCB }
+		}
+		prerequisite = {
+			focus = FSC_fuel_desire_to_be_free
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 22
+		y = 9
+	}
+	focus = {
+		id = FSC_arms_western
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		bypass = {
+			NOT = { country_exists = UCB }
+		}
+		prerequisite = {
+			focus = FSC_fuel_desire_to_be_free
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 20
+		y = 9
+	}
+	focus = {
+		id = FSC_war_with_UCNB
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		bypass = {
+			NOT = { country_exists = UCB }
+		}
+		prerequisite = {
+			focus = FSC_arms_western
+			focus = FSC_support_safflia
+			focus = FSC_support_terbia
+			focus = FSC_claim_langat
+		}
+		prerequisite = {
+			focus = FSC_arms_eatern
+		}
+		completion_reward = {
+			country_event = { id = fscb.1 days = 1 }
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 19
+		y = 10
 	}
     focus = {
 		id = FSC_anrax_industry
@@ -322,6 +932,10 @@ focus_tree = {
 		id = FSC_ortostan_question
 		icon = GFX_goal_unknown
 		cost = 10
+		bypass = {
+			31 = { is_controlled_by = FSC }
+		}
+		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_our_place_in_the_world
 		}
@@ -351,6 +965,10 @@ focus_tree = {
         prerequisite = {
 			focus = FSC_ortostan_question
 		}
+		bypass = {
+			31 = { is_controlled_by = FSC }
+		}
+		cancel_if_invalid = yes
         mutually_exclusive = {
 			focus = FSC_no_compromises
 	    }
@@ -367,6 +985,10 @@ focus_tree = {
 		id = FSC_no_compromises
 		icon = GFX_goal_generic_small_arms
 		cost = 10
+		bypass = {
+			31 = { is_controlled_by = FSC }
+		}
+		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_ortostan_question
 		}
@@ -385,6 +1007,10 @@ focus_tree = {
 		id = FSC_agreement_of_free_borders
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10
+		bypass = {
+			31 = { is_controlled_by = FSC }
+		}
+		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_Alende_group
 		}
@@ -401,6 +1027,10 @@ focus_tree = {
 		id = FSC_economic_integration_of_ortostan
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
+		bypass = {
+			31 = { is_controlled_by = FSC }
+		}
+		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_agreement_of_free_borders
 		}
@@ -413,10 +1043,87 @@ focus_tree = {
 		x = 7
 		y = 7
 	}
+	focus = {
+		id = FSC_join_to_EC
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		available = {
+			UCB = { has_completed_focus = UCB_dem_sbu }
+		}
+        prerequisite = {
+			focus = FSC_economic_integration_of_ortostan
+		}
+		prerequisite = {
+			focus = FSC_army_industry_development
+			focus = FSC_agree_with_livery
+			focus = FSC_agree_with_IE
+		}
+		completion_reward = {
+			FSC = { add_to_faction = UCB_scuit_ally }
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 6
+		y = 8
+	}
+	focus = {
+		id = FSC_infrastructure_projects_in_Diria
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+        prerequisite = {
+			focus = FSC_join_to_EC
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 5
+		y = 9
+	}
+	focus = {
+		id = FSC_programm_training_alliance_army
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+        prerequisite = {
+			focus = FSC_join_to_EC
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 7
+		y = 9
+	}
+	focus = {
+		id = FSC_alliance_doctrine
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+        prerequisite = {
+			focus = FSC_infrastructure_projects_in_Diria
+			focus = FSC_programm_training_alliance_army
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 6
+		y = 10
+	}
     focus = {
 		id = FSC_UcNB_separatism
 		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 10
+		bypass = {
+			31 = { is_controlled_by = FSC }
+		}
+		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_no_compromises
 		}
@@ -442,6 +1149,10 @@ focus_tree = {
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 3
 		will_lead_to_war_with = UCB
+		bypass = {
+			31 = { is_controlled_by = FSC }
+		}
+		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_UcNB_separatism
 		}
@@ -463,6 +1174,92 @@ focus_tree = {
 		}
 		x = 9
 		y = 7
+	}
+	focus = {
+		id = FSC_stabilization_new_states
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+        prerequisite = {
+			focus = FSC_ortostan_ultimatum
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 10
+		y = 8
+	}
+	focus = {
+		id = FSC_truce_with_UCNB
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+        prerequisite = {
+			focus = FSC_stabilization_new_states
+		}
+		mutually_exclusive = {
+			focus = FSC_continue_destabilization
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.35
+		}
+		x = 9
+		y = 9
+	}
+	focus = {
+		id = FSC_Passport_issuance_to_migrants
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+        prerequisite = {
+			focus = FSC_truce_with_UCNB
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 9
+		y = 10
+	}
+	focus = {
+		id = FSC_continue_destabilization
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+        prerequisite = {
+			focus = FSC_stabilization_new_states
+		}
+		mutually_exclusive = {
+			focus = FSC_truce_with_UCNB
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.65
+		}
+		x = 11
+		y = 9
+	}
+	focus = {
+		id = FSC_continue_support_mgahvatians
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+        prerequisite = {
+			focus = FSC_continue_destabilization
+		}
+		completion_reward = {
+			#
+		}
+        ai_will_do = {
+			factor = 0.2
+		}
+		x = 11
+		y = 10
 	}
     focus = {
 		id = FSC_save_TRP

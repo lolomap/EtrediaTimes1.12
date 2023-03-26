@@ -1,6 +1,6 @@
 characters={
 	IID_nikita_dvoshevsky={
-		name="Nikita Dvoshevsky"
+		name="Nikira Dvoshevin"
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -37,6 +37,7 @@ characters={
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=absolutism
+			traits={ Nation_leader Dux_Emperor }
 			expire="1965.1.1.1"
 			id=-1
 		}

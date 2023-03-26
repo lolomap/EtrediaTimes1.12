@@ -34,6 +34,15 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	Dux_Emperor = {
+		random = no
+		stability_factor = 0.1
+		monarchism_drift = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	Accomplice_of_the_oligarchs = {
 		random = no

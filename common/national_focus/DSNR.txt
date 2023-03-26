@@ -64,7 +64,7 @@ focus_tree = {
 		completion_reward = {
 			DIR = {
 				remove_state_core = 825
-				remove_state_core = 825
+				remove_state_core = 262
 			}
 			add_stablity = 0.15
 			add_war_support = 0.1
