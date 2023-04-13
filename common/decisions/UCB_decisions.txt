@@ -146,7 +146,7 @@ UCB_bop_category = {
 
         complete_effect = {
             add_power_balance_value = {id = UCB_parlament_balance value = -0.05}
-            add_to_variable = {var = wtire value = -25 tooltip = wtire_change}
+            add_to_variable = {var = wtire value = -25 tooltip = wtire_boost}
         }
     }
 

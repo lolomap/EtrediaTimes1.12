@@ -13,7 +13,7 @@ ideas = {
 
 			modifier = {
                 political_power_gain = -0.6
-                power_balance_daily = -0.0014
+                power_balance_daily = -0.003
                 custom_modifier_tooltip = ucb_opp_rise_tooltip
 			}
 		}
