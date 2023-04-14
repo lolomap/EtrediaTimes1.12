@@ -1,3 +1,103 @@
 ideas = {
-    
+    social_economy = {
+        law = yes
+
+        socials_4 = { #high socials
+ 
+            removal_cost = -1
+            
+            level = 5
+
+            available = {
+                NOT = {
+                    OR = {
+                       has_idea = war_economy
+                       has_idea = tot_economic_mobilisation
+                    }
+                }
+            }
+            cancel_if_invalid = yes
+
+            modifier = {
+                consumer_goods_factor = 0.1
+                stability_factor = 0.2
+                party_popularity_stability_factor = 0.1
+                political_power_factor = 0.15
+                MONTHLY_POPULATION = 0.5
+            }
+        }
+
+        socials_3 = {
+ 
+            removal_cost = -1
+            
+            level = 4
+
+            available = {
+                NOT = {
+                    OR = {
+                       has_idea = war_economy
+                       has_idea = tot_economic_mobilisation
+                    }
+                }
+            }
+            cancel_if_invalid = yes
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                stability_factor = 0.1
+                party_popularity_stability_factor = 0.05
+                political_power_factor = 0.08
+                MONTHLY_POPULATION = 0.25
+            }
+        }
+
+        socials_2 = {
+ 
+            removal_cost = -1
+            
+            level = 3
+
+            available = {
+                NOT = {
+                    has_idea = tot_economic_mobilisation
+                }
+            }
+            cancel_if_invalid = yes
+
+            modifier = {
+                stability_factor = 0.03
+                political_power_factor = 0.03
+            }
+
+            default = yes
+        }
+
+        socials_1 = { #low socials
+ 
+            removal_cost = -1
+            
+            level = 2
+
+            modifier = {
+                consumer_goods_factor = -0.08
+                stability_factor = -0.05
+                MONTHLY_POPULATION = -0.5
+            }
+        }
+
+        socials_0 = { #low socials
+ 
+            removal_cost = -1
+            
+            level = 1
+
+            modifier = {
+                consumer_goods_factor = -0.15
+                stability_factor = -0.15
+                MONTHLY_POPULATION = -1
+                war_support_factor = -0.1
+            }
+        }
+    }
 }
