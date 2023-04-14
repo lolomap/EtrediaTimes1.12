@@ -49,6 +49,9 @@ idea_categories = {
         slot = security_forces
         character_slot = min_vd
         character_slot = min_o
+
+        cost = 150
+        removal_cost = 0
     }
 	
 	research_production = {

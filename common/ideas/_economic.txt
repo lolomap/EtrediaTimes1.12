@@ -164,6 +164,11 @@ ideas = {
 			
             on_add = {
                 set_variable = {economy_law = token:war_economy}
+                if = {
+                    limit = {OR = {has_idea = socials_4 has_idea = socials_3}}
+                    add_ideas = socials_2
+                    add_political_power = -75
+                }
             }
 			
 			available = {
@@ -210,6 +215,11 @@ ideas = {
 			
             on_add = {
                 set_variable = {economy_law = token:tot_economic_mobilisation}
+                if = {
+                    limit = {OR = {has_idea = socials_4 has_idea = socials_3 has_idea = socials_2}}
+                    add_ideas = socials_1
+                    add_political_power = -75
+                }
             }
 			
 			available = {

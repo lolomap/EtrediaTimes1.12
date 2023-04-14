@@ -3,7 +3,7 @@ ideas = {
         corruption_laws = {
             law = yes
 
-            first_corruption_level = {
+            first_corruption_level = { #low corruption
             picture = first_corruption_level
  
                 removal_cost = -1
@@ -117,7 +117,7 @@ ideas = {
                 cancel_if_invalid = no
             }
 			
-			sixth_corruption_level = {
+			sixth_corruption_level = { #high corruption
             picture = sixth_corruption_level
  
                 removal_cost = -1
