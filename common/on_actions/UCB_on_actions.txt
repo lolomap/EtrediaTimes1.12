@@ -204,18 +204,18 @@ on_actions = {
                     }
 
                     random_list = {
-                        30 = {add_to_variable = {UCB.oppos_@THIS = -0.1}}
+                        30 = {add_to_variable = {UCB.oppos_@THIS = -0.05}}
                         70 = {}
                     }
                     if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.oppos_@THIS = -0.1}}
-                    if = {limit = {UCB = {has_idea = UCB_polit_crysis}} add_to_variable = {UCB.oppos_@THIS = -0.05}}
+                    if = {limit = {UCB = {has_idea = UCB_polit_crysis}} add_to_variable = {UCB.oppos_@THIS = -0.025}}
 
                     random_list = {
-                        30 = {add_to_variable = {UCB.sep_@THIS = 0.15}}
+                        30 = {add_to_variable = {UCB.sep_@THIS = 0.05}}
                         70 = {}
                     }
                     if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.07}}
-                    if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.05}}
+                    if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.025}}
                     
                     if = {
                         limit = {check_variable = {UCB.oppos_@THIS < 0.2}}
@@ -263,23 +263,6 @@ on_actions = {
                     }
                     country_event = ucnb.27
 
-                    random = {
-                        chance = var:ych
-
-                        random_list = {
-                            1 = {  #ивент по закону
-                                region_event_change_law = yes
-                            }
-                            0 = {set_variable = {region_event_type = 1}} #ивент по коррупции
-                            0 = {set_variable = {region_event_type = 2}} #ивент по балансу
-                            0 = {set_variable = {region_event_type = 3}} #ивент по советнику
-                            0 = {set_variable = {region_event_type = 4}} #ивент по торговле
-                            0 = {set_variable = {region_event_type = 5}} #ивент по напряженности
-                        }
-                        country_event = {id = ucnb.27 days = 10}
-
-                        
-                    }
                 }
             }
         }

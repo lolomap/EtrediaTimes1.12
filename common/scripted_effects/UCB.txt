@@ -243,8 +243,8 @@ region_event_change_law = {
     set_variable_to_random = {var = region_law_change max = 5 integer = yes}
     set_temp_variable_to_random = {var = delta min = 1 max = 2 integer = yes}
     random_list = {
-        80 = {set__temp_variable = {negative = 1}}
-        20 = {set__temp_variable = {negative = 0}}
+        70 = {set__temp_variable = {negative = 1}}
+        30 = {set__temp_variable = {negative = 0}}
     }
     if = {limit = {check_variable = {region_law_change = 0}}
         set_variable = {region_idea_change = press_law}
@@ -254,6 +254,10 @@ region_event_change_law = {
             var = region_idea_change
             min = token:total_free_press
             max = token:total_nonfree_press
+        }
+        if = {
+            limit = {check_variable = {region_idea_change = press_law}}
+            subtract_from_variable = {region_idea_change = negative}
         }
     }
     else_if = {limit = {check_variable = {region_law_change = 1}}
@@ -265,6 +269,10 @@ region_event_change_law = {
             min = token:free_entry
             max = token:closed_entry
         }
+        if = {
+            limit = {check_variable = {region_idea_change = migration_law}}
+            subtract_from_variable = {region_idea_change = negative}
+        }
     }
     else_if = {limit = {check_variable = {region_law_change = 2}}
         set_variable = {region_idea_change = mobilization_law}
@@ -274,6 +282,10 @@ region_event_change_law = {
             var = region_idea_change
             min = token:disarmed_nation
             max = token:scraping_the_barrel
+        }
+        if = {
+            limit = {check_variable = {region_idea_change = mobilization_law}}
+            subtract_from_variable = {region_idea_change = negative}
         }
     }
     else_if = {limit = {check_variable = {region_law_change = 3}}
@@ -285,6 +297,10 @@ region_event_change_law = {
             min = token:isolation
             max = token:tot_economic_mobilisation
         }
+        if = {
+            limit = {check_variable = {region_idea_change = economy_law}}
+            subtract_from_variable = {region_idea_change = negative}
+        }
     }
     else_if = {limit = {check_variable = {region_law_change = 4}}
         set_variable = {region_idea_change = trade_law}
@@ -294,6 +310,10 @@ region_event_change_law = {
             var = region_idea_change
             min = token:free_trade
             max = token:closed_economy
+        }
+        if = {
+            limit = {check_variable = {region_idea_change = trade_law}}
+            subtract_from_variable = {region_idea_change = negative}
         }
     }
 }

@@ -2,6 +2,12 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
+    set_variable = {region_idea_change = token:closed_entry}
+    if = {
+        limit = {check_variable = {migration_law > region_idea_change}}
+        log = "1"
+    }
+    else = {log = "2"}
 }
 
 ####

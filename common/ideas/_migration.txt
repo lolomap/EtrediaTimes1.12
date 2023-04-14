@@ -13,7 +13,7 @@ ideas = {
 						has_war = no
 					}
                 }
-                on_actions = {
+                on_add = {
                     set_variable = {migration_law = token:free_entry}
                 }
                 modifier = {
@@ -48,7 +48,7 @@ ideas = {
                 cost = 150
                 removal_cost = -1
                 level = 3
-                on_actions = {
+                on_add = {
                     set_variable = {migration_law = token:general_entry}
                 }
 
@@ -84,7 +84,7 @@ ideas = {
                     stability_factor = 0.05
                     MONTHLY_POPULATION = 0.1
                 }
-                on_actions = {
+                on_add = {
                     set_variable = {migration_law = token:limited_entry}
                 }
 				ai_will_do = {
@@ -113,7 +113,7 @@ ideas = {
                 removal_cost = -1
                 level = 1
                 
-                on_actions = {
+                on_add = {
                     set_variable = {migration_law = token:closed_entry}
                 }
 
