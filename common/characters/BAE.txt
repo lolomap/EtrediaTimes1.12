@@ -104,17 +104,4 @@ characters={
 			legacy_id=-1
 		}
 	}
-	BAE_alex_walker={
-		name="Alex Walker"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			expire="2033.1.1.12"
-			id=-1
-		}
-	}
 }

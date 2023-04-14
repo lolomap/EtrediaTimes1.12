@@ -180,17 +180,4 @@ characters={
 			legacy_id=-1
 		}
 	}
-	BAR_alexander_evans={
-		name="Alexander Evans"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			expire="2027.1.1.12"
-			id=-1
-		}
-	}
 }

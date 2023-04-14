@@ -15,6 +15,20 @@ leader_traits = {
 		army_attack_factor = -0.15
 	}
 	
+	economic_advisor = {
+		sprite = 10
+		random = yes
+		
+		consumer_goods_factor = -0.05
+		production_speed_buildings_factor = 0.08
+		war_support_factor = -0.1
+		democratic_drift = 0.01
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
 	dictator = {
 		random = no
 		political_power_factor = 0.25

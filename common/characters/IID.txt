@@ -81,4 +81,25 @@ characters={
 			legacy_id=-1
 		}
 	}
+	IID_Nero_Kvatini={
+		name="Nero Kvatini"
+		portraits={
+			civilian={
+                small = GFX_IID_political_advisor_Nero_Kvatini
+			}
+		}
+		advisor = {
+            slot = political_advisor
+            idea_token = Nero_Kvatini
+            ledger = civilian
+
+            allowed = {
+				original_tag = IID
+			}
+			available = {
+				always = yes
+			}
+			traits = { economic_advisor }
+        }
+	}
 }
