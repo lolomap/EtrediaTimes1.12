@@ -74,18 +74,4 @@ characters={
 			legacy_id=-1
 		}
 	}
-	BSH_marcus_williams={
-		name="Marcus Williams"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			traits={ compassionate_commoner }
-			expire="2026.1.1.12"
-			id=-1
-		}
-	}
 }

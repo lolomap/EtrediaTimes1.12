@@ -27,20 +27,6 @@ characters={
 			id=-1
 		}
 	}
-	CHO_kendri_losental={
-		name="Kendri Losental"
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_6"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 	CHO_nimali_redrizko={
 		name="Nimali Redrizko"
 		portraits={
@@ -52,19 +38,6 @@ characters={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=stalinism
 			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	CHO_alexander_evans={
-		name="Alexander Evans"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=absolutism
-			expire="2032.1.1.12"
 			id=-1
 		}
 	}

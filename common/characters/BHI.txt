@@ -58,18 +58,4 @@ characters={
 			legacy_id=-1
 		}
 	}
-	BHI_peter_brown={
-		name="Peter Brown"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=absolutism
-			traits={ silent_mule }
-			expire="2030.1.1.12"
-			id=-1
-		}
-	}
 }
