@@ -738,3 +738,66 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+    id = ucnb.30
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+
+        set_temp_variable = {ych = 0}
+
+                    if = {
+                        limit = {check_variable = {UCB.oppos_@THIS < 0.2}}
+                        add_to_temp_array = {a70 = THIS}
+                    }
+                    else_if = {
+                        limit = {check_variable = {UCB.oppos_@THIS < 0.4}}
+                        add_to_temp_array = {a50 = THIS}
+                    }
+                    else_if = {
+                        limit = {check_variable = {UCB.oppos_@THIS < 0.5}}
+                        add_to_temp_array = {a25 = THIS}
+                    }
+                }
+                
+                random_list = {
+                    1 = {
+                        random_scope_in_array = {array = a70 set_variable = {UCB.region_event = THIS}}
+                        set_temp_variable = {ych = 70}
+                    }
+                    1 = {
+                        random_scope_in_array = {array = a50 set_variable = {UCB.region_event = THIS}}
+                        set_temp_variable = {ych = 50}
+                    }
+                    1= {
+                        random_scope_in_array = {array = a25 set_variable = {UCB.region_event = THIS}}
+                        set_temp_variable = {ych = 25}
+                    }
+                }
+                
+                multiply_temp_variable = {ych = region_event_factor}
+
+                random = {
+                    chance = var:ych
+
+                    random_list = {
+                        1 = {  #ивент по закону
+                            region_event_change_law = yes
+                        }
+                        0 = {set_variable = {region_event_type = 1}} #ивент по коррупции
+                        0 = {set_variable = {region_event_type = 2}} #ивент по балансу
+                        0 = {set_variable = {region_event_type = 3}} #ивент по советнику
+                        0 = {set_variable = {region_event_type = 4}} #ивент по торговле
+                        0 = {set_variable = {region_event_type = 5}} #ивент по напряженности
+                    }
+                    country_event = ucnb.27
+
+                }
+
+                
+            }
+
+    }
+}

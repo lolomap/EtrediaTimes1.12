@@ -243,8 +243,8 @@ region_event_change_law = {
     set_variable_to_random = {var = region_law_change max = 5 integer = yes}
     set_temp_variable_to_random = {var = delta min = 1 max = 2 integer = yes}
     random_list = {
-        70 = {set__temp_variable = {negative = 1}}
-        30 = {set__temp_variable = {negative = 0}}
+        30 = {set__temp_variable = {negative = 1}}
+        70 = {set__temp_variable = {negative = 0}}
     }
     if = {limit = {check_variable = {region_law_change = 0}}
         set_variable = {region_idea_change = press_law}
