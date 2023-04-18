@@ -216,6 +216,8 @@
  ucb_democratic_opposition:0 "Демократическая оппозиция"
  UCB_gov_dotations:0 "Государственные дотации бизнесу"
  ucb_region_ideology: "Регионы в Парламенте"
+ UCB_parlament_oppos: "Оппозиция в Парламенте"
+ UCB_parlament_oppos2: "Оппозиция в Парламенте"
  Larka_steel:0 "Larka Steel"
  ucb_strikes:0 "Забастовки"
  IID_recrut:0 "Имперская Экономика"

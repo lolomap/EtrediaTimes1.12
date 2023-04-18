@@ -103,7 +103,7 @@ UCB_bop_category = {
             every_possible_country = {
                 #array = minor_countries
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
-                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.oppos_@THIS max = 1}
             }
         }

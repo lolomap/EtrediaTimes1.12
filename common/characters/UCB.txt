@@ -77,6 +77,18 @@ characters={
 			expire="2060.1.1.1"
 			id=-1
 		}
+        country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=centrism
+			expire="2060.1.1.1"
+			id=-1
+		}
+        country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=conservatism
+			expire="2060.1.1.1"
+			id=-1
+		}
 	}
 	UCB_anna_helshten={
 		name="Anna Helshten"

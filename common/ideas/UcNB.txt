@@ -375,6 +375,24 @@ ideas = {
 				stability_factor = -0.08
 			} 
 		}
+        
+        UCB_parlament_oppos = {
+            allowed = {always = no}
+            removal_cost = -1
+
+            modifier = {
+                power_balance_daily = -0.003
+            }
+        }
+
+        UCB_parlament_oppos2 = {
+            allowed = {always = no}
+            removal_cost = -1
+
+            modifier = {
+                power_balance_daily = -0.0015
+            }
+        }
 	
     }
 

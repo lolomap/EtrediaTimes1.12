@@ -40,13 +40,16 @@ country_event = {
 	    trigger = {
 		NOT = { has_global_flag = ucb_narabel_not_in_elections }
 		}
-        set_politics = {
-            ruling_party = fascism
-        }
-        add_popularity = {
-			ideology = fascism
-			popularity = 0.3
-        }
+        #set_politics = {
+        #    ruling_party = fascism
+        #}
+        #add_popularity = {
+		#	ideology = fascism
+		#	popularity = 0.3
+        #}
+
+        promote_character = {character = UCB_terine_narabel ideology = centrism}
+
 	    ai_chance = { 
 			factor = 30 
             modifier = {

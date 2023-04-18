@@ -188,11 +188,12 @@ on_actions = {
         effect = {
             if = {
                 #limit = {has_any_power_balance = yes}
-                limit = {always = yes}
+                limit = {NOT = {has_country_flag = closed_parlament}}
 
                 for_each_scope_loop = {
                     array = minor_countries
 
+                    set_temp_variable = {temp = 0.05}
                     random_list = {
                         33 = {boost_region_fas = yes}
                         22 = {boost_region_dem = yes}
