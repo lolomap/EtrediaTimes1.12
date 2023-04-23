@@ -1,0 +1,9 @@
+﻿l_english:
+   force_button_loc:0 "Force"
+   FORCE_EMBARGO_TITLE:0 "Enforce embargo"
+   FORCE_EMBARGO_ACTION_DESC:0 "Force a state to embargo someone"
+   is_world_influence_more_2:0 "We need to have at least 2x our influence"
+   is_world_influence_more_2_:0 "[is_world_influence_more_2_sl]"
+   is_world_influence_more_2_yes:0 "§GWe need to have at least 2x our influence§!"
+   is_world_influence_more_2_no:0 "§RWe need to have at least 2x our influence§!"
+   has_any_embargo:0 "At least one state has been embargoed"
