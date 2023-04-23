@@ -11,6 +11,8 @@ country_event = {
 	option = {
 	name = ucnb.1.a 
 		UCB = { add_ideas = UCB_resist }
+        
+        promote_character = UCB_anatoly_zhmirinovan
 		hidden_effect = {news_event = {id = newss.30 days = 1}}
 		ai_chance = { 
 			factor = 70	
@@ -802,5 +804,22 @@ country_event = {
                 
             }
 
+    }
+}
+
+country_event = {
+    id = ucnb.31
+    title = ucnb.31.t
+    desc = ucnb.31.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=ucnb.31.a
+        promote_character = {character = UCB_parlament}
+        add_stability = 0.08
     }
 }

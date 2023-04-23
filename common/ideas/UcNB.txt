@@ -393,6 +393,28 @@ ideas = {
                 power_balance_daily = -0.0015
             }
         }
+
+        UCB_convergation_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+            
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                fascism_drift = -0.03
+                neutrality_drift = 0.03
+            }
+        }
 	
     }
 

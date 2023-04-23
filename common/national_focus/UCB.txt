@@ -10,23 +10,53 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 1 y = 1 }
 
-	focus = {
-		id = UCB_1
-		icon = GFX_goal_generic_national_unity
-		cost = 10
-		x = 27
-		y = 0
+    focus = {
+        id = UCB_votum
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 27
+        y = 0
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_stability = -0.15
+            add_power_balance_value = {id = UCB_parlament_balance value = -0.05}
+            add_popularity = {ideology = democratic popularity = 0.1}
+        }
+    }
 
-		completion_reward = {
-			add_political_power = 150
-		}
-	}
+    focus = {
+        id = UCB_enprison
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 27
+        y = 1
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_votum
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            country_event = {id = ucnb.31 days = 1}
+        }
+    }
+
 	focus = {
 		id = UCB_dem_fsc_conversation
 		icon = GFX_goal_tripartite_pact
 		cost = 10
 		x = 3
-		y = 7
+		y = 8
 
         bypass = {
             OR = {
@@ -52,7 +82,7 @@ focus_tree = {
         prerequisite = {focus = UCB_dem_fsc_conversation}
 
 		x = 1
-		y = 8
+		y = 9
 
 		completion_reward = {
 			UCB = { give_guarantee = ORB }
@@ -98,7 +128,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10
 		x = 0
-		y = 10
+		y = 11
 
         prerequisite = {focus = UCB_dem_ndro}
         prerequisite = {focus = UCB_dem_trp_garant}
@@ -137,8 +167,8 @@ focus_tree = {
 				add_state_core = 58
 			}
 		}
-		x = 0
-		y = 11
+		x = 1
+		y = 12
 	}
 	focus = {
 		id = UCB_dem_anti_IID
@@ -193,7 +223,7 @@ focus_tree = {
 			}
 		}
 		x = 1
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -227,15 +257,15 @@ focus_tree = {
 	focus = {
 		id = UCB_2
 		icon = GFX_goal_support_democracy
-		cost = 10
+		cost = 15
 		prerequisite = {
-			focus = UCB_1
+			focus = UCB_enprison
 		}
 		x = 27
-		y = 1
+		y = 2
 
         available = {
-            has_country_leader = {character = UCB_dmirin_randerko}
+            has_country_leader = {character = UCB_parlament}
             date < 2016.1.1
         }
 
@@ -248,7 +278,7 @@ focus_tree = {
 
 		completion_reward = {
 			UCB = {
-                promote_character = UCB_anatoly_zhmirinovan
+                add_political_power = 150
 				remove_ideas = UCB_polit_crisis
 				country_event = { id = ucnb.1 days = 1 }
 			}
@@ -266,7 +296,7 @@ focus_tree = {
 			focus = UCB_fasc1
 		}
 		x = 21
-		y = 2
+		y = 3
 
 		available = {
 		    #has_government = democratic
@@ -308,7 +338,7 @@ focus_tree = {
 			}
 		}
 		x = 3
-		y = 4
+		y = 5
 
 	}
 	focus = {
@@ -330,7 +360,7 @@ focus_tree = {
 			}
 		}
 		x = 9
-		y = 4
+		y = 5
 
 	}
 	focus = {
@@ -347,7 +377,7 @@ focus_tree = {
 			factor = 2
 		}
 		x = 15
-		y = 4
+		y = 5
 
 	}
 	focus = {
@@ -358,7 +388,7 @@ focus_tree = {
 			focus = UCB_dem1
 		}
 		x = 21
-		y = 4
+		y = 5
 		
 		completion_reward = {
 			add_political_power = 150
@@ -399,7 +429,7 @@ focus_tree = {
 			focus = UCB_dem_gov_reform
 		}
 		x = 21
-		y = 5
+		y = 6
 
 		completion_reward = {
 			add_stability = 0.05
@@ -427,7 +457,7 @@ focus_tree = {
 			focus = UCB_dem_stabilnost
 		}
 		x = 21
-		y = 6
+		y = 7
 
 		completion_reward = {
 			add_stability = 0.1
@@ -457,7 +487,7 @@ focus_tree = {
 			focus = UCB_dem_battle
 		}
 		x = 20
-		y = 7
+		y = 8
 
 		completion_reward = {
 			#add_stability = 0.05
@@ -486,7 +516,7 @@ focus_tree = {
 			focus = UCB_dem_compromis
 		}
 		x = 20
-		y = 8
+		y = 9
 
 		completion_reward = {
 			add_political_power = 100
@@ -514,7 +544,7 @@ focus_tree = {
 			focus = UCB_dem_compromis
 		}
 		x = 22
-		y = 7
+		y = 8
 
 		completion_reward = {
 			add_stability = 0.05
@@ -545,7 +575,7 @@ focus_tree = {
 			focus = UCB_dem_battle
 		}
 		x = 22
-		y = 8
+		y = 9
 
 		completion_reward = {
 			add_political_power = 150
@@ -575,7 +605,7 @@ focus_tree = {
 		}
 
 		x = 21
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -603,7 +633,7 @@ focus_tree = {
 		}
 		}
 		x = 33
-		y = 2
+		y = 3
 
 	}
 	focus = {
@@ -621,7 +651,7 @@ focus_tree = {
 			add_stability = 0.05
 		}
 		x = 33
-		y = 3
+		y = 4
 
 	}
 	focus = {
@@ -641,7 +671,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 4
+		y = 5
 
 	}
 	
@@ -658,7 +688,7 @@ focus_tree = {
 			add_war_support = 0.1
 		}
 		x = 35
-		y = 4
+		y = 5
 
 	}
 	focus = {
@@ -669,7 +699,7 @@ focus_tree = {
 			focus = UCB_fasc_military_reform
 		}
 		x = 35
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -690,7 +720,7 @@ focus_tree = {
 			}
 		}
 		x = 35
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -711,7 +741,7 @@ focus_tree = {
 			}
 		}
 		x = 35
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -734,7 +764,7 @@ focus_tree = {
 			}
 		}
 		x = 37
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -745,7 +775,7 @@ focus_tree = {
 			focus = UCB_arms2
 		}
 		x = 35
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -768,7 +798,7 @@ focus_tree = {
 			}
 		}
 		x = 35
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -783,7 +813,7 @@ focus_tree = {
 			add_war_support = 0.1
 		}
 		x = 38
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -797,7 +827,7 @@ focus_tree = {
 			add_ideas = extensive_conscription 
 		}
 		x = 38
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -811,7 +841,7 @@ focus_tree = {
 			army_experience = 25
 		}
 		x = 38
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -825,7 +855,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 		x = 40
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -895,7 +925,7 @@ focus_tree = {
 				}
 		}
 		x = 21
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -921,7 +951,7 @@ focus_tree = {
             }
 		}
 		x = 21
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -938,7 +968,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -953,7 +983,7 @@ focus_tree = {
 			country_event = { id = ucnb.22 days = 1 }
 		}
 		x = 15
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1030,7 +1060,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1051,7 +1081,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1088,7 +1118,7 @@ focus_tree = {
 			}
 		}
 		x = 17
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1106,7 +1136,7 @@ focus_tree = {
 			}
 		}
 		x = 17
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1127,7 +1157,7 @@ focus_tree = {
 			}
 		}
 		x = 17
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1148,7 +1178,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1159,7 +1189,7 @@ focus_tree = {
 			focus = UCB_dem_industrial2
 		}
 		x = 15
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1180,7 +1210,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -1217,7 +1247,7 @@ focus_tree = {
 			}
 		}
 		x = 13
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1254,7 +1284,7 @@ focus_tree = {
 			}
 		}
 		x = 13
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1271,7 +1301,7 @@ focus_tree = {
 			focus = UCB_dem_oil_factory
 		}
 		x = 15
-		y = 12
+		y = 13
 
 	}
 	focus = {
@@ -1308,7 +1338,7 @@ focus_tree = {
 		}
 				
 		x = 9
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -1356,7 +1386,7 @@ focus_tree = {
 			factor = 1
 		}
 		x = 9
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1371,7 +1401,7 @@ focus_tree = {
 			army_experience = 25
 		}
 		x = 9
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1396,7 +1426,7 @@ focus_tree = {
 			}
 		}
 		x = 9
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1417,7 +1447,7 @@ focus_tree = {
 			}
 		}
 		x = 7
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1438,7 +1468,7 @@ focus_tree = {
 			}
 		}
 		x = 7
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1466,7 +1496,7 @@ focus_tree = {
 			}
 		}
 		x = 9
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1483,7 +1513,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 		x = 11
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1501,7 +1531,7 @@ focus_tree = {
 			}
 		}
 		x = 11
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1519,7 +1549,7 @@ focus_tree = {
 			}
 		}
 		x = 13
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1551,7 +1581,7 @@ focus_tree = {
 			add_timed_idea = { idea = UCB_rearmament days = 160 }
 		}
 		x = 11
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1562,7 +1592,7 @@ focus_tree = {
 			focus = UCB_dem_foreign_policy
 		}
 		x = 3
-		y = 5
+		y = 6
 
 		completion_reward = {
 			hidden_effect = {create_faction = UCB_scuit_ally}
@@ -1589,7 +1619,7 @@ focus_tree = {
 			focus = UCB_dem_sbu
 		}
 		x = 3
-		y = 6
+		y = 7
 
 		completion_reward = {
 			add_timed_idea = {
@@ -1608,9 +1638,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_stavka_defense
 		}
-		bypass = { TRP = { is_exist = no } }
+		bypass = { NOT = {country_exists = TRP} }
 		x = 0
-		y = 7
+		y = 8
 
 		completion_reward = {
 			give_guarantee = TRP
@@ -1646,7 +1676,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -1660,7 +1690,7 @@ focus_tree = {
 			focus = UCB_fasc_sami
 		}
 		x = 28
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1678,7 +1708,7 @@ focus_tree = {
 			add_stability = 0.08
 		}
 		x = 30
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1689,7 +1719,7 @@ focus_tree = {
 			focus = UCB_fasc_IID_investors
 		}
 		x = 28
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1703,7 +1733,7 @@ focus_tree = {
 			add_timed_idea = { idea = UCB_gov_dotations days = 360 }
 		}
 		x = 30
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1715,7 +1745,7 @@ focus_tree = {
 			focus = UCB_fasc_fsc_trade
 		}
 		x = 29
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1736,7 +1766,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1757,7 +1787,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1778,7 +1808,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -1799,7 +1829,7 @@ focus_tree = {
 			}
 		}
 		x = 31
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1820,7 +1850,7 @@ focus_tree = {
 			}
 		}
 		x = 31
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1841,7 +1871,7 @@ focus_tree = {
 			}
 		}
 		x = 31
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -1870,7 +1900,7 @@ focus_tree = {
 			}
 		}
 		x = 27
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1899,7 +1929,7 @@ focus_tree = {
 			}
 		}
 		x = 27
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1928,7 +1958,7 @@ focus_tree = {
 			}
 		}
 		x = 27
-		y = 11
+		y = 12
 
 	}
 	
@@ -1937,7 +1967,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 5
         x = 45
-        y = 3
+        y = 4
         available = {}
         bypass = {}
         prerequisite = {
@@ -1954,7 +1984,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 5
         x = 47
-        y = 4
+        y = 5
         available = {}
         bypass = {}
         prerequisite = {
@@ -1972,7 +2002,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 5
         x = 55
-        y = 4
+        y = 5
         available = {}
         bypass = {}
         prerequisite = {
@@ -1985,11 +2015,194 @@ focus_tree = {
     }
 
     focus = {
+        id = UCB_convergation
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 6
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_neutrality_way
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_timed_idea = {idea = UCB_convergation_idea days = 120}
+        }
+    }
+
+    focus = {
+        id = UCB_civilian_nationalism
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 7
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_convergation
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_stability = 0.1
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = UCB_yurescul_speech
+        icon = GFX_goal_unknown
+        cost = 15
+        x = 55
+        y = 8
+        available = {
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_civilian_nationalism
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            #set_politics = {ruling_party = neutrality}
+            #promote_character = {character = UCB_terine_narabel ideology = conservatism}
+        }
+    }
+
+    focus = {
+        id = UCB_pepene_incedent
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 53
+        y = 9
+        available = {
+            country_exists = FSC
+            44 = {owner = {tag = FSC}}
+            45 = {owner = {tag = FSC}}
+            NOT = {has_war_with = FSC}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_yurescul_speech
+        }
+        prerequisite = {focus = UCB_fasc_south_ORB}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_independent_ndro
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 53
+        y = 10
+        available = {
+            has_completed_focus = UCB_parlament_fas6
+            country_exists = ORB
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_pepene_incedent
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_support_separs
+        icon = GFX_goal_unknown
+        cost = 3
+        x = 53
+        y = 11
+        available = {}
+        bypass = {NOT = {country_exists = ORB}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_independent_ndro
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_narabel_referendum
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 53
+        y = 12
+        available = {}
+        bypass = {NOT = {country_exists = ORB}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_support_separs
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_support_anrax
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 54
+        y = 13
+        available = {
+            44 = {owner = {NOT = {tag = FSC}}}
+            45 = {owner = {NOT = {tag = FSC}}}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_narabel_referendum
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
         id = UCB_sep_punishment
         icon = GFX_goal_unknown
         cost = 5
         x = 51
-        y = 5
+        y = 6
         available = {}
         bypass = {}
         prerequisite = {
@@ -2013,7 +2226,85 @@ focus_tree = {
 			add_state_claim = 45
 		}
 		x = 51
-		y = 6
+		y = 7
+
+	}
+
+    focus = {
+        id = UCB_reduce_local_power
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 51
+        y = 8
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_fasc_south_ORB
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_assental_pogrom
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 51
+        y = 9
+        available = {has_completed_focus = UCB_parlament_fas6}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_reduce_local_power
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+    
+    focus = {
+		id = UCB_fasc_OIK_war
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_assental_pogrom
+		}
+        prerequisite = {
+            focus = UCB_fasc_war_FSC
+        }
+		completion_reward = {
+			UCB = { 
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = OIK
+				}
+			}
+		}
+		x = 50
+		y = 13
+
+	}
+
+    focus = {
+		id = UCB_fasc_OIK_friend_regime
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_assental_pogrom
+		}
+        prerequisite = {focus = UCB_narabel_referendum}
+		x = 52
+		y = 13
 
 	}
 
@@ -2030,7 +2321,7 @@ focus_tree = {
             add_popularity = {ideology = neutrality popularity = 0.1}
 		}
 		x = 47
-		y = 5
+		y = 6
 
 	}
 
@@ -2051,7 +2342,7 @@ focus_tree = {
             }
 		}
 		x = 45
-		y = 8
+		y = 9
 
 	}
 
@@ -2068,7 +2359,7 @@ focus_tree = {
             promote_character = {character = UCB_terine_narabel ideology = conservatism}
 		}
 		x = 47
-		y = 6
+		y = 7
 
 	}
 
@@ -2083,7 +2374,7 @@ focus_tree = {
 			country_event = { id = ucbf.1 days = 1 }
 		}
 		x = 47
-		y = 7
+		y = 8
 
 	}
 
@@ -2097,7 +2388,7 @@ focus_tree = {
 		completion_reward = {
 		}
 		x = 47
-		y = 8
+		y = 9
 
 	}
 
@@ -2116,7 +2407,7 @@ focus_tree = {
 			35 = { add_core_of = UCB }
 		}
 		x = 47
-		y = 9
+		y = 10
 
 	}
 
@@ -2133,7 +2424,7 @@ focus_tree = {
 
 		}
 		x = 49
-		y = 10
+		y = 11
 
 	}
 
@@ -2147,18 +2438,36 @@ focus_tree = {
 		completion_reward = {
 		}
 		x = 49
-		y = 11
+		y = 12
 
 	}
-
     
+    focus = {
+		id = UCB_fasc_war_IID_
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fasc_war_FSC
+		}
+		completion_reward = {
+			UCB = { 
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = IID
+				}
+			}
+		}
+		x = 48
+		y = 13
+
+	}
 
     focus = {
         id = UCB_parlament_fas
         icon = GFX_goal_unknown
         cost = 5
         x = 43
-        y = 4
+        y = 5
         available = {}
         bypass = {}
         prerequisite = {
@@ -2174,7 +2483,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 5
         x = 43
-        y = 5
+        y = 6
         available = {}
         bypass = {}
         prerequisite = {
@@ -2194,7 +2503,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 43
-        y = 6
+        y = 7
         available = {}
         bypass = {}
         prerequisite = {
@@ -2210,7 +2519,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 5
         x = 41
-        y = 7
+        y = 8
         available = {}
         bypass = {}
         prerequisite = {
@@ -2233,7 +2542,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 43
-        y = 7
+        y = 8
         available = {}
         bypass = {}
         prerequisite = {
@@ -2253,7 +2562,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 43
-        y = 8
+        y = 9
         available = {
             power_balance_value = {
                 id = UCB_parlament_balance
@@ -2275,7 +2584,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 43
-        y = 9
+        y = 10
         available = {}
         bypass = {}
         prerequisite = {
@@ -2295,7 +2604,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 45
-        y = 9
+        y = 10
         available = {}
         bypass = {}
         prerequisite = {
@@ -2317,7 +2626,7 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 41
-        y = 9
+        y = 10
         available = {}
         bypass = {}
         prerequisite = {
