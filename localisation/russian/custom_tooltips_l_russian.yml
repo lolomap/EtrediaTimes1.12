@@ -31,6 +31,7 @@
   corruption_cost_10_tooltip: "Стоимость антикоррупционных мероприятий: §R+10%§!"
   reduce_pfchange_cost: "Сокращает смену политического строя до §Y30§! дней"
 
+  change_ideologies_off_tooltip: "§YИдеология регионов не будет менятся§!"
   change_region_ideology_factor_tooltip: "Влияние регионов на идеологию: $RIGHT|Y=%$\n"
   change_region_event_factor_tooltip: "Возмущения в регионе: $RIGHT|Y%0$\n"
   add_region_democratic_tooltip: "Демократия в регионе: $RIGHT|Y=%$\n"
@@ -55,6 +56,7 @@
   bkh_nation_tooltip: "Баркханская культура"
   skt_nation_tooltip: "Сектойская культура"
 
+  ACCEPT_EXISTANCE_tooltip: "§Y[Root.GetFlag][Root.GetNameDef]§! признает независимость §Y[?temp.GetFlag][?temp.GetNameDef]§!"
   ALLOW_ACCEPT_EXISTANCE_tooltip: "Мы должны признать независимость этого государства"
   ALLOW_BANNED_CRYSIS_tooltip: "Нельзя во время войны из-за кризиса"
   ALLOW_BANNED_UCB_BOP_tooltip: "Невозможно возразить Парламенту"

@@ -2075,8 +2075,169 @@ focus_tree = {
         #}
     
         completion_reward = {
-            #set_politics = {ruling_party = neutrality}
-            #promote_character = {character = UCB_terine_narabel ideology = conservatism}
+            country_event = {id = ucbf.9 days = 1}
+        }
+    }
+
+    focus = {
+        id = UCB_trade_islands
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 9
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_yurescul_speech
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_trade_donat
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 10
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_trade_islands
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_trade_didor
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_trade_donat
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_PMC
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 58
+        y = 9
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_neutrality_way
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = UCB_PMC_idea
+        }
+    }
+
+    focus = {
+        id = UCB_diria_pmc
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 57
+        y = 10
+        available = {
+            any_country = {
+                OR = {
+                    has_idea = DIR_revolt
+                    hidden_trigger = {
+                        has_idea = DIR_revolt2
+                    }
+                }
+            }
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_PMC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_aldeko_pmc
+        icon = GFX_goal_unknown
+        cost = 3
+        x = 59
+        y = 10
+        available = {
+            NOT = {is_in_faction_with = SBU}
+            NOT = {is_in_faction_with = TRB}
+            SBU = {has_war_with = TRB}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_PMC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_sma_pmc
+        icon = GFX_goal_unknown
+        cost = 3
+        x = 58
+        y = 11
+        available = {
+            SMA = {has_war_with = YAN}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_PMC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
         }
     }
 
@@ -2103,7 +2264,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            FSC = {country_event = {id = ucbf.3 days = 1} }
         }
     }
 
@@ -2116,6 +2277,7 @@ focus_tree = {
         available = {
             has_completed_focus = UCB_parlament_fas6
             country_exists = ORB
+            ORB = {has_border_war = yes}
         }
         bypass = {}
         allow_branch = {}
@@ -2127,18 +2289,29 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            hidden_effect = {
+                UCB = {set_country_flag = ACCEPT_EXISTANCE_ORB}    
+                FSC = {country_event = {id = ucbf.7 days = 1}}
+            }
+            set_temp_variable = { temp = ORB }
+            custom_effect_tooltip = ACCEPT_EXISTANCE_tooltip
         }
     }
 
     focus = {
         id = UCB_support_separs
         icon = GFX_goal_unknown
-        cost = 3
+        cost = 1
         x = 53
         y = 11
-        available = {}
-        bypass = {NOT = {country_exists = ORB}}
+        available = {ORB = {has_war_with = FSC} has_completed_focus = UCB_PMC}
+        bypass = {
+            OR = {
+                NOT = {country_exists = ORB}
+                NOT = {country_exists = FSC}
+                UCB = {has_war_with = FSC}
+            }
+        }
         allow_branch = {}
         prerequisite = {
             focus = UCB_independent_ndro
@@ -2148,7 +2321,15 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 1000
+                target = ORB
+            }
+            swap_ideas = {
+                remove_idea = UCB_PMC_idea
+                add_idea = UCB_PMC_idea2
+            }
         }
     }
 
@@ -2169,7 +2350,9 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            ORB = {
+				country_event = { id = orb.43 days = 30 }
+			}
         }
     }
 
@@ -2182,6 +2365,7 @@ focus_tree = {
         available = {
             44 = {owner = {NOT = {tag = FSC}}}
             45 = {owner = {NOT = {tag = FSC}}}
+            country_exists = FSC
         }
         bypass = {}
         allow_branch = {}
@@ -2193,14 +2377,53 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            if = {
+                limit = {FSC = {is_ai = yes}}
+                ANR = {annex_country = {target = FSC transfer_troops = yes}}
+            }
+            else = {
+                ANR = {
+                    transfer_state = 47
+                    transfer_state = 48
+                    transfer_state = 49
+                    transfer_state = 50
+                    transfer_state = 65
+                    transfer_state = 66
+                    add_state_claim = 67
+                    add_state_claim = 64
+                    add_state_claim = 52
+                    add_state_claim = 51
+                    add_state_claim = 46
+                    load_oob = ANR_rebels
+                    add_manpower = 40000
+
+                    declare_war_on = { target = FSC type = annex_everything }
+                    FSC = {
+                        delete_unit = { 
+                            state = 47
+                            state = 48
+                            state = 49
+                            state = 50
+                            state = 65
+                            state = 66
+                            disband = yes
+                        }
+                    }
+                }
+            }
+            set_autonomy = {
+                target = ANR
+                autonomy_state = autonomy_dominion
+                end_wars = no
+                end_civil_wars = no
+            }
         }
     }
 
     focus = {
         id = UCB_sep_punishment
         icon = GFX_goal_unknown
-        cost = 5
+        cost = 10
         x = 51
         y = 6
         available = {}
@@ -2210,7 +2433,21 @@ focus_tree = {
             focus = UCB_neutrality_way
         }
         completion_reward = {
-            
+            KIM = {
+                add_to_variable = {
+                    var = UCB.sep_KIM
+                    value = 0.1
+                    tooltip = add_region_separatism_tooltip
+                }
+            }
+            KOL = {
+                add_to_variable = {
+                    var = UCB.sep_KOL
+                    value = 0.1
+                    tooltip = add_region_separatism_tooltip
+                }
+            }
+            remove_ideas = UCB_poroh_blet
         }
     }
 
@@ -2268,7 +2505,21 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            if = {
+                limit = {TRP = {is_ai = yes}}
+                puppet = TRP
+                send_equipment = {
+                    equipment = infantry_equipment
+                    amount = 350
+                    target = TRP
+                }
+            }
+            else = {
+                create_wargoal = {
+                    target = TRP
+                    type = puppet_wargoal_focus
+                }
+            }
         }
     }
     
@@ -2418,10 +2669,13 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_fasc_unitarian
 		}
-        prerequisite = {focus = UCB_parlament_fas8}
+        prerequisite = {
+            focus = UCB_parlament_fas8
+            focus = UCB_parlament_fas7
+        }
         prerequisite = {focus = UCB_fasc_south_ORB}
 		completion_reward = {
-
+            country_event = {id = ucbf.6 days = 1}
 		}
 		x = 49
 		y = 11
@@ -2432,13 +2686,33 @@ focus_tree = {
 		id = UCB_fasc_war_FSC
 		icon = GFX_goal_unknown
 		cost = 10
+        available = {has_completed_focus = UCB_parlament_fas8}
 		prerequisite = {
 			focus = UCB_fasc_irtazlin_speech
 		}
 		completion_reward = {
+            create_wargoal = {
+                target = FSC
+                type = annex_everything
+            }
 		}
 		x = 49
 		y = 12
+
+	}
+
+    focus = {
+		id = UCB_fasc_vroin
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fasc_war_FSC
+		}
+		completion_reward = {
+			VRO = { country_event = { id = vro.3 days = 1 } }
+		}
+		x = 49
+		y = 14
 
 	}
     
@@ -2510,7 +2784,8 @@ focus_tree = {
             focus = UCB_parlament_fas2
         }
         completion_reward = {
-            
+            set_country_flag = change_ideologies_off
+            custom_effect_tooltip = change_ideologies_off_tooltip
         }
     }
 
@@ -2575,7 +2850,7 @@ focus_tree = {
             focus = UCB_parlament_fas5
         }
         completion_reward = {
-            
+            add_power_balance_value = {id = UCB_parlament_balance value = 0.3}
         }
     }
 
@@ -2600,13 +2875,65 @@ focus_tree = {
     }
 
     focus = {
+        id = UCB_find_defence
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 43
+        y = 12
+        available = {EIK = {is_faction_leader = yes}}
+        bypass = {NOT = {country_exists = EIK}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_parlament_fas7
+        }
+        prerequisite = {focus = UCB_fasc_irtazlin_speech}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            EIK = {country_event = {id = ucbf.10 days = 1}}
+        }
+    }
+
+    focus = {
+        id = UCB_hell_arrows
+        icon = GFX_goal_unknown
+        cost = 15
+        x = 43
+        y = 13
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_find_defence
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_building_construction = {
+                type = nuclear_reactor
+                level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = nuclear_rocket_site
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    focus = {
         id = UCB_parlament_fas8
         icon = GFX_goal_unknown
         cost = 10
         x = 45
         y = 10
         available = {}
-        bypass = {}
+        bypass = {has_completed_focus = UCB_parlament_fas7}
         prerequisite = {
             focus = UCB_parlament_fas6
         }
@@ -2638,6 +2965,27 @@ focus_tree = {
         }
         completion_reward = {
             
+        }
+    }
+
+    focus = {
+        id = UCB_narabel_etredia
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 41
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_parlament_fas9
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            complete_national_focus = UCB_dem_sbu
         }
     }
 }

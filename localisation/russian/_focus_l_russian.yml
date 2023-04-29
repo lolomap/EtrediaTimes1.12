@@ -377,8 +377,16 @@
  UCB_support_separs: "Поддержать ополценцев"
  UCB_narabel_referendum: "Референдум о единении"
  UCB_support_anrax: "Власть анраксцам!"
- 
-
+ UCB_find_defence: "Поиск защиты"
+ UCB_hell_arrows: "Стрела Преисподней"
+ UCB_narabel_etredia: "Ставка на демократов"
+ UCB_trade_islands: "Островная торговля"
+ UCB_trade_donat: "Донатский рынок"
+ UCB_trade_didor: "Дидорский рынок"
+ UCB_PMC: "Их там нет"
+ UCB_diria_pmc: "Их нет в Дирии"
+ UCB_aldeko_pmc: "Их нет в Тербии"
+ UCB_sma_pmc: "Их нет в Мацаре"
 
  UCB_dem_gov_reform:0 "Реформа института власти"
  UCB_dem_stabilnost:0 "Стабилизация внутренней обстановки"
