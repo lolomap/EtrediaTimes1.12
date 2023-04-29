@@ -1,0 +1,28 @@
+﻿l_english:
+   JUSTIFICATION_WAR_TITLE: "Justify the war goal"
+   JUSTIFICATION_WAR_ACTION_DESC: ""
+
+   EMBARGO_TITLE:0 "Embargo"
+   EMBARGO_ACTION_DESC:0 "This nation will not be able to purchase resources from you"
+   END_EMBARGO_TITLE:0 "End embargo"
+   END_EMBARGO_ACTION_DESC:0 "This nation will be able to purchase resources from you again"
+
+   PEACE_DEAL_TITLE:0 "Offer Peace"
+   PEACE_DEAL_ACTION_DESC:0 "§RYour alliance members won't like this§! \nA peace treaty will be made with the current territory remaining"
+   peace_desc:0 "A peace treaty will be concluded with the preservation of the current territorial position"
+   peace_desc_faction:0 "§RYour alliance members won't like this§! \nA peace treaty will be made with the current territory remaining"
+   base_pn:0 "Base Reluctance"
+   faction_pn:0 "They represent a hostile alliance"
+   you_faction_pn:0 "You represent an alliance"
+   offensive_pn:0 "aggressor"
+   tired_pp:0 "Their Exhaustion"
+   democratic_pp:0 "Peaceful Ideology"
+   neutrality_pp:0 "Authoritarian Ideology"
+   surrender_pp:0 "Their Surrender"
+   self_surrender_pp:0 "Our Surrender"
+   major_pn:0 "They are a great nation"
+   minor_pp:0 "Our Superiority"
+
+   opinion_emb:0 "Our relationship"
+   influence_emb:0 "Our Influence"
+   base_emb:0 "Base Reluctance"

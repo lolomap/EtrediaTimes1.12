@@ -241,14 +241,17 @@ calc_max_ideology = {
 region_event_change_law = {
     set_variable = {region_event_type = 0}
     set_variable_to_random = {var = region_law_change max = 5 integer = yes}
+    #set_variable = {region_law_change = 5}
     set_temp_variable_to_random = {var = delta min = 1 max = 2 integer = yes}
     random_list = {
-        70 = {set__temp_variable = {negative = 1}}
-        30 = {set__temp_variable = {negative = 0}}
+        70 = {set_temp_variable = {negative = 1}}
+        30 = {set_temp_variable = {negative = -1}}
     }
+    if = {limit = {check_variable = {negative = 1}} multiply_temp_variable = {delta = -1}}
+    #log = "[?delta]"
+
     if = {limit = {check_variable = {region_law_change = 0}}
         set_variable = {region_idea_change = press_law}
-        if = {limit = {check_variable = {negative = 1}} multiply_temp_variable = {delta = -1}}
         add_to_variable = {region_idea_change = delta}
         clamp_variable = {
             var = region_idea_change
@@ -257,12 +260,11 @@ region_event_change_law = {
         }
         if = {
             limit = {check_variable = {region_idea_change = press_law}}
-            subtract_from_variable = {region_idea_change = negative}
+            add_to_variable = {region_idea_change = negative}
         }
     }
     else_if = {limit = {check_variable = {region_law_change = 1}}
         set_variable = {region_idea_change = migration_law}
-        if = {limit = {check_variable = {negative = 1}} multiply_temp_variable = {delta = -1}}
         add_to_variable = {region_idea_change = delta}
         clamp_variable = {
             var = region_idea_change
@@ -271,12 +273,11 @@ region_event_change_law = {
         }
         if = {
             limit = {check_variable = {region_idea_change = migration_law}}
-            subtract_from_variable = {region_idea_change = negative}
+            add_to_variable = {region_idea_change = negative}
         }
     }
     else_if = {limit = {check_variable = {region_law_change = 2}}
         set_variable = {region_idea_change = mobilization_law}
-        if = {limit = {check_variable = {negative = 1}} multiply_temp_variable = {delta = -1}}
         add_to_variable = {region_idea_change = delta}
         clamp_variable = {
             var = region_idea_change
@@ -285,12 +286,11 @@ region_event_change_law = {
         }
         if = {
             limit = {check_variable = {region_idea_change = mobilization_law}}
-            subtract_from_variable = {region_idea_change = negative}
+            add_to_variable = {region_idea_change = negative}
         }
     }
     else_if = {limit = {check_variable = {region_law_change = 3}}
         set_variable = {region_idea_change = economy_law}
-        if = {limit = {check_variable = {negative = 1}} multiply_temp_variable = {delta = -1}}
         add_to_variable = {region_idea_change = delta}
         clamp_variable = {
             var = region_idea_change
@@ -299,12 +299,11 @@ region_event_change_law = {
         }
         if = {
             limit = {check_variable = {region_idea_change = economy_law}}
-            subtract_from_variable = {region_idea_change = negative}
+            add_to_variable = {region_idea_change = negative}
         }
     }
     else_if = {limit = {check_variable = {region_law_change = 4}}
         set_variable = {region_idea_change = trade_law}
-        if = {limit = {check_variable = {negative = 1}} multiply_temp_variable = {delta = -1}}
         add_to_variable = {region_idea_change = delta}
         clamp_variable = {
             var = region_idea_change
@@ -313,7 +312,20 @@ region_event_change_law = {
         }
         if = {
             limit = {check_variable = {region_idea_change = trade_law}}
-            subtract_from_variable = {region_idea_change = negative}
+            add_to_variable = {region_idea_change = negative}
+        }
+    }
+    else_if = {limit = {check_variable = {region_law_change = 5}}
+        set_variable = {region_idea_change = socials_law}
+        add_to_variable = {region_idea_change = delta}
+        clamp_variable = {
+            var = region_idea_change
+            min = token:socials_4
+            max = token:socials_0
+        }
+        if = {
+            limit = {check_variable = {region_idea_change = socials_law}}
+            add_to_variable = {region_idea_change = negative}
         }
     }
 }

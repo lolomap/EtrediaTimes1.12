@@ -1206,7 +1206,7 @@
  FOCUS_MESSAGE_BYPASSED_TITLE:0 "Национальный фокус §Yпропущен§!"
  POLITICS_SELECT_FOCUS:0 "Выберите национальный фокус"
  CURRENT_FOCUS:0 "$FOCUS|H$"
- BYPASS_FOCUS_TRIGER:1 "Следующее не влияет на фокус:"
+ BYPASS_FOCUS_TRIGER: "Следующее пропускает фокус:"
  BYPASS_FOCUS:1 "Пропустить"
  DIPLOMACY_CREATE_FACTION_OPP_IDEO:0 "Чтобы государство $COUNTRY$ заключило с нами альянс, оно должно придерживаться идеологии $IDE$.\n"
  DIPLOMACY_NOT_ENOUGH_IDEOLOGY_POPULARITY:0 "$NAME|H$ требует, чтобы у присоединяющейся страны популярность идеологии $IDEOLOGY|H$ превышала $MIN|H%0$ (сейчас: $CUR|H%0$)"

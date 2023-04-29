@@ -10,23 +10,62 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 1 y = 1 }
 
-	focus = {
-		id = UCB_1
-		icon = GFX_goal_generic_national_unity
-		cost = 10
-		x = 27
-		y = 0
+    focus = {
+        id = UCB_votum
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 27
+        y = 0
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_stability = -0.15
+            add_power_balance_value = {id = UCB_parlament_balance value = -0.05}
+            add_popularity = {ideology = democratic popularity = 0.1}
+        }
+    }
 
-		completion_reward = {
-			add_political_power = 150
-		}
-	}
+    focus = {
+        id = UCB_enprison
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 27
+        y = 1
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_votum
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            country_event = {id = ucnb.31 days = 1}
+        }
+    }
+
 	focus = {
 		id = UCB_dem_fsc_conversation
 		icon = GFX_goal_tripartite_pact
 		cost = 10
 		x = 3
-		y = 7
+		y = 8
+
+        bypass = {
+            OR = {
+                has_war_with = FSC
+                NOT = {country_exists = FSC}
+                country_exists = ORB
+            }
+        }
+
 		completion_reward = {
 			FSC = { country_event = { id = fscb.15 days = 1 } }
 		}
@@ -39,8 +78,11 @@ focus_tree = {
 		id = UCB_dem_ndro
 		icon = GFX_goal_unknown
 		cost = 10
-		x = 2
-		y = 11
+
+        prerequisite = {focus = UCB_dem_fsc_conversation}
+
+		x = 1
+		y = 9
 
 		completion_reward = {
 			UCB = { give_guarantee = ORB }
@@ -85,8 +127,12 @@ focus_tree = {
 		id = UCB_dem_kulishtia
 		icon = GFX_goal_unknown
 		cost = 10
-		x = 4
+		x = 0
 		y = 11
+
+        prerequisite = {focus = UCB_dem_ndro}
+        prerequisite = {focus = UCB_dem_trp_garant}
+        prerequisite = {focus = UCB_dem_anti_IID}
 
 		available = {
 			country_exists = KUL
@@ -104,6 +150,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_kulishtia
 		}
+        prerequisite = {
+			focus = UCB_dem_iid_war
+		}
 		completion_reward = {
 			UCB = {
 				annex_country = {
@@ -118,7 +167,7 @@ focus_tree = {
 				add_state_core = 58
 			}
 		}
-		x = 4
+		x = 1
 		y = 12
 	}
 	focus = {
@@ -142,8 +191,8 @@ focus_tree = {
 			54 = { is_controlled_by = IID }
 			}
 		}
-		x = 2
-		y = 8
+		x = 3
+		y = 9
 
 	}
 	focus = {
@@ -157,8 +206,8 @@ focus_tree = {
 		completion_reward = {
 			UCB = { country_event = { id = ucnb.21 days = 1 } }
 		}
-		x = 2
-		y = 9
+		x = 3
+		y = 10
 
 	}
 	focus = {
@@ -173,8 +222,8 @@ focus_tree = {
 				country_event = { id = orb.43 days = 30 }
 			}
 		}
-		x = 2
-		y = 12
+		x = 1
+		y = 10
 
 	}
 	focus = {
@@ -190,8 +239,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		x = 4
-		y = 8
+		x = 5
+		y = 9
 
 	}
 	focus = {
@@ -201,22 +250,22 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_IID
 		}
-		x = 4
-		y = 9
+		x = 5
+		y = 10
 
 	}
 	focus = {
 		id = UCB_2
 		icon = GFX_goal_support_democracy
-		cost = 10
+		cost = 15
 		prerequisite = {
-			focus = UCB_1
+			focus = UCB_enprison
 		}
 		x = 27
-		y = 1
+		y = 2
 
         available = {
-            has_country_leader = {name = "Dmirin Randerko"}
+            has_country_leader = {character = UCB_parlament}
             date < 2016.1.1
         }
 
@@ -229,7 +278,7 @@ focus_tree = {
 
 		completion_reward = {
 			UCB = {
-                promote_character = UCB_anatoly_zhmirinovan
+                add_political_power = 150
 				remove_ideas = UCB_polit_crisis
 				country_event = { id = ucnb.1 days = 1 }
 			}
@@ -247,11 +296,12 @@ focus_tree = {
 			focus = UCB_fasc1
 		}
 		x = 21
-		y = 2
+		y = 3
 
 		available = {
-		    has_government = democratic
+		    #has_government = democratic
 			has_idea = UCB_resist
+            has_country_leader = {character = UCB_anatoly_zhmirinovan}
 		}
 
 		completion_reward = {
@@ -288,7 +338,7 @@ focus_tree = {
 			}
 		}
 		x = 3
-		y = 4
+		y = 5
 
 	}
 	focus = {
@@ -310,7 +360,7 @@ focus_tree = {
 			}
 		}
 		x = 9
-		y = 4
+		y = 5
 
 	}
 	focus = {
@@ -327,7 +377,7 @@ focus_tree = {
 			factor = 2
 		}
 		x = 15
-		y = 4
+		y = 5
 
 	}
 	focus = {
@@ -338,7 +388,7 @@ focus_tree = {
 			focus = UCB_dem1
 		}
 		x = 21
-		y = 4
+		y = 5
 		
 		completion_reward = {
 			add_political_power = 150
@@ -379,7 +429,7 @@ focus_tree = {
 			focus = UCB_dem_gov_reform
 		}
 		x = 21
-		y = 5
+		y = 6
 
 		completion_reward = {
 			add_stability = 0.05
@@ -387,6 +437,13 @@ focus_tree = {
 				add_idea = UCB_resist2
 				remove_idea = UCB_resist
 			}
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.15 tooltip = add_region_opposition_tooltip }
+                add_to_variable = { var = UCB.sep_@THIS value = -0.05 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+            }
 		}
 		ai_will_do = {
 			factor = 2
@@ -400,15 +457,20 @@ focus_tree = {
 			focus = UCB_dem_stabilnost
 		}
 		x = 21
-		y = 6
+		y = 7
 
 		completion_reward = {
 			add_stability = 0.1
 			add_ideas = { UCB_autonomy }
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
+			#add_popularity = {
+			#	ideology = democratic
+			#	popularity = 0.1
+			#}
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                set_temp_variable = { temp = 0.08 }
+                boost_region_dem = yes
+            }
 		}
 		ai_will_do = {
 			factor = 2
@@ -425,10 +487,23 @@ focus_tree = {
 			focus = UCB_dem_battle
 		}
 		x = 20
-		y = 7
+		y = 8
 
 		completion_reward = {
-			add_stability = 0.05
+			#add_stability = 0.05
+            KIM = {
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.1 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+            KOL = {
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.1 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+            ORB = {
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.1 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+            
 			remove_ideas = UCB_resist2
 			remove_ideas = UCB_resist
 		}
@@ -441,15 +516,21 @@ focus_tree = {
 			focus = UCB_dem_compromis
 		}
 		x = 20
-		y = 8
+		y = 9
 
 		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.05
-			add_popularity = {
+			add_political_power = 100
+            add_popularity = {
 				ideology = fascism
-				popularity = 0.2
+				popularity = 0.1
 			}
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                set_temp_variable = { temp = 0.1 }
+                boost_region_fas = yes
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.1 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
 		}
 	}
 	focus = {
@@ -463,7 +544,7 @@ focus_tree = {
 			focus = UCB_dem_compromis
 		}
 		x = 22
-		y = 7
+		y = 8
 
 		completion_reward = {
 			add_stability = 0.05
@@ -471,6 +552,18 @@ focus_tree = {
 				ideology = fascism
 				popularity = -0.1
 			}
+            KIM = {
+                add_to_variable = { var = UCB.oppos_@THIS value = -0.2 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS min = 0}
+            }
+            KOL = {
+                add_to_variable = { var = UCB.oppos_@THIS value = -0.2 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS min = 0}
+            }
+            ORB = {
+                add_to_variable = { var = UCB.oppos_@THIS value = -0.2 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS min = 0}
+            }
 		}
 
 	}
@@ -482,7 +575,7 @@ focus_tree = {
 			focus = UCB_dem_battle
 		}
 		x = 22
-		y = 8
+		y = 9
 
 		completion_reward = {
 			add_political_power = 150
@@ -490,6 +583,12 @@ focus_tree = {
 				idea = UCB_zapretnac
 				days = 150
 			}
+            KOL = {
+                add_to_variable = { var = UCB.sep_@THIS value = 0.15 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.sep_@THIS max = 1}
+                set_temp_variable = {temp = 0.2}
+                boost_region_fas = yes
+            }
 		}
 	}
 	focus = {
@@ -506,7 +605,7 @@ focus_tree = {
 		}
 
 		x = 21
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -520,7 +619,8 @@ focus_tree = {
 			focus = UCB_dem1
 		}
 		available = {
-			has_government = fascism
+			#has_government = fascism
+            has_country_leader = {character = UCB_terine_narabel}
 		}
 		completion_reward = {
 			add_political_power = 50
@@ -533,7 +633,7 @@ focus_tree = {
 		}
 		}
 		x = 33
-		y = 2
+		y = 3
 
 	}
 	focus = {
@@ -551,7 +651,7 @@ focus_tree = {
 			add_stability = 0.05
 		}
 		x = 33
-		y = 3
+		y = 4
 
 	}
 	focus = {
@@ -571,298 +671,10 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 4
-
-	}
-	focus = {
-		id = UCB_fasc_rospusk_parlament
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 10
-		prerequisite = {
-			focus = UCB_fasc2
-		}
-		completion_reward = {
-			add_political_power = 150
-			remove_ideas = UCB_corruption
-			hidden_effect = {
-				UCB = { country_event = { id = ucnb.25 days = 3 } }
-			}
-		}
-		x = 34
-		y = 4
-
-	}
-	focus = {
-		id = UCB_fasc_united_caratenia
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_fasc_rospusk_parlament
-		}
-		completion_reward = {
-			country_event = { id = ucbf.1 days = 1 }
-		}
-		x = 34
 		y = 5
 
 	}
-	focus = {
-		id = UCB_fasc_prepare_for_war
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_fasc_united_caratenia
-		}
-		x = 34
-		y = 6
-
-	}
-	focus = {
-		id = UCB_fasc_south_ORB
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_fasc_prepare_for_war
-		}
-		completion_reward = {
-			add_state_claim = 44
-			add_state_claim = 45
-		}
-		x = 34
-		y = 7
-
-	}
-	focus = {
-		id = UCB_annex_TRP
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_fasc_south_ORB
-		}
-		completion_reward = {
-			TRP = { country_event = { id = trp.5 days = 1 } }
-		}
-		x = 34
-		y = 8
-
-	}
-	focus = {
-		id = UCB_fasc_vroin
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_annex_TRP
-		}
-		completion_reward = {
-			VRO = { country_event = { id = vro.3 days = 1 } }
-		}
-		x = 33
-		y = 9
-
-	}
-	focus = {
-		id = UCB_fasc_revolt_ibFSC
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_annex_TRP
-		}
-		completion_reward = {
-			FSC = { country_event = { id = fscb.6 days = 4 } }
-			FSC = { country_event = { id = fscb.10 days = 20 } }
-		}
-		x = 35
-		y = 9
-
-	}
-	focus = {
-		id = UCB_annex_Diosis
-		icon = GFX_goal_unknown
-		cost = 5
-		prerequisite = {
-			focus = UCB_fasc_revolt_ibFSC
-		}
-		completion_reward = {
-			UCB = {
-				if = {
-					limit = { FSC = { owns_state = 46 } }
-					transfer_state = 46
-				}
-				if = {
-					limit = { KUL = { owns_state = 46 } }
-					transfer_state = 46
-				}
-				if = {
-					limit = { ANR = { owns_state = 46 } }
-					transfer_state = 46
-				}
-				if = {
-					limit = { FSC = { owns_state = 44 } }
-					transfer_state = 44
-				}
-				if = {
-					limit = { ANR = { owns_state = 44 } }
-					transfer_state = 44
-				}
-				if = {
-					limit = { KUL = { owns_state = 44 } }
-					transfer_state = 44
-				}
-				if = {
-					limit = { FSC = { owns_state = 45 } }
-					transfer_state = 45
-				}
-				if = {
-					limit = { KUL = { owns_state = 45 } }
-					transfer_state = 45
-				}
-				if = {
-					limit = { ANR = { owns_state = 45 } }
-					transfer_state = 45
-				}
-				if = {
-					limit = { FSC = { owns_state = 55 } }
-					transfer_state = 55
-				}
-				if = {
-					limit = { KUL = { owns_state = 55 } }
-					transfer_state = 55
-				}
-				if = {
-					limit = { ANR = { owns_state = 55 } }
-					transfer_state = 55
-				}
-				if = {
-					limit = { FSC = { owns_state = 56 } }
-					transfer_state = 56
-				}
-				if = {
-					limit = { ANR = { owns_state = 56 } }
-					transfer_state = 56
-				}
-				if = {
-					limit = { KUL = { owns_state = 56 } }
-					transfer_state = 56
-				}
-			}
-		}
-		x = 34
-		y = 10
-
-	}
-	focus = {
-		id = UCB_fasc_annex_KUL
-		icon = GFX_goal_unknown
-		cost = 2
-		prerequisite = {
-			focus = UCB_fasc_revolt_ibFSC
-		}
-		x = 36
-		y = 10
-
-	}
-	focus = {
-		id = UCB_fasc_anraks_puppet
-		icon = GFX_goal_unknown
-		cost = 5
-		prerequisite = {
-			focus = UCB_annex_Diosis
-		}
-		prerequisite = {
-			focus = UCB_fasc_annex_KUL
-		}
-		completion_reward = {
-			UCB = { puppet = ANR }
-		}
-		x = 35
-		y = 11
-
-	}
-	focus = {
-		id = UCB_annex_EGR
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_fasc_anraks_puppet
-		}
-		completion_reward = {
-			annex_country = {
-				target = EGR
-				transfer_troops = yes
-			}
-			35 = { add_core_of = UCB }
-		}
-		x = 35
-		y = 12
-
-	}
-	focus = {
-		id = UCB_OIK_war
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_annex_EGR
-		}
-		mutually_exclusive = {
-			focus = UCB_fasc_OIK_friend
-		}
-		completion_reward = {
-			UCB = { 
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = OIK
-				}
-			}
-		}
-		x = 34
-		y = 13
-
-	}
-	focus = {
-		id = UCB_fasc_integrate_newregions
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_OIK_war
-		}
-		x = 33
-		y = 14
-
-	}
-	focus = {
-		id = UCB_fasc_OIK_friend
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_annex_EGR
-		}
-		mutually_exclusive = {
-			focus = UCB_OIK_war
-		}
-		x = 36
-		y = 13
-
-	}
-	focus = {
-		id = UCB_fasc_war_IID
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_fasc_integrate_newregions
-			focus = UCB_fasc_OIK_friend
-		}
-		completion_reward = {
-			UCB = { 
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = IID
-				}
-			}
-		}
-		x = 35
-		y = 15
-
-	}
+	
 	focus = {
 		id = UCB_fasc_military_reform
 		icon = GFX_goal_unknown
@@ -875,8 +687,8 @@ focus_tree = {
 			army_experience = 15
 			add_war_support = 0.1
 		}
-		x = 39
-		y = 4
+		x = 35
+		y = 5
 
 	}
 	focus = {
@@ -886,8 +698,8 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_fasc_military_reform
 		}
-		x = 39
-		y = 5
+		x = 35
+		y = 6
 
 	}
 	focus = {
@@ -907,8 +719,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 39
-		y = 6
+		x = 35
+		y = 7
 
 	}
 	focus = {
@@ -928,8 +740,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 39
-		y = 7
+		x = 35
+		y = 8
 
 	}
 	focus = {
@@ -952,7 +764,7 @@ focus_tree = {
 			}
 		}
 		x = 37
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -962,8 +774,8 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_arms2
 		}
-		x = 39
-		y = 8
+		x = 35
+		y = 9
 
 	}
 	focus = {
@@ -985,8 +797,8 @@ focus_tree = {
 				category = naval_doctrine
 			}
 		}
-		x = 39
-		y = 9
+		x = 35
+		y = 10
 
 	}
 	focus = {
@@ -1000,8 +812,8 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = 0.1
 		}
-		x = 41
-		y = 5
+		x = 38
+		y = 6
 
 	}
 	focus = {
@@ -1014,8 +826,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = extensive_conscription 
 		}
-		x = 41
-		y = 6
+		x = 38
+		y = 7
 
 	}
 	focus = {
@@ -1028,8 +840,8 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 		}
-		x = 41
-		y = 7
+		x = 38
+		y = 8
 
 	}
 	focus = {
@@ -1042,8 +854,8 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 		}
-		x = 43
-		y = 6
+		x = 40
+		y = 7
 
 	}
 	focus = {
@@ -1055,7 +867,25 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.05
+            KOL = {
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+                add_to_variable = { var = UCB.sep_@THIS value = -0.1 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+            }
+            KIM = {
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+                add_to_variable = { var = UCB.sep_@THIS value = -0.1 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+            }
+            SRA = {
+                add_to_variable = { var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip }
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+                add_to_variable = { var = UCB.sep_@THIS value = -0.1 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+            }
 				23 = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
@@ -1095,7 +925,7 @@ focus_tree = {
 				}
 		}
 		x = 21
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1107,16 +937,21 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.1
+			add_political_power = 25
+			#add_stability = 0.1
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.1
+				popularity = 0.05
 			}
 			remove_ideas = UCB_poroh_blet
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                add_to_variable = { var = UCB.sep_@THIS value = -0.1 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+            }
 		}
 		x = 21
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -1133,7 +968,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -1148,7 +983,7 @@ focus_tree = {
 			country_event = { id = ucnb.22 days = 1 }
 		}
 		x = 15
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1225,7 +1060,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1246,7 +1081,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1283,7 +1118,7 @@ focus_tree = {
 			}
 		}
 		x = 17
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1301,7 +1136,7 @@ focus_tree = {
 			}
 		}
 		x = 17
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1322,7 +1157,7 @@ focus_tree = {
 			}
 		}
 		x = 17
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1343,7 +1178,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1354,7 +1189,7 @@ focus_tree = {
 			focus = UCB_dem_industrial2
 		}
 		x = 15
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1375,7 +1210,7 @@ focus_tree = {
 			}
 		}
 		x = 15
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -1412,7 +1247,7 @@ focus_tree = {
 			}
 		}
 		x = 13
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1449,7 +1284,7 @@ focus_tree = {
 			}
 		}
 		x = 13
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1466,7 +1301,7 @@ focus_tree = {
 			focus = UCB_dem_oil_factory
 		}
 		x = 15
-		y = 12
+		y = 13
 
 	}
 	focus = {
@@ -1503,7 +1338,7 @@ focus_tree = {
 		}
 				
 		x = 9
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -1551,7 +1386,7 @@ focus_tree = {
 			factor = 1
 		}
 		x = 9
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1566,7 +1401,7 @@ focus_tree = {
 			army_experience = 25
 		}
 		x = 9
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1591,7 +1426,7 @@ focus_tree = {
 			}
 		}
 		x = 9
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1612,7 +1447,7 @@ focus_tree = {
 			}
 		}
 		x = 7
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1633,7 +1468,7 @@ focus_tree = {
 			}
 		}
 		x = 7
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1661,7 +1496,7 @@ focus_tree = {
 			}
 		}
 		x = 9
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1678,7 +1513,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 		x = 11
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1696,7 +1531,7 @@ focus_tree = {
 			}
 		}
 		x = 11
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1714,7 +1549,7 @@ focus_tree = {
 			}
 		}
 		x = 13
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1746,7 +1581,7 @@ focus_tree = {
 			add_timed_idea = { idea = UCB_rearmament days = 160 }
 		}
 		x = 11
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1757,7 +1592,7 @@ focus_tree = {
 			focus = UCB_dem_foreign_policy
 		}
 		x = 3
-		y = 5
+		y = 6
 
 		completion_reward = {
 			hidden_effect = {create_faction = UCB_scuit_ally}
@@ -1784,7 +1619,7 @@ focus_tree = {
 			focus = UCB_dem_sbu
 		}
 		x = 3
-		y = 6
+		y = 7
 
 		completion_reward = {
 			add_timed_idea = {
@@ -1803,9 +1638,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_stavka_defense
 		}
-		bypass = { TRP = { is_exist = no } }
-		x = 1
-		y = 7
+		bypass = { NOT = {country_exists = TRP} }
+		x = 0
+		y = 8
 
 		completion_reward = {
 			give_guarantee = TRP
@@ -1841,7 +1676,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -1855,7 +1690,7 @@ focus_tree = {
 			focus = UCB_fasc_sami
 		}
 		x = 28
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1873,7 +1708,7 @@ focus_tree = {
 			add_stability = 0.08
 		}
 		x = 30
-		y = 6
+		y = 7
 
 	}
 	focus = {
@@ -1884,7 +1719,7 @@ focus_tree = {
 			focus = UCB_fasc_IID_investors
 		}
 		x = 28
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1898,7 +1733,7 @@ focus_tree = {
 			add_timed_idea = { idea = UCB_gov_dotations days = 360 }
 		}
 		x = 30
-		y = 7
+		y = 8
 
 	}
 	focus = {
@@ -1910,7 +1745,7 @@ focus_tree = {
 			focus = UCB_fasc_fsc_trade
 		}
 		x = 29
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1931,7 +1766,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -1952,7 +1787,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -1973,7 +1808,7 @@ focus_tree = {
 			}
 		}
 		x = 29
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -1994,7 +1829,7 @@ focus_tree = {
 			}
 		}
 		x = 31
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -2015,7 +1850,7 @@ focus_tree = {
 			}
 		}
 		x = 31
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -2036,7 +1871,7 @@ focus_tree = {
 			}
 		}
 		x = 31
-		y = 11
+		y = 12
 
 	}
 	focus = {
@@ -2065,7 +1900,7 @@ focus_tree = {
 			}
 		}
 		x = 27
-		y = 9
+		y = 10
 
 	}
 	focus = {
@@ -2094,7 +1929,7 @@ focus_tree = {
 			}
 		}
 		x = 27
-		y = 10
+		y = 11
 
 	}
 	focus = {
@@ -2123,18 +1958,1034 @@ focus_tree = {
 			}
 		}
 		x = 27
-		y = 11
+		y = 12
 
 	}
-	focus = {
-		id = UCB_fasc_podelit
+	
+    focus = {
+        id = UCB_strong_arm
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 45
+        y = 4
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_fasc1
+        }
+        completion_reward = {
+            add_popularity = {ideology = neutrality popularity = 0.05}
+            add_ideas = UCB_parlament_oppos
+        }
+    }
+
+    focus = {
+        id = UCB_fascism_way
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 47
+        y = 5
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_strong_arm
+        }
+        mutually_exclusive = {focus = UCB_neutrality_way}
+        completion_reward = {
+            add_popularity = {ideology = fascism popularity = 0.05}
+            add_popularity = {ideology = neutrality popularity = 0.05}
+        }
+    }
+
+    focus = {
+        id = UCB_neutrality_way
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 55
+        y = 5
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_strong_arm
+        }
+        mutually_exclusive = {focus = UCB_fascism_way}
+        completion_reward = {
+            add_popularity = {ideology = neutrality popularity = 0.1}
+        }
+    }
+
+    focus = {
+        id = UCB_convergation
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 6
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_neutrality_way
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_timed_idea = {idea = UCB_convergation_idea days = 120}
+        }
+    }
+
+    focus = {
+        id = UCB_civilian_nationalism
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 7
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_convergation
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_stability = 0.1
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = UCB_yurescul_speech
+        icon = GFX_goal_unknown
+        cost = 15
+        x = 55
+        y = 8
+        available = {
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_civilian_nationalism
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            country_event = {id = ucbf.9 days = 1}
+        }
+    }
+
+    focus = {
+        id = UCB_trade_islands
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 9
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_yurescul_speech
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_trade_donat
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 10
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_trade_islands
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_trade_didor
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 55
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_trade_donat
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_PMC
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 58
+        y = 9
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_neutrality_way
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = UCB_PMC_idea
+        }
+    }
+
+    focus = {
+        id = UCB_diria_pmc
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 57
+        y = 10
+        available = {
+            any_country = {
+                OR = {
+                    has_idea = DIR_revolt
+                    hidden_trigger = {
+                        has_idea = DIR_revolt2
+                    }
+                }
+            }
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_PMC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_aldeko_pmc
+        icon = GFX_goal_unknown
+        cost = 3
+        x = 59
+        y = 10
+        available = {
+            NOT = {is_in_faction_with = SBU}
+            NOT = {is_in_faction_with = TRB}
+            SBU = {has_war_with = TRB}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_PMC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_sma_pmc
+        icon = GFX_goal_unknown
+        cost = 3
+        x = 58
+        y = 11
+        available = {
+            SMA = {has_war_with = YAN}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_PMC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_pepene_incedent
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 53
+        y = 9
+        available = {
+            country_exists = FSC
+            44 = {owner = {tag = FSC}}
+            45 = {owner = {tag = FSC}}
+            NOT = {has_war_with = FSC}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_yurescul_speech
+        }
+        prerequisite = {focus = UCB_fasc_south_ORB}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            FSC = {country_event = {id = ucbf.3 days = 1} }
+        }
+    }
+
+    focus = {
+        id = UCB_independent_ndro
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 53
+        y = 10
+        available = {
+            has_completed_focus = UCB_parlament_fas6
+            country_exists = ORB
+            ORB = {has_border_war = yes}
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_pepene_incedent
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            hidden_effect = {
+                UCB = {set_country_flag = ACCEPT_EXISTANCE_ORB}    
+                FSC = {country_event = {id = ucbf.7 days = 1}}
+            }
+            set_temp_variable = { temp = ORB }
+            custom_effect_tooltip = ACCEPT_EXISTANCE_tooltip
+        }
+    }
+
+    focus = {
+        id = UCB_support_separs
+        icon = GFX_goal_unknown
+        cost = 1
+        x = 53
+        y = 11
+        available = {ORB = {has_war_with = FSC} has_completed_focus = UCB_PMC}
+        bypass = {
+            OR = {
+                NOT = {country_exists = ORB}
+                NOT = {country_exists = FSC}
+                UCB = {has_war_with = FSC}
+            }
+        }
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_independent_ndro
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 1000
+                target = ORB
+            }
+            swap_ideas = {
+                remove_idea = UCB_PMC_idea
+                add_idea = UCB_PMC_idea2
+            }
+        }
+    }
+
+    focus = {
+        id = UCB_narabel_referendum
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 53
+        y = 12
+        available = {}
+        bypass = {NOT = {country_exists = ORB}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_support_separs
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            ORB = {
+				country_event = { id = orb.43 days = 30 }
+			}
+        }
+    }
+
+    focus = {
+        id = UCB_support_anrax
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 54
+        y = 13
+        available = {
+            44 = {owner = {NOT = {tag = FSC}}}
+            45 = {owner = {NOT = {tag = FSC}}}
+            country_exists = FSC
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_narabel_referendum
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            if = {
+                limit = {FSC = {is_ai = yes}}
+                ANR = {annex_country = {target = FSC transfer_troops = yes}}
+            }
+            else = {
+                ANR = {
+                    transfer_state = 47
+                    transfer_state = 48
+                    transfer_state = 49
+                    transfer_state = 50
+                    transfer_state = 65
+                    transfer_state = 66
+                    add_state_claim = 67
+                    add_state_claim = 64
+                    add_state_claim = 52
+                    add_state_claim = 51
+                    add_state_claim = 46
+                    load_oob = ANR_rebels
+                    add_manpower = 40000
+
+                    declare_war_on = { target = FSC type = annex_everything }
+                    FSC = {
+                        delete_unit = { 
+                            state = 47
+                            state = 48
+                            state = 49
+                            state = 50
+                            state = 65
+                            state = 66
+                            disband = yes
+                        }
+                    }
+                }
+            }
+            set_autonomy = {
+                target = ANR
+                autonomy_state = autonomy_dominion
+                end_wars = no
+                end_civil_wars = no
+            }
+        }
+    }
+
+    focus = {
+        id = UCB_sep_punishment
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 51
+        y = 6
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_fascism_way
+            focus = UCB_neutrality_way
+        }
+        completion_reward = {
+            KIM = {
+                add_to_variable = {
+                    var = UCB.sep_KIM
+                    value = 0.1
+                    tooltip = add_region_separatism_tooltip
+                }
+            }
+            KOL = {
+                add_to_variable = {
+                    var = UCB.sep_KOL
+                    value = 0.1
+                    tooltip = add_region_separatism_tooltip
+                }
+            }
+            remove_ideas = UCB_poroh_blet
+        }
+    }
+
+    focus = {
+		id = UCB_fasc_south_ORB
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = UCB_fasc_war_IID
+			focus = UCB_sep_punishment
 		}
-		x = 35
-		y = 16
+		completion_reward = {
+			add_state_claim = 44
+			add_state_claim = 45
+		}
+		x = 51
+		y = 7
 
 	}
+
+    focus = {
+        id = UCB_reduce_local_power
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 51
+        y = 8
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_fasc_south_ORB
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_assental_pogrom
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 51
+        y = 9
+        available = {has_completed_focus = UCB_parlament_fas6}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_reduce_local_power
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            if = {
+                limit = {TRP = {is_ai = yes}}
+                puppet = TRP
+                send_equipment = {
+                    equipment = infantry_equipment
+                    amount = 350
+                    target = TRP
+                }
+            }
+            else = {
+                create_wargoal = {
+                    target = TRP
+                    type = puppet_wargoal_focus
+                }
+            }
+        }
+    }
+    
+    focus = {
+		id = UCB_fasc_OIK_war
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_assental_pogrom
+		}
+        prerequisite = {
+            focus = UCB_fasc_war_FSC
+        }
+		completion_reward = {
+			UCB = { 
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = OIK
+				}
+			}
+		}
+		x = 50
+		y = 13
+
+	}
+
+    focus = {
+		id = UCB_fasc_OIK_friend_regime
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_assental_pogrom
+		}
+        prerequisite = {focus = UCB_narabel_referendum}
+		x = 52
+		y = 13
+
+	}
+
+    focus = {
+		id = UCB_fascism_support_formations
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fascism_way
+		}
+		completion_reward = {
+            add_power_balance_value = {id = UCB_parlament_balance value = 0.05}
+            add_popularity = {ideology = fascism popularity = 0.1}
+            add_popularity = {ideology = neutrality popularity = 0.1}
+		}
+		x = 47
+		y = 6
+
+	}
+
+    focus = {
+		id = UCB_fasc_form_needings
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fascism_support_formations
+		}
+        prerequisite = {focus = UCB_parlament_fas5}
+		completion_reward = {
+            every_possible_country = {
+                #array = minor_countries
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.1 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            }
+		}
+		x = 45
+		y = 9
+
+	}
+
+    focus = {
+		id = UCB_destroy_dem
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fascism_support_formations
+		}
+		completion_reward = {
+            add_popularity = {ideology = democratic popularity = -0.15}
+            set_politics = {ruling_party = neutrality}
+            promote_character = {character = UCB_terine_narabel ideology = conservatism}
+		}
+		x = 47
+		y = 7
+
+	}
+
+    focus = {
+		id = UCB_fasc_united_caratenia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_destroy_dem
+		}
+		completion_reward = {
+			country_event = { id = ucbf.1 days = 1 }
+		}
+		x = 47
+		y = 8
+
+	}
+
+    focus = {
+		id = UCB_fasc_unitarian
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fasc_united_caratenia
+		}
+		completion_reward = {
+		}
+		x = 47
+		y = 9
+
+	}
+
+    focus = {
+		id = UCB_annex_EGR
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fasc_unitarian
+		}
+		completion_reward = {
+			annex_country = {
+				target = EGR
+				transfer_troops = yes
+			}
+			35 = { add_core_of = UCB }
+		}
+		x = 47
+		y = 10
+
+	}
+
+    focus = {
+		id = UCB_fasc_irtazlin_speech
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fasc_unitarian
+		}
+        prerequisite = {
+            focus = UCB_parlament_fas8
+            focus = UCB_parlament_fas7
+        }
+        prerequisite = {focus = UCB_fasc_south_ORB}
+		completion_reward = {
+            country_event = {id = ucbf.6 days = 1}
+		}
+		x = 49
+		y = 11
+
+	}
+
+    focus = {
+		id = UCB_fasc_war_FSC
+		icon = GFX_goal_unknown
+		cost = 10
+        available = {has_completed_focus = UCB_parlament_fas8}
+		prerequisite = {
+			focus = UCB_fasc_irtazlin_speech
+		}
+		completion_reward = {
+            create_wargoal = {
+                target = FSC
+                type = annex_everything
+            }
+		}
+		x = 49
+		y = 12
+
+	}
+
+    focus = {
+		id = UCB_fasc_vroin
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fasc_war_FSC
+		}
+		completion_reward = {
+			VRO = { country_event = { id = vro.3 days = 1 } }
+		}
+		x = 49
+		y = 14
+
+	}
+    
+    focus = {
+		id = UCB_fasc_war_IID_
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = UCB_fasc_war_FSC
+		}
+		completion_reward = {
+			UCB = { 
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = IID
+				}
+			}
+		}
+		x = 48
+		y = 13
+
+	}
+
+    focus = {
+        id = UCB_parlament_fas
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 43
+        y = 5
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_strong_arm
+        }
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+    
+    focus = {
+        id = UCB_parlament_fas2
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 43
+        y = 6
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_parlament_fas
+        }
+        completion_reward = {
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                set_temp_variable = {temp = 0.1}
+                boost_region_fas = yes
+            }
+        }
+    }
+    
+    focus = {
+        id = UCB_parlament_fas3
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 43
+        y = 7
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_parlament_fas2
+        }
+        completion_reward = {
+            set_country_flag = change_ideologies_off
+            custom_effect_tooltip = change_ideologies_off_tooltip
+        }
+    }
+
+    focus = {
+        id = UCB_parlament_fas4
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 41
+        y = 8
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_parlament_fas3
+        }
+        mutually_exclusive = {focus = UCB_parlament_fas5}
+        completion_reward = {
+            add_power_balance_value = {id = UCB_parlament_balance value = 0.3}
+            add_stability = -0.2
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                add_to_variable = {var = UCB.oppos_@THIS value = -0.2 tooltip = add_region_opposition_tooltip}
+                clamp_variable = {var = UCB.oppos_@THIS min = 0}
+            }
+        }
+    }
+
+    focus = {
+        id = UCB_parlament_fas5
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 43
+        y = 8
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_parlament_fas3
+        }
+        mutually_exclusive = {focus = UCB_parlament_fas4}
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = UCB_parlament_oppos
+                add_idea = UCB_parlament_oppos2
+            }
+        }
+    }
+
+    focus = {
+        id = UCB_parlament_fas6
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 43
+        y = 9
+        available = {
+            power_balance_value = {
+                id = UCB_parlament_balance
+                value > 0.6
+            }
+        }
+        bypass = {}
+        prerequisite = {
+            focus = UCB_parlament_fas4
+            focus = UCB_parlament_fas5
+        }
+        completion_reward = {
+            add_power_balance_value = {id = UCB_parlament_balance value = 0.3}
+        }
+    }
+
+    focus = {
+        id = UCB_parlament_fas7
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 43
+        y = 10
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_parlament_fas6
+        }
+        mutually_exclusive = {
+            focus = UCB_parlament_fas8
+            focus = UCB_parlament_fas9
+        }
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_find_defence
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 43
+        y = 12
+        available = {EIK = {is_faction_leader = yes}}
+        bypass = {NOT = {country_exists = EIK}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_parlament_fas7
+        }
+        prerequisite = {focus = UCB_fasc_irtazlin_speech}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            EIK = {country_event = {id = ucbf.10 days = 1}}
+        }
+    }
+
+    focus = {
+        id = UCB_hell_arrows
+        icon = GFX_goal_unknown
+        cost = 15
+        x = 43
+        y = 13
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_find_defence
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_building_construction = {
+                type = nuclear_reactor
+                level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = nuclear_rocket_site
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    focus = {
+        id = UCB_parlament_fas8
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 45
+        y = 10
+        available = {}
+        bypass = {has_completed_focus = UCB_parlament_fas7}
+        prerequisite = {
+            focus = UCB_parlament_fas6
+        }
+        prerequisite = {focus = UCB_fasc_form_needings}
+        mutually_exclusive = {
+            focus = UCB_parlament_fas7
+            focus = UCB_parlament_fas9
+        }
+        completion_reward = {
+            remove_power_balance = {id = UCB_parlament_balance}
+            set_country_flag = closed_parlament
+        }
+    }
+
+    focus = {
+        id = UCB_parlament_fas9
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 41
+        y = 10
+        available = {}
+        bypass = {}
+        prerequisite = {
+            focus = UCB_parlament_fas6
+        }
+        mutually_exclusive = {
+            focus = UCB_parlament_fas8
+            focus = UCB_parlament_fas7
+        }
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = UCB_narabel_etredia
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 41
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_parlament_fas9
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            complete_national_focus = UCB_dem_sbu
+        }
+    }
 }

@@ -99,13 +99,13 @@ recruit_character = UCB_karl_larhson
 
 recruit_character = UCB_anna_helshten
 
-recruit_character = UCB_terine_narabel
-
 recruit_character = UCB_dmirin_randerko
 
 recruit_character = UCB_anatoly_zhmirinovan
 
 recruit_character = UCB_Parlament
+
+recruit_character = UCB_terine_narabel
 
 recruit_character = UCB_oleje_prigat
 

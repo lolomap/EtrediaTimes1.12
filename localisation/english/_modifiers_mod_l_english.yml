@@ -9,7 +9,7 @@
  IID_pressureTRP:0 "Pressure from the END"
 
  war_tire_value:0 "[?wtire|0]"
- war_tire_desc:0 "§War Fatigue§!\n"
+ war_tire_desc:0 "§HWar Fatigue§!\n"
  war_tire_effect:0 "War fatigue\nLegitimacy: [?wtire_stability|%+0]\nWarfare: [?wtire_warsup|%+0]\nAttack Division: [?wtire_attack|%+0]nDivision Defense: [?wtire_deffence|%+0]nDivision Recovery Rate: [?wtire_restore|%+0]nDivision training speed: [?wtire_mobolize|%+0]"
  
  

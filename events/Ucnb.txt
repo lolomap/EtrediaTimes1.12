@@ -11,6 +11,8 @@ country_event = {
 	option = {
 	name = ucnb.1.a 
 		UCB = { add_ideas = UCB_resist }
+        
+        promote_character = UCB_anatoly_zhmirinovan
 		hidden_effect = {news_event = {id = newss.30 days = 1}}
 		ai_chance = { 
 			factor = 70	
@@ -40,13 +42,16 @@ country_event = {
 	    trigger = {
 		NOT = { has_global_flag = ucb_narabel_not_in_elections }
 		}
-        set_politics = {
-            ruling_party = fascism
-        }
-        add_popularity = {
-			ideology = fascism
-			popularity = 0.3
-        }
+        #set_politics = {
+        #    ruling_party = fascism
+        #}
+        #add_popularity = {
+		#	ideology = fascism
+		#	popularity = 0.3
+        #}
+
+        promote_character = {character = UCB_terine_narabel ideology = centrism}
+
 	    ai_chance = { 
 			factor = 30 
             modifier = {
@@ -737,4 +742,92 @@ country_event = {
 			factor = 0.2
 		}
 	}
+}
+
+country_event = {
+    id = ucnb.30
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+
+        set_temp_variable = {ych = 0}
+
+        if = {
+            limit = {check_variable = {UCB.oppos_@THIS < 0.2}}
+            add_to_temp_array = {a70 = THIS}
+        }
+        else_if = {
+            limit = {check_variable = {UCB.oppos_@THIS < 0.4}}
+            add_to_temp_array = {a50 = THIS}
+        }
+        else_if = {
+            limit = {check_variable = {UCB.oppos_@THIS < 0.5}}
+            add_to_temp_array = {a25 = THIS}
+        }
+            
+            random_list = {
+                1 = {
+                    random_scope_in_array = {array = a70 set_variable = {UCB.region_event = THIS}}
+                    set_temp_variable = {ych = 70}
+                    set_temp_variable = { adych = a70^num }
+                    multiply_temp_variable = { adych = 0.08 }
+                    #multiply_temp_variable = { ych = adych }
+                }
+                1 = {
+                    random_scope_in_array = {array = a50 set_variable = {UCB.region_event = THIS}}
+                    set_temp_variable = {ych = 50}
+                    set_temp_variable = { adych = a50^num }
+                    multiply_temp_variable = { adych = 0.08 }
+                    #multiply_temp_variable = { ych = adych }
+                }
+                1= {
+                    random_scope_in_array = {array = a25 set_variable = {UCB.region_event = THIS}}
+                    set_temp_variable = {ych = 25}
+                    set_temp_variable = { adych = a25^num }
+                    multiply_temp_variable = { adych = 0.08 }
+                    #multiply_temp_variable = { ych = adych }
+                }
+            }
+            
+            multiply_temp_variable = {ych = region_event_factor}
+            #log = "[?ych]"
+            random = {
+                chance = var:ych
+
+                random_list = {
+                    1 = {  #ивент по закону
+                        region_event_change_law = yes
+                        country_event = ucnb.27
+                    }
+                    0 = {set_variable = {region_event_type = 1}} #ивент по коррупции
+                    0 = {set_variable = {region_event_type = 2}} #ивент по балансу
+                    0 = {set_variable = {region_event_type = 3}} #ивент по советнику
+                    0 = {set_variable = {region_event_type = 4}} #ивент по торговле
+                    0 = {set_variable = {region_event_type = 5}} #ивент по напряженности
+                }
+
+            }
+
+            
+        }
+
+    }
+}
+
+country_event = {
+    id = ucnb.31
+    title = ucnb.31.t
+    desc = ucnb.31.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=ucnb.31.a
+        promote_character = {character = UCB_parlament}
+        add_stability = 0.08
+    }
 }
