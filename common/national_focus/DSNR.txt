@@ -30,8 +30,8 @@ focus_tree = {
 		x = 10
 		y = 1
 		completion_reward = {
-			add_state_core = 825
-			add_state_core = 824
+			add_state_core = 789
+			add_state_core = 790
 			load_oob = DSNR_bae
 		}
     }
@@ -56,14 +56,14 @@ focus_tree = {
 		}
 		available = {
 			262 = { is_controlled_by = DIB }
-			825 = { is_controlled_by = DIB }
+			790 = { is_controlled_by = DIB }
 		}
 		cost = 10
 		x = 10
 		y = 3
 		completion_reward = {
 			DIR = {
-				remove_state_core = 825
+				remove_state_core = 790
 				remove_state_core = 262
 			}
 			add_stablity = 0.15
