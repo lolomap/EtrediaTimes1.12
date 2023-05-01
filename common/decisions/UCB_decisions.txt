@@ -42,54 +42,37 @@ UCB_subj_integration = {
 	}
 }
 UCB_bop_category = {
-    UCB_boost_ideology = {
-        cost = 30
-        fixed_random_seed = no
-        days_remove = 30
-        modifier = {
-            power_balance_daily = 0.001
-        }
-        remove_effect = {
-            UCB = {
-                random_scope_in_array = {
-                    array = minor_countries
-                    set_temp_variable = {temp = 0.15}
-                    boost_region_dem = yes
-                }
-            }
-        }
-    }
+    #UCB_boost_ideology = {
+    #    cost = 30
+    #    fixed_random_seed = no
+    #    days_remove = 30
+    #    modifier = {
+    #        power_balance_daily = 0.001
+    #    }
+    #    remove_effect = {
+    #        UCB = {
+    #            random_scope_in_array = {
+    #                array = minor_countries
+    #                set_temp_variable = {temp = 0.15}
+    #                boost_region_dem = yes
+    #            }
+    #        }
+    #    }
+    #}
     UCB_support_vote_company = {
-        cost = 50
+        cost = 25
         fixed_random_seed = no
         days_remove = 7
         modifier = {
             power_balance_daily = -0.007
         }
+        visible = {has_government = democratic}
 
         remove_effect = {
             UCB = {
-                random_scope_in_array = {
-                    array = minor_countries
-                    set_temp_variable = {prev_c = THIS}
-                    set_temp_variable = {temp = 0.1}
-                    boost_region_dem = yes
-                }
-                random_scope_in_array = {
-                    array = minor_countries
-                    limit = {
-                        NOT = {tag = var:prev_c}
-                    }
-                    set_temp_variable = {prev_c = THIS}
-                    set_temp_variable = {temp = 0.1}
-                    boost_region_dem = yes
-                }
-                random_scope_in_array = {
-                    array = minor_countries
-                    limit = {
-                        NOT = {tag = var:prev_c}
-                    }
-                    set_temp_variable = {temp = 0.1}
+                every_possible_country = {
+                    limit = {is_in_array = {UCB.minor_countries = THIS}}
+                    set_temp_variable = {temp = 0.05}
                     boost_region_dem = yes
                 }
             }
@@ -97,11 +80,10 @@ UCB_bop_category = {
     }
 
     UCB_support_citizens = {
-        cost = 50
+        cost = 25
 
         complete_effect = {
             every_possible_country = {
-                #array = minor_countries
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
                 add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.oppos_@THIS max = 1}
@@ -110,39 +92,38 @@ UCB_bop_category = {
     }
 
     UCB_visit_regions = {
-        cost = 25
+        cost = 20
         fixed_random_seed = no
 
         complete_effect = {
-            random_scope_in_array = {
-                array = minor_countries
-                set_temp_variable = {prev_c = THIS}
-                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.03 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.oppos_@THIS max = 1}
+                add_to_variable = {var = UCB.sep_@THIS value = -0.03 tooltip = add_region_separatism_tooltip}
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
             }
-            random_scope_in_array = {
-                array = minor_countries
-                limit = {
-                    NOT = {tag = var:prev_c}
-                }
-                set_temp_variable = {prev_c = THIS}
-                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
-                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+        }
+    }
+
+    UCB_press_regions = {
+        cost = 50
+
+        complete_effect = {
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS}}
+                add_to_variable = {var = UCB.sep_@THIS value = -0.05 tooltip = add_region_separatism_tooltip}
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
             }
-            random_scope_in_array = {
-                array = minor_countries
-                limit = {
-                    NOT = {tag = var:prev_c}
-                }
-                set_temp_variable = {prev_c = THIS}
-                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
-                clamp_variable = {var = UCB.oppos_@THIS max = 1}
+            add_power_balance_value = {
+                id = UCB_parlament_balance
+                value = 0.1
             }
         }
     }
 
     UCB_extend_parlament = {
-        cost = 50
+        cost = 25
 
         complete_effect = {
             add_power_balance_value = {id = UCB_parlament_balance value = -0.05}
@@ -151,7 +132,7 @@ UCB_bop_category = {
     }
 
     UCB_support_olig = {
-        cost = 100
+        cost = 50
 
         days_remove = 30
         modifier = {
@@ -219,7 +200,7 @@ UCB_bop_category = {
     }
 
     UCB_extra_voting = {
-        cost = 100
+        cost = 75
         fixed_random_seed = no
 
         complete_effect = {
@@ -274,11 +255,13 @@ UCB_bop_category = {
             }
 
             random_scope_in_array = {
-                set_temp_variable = {prev_c = THIS
+                array = minor_countries
+                set_temp_variable = {prev_c = THIS}
                 add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
             random_scope_in_array = {
+                array = minor_countries
                 limit = {
                     NOT = {tag = var:prev_c}
                 }
@@ -287,6 +270,7 @@ UCB_bop_category = {
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
             random_scope_in_array = {
+                array = minor_countries
                 limit = {
                     NOT = {tag = var:prev_c}
                 }

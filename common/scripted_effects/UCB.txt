@@ -84,7 +84,7 @@ boost_region_fas = {
         }
     }
     else = {
-        subtract_from_variable = {UCB.fas_@THIS = to_reduce}
+        subtract_from_variable = {UCB.dem_@THIS = to_reduce}
     }
 
     calc_max_ideology = yes
@@ -117,7 +117,7 @@ boost_region_neu = {
                 }
             }
             else = {
-                subtract_from_variable = {UCB.neu_@THIS = to_reduce}
+                subtract_from_variable = {UCB.dem_@THIS = to_reduce}
             }
         }
         else = {
@@ -162,7 +162,7 @@ boost_region_com = {
             }
         }
         else = {
-            subtract_from_variable = {UCB.com_@THIS = to_reduce}
+            subtract_from_variable = {UCB.dem_@THIS = to_reduce}
         }
     }
     else = {
@@ -195,7 +195,7 @@ boost_region_mon = {
                     set_variable = {UCB.dem_@THIS = 0}
                 }
                 else = {
-                    subtract_from_variable = {UCB.mon_@THIS = to_reduce}
+                    subtract_from_variable = {UCB.dem_@THIS = to_reduce}
                 }
             }
             else = {

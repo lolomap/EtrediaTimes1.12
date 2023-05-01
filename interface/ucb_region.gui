@@ -120,6 +120,7 @@ guiTypes = {
             buttonFont = hoi_18mbs
             position = {x = 440 y = 70}
             pdx_tooltip = ucb_sep_btn2_loc
+            pdx_tooltip_delayed = ucb_sep_btn2_delay
         }
         buttonType = {
             name = "sep_btn3"
@@ -128,6 +129,7 @@ guiTypes = {
             buttonFont = hoi_18mbs
             position = {x = 490 y = 20}
             pdx_tooltip = ucb_sep_btn3_loc
+            pdx_tooltip_delayed = ucb_sep_btn3_delay
         }
         buttonType = {
             name = "sep_btn4"
@@ -136,6 +138,7 @@ guiTypes = {
             buttonFont = hoi_18mbs
             position = {x = 490 y = 70}
             pdx_tooltip = ucb_sep_btn4_loc
+            pdx_tooltip_delayed = ucb_sep_btn4_delay
         }
     }
 

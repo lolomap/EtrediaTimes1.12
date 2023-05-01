@@ -803,7 +803,7 @@ country_event = {
             random_list = {
                 1 = {  #ивент по закону
                     region_event_change_law = yes
-                    region_eventcountry_event = ucnb.27
+                    country_event = ucnb.27
                 }
                 0 = {set_variable = {region_event_type = 1}} #ивент по коррупции
                 0 = {set_variable = {region_event_type = 2}} #ивент по балансу

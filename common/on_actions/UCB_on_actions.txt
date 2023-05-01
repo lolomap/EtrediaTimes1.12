@@ -219,6 +219,17 @@ on_actions = {
                     }
                     if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.07}}
                     if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.01}}
+
+                    clamp_variable = {
+                        var = UCB.sep_@THIS
+                        min = 0
+                        max = 1
+                    }
+                    clamp_variable = {
+                        var = UCB.oppos_@THIS
+                        min = 0
+                        max = 1
+                    }
                 }
 
                 country_event = {id = ucnb.30 days = 10}
