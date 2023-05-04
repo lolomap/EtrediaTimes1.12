@@ -1,4 +1,43 @@
 scripted_gui = {
+    extra_alerts = {
+        window_name = "extra_alerts_window"
+        context_type = player_context
+        parent_window_token = top_bar
+        visible = {always = yes}
+
+        effects = {
+            modalert_btn_click = {
+                remove_from_array = {
+                    array = modalerts
+                    index = i
+                }
+                remove_from_array = {
+                    array = modalerts_data
+                    index = i
+                }
+            }
+        }
+
+        dynamic_lists = {
+			modalerts_gb = {
+				array = ROOT.modalerts
+				entry_container = modalert_window
+                value = v
+                index = i
+				#change_scope = yes
+			}
+		}
+
+        properties = {
+            modalert_btn = {
+				frame = v
+			}
+        }
+    }
+    #extra_alerts_entry = {
+    #    window_name = "modalert_window"
+    #}
+
 	extra_topbar = {
 		window_name = "extra_topbar_window"
 		context_type = player_context

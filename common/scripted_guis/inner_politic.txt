@@ -110,7 +110,17 @@ scripted_gui = {
 		}
 
 		triggers = {
+            sep_btn1_click_enabled = {
+                UCB = {has_political_power > 14}
+            }
+            sep_btn2_click_enabled = {
+                UCB = {has_political_power > 14}
+            }
+            sep_btn3_click_enabled = {
+                UCB = {command_power > 4}
+            }
             sep_btn4_click_enabled = {
+                UCB = {command_power > 4}
                 check_variable = { UCB.sep_@THIS > 0.6 }
             }
 		}

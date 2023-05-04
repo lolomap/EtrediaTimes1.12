@@ -4,6 +4,55 @@ defined_text = {
 }
 
 defined_text = {
+    name = UCB_parlament_sl
+    text = {
+        trigger = {
+            UCB = {has_government = fascism}
+        }
+        localization_key = UCB_parlament_fas
+    }
+    text = {
+        trigger = {
+            UCB = {has_government = communism}
+        }
+        localization_key = UCB_parlament_com
+    }
+    text = {
+        trigger = {
+            UCB = {has_government = monarchism}
+        }
+        localization_key = UCB_parlament_mon
+    }
+    text = {
+        trigger = {
+            UCB = {
+                OR = {
+                    has_government = democratic
+                    has_government = neutrality
+                }
+            }
+        }
+        localization_key = UCB_parlament_dem
+    }
+}
+
+defined_text = {
+    name = modalert_sl
+    text = {
+        trigger = {
+            check_variable = {Root.modalerts^i = 1}
+        }
+        localization_key = modalert_polform_tt
+    }
+    text = {
+        trigger = {
+            check_variable = {Root.modalerts^i = 2}
+        }
+        localization_key = modalert_sep_tt
+    }
+}
+
+defined_text = {
     name = region_ideology
     text = {
         trigger = {check_variable = {UCB.max_i_@THIS = 1}}

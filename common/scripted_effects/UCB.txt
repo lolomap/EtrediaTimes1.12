@@ -10,6 +10,7 @@ debuff_region_dem = {
 
 boost_region_dem = {
     add_to_variable = {var = UCB.dem_@THIS value = temp tooltip = add_region_democratic_tooltip}
+    clamp_variable = { var = UCB.dem_@THIS max = 1 }
     set_temp_variable = {to_reduce = temp}
     if = {
         limit = {check_variable = {UCB.fas_@THIS < to_reduce}}
@@ -51,6 +52,7 @@ boost_region_dem = {
 
 boost_region_fas = {
     add_to_variable = {var = UCB.fas_@THIS value = temp tooltip = add_region_fascism_tooltip}
+    clamp_variable = { var = UCB.fas_@THIS max = 1 }
     set_temp_variable = {to_reduce = temp}
     if = {
         limit = {check_variable = {UCB.dem_@THIS < to_reduce}}
@@ -92,6 +94,7 @@ boost_region_fas = {
 
 boost_region_neu = {
     add_to_variable = {var = UCB.neu_@THIS value = temp tooltip = add_region_neutrality_tooltip}
+    clamp_variable = { var = UCB.neu@THIS max = 1 }
     set_temp_variable = {to_reduce = temp}
     if = {
         limit = {check_variable = {UCB.fas_@THIS < to_reduce}}
@@ -133,6 +136,7 @@ boost_region_neu = {
 
 boost_region_com = {
     add_to_variable = {var = UCB.com_@THIS value = temp tooltip = add_region_communism_tooltip}
+    clamp_variable = { var = UCB.com_@THIS max = 1 }
     set_temp_variable = {to_reduce = temp}
     if = {
         limit = {check_variable = {UCB.fas_@THIS < to_reduce}}
@@ -174,6 +178,7 @@ boost_region_com = {
 
 boost_region_mon = {
     add_to_variable = {var = UCB.mon_@THIS value = temp tooltip = add_region_monarchism_tooltip}
+    clamp_variable = { var = UCB.mon_@THIS max = 1 }
     set_temp_variable = {to_reduce = temp}
     if = {
         limit = {check_variable = {UCB.fas_@THIS < to_reduce}}

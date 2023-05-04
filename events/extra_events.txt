@@ -1864,6 +1864,28 @@ country_event = {
     }
 }
 
+country_event = {
+    id = onactev.15
+    title = onactev.15.t
+    desc = onactev.15.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+    hidden = yes
+
+    #trigger = {}
+
+    immediate = {
+        remove_from_array = {modalert = 1}   
+    }
+
+    option = {
+        name=onactev.15.a
+        
+    }
+}
+
 
 country_event = {
 	id = randev.11

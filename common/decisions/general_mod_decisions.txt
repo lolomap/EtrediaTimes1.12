@@ -256,7 +256,10 @@ political_actions = {
         }
 
         remove_effect = {
+            add_to_array = { modalerts = 1 }
+            add_to_array = { modalerts_data = 0 }
             set_country_flag = {flag = politform_change_available value = 1 days = 30}
+            country_event = {id = onactev.15 days = 30}
         }
     }
 
