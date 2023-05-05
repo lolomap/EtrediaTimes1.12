@@ -1009,6 +1009,7 @@ focus_tree = {
 		cost = 10
 		bypass = {
 			31 = { is_controlled_by = FSC }
+            has_country_flag = failed_orb
 		}
 		cancel_if_invalid = yes
         prerequisite = {
@@ -1029,10 +1030,12 @@ focus_tree = {
 		cost = 10
 		bypass = {
 			31 = { is_controlled_by = FSC }
+            has_country_flag = failed_orb
 		}
 		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_agreement_of_free_borders
+            
 		}
 		completion_reward = {
 			FSC = { remove_ideas = { FSC_divided_ortostan }}

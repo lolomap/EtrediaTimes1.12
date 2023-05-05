@@ -58,11 +58,14 @@ focus_tree = {
 		x = 3
 		y = 8
 
+        available = {FSC = {has_completed_focus = FSC_Alende_group}}
+
         bypass = {
             OR = {
                 has_war_with = FSC
                 NOT = {country_exists = FSC}
                 country_exists = ORB
+                FSC = {is_subject = yes}
             }
         }
 
@@ -2291,7 +2294,7 @@ focus_tree = {
         completion_reward = {
             hidden_effect = {
                 UCB = {set_country_flag = ACCEPT_EXISTANCE_ORB}    
-                FSC = {country_event = {id = ucbf.7 days = 1}}
+                FSC = {country_event = {id = ucbf.8 days = 1}}
             }
             set_temp_variable = { temp = ORB }
             custom_effect_tooltip = ACCEPT_EXISTANCE_tooltip
