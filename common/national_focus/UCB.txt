@@ -58,11 +58,14 @@ focus_tree = {
 		x = 3
 		y = 8
 
+        available = {FSC = {has_completed_focus = FSC_Alende_group}}
+
         bypass = {
             OR = {
                 has_war_with = FSC
                 NOT = {country_exists = FSC}
                 country_exists = ORB
+                FSC = {is_subject = yes}
             }
         }
 
@@ -2291,7 +2294,7 @@ focus_tree = {
         completion_reward = {
             hidden_effect = {
                 UCB = {set_country_flag = ACCEPT_EXISTANCE_ORB}    
-                FSC = {country_event = {id = ucbf.7 days = 1}}
+                FSC = {country_event = {id = ucbf.8 days = 1}}
             }
             set_temp_variable = { temp = ORB }
             custom_effect_tooltip = ACCEPT_EXISTANCE_tooltip
@@ -2802,7 +2805,7 @@ focus_tree = {
         }
         mutually_exclusive = {focus = UCB_parlament_fas5}
         completion_reward = {
-            add_power_balance_value = {id = UCB_parlament_balance value = 0.3}
+            add_power_balance_value = {id = UCB_parlament_balance value = 0.5}
             add_stability = -0.2
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
@@ -2850,7 +2853,15 @@ focus_tree = {
             focus = UCB_parlament_fas5
         }
         completion_reward = {
-            add_power_balance_value = {id = UCB_parlament_balance value = 0.3}
+            add_power_balance_value = {id = UCB_parlament_balance value = 0.05}
+            if = {
+                limit = {has_idea = UCB_parlament_oppos}
+                remove_ideas = UCB_parlament_oppos
+            }
+            else_if = {
+                limit = {has_idea = UCB_parlament_oppos2}
+                remove_ideas = UCB_parlament_oppos2
+            }
         }
     }
 
@@ -2870,7 +2881,7 @@ focus_tree = {
             focus = UCB_parlament_fas9
         }
         completion_reward = {
-            
+            add_political_power = 150
         }
     }
 
@@ -2964,7 +2975,7 @@ focus_tree = {
             focus = UCB_parlament_fas7
         }
         completion_reward = {
-            
+            add_stability = 0.1
         }
     }
 

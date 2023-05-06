@@ -7,4 +7,9 @@ spriteTypes = {
 		name = "GFX_war_tire_icon"
 		texturefile = "gfx/interface/custom_gui/war_tire_icon.dds"
 	}
+    SpriteType = {
+		name = "GFX_mod_alert_icons"
+		texturefile = "gfx/interface/custom_gui/mod_alert_icons.dds"
+        noOfFrames=5
+	}
 }

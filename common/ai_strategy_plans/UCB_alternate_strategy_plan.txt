@@ -44,8 +44,7 @@ UCB_fascist_plan = {
 
 	ai_national_focuses = {
 		UCB_fasc1
-        UCB_fasc_IID_investors
-        UCB_OIK_friend
+        UCB_fascism_way
 	}
 
 

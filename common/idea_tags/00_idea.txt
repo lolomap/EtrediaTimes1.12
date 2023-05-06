@@ -47,8 +47,8 @@ idea_categories = {
     government_2 = {
         slot = social_economy
         slot = security_forces
-        character_slot = min_vd
-        character_slot = min_o
+        #character_slot = min_vd
+        #character_slot = min_o
 
         cost = 150
         removal_cost = 0

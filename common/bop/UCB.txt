@@ -107,11 +107,24 @@ UCB_parlament_balance = {
             id = UCB_president_total_range
 			min = 0.9
 			max = 1
+            modifier = {
+                send_volunteers_tension = 0.05
+            }
+            on_activate = {
+                set_variable = {
+                    var = region_event_factor
+                    value = 0
+                    tooltip = change_region_event_factor_tooltip
+                }
+            }
         }
 		range = {
             id = UCB_president_mid_range
 			min = 0.5
 			max = 0.9
+            modifier = {
+                send_volunteers_tension = 0.05
+            }
             on_activate = {
                 set_variable = {
                     var = region_event_factor

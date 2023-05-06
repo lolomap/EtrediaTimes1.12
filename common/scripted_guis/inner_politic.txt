@@ -33,9 +33,96 @@ scripted_gui = {
             ip_winmode_button_click = {
                 clr_country_flag = inner_politic_window_opened
             }
+
+            sep_btn1_click = {
+                UCB = {add_political_power = -15}
+
+                add_to_variable = { UCB.sep_@THIS = -0.08 }
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+            }
+            sep_btn2_click = {
+                UCB = {add_political_power = -15}
+
+                add_to_variable = { UCB.sep_@THIS = -0.15 }
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+
+                random_scope_in_array = {
+                    array = minor_countries
+                    set_temp_variable = {prev_c = THIS
+                    add_to_variable = { UCB.sep_@THIS = 0.03 }
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {prev_c = THIS}
+                    add_to_variable = { UCB.sep_@THIS = 0.03 }
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    array = minor_countries
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {prev_c = THIS}
+                    add_to_variable = { UCB.sep_@THIS = 0.03 }
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {prev_c = THIS}
+                    add_to_variable = { UCB.sep_@THIS = 0.03 }
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+                random_scope_in_array = {
+                    limit = {
+                        NOT = {tag = var:prev_c}
+                    }
+                    set_temp_variable = {prev_c = THIS}
+                    add_to_variable = { UCB.sep_@THIS = 0.03 }
+                    clamp_variable = {var = UCB.sep_@THIS max = 1}
+                }
+            }
+            sep_btn3_click = {
+                UCB = {add_command_power = -5}
+
+                add_to_variable = { UCB.sep_@THIS = -0.1 }
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
+                set_temp_variable = {temp = 0.15}
+                boost_region_fas = yes
+            }
+            sep_btn4_click = {
+                UCB = {add_command_power = -5}
+
+                random_list = {
+                    50 = {
+                        add_to_variable = { UCB.sep_@THIS = -0.25 }
+                        clamp_variable = {var = UCB.sep_@THIS min = 0}
+                    }
+                    50 = {}
+                }
+            }
+
 		}
 
 		triggers = {
+            sep_btn1_click_enabled = {
+                UCB = {has_political_power > 14}
+            }
+            sep_btn2_click_enabled = {
+                UCB = {has_political_power > 14}
+            }
+            sep_btn3_click_enabled = {
+                UCB = {command_power > 4}
+            }
+            sep_btn4_click_enabled = {
+                UCB = {command_power > 4}
+                check_variable = { UCB.sep_@THIS > 0.6 }
+            }
 		}
 
         properties = {

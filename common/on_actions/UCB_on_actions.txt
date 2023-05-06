@@ -117,36 +117,68 @@ on_actions = {
 
 			for_each_scope_loop = {
 				array = minor_countries
+
+                set_temp_variable = { temp = UCB.region_ideology_factor }
 				UCB = {
 					if = {
 						limit = {check_variable = {max_i_@PREV = 0}}
-						add_to_variable = {ucb_reg_dem = region_ideology_factor}
+						if = {
+                            limit = {has_government = democratic}
+                            multiply_temp_variable = { temp = 0.5 }
+                        }
+                        add_to_variable = {ucb_reg_dem = temp}
 					}
                     else_if = {
 						limit = {check_variable = {max_i_@PREV = 1}}
-						add_to_variable = {ucb_reg_fas = region_ideology_factor}
+                        if = {
+                            limit = {has_government = fascism}
+                            multiply_temp_variable = { temp = 0.5 }
+                        }
+						add_to_variable = {ucb_reg_fas = temp}
 					}
                     else_if = {
 						limit = {check_variable = {max_i_@PREV = 2}}
-						add_to_variable = {ucb_reg_com = region_ideology_factor}
+                        if = {
+                            limit = {has_government = communism}
+                            multiply_temp_variable = { temp = 0.5 }
+                        }
+						add_to_variable = {ucb_reg_com = temp}
 					}
                     else_if = {
 						limit = {check_variable = {max_i_@PREV = 3}}
-						add_to_variable = {ucb_reg_neu = region_ideology_factor}
+                        if = {
+                            limit = {has_government = neutrality}
+                            multiply_temp_variable = { temp = 0.5 }
+                        }
+						add_to_variable = {ucb_reg_neu = temp}
 					}
                     else = {
-						add_to_variable = {ucb_reg_mon = region_ideology_factor}
+                    if = {
+                            limit = {has_government = monarchism}
+                            multiply_temp_variable = { temp = 0.5 }
+                        }
+						add_to_variable = {ucb_reg_mon = temp}
 					}
 				}
 
-
+                if = {
+                    limit = {check_variable = {UCB.sep_@THIS > 0.75}}
+                    if = {
+                        limit = {NOT = {is_in_array = {UCB.modalerts_data = THIS}}}
+                        add_to_array = { UCB.modalerts = 2 }
+                        add_to_array = { UCB.modalerts_data = THIS }
+                    }
+                }
+                #else = {
+                #    remove_from_array = {UCB.modalerts = 2}
+                #}
                 if = {
                     limit = {check_variable = {UCB.sep_@THIS > 0.6}}
                     set_country_flag = sep_sep
                     every_state = {
                         limit = {is_core_of = PREV}
                         force_enable_resistance = UCB
-                        start_resistance = UCB
+                        start_resistance = PREV
                     }
                 }
                 else_if = {
@@ -155,30 +187,14 @@ on_actions = {
                     every_state = {
                         limit = {is_core_of = PREV}
                         force_disable_resistance = UCB
-                        cancel_resistance = UCB
+                        cancel_resistance = PREV
                     }
                 }
                 if = {
-                    limit = {check_variable = {UCB.sep_@THIS > 0.9}}
+                    limit = {check_variable = {UCB.sep_@THIS > 0.98}}
                     UCB = {
                         set_variable = {country_to_release = PREV}
                         country_event = {id = onactev.13 days = 1}
-                    }
-                }
-                if = {
-                    limit = {has_idea = UCB_poroh_blet}
-                    random_scope_in_array = {
-                        array = minor_countries
-                        add_to_variable = {UCB.sep_@THIS = 0.05}
-                        clamp_variable = {var = UCB.sep_@THIS max = 1}
-                    }
-                }
-                if = {
-                    limit = {has_idea = UCB_polit_crisis}
-                    random_scope_in_array = {
-                        array = minor_countries
-                        add_to_variable = {UCB.oppos_@THIS = -0.03}
-                        clamp_variable = {var = UCB.oppos_@THIS min = 0}
                     }
                 }
 			}
@@ -211,14 +227,25 @@ on_actions = {
                         70 = {}
                     }
                     if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.oppos_@THIS = -0.1}}
-                    if = {limit = {UCB = {has_idea = UCB_polit_crysis}} add_to_variable = {UCB.oppos_@THIS = -0.025}}
+                    if = {limit = {UCB = {has_idea = UCB_polit_crysis}} add_to_variable = {UCB.oppos_@THIS = -0.03}}
 
                     random_list = {
-                        30 = {add_to_variable = {UCB.sep_@THIS = 0.05}}
+                        30 = {add_to_variable = {UCB.sep_@THIS = 0.03}}
                         70 = {}
                     }
                     if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.07}}
-                    if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.01}}
+                    if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.03}}
+
+                    clamp_variable = {
+                        var = UCB.sep_@THIS
+                        min = 0
+                        max = 1
+                    }
+                    clamp_variable = {
+                        var = UCB.oppos_@THIS
+                        min = 0
+                        max = 1
+                    }
                 }
 
                 country_event = {id = ucnb.30 days = 10}

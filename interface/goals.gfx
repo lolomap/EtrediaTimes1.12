@@ -1,6 +1,12 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_sbu_kar_pressure"
+	texturefile="gfx/interface/goals/goal_sbu_kar_pressure.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_sbu_third_way"
 	texturefile="gfx/interface/goals/goal_sbu_third_way.dds"
 }
