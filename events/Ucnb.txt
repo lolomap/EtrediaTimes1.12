@@ -102,6 +102,7 @@ country_event = {
 		name = ucnb.3.a		
 		TAG = UCB
             KOL = {
+                set_politics = {ruling_party = fascism}
                transfer_state = 24
                load_oob = KOL_terrorist
                add_manpower = 20000

@@ -196,6 +196,7 @@ country_event = {
 	    name = fscb.7.a
 		hidden_effect = {
             ORB = {
+            set_cosmetic_tag = ORB_independent
             transfer_state = 44
 			add_state_claim = 45
             load_oob = ORB_rebels

@@ -592,6 +592,7 @@ country_event = {
 		declare_war_on = { target = UCB type = take_state generator = { 10 } }
         }
 		ORB = {
+            set_cosmetic_tag = ORB_UCB
 		    transfer_state = 31
 		    load_oob = ORB_UCB_rebels
             add_manpower = 60000
