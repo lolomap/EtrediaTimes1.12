@@ -2309,6 +2309,7 @@ focus_tree = {
         y = 11
         available = {ORB = {has_war_with = FSC} has_completed_focus = UCB_PMC}
         bypass = {
+            has_completed_focus = UCB_independent_ndro
             OR = {
                 NOT = {country_exists = ORB}
                 NOT = {country_exists = FSC}
@@ -2343,7 +2344,7 @@ focus_tree = {
         x = 53
         y = 12
         available = {}
-        bypass = {NOT = {country_exists = ORB}}
+        bypass = {has_completed_focus = UCB_support_separs NOT = {country_exists = ORB}}
         allow_branch = {}
         prerequisite = {
             focus = UCB_support_separs
@@ -2640,6 +2641,7 @@ focus_tree = {
 			focus = UCB_fasc_united_caratenia
 		}
 		completion_reward = {
+            custom_effect_tooltip = enable_karatenia_unification
 		}
 		x = 47
 		y = 9

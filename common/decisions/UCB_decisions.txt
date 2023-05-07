@@ -1,64 +1,41 @@
-UCB_subj_integration = {
-	integrate_subjects = {
-		available = {
-			any_other_country = {
-				is_subject_of = UCB
-				all_owned_state = {
-					is_core_of = UCB
-				}
-			}
-			tag = UCB
-		}
 
-		visible = {
-			any_other_country = {
-				is_subject_of = UCB
-				all_owned_state = {
-					is_core_of = UCB
-				}
-			}
-			tag = UCB
-		}
-
-		cost = 150
-
-		complete_effect = {
-			every_other_country = {
-				limit = {
-					is_subject_of = UCB
-					all_owned_state = {
-						is_core_of = UCB
-					}
-				}
-				UCB = {
-					annex_country = {
-						target = PREV
-						transfer_troops = yes
-					}
-				}
-			}
-		}
-		ai_will_do = {factor = 1000}
-	}
-}
 UCB_bop_category = {
-    #UCB_boost_ideology = {
-    #    cost = 30
-    #    fixed_random_seed = no
-    #    days_remove = 30
-    #    modifier = {
-    #        power_balance_daily = 0.001
-    #    }
-    #    remove_effect = {
-    #        UCB = {
-    #            random_scope_in_array = {
-    #                array = minor_countries
-    #                set_temp_variable = {temp = 0.15}
-    #                boost_region_dem = yes
-    #            }
-    #        }
-    #    }
-    #}
+    UCB_boost_ideology = {
+        cost = 10
+        fixed_random_seed = no
+        days_remove = 30
+        modifier = {
+            power_balance_daily = 0.001
+        }
+        remove_effect = {
+            UCB = {
+                random_scope_in_array = {
+                    array = minor_countries
+                    set_temp_variable = {temp = 0.15}
+                    if = {
+                        limit = {has_government = democratic}
+                        boost_region_dem = yes
+                    }
+                    else_if = {
+                        limit = {has_government = fascism}
+                        boost_region_fas = yes
+                    }
+                    else_if = {
+                        limit = {has_government = neutrality}
+                        boost_region_neu = yes
+                    }
+                    else_if = {
+                        limit = {has_government = communism}
+                        boost_region_com = yes
+                    }
+                    else_if = {
+                        limit = {has_government = monarchism}
+                        boost_region_mon = yes
+                    }
+                }
+            }
+        }
+    }
     UCB_support_vote_company = {
         cost = 25
         fixed_random_seed = no
@@ -278,6 +255,288 @@ UCB_bop_category = {
                 add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
+        }
+    }
+}
+
+UCB_narabel_category = {
+    UCB_unite_retorria = {
+        state_target = yes
+
+        visible = {
+            has_completed_focus = UCB_fasc_unitarian
+            #always = yes
+        }
+        targets = {14 12}
+        target_trigger = {
+            FROM = {NOT= {is_core_of = RET}}
+        }
+
+        on_map_mode = map_only
+        cost = 5
+
+        complete_effect = {
+            FROM = {
+                if = { limit = {is_core_of = LEV}
+                    remove_core_of = LEV
+                }
+                if = { limit = {is_core_of = BER}
+                    remove_core_of = BER
+                }
+                add_core_of = RET
+
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = LEV}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = LEV
+                    }
+                }
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = BER}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = BER
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10000
+        }
+    }
+
+    UCB_unite_rachia = {
+        state_target = yes
+
+        visible = {
+            has_completed_focus = UCB_fasc_unitarian
+            #always = yes
+        }
+        targets = {state = 32}
+        target_trigger = {
+            FROM = {NOT= {is_core_of = NRA}}
+        }
+
+        on_map_mode = map_only
+        cost = 5
+
+        complete_effect = {
+            FROM = {
+                remove_core_of = SRA
+                add_core_of = NRA
+                remove_from_array = {
+                    array = UCB.minor_countries
+                    value = SRA
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10000
+        }
+    }
+
+    UCB_unite_mgahvatia = {
+        state_target = yes
+
+        visible = {
+            has_completed_focus = UCB_fasc_unitarian
+            #always = yes
+        }
+        targets = {state = 22}
+        target_trigger = {
+            FROM = {NOT= {is_core_of = KOL}}
+        }
+
+        on_map_mode = map_only
+        cost = 5
+
+        complete_effect = {
+            FROM = {
+                remove_core_of = FLR
+                add_core_of = KOL
+                remove_from_array = {
+                    array = UCB.minor_countries
+                    value = FLR
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10000
+        }
+    }
+
+    UCB_unite_strogskia = {
+        state_target = yes
+
+        visible = {
+            has_completed_focus = UCB_fasc_unitarian
+            #always = yes
+        }
+        targets = {19 21}
+        target_trigger = {
+            FROM = {NOT= {is_core_of = SGO}}
+        }
+
+        on_map_mode = map_only
+        cost = 5
+
+        complete_effect = {
+            FROM = {
+                if = { limit = {is_core_of = GLE}
+                    remove_core_of = GLE
+                }
+                if = { limit = {is_core_of = KIM}
+                    remove_core_of = KIM
+                }
+                add_core_of = SGO
+
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = GLE}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = GLE
+                    }
+                }
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = KIM}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = KIM
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10000
+        }
+    }
+
+    UCB_unite_zerandia = {
+        state_target = yes
+
+        visible = {
+            has_completed_focus = UCB_fasc_unitarian
+            #always = yes
+        }
+        targets = {17 18}
+        target_trigger = {
+            FROM = {NOT= {is_core_of = ZER}}
+        }
+
+        on_map_mode = map_only
+        cost = 5
+
+        complete_effect = {
+            FROM = {
+                if = { limit = {is_core_of = AKV}
+                    remove_core_of = AKV
+                }
+                if = { limit = {is_core_of = SVE}
+                    remove_core_of = SVE
+                }
+                add_core_of = ZER
+
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = AKV}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = AKV
+                    }
+                }
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = SVE}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = SVE
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10000
+        }
+    }
+
+    UCB_unite_dineria = {
+        state_target = yes
+
+        visible = {
+            has_completed_focus = UCB_fasc_unitarian
+            #always = yes
+        }
+        targets = {3 6 7 4 5}
+        target_trigger = {
+            FROM = {NOT= {is_core_of = DIN}}
+        }
+
+        on_map_mode = map_only
+        cost = 5
+
+        complete_effect = {
+            FROM = {
+                if = { limit = {is_core_of = MIN}
+                    remove_core_of = MIN
+                }
+                if = { limit = {is_core_of = NIK}
+                    remove_core_of = NIK
+                }
+                if = { limit = {is_core_of = TRI}
+                    remove_core_of = TRI
+                }
+                if = { limit = {is_core_of = KOS}
+                    remove_core_of = KOS
+                }
+                if = { limit = {is_core_of = RAN}
+                    remove_core_of = RAN
+                }
+                add_core_of = DIN
+
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = MIN}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = MIN
+                    }
+                }
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = NIK}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = NIK
+                    }
+                }
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = TRI}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = TRI
+                    }
+                }
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = KOS}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = KOS
+                    }
+                }
+                if = {
+                    limit = {NOT = {any_state = {is_core_of = RAN}}}
+                    remove_from_array = {
+                        array = UCB.minor_countries
+                        value = RAN
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10000
         }
     }
 }

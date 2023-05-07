@@ -669,7 +669,7 @@ country_event = {
     option = {
         name = ucnb.27.b
 
-        add_political_power = -50
+        add_political_power = -75
         var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = -0.1 tooltip = add_region_opposition_tooltip}}
     }
 }

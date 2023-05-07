@@ -1,9 +1,4 @@
-UCB_subj_integration = {
-	icon = generic_democracy
-	visible = {
-		always = yes
-	}
-    allowed = {tag = UCB}
-}
 
 UCB_bop_category = {allowed = {tag = UCB}}
+
+UCB_narabel_category = {allowed = {tag = UCB}}
