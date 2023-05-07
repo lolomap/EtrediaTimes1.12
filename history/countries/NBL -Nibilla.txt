@@ -9,6 +9,7 @@ set_war_support = 0.2
 add_ideas = {
         www_bad_country
 	sixth_corruption_level
+    sforces_3
 }
 
 set_technology = {basic_train = 1

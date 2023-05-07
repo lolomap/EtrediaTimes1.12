@@ -18,6 +18,7 @@ add_ideas = {
         free_press
         general_entry
 	sixth_corruption_level
+    sforces_5
 }
 
 set_technology = {basic_train = 1

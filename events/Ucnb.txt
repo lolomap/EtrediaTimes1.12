@@ -102,6 +102,7 @@ country_event = {
 		name = ucnb.3.a		
 		TAG = UCB
             KOL = {
+                set_politics = {ruling_party = fascism}
                transfer_state = 24
                load_oob = KOL_terrorist
                add_manpower = 20000
@@ -669,7 +670,7 @@ country_event = {
     option = {
         name = ucnb.27.b
 
-        add_political_power = -50
+        add_political_power = -75
         var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = -0.1 tooltip = add_region_opposition_tooltip}}
     }
 }

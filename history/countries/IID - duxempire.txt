@@ -18,6 +18,7 @@ add_ideas = {
         limited_entry
 	fourth_corruption_level
     leadership_m
+    sforces_6
 }
 
 set_autonomy = {

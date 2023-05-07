@@ -76,6 +76,7 @@ country_event = {
     immediate = {
         FSC = {news_event = ucbf.4}
         ORB = {
+            set_cosmetic_tag = ORB_UCB
             transfer_state = 44
             load_oob = ORB_rebels
             country_event = ucbf.5

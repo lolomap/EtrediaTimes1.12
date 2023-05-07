@@ -48,7 +48,9 @@
   randomize_region_ideology_tooltip: "Идеологии регионов изменятся случайным образом\n"
   ucb_sep_rise_tooltip: "§RРост§! сепаратизма в регионах"
   ucb_opp_rise_tooltip: "§RСнижение§! поддержки Президента в регионах"
-  
+  enable_karatenia_unification: "Становятся доступны §Yрешения§! для §Gобъединения§! регионов"
+
+
   YAN_planes_production_tooltip:0 "Станет доступен концерн «CVT_Toika»"
   YAN_tank_concern:0 "Станет доступен концерн «CREDORA»"
   YAN_electronika_concern:0 "Станет доступен концерн «Omnish Inovation Group»"
@@ -179,3 +181,5 @@
 
   province_id_gui_display:0 "[?current_province]"
   border_war_button_loc:0 "Начать пограничный конфликт\n----------------\n\nНаше отношение к ним -20 и ниже"
+
+  modcredits: "§YBunbasss\nLegatt\nD-Kjch\nMonteny§!\n\n\n§6Special thanks to:§!\nSvarob\nLuka (Tornikios-O)\nKit MaB\nCockroach Gosha\nSosoichi\nScapupof"

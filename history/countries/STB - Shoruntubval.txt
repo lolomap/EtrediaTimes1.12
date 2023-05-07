@@ -10,6 +10,7 @@ add_ideas = {
         WWW_bad_country
 	fifth_corruption_level
 	limited_conscription 
+    sforces_1
 }
 
 set_technology = {

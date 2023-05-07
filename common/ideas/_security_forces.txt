@@ -10,6 +10,14 @@ ideas = {
             cancel_if_invalid = yes
 
             modifier = {
+                stability_factor = 0.15
+                war_support_factor = 0.15
+                political_power_factor = 0.1
+                non_core_manpower = 0.2
+                mobilization_speed = 0.25
+                drift_defence_factor = 0.25
+                resistance_activity = -0.2
+                consumer_goods_factor = 0.2
             }
         }
         sforces_5 = {
@@ -20,6 +28,13 @@ ideas = {
             cancel_if_invalid = yes
 
             modifier = {
+                stability_factor = 0.08
+                political_power_factor = 0.08
+                non_core_manpower = 0.15
+                mobilization_speed = 0.15
+                drift_defence_factor = 0.1
+                resistance_activity = -0.1
+                consumer_goods_factor = 0.1
             }
         }
         sforces_4 = {
@@ -31,6 +46,14 @@ ideas = {
             default = yes
 
             modifier = {
+                stability_factor = 0.03
+                political_power_factor = 0.05
+                non_core_manpower = 0.1
+                mobilization_speed = 0.1
+                drift_defence_factor = 0.05
+                required_garrison_factor = 0.05
+                resistance_activity = -0.05
+                consumer_goods_factor = -0.02
             }
         }
         sforces_3 = {
@@ -41,6 +64,11 @@ ideas = {
             cancel_if_invalid = yes
 
             modifier = {
+                stability_factor = -0.05
+                recruitable_population_factor = -0.05
+                required_garrison_factor = 0.12
+                resistance_activity = 0.02
+                consumer_goods_factor = -0.07
             }
         }
         sforces_2 = {
@@ -51,6 +79,13 @@ ideas = {
             cancel_if_invalid = yes
 
             modifier = {
+                stability_factor = -0.08
+                political_power_factor = -0.05
+                recruitable_population_factor = -0.25
+                required_garrison_factor = 0.3
+                resistance_activity = 0.05
+                war_support_factor = 0.15
+                consumer_goods_factor = -0.1
             }
         }
         sforces_1 = {
@@ -61,6 +96,13 @@ ideas = {
             cancel_if_invalid = yes
 
             modifier = {
+                stability_factor = -0.1
+                political_power_factor = -0.1
+                recruitable_population_factor = -0.15
+                required_garrison_factor = 0.25
+                resistance_activity = 0.15
+                war_support_factor = 0.1
+                consumer_goods_factor = -0.15
             }
         }
     }

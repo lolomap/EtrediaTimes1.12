@@ -5,6 +5,7 @@ guiTypes = {
 		position = { x=-251 y=-280 }	
 		size = { width=500 height=560 }
 		Orientation = center
+        clipping = no
 		
 		background = {
 			name ="credit_bg"
@@ -31,6 +32,15 @@ guiTypes = {
 			spriteType ="GFX_diplo_popup_bottom"
 #			orientation = bottom_left
 		}
+
+        instantTextBoxType = {
+            name = "modcredits"
+            position = {x = -500 y = 0}
+            text = modcredits
+            font = hoi_36header
+            format = left
+            alwaystransparent = yes
+        }
 		
 		ButtonType = {
 			name = "back_button"
