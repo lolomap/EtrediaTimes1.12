@@ -11,6 +11,7 @@ add_ideas = {
         limited_entry
 	fifth_corruption_level
     continuity_n
+    sforces_6
 }
 
 set_technology = {basic_train = 1

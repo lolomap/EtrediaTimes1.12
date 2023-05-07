@@ -17,6 +17,7 @@ add_ideas = {
         SBU_Elnia_separatism
         SBU_SZ_concern
 	third_corruption_level
+    sforces_5
 }
 
 set_technology = {basic_train = 1

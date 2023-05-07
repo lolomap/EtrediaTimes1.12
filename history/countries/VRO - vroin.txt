@@ -13,6 +13,7 @@ add_ideas = {
         general_entry
 	fourth_corruption_level
     leadership_n
+    sforces_5
 }
 
 set_technology = {basic_train = 1

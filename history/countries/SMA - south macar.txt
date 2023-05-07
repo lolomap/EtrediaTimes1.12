@@ -12,6 +12,7 @@ add_ideas = {
         total_nonfree_press
         closed_entry
 	SMA_starOfRevolution
+    sforces_2
 }
 
 set_technology = {basic_train = 1

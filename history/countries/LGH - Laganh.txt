@@ -9,6 +9,7 @@ set_technology = {basic_train = 1
 add_ideas = {
         www_bad_country
 	sixth_corruption_level
+    sforces_2
 }
 
 set_convoys = 41

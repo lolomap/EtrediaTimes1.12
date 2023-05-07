@@ -10,6 +10,7 @@ add_ideas = {
         WWW_medium_country
 	third_corruption_level
     regionalism
+    sforces_3
 }
 
 set_technology = {basic_train = 1
