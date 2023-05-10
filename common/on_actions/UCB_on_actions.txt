@@ -230,11 +230,11 @@ on_actions = {
                     if = {limit = {UCB = {has_idea = UCB_polit_crysis}} add_to_variable = {UCB.oppos_@THIS = -0.03}}
 
                     random_list = {
-                        30 = {add_to_variable = {UCB.sep_@THIS = 0.03}}
+                        30 = {add_to_variable = {UCB.sep_@THIS = 0.01}}
                         70 = {}
                     }
-                    if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.07}}
-                    if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.03}}
+                    if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.03}}
+                    if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.015}}
 
                     clamp_variable = {
                         var = UCB.sep_@THIS

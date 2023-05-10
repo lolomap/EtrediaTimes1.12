@@ -1,38 +1,40 @@
 unique_id = etredia_ach
 
-etredia_ach_1 = { #
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = light_warriors_ach}
-	}
-}
+#etredia_ach_1 = { #
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = light_warriors_ach}
+#	}
+#}
 
-etredia_ach_2 = { #
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = dark_warriors_ach}
-	}
-}
+#etredia_ach_2 = { #
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = dark_warriors_ach}
+#	}
+#}
 
-etredia_ach_3 = { #
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = third_way_ach}
-	}
-}
+#etredia_ach_3 = { #
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = third_way_ach}
+#	}
+#}
 
 etredia_ach_4 = { #
 	possible = {
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = whoami_ach}
+		has_government = democratic
+        is_in_faction_with = EIK
+        EIK = {has_government = fascism}
 	}
 }
 
@@ -48,54 +50,112 @@ etredia_ach_5 = { #
 etredia_ach_6 = { #
 	possible = {
 		achievs_available = yes
+        tag = BAE
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = hold_my_beer_ach}
+        338 = {is_controlled_by = BAE}
+        342 = {is_controlled_by = BAE}
+        344 = {is_controlled_by = BAE}
+        348 = {is_controlled_by = BAE}
+        350 = {is_controlled_by = BAE}
+        411 = {is_controlled_by = BAE}
+        412 = {is_controlled_by = BAE}
+
+        789 = {is_controlled_by = BAE}
+        790 = {is_controlled_by = BAE}
+        794 = {is_controlled_by = BAE}
+        793 = {is_controlled_by = BAE}
+        262 = {is_controlled_by = BAE}
+        261 = {is_controlled_by = BAE}
+        786 = {is_controlled_by = BAE}
+
+        320 = {is_controlled_by = BAE}
+        318 = {is_controlled_by = BAE}
+        322 = {is_controlled_by = BAE}
+        321 = {is_controlled_by = BAE}
 	}
 }
 
 etredia_ach_7 = { #
 	possible = {
 		achievs_available = yes
+        tag = TOL
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = tolch_ach}
+        controls_state = 319
+        date < 2018.1.1
 	}
 }
 
-etredia_ach_8 = { #
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = shop_security_ach}
-	}
-}
+#etredia_ach_8 = { #
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = shop_security_ach}
+#	}
+#}
 
 etredia_ach_9 = { #
 	possible = {
 		achievs_available = yes
+        capital_scope = {is_on_continent = asia}
+        NOT = {tag = KLU}
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = plot_twist_ach}
+		controls_state = 610
+        controls_state = 613
+        controls_state = 584
+        controls_state = 646
+        controls_state = 604
+        controls_state = 643
+        controls_state = 639
+        controls_state = 635
+        controls_state = 638
+        controls_state = 634
+        controls_state = 641
+        controls_state = 633
+        controls_state = 632
+        controls_state = 625
+        controls_state = 622
+        controls_state = 614
+        controls_state = 629
 	}
 }
 
 etredia_ach_10 = { #
 	possible = {
 		achievs_available = yes
+        tag = UCB
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = narabel_dream_ach}
+        has_country_leader = {character = UCB_terine_narabel}
+		controls_state = 44
+        controls_state = 45
+        controls_state = 51
+        controls_state = 54
+        controls_state = 70
+        all_other_country = {
+            OR = {
+                NOT = {is_on_continent = europe}
+                has_government = fascism
+            }
+        }
 	}
 }
 
 etredia_ach_11 = { #
 	possible = {
 		achievs_available = yes
+        OR = {
+            tag = LOK
+            tag = BOK
+        }
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = loka_ach}
+		controls_state = 742
+        controls_state = 743
+        has_idea = scraping_the_barrel
 	}
 }
 
@@ -104,7 +164,13 @@ etredia_ach_12 = { #
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = colonize_ach}
+		controls_state = 756
+        controls_state = 737
+        controls_state = 728
+        controls_state = 724
+        controls_state = 714
+        controls_state = 689
+        controls_state = 699
 	}
 }
 
@@ -147,6 +213,7 @@ etredia_ach_16 = { #
 etredia_ach_17 = { #
 	possible = {
 		achievs_available = yes
+        tag = UCB
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = unstable_ach}
@@ -156,6 +223,7 @@ etredia_ach_17 = { #
 etredia_ach_18 = { #
 	possible = {
 		achievs_available = yes
+        tag = SUC
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = comitet_ach}
@@ -165,47 +233,48 @@ etredia_ach_18 = { #
 etredia_ach_19 = { #
 	possible = {
 		achievs_available = yes
+        tag = BDA
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = beldpo_ach}
 	}
 }
 
-etredia_ach_20 = {#
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_global_flag = minor_ach}
-	}
-}
+#etredia_ach_20 = {#
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		
+#	}
+#}
 
-etredia_ach_21 = { #
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = mof_ish_ach}
-	}
-}
+#etredia_ach_21 = { #
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = mof_ish_ach}
+#	}
+#}
 
-etredia_ach_22 = {
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = rgy_ish_ach}
-	}
-}
+#etredia_ach_22 = {
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = rgy_ish_ach}
+#	}
+#}
 
-etredia_ach_23 = {
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = rtt_ish_ach}
-	}
-}
+#etredia_ach_23 = {
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = rtt_ish_ach}
+#	}
+#}
 
 etredia_ach_24 = { #
 	possible = {
@@ -219,24 +288,26 @@ etredia_ach_24 = { #
 etredia_ach_25 = { #
 	possible = {
 		achievs_available = yes
+        tag = TRP
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = trp_iid_ach}
 	}
 }
 
-etredia_ach_26 = {
-	possible = {
-		achievs_available = yes
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = borders_ach}
-	}
-}
+#etredia_ach_26 = {
+#	possible = {
+#		achievs_available = yes
+#	}
+#	happened = {
+#		hidden_trigger = {has_country_flag = borders_ach}
+#	}
+#}
 
 etredia_ach_27 = { #
 	possible = {
 		achievs_available = yes
+        tag = SDI
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = ancap_ach}
@@ -246,6 +317,7 @@ etredia_ach_27 = { #
 etredia_ach_28 = { #
 	possible = {
 		achievs_available = yes
+        tag = DIB
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = chuchkhe_ach}
@@ -255,6 +327,7 @@ etredia_ach_28 = { #
 etredia_ach_29 = { #
 	possible = {
 		achievs_available = yes
+        tag = MOF
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = rybka_ach}
@@ -264,6 +337,7 @@ etredia_ach_29 = { #
 etredia_ach_30 = { #
 	possible = {
 		achievs_available = yes
+        tag = TRP
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = oleg_ach}
@@ -273,6 +347,7 @@ etredia_ach_30 = { #
 etredia_ach_31 = { #
 	possible = {
 		achievs_available = yes
+        tag = TRB
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = mansur_ach}
@@ -282,6 +357,7 @@ etredia_ach_31 = { #
 etredia_ach_32 = { #
 	possible = {
 		achievs_available = yes
+        tag = TAL
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = talshik_ach}
@@ -291,6 +367,7 @@ etredia_ach_32 = { #
 etredia_ach_33 = { #
 	possible = {
 		achievs_available = yes
+        tag = SHE
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = shield_ach}
@@ -300,6 +377,7 @@ etredia_ach_33 = { #
 etredia_ach_34 = { #
 	possible = {
 		achievs_available = yes
+        tag = SMA
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = macar_ach}
@@ -309,6 +387,7 @@ etredia_ach_34 = { #
 etredia_ach_35 = { #
 	possible = {
 		achievs_available = yes
+        tag = GKD
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = gkd_ach}
@@ -318,6 +397,7 @@ etredia_ach_35 = { #
 etredia_ach_36 = { #
 	possible = {
 		achievs_available = yes
+        tag = FBU
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = sweet_home_ach}
@@ -336,6 +416,7 @@ etredia_ach_37 = { #
 etredia_ach_38 = { #
 	possible = {
 		achievs_available = yes
+        tag = SBU
 	}
 	happened = {
 		hidden_trigger = {has_country_flag = sz_total_ach}
@@ -345,8 +426,11 @@ etredia_ach_38 = { #
 etredia_ach_39 = { #
 	possible = {
 		achievs_available = yes
+        tag = CTE
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = cteven_total_ach}
+        all_state = {
+            is_controlled_by = CTE
+        }
 	}
 }
