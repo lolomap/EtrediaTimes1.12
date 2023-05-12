@@ -1,0 +1,43 @@
+EIK_fascism_plan = {
+
+	enable = {
+		original_tag = EIK
+		OR = {
+            #has_game_rule = {
+            #    rule = UCB_AI_BEHAVIOR
+            #    option = DEMOCRATIC
+            #}
+            AND = {
+                #has_game_rule = {
+                #    rule = UCB_AI_BEHAVIOR
+                #    option = DEFAULT
+                #}
+                is_historical_focus_on = yes
+            }
+        }
+	}
+
+	ai_national_focuses = {
+        EIK_investitions_on_tolchkograd
+        EIK_investitions_on_baensli
+        EIK_influence_on_neighbors
+        EIK_expanding_civil_support
+        EIK_one_party_system
+        EIK_political_purge
+        EIK_eastern_block
+        EIK_conquer_rebellious_regions
+        EIK_invite_yanthalia
+        EIK_unexpected_partner
+		EIK_ultimatum_to_sheregia
+        EIK_powerful_scientific_base
+        EIK_propaganda_in_schools
+	}
+
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

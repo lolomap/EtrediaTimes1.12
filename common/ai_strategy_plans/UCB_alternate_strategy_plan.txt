@@ -19,6 +19,7 @@ UCB_democratic_plan = {
 
 	ai_national_focuses = {
 		UCB_dem1
+        UCB_defend_SHE
         UCB_dem_battle
         UCB_dem_IID
 	}

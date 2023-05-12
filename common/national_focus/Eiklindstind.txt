@@ -799,7 +799,13 @@ focus_tree = {
 			}
 		}
 		available = { 
-		EIK = { has_army_manpower  = { size > 500000 } }
+		    #OR = {
+                has_army_manpower  = { size > 500000 }
+                #AND = {
+                #    is_ai = yes
+                #    date > 2018.8.1
+                #}
+            #}
 		}
 		ai_chance = { 
 		factor = 0.5

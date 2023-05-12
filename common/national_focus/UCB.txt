@@ -1570,7 +1570,7 @@ focus_tree = {
 			}
 		}
 		x = 11
-		y = 8
+		y = 9
 
 	}
 	focus = {
@@ -1634,6 +1634,26 @@ focus_tree = {
 		factor = 2
 		}
 	}
+    focus = {
+        id = UCB_defend_SHE
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 5
+        y = 7
+        available = {}
+        bypass = {NOT = {country_exists = SHE}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_dem_sbu
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            give_guarantee = SHE
+        }
+    }
 	focus = {
 		id = UCB_dem_trp_garant
 		icon = GFX_goal_unknown
