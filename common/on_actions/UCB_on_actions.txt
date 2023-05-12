@@ -193,8 +193,14 @@ on_actions = {
                 if = {
                     limit = {check_variable = {UCB.sep_@THIS > 0.98}}
                     UCB = {
-                        set_variable = {country_to_release = PREV}
-                        country_event = {id = onactev.13 days = 1}
+                        if = {
+                            limit = {is_ai = no}
+                            set_variable = {country_to_release = PREV}
+                            country_event = {id = onactev.13 days = 1}
+                        }
+                        #else = {
+                        #    #
+                        #}
                     }
                 }
 			}
@@ -226,14 +232,14 @@ on_actions = {
                         30 = {add_to_variable = {UCB.oppos_@THIS = -0.05}}
                         70 = {}
                     }
-                    if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.oppos_@THIS = -0.1}}
+                    #if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.oppos_@THIS = -0.1}}
                     if = {limit = {UCB = {has_idea = UCB_polit_crysis}} add_to_variable = {UCB.oppos_@THIS = -0.03}}
 
                     random_list = {
                         30 = {add_to_variable = {UCB.sep_@THIS = 0.01}}
                         70 = {}
                     }
-                    if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.03}}
+                    #if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.03}}
                     if = {limit = {UCB = {has_idea = UCB_poroh_blet}} add_to_variable = {UCB.sep_@THIS = 0.015}}
 
                     clamp_variable = {

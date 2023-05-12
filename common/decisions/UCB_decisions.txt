@@ -35,6 +35,10 @@ UCB_bop_category = {
                 }
             }
         }
+
+        ai_will_do = {
+            base = 200
+        }
     }
     UCB_support_vote_company = {
         cost = 25
@@ -54,6 +58,10 @@ UCB_bop_category = {
                 }
             }
         }
+
+        ai_will_do = {
+            base = 10
+        }
     }
 
     UCB_support_citizens = {
@@ -65,6 +73,10 @@ UCB_bop_category = {
                 add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.oppos_@THIS max = 1}
             }
+        }
+
+        ai_will_do = {
+            base = 200
         }
     }
 
@@ -80,6 +92,10 @@ UCB_bop_category = {
                 add_to_variable = {var = UCB.sep_@THIS value = -0.03 tooltip = add_region_separatism_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS min = 0}
             }
+        }
+
+        ai_will_do = {
+            base = 500
         }
     }
 
@@ -97,6 +113,10 @@ UCB_bop_category = {
                 value = 0.1
             }
         }
+
+        ai_will_do = {
+            base = 1000
+        }
     }
 
     UCB_extend_parlament = {
@@ -105,6 +125,14 @@ UCB_bop_category = {
         complete_effect = {
             add_power_balance_value = {id = UCB_parlament_balance value = -0.05}
             add_to_variable = {var = wtire value = -25 tooltip = wtire_boost}
+        }
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+                check_variable = { wtire > 100 }
+                add = 700
+            }
         }
     }
 
@@ -213,6 +241,15 @@ UCB_bop_category = {
                 }
             }
         }
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+                check_variable = { ucb_reg_fas > 0.25 }
+                has_government = democratic
+                add = 500
+            }
+        }
     }
 
     UCB_state_of_emergancy = {
@@ -255,6 +292,10 @@ UCB_bop_category = {
                 add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
+        }
+
+        ai_will_do = {
+            base = 1000
         }
     }
 }

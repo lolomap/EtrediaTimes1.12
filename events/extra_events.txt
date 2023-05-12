@@ -233,7 +233,7 @@ country_event = { #Пропагандисткая кампания против 
 		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
 		add_popularity = {ideology = democratic popularity = -0.05}
 		custom_effect_tooltip = reduce_party_power_nontarget
-		add_to_variable = {dem_opposition = -1}
+		add_to_variable = {dem_opposition = -5}
 	}
 }
 
@@ -303,7 +303,7 @@ country_event = { #Пропагандисткая кампания против 
 		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
 		add_popularity = {ideology = fascism popularity = -0.05}
 		custom_effect_tooltip = reduce_party_power_nontarget
-		add_to_variable = {fas_opposition = -1}
+		add_to_variable = {fas_opposition = -5}
 	}
 }
 
@@ -373,7 +373,7 @@ country_event = { #Пропагандисткая кампания против 
 		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
 		add_popularity = {ideology = neutrality popularity = -0.05}
 		custom_effect_tooltip = reduce_party_power_nontarget
-		add_to_variable = {neu_opposition = -1}
+		add_to_variable = {neu_opposition = -5}
 	}
 }
 
@@ -443,7 +443,7 @@ country_event = { #Пропагандисткая кампания против 
 		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
 		add_popularity = {ideology = communism popularity = -0.05}
 		custom_effect_tooltip = reduce_party_power_nontarget
-		add_to_variable = {com_opposition = -1}
+		add_to_variable = {com_opposition = -5}
 	}
 }
 
@@ -512,7 +512,7 @@ country_event = { #Пропагандисткая кампания против 
 		set_country_flag = {flag = party_discreditation_cd days = 120 value = 1}
 		add_popularity = {ideology = monarchism popularity = -0.05}
 		custom_effect_tooltip = reduce_party_power_nontarget
-		add_to_variable = {mon_opposition = -1}
+		add_to_variable = {mon_opposition = -5}
 	}
 }
 
@@ -1116,27 +1116,27 @@ country_event = { # изменение в полит поле
 		if = {
 			limit = {check_variable = {rand_ideology = 1}}
 			add_popularity = {ideology = democratic popularity = 0.03}
-			add_to_variable = {dem_opposition = 1}
+			add_to_variable = {dem_opposition = 3}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 2}}
 			add_popularity = {ideology = fascism popularity = 0.03}
-			add_to_variable = {fas_opposition = 1}
+			add_to_variable = {fas_opposition = 3}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 3}}
 			add_popularity = {ideology = neutrality popularity = 0.03}
-			add_to_variable = {neu_opposition = 1}
+			add_to_variable = {neu_opposition = 3}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 4}}
 			add_popularity = {ideology = communism popularity = 0.03}
-			add_to_variable = {com_opposition = 1}
+			add_to_variable = {com_opposition = 3}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 5}}
 			add_popularity = {ideology = monarchism popularity = 0.03}
-			add_to_variable = {mon_opposition = 1}
+			add_to_variable = {mon_opposition = 3}
 		}
 		custom_effect_tooltip = change_party_power
 	}
@@ -1154,27 +1154,27 @@ country_event = { # рост настроений
 		if = {
 			limit = {check_variable = {rand_ideology = 1}}
 			add_popularity = {ideology = democratic popularity = 0.06}
-			add_to_variable = {dem_opposition = 2}
+			add_to_variable = {dem_opposition = 7}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 2}}
 			add_popularity = {ideology = fascism popularity = 0.06}
-			add_to_variable = {fas_opposition = 2}
+			add_to_variable = {fas_opposition = 7}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 3}}
 			add_popularity = {ideology = neutrality popularity = 0.06}
-			add_to_variable = {neu_opposition = 2}
+			add_to_variable = {neu_opposition = 7}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 4}}
 			add_popularity = {ideology = communism popularity = 0.06}
-			add_to_variable = {com_opposition = 2}
+			add_to_variable = {com_opposition = 7}
 		}
 		if = {
 			limit = {check_variable = {rand_ideology = 5}}
 			add_popularity = {ideology = monarchism popularity = 0.06}
-			add_to_variable = {mon_opposition = 2}
+			add_to_variable = {mon_opposition = 7}
 		}
 		custom_effect_tooltip = change_party_power
 	}
@@ -1230,44 +1230,6 @@ country_event = { # организованная опоз
 		if = {
 			limit = {check_variable = {rand_ideology = 1}}
 			add_popularity = {ideology = democratic popularity = 0.1}
-			add_to_variable = {dem_opposition = 6}
-		}
-		if = {
-			limit = {check_variable = {rand_ideology = 2}}
-			add_popularity = {ideology = fascism popularity = 0.1}
-			add_to_variable = {fas_opposition = 6}
-		}
-		if = {
-			limit = {check_variable = {rand_ideology = 3}}
-			add_popularity = {ideology = neutrality popularity = 0.1}
-			add_to_variable = {neu_opposition = 6}
-		}
-		if = {
-			limit = {check_variable = {rand_ideology = 4}}
-			add_popularity = {ideology = communism popularity = 0.1}
-			add_to_variable = {com_opposition = 6}
-		}
-		if = {
-			limit = {check_variable = {rand_ideology = 5}}
-			add_popularity = {ideology = monarchism popularity = 0.1}
-			add_to_variable = {mon_opposition = 6}
-		}
-		custom_effect_tooltip = change_party_power
-	}
-}
-
-country_event = { # требуют отставку
-	id = mechanics.16
-	title = mechanics.16.t
-	desc = mechanics.16.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = mechanics.16.a
-		if = {
-			limit = {check_variable = {rand_ideology = 1}}
-			add_popularity = {ideology = democratic popularity = 0.1}
 			add_to_variable = {dem_opposition = 10}
 		}
 		if = {
@@ -1289,6 +1251,44 @@ country_event = { # требуют отставку
 			limit = {check_variable = {rand_ideology = 5}}
 			add_popularity = {ideology = monarchism popularity = 0.1}
 			add_to_variable = {mon_opposition = 10}
+		}
+		custom_effect_tooltip = change_party_power
+	}
+}
+
+country_event = { # требуют отставку
+	id = mechanics.16
+	title = mechanics.16.t
+	desc = mechanics.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mechanics.16.a
+		if = {
+			limit = {check_variable = {rand_ideology = 1}}
+			add_popularity = {ideology = democratic popularity = 0.1}
+			add_to_variable = {dem_opposition = 20}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 2}}
+			add_popularity = {ideology = fascism popularity = 0.1}
+			add_to_variable = {fas_opposition = 20}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 3}}
+			add_popularity = {ideology = neutrality popularity = 0.1}
+			add_to_variable = {neu_opposition = 20}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 4}}
+			add_popularity = {ideology = communism popularity = 0.1}
+			add_to_variable = {com_opposition = 20}
+		}
+		if = {
+			limit = {check_variable = {rand_ideology = 5}}
+			add_popularity = {ideology = monarchism popularity = 0.1}
+			add_to_variable = {mon_opposition = 20}
 		}
 		custom_effect_tooltip = change_party_power
 	}
@@ -1835,7 +1835,7 @@ country_event = {
     option = {
         name = onactev.13.a
         release = var:country_to_release
-        var:country_to_release = {ROOT = {set_variable = {sep_@PREV = 0.8}}}
+        var:country_to_release = {ROOT = {set_variable = {sep_@PREV = 0.65}}}
         declare_war_on = {target = var:country_to_release type = annex_everything}
         encount_minors = yes
     }
