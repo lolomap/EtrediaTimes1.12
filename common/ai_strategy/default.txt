@@ -107,7 +107,7 @@ default_unit_production = { #If adding country-unique ones, bear in mind that th
 	ai_strategy = {
 		type = equipment_production_factor
 		id = artillery
-		value = 25
+		value = 15
 	}
 }
 
@@ -674,25 +674,25 @@ DEFAULT_early_template_design = {
 	ai_strategy = {
 		type = template_prio
 		id = light_armor
-		value = 5
+		value = 0
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
-		value = 5
+		value = 2
 	}
 	
 	ai_strategy = {
 		type = template_prio
 		id = modern_armor
-		value = 30
+		value = 10
 	}
 	
 	ai_strategy = {
 		type = template_prio
 		id = mechanized
-		value = 40
+		value = 30
 	}
 
 	ai_strategy = {
@@ -705,6 +705,11 @@ DEFAULT_early_template_design = {
 		type = template_prio
 		id = infantry
 		value = 50
+	}
+	ai_strategy = {
+		type = template_prio
+		id = jeep
+		value = 5
 	}
 }
 
@@ -722,43 +727,61 @@ DEFAULT_midlate_template_design = {
 	ai_strategy = {
 		type = template_prio
 		id = modern_armor
-		value = 50
+		value = 20
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = cavalry
-		value = -100
+		value = -1000
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = light_armor
-		value = 3
+		value = -100
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
-		value = 3
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = modern_armor
-		value = 50
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = paratroopers
-		value = -50
+		value = -10
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = infantry
-		value = 10
+		value = 40
+	}
+}
+
+dirian_civilwar_template_design = {
+	enable = {
+		has_idea = DIR_revolt
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = -10
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = -15
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = jeep
+		value = 15
 	}
 }
 

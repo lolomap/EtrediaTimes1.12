@@ -613,6 +613,7 @@ country_event = {
 	trigger = {
         TAG = DIR
 		date > 2014.11.1
+		date < 2015.1.1
 		NOT = { has_country_flag = DIR_commi_purge_complete_flag }
     }
     mean_time_to_happen = {
@@ -671,7 +672,7 @@ country_event = {
 		}
 		DIB = {
             transfer_state = 262
-			transfer_state = 835
+			transfer_state = 793
             load_oob = DIB_army
 			add_ideas = { DIR_revolt }
 			add_ideas = { DEM_bad_economic }
@@ -725,12 +726,18 @@ country_event = {
 			add_state_core = 287
 			add_state_core = 288
 			add_state_core = 786
-			add_state_core = 836
+			add_state_core = 791
+			add_state_core = 792
+			add_state_core = 793
+			add_state_core = 794
+			add_state_core = 795
+			add_state_core = 796
+			add_state_core = 797
 		}
 		}
 		DIB = {
             transfer_state = 262
-			transfer_state = 835
+			transfer_state = 793
             load_oob = DIB_army
 			add_ideas = { DIR_revolt }
 			add_ideas = { DEM_bad_economic }
@@ -909,4 +916,116 @@ country_event = {
 			DEM = { country_event = { id = dirnews.11 days = 1 } }
 		}
     }
+}
+
+country_event = {
+	id = dircom.30
+	title = dircom.30.t
+	desc = dircom.30.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DIR
+    }
+
+	option = {
+	name = dircom.30.a
+		DIR = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = DIR_commie_sukca
+				desc = "DIR_commie_sukca_desc"
+				picture = "gfx/leaders/DIR/portrait_DIR_Kerosh_Sukca.dds"
+				expire = "2030.1.1"
+				ideology = marxism
+				traits = {
+				}
+			}
+			add_political_power = -150
+			add_ideas = DIR_collapse
+		}
+	}
+}
+
+country_event = {
+	id = dircom.31
+	title = dircom.31.t
+	desc = dircom.31.d
+	picture = GFX_news_even
+	
+    fire_only_once = yes
+
+	trigger = {
+        TAG = DIR
+		DEM = { has_idea = DIR_collapse }
+		DIR = { has_idea = DIR_collapse }
+    }
+	mean_time_to_happen = {
+        days = 10
+    }
+
+	option = {
+	name = dircom.31.a
+		hidden_effect = {
+			DIR = { white_peace = DEM }
+			DIR = { white_peace = SDI }
+			DIR = { white_peace = BLJ }
+			DIR = { white_peace = DIB }
+			BLJ = { white_peace = DIR }
+			BLJ = { white_peace = SDI }
+			BLJ = { white_peace = DEM }
+			BLJ = { white_peace = DIB }
+			
+			DIR = { set_cosmetic_tag = DK1 }
+			
+			EMO = { load_oob = EMO_arms }
+			DAR = { load_oob = DAR_arms }
+			FRE = { load_oob = FRE_arms }
+			
+			DIB = {
+				transfer_state = 790
+				transfer_state = 794
+				transfer_state = 795
+				transfer_state = 786
+				transfer_state = 789
+				transfer_state = 261
+				transfer_state = 796
+				transfer_state = 263
+			}
+			DAR = {
+				transfer_state = 285
+				add_state_core = 285
+			}
+			FRE = {
+				transfer_state = 797
+				add_state_core = 797
+			}
+			EMO = {
+				transfer_state = 288
+				transfer_state = 286
+				transfer_state = 287
+				add_state_core = 288
+				add_state_core = 286
+				add_state_core = 287
+				
+				promote_character = {
+					character = EMO_Detskitch_Pukesch
+				}
+			}
+			BLJ = {
+				transfer_state = 256
+				transfer_state = 257
+				transfer_state = 258
+				transfer_state = 259
+				transfer_state = 260
+			}
+			REK = {
+				transfer_state = 265
+				transfer_state = 266
+				transfer_state = 791
+			}
+		}
+	}
 }

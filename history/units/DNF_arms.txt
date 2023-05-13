@@ -1,0 +1,192 @@
+division_template = {
+	name = "Mechanized Division"
+
+	division_names_group = DNF_inf_01
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "People's Militia"
+
+	division_names_group = DNF_inf_02
+
+	regiments = {
+		jeep = { x = 0 y = 0 }
+		jeep = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Armed Division"
+
+	division_names_group = DNF_arm_01
+
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }
+		modern_armor = { x = 1 y = 0 }
+		modern_armor = { x = 1 y = 1 }
+		jeep = { x = 2 y = 0 }
+		jeep = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "Armed Division"
+		location = 10069
+		division_template = "Armed Division"
+		start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Mechanized Division"
+		location = 10069
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Mechanized Division"
+		location = 10069
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Mechanized Division"
+		location = 10069
+		division_template = "Mechanized Division"
+		start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 10069
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	#18
+}

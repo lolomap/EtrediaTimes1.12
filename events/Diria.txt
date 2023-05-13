@@ -668,3 +668,133 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = dirnews.19
+	title = dirnews.19.t
+	desc = dirnews.19.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.19.a
+		DEM = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = DEM_committe
+				desc = "DEM_committe_desc"
+				picture = "gfx/leaders/DEM/portrait_DEM_committe.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+				}
+			}
+			add_political_power = -150
+			add_ideas = DIR_collapse
+		}
+	}
+}
+country_event = {
+	id = dirnews.20
+	title = dirnews.20.t
+	desc = dirnews.20.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = DEM
+    }
+
+	option = {
+	name = dirnews.20.a
+		DEM = {
+			add_political_power = -25
+			add_war_support = 0.05
+		}
+	}
+}
+country_event = {
+	id = dirnews.21
+	title = dirnews.21.t
+	desc = dirnews.21.d
+	picture = GFX_news_even
+	
+    fire_only_once = yes
+
+	trigger = {
+        TAG = DEM
+		DEM = { has_idea = DIR_collapse }
+		DIR = { has_idea = DIR_collapse }
+    }
+	mean_time_to_happen = {
+        days = 10
+    }
+
+	option = {
+	name = dirnews.21.a
+		hidden_effect = {
+			DEM = { white_peace = DIR }
+			DEM = { white_peace = SDI }
+			DEM = { white_peace = BLJ }
+			DEM = { white_peace = DIB }
+			SDI = { white_peace = DIR }
+			SDI = { white_peace = BLJ }
+			SDI = { white_peace = DEM }
+			SDI = { white_peace = DIB }
+			
+			DEM = { set_cosmetic_tag = DK2 }
+			
+			DNF = { load_oob = DNF_arms }
+			EDC = { load_oob = EDC_arms }
+			MOU = { load_oob = MOU_arms }
+			HEK = { load_oob = HEK_arms }
+			NZM = { load_oob = NZM_arms }
+			
+			DNF = {
+				transfer_state = 280
+				transfer_state = 284
+				transfer_state = 278
+				add_state_core = 280
+				add_state_core = 284
+				add_state_core = 278
+			}
+			EDC = {
+				transfer_state = 272
+				transfer_state = 271
+				add_state_core = 272
+				add_state_core = 271
+			}
+			NZM = {
+				transfer_state = 277
+				add_state_core = 277
+			}
+			MOU = {
+				transfer_state = 276
+				transfer_state = 305
+				add_state_core = 276
+				add_state_core = 305
+			}
+			HEK = {
+				transfer_state = 281
+				transfer_state = 282
+			}
+			SDI = {
+				transfer_state = 270
+				transfer_state = 269
+				transfer_state = 268
+				transfer_state = 267
+				transfer_state = 283
+				add_state_core = 270
+				add_state_core = 269
+				add_state_core = 268
+				add_state_core = 267
+				add_state_core = 283
+			}
+		}
+	}
+}

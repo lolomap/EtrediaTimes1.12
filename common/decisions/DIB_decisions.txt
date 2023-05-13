@@ -1,0 +1,108 @@
+DIB_dirian_civil_war = {
+	DIB_open_reserves = {
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 60
+		visible = {
+			original_tag = DIB
+			OR = {
+				DIB = { has_war_with = DIR }
+				DIB = { has_war_with = DEM }
+			}
+		}
+		available = {
+			has_army_manpower = {
+				size < 100000
+			}
+		}
+		
+		complete_effect = {
+			DIB = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 50
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	DIB_assassination_on_democrat = {
+		fire_only_once = no
+		cost = 50
+		days_re_enable = 30
+		visible = {
+			original_tag = DIB
+			has_completed_focus = DIB_democrat_enemy
+			NOT = { has_country_flag = assassination_was_succes_democrat }
+		}
+		available = {
+			DIB = {
+				controls_state = 262
+				controls_state = 793
+				controls_state = 790
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				random_list = {
+					30 = {
+						DEM = { country_event = { id = dirnews.19 days = 5 } }
+						DIB = { country_event = { id = dsnr.2 days = 5 } }
+					}
+					70 = {
+						DEM = { country_event = { id = dirnews.20 days = 5 } }
+						DIB = { country_event = { id = dsnr.3 days = 5 } }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DIB_assassination_on_communist = {
+		fire_only_once = no
+		cost = 50
+		days_re_enable = 30
+		visible = {
+			original_tag = DIB
+			has_completed_focus = DIB_traitor_enemy
+			NOT = { has_country_flag = assassination_was_succes_communist }
+		}
+		available = {
+			DIB = {
+				controls_state = 262
+				controls_state = 793
+				controls_state = 790
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				random_list = {
+					50 = {
+						DIR = { country_event = { id = dircom.30 days = 5 } }
+						DIB = { country_event = { id = dsnr.4 days = 5 } }
+					}
+					50 = {
+						DIR = { country_event = { id = dircom.31 days = 5 } }
+						DIB = { country_event = { id = dsnr.5 days = 5 } }
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

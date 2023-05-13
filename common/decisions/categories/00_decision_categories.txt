@@ -25,6 +25,11 @@ SAF_anti_colonialist_crusade = {
 		original_tag = SAF
 	}
 }
+DIB_dirian_civil_war = {
+	allowed = {
+		original_tag = DIB
+	}
+}
 
 war_measures = {
 	icon = generic_propaganda

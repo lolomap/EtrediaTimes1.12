@@ -44,13 +44,5 @@ set_popularities = {
 
 #
 
-recruit_character = ERI_alexander_walker
-
-recruit_character = ERI_john_evans
-
-recruit_character = ERI_alexander_williams
-
-recruit_character = ERI_jim_jones
-
 recruit_character = ERI_zander_de_vries
 

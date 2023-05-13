@@ -12,16 +12,15 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-			arms_factory = 0
 
 		}
 		add_core_of = DIR
 		add_core_of = BLJ
 		victory_points = {
-			11673 1 
+			11673 2
 		}
 		victory_points = {
-			11419 1 
+			11352 1 
 		}
 
 	}

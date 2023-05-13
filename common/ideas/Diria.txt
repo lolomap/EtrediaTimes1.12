@@ -229,5 +229,26 @@ ideas = {
 			}
 	}
 	
+	DIR_last_fight_of_Diria = {
+		picture = hol_liberation
+		allowed = {
+			always = no
+		}
+		cancel = {
+			has_war = no
+		}
+		removal_cost = -1
+		modifier = {
+			ai_focus_defense_factor = 1
+			war_support_factor = 0.15
+			surrender_limit = 0.25
+		}
+		targeted_modifier = {
+			tag = EIK
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+	}
+	
 	}
 }

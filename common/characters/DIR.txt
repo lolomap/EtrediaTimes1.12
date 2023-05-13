@@ -41,6 +41,20 @@ characters={
 			id=-1
 		}
 	}
+	DIR_Detskitch_Pukesch={
+		name="Detskitch Pukesch"
+		portraits={
+			civilian={
+				large="gfx/leaders/DIR/portrait_Detskitch_Pukesch.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=absolutism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	DIR_keren_lopuskay={
 		name="Keren Lopuskay"
 		portraits={

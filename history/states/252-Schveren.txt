@@ -13,15 +13,13 @@ state={
 	history={
 		owner = KAR
 		buildings = {
-			infrastructure = 2
-                        industrial_complex = 0
-                        arms_factory = 0
-                        dockyard = 0
+			infrastructure = 3
+                        industrial_complex = 1
 		}
 		add_core_of = KAR
 		add_core_of = FSF
 		victory_points = {
-			10987 1
+			10790 5
 		}
 
 	}
