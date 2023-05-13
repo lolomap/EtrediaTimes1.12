@@ -194,17 +194,6 @@ on_actions = {
                     FBU = {set_country_flag = sweet_home_ach}
                 }
             }
-            else_if = { limit = {tag = CTE}
-
-                set_temp_variable = {cnum = 0}
-                every_country = {
-                    add_to_temp_variable = {cnum = 1}
-                }
-                if = {
-                    limit = {check_variable = {cnum = 1}}
-                    CTE = {set_country_flag = cteven_total_ach}
-                }
-            }
             else_if = { limit = {tag = TAL}
 
                 if = {
@@ -221,30 +210,6 @@ on_actions = {
                         NOT = {country_exists = CHE}
                     }
                     set_country_flag = talshik_ach
-                }
-            }
-            else_if = { limit = {tag = BAE}
-
-                if = {
-                    limit = {FROM = {tag = EIK}}
-                    set_country_flag = bae_eik_kill
-                }
-                else_if = {
-                    limit = {FROM = {OR = {tag = DIR tag = DEM}}}
-                    set_country_flag = bae_dir_kill
-                }
-                else_if = {
-                    limit = {FROM = {tag = TOL}}
-                    set_country_flag = bae_tol_kill
-                }
-
-                if = {
-                    limit = {
-                        has_country_flag = bae_eik_kill
-                        has_country_flag = bae_dir_kill
-                        has_country_flag = bae_tol_kill
-                    }
-                    set_country_flag = hold_my_beer_ach
                 }
             }
             else_if = { limit = {tag = TRP}
@@ -294,16 +259,6 @@ on_actions = {
                         NOT = {country_exists = SDI}
                     }
                     set_country_flag = chuchkhe_ach
-                }
-            }
-            else_if = { limit = {OR = {tag = LOK tag = BOK}
-
-                if = {
-                    limit = {
-                        FROM = {OR = {tag = LOK tag = BOK}}
-                        ROOT = {has_idea = scraping_the_barrel}
-                    }
-                    set_country_flag = loka_ach
                 }
             }
             
@@ -378,62 +333,6 @@ on_actions = {
                     }
                 }
             }
-
-            if = {
-                limit = {
-                    ROOT = {
-                        any_owned_state = {is_core_of = ROOT is_on_continent = asia}
-                    }
-                }
-                if = {
-                    limit = {
-                        all_state = {
-                            OR = {
-                                NOT = {is_on_continent = asia}
-                                controller = ROOT
-                            }
-                        }
-                    }
-                    ROOT = {set_country_flag = plot_twist_ach}
-                }
-            }
-            if = {
-                limit = {
-                    FROM = {
-                        any_owned_state = {OR = {is_on_continent = africa is_on_continent = north_america}}
-                    }
-                }
-                if = {
-                    limit = {
-                        ROOT = {
-                            NOT = {any_owned_state = {OR = {is_on_continent = africa is_on_continent = north_america}}}
-                        }
-                        all_state = {
-                            OR = {
-                                AND = {
-                                    NOT = {is_on_continent = africa}
-                                    NOT = {is_on_continent = north_america}
-                                }
-                                controller = ROOT
-                            }
-                        }
-                    }
-                    ROOT = {set_country_flag = colonize_ach}
-                }
-            }
-        }
-    }
-
-    on_release_as_free = {
-        effect = {
-            if = {
-                limit = {
-                    all_country = {
-                        num_occupied_states < 1
-                    }
-                }
-                set_global_flag = minor_ach
-            }
         }
     }
 
@@ -446,22 +345,7 @@ on_actions = {
             if = {
                 limit = {has_government = fascism}
                 set_country_flag = fascism_move
-                if = {
-                    limit = {
-                        UCB = {has_completed_focus = UCB_fasc_podelit}
-                    }
-                    if = {
-                        limit = {
-                            all_country = {
-                                OR = {
-                                    NOT = {any_owned_state = {is_on_continent = etredia}}
-                                    has_government = fascism
-                                }
-                            }
-                        }
-                        UCB = {set_country_flag = narabel_dream_ach}
-                    }
-                }
+                
             }
             else_if = {
                 limit = {has_government = neutrality}
@@ -488,21 +372,6 @@ on_actions = {
                 set_country_flag = experiments_ach
             }
 
-        }
-    }
-
-    on_state_control_changed = {
-        effect = {
-            if = {
-                limit = {controls_state = 319}
-                if = {
-                    limit = {
-                        tag = TOL
-                        date < 2018.1.1
-                    }
-                    set_country_flag = tolch_ach
-                }
-            }
         }
     }
 
@@ -541,15 +410,6 @@ on_actions = {
                     }
                     set_country_flag = beldpo_ach
                 }
-            }
-        }
-    }
-
-    on_offer_join_faction = {
-        effect = {
-            if = {
-                limit = {FROM = {has_government = democratic} ROOT = {tag = EIK}}
-                FROM = {set_country_flag = whoami_ach}
             }
         }
     }

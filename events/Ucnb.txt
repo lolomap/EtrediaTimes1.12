@@ -666,12 +666,20 @@ country_event = {
         }
         
         var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}}
+
+        ai_chance = {
+            base = 100
+        }
     }
     option = {
         name = ucnb.27.b
 
         add_political_power = -75
         var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = -0.1 tooltip = add_region_opposition_tooltip}}
+
+        ai_chance = {
+            base = 0
+        }
     }
 }
 country_event = {

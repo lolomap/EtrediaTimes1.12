@@ -1040,11 +1040,11 @@ on_actions = {
             }
 
             # Рост оппозиции
-			set_temp_variable = {dem_opposition_delta = 0.07}
-			set_temp_variable = {fas_opposition_delta = 0.07}
-			set_temp_variable = {neu_opposition_delta = 0.07}
-			set_temp_variable = {com_opposition_delta = 0.07}
-			set_temp_variable = {mon_opposition_delta = 0.07}
+			set_temp_variable = {dem_opposition_delta = 1.5}
+			set_temp_variable = {fas_opposition_delta = 1.5}
+			set_temp_variable = {neu_opposition_delta = 1.5}
+			set_temp_variable = {com_opposition_delta = 1.5}
+			set_temp_variable = {mon_opposition_delta = 1.5}
 
 			multiply_temp_variable = {dem_opposition_delta = dem_opposition_factor}
 			multiply_temp_variable = {fas_opposition_delta = fas_opposition_factor}
@@ -1423,20 +1423,20 @@ on_actions = {
         effect = {
             if = {
                 limit = {
-                    FROM = {
-                        OR = {
-                            tag = EIK
-                            tag = UCB
+                    OR = {
+                        FROM = {
+                            OR = {
+                                tag = EIK
+                                tag = UCB
+                            }
+                        }
+                        ROOT = {
+                            OR = {
+                                tag = EIK
+                                tag = UCB
+                            }
                         }
                     }
-                    ROOT = {
-                        OR = {
-                            tag = EIK
-                            tag = UCB
-                        }
-                    }
-                    EIK = {is_in_faction = yes}
-                    UCB = {is_in_faction = yes}
                 }
                 set_global_flag = WORLD_WAR
             }
