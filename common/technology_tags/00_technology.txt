@@ -150,6 +150,9 @@ technology_folders = {
 	electronics_folder = {
 		ledger = civilian
 	}
+    electronics_folder2 = {
+		ledger = civilian
+	}
 	#secret_weapons_folder
 }
 
