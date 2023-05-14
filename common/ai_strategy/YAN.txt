@@ -10,12 +10,12 @@
 # protect
 # influence
 
-less_trucks_1_YAN = {
+less_tanks_YAN = {
     allowed = {
 		original_tag = YAN
     }
 	enable = {
-		date < 2014.1.1
+		date > 2014.1.1
 	}
 	abort = { 
 		date > 2017.1.1
@@ -25,6 +25,12 @@ less_trucks_1_YAN = {
 		type = role_ratio
 		id = infantry
 		value = 30
+	}
+	
+	ai_strategy = { 
+		type = role_ratio
+		id = modern_armor
+		value = -20
 	}
 	
 	ai_strategy = { 
@@ -48,7 +54,7 @@ less_trucks_1_YAN = {
 	ai_strategy = {
 		type = template_prio
 		id = motorized
-		value = 20
+		value = 10
 	}
 
 	ai_strategy = {
@@ -60,7 +66,7 @@ less_trucks_1_YAN = {
 	ai_strategy = {
 		type = template_prio
 		id = infantry
-		value = 40
+		value = 50
 	}
 	
 	ai_strategy = {
@@ -72,7 +78,7 @@ less_trucks_1_YAN = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = 5
+		value = 8
 	}
 }
 
