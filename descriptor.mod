@@ -49,6 +49,7 @@ replace_path="common/country_leader"
 replace_path="common/continuous_focus"
 replace_path="common/scripted_triggers"
 replace_path="common/country_tag_aliases"
+replace_path="gfx/flags"
 tags={
 	"Map"
 	"Utilities"
