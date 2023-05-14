@@ -194,13 +194,24 @@ on_actions = {
                     limit = {check_variable = {UCB.sep_@THIS > 0.98}}
                     UCB = {
                         if = {
-                            limit = {is_ai = no}
+                            limit = {PREV = {tag = KOL}}
+                            country_event = {id = ucnb.3 days = 1}
+                        }
+                        else_if = {
+                            limit = {PREV = {tag = KIM}}
+                            
+                            country_event = {id = ucnb.sep1 days = 1}
+                        }
+                        else_if = {
+                            limit = {
+                                OR = {
+                                    is_ai = no
+                                    has_war = yes
+                                }
+                            }
                             set_variable = {country_to_release = PREV}
                             country_event = {id = onactev.13 days = 1}
                         }
-                        #else = {
-                        #    #
-                        #}
                     }
                 }
 			}

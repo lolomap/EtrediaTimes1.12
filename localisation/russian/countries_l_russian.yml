@@ -1234,6 +1234,8 @@
  SBU_ISH_neutrality_ADJ: "Савахлерск."
  FBU_democratic:0 "Свободный Сибурленд"
  FBU_democratic_DEF:0 "Св. Сибурленд"
+ FBU_fascism:0 "Святая Сибурия"
+ FBU_fascism_DEF:0 "Св. Сибурия"
  EMF_fascism:0 "Монфуйская Демократическая Республика"
  EMF_fascism_DEF:0 "МДР"
  EMF_democratic:0 "Восточная Монфуя"
