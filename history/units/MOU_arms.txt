@@ -1,0 +1,103 @@
+division_template = {
+	name = "People's Militia"
+
+	division_names_group = MOU_inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Mountain Spetcnaz"
+
+	division_names_group = MOU_mnt_01
+
+	regiments = {
+		jeep = { x = 0 y = 0 }
+		jeep = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "People's Militia"
+		location = 8576
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 8576
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 8576
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 8576
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 8576
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 8576
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "People's Militia"
+		location = 8576
+		division_template = "People's Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+	division = {
+		name = "Mountain Spetcnaz"
+		location = 8576
+		division_template = "Mountain Spetcnaz"
+		start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+	division = {
+		name = "Mountain Spetcnaz"
+		location = 8576
+		division_template = "Mountain Spetcnaz"
+		start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+	#9
+}

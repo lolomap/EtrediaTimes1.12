@@ -1,7 +1,7 @@
 state={
 	id=797
 	name="STATE_797"
-	manpower=100
+	manpower=310000
 	state_category=rural
 	resources={
 		steel=54.000

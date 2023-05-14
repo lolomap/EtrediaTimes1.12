@@ -1,0 +1,16 @@
+characters={
+	EMO_Detskitch_Pukesch={
+		name="Detskitch Pukeshch"
+		portraits={
+			civilian={
+				large="gfx/leaders/DIR/portrait_Detskitch_Pukesch.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=absolutism
+			expire="2028.1.1.1"
+			id=-1
+		}
+	}
+}

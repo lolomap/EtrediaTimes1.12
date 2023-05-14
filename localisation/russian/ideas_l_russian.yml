@@ -369,6 +369,8 @@
  DIR_fight_for_idea1:0 "Война за идею"
  DIR_fight_for_idea2:0 "Война за идею"
  DIR_fight_for_idea3:0 "Война за идею"
+ DIR_collapse:0 "Коллапс правительства"
+ DIR_last_fight_of_Diria:0 "Последняя битва за Дирию"
  DEM_free_market_idea:0 "Законы свободного рынка"
  DEM_fight_for_throne:0 "Битва за трон"
  DEM_production_restructurize_idea:0 "Реструктуризация производства"
