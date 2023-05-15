@@ -130,6 +130,10 @@ infantry_DIR = {
 				factor = 2
 				num_of_factories < 20
 			}
+			modifier = {
+			factor = 0
+			NOT = { has_idea = DIR_revolt }
+			}
 		}
 		
 		target_width = 14.0
@@ -212,6 +216,10 @@ infantry_DIR = {
 			modifier = {
 				factor = 0
 				num_of_factories < 30
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_idea = DIR_revolt }
 			}
 		}
 		

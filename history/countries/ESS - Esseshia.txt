@@ -52,19 +52,11 @@ set_popularities = {
 
 #
 
-recruit_character = ESS_lucas_roberts
-
 recruit_character = ESS_obes_astro
 
 recruit_character = ESS_mar_dermontie
 
 recruit_character = ESS_horiza_lyuis
 
-recruit_character = ESS_ivan_vissarionovich
-
-recruit_character = ESS_kendri_losental
-
 recruit_character = ESS_mino_kostneregir
-
-recruit_character = ESS_sergey_kazhatov
 
