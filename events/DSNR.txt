@@ -152,14 +152,6 @@ country_event = {
 		}
 		DIR = { set_cosmetic_tag = DK1 }
 		DEM = { set_cosmetic_tag = DK2 }
-			DNF = { load_oob = DNF_arms }
-			EDC = { load_oob = EDC_arms }
-			MOU = { load_oob = MOU_arms }
-			HEK = { load_oob = HEK_arms }
-			NZM = { load_oob = NZM_arms }
-			EMO = { load_oob = EMO_arms }
-			DAR = { load_oob = DAR_arms }
-			FRE = { load_oob = FRE_arms }
 		DIB = {
 			transfer_state = 790
 			transfer_state = 794
@@ -241,5 +233,26 @@ country_event = {
 			transfer_state = 266
 			transfer_state = 791
 		}
+		DNF = { load_oob = DNF_arms }
+		EDC = { load_oob = EDC_arms }
+		MOU = { load_oob = MOU_arms }
+		HEK = { load_oob = HEK_arms }
+		NZM = { load_oob = NZM_arms }
+		EMO = { load_oob = EMO_arms }
+		DAR = { load_oob = DAR_arms }
+		FRE = { load_oob = FRE_arms }
+		
+		EMO = { add_ideas = DIR_revolt_dop }
+		DAR = { add_ideas = DIR_revolt_dop }
+		FRE = { add_ideas = DIR_revolt_dop }
+		DIR = { add_ideas = DIR_revolt_dop }
+		DNF = { add_ideas = DIR_revolt_dop }
+		EDC = { add_ideas = DIR_revolt_dop }
+		MOU = { add_ideas = DIR_revolt_dop }
+		HEK = { add_ideas = DIR_revolt_dop }
+		NZM = { add_ideas = DIR_revolt_dop }
+		DEM = { add_ideas = DIR_revolt_dop }
+		SDI = { add_ideas = DIR_revolt_dop }
+		DIB = { add_ideas = DIR_revolt_dop }
 	}
 }

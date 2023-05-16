@@ -40,6 +40,46 @@ ideas = {
 				join_faction_tension = 1.00
 			}
 		}
+		
+		DIR_revolt_dop = {
+			picture = diria_revolt_dop
+
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				has_country_flag = diria_united
+			}
+
+			on_remove = {
+				delete_dirian_militia = yes
+			}
+			
+			removal_cost = -1
+
+			rule = {
+				can_join_factions = no
+				can_send_volunteers = no
+				can_force_government = no
+				can_puppet = no
+			}
+
+			modifier = {
+				planning_speed = -0.1
+				army_org_factor = -0.05
+				army_attack_factor = -0.15
+				surrender_limit = 0.15
+				supply_factor = 0.15
+				out_of_supply_factor = -0.25
+				attrition = -0.25
+				join_faction_tension = 1.00
+			}
+		}
 
 
 		DIR_KAR_support = {

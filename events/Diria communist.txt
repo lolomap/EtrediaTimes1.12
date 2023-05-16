@@ -980,10 +980,6 @@ country_event = {
 			
 			DIR = { set_cosmetic_tag = DK1 }
 			
-			EMO = { load_oob = EMO_arms }
-			DAR = { load_oob = DAR_arms }
-			FRE = { load_oob = FRE_arms }
-			
 			DIB = {
 				transfer_state = 790
 				transfer_state = 794
@@ -1026,6 +1022,15 @@ country_event = {
 				transfer_state = 266
 				transfer_state = 791
 			}
+			EMO = { load_oob = EMO_arms }
+			DAR = { load_oob = DAR_arms }
+			FRE = { load_oob = FRE_arms }
+			
+			EMO = { add_ideas = DIR_revolt_dop }
+			DAR = { add_ideas = DIR_revolt_dop }
+			FRE = { add_ideas = DIR_revolt_dop }
+			DIR = { add_ideas = DIR_revolt_dop }
+			DIB = { add_ideas = DIR_revolt_dop }
 		}
 	}
 }

@@ -27,7 +27,10 @@ infantry_DIR = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_idea = DIR_revolt }
+			OR = {
+				NOT = { has_idea = DIR_revolt }
+				NOT = { has_idea = DIR_revolt_dop }
+			}
 		}
 	}
 
@@ -132,7 +135,10 @@ infantry_DIR = {
 			}
 			modifier = {
 			factor = 0
-			NOT = { has_idea = DIR_revolt }
+			OR = {
+				NOT = { has_idea = DIR_revolt }
+				NOT = { has_idea = DIR_revolt_dop }
+			}
 			}
 		}
 		
@@ -219,7 +225,10 @@ infantry_DIR = {
 			}
 			modifier = {
 				factor = 0
+				OR = {
 				NOT = { has_idea = DIR_revolt }
+				NOT = { has_idea = DIR_revolt_dop }
+				}
 			}
 		}
 		
@@ -324,7 +333,10 @@ armor_DIR = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_idea = DIR_revolt }
+			OR = {
+				NOT = { has_idea = DIR_revolt }
+				NOT = { has_idea = DIR_revolt_dop }
+			}
 		}
 	}
 	
