@@ -979,7 +979,7 @@ focus_tree = {
 		x = 38
 		y = 0
 
-		available = {
+		allow_branch = {
 			custom_trigger_tooltip = {
 				tooltip = sbu_try_fail_tooltip
 				has_country_flag = sbu_try_fail

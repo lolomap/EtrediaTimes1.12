@@ -1,6 +1,6 @@
 ﻿l_english:
- autonomy_satellite:0 "Satellite"
- autonomy_vassal:0 "Vassal"
- autonomy_wtt_imperial_associate:0 "Partner of the Empire"
- autonomy_wtt_imperial_protectorate:0 "Protectorate of the Empire"
- autonomy_wtt_imperial_subject:0 "Subject of the Empire"
+  autonomy_dependent: "Dependent state"
+  autonomy_sphere: "In sphere of influence"
+  autonomy_autonomy: "Autonomy as part"
+  autonomy_subject: "Subject"
+  puppet_initiator_desc:1 "$COUNTRY|UY$ influences states or controls autonomous regions"

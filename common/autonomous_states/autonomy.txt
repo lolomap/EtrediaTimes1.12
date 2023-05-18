@@ -1,7 +1,7 @@
 autonomy_state = {
-	id = autonomy_dominion
+	id = autonomy_autonomy
 	
-	min_freedom_level = 0.75
+	min_freedom_level = 0.55
 	
 	manpower_influence = 0.2
 	
@@ -29,11 +29,10 @@ autonomy_state = {
 	}
 
 	allowed = {
-        NOT = {
-            OR = {
-                tag = EGR
-            }
+        OR = {
+            tag = EGR
         }
+
 		has_dlc = "Together for Victory"
 
 		if = {
@@ -48,10 +47,5 @@ autonomy_state = {
 	}
 
 	can_lose_level = {
-		if = {
-			limit = {
-
-			}
-		}
 	}
 }

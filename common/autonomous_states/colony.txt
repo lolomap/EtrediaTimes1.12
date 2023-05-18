@@ -36,6 +36,11 @@ autonomy_state = {
 	}
 
 	allowed = {
+        NOT = {
+            OR = {
+                tag = EGR
+            }
+        }
 		has_dlc = "Together for Victory"
 
 		if = {
