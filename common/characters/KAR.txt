@@ -3,7 +3,7 @@ characters={
 		name="Parlamentum"
 		portraits={
 			civilian={
-				large="GFX_Portrait_Europe_Generic_2"
+				large="gfx/leaders/KAR/portrait_kar_democratic.dds"
 			}
 		}
 		country_leader={
