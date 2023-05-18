@@ -45,6 +45,8 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = FRE_no_government
+
 set_popularities = {
 	neutrality = 6
         democratic = 0

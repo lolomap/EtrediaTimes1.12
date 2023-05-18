@@ -749,12 +749,6 @@ country_event = {
 			
 			DEM = { set_cosmetic_tag = DK2 }
 			
-			DNF = { load_oob = DNF_arms }
-			EDC = { load_oob = EDC_arms }
-			MOU = { load_oob = MOU_arms }
-			HEK = { load_oob = HEK_arms }
-			NZM = { load_oob = NZM_arms }
-			
 			DNF = {
 				transfer_state = 280
 				transfer_state = 284
@@ -795,6 +789,19 @@ country_event = {
 				add_state_core = 267
 				add_state_core = 283
 			}
+			DNF = { load_oob = DNF_arms }
+			EDC = { load_oob = EDC_arms }
+			MOU = { load_oob = MOU_arms }
+			HEK = { load_oob = HEK_arms }
+			NZM = { load_oob = NZM_arms }
+			
+			DNF = { add_ideas = DIR_revolt_dop }
+			EDC = { add_ideas = DIR_revolt_dop }
+			MOU = { add_ideas = DIR_revolt_dop }
+			HEK = { add_ideas = DIR_revolt_dop }
+			NZM = { add_ideas = DIR_revolt_dop }
+			DEM = { add_ideas = DIR_revolt_dop }
+			SDI = { add_ideas = DIR_revolt_dop }
 		}
 	}
 }
