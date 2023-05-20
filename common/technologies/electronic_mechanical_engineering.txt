@@ -2,15 +2,15 @@ technologies = {
 	electronic_proto = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.015
 		
 		path = {
 			leads_to_tech = electronic_start 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2
+		start_year = 1990
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 0 }
@@ -36,7 +36,7 @@ technologies = {
     electronic_start = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.015
 		
 		path = {
 			leads_to_tech = computers_proto 
@@ -51,8 +51,8 @@ technologies = {
             research_cost_coeff = 1
         }
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2.2
+		start_year = 1996
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 2 }
@@ -78,15 +78,15 @@ technologies = {
     computers_proto = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.015
 		
 		path = {
 			leads_to_tech = processors_proto 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2.5
+		start_year = 2000
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 4 }
@@ -112,10 +112,10 @@ technologies = {
 	encription_start = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		encryption = 1
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 1.5
+		start_year = 2008
 		folder = {
 			name = electronics_folder
 			position = { x = -2 y = 2 }
@@ -141,10 +141,10 @@ technologies = {
 	decription_start = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		decryption = 1
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 1.5
+		start_year = 2008
 		folder = {
 			name = electronics_folder
 			position = { x = 2 y = 2 }
@@ -170,7 +170,7 @@ technologies = {
     processors_proto = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.015
 		
 		path = {
 			leads_to_tech = cyber_safety 
@@ -185,8 +185,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2.5
+		start_year = 2008
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 6 }
@@ -212,7 +212,7 @@ technologies = {
     cyber_safety = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		encryption = 1
 		
 		
 		research_cost = 1
@@ -242,7 +242,11 @@ technologies = {
     geo_satellites = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		local_resources_factor = 0.05
+		recon_factor = 0.03
+		planning_speed = 0.03
+		supply_node_range = 0.05
+
 		
 		path = {
 			leads_to_tech = satellites_modern 
@@ -253,8 +257,8 @@ technologies = {
             research_cost_coeff = 1
         }
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 3.5
+		start_year = 2008
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 6 }
@@ -280,14 +284,14 @@ technologies = {
     satellites_maps = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		local_resources_factor = 0.08
 		
 		path = {
 			leads_to_tech = satellites_maps2 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
+		research_cost = 1.5
 		start_year = 2014
 		folder = {
 			name = electronics_folder
@@ -314,7 +318,7 @@ technologies = {
     computers_90s = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.015
 		
 		path = {
 			leads_to_tech = electronic_modern 
@@ -324,7 +328,7 @@ technologies = {
             leads_to_tech = satellites_modern
         }
 		
-		research_cost = 1
+		research_cost = 2.5
 		start_year = 2014
 		folder = {
 			name = electronics_folder
@@ -350,8 +354,9 @@ technologies = {
 
     satellites_modern = {
 
-		# small boost to research speed
-		research_speed_factor = 0.03
+		recon_factor = 0.03
+		planning_speed = 0.03
+		supply_node_range = 0.05
 		
 		path = {
 			leads_to_tech = satellites_maps2 
@@ -362,7 +367,7 @@ technologies = {
             research_cost_coeff = 1
         }
 		
-		research_cost = 1
+		research_cost = 2
 		start_year = 2014
 		folder = {
 			name = electronics_folder
@@ -389,15 +394,15 @@ technologies = {
     satellites_maps2 = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		local_resources_factor = 0.012
 		
         path = {
             leads_to_tech = satellites_maps3
             research_cost_coeff = 1
         }
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 1.5
+		start_year = 2016
 		folder = {
 			name = electronics_folder
 			position = { x = 6 y = 8 }
@@ -423,7 +428,7 @@ technologies = {
     electronic_modern = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.015
 		
 		path = {
 			leads_to_tech = computer_encription 
@@ -438,8 +443,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2.5
+		start_year = 2016
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 10 }
@@ -524,8 +529,10 @@ technologies = {
 
     programs_modern = {
 
-		# small boost to research speed
-		research_speed_factor = 0.03
+		recon_factor = 0.03
+		planning_speed = 0.03
+		supply_node_range = 0.05
+
 		
 		path = {
             leads_to_tech = satellites_maps3
@@ -536,8 +543,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
-		start_year = 2014
+		research_cost = 1.5
+		start_year = 2020
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 10 }
@@ -562,12 +569,11 @@ technologies = {
 
     satellites_maps3 = {
 
-		# small boost to research speed
-		research_speed_factor = 0.03
+		local_resources_factor = 0.025
 		
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 1.5
+		start_year = 2020
 		folder = {
 			name = electronics_folder
 			position = { x = 6 y = 10 }
@@ -593,7 +599,7 @@ technologies = {
     processors_advanced = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.015
 		
 		path = {
 			leads_to_tech = computers_army 
@@ -608,8 +614,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
         
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2.5
+		start_year = 2018
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 12 }
@@ -736,16 +742,22 @@ technologies = {
 
     satellites_army = {
 
-		# small boost to research speed
-		research_speed_factor = 0.03
+		supply_factor = 0.1
+		truck_attrition_factor = -0.1
+		supply_node_range = 0.08
+		coordination_bonus = 0.05
+		initiative_factor = 0.08
+		recon_factor = 0.1
+		planning_speed = 0.1
+
 		
         path = {
 			leads_to_tech = communications_advanced 
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2.5
+		start_year = 2018
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 12 }
@@ -872,12 +884,17 @@ technologies = {
 
     communications_advanced = {
 
-		# small boost to research speed
-		research_speed_factor = 0.03
+		supply_factor = 0.1
+		truck_attrition_factor = -0.1
+		supply_node_range = 0.08
+		coordination_bonus = 0.05
+		initiative_factor = 0.08
+		recon_factor = 0.1
+		planning_speed = 0.1
 		
 		
-		research_cost = 1
-		start_year = 2014
+		research_cost = 2.5
+		start_year = 2020
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 14 }
@@ -889,7 +906,7 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				date > "2015.1.1"
+				date > "2020.1.1"
 			}
 		}
 		
