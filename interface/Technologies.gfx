@@ -1633,9 +1633,18 @@ spriteTypes = {
 	### engineering TECH ###
 
 	SpriteType = {
+		name = "GFX_electronic_proto_medium"
+		texturefile = "gfx/interface/technologies/electronic_proto.dds"
+	}
+	SpriteType = {
+		name = "GFX_processors_proto_medium"
+		texturefile = "gfx/interface/technologies/processors_proto.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_nukes_medium"
 		texturefile = "gfx/interface/technologies/nukes.dds"
-	}	
+	}
 	
 	SpriteType = {
 		name = "GFX_jet_engines_medium"
