@@ -1886,6 +1886,57 @@ country_event = {
     }
 }
 
+country_event = {
+    id = onactev.16
+    title = onactev.16.t
+    desc = onactev.16.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+    hidden = yes
+
+    #trigger = {}
+    immediate = {
+        every_subject_country = {
+            if = {
+                limit = {has_autonomy_state = autonomy_sphere}
+                overlord = {
+                    set_autonomy = {
+                        target = PREV
+                        autonomy_state = autonomy_free
+                        end_wars = no
+                        end_civil_wars = no
+                    }
+                    set_variable = {PREV.ovl = THIS}
+                }
+                faction_leader = {remove_from_faction = PREV}
+                #country_event = {id = onactev.17 hours = 5}
+            }
+        }
+    }
+}
+
+country_event = {
+    id = onactev.17
+    title = onactev.17.t
+    desc = onactev.17.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+    hidden = yes
+
+    #trigger = {}
+    immediate = {
+        var:ovl = {
+            involve_sphere = yes
+            set_variable = {PREV.ovl = THIS}
+        }
+        
+    }
+}
+
 
 country_event = {
 	id = randev.11

@@ -4,8 +4,10 @@ autonomy_state = {
 	min_freedom_level = 0.85
 	
 	rule = {
+        can_be_called_to_war = no
 		can_not_declare_war = no
 		can_decline_call_to_war = yes
+        can_join_factions = no
 	}
 	
 	modifier = {
@@ -26,7 +28,7 @@ autonomy_state = {
 	}
 
 	allowed = {
-		OVERLORD = {check_variable = { world_influence > PREV.world_influence }}
+        OVERLORD = {NOT = {check_variable = { world_influence < PREV.world_influence }}}
 	}
 	
 	can_take_level = {

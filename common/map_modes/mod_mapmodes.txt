@@ -31,6 +31,40 @@ scripted_map_modes = {
         update_daily = no
     }
 
+    spheres_map = {
+        bottom = {
+            type = country
+
+            color = {
+                if = {
+                    limit = {FROM = {is_subject = yes}}
+                    FROM.OVERLORD = {
+                        set_temp_variable = { red = sc_R}
+                        set_temp_variable = { blue = sc_B }
+                        set_temp_variable = { green = sc_G }
+                        set_temp_variable = { alpha = 1.0 }  
+                    }
+                }
+                else_if = {
+                    limit = {FROM = {num_subjects > 0}}
+                    FROM = {
+                        set_temp_variable = { red = sc_R}
+                        set_temp_variable = { blue = sc_B }
+                        set_temp_variable = { green = sc_G }
+                        set_temp_variable = { alpha = 1.0 }  
+                    }
+                }
+                else = {
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+ 		    }
+        }
+        update_daily = no
+    }
+
     influence_map = {
         bottom = {
             type = country

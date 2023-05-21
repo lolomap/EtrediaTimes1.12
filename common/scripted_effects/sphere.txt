@@ -1,0 +1,59 @@
+involve_sphere = {
+    remove_from_array = {sphere_neighbors = PREV}
+    set_temp_variable = { overlordscope = THIS }
+    PREV = {
+        set_temp_variable = { spherescope = THIS }
+        for_each_scope_loop = {
+            array = neighbors
+            if = {
+                limit = {
+                    NOT = {
+                        is_neighbor_of = var:overlordscope
+                        var:overlordscope = {is_in_array = {sphere_neighbors = PREV}}
+                    }
+                }
+
+                var:overlordscope = {
+                    add_to_array = { sphere_neighbors = PREV }
+                    set_temp_variable = {sphere_cc = sphere_cost_@var:spherescope}
+                }
+                
+                
+                if = { limit = {check_variable = {sphere_cc = 0}}
+                    set_temp_variable = { sphere_cc = 75 }
+                }
+                add_to_temp_variable = { sphere_cc = 50 }
+                var:overlordscope = {set_variable = { sphere_cost_@PREV = sphere_cc }}
+            }
+        }
+    }
+
+    PREV = {
+        set_temp_variable = {rem = current_party_ideology_group}
+        set_temp_variable = {d = party_popularity_100@democratic}
+        set_temp_variable = {f = party_popularity_100@fascism}
+        set_temp_variable = {c = party_popularity_100@communism}
+        set_temp_variable = {n = party_popularity_100@neutrality}
+        set_temp_variable = {m = party_popularity_100@monarchism}
+    }
+    set_autonomy = {
+        target = PREV
+        autonomy_state = autonomy_sphere
+        end_wars = no
+        end_civil_wars = no
+    }
+    PREV = {
+        set_country_flag = SPHERE_STATE
+        
+        set_politics = {
+            ruling_party = var:rem
+        }
+        set_popularities = {
+            democratic = d
+            fascism = f
+            communism = c
+            neutrality = n
+            monarchism = m
+        }
+    }
+}

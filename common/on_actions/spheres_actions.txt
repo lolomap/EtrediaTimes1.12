@@ -1,0 +1,76 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            ELR = {SBU = {involve_sphere = yes}}
+            TRB = {SBU = {involve_sphere = yes}}
+            RGY = {SBU = {involve_sphere = yes}}
+
+            SKI = {MOA = {involve_sphere = yes}}
+            TOB = {MOA = {involve_sphere = yes}}
+
+            CTE = {OIK = {involve_sphere = yes}}
+            
+            LOK = {ATI = {involve_sphere = yes}}
+            BOK = {ATI = {involve_sphere = yes}}
+
+            LGH = {PAL = {involve_sphere = yes}}
+            NEV = {PAL = {involve_sphere = yes}}
+
+            every_possible_country = {
+                set_variable_to_random = sc_R
+                set_variable_to_random = sc_G
+                set_variable_to_random = sc_B
+            }
+        }
+    }
+
+    on_declare_war = {
+        effect = {
+            FROM = {
+                if = {
+                    limit = {has_autonomy_state = autonomy_sphere overlord = {NOT = {has_war_with = ROOT}}}
+                    overlord = {
+                        set_autonomy = {
+                            target = PREV
+                            autonomy_state = autonomy_free
+                            end_wars = no
+                            end_civil_wars = no
+                        }
+                        set_variable = {PREV.ovl = THIS}
+                        white_peace = ROOT
+                    }
+                    #country_event = {id = onactev.17 hours = 5}
+                }
+            }
+        }
+    }
+
+    on_peace = {
+        effect = {
+            if = {
+                limit = {has_variable = ovl is_subject = no}
+                country_event = onactev.17
+            }
+        }
+    }
+
+    on_create_faction = {
+        effect = {
+            country_event = onactev.16
+            FROM = {country_event = onactev.16}
+        }
+    }
+
+    on_offer_join_faction = {
+        effect = {
+            country_event = onactev.16
+            FROM = {country_event = onactev.16}
+        }
+    }
+    on_join_faction = {
+        effect = {
+            country_event = onactev.16
+            FROM = {country_event = onactev.16}
+        }
+    }
+}
