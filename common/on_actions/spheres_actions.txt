@@ -24,53 +24,5 @@ on_actions = {
         }
     }
 
-    on_declare_war = {
-        effect = {
-            FROM = {
-                if = {
-                    limit = {has_autonomy_state = autonomy_sphere overlord = {NOT = {has_war_with = ROOT}}}
-                    overlord = {
-                        set_autonomy = {
-                            target = PREV
-                            autonomy_state = autonomy_free
-                            end_wars = no
-                            end_civil_wars = no
-                        }
-                        set_variable = {PREV.ovl = THIS}
-                        white_peace = ROOT
-                    }
-                    #country_event = {id = onactev.17 hours = 5}
-                }
-            }
-        }
-    }
-
-    on_peace = {
-        effect = {
-            if = {
-                limit = {has_variable = ovl is_subject = no}
-                country_event = onactev.17
-            }
-        }
-    }
-
-    on_create_faction = {
-        effect = {
-            country_event = onactev.16
-            FROM = {country_event = onactev.16}
-        }
-    }
-
-    on_offer_join_faction = {
-        effect = {
-            country_event = onactev.16
-            FROM = {country_event = onactev.16}
-        }
-    }
-    on_join_faction = {
-        effect = {
-            country_event = onactev.16
-            FROM = {country_event = onactev.16}
-        }
-    }
+    
 }

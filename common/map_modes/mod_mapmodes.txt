@@ -46,7 +46,29 @@ scripted_map_modes = {
                     }
                 }
                 else_if = {
+                    limit = {
+                        FROM = {has_variable = sphere_owner}
+                    }
+                    var:FROM.sphere_owner = {
+                        set_temp_variable = { red = sc_R}
+                        set_temp_variable = { blue = sc_B }
+                        set_temp_variable = { green = sc_G }
+                        set_temp_variable = { alpha = 1.0 }  
+                    }
+                }
+                else_if = {
                     limit = {FROM = {num_subjects > 0}}
+                    FROM = {
+                        set_temp_variable = { red = sc_R}
+                        set_temp_variable = { blue = sc_B }
+                        set_temp_variable = { green = sc_G }
+                        set_temp_variable = { alpha = 1.0 }  
+                    }
+                }
+                else_if = {
+                    limit = {
+                        FROM = {check_variable = { sphere_members^num > 0 }}
+                    }
                     FROM = {
                         set_temp_variable = { red = sc_R}
                         set_temp_variable = { blue = sc_B }

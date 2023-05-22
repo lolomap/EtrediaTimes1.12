@@ -4,6 +4,38 @@ defined_text = {
 }
 
 defined_text = {
+    name = sphere_status_icon
+    text = {
+        trigger = {
+            has_variable = sphere_owner
+        }
+        localization_key = "GFX_autonomy_dependent_icon"
+    }
+    text = {
+        localization_key = "GFX_autonomy_sphere_icon"
+    }
+}
+
+defined_text = {
+    name = sphere_status_sl
+    text = {
+        trigger = {
+            has_variable = sphere_owner
+        }
+        localization_key = sphere_status_sphere
+    }
+    text = {
+        trigger = {
+            check_variable = { sphere_members^num > 0 }
+        }
+        localization_key = sphere_status_overlord
+    }
+    text = {
+        localization_key = sphere_status_free
+    }
+}
+
+defined_text = {
     name = UCB_parlament_sl
     text = {
         trigger = {

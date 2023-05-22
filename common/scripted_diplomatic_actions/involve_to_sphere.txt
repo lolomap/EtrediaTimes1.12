@@ -66,6 +66,7 @@ scripted_diplomatic_actions = {
                     }
                     NOT = {
                         is_subject = yes
+                        has_variable = sphere_owner
                         is_in_faction = yes
                     }
                 }
@@ -79,6 +80,7 @@ scripted_diplomatic_actions = {
                     }
                     NOT = {
                         is_subject = yes
+                        has_variable = sphere_owner
                         is_in_faction = yes
                     }
                 }

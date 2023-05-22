@@ -29,3 +29,8 @@
   opinion_emb:0 "Наши отношения"
   influence_emb:0 "Наше влияние"
   base_emb:0 "Базовое нежелание"
+
+  sphere_status_text: "[sphere_status_sl]"
+  sphere_status_free: "Самостоятельное государство"
+  sphere_status_sphere: "§Y[THIS.GetNameDef]§! — входит в сферу влияния §Y[ROOT.GetNameDef]§!"
+  sphere_status_overlord: "§Y[THIS.GetNameDef]§! оказывает свое влияние на другие государства"
