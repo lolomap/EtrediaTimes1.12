@@ -32,5 +32,5 @@
 
   sphere_status_text: "[sphere_status_sl]"
   sphere_status_free: "Самостоятельное государство"
-  sphere_status_sphere: "§Y[THIS.GetNameDef]§! — входит в сферу влияния §Y[ROOT.GetNameDef]§!"
+  sphere_status_sphere: "§Y[THIS.GetNameDef]§! — входит в сферу влияния §Y[?sphere_owner.GetNameDef]§!"
   sphere_status_overlord: "§Y[THIS.GetNameDef]§! оказывает свое влияние на другие государства"
