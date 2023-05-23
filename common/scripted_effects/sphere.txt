@@ -4,6 +4,9 @@ involve_sphere = {
     add_to_array = { sphere_members = PREV }
     PREV = {
         set_variable = {sphere_owner = overlordscope}
+        set_variable = { fembargo_cost = 0 }
+
+        add_ideas = sphere_idea
 
         set_temp_variable = { spherescope = THIS }
         for_each_scope_loop = {
@@ -31,30 +34,4 @@ involve_sphere = {
         }
     }
 
-    #PREV = {
-    #    set_temp_variable = {rem = current_party_ideology_group}
-    #    set_temp_variable = {d = party_popularity_100@democratic}
-    #    set_temp_variable = {f = party_popularity_100@fascism}
-    #    set_temp_variable = {c = party_popularity_100@communism}
-    #    set_temp_variable = {n = party_popularity_100@neutrality}
-    #    set_temp_variable = {m = party_popularity_100@monarchism}
-    #}
-    #set_autonomy = {
-    #    target = PREV
-    #    autonomy_state = autonomy_sphere
-    #    end_wars = no
-    #    end_civil_wars = no
-    #}
-    #PREV = {
-    #    set_politics = {
-    #        ruling_party = var:rem
-    #    }
-    #    set_popularities = {
-    #        democratic = d
-    #        fascism = f
-    #        communism = c
-    #        neutrality = n
-    #        monarchism = m
-    #    }
-    #}
 }

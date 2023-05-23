@@ -1,0 +1,27 @@
+ideas = {
+    #hidden = {
+    country = {
+        sphere_idea = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+            cancel = {
+                NOT = {has_variable = sphere_owner}
+            }
+
+            on_remove = {
+                clear_variable = fembargo_cost
+            }
+	
+
+			modifier = {
+                control_trade_mission_factor = 2
+                diplomatic_pressure_mission_factor = 2
+            }
+        }
+    }
+}

@@ -14,13 +14,21 @@ scripted_diplomatic_actions = {
                     NOT = {
                         is_embargoed_by = ROOT
                         is_embargoing = ROOT
+                        custom_trigger_tooltip = {
+                            tooltip = is_not_sphere_involved
+                            has_variable = sphere_owner
+                        }   
                     }
                     OR = {
                         has_non_aggression_pact_with = ROOT
                         gives_military_access_to = ROOT
+                        has_attache_from = ROOT
                         ROOT = {has_guaranteed = PREV}
                         ROOT = {
                             is_licensing_to = {target = PREV}
+                        }
+                        ROOT = {
+                            is_lend_leasing = PREV
                         }
                     }
 

@@ -60,6 +60,8 @@ country_event = { # YOU ARE FORCED TO EMBARGO
 	option = {
 		name = mechanics.1.b
 
+        trigger = {NOT = {has_variable = sphere_owner}}
+
 
 		set_temp_variable = {razn = FROM.world_influence}
 		divide_temp_variable = {razn = world_influence}
