@@ -1,0 +1,37 @@
+involve_sphere = {
+    remove_from_array = {sphere_neighbors = PREV}
+    set_temp_variable = { overlordscope = THIS }
+    add_to_array = { sphere_members = PREV }
+    PREV = {
+        set_variable = {sphere_owner = overlordscope}
+        set_variable = { fembargo_cost = 0 }
+
+        add_ideas = sphere_idea
+
+        set_temp_variable = { spherescope = THIS }
+        for_each_scope_loop = {
+            array = neighbors
+            if = {
+                limit = {
+                    NOT = {
+                        is_neighbor_of = var:overlordscope
+                        var:overlordscope = {is_in_array = {sphere_neighbors = PREV}}
+                    }
+                }
+
+                var:overlordscope = {
+                    add_to_array = { sphere_neighbors = PREV }
+                    set_temp_variable = {sphere_cc = sphere_cost_@var:spherescope}
+                }
+                
+                
+                if = { limit = {check_variable = {sphere_cc = 0}}
+                    set_temp_variable = { sphere_cc = 75 }
+                }
+                add_to_temp_variable = { sphere_cc = 50 }
+                var:overlordscope = {set_variable = { sphere_cost_@PREV = sphere_cc }}
+            }
+        }
+    }
+
+}

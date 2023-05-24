@@ -1,0 +1,28 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            ELR = {SBU = {involve_sphere = yes}}
+            TRB = {SBU = {involve_sphere = yes}}
+            RGY = {SBU = {involve_sphere = yes}}
+
+            SKI = {MOA = {involve_sphere = yes}}
+            TOB = {MOA = {involve_sphere = yes}}
+
+            CTE = {OIK = {involve_sphere = yes}}
+            
+            LOK = {ATI = {involve_sphere = yes}}
+            BOK = {ATI = {involve_sphere = yes}}
+
+            LGH = {PAL = {involve_sphere = yes}}
+            NEV = {PAL = {involve_sphere = yes}}
+
+            every_possible_country = {
+                set_variable_to_random = sc_R
+                set_variable_to_random = sc_G
+                set_variable_to_random = sc_B
+            }
+        }
+    }
+
+    
+}

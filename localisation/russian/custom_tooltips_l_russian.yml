@@ -182,4 +182,6 @@
   province_id_gui_display:0 "[?current_province]"
   border_war_button_loc:0 "Начать пограничный конфликт\n----------------\n\nНаше отношение к ним -20 и ниже"
 
+  TRIGGER_IS_LEND_LEASING: "Отправляет ленд-лиз для $COUNTRY|H$"
+
   modcredits: "§YBunbasss\nLegatt\nD-Kjch\nMonteny§!\n\n\n§6Special thanks to:§!\nSvarob\nLuka (Tornikios-O)\nKit MaB\nCockroach Gosha\nSosoichi\nScapupof"

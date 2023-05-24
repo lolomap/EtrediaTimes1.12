@@ -527,3 +527,211 @@ political_actions = {
 	}
 
 }
+
+sphere_category = {
+    sphere_take_resources_oil = {
+
+        target_trigger = {
+			FROM = {
+                OWNER = {has_variable = sphere_owner}
+
+                has_resources_amount = { resource = oil amount > 0 }
+                #NOT = {has_state_flag = sphere_resources_used}
+			}
+		}
+        
+        state_target = yes
+        on_map_mode = map_only
+
+        cost = 75
+
+        days_remove = 180
+        complete_effect = {
+            FROM.OWNER = {
+                add_political_power = 75
+                give_resource_rights = {
+                    receiver = ROOT
+                    state = FROM
+                    resources = { oil }
+                }
+            }
+            FROM = {set_state_flag = sphere_resources_used}
+        }
+        remove_effect = {
+            remove_resource_rights = FROM
+            FROM = {clr_state_flag = sphere_resources_used}
+        }
+    }
+
+    sphere_take_resources_steel = {
+
+        target_trigger = {
+			FROM = {
+                OWNER = {has_variable = sphere_owner}
+
+                has_resources_amount = { resource = steel amount > 0 }
+                #NOT = {has_state_flag = sphere_resources_used}
+			}
+		}
+        
+        state_target = yes
+        on_map_mode = map_only
+
+        cost = 75
+
+        days_remove = 180
+        complete_effect = {
+            FROM.OWNER = {
+                add_political_power = 75
+                give_resource_rights = {
+                    receiver = ROOT
+                    state = FROM
+                    resources = { steel }
+                }
+            }
+            FROM = {set_state_flag = sphere_resources_used}
+        }
+        remove_effect = {
+            remove_resource_rights = FROM
+            FROM = {clr_state_flag = sphere_resources_used}
+        }
+    }
+
+    sphere_take_resources_aluminium = {
+
+        target_trigger = {
+			FROM = {
+                OWNER = {has_variable = sphere_owner}
+
+                has_resources_amount = { resource = aluminium amount > 0 }
+                #NOT = {has_state_flag = sphere_resources_used}
+			}
+		}
+        
+        state_target = yes
+        on_map_mode = map_only
+
+        cost = 75
+
+        days_remove = 180
+        complete_effect = {
+            FROM.OWNER = {
+                add_political_power = 75
+                give_resource_rights = {
+                    receiver = ROOT
+                    state = FROM
+                    resources = { aluminium }
+                }
+            }
+            FROM = {set_state_flag = sphere_resources_used}
+        }
+        remove_effect = {
+            remove_resource_rights = FROM
+            FROM = {clr_state_flag = sphere_resources_used}
+        }
+    }
+
+    sphere_take_resources_chromium = {
+
+        target_trigger = {
+			FROM = {
+                OWNER = {has_variable = sphere_owner}
+
+                has_resources_amount = { resource = chromium amount > 0 }
+                #NOT = {has_state_flag = sphere_resources_used}
+			}
+		}
+        
+        state_target = yes
+        on_map_mode = map_only
+
+        cost = 75
+
+        days_remove = 180
+        complete_effect = {
+            FROM.OWNER = {
+                add_political_power = 75
+                give_resource_rights = {
+                    receiver = ROOT
+                    state = FROM
+                    resources = { chromium }
+                }
+            }
+            FROM = {set_state_flag = sphere_resources_used}
+        }
+        remove_effect = {
+            remove_resource_rights = FROM
+            FROM = {clr_state_flag = sphere_resources_used}
+        }
+    }
+
+    sphere_take_resources_tungsten = {
+
+        target_trigger = {
+			FROM = {
+                OWNER = {has_variable = sphere_owner}
+
+                has_resources_amount = { resource = tungsten amount > 0 }
+                #NOT = {has_state_flag = sphere_resources_used}
+			}
+		}
+        
+        state_target = yes
+        on_map_mode = map_only
+
+        cost = 75
+
+        days_remove = 180
+        complete_effect = {
+            FROM.OWNER = {
+                add_political_power = 75
+                
+                give_resource_rights = {
+                    receiver = ROOT
+                    state = FROM
+                    resources = { tungsten }
+                }
+            }
+            FROM = {set_state_flag = sphere_resources_used}
+        }
+        remove_effect = {
+            remove_resource_rights = FROM
+            FROM = {clr_state_flag = sphere_resources_used}
+        }
+    }
+
+    sphere_take_resources_uranium = {
+
+        target_trigger = {
+			FROM = {
+                OWNER = {has_variable = sphere_owner}
+
+                has_resources_amount = { resource = uranium amount > 0 }
+                #NOT = {has_state_flag = sphere_resources_used}
+			}
+		}
+        
+        state_target = yes
+        on_map_mode = map_only
+
+        cost = 75
+
+        days_remove = 180
+        complete_effect = {
+            FROM.OWNER = {
+                add_political_power = 75
+                give_resource_rights = {
+                    receiver = ROOT
+                    state = FROM
+                    resources = { uranium }
+                }
+            }
+            FROM = {set_state_flag = sphere_resources_used}
+        }
+        remove_effect = {
+            remove_resource_rights = FROM
+            FROM = {clr_state_flag = sphere_resources_used}
+        }
+    }
+
+}

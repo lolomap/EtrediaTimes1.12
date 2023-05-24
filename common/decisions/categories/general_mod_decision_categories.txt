@@ -19,3 +19,6 @@ nuclear_construction = {
 	available = {nuclear_reactor > 0}
 	visible = {has_tech = nukes}
 }
+
+sphere_category = {
+}

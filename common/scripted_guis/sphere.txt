@@ -1,0 +1,51 @@
+scripted_gui = {
+    sphere_relations = {
+        window_name = "modrelations_info"
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy 
+
+		#visible = { has_variable = sphere_owner}
+        visible = {always = yes}
+
+        triggers = {
+            flag_visible = {
+                has_variable = sphere_owner
+            }
+            small_flag_frame_thin_visible = {
+                has_variable = sphere_owner
+            }
+        }
+
+        properties = {
+            relation_icon = {
+                image = "[sphere_status_icon]"
+            }
+            flag = {
+                image = "[?sphere_owner.GetFlag]"
+            }
+        }
+    }
+
+    toggle_sphere_status = {
+        window_name = "modrelation_container"
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+
+		visible = { check_variable = { sphere_members^num > 0 }}
+        #visible = {always = yes}
+
+        properties = {
+            flag = {
+                image = "[THIS.GetFlag]"
+            }
+        }
+		
+        dynamic_lists = {
+            relation_flags = {
+                array = sphere_members
+				entry_container = sphere_flag_entry
+                change_scope = yes
+            }
+        }
+    }
+}

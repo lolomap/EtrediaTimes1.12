@@ -1,0 +1,8 @@
+﻿l_russian:
+ sphere_take_resources_oil: "Освоение [GetAdjective] нефти"
+ sphere_take_resources_steel: "Освоение [GetAdjective] стали"
+ sphere_take_resources_aluminium: "Освоение [GetAdjective] алюминий"
+ sphere_take_resources_chromium: "Освоение [GetAdjective] хрома"
+ sphere_take_resources_uranium: "Освоение [GetAdjective] урана"
+ sphere_take_resources_tungsten: "Освоение [GetAdjective] вольфрам"
+ 
