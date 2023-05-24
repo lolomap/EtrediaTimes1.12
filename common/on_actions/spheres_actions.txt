@@ -24,5 +24,39 @@ on_actions = {
         }
     }
 
-    
+    on_annex = {
+        effect = {
+            if = {
+                limit = {has_variable = sphere_owner}
+                remove_from_sphere = yes
+            }
+        }
+    }
+
+    on_puppet = {
+        effect = {
+            if = {
+                limit = {has_variable = sphere_owner}
+                remove_from_sphere = yes
+            }
+        }
+    }
+
+    on_join_faction = {
+        effect = {
+            if = {
+                limit = {has_variable = sphere_owner}
+                remove_from_sphere = yes
+            }
+        }
+    }
+
+    on_create_faction = {
+        effect = {
+            if = {
+                limit = {FROM = {has_variable = sphere_owner}}
+                FROM = {remove_from_sphere = yes}
+            }
+        }
+    }
 }

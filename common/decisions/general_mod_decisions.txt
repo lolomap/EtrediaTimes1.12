@@ -533,7 +533,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {has_variable = sphere_owner}
+                OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = oil amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -567,7 +567,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {has_variable = sphere_owner}
+                OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = steel amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -601,7 +601,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {has_variable = sphere_owner}
+                OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = aluminium amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -635,7 +635,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {has_variable = sphere_owner}
+                OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = chromium amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -669,7 +669,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {has_variable = sphere_owner}
+                OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = tungsten amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -704,7 +704,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {has_variable = sphere_owner}
+                OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = uranium amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}

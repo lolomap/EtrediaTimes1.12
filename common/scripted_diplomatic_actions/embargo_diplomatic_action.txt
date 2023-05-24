@@ -107,6 +107,13 @@ scripted_diplomatic_actions = {
 			}
 			is_subject = no
 		}
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = is_not_sphere_involved
+                NOT = {has_variable = sphere_owner}
+            }
+        }
 		cost = 0
 
 		command_power = 0

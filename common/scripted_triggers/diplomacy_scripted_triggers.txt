@@ -30,6 +30,13 @@
 #			}
 #		}
 
+DIPLOMACY_REVOKE_EMBARGO_ENABLE_TRIGGER = {
+    custom_trigger_tooltip = {
+        tooltip = is_not_sphere_involved
+        NOT = {has_variable = sphere_owner}
+    }
+}
+
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
     if = {
         limit = {FROM = {has_country_flag = banned_for_factions}}
