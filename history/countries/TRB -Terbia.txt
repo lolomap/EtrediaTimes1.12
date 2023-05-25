@@ -13,6 +13,7 @@ add_ideas = {
         general_entry
 	fifth_corruption_level
     sforces_3
+    TRB_western_puppet
 }
 
 set_technology = {basic_train = 1

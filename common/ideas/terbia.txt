@@ -30,5 +30,15 @@ ideas = {
 				defence = 0.5
 			}
 		}
+
+        TRB_western_puppet = {
+            allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+                winfluence_modifier = -0.15
+			}
+        }
 	}
 }

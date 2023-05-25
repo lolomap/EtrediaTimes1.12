@@ -42,20 +42,13 @@ ideas = {
                 }
             }
 
-            on_add = {
-                add_to_variable = {winfluence_cost = 0.05}
-            }
-            on_remove = {
-                add_to_variable = {winfluence_cost = -0.05}
-            }
-
             modifier = {
-                custom_modifier_tooltip = world_influence_cost_5n
                 custom_modifier_tooltip = world_influence_cost_clamp
                 consumer_goods_factor = -0.05
                 production_speed_industrial_complex_factor = 0.08
                 production_speed_infrastructure_factor = 0.08
                 local_resources_factor = 0.1
+                winfluence_modifier = 0.05
             }
         }
 
@@ -73,20 +66,14 @@ ideas = {
                 }
             }
 
-            on_add = {
-                add_to_variable = {winfluence_cost = 0.1}
-            }
-            on_remove = {
-                add_to_variable = {winfluence_cost = -0.1}
-            }
 
             modifier = {
-                custom_modifier_tooltip = world_influence_cost_10n
                 custom_modifier_tooltip = world_influence_cost_clamp
                 consumer_goods_factor = -0.1
                 production_speed_industrial_complex_factor = 0.15
                 production_speed_infrastructure_factor = 0.15
                 local_resources_factor = 0.2
+                winfluence_modifier = 0.1
             }
         }
 
@@ -104,20 +91,14 @@ ideas = {
                 }
             }
 
-            on_add = {
-                add_to_variable = {winfluence_cost = 0.15}
-            }
-            on_remove = {
-                add_to_variable = {winfluence_cost = -0.15}
-            }
 
             modifier = {
-                custom_modifier_tooltip = world_influence_cost_15n
                 custom_modifier_tooltip = world_influence_cost_clamp
                 consumer_goods_factor = -0.15
                 production_speed_industrial_complex_factor = 0.25
                 production_speed_infrastructure_factor = 0.25
                 local_resources_factor = 0.25
+                winfluence_modifier = 0.15
             }
         }
 
@@ -135,20 +116,14 @@ ideas = {
                 }
             }
 
-            on_add = {
-                add_to_variable = {winfluence_cost = -0.05}
-            }
-            on_remove = {
-                add_to_variable = {winfluence_cost = 0.05}
-            }
 
             modifier = {
-                custom_modifier_tooltip = world_influence_cost_5
                 custom_modifier_tooltip = world_influence_cost_clamp
                 consumer_goods_factor = 0.05
                 production_speed_industrial_complex_factor = -0.08
                 production_speed_infrastructure_factor = -0.08
                 local_resources_factor = -0.1
+                winfluence_modifier = -0.05
             }
         }
 
@@ -166,20 +141,14 @@ ideas = {
                 }
             }
 
-            on_add = {
-                add_to_variable = {winfluence_cost = -0.1}
-            }
-            on_remove = {
-                add_to_variable = {winfluence_cost = 0.1}
-            }
 
             modifier = {
-                custom_modifier_tooltip = world_influence_cost_10
                 custom_modifier_tooltip = world_influence_cost_clamp
                 consumer_goods_factor = 0.1
                 production_speed_industrial_complex_factor = -0.15
                 production_speed_infrastructure_factor = -0.15
                 local_resources_factor = -0.2
+                winfluence_modifier = -0.1
             }
         }
 
@@ -197,20 +166,13 @@ ideas = {
                 }
             }
 
-            on_add = {
-                add_to_variable = {winfluence_cost = -0.15}
-            }
-            on_remove = {
-                add_to_variable = {winfluence_cost = 0.15}
-            }
-
             modifier = {
-                custom_modifier_tooltip = world_influence_cost_15
                 custom_modifier_tooltip = world_influence_cost_clamp
                 consumer_goods_factor = 0.15
                 production_speed_industrial_complex_factor = -0.25
                 production_speed_infrastructure_factor = -0.25
                 local_resources_factor = -0.25
+                winfluence_modifier = -0.15
             }
         }
 

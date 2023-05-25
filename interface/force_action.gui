@@ -29,24 +29,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
-		instantTextBoxType = {
-			name = "l1"
-			position = {x = 50 y = 100}
-			text = fa_puppet
-			font = hoi_18mbs
-			format = left
-			
-			alwaystransparent = yes
-		}
-
-		buttonType = {
-			name = "puppet_button"
-			spriteType = "GFX_button_221x34"
-			buttonText = fa_send
-			buttonFont = hoi_18mbs
-			position = { x = 290 y = 100 }
-			Orientation = "UPPER_LEFT"
-		}
+		
 
 		instantTextBoxType = {
 			name = "l2"

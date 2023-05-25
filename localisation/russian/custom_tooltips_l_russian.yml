@@ -75,13 +75,6 @@
   wtire_more_then_150:0 "§RВоенная усталость > 150§!\n"
   wtire_change: "Рост военной усталости: $RIGHT|-=%$"
   wtire_boost: "Военная усталость: $RIGHT|-=$"
-  world_influence_cost_5:0 "Штраф к мировому влиянию : §R5%§!\n"
-  world_influence_cost_10:0 "Штраф к мировому влиянию : §R10%§!\n"
-  world_influence_cost_15:0 "Штраф к мировому влиянию : §R15%§!\n"
-  world_influence_cost_5n:0 "Штраф к мировому влиянию : §G-5%§!\n"
-  world_influence_cost_10n:0 "Штраф к мировому влиянию : §G-10%§!\n"
-  world_influence_cost_15n:0 "Штраф к мировому влиянию : §G-15%§!\n"
-  world_influence_cost_50n:0 "Штраф к мировому влиянию : §G-50%§!\n"
   world_influence_cost_clamp:0 "§RДругие модификаторы влияния не работают§!"
 
   DEM_train_modern_army_tooltip:0 "§CНам станет доступна подготовка новых войск при поддержке Картилии§"

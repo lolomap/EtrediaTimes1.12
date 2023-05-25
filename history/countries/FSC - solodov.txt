@@ -16,6 +16,7 @@ add_ideas = {
 	FSC_federalization_problem_idea
 	FSC_language_problem
 	FSC_divided_ortostan
+    UCB_gegemon
 }
 
 set_technology = {basic_train = 1

@@ -455,16 +455,16 @@ defined_text = {
 defined_text = {
     name = cw_title_bot_sl
     text = {
-        trigger = {check_variable = {global.type_crysis = 0}}
-        localization_key = "Смена правительства в [?global.to_crysis.GetNameDef]"
+        trigger = {var:political_crysis_member = {check_variable = {type_crysis = 0}}}
+        localization_key = "Смена правительства в [?political_crysis_member:to_crysis.GetNameDef]"
     }
     text = {
-        trigger = {check_variable = {global.type_crysis = 1}}
-        localization_key = "Территориальные претензии к [?global.to_crysis.GetNameDef] от [?global.sender_crysis.GetNameDef]"
+        trigger = {var:political_crysis_member = {check_variable = {type_crysis = 1}}}
+        localization_key = "Территориальные претензии к [?political_crysis_member:to_crysis.GetNameDef] от [?political_crysis_member.GetNameDef]"
     }
     text = {
-        trigger = {check_variable = {global.type_crysis = 2}}
-        localization_key = "Отделение [?global.minor_crysis.GetNameDef] от [?global.to_crysis.GetNameDef]"
+        trigger = {var:political_crysis_member = {check_variable = {type_crysis = 2}}}
+        localization_key = "Отделение [?political_crysis_member:minor_crysis.GetNameDef] от [?political_crysis_member:to_crysis.GetNameDef]"
     }
     text = {
         localization_key = ""
@@ -475,7 +475,7 @@ defined_text = {
     name = cw_cname_sl
     text = {
         trigger = {
-            is_in_array = {global.crysis_senders = THIS}
+            is_in_array = {political_crysis_member.crysis_senders = THIS}
         }
         localization_key = cw_cname_hl
     }

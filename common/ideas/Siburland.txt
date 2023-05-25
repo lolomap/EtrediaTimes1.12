@@ -207,14 +207,9 @@ ideas = {
 			removal_cost = -1
 
             on_add = {
-                custom_effect_tooltip = world_influence_cost_5
-                add_to_variable = {winfluence_cost = -0.05}
                 SBU = {add_to_variable = {sz_little_count = 1}}
             }
             on_remove = {
-                custom_effect_tooltip = world_influence_cost_5n
-                add_to_variable = {winfluence_cost = 0.05}
-                
                 SBU = {add_to_variable = {sz_little_count = -1}}
             }
 	
@@ -225,6 +220,7 @@ ideas = {
 				democratic_drift = 0.01
 				production_speed_buildings_factor = 0.15
 				consumer_goods_factor = -0.05
+                winfluence_modifier = -0.05
 			}
 	}
 	
@@ -239,27 +235,23 @@ ideas = {
 			removal_cost = -1
 
             on_add = {
-                custom_effect_tooltip = world_influence_cost_10
-                add_to_variable = {winfluence_cost = -0.1}
                 SBU = {add_to_variable = {sz_little_count = 1}}
                 SBU = {add_to_variable = {sz_medium_count = 1}}
             }
             on_remove = {
-                custom_effect_tooltip = world_influence_cost_10n
-                add_to_variable = {winfluence_cost = 0.1}
                 SBU = {add_to_variable = {sz_little_count = -1}}
                 SBU = {add_to_variable = {sz_medium_count = -1}}
             }
 	
 
 			modifier = {
-                custom_modifier_tooltip = world_influence_cost_10
 				stability_factor = -0.1
 				democratic_drift = 0.05
 				production_speed_buildings_factor = 0.2
 				consumer_goods_factor = -0.08
 				max_fuel_factor = 0.1
 				local_building_slots_factor = 0.15
+                winfluence_modifier = -0.1
 			}
 	}
 	
@@ -274,15 +266,11 @@ ideas = {
 			removal_cost = -1
 	
             on_add = {
-                custom_effect_tooltip = world_influence_cost_15
-                add_to_variable = {winfluence_cost = -0.15}
                 SBU = {add_to_variable = {sz_little_count = 1}}
                 SBU = {add_to_variable = {sz_medium_count = 1}}
                 SBU = {add_to_variable = {sz_high_count = 1}}
             }
             on_remove = {
-                custom_effect_tooltip = world_influence_cost_15n
-                add_to_variable = {winfluence_cost = 0.15}
                 
                 SBU = {add_to_variable = {sz_little_count = -1}}
                 SBU = {add_to_variable = {sz_medium_count = -1}}
@@ -297,6 +285,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				max_fuel_factor = 0.2
 				local_building_slots_factor = 0.4
+                winfluence_modifier = -0.15
 			}
 	}
 
@@ -605,13 +594,6 @@ ideas = {
         allowed = {always = no}
 		removal_cost = -1
 
-        on_add = {
-            add_to_variable = {winfluence_cost = 0.5}
-        }
-
-        on_remove = {
-            add_to_variable = {winfluence_cost = -0.5}
-        }
 
         modifier = {
             political_power_gain = -1
@@ -620,7 +602,7 @@ ideas = {
             propaganda_mission_factor = 0.25
             operation_coup_government_cost = -0.25
             operation_coup_government_outcome = 0.5
-            custom_modifier_tooltip = world_influence_cost_50n
+            winfluence_modifier = 0.5
         }
     }
 }

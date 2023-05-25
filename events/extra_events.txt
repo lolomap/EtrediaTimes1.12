@@ -1352,7 +1352,7 @@ country_event = { # конфликт защита
 
 #####################################################
 
-country_event = { # Кризис закончился
+country_event = { # Кризис закончился (call in crysis sender)
     id = mechanics.36
     title = mechanics.36.t
     desc = mechanics.36.d
@@ -1364,11 +1364,11 @@ country_event = { # Кризис закончился
     }
 
     immediate = {
-        var:global.sender_crysis = {set_country_flag = {flag = crysis_delay days = 360 value = 1}}
+        var:sender_crysis = {set_country_flag = {flag = crysis_delay days = 360 value = 1}}
         if = { # Оба не уступили
             limit = {
-                var:global.cr_send_op = {has_country_flag = crysis_press}
-                var:global.cr_to_op = {has_country_flag = crysis_press}
+                var:cr_send_op = {has_country_flag = crysis_press}
+                var:cr_to_op = {has_country_flag = crysis_press}
             }
 
             #TODO
@@ -1376,31 +1376,32 @@ country_event = { # Кризис закончился
         }
         else_if = { # Атака уступила
             limit = {
-                var:global.cr_send_op = {not = {has_country_flag = crysis_press}}
-                var:global.cr_to_op = {has_country_flag = crysis_press}
+                var:cr_send_op = {not = {has_country_flag = crysis_press}}
+                var:cr_to_op = {has_country_flag = crysis_press}
             }
             for_each_scope_loop = {
-                array = global.crysis_senders
+                array = crysis_senders
                 add_timed_idea = {idea = sender_loose_crysis days = 150}
             }
-            var:global.sender_crysis = {
+            var:sender_crysis = {
                 add_timed_idea = {idea = sender_loose_crysis days = 150}
             }
         }
         else_if = { # Оборона уступила
             limit = {
-                var:global.cr_send_op = {has_country_flag = crysis_press}
-                var:global.cr_to_op = {not = {has_country_flag = crysis_press}}
+                var:cr_send_op = {has_country_flag = crysis_press}
+                var:cr_to_op = {not = {has_country_flag = crysis_press}}
             }
             
-            crysis_reward = yes
+            var:sender_crysis = {crysis_reward = yes}
         }
 
 
         ########
-        set_variable = {global.crysis_timer = 0}
-        clr_global_flag = political_crysis
+        set_variable = {crysis_timer = 0}
+        clr_country_flag = political_crysis
         every_country = {
+            limit = {check_variable = {political_crysis_member = PREV}}
             clr_country_flag = crysis_allow
             clr_country_flag = crysis_press
             clr_country_flag = cr_ai_press
@@ -1408,23 +1409,24 @@ country_event = { # Кризис закончился
             clr_country_flag = crysis_scared
             clr_country_flag = cr_ai_completed
             clr_country_flag = crysis_angry
+            clear_variable = political_crysis_member
         }
-        set_variable = {global.cr_press_clicked = 0}
+        set_variable = {cr_press_clicked = 0}
         
-        set_variable = {global.cr_smax = 0}
-        set_variable = {global.cr_tmax = 0}
-        set_variable = {global.cr_send_op = 0}
-        set_variable = {global.cr_to_op = 0}
+        set_variable = {cr_smax = 0}
+        set_variable = {cr_tmax = 0}
+        set_variable = {cr_send_op = 0}
+        set_variable = {cr_to_op = 0}
 
-        clr_global_flag = cr_a_allow
-        clr_global_flag = cr_d_allow
+        clr_country_flag = cr_a_allow
+        clr_country_flag = cr_d_allow
 
-        set_variable = {global.cr_a_status = 1}
-        set_variable = {global.cr_d_status = 2}
+        set_variable = {cr_a_status = 1}
+        set_variable = {cr_d_status = 2}
     }
 }
 
-country_event = {
+country_event = { #call in crysis sender
     id = mechanics.37
     title = mechanics.37.t
     desc = mechanics.37.d
@@ -1437,14 +1439,17 @@ country_event = {
 
     immediate = {
         if = {
-            limit = {has_global_flag = political_crysis country_exists = var:global.sender_crysis}
-            add_to_variable = {global.crysis_timer = 1.666}
-            var:global.sender_crysis = {country_event = {id = mechanics.37 days = 1}}
+            limit = {
+                has_country_flag = political_crysis
+                country_exists = var:sender_crysis
+                check_variable = {crysis_timer < 100}
+            }
+            add_to_variable = {crysis_timer = 1.666}
+            country_event = {id = mechanics.37 days = 1}
         }
-        else_if = {
-            limit = {check_variable = {global.crysis_timer > 100}}
+        else = {
             force_press = yes
-            var:global.sender_crysis = {country_event = {id = mechanics.36 days = 2}}
+            country_event = {id = mechanics.36 days = 2}
         }
     }
 }
