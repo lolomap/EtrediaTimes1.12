@@ -60,8 +60,6 @@ on_actions = {
                 }
             }
             #SZ INFLUENCE
-            ELR = {add_to_variable = {winfluence_cost = -0.15}}
-            RGY = {add_to_variable = {winfluence_cost = -0.05}}
             SBU = {
                 set_variable = {sz_high_count = 1}
                 set_variable = {sz_medium_count = 1}
@@ -897,7 +895,7 @@ on_actions = {
             #Уступить или возразить в кризисе
             if = {
                 limit = {
-                    has_global_flag = political_crysis
+                    has_variable = political_crysis_member
                 }
                 if = {
                     limit = {
@@ -905,18 +903,18 @@ on_actions = {
                         NOT = {has_country_flag = cr_ai_press}
                         NOT = {has_country_flag = cr_ai_completed}
                         OR = {
-                            is_in_array = {global.crysis_senders = ROOT}
-                            is_in_array = {global.crysis_tos = ROOT}
+                            is_in_array = {political_crysis_member:crysis_senders = ROOT}
+                            is_in_array = {political_crysis_member:crysis_tos = ROOT}
                         }
                     }
                     if = {
                         limit = {
-                            is_in_array = {global.crysis_senders = ROOT}
+                            is_in_array = {political_crysis_member:crysis_senders = ROOT}
                         }
-                        set_temp_variable = {widif = global.crysis_s_totalwi}
+                        set_temp_variable = {widif = political_crysis_member:crysis_s_totalwi}
                         if = {
-                            limit = {check_variable = {global.crysis_t_totalwi > 1}}
-                            divide_temp_variable = {widif = global.crysis_t_totalwi}
+                            limit = {check_variable = {political_crysis_member:crysis_t_totalwi > 1}}
+                            divide_temp_variable = {widif = political_crysis_member:crysis_t_totalwi}
                         }
                         if = {
                             limit = {
@@ -941,10 +939,10 @@ on_actions = {
                     }
                     else_if = {
                         limit = {
-                            is_in_array = {global.crysis_tos = ROOT}
+                            is_in_array = {political_crysis_member:crysis_tos = ROOT}
                         }
-                        set_temp_variable = {widif = global.crysis_t_totalwi}
-                        divide_temp_variable = {widif = global.crysis_s_totalwi}
+                        set_temp_variable = {widif = political_crysis_member:crysis_t_totalwi}
+                        divide_temp_variable = {widif = political_crysis_member:crysis_s_totalwi}
                         if = {
                             limit = {
                                 check_variable = {widif < 0.51}
@@ -963,8 +961,8 @@ on_actions = {
                                 check_variable = {widif > 0.51}
                                 OR = {has_government = fascism has_government = communism}
                                 OR = {
-                                    var:global.cr_to_op = {tag = PREV}
-                                    var:global.cr_send_op = {tag = PREV}
+                                    var:political_crysis_member:cr_to_op = {tag = PREV}
+                                    var:political_crysis_member:cr_send_op = {tag = PREV}
                                 }
                             }
                             set_country_flag = crysis_push_fc
@@ -973,7 +971,7 @@ on_actions = {
 
                     
                     set_temp_variable_to_random = cr_ai_allow_wish
-                    if = {limit = {is_in_array = {global.crysis_senders = ROOT}}
+                    if = {limit = {is_in_array = {political_crysis_member:crysis_senders = ROOT}}
                         add_to_temp_variable = {cr_ai_allow_wish = 0.05}
                     }
                     if = {

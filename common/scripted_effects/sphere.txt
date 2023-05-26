@@ -35,3 +35,11 @@ involve_sphere = {
     }
 
 }
+
+remove_from_sphere = {
+    clear_variable = fembargo_cost
+    var:sphere_owner = {
+        remove_from_array = {sphere_members = PREV}
+    }
+    clear_variable = sphere_owner
+}

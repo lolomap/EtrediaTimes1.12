@@ -3,16 +3,16 @@ scripted_gui = {
         window_name = "crysis_window"
         
         visible = {
-            has_global_flag = political_crysis
+            has_variable = political_crysis_member
             not = {has_country_flag = crysis_win_minimized}
-            OR = {
-                is_in_array = {global.crysis_majors = THIS}
-                is_in_array = {global.crysis_senders = THIS}
-                is_in_array = {global.crysis_tos = THIS}
-                tag = global.sender_crysis
-                tag = global.to_crysis
-                has_country_flag = cheat_show_cr_win
-            }
+            #OR = {
+            #    is_in_array = {global.crysis_majors = THIS}
+            #    is_in_array = {global.crysis_senders = THIS}
+            #    is_in_array = {global.crysis_tos = THIS}
+            #    tag = global.sender_crysis
+            #    tag = global.to_crysis
+            #    has_country_flag = cheat_show_cr_win
+            #}
         }
 
         ai_enabled = {
@@ -22,7 +22,7 @@ scripted_gui = {
             }	
 		}
         ai_check = {
-            has_global_flag = political_crysis
+            has_variable = political_crysis_member
         }
         ai_test_interval = 240 #Every 10 days
         ai_weights = {
@@ -221,54 +221,54 @@ scripted_gui = {
 
         triggers = {
             sender_choose_button_click_enabled = {
-                NOT = {or = {tag = global.sender_crysis tag = global.to_crysis}}
-                NOT = {is_in_array = {global.crysis_senders = THIS}}
-                NOT = {is_in_array = {global.crysis_tos = THIS}}
+                NOT = {or = {tag = political_crysis_member tag = political_crysis_member:to_crysis}}
+                NOT = {is_in_array = {political_crysis_member:crysis_senders = THIS}}
+                NOT = {is_in_array = {political_crysis_member:crysis_tos = THIS}}
             }
             to_choose_button_click_enabled = {
-                NOT = {or = {tag = global.sender_crysis tag = global.to_crysis}}
-                NOT = {is_in_array = {global.crysis_senders = THIS}}
-                NOT = {is_in_array = {global.crysis_tos = THIS}}
+                NOT = {or = {tag = political_crysis_member tag = political_crysis_member:to_crysis}}
+                NOT = {is_in_array = {political_crysis_member:crysis_senders = THIS}}
+                NOT = {is_in_array = {political_crysis_member:crysis_tos = THIS}}
             }
 
             press_button_click_enabled = {
-                OR = {tag = global.cr_send_op tag = global.cr_to_op}
+                OR = {tag = political_crysis_member:cr_send_op tag = political_crysis_member:cr_to_op}
                 NOT = {has_country_flag = crysis_allow}
                 OR = {
-                    is_in_array = {global.crysis_senders = THIS}
-                    is_in_array = {global.crysis_tos = THIS}
-                    tag = global.sender_crysis
-                    tag = global.to_crysis
+                    is_in_array = {political_crysis_member:crysis_senders = THIS}
+                    is_in_array = {political_crysis_member:crysis_tos = THIS}
+                    tag = political_crysis_member
+                    tag = political_crysis_member:to_crysis
                 }
             }
             allow_button_click_enabled = {
                 NOT = {has_country_flag = crysis_press}
                 OR = {
-                    is_in_array = {global.crysis_senders = THIS}
-                    is_in_array = {global.crysis_tos = THIS}
-                    tag = global.sender_crysis
-                    tag = global.to_crysis
+                    is_in_array = {political_crysis_member:crysis_senders = THIS}
+                    is_in_array = {political_crysis_member:crysis_tos = THIS}
+                    tag = political_crysis_member
+                    tag = political_crysis_member:to_crysis
                 }
             }
 
             attackIcon_visible = {
                 OR = {
-                    var:global.cr_send_op = {has_country_flag = crysis_press}
-                    check_variable = {global.cr_a_status = 3}
+                    var:political_crysis_member:cr_send_op = {has_country_flag = crysis_press}
+                    check_variable = {political_crysis_member:cr_a_status = 3}
                 }
             }
             defIcon_visible = {
                 OR = {
-                    var:global.cr_to_op = {has_country_flag = crysis_press}
-                    check_variable = {global.cr_d_status = 3}
+                    var:political_crysis_member:cr_to_op = {has_country_flag = crysis_press}
+                    check_variable = {political_crysis_member:cr_d_status = 3}
                 }
             }
 
             send_allow_visible = {
-                var:global.sender_crysis = {has_country_flag = crysis_allow}
+                var:political_crysis_member = {has_country_flag = crysis_allow}
             }
             to_allow_visible = {
-                var:global.to_crysis = {has_country_flag = crysis_allow}
+                var:political_crysis_member:to_crysis = {has_country_flag = crysis_allow}
             }
         }
 
@@ -278,24 +278,24 @@ scripted_gui = {
             }
 
             sender_choose_button_click = {
-                add_to_array = {global.crysis_senders = ROOT}
-                remove_from_array = {global.crysis_majors = ROOT}
+                add_to_array = {political_crysis_member:crysis_senders = ROOT}
+                remove_from_array = {political_crysis_member:crysis_majors = ROOT}
                 d_calc_crysis = yes
             }
             to_choose_button_click = {
-                add_to_array = {global.crysis_tos = ROOT}
-                remove_from_array = {global.crysis_majors = ROOT}
+                add_to_array = {political_crysis_member:crysis_tos = ROOT}
+                remove_from_array = {political_crysis_member:crysis_majors = ROOT}
                 d_calc_crysis = yes
             }
 
             press_button_click = {
                 if = {
                     limit = {NOT = {has_country_flag = crysis_press}}
-                    add_to_variable = {global.cr_press_clicked = 1}
+                    add_to_variable = {political_crysis_member:cr_press_clicked = 1}
                     set_country_flag = crysis_press
                     set_country_flag = cr_ai_completed
                     if = {
-                        limit = {check_variable = {global.cr_press_clicked > 1}}
+                        limit = {check_variable = {political_crysis_member:cr_press_clicked > 1}}
                         #force_press = yes
                         var:sender_crysis = {country_event = {id = mechanics.36 days = 2}}
                         #set_variable = {global.crysis_timer = 101}
@@ -304,7 +304,7 @@ scripted_gui = {
                 }
                 else = {
                     clr_country_flag = crysis_press
-                    subtract_from_variable = {global.cr_press_clicked = 1}
+                    subtract_from_variable = {political_crysis_member:cr_press_clicked = 1}
                 }
             }
             allow_button_click = {
@@ -319,67 +319,67 @@ scripted_gui = {
                 set_temp_variable = {cr_d_count = 0}
 
                 for_each_scope_loop = {
-                    array = global.crysis_senders
+                    array = political_crysis_member:crysis_senders
                     if = {
                         limit = {has_country_flag = crysis_allow}
                         add_to_temp_variable = {cr_a_count = 1}
                     }
                 }
                 for_each_scope_loop = {
-                    array = global.crysis_tos
+                    array = political_crysis_member:crysis_tos
                     if = {
                         limit = {has_country_flag = crysis_allow}
                         add_to_temp_variable = {cr_d_count = 1}
                     }
                 }
-                if = {limit = {var:global.sender_crysis = {has_country_flag = crysis_allow}} add_to_temp_variable = {cr_a_count = 1}}
-                if = {limit = {var:global.to_crysis = {has_country_flag = crysis_allow}} add_to_temp_variable = {cr_d_count = 1}}
+                if = {limit = {var:political_crysis_member = {has_country_flag = crysis_allow}} add_to_temp_variable = {cr_a_count = 1}}
+                if = {limit = {var:political_crysis_member:to_crysis = {has_country_flag = crysis_allow}} add_to_temp_variable = {cr_d_count = 1}}
 
-                set_temp_variable = {cr_a_max = global.crysis_senders^num}
+                set_temp_variable = {cr_a_max = political_crysis_member:crysis_senders^num}
                 add_to_temp_variable = {cr_a_max = 1}
-                set_temp_variable = {cr_d_max = global.crysis_tos^num}
+                set_temp_variable = {cr_d_max = political_crysis_member:crysis_tos^num}
                 add_to_temp_variable = {cr_d_max = 1}
 
                 if = {
                     limit = {check_variable = {cr_a_count = cr_a_max}}
-                    set_variable = {global.cr_a_status = 3}
+                    set_variable = {political_crysis_member:cr_a_status = 3}
                     set_global_flag = cr_a_allow
                     force_press = yes
-                    var:global.sender_crysis = {country_event = {id = mechanics.36 days = 2}}
+                    var:political_crysis_member = {country_event = {id = mechanics.36 days = 2}}
                 }
-                else = {set_variable = {global.cr_a_status = 1}}
+                else = {set_variable = {political_crysis_member:cr_a_status = 1}}
 
                 if = {
                     limit = {check_variable = {cr_d_count = cr_d_max}}
-                    set_variable = {global.cr_d_status = 3}
+                    set_variable = {political_crysis_member:cr_d_status = 3}
                     set_global_flag = cr_d_allow
                     force_press = yes
                     var:global.sender_crysis = {country_event = {id = mechanics.36 days = 2}}
                 }
-                else = {set_variable = {global.cr_d_status = 2}}
+                else = {set_variable = {political_crysis_member:cr_d_status = 2}}
             }
         }
 
         properties = {
 			senderFlag = {
-				image = [?global.sender_crysis.GetFlag]
+				image = [?political_crysis_member.GetFlag]
 			}
             toFlag = {
-				image = [?global.to_crysis.GetFlag]
+				image = [?political_crysis_member:to_crysis.GetFlag]
 			}
             senderFlagBorder = {
-                frame = global.sender_crysis_op_status
+                frame = political_crysis_member:sender_crysis_op_status
             }
             toFlagBorder = {
-                frame =  global.to_crysis_op_status
+                frame =  political_crysis_member:to_crysis_op_status
             }
 
             pb = {
-                frame = global.crysis_timer
+                frame = political_crysis_member:crysis_timer
             }
 
-            attackIcon = {frame = global.cr_a_status}
-            defIcon = {frame = global.cr_d_status}
+            attackIcon = {frame = political_crysis_member:cr_a_status}
+            defIcon = {frame = political_crysis_member:cr_d_status}
 		}
     }
     crysis_senders = {
@@ -388,7 +388,7 @@ scripted_gui = {
 
         dynamic_lists = {
 			senders_gb = {
-				array = global.crysis_senders
+				array = political_crysis_member:crysis_senders
 				entry_container = major_entry
 				change_scope = yes
 			}
@@ -415,7 +415,7 @@ scripted_gui = {
 
         dynamic_lists = {
 			tos_gb = {
-				array = global.crysis_tos
+				array = political_crysis_member:crysis_tos
 				entry_container = major_entry
 				change_scope = yes
 			}
@@ -442,7 +442,7 @@ scripted_gui = {
 
         dynamic_lists = {
 			waiters_gb = {
-				array = global.crysis_majors
+				array = political_crysis_member:crysis_majors
 				entry_container = major_entry
 				change_scope = yes
 			}
@@ -523,68 +523,51 @@ scripted_gui = {
                 if = {
                     limit = {always = yes}
 
+                    ROOT = {
+                        set_country_flag = {
+                            flag = political_crysis
+                            days = 60
+                            value = 1
+                        }
+                        set_variable = {to_crysis = PREV}
+                        set_variable = {sender_crysis = ROOT}
+                        set_variable = {minor_crysis = v}
+
+                        set_variable = {type_crysis = 2}
+
+                        var:sender_crysis = {country_event = {id = mechanics.37 days = 1}}
+                        
+                        encount_majors = yes
+                        d_calc_crysis = yes
+
+                        clr_country_flag = force_action_win_opened
+                        var:cr_ai_minor_target = {ROOT = {clr_country_flag = crysis_ai_minor@PREV}}
+                        clr_country_flag = crysis_ai_ready@PREV
+                    }
+                }
+            }
+
+            cores_button_click = {
+                ROOT = {
                     set_global_flag = {
                         flag = political_crysis
                         days = 60
                         value = 1
                     }
-                    set_variable = {global.to_crysis = THIS}
-                    set_variable = {global.sender_crysis = ROOT}
-                    #set_variable = {global.minor_crysis = ROOT.cr_ai_minor_target}
-                    set_variable = {global.minor_crysis = v}
+                    set_variable = {to_crysis = PREV}
+                    set_variable = {sender_crysis = ROOT}
+                    set_variable = {minor_crysis = 0}
 
-                    set_variable = {global.type_crysis = 2}
-                    
-                    var:global.sender_crysis = {country_event = {id = mechanics.37 days = 1}}
+                    set_variable = {type_crysis = 1}
+
+                    var:sender_crysis = {country_event = {id = mechanics.37 days = 1}}
                     encount_majors = yes
                     d_calc_crysis = yes
 
-                    ROOT = {clr_country_flag = force_action_win_opened}
-                    var:ROOT.cr_ai_minor_target = {ROOT = {clr_country_flag = crysis_ai_minor@PREV}}
-                    ROOT = {clr_country_flag = crysis_ai_ready@PREV}
+                    clr_country_flag = force_action_win_opened
+                    clr_country_flag = crysis_ai_cores@PREV
+                    clr_country_flag = crysis_ai_ready@PREV
                 }
-            }
-
-            cores_button_click = {
-                set_global_flag = {
-                    flag = political_crysis
-                    days = 60
-                    value = 1
-                }
-                set_variable = {global.to_crysis = THIS}
-                set_variable = {global.sender_crysis = ROOT}
-                set_variable = {global.minor_crysis = 0}
-
-                set_variable = {global.type_crysis = 1}
-
-                var:global.sender_crysis = {country_event = {id = mechanics.37 days = 1}}
-                encount_majors = yes
-                d_calc_crysis = yes
-
-                ROOT = {clr_country_flag = force_action_win_opened}
-                ROOT = {clr_country_flag = crysis_ai_cores@PREV}
-                ROOT = {clr_country_flag = crysis_ai_ready@PREV}
-            }
-
-            puppet_button_click = {
-                set_global_flag = {
-                    flag = political_crysis
-                    days = 60
-                    value = 1
-                }
-                set_variable = {global.to_crysis = THIS}
-                set_variable = {global.sender_crysis = ROOT}
-                set_variable = {global.minor_crysis = 0}
-
-                set_variable = {global.type_crysis = 0}
-
-                var:global.sender_crysis = {country_event = {id = mechanics.37 days = 1}}
-                encount_majors = yes
-                d_calc_crysis = yes
-
-                ROOT = {clr_country_flag = force_action_win_opened}
-                ROOT = {clr_country_flag = crysis_ai_puppet@PREV}
-                ROOT = {clr_country_flag = crysis_ai_ready@PREV}
             }
         }
 
@@ -605,9 +588,6 @@ scripted_gui = {
             #l2_visible = {always = no} cores_button_visible = {always = no}
             
             cRelease_click_enabled = {
-                crysis_startable = yes
-            }
-            puppet_button_click_enabled = {
                 crysis_startable = yes
             }
 			cores_button_click_enabled = {

@@ -12,10 +12,6 @@ ideas = {
             cancel = {
                 NOT = {has_variable = sphere_owner}
             }
-
-            on_remove = {
-                clear_variable = fembargo_cost
-            }
 	
 
 			modifier = {

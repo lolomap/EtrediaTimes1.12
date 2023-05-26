@@ -3,14 +3,14 @@ achievs_available = {
 }
 
 crysis_startable = {
-    not = {has_global_flag = political_crysis}
-    not = {has_global_flag = war_crysis}
+    not = {has_country_flag = political_crysis}
     not = {is_subject_of = ROOT}
     not = {has_war_with = ROOT}
     not = {has_non_aggression_pact_with = ROOT}
     not = {OR = {has_idea = DIR_revolt has_idea = DIR_revolt2}}
 
     ROOT = {
+        not = {has_country_flag = political_crysis}
         not = {has_country_flag = crysis_delay}
         is_subject = no
     }
@@ -26,58 +26,3 @@ crysis_startable = {
     }
 }
 
-crysis_capitulated = {
-    var:global.to_crysis = {
-        surrender_progress > 0.89
-    }
-}
-
-crysis_minor_occupy = {
-    check_variable = {global.type_crysis = 2}
-    var:global.to_crysis = {
-        all_controlled_state = {
-           NOT = {is_core_of = var:global.minor_crysis}
-        }
-    }
-}
-
-crysis_cores_occupy = {
-    check_variable = {global.type_crysis = 1}
-    var:global.to_crysis = {
-        all_controlled_state = {
-            NOT = {
-                OR = {
-                    is_claimed_by = var:global.sender_crysis
-                    is_core_of = var:global.sender_crysis
-                }
-            }
-        }
-    }
-}
-
-crysis_rewardable = {
-    OR = {
-        crysis_capitulated = yes
-        crysis_minor_occupy = yes
-        crysis_cores_occupy = yes
-    }
-}
-
-is_asian = {
-    OR = {
-        original_tag = UNC
-        original_tag = GAR
-        original_tag = KCE
-        original_tag = LOD
-        original_tag = ZOG
-        original_tag = HOR
-        original_tag = ECE
-        original_tag = GWA
-        original_tag = KYU
-        original_tag = DNG
-        original_tag = KLU
-        original_tag = BSH
-        original_tag = SOL
-        original_tag = YEO
-    }
-}

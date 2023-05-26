@@ -111,6 +111,7 @@ ideas = {
 				generate_wargoal_tension = 0.2
 				guarantee_cost = 0.3
 				lend_lease_tension = 0.2
+                winfluence_modifier = -0.3
 			}
 		}
 
@@ -216,16 +217,10 @@ ideas = {
             allowed = {always = no}
 			removal_cost = -1
 
-            on_add = {
-                add_to_variable = {winfluence_cost = 0.1}
-            }
-            on_remove = {
-                add_to_variable = {winfluence_cost = -0.1}
-            }
-
 			modifier = {
 				stability_factor = 0.05
-                custom_modifier_tooltip = world_influence_cost_10n
+                winfluence_modifier = 0.1
+                #custom_modifier_tooltip = world_influence_cost_10n
 			}
         }
         IID_barkhan_culture = {

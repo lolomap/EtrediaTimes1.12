@@ -23,5 +23,5 @@
     cw_press: "[cw_press_sl]"
     cw_press_y: "Возразить"
     cw_press_n: "Отменить"
-    sender_name: "[?global.sender_crysis.GetNameDef]"
-    to_name: "[?global.to_crysis.GetNameDef]"
+    sender_name: "[?political_crysis_member.GetNameDef]"
+    to_name: "[?political_crysis_member:to_crysis.GetNameDef]"

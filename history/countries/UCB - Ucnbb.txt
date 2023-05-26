@@ -17,6 +17,7 @@ add_ideas = {
         limited_entry
 	fourth_corruption_level
     regionalism
+    UCB_gegemon
 }
 
 	set_autonomy = {
