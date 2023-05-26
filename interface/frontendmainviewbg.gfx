@@ -7,4 +7,18 @@ spriteTypes = {
 		tilingCenter = no	
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"				
 	}
+
+    frameAnimatedSpriteType = {
+    	name = "GFX_logo_animation"
+    	texturefile = "gfx/interface/logo_animated.dds"
+    	noOfFrames = 31
+        effectFile = "gfx/FX/buttonstate.shader"
+        
+    	
+    	animation_rate_fps = 10
+    	looping = yes
+    	play_on_show = yes
+    	pause_on_loop = 0.0
+	}
+
 }
