@@ -75,6 +75,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_stavka_defense
 		}
+        prerequisite = {
+            focus = UCB_defend_SHE
+        }
 
 	}
 	focus = {
@@ -291,7 +294,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem1
 		icon = GFX_goal_support_democracy
-		cost = 10
+		cost = 3
 		prerequisite = {
 			focus = UCB_2
 		}
@@ -614,7 +617,7 @@ focus_tree = {
 	focus = {
 		id = UCB_fasc1
 		icon = GFX_goal_support_fascism
-		cost = 10
+		cost = 3
 		prerequisite = {
 			focus = UCB_2
 		}
@@ -670,7 +673,11 @@ focus_tree = {
 			add_war_support = 0.05
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.025
+			}
+            add_popularity = {
+				ideology = neutrality
+				popularity = 0.025
 			}
 		}
 		x = 29
@@ -2040,7 +2047,7 @@ focus_tree = {
     focus = {
         id = UCB_convergation
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 5
         x = 55
         y = 6
         available = {}
@@ -2061,7 +2068,7 @@ focus_tree = {
     focus = {
         id = UCB_civilian_nationalism
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 5
         x = 55
         y = 7
         available = {}
@@ -2083,7 +2090,7 @@ focus_tree = {
     focus = {
         id = UCB_yurescul_speech
         icon = GFX_goal_unknown
-        cost = 15
+        cost = 10
         x = 55
         y = 8
         available = {
@@ -2168,7 +2175,7 @@ focus_tree = {
     focus = {
         id = UCB_PMC
         icon = GFX_goal_unknown
-        cost = 5
+        cost = 3
         x = 58
         y = 9
         available = {}
@@ -2294,7 +2301,7 @@ focus_tree = {
     focus = {
         id = UCB_independent_ndro
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 5
         x = 53
         y = 10
         available = {
@@ -2360,7 +2367,7 @@ focus_tree = {
     focus = {
         id = UCB_narabel_referendum
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 5
         x = 53
         y = 12
         available = {}
@@ -2800,7 +2807,7 @@ focus_tree = {
     focus = {
         id = UCB_parlament_fas3
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 5
         x = 43
         y = 7
         available = {}
@@ -2840,7 +2847,7 @@ focus_tree = {
     focus = {
         id = UCB_parlament_fas5
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 7
         x = 43
         y = 8
         available = {}
@@ -2866,7 +2873,7 @@ focus_tree = {
         available = {
             power_balance_value = {
                 id = UCB_parlament_balance
-                value > 0.6
+                value > 0.45
             }
         }
         bypass = {}

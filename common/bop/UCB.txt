@@ -19,12 +19,12 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.05
+					value = 0.07
 					tooltip = change_region_ideology_factor_tooltip
 				}
                 set_variable = {
                     var = region_event_factor
-                    value = 1.7
+                    value = 1
                     tooltip = change_region_event_factor_tooltip
                 }
                 custom_effect_tooltip = banned_ucb_bop_tooltip
@@ -55,12 +55,12 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.03
+					value = 0.05
 					tooltip = change_region_ideology_factor_tooltip
 				}
                 set_variable = {
                     var = region_event_factor
-                    value = 1.7
+                    value = 0.6
                     tooltip = change_region_event_factor_tooltip
                 }
                 custom_effect_tooltip = banned_ucb_bop_tooltip
@@ -88,12 +88,12 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.02
+					value = 0.03
 					tooltip = change_region_ideology_factor_tooltip
 				}
                 set_variable = {
                     var = region_event_factor
-                    value = 1.3
+                    value = 0.4
                     tooltip = change_region_event_factor_tooltip
                 }
 			}
@@ -128,7 +128,7 @@ UCB_parlament_balance = {
             on_activate = {
                 set_variable = {
                     var = region_event_factor
-                    value = 0.4
+                    value = 0.1
                     tooltip = change_region_event_factor_tooltip
                 }
             }
@@ -143,12 +143,12 @@ UCB_parlament_balance = {
 			on_activate = {
 				set_variable = {
 					var = region_ideology_factor
-					value = 0.005
+					value = 0.01
 					tooltip = change_region_ideology_factor_tooltip
 				}
                 set_variable = {
                     var = region_event_factor
-                    value = 0.7
+                    value = 0.2
                     tooltip = change_region_event_factor_tooltip
                 }
 			}

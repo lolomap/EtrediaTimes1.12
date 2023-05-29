@@ -1682,7 +1682,7 @@ country_event = {
     mean_time_to_happen = {days = 30}
 
     trigger = {
-        check_variable = {world_influence > 10}
+        check_variable = {world_influence > 4.5}
         NOT = {has_idea = wi_trade_influence}
     }
 

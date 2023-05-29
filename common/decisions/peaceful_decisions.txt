@@ -12,6 +12,7 @@ peaceful_democratic = {
 		}
 
 		visible = {
+            always = no
 			OR = {
 				AND = {
 					has_government = democratic
@@ -50,6 +51,7 @@ peaceful_democratic = {
 			has_added_tension_amount < 15
 		}
 		visible = {
+            always = no
 			has_government = democratic
 			has_added_tension_amount < 5
 			OR = {
@@ -102,6 +104,7 @@ peaceful_democratic = {
 		}
 
 		visible = {
+            always = no
 			check_variable = {pi_master > 10}
 		}
 
@@ -159,6 +162,7 @@ peaceful_democratic = {
 		}
 
 		visible = {
+        always = no
 			check_variable = {pi_master > 20}
 		}
 
@@ -183,6 +187,7 @@ peaceful_democratic = {
 			}
 		}
 		visible = {
+        always = no
 			has_government = democratic
 			has_added_tension_amount < 1
 			check_variable = {pi_master > 15}
@@ -217,6 +222,7 @@ peaceful_democratic = {
 			always = no
 		}
 		visible = {
+        always = no
 			has_government = democratic
 			has_added_tension_amount < 5
 			check_variable = {pi_master > 15}

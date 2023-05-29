@@ -4,6 +4,25 @@ defined_text = {
 }
 
 defined_text = {
+    name = overlord_sl
+    text = {
+        trigger = {
+            is_subject = yes
+        }
+        localization_key = "[?overlord.GetFlag]"
+    }
+    text = {
+        trigger = {
+            has_variable = sphere_owner
+        }
+        localization_key = "[?sphere_owner.GetFlag]"
+    }
+    text = {
+        localization_key = "[GetFlag]"
+    }
+}
+
+defined_text = {
     name = sphere_status_icon
     text = {
         trigger = {

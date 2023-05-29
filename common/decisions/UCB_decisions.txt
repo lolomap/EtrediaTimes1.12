@@ -5,7 +5,7 @@ UCB_bop_category = {
         fixed_random_seed = no
         days_remove = 30
         modifier = {
-            power_balance_daily = 0.001
+            power_balance_daily = 0.002
         }
         remove_effect = {
             UCB = {
@@ -42,10 +42,9 @@ UCB_bop_category = {
     }
     UCB_support_vote_company = {
         cost = 25
-        fixed_random_seed = no
         days_remove = 7
         modifier = {
-            power_balance_daily = -0.007
+            power_balance_daily = -0.002
         }
         visible = {has_government = democratic}
 
@@ -70,7 +69,7 @@ UCB_bop_category = {
         complete_effect = {
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
-                add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.08 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.oppos_@THIS max = 1}
             }
         }
@@ -82,14 +81,13 @@ UCB_bop_category = {
 
     UCB_visit_regions = {
         cost = 20
-        fixed_random_seed = no
 
         complete_effect = {
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
-                add_to_variable = {var = UCB.oppos_@THIS value = 0.03 tooltip = add_region_opposition_tooltip}
+                add_to_variable = {var = UCB.oppos_@THIS value = 0.02 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.oppos_@THIS max = 1}
-                add_to_variable = {var = UCB.sep_@THIS value = -0.03 tooltip = add_region_separatism_tooltip}
+                add_to_variable = {var = UCB.sep_@THIS value = -0.02 tooltip = add_region_separatism_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS min = 0}
             }
         }
@@ -100,17 +98,17 @@ UCB_bop_category = {
     }
 
     UCB_press_regions = {
-        cost = 50
+        cost = 30
 
         complete_effect = {
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
-                add_to_variable = {var = UCB.sep_@THIS value = -0.05 tooltip = add_region_separatism_tooltip}
+                add_to_variable = {var = UCB.sep_@THIS value = -0.03 tooltip = add_region_separatism_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS min = 0}
             }
             add_power_balance_value = {
                 id = UCB_parlament_balance
-                value = 0.1
+                value = 0.06
             }
         }
 
@@ -137,11 +135,11 @@ UCB_bop_category = {
     }
 
     UCB_support_olig = {
-        cost = 50
+        cost = 75
 
-        days_remove = 30
+        days_remove = 120
         modifier = {
-            power_balance_daily = 0.008
+            power_balance_daily = 0.01
         }
         fixed_random_seed = no
         remove_effect = {
@@ -151,7 +149,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -162,7 +160,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -173,7 +171,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c2 = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -185,7 +183,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c3 = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -197,7 +195,7 @@ UCB_bop_category = {
                     }
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.1 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
             }
@@ -206,12 +204,11 @@ UCB_bop_category = {
 
     UCB_extra_voting = {
         cost = 75
-        fixed_random_seed = no
 
         complete_effect = {
             add_power_balance_value = {
                 id = UCB_parlament_balance
-                value = -0.05
+                value = -0.025
             }
             custom_effect_tooltip = randomize_region_ideology_tooltip
             hidden_effect = {
@@ -259,7 +256,7 @@ UCB_bop_category = {
         fixed_random_seed = no
         days_remove = -1
         modifier = {
-            power_balance_daily = 0.001
+            power_balance_daily = 0.002
         }
 
         complete_effect = {

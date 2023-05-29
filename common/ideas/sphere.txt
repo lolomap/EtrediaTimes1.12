@@ -15,8 +15,8 @@ ideas = {
 	
 
 			modifier = {
-                control_trade_mission_factor = 2
-                diplomatic_pressure_mission_factor = 2
+                foreign_subversive_activites = 0.5
+                #intelligence_agency_defense	= -100
             }
         }
     }

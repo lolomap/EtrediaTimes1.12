@@ -29,7 +29,7 @@ ideas = {
 			}
 
 			cancel = {
-				check_variable = {world_influence < 10}
+				check_variable = {world_influence < 4.5}
 			}
 		}
 		wi_faction_trade_influence = {
@@ -41,11 +41,11 @@ ideas = {
             picture = trade_influence
 
 			modifier = {
-				faction_trade_opinion_factor = 2
+				trade_opinion_factor = 0.5
 			}
 
 			cancel = {
-				faction_leader = {check_variable = {faction_influence < 30}}
+				faction_leader = {check_variable = {faction_influence < 15}}
 			}
 		}
 		wi_economic_faction_trade_influence = {
@@ -57,12 +57,12 @@ ideas = {
             picture = trade_influence
 
 			modifier = {
-				faction_trade_opinion_factor = 3
+				trade_opinion_factor = 0.5
 			}
 
 			cancel = {
 				OR = {
-					faction_leader = {check_variable = {faction_influence < 50}}
+					faction_leader = {check_variable = {faction_influence < 20}}
 					faction_leader = {not = {has_idea = EconomicFaction}}
 				}
 			}
