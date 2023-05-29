@@ -47,8 +47,8 @@ armor_generic = {
 				num_of_military_factories < 10
 			}
 			modifier = {
+				factor = -4
 				has_tech = main_battle_tank
-				factor = -5
 			}
 		}
 		
@@ -141,10 +141,8 @@ armor_generic = {
 				factor = 1
 			}
 			modifier = {
-				factor = -10
-				OR = {
-					has_tech = main_battle_tank
-				}
+				factor = -2
+				has_tech = main_battle_tank
 			}
 		}
 		
@@ -234,21 +232,19 @@ armor_generic = {
 	medium_armor_default = {
 	
 		upgrade_prio = {
-			factor = 2
+			factor = 1
 
 			modifier = {
-				factor = 2
-				OR = {
-					has_tech = basic_medium_tank
-				}
+				factor = 1
+				has_tech = basic_medium_tank
 			}
 			modifier = {
 				factor = 2
 				num_of_military_factories < 20
 			}
 			modifier = {
+				factor = -2
 				has_tech = main_battle_tank
-				factor = -20
 			}
 		}
 		
@@ -338,10 +334,8 @@ armor_generic = {
 		upgrade_prio = {
 			factor = 2
 			modifier = {
-				factor = -10
-				OR = {
-					has_tech = main_battle_tank
-				}
+				factor = -2
+				has_tech = main_battle_tank
 			}
 		}
 		
@@ -430,13 +424,13 @@ armor_generic = {
 	modern_armor_default = {
 	
 		upgrade_prio = {
-			factor = 2
+			factor = 1
 
 			modifier = {
 				factor = 1
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				num_of_military_factories > 30
 			}
 			modifier = {
@@ -521,10 +515,10 @@ armor_generic = {
 	modern_armor_heavy = {
 	
 		upgrade_prio = {
-			factor = 0
+			factor = 1
 			modifier = {
-				factor = 5
-				num_of_military_factories > 60
+				factor = 4
+				num_of_military_factories > 40
 			}
 		}
 		
@@ -621,7 +615,7 @@ garrison_generic = {
 	}
 	
 	upgrade_prio = {
-		factor = 80
+		factor = 10
 
 		modifier = {
 			factor = 0
@@ -703,6 +697,7 @@ garrison_generic = {
 		allowed_types = {
 			infantry
 			mechanized
+			jeep
 			engineer
 		}
 	}
@@ -734,21 +729,7 @@ suppression_generic = {
 			factor = 2
 
 			modifier = {
-				factor = 50
-				tag = GER
-				OR = {
-					AND = {
-						has_completed_focus = GER_anschluss
-						NOT = { ai_has_role_template = garrison }
-					}
-					
-					AND = {
-						any_country = {
-							is_justifying_wargoal_against = ROOT
-						}
-						NOT = { ai_has_role_template = garrison }
-					}
-				}			
+				factor = 2			
 			}
 		}
 		
@@ -841,7 +822,11 @@ infantry_generic = {
 			
 			modifier = {
 				factor = 2
-				num_of_factories < 20
+				num_of_factories < 35
+			}
+			modifier = {
+				factor = -6
+				num_of_factories > 90
 			}
 		}
 		
@@ -1016,18 +1001,11 @@ infantry_big_generic = {
 	}
 	
 	upgrade_prio = {
-		factor = 20
-
+		factor = 2
+		
 		modifier = {
-			factor = 0
-
-			OR = {
-				date < 2018.1.1
-				stockpile_ratio = { 
-	  				archetype = infantry_equipment
-	  				ratio < 4
-	  			}
-	  		}
+			factor = 2
+			num_of_factories > 90
 		}
 	}
 
@@ -1036,23 +1014,11 @@ infantry_big_generic = {
 	infantry_default = {
 	
 		upgrade_prio = {
-			factor = 20
-
-			modifier = {
-				factor = 1
-
-				OR = {
-					date < 2018.1.1
-					stockpile_ratio = { 
-		  				archetype = infantry_equipment
-		  				ratio < 4
-		  			}
-		  		}
-			}
+			factor = 2
 			
 			modifier = {
-				factor = 8
-				num_of_factories > 80
+				factor = 6
+				num_of_factories > 90
 			}
 		}
 		
@@ -1279,6 +1245,10 @@ marines_generic = {
 			modifier = {
 				factor = 1
 			}
+			modifier = {
+				is_major = yes
+				factor = -2
+			}
 		}
 	
 		target_width = 18.0
@@ -1348,7 +1318,7 @@ marines_generic = {
 	marine_armored = {
 	
 		upgrade_prio = {
-			factor = 2
+			factor = 3
 
 			modifier = {
 				factor = 0
