@@ -31,6 +31,8 @@ set_technology = {basic_train = 1
         basic_medium_tank = 1
 	advanced_medium_tank = 1
 	main_battle_tank = 1
+
+	electronic_proto = 1
 }
 
 set_convoys = 0

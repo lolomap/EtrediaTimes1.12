@@ -60,6 +60,15 @@ set_technology = {basic_train = 1
 	early_destroyer = 1
 	early_battleship = 1
 	transport = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
+	encription_start = 1
+	decription_start = 1
+	processors_proto = 1
+	cyber_safety = 1
+	geo_satellites = 1
 }
 
 set_politics = {

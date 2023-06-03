@@ -21,6 +21,9 @@ set_technology = {basic_train = 1
 	fuel_silos = 1
 	early_destroyer = 1
 	jeep_unit = 1
+
+	electronic_proto = 1
+	electronic_start = 1
 }
 
 set_politics = {

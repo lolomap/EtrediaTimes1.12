@@ -36,6 +36,10 @@ set_technology = {basic_train = 1
 	jeep_unit = 1
 	jeep_unit_2 = 1
         mechanised_infantry = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
 }
 
 

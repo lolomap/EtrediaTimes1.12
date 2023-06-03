@@ -38,6 +38,13 @@ set_technology = {basic_train = 1
         basic_medium_tank = 1
 	advanced_medium_tank = 1
 	main_battle_tank = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
+	encription_start = 1
+	decription_start = 1
+	processors_proto = 1
 }
 
 

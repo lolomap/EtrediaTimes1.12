@@ -61,6 +61,10 @@ set_technology = {basic_train = 1
 	cv_CAS1 = 1
 	cv_fighter1 = 1
 	CAS1 = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
 }
 
 set_convoys = 150

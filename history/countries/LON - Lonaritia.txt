@@ -30,6 +30,10 @@ set_technology = {basic_train = 1
 	early_submarine = 1
 	transport = 1
 	early_destroyer = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
 }
 
 set_convoys = 200

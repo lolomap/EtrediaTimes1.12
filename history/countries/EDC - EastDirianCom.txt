@@ -34,6 +34,10 @@ set_technology = {
 	tactical_bomber1 = 1
 	
 	synth_oil_experiments = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
 }
 
 set_convoys = 56

@@ -71,6 +71,13 @@ set_technology = {basic_train = 1
 	basic_submarine = 1
 	basic_light_cruiser = 1
 	basic_heavy_cruiser = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
+	processors_proto = 1
+	cyber_safety = 1
+	geo_satellites = 1
 }
 
 

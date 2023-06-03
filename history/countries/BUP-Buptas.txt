@@ -17,6 +17,8 @@ set_technology = {basic_train = 1
 
 	infantry_weapons = 1
 	jeep_unit = 1
+
+	electronic_proto = 1
 }
 
 set_politics = {
