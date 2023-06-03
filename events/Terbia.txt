@@ -17,15 +17,20 @@ country_event = {
     }
 
 	option = {
-		name = terbia.1.a
-            set_politics = {
-                ruling_party = communism 
-		    }
-			add_popularity = {
+        name = terbia.1.a
+
+        custom_effect_tooltip = remove_from_sphere_tt
+        set_politics = {
+            ruling_party = communism 
+        }
+        add_popularity = {
             ideology = communism
             popularity = 0.2
-           }
-		   hidden_effect = {news_event = {id = newss.26 days = 1}}
+        }
+        hidden_effect = {
+            news_event = {id = newss.26 days = 1}
+            remove_from_sphere = yes
+        }
     }
 }
 

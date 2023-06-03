@@ -1,12 +1,12 @@
 peaceful_democratic = {
 	icon = generic_democracy
 
-    allowed = {always = no}
+    #allowed = {always = no}
 	
 	visible = {
 
-		#has_government = democratic
-		#has_added_tension_amount < 5
+		has_government = democratic
+		has_added_tension_amount < 5
 		#OR = {
 		#	is_ai = no
 		#	is_historical_focus_on = no

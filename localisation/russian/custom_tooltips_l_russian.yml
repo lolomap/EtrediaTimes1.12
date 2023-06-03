@@ -77,6 +77,8 @@
   wtire_boost: "Военная усталость: $RIGHT|-=$"
   world_influence_cost_clamp:0 "§RДругие модификаторы влияния не работают§!"
 
+  remove_from_sphere_tt: "Страна §Yвыйдет§! из-под сферы [?sphere_owner.GetFlag]§Y[?sphere_owner.GetAdjective]§! влияния."
+
   DEM_train_modern_army_tooltip:0 "§CНам станет доступна подготовка новых войск при поддержке Картилии§"
   kar_political_support_tooltip:0 "§Мы поможем Дирии сохранить внутренную стабильность государства.§"
   UCBCrashLoc:0 "Развал [UCB.GetNameDef]\n"

@@ -57,6 +57,7 @@ ideas = {
 				guarantee_tension = 0.5
 				max_fuel_factor = -0.35
 				fuel_gain_factor = -0.5
+                winfluence_modifier = -0.1
 			}
 			allowed_to_remove = {
 				OR = {
@@ -290,6 +291,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.10
+                winfluence_modifier = 0.05
 			}
 			
 			cancel_if_invalid = no
@@ -422,6 +424,7 @@ ideas = {
 			
 			modifier = {
 				min_export = 0
+                winfluence_modifier = -0.05
 			}
 			
 			on_add = {

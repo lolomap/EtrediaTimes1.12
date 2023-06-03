@@ -54,6 +54,19 @@ scripted_gui = {
             crysis_window_maximize_visible = {
                 has_variable = political_crysis_member
             }
+            
+            ovFlag_visible = {
+                OR = {
+                    is_subject = yes
+                    has_variable = sphere_owner
+                }
+            }
+            ovFlagBorder_visible = {
+                OR = {
+                    is_subject = yes
+                    has_variable = sphere_owner
+                }
+            }
 		}
 
 		effects = {
@@ -72,6 +85,12 @@ scripted_gui = {
                 }
             }
 		}
+
+        properties = {
+            ovFlag = {
+                image = "[overlord_sl]"
+            }
+        }
 	}
 
     winfluence = {
