@@ -1331,21 +1331,21 @@ focus_tree = {
 			YAN = { country_event = { id = yan.17 days = 1 } }
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
 			modifier = {
-				factor = 0.5
+				factor = 0
 				YAN = { has_completed_focus = YAN_nalogi }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0
 				YAN = { has_completed_focus = YAN_arms1 }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0
 				YAN = { has_completed_focus = YAN_diria_bunker }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0
 				YAN = { has_completed_focus = YAN_invest_to_west }
 			}
 		}
@@ -1365,14 +1365,22 @@ focus_tree = {
 		YAN = { country_event { id = yan.8 days = 1 } }
 		}
 		ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
-				factor = -3
-				date < 2019.1.1
+				factor = 0
+				date < 2017.1.1
 			}
 			modifier = {
-				factor = -3
-				SBU = { NOT = { has_completed_focus = SBU_aldeko_operation } }
+				factor = -1
+				TRB = { is_puppet = yes }
+			}
+			modifier = {
+				factor = 0
+				YAN = { has_army_manpower = { size < 300000 } }
+			}
+			modifier = {
+				factor = 1
+				YAN = { has_army_manpower = { size > 300000 } }
 			}
 		}
 		x = 38
@@ -1405,6 +1413,9 @@ focus_tree = {
 				target = RTT
 				generator = { 199 200 }
 			}
+		}
+		ai_will_do = {
+			factor = 3
 		}
 		x = 39
 		y = 11

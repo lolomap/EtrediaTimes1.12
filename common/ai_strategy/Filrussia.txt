@@ -1,0 +1,49 @@
+fil_help_EC = {
+    allowed = {
+		original_tag = FIL
+    }
+	enable = {
+		OR = {
+			NOT = { KAR = { has_government = communism } }
+			NOT = { KAR = { has_government = fascism } }
+			NOT = { has_war = yes }
+		}
+		OR = {
+			UCB = { has_war_with = EIK }
+			SBU = { has_war_with = EIK }
+			KAR = { has_war_with = EIK }
+			UCB = { has_war_with = YAN }
+			SBU = { has_war_with = YAN }
+			KAR = { has_war_with = YAN }
+		}
+	}
+	abort = {
+		FIL = { has_war = yes }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SBU"
+		value = 15
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KAR"
+		value = 15
+	}
+	ai_strategy = {
+		type = support
+		id = "UCB"
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "KAR"
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "SBU"
+		value = 20
+	}
+}

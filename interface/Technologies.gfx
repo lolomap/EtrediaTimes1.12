@@ -1640,17 +1640,51 @@ spriteTypes = {
 		name = "GFX_processors_proto_medium"
 		texturefile = "gfx/interface/technologies/processors_proto.dds"
 	}
+	SpriteType = {
+		name = "GFX_electronic_start_medium"
+		texturefile = "gfx/interface/technologies/electronic_start.dds"
+	}
+	SpriteType = {
+		name = "GFX_computers_proto_medium"
+		texturefile = "gfx/interface/technologies/computers_proto.dds"
+	}
+	SpriteType = {
+		name = "GFX_computers_90s_medium"
+		texturefile = "gfx/interface/technologies/computers_90s.dds"
+	}
+	SpriteType = {
+		name = "GFX_electronic_modern_medium"
+		texturefile = "gfx/interface/technologies/electronic_modern.dds"
+	}
+	SpriteType = {
+		name = "GFX_cyber_safety_medium"
+		texturefile = "gfx/interface/technologies/cyber_safety.dds"
+	}
+	SpriteType = {
+		name = "GFX_encription_start_medium"
+		texturefile = "gfx/interface/technologies/encription_start.dds"
+	}
+	SpriteType = {
+		name = "GFX_decription_start_medium"
+		texturefile = "gfx/interface/technologies/decription_start.dds"
+	}
+	SpriteType = {
+		name = "GFX_computer_decription_medium"
+		texturefile = "gfx/interface/technologies/computer_decription.dds"
+	}
+	SpriteType = {
+		name = "GFX_computer_encription_medium"
+		texturefile = "gfx/interface/technologies/computer_encription.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_nukes_medium"
 		texturefile = "gfx/interface/technologies/nukes.dds"
 	}
-	
 	SpriteType = {
 		name = "GFX_jet_engines_medium"
 		texturefile = "gfx/interface/technologies/jet_engines.dds"
 	}
-	
 	SpriteType = {
 		name = "GFX_electronic_mechanical_engineering_medium"
 		texturefile = "gfx/interface/technologies/electronic_mechanical_engineering.dds"

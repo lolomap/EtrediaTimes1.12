@@ -43,6 +43,13 @@ set_technology = {basic_train = 1
 	early_destroyer = 1
 	basic_destroyer = 1
 	early_battleship = 1
+
+	electronic_proto = 1
+	electronic_start = 1
+	computers_proto = 1
+	encription_start = 1
+	decription_start = 1
+	processors_proto = 1
 }
 
 set_convoys = 150

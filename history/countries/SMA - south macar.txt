@@ -32,6 +32,9 @@ set_technology = {basic_train = 1
 	early_battleship = 1
         mechanised_infantry = 1
 	jeep_unit = 1
+
+	electronic_proto = 1
+	electronic_start = 1
 }
 
 set_convoys = 80

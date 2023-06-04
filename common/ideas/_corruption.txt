@@ -21,6 +21,7 @@ ideas = {
 					political_advisor_cost_factor = -0.1
 					industrial_capacity_factory = 0.08
 					industry_free_repair_factor = 0.1
+					supply_factor = 0.25
                 }
 
                 cancel_if_invalid = no
@@ -44,6 +45,7 @@ ideas = {
 					political_advisor_cost_factor = -0.05
 					industrial_capacity_factory = 0.05
 					industry_free_repair_factor = 0.05
+					supply_factor = 0.15
                 }
 
                 cancel_if_invalid = no 
@@ -65,6 +67,7 @@ ideas = {
 					master_ideology_drift = 0.01
 					research_speed_factor = 0.02
 					drift_defence_factor = 0.03
+					supply_factor = 0.05
                 }
 
                 cancel_if_invalid = no
@@ -135,6 +138,7 @@ ideas = {
 					political_advisor_cost_factor = 0.15
 					industrial_capacity_factory = -0.08
 					industry_free_repair_factor = -0.1
+					supply_factor = -0.1
                 }
 
                 cancel_if_invalid = no

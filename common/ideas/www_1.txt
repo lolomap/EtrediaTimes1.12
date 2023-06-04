@@ -20,6 +20,7 @@ ideas = {
                 army_defence_factor = -0.1
                 army_morale_factor = -0.3
                 winfluence_modifier = -0.05
+		attrition = -0.25
 			}
 
             cancel_if_invalid = no

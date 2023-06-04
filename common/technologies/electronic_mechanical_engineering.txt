@@ -368,7 +368,7 @@ technologies = {
         }
 		
 		research_cost = 2
-		start_year = 2014
+		start_year = 2016
 		folder = {
 			name = electronics_folder
 			position = { x = 4 y = 8 }
@@ -394,7 +394,7 @@ technologies = {
     satellites_maps2 = {
 
 		# small boost to research speed
-		local_resources_factor = 0.012
+		local_resources_factor = 0.1
 		
         path = {
             leads_to_tech = satellites_maps3
@@ -470,11 +470,11 @@ technologies = {
     computer_encription = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		encryption = 3
 		
 		
 		research_cost = 1
-		start_year = 2014
+		start_year = 2016
 		folder = {
 			name = electronics_folder
 			position = { x = -2 y = 10 }
@@ -500,11 +500,11 @@ technologies = {
     computer_decription = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		decryption = 3
 		
 		
 		research_cost = 1
-		start_year = 2014
+		start_year = 2016
 		folder = {
 			name = electronics_folder
 			position = { x = 2 y = 10 }
@@ -569,7 +569,7 @@ technologies = {
 
     satellites_maps3 = {
 
-		local_resources_factor = 0.025
+		local_resources_factor = 0.12
 		
 		
 		research_cost = 1.5

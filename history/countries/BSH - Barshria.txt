@@ -24,6 +24,9 @@ set_technology = {basic_train = 1
 	gw_artillery = 1
         mechanised_infantry = 1
 	gwtank = 1
+
+	electronic_proto = 1
+	electronic_start = 1
 }
 
 set_politics = {

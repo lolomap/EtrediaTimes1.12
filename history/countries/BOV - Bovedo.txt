@@ -30,6 +30,9 @@ set_technology = {basic_train = 1
 	synth_oil_experiments = 1
 	fuel_silos = 1
 
+	electronic_proto = 1
+	electronic_start = 1
+
 	early_destroyer = 1
 	transport = 1
 }

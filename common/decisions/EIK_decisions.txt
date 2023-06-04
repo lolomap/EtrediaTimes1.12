@@ -279,12 +279,18 @@ EIK_release_diria_minors = {
 		available = {
 		263 = { is_controlled_by = EIK }
 		264 = { is_controlled_by = EIK }
+		795 = { is_controlled_by = EIK }
+		796 = { is_controlled_by = EIK }
+		797 = { is_controlled_by = EIK }
 		}
 
 		fire_only_once = yes
 		activation = {			
 		263 = { is_controlled_by = EIK }
 		264 = { is_controlled_by = EIK }
+		795 = { is_controlled_by = EIK }
+		796 = { is_controlled_by = EIK }
+		797 = { is_controlled_by = EIK }
 			NOV = {
 				exists = no
 			}
@@ -293,6 +299,9 @@ EIK_release_diria_minors = {
 		visible = {
 		263 = { is_controlled_by = EIK }
 		264 = { is_controlled_by = EIK }
+		795 = { is_controlled_by = EIK }
+		796 = { is_controlled_by = EIK }
+		797 = { is_controlled_by = EIK }
 			NOV = {
 				exists = no
 			}
@@ -300,9 +309,15 @@ EIK_release_diria_minors = {
 		complete_effect = {
 			NOV = {
             transfer_state = 264
-            transfer_state = 263 
+            transfer_state = 263
+			transfer_state = 795
+			transfer_state = 796
+			transfer_state = 797
             add_state_core = 264
             add_state_core = 263
+			add_state_core = 795
+			add_state_core = 796
+			add_state_core = 797
 		    load_oob = _NOV
             }
 		puppet = NOV
