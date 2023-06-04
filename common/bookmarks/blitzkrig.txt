@@ -2,10 +2,9 @@ bookmarks = {
 	bookmark = {
 		name = "MINOR_WORLD_NAME"
 		desc = "MINOR_WORLD_DESC"
-		date = 2014.2.2.12
+		date = 2018.1.1.12
 		picture = "GFX_select_date_1939"
-		default_country = "EIK"
-		default = yes
+		default_country = "SBU"
 
 		"UCB"={
 			history = "UCB_GATHERING_STORM_DESC"
@@ -99,6 +98,152 @@ bookmarks = {
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
+
+            YAN = {
+                annex_country = {target = SMA}
+                annex_country = {target = DON}
+                annex_country = {target = DID}
+            }
+
+            FSC = {
+                release = ORB
+                release = ANR
+                release = KUL
+                release = NER
+            }
+
+            DIR = {
+                set_politics = {
+                    ruling_party = communism 
+                }
+                set_country_flag = BRAND_NEW_COUNTRY
+                add_ideas = leadership_c
+                set_country_flag = ai_not_accept_existance
+                load_oob = DIR_communist
+                add_ideas = { DIR_revolt }
+                add_ideas = { DEM_bad_economic }
+            }
+
+            DEM = {
+                transfer_state = 267
+                transfer_state = 270
+                transfer_state = 271
+                transfer_state = 272
+                transfer_state = 281
+                transfer_state = 277
+                transfer_state = 282
+                transfer_state = 283
+                transfer_state = 284
+                transfer_state = 280
+                transfer_state = 305
+                transfer_state = 306
+                transfer_state = 265
+                transfer_state = 279
+                transfer_state = 275
+                transfer_state = 276
+                transfer_state = 278
+                transfer_state = 791
+                add_state_core = 265
+                add_state_core = 267
+                add_state_core = 307
+                add_state_core = 270
+                add_state_core = 271
+                add_state_core = 272
+                add_state_core = 275
+                add_state_core = 276
+                add_state_core = 277
+                add_state_core = 278
+                add_state_core = 279
+                add_state_core = 280
+                add_state_core = 281
+                add_state_core = 282
+                add_state_core = 283
+                add_state_core = 284
+                add_state_core = 305
+                add_state_core = 306
+                add_state_core = 256
+                add_state_core = 257
+                add_state_core = 258
+                add_state_core = 259
+                add_state_core = 260
+                add_state_core = 261
+                add_state_core = 262
+                add_state_core = 263
+                add_state_core = 264
+                add_state_core = 266
+                add_state_core = 268
+                add_state_core = 269
+                add_state_core = 285
+                add_state_core = 286
+                add_state_core = 287
+                add_state_core = 288
+                add_state_core = 786
+                add_state_core = 789
+                add_state_core = 790
+                add_state_core = 791
+                add_state_core = 792
+                add_state_core = 793
+                add_state_core = 794
+                add_state_core = 795
+                add_state_core = 796
+                add_state_core = 797
+                load_oob = DIR_democrat
+                declare_war_on = { target = DIR type = annex_everything }
+                
+                add_ideas = { DIR_revolt }
+                add_ideas = { DEM_bad_economic }
+            }
+
+            EIK = {
+                create_faction = EIK_blok_ally
+                add_to_faction = BAE
+                add_to_faction = TOL
+            }
+
+            UCB = {
+                create_faction = UCB_scuit_ally
+                add_to_faction = SBU
+                give_guarantee = SHE
+            }
+
+            RGY = {
+                transfer_state = 137
+                transfer_state = 197
+                add_state_core = 137
+                add_state_core = 197
+                
+                add_state_core = 196
+                transfer_state = 196
+            }
+            ELN = {
+                transfer_state = 231
+                add_state_core = 231
+                transfer_state = 230
+                add_state_core = 230
+                transfer_state = 229
+                add_state_core = 229
+            }
+
+            SBU = {
+                transfer_state = 222
+                add_state_core = 222
+                
+                transfer_state = 218
+                transfer_state = 220
+                add_state_core = 218
+                add_state_core = 220
+                
+                TRB = {remove_from_sphere = yes}
+                puppet = TRB
+                puppet = ELN
+            }
+            
+            KLU = {
+                #annex_country = {target = DNG}
+                #annex_country = {target = HOR}
+                #annex_country = {target = ZOG}
+                #annex_country = {target = LOD}
+            }
 		}
 	}
 }

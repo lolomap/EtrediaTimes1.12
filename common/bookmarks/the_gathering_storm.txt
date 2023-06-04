@@ -4,7 +4,7 @@ bookmarks = {
 		desc = "GATHERING_STORM_DESC"
 		date = 2014.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "UCB"
+		default_country = "SBU"
 		default = yes
 		
 		"UCB"={

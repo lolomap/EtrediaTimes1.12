@@ -101,13 +101,6 @@ on_actions = {
                 country_event = {id = onactev.10 days = 1}
             }
 
-			if = {
-				limit = {has_start_date > 2014.01.31}
-				
-                if = { limit = {is_historical_focus_on = yes has_start_date > 2014.01.31} ELR = {country_event = greatrandom.1}}
-                else = {ELR = {country_event = greatminor.7}}
-			}
-
 			EIK = {
 				set_variable = {eik_oligarchism = 0.7}
 				set_variable = {eik_army = 0.4}
