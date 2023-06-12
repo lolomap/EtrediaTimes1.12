@@ -1,7 +1,7 @@
 ﻿l_english:
-    MINOR_WORLD_NAME:0 "New game+"
-    MINOR_WORLD_DESC:0 "With the historical focus enabled, country territories will be shuffled randomly.\n With the historical focus turned off, all the minors will be released from the start (for example, the republics of UcNB, Chleria and Savatia in Siburland, etc.)"
-    GATHERING_STORM_NAME:0 "K-I History"
+    MINOR_WORLD_NAME:0 "Great war"
+    MINOR_WORLD_DESC:0 "The map of Etredia has already undergone significant changes over the past four years, but it seems that nothing can prevent the impending disaster. The planned invasion to Sheregia will be the largest military conflict in history."
+    GATHERING_STORM_NAME:0 "Great changes"
     GATHERING_STORM_DESC:0 "At the century's turn, many tragic events occurred that have put an end to the decaying empires that outlived themselves and collapsed under their own weight. Now Etredia is filled with new nation-states. Someone will try to get the maximum benefit from the current situation by taking advantage of the offended and humiliated, someone will have to return and reclaim their former greatness, and others will need to take the right side in the inevitable world conflict over the spheres of influence."
     BM_HISTORY_TITLE:0 "Scenario selection"
     UCB_GATHERING_STORM_DESC:0 "Torn apart by political and national crises, the federation is entering a new decade. The new presidential elections are aimed to put an end to uncertainty in the country. The UcNB deserves a competent and determined leader who will drive it out of the abyss of discord and corruption. Who will become this leader? Moderate Democrat Zhmirinovan or radical nationalist Narabel? Only time will tell."
