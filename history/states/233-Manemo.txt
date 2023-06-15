@@ -6,13 +6,9 @@ state={
 		owner = TRB
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 0
 			arms_factory = 1
-			4856 = {
+			4188 = {
 				naval_base = 2
-			}
-			4936 = {
-				naval_base = 1
 			}
 
 		}

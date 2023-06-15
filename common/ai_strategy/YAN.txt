@@ -109,9 +109,19 @@ less_naval_invasions_YAN = {
 		id = TRB
 		value = -50
 	}
+}
+
+invade_to_TRB_YAN = {
+	allowed = {
+		tag = YAN
+	}
+	enable = {
+		date > 2018.1.1
+	}
+
 	ai_strategy = {
 		type = prepare_for_war
 		id = TRB
-		value = 2
+		value = 1
 	}
 }
