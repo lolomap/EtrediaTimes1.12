@@ -1,0 +1,3 @@
+﻿l_russian:
+  escalation_category: "Эскалация конфликтов"
+  escalation_category_desc: "Наше участие в некоторых кризисах может еще сыграть нам наруку, если мы подольем масла в огонь\n\nОчки эскалации: [?escalation_score]"

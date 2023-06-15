@@ -196,11 +196,13 @@ on_actions = {
                         if = {
                             limit = {PREV = {tag = KOL}}
                             country_event = {id = ucnb.3 days = 1}
+                            set_variable = {sep_KOL = 0.65}}
                         }
                         else_if = {
                             limit = {PREV = {tag = KIM}}
                             
                             country_event = {id = ucnb.sep1 days = 1}
+                            set_variable = {sep_KIM = 0.65}}
                         }
                         else_if = {
                             limit = {

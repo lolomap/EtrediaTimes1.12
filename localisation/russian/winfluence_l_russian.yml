@@ -10,8 +10,8 @@
 
   winfluence_modifier: "Мировое влияние"
   
-  is_world_influence_more_2:0 "Необходимо, чтобы наше §Yвлияние§Y было как минимум в §Y2§! раза больше"
-  is_world_influence_more_1_5:0 "Необходимо, чтобы наше §Yвлияние§! было как минимум в §Y1.5§! раза больше"
+  is_world_influence_more_2:0 "Необходимо, чтобы §Yвлияние§! было как минимум в §Y2§! раза больше, чем у [PREV.GetFlag]§Y[PREV.GetNameDef]§!"
+  is_world_influence_more_1_5:0 "Необходимо, чтобы §Yвлияние§! было как минимум в §Y1.5§! раза больше, чем у [PREV.GetFlag]§Y[PREV.GetNameDef]§!"
   is_world_influence_more_2_:0 "[is_world_influence_more_2_sl]"
-  is_world_influence_more_2_yes:0 "§GНеобходимо, чтобы наше влияние было как минимум в 2 раза больше§!"
-  is_world_influence_more_2_no:0 "§RНеобходимо, чтобы наше влияние было как минимум в 2 раза больше§!"
+  is_world_influence_more_2_yes:0 "§GНеобходимо, чтобы влияние было как минимум в 2 раза больше, чем у [PREV.GetFlag]§!§Y[PREV.GetNameDef]§!"
+  is_world_influence_more_2_no:0 "§RНеобходимо, чтобы влияние было как минимум в 2 раза больше, чем у [PREV.GetFlag]§!§Y[PREV.GetNameDef]§!"

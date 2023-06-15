@@ -1,7 +1,9 @@
 on_actions = {
     on_startup = {
         effect = {
-            set_variable = {wtire_factor = 1}\
+            every_possible_country = {
+                set_variable = {wtire_factor = 1}
+            }
         }
     }
 

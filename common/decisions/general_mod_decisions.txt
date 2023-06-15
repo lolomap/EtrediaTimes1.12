@@ -735,3 +735,10 @@ sphere_category = {
     }
 
 }
+
+escalation_category = {
+    _esc_blank = {
+        visible = {has_variable = escalation_member}
+        allowed = {always = no}
+    }
+}
