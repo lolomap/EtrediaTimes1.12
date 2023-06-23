@@ -114,7 +114,7 @@ country_event = {
 				}
 	        KOL = { declare_war_on = { target = UCB type = take_state generator = { 23 } } }
             }
-            country_event = { id = ucnb.sep1 days = 15 }
+            #country_event = { id = ucnb.sep1 days = 15 }
 	hidden_effect = {
 	UCB = {
 	add_ai_strategy = {

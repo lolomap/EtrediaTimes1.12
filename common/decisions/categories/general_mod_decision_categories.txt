@@ -22,3 +22,6 @@ nuclear_construction = {
 
 sphere_category = {
 }
+
+escalation_category = {
+}

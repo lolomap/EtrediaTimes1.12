@@ -1371,7 +1371,47 @@ country_event = { # Кризис закончился (call in crysis sender)
                 var:cr_to_op = {has_country_flag = crysis_press}
             }
 
-            #TODO
+            set_temp_variable = {swie = crysis_s_totalwi}
+            if = { limit = {crysis_t_totalwi > 1}
+                divide_temp_variable = {swie = crysis_t_totalwi }
+            }
+            set_temp_variable = {twie = crysis_t_totalwi}
+            if = { limit = {crysis_s_totalwi > 1}
+                divide_temp_variable = {twie = crysis_s_totalwi }
+            }
+
+            every_country = {
+                limit = {
+                    OR = {
+                        check_variable = {political_crysis_member = PREV}
+                        tag = var:PREV.sender_crysis
+                        tag = var:PREV.to_crysis
+                    }
+                    NOT = {is_in_array = {PREV.crysis_majors = THIS}}
+                }
+                set_variable = { escalation_score = 30 }
+                if = {  limit = {check_variable = { world_influence > 1 }}
+                    add_to_variable = { escalation_score = world_influence }
+                }
+                if = {  limit = {check_variable = {faction_leader.faction_influence > 1}}
+                    add_to_variable = {escalation_score = faction_leader.faction_influence }
+                }
+                if = { limit = {OR = {is_in_array = {PREV.crysis_senders = THIS} tag = var:PREV.sender_crysis}}
+                    multiply_variable = {escalation_score = swie}
+                }
+                if = { limit = {OR = {is_in_array = {PREV.crysis_tos = THIS} tag = var:PREV.to_crysis}}
+                    multiply_variable = {escalation_score = twie}
+                }
+                set_variable = {escalation_member = PREV}
+            }
+
+            var:sender_crysis = {
+                add_to_variable = { escalation_score = 35 }
+                set_variable = {escalation_timer = 0}
+            }
+            var:to_crysis = {
+                add_to_variable = { escalation_score = 25 }
+            }
 
         }
         else_if = { # Атака уступила
@@ -1849,7 +1889,7 @@ country_event = {
     option = {
         name = onactev.13.b
         release = var:country_to_release
-        var:country_to_release = {ROOT = {set_country_flag = ACCEPT_EXISTANCE_@PREV}}
+        var:country_to_release = {ROOT = {set_country_flag = ACCEPT_EXISTANCE_@PREV set_variable = {sep_@PREV = 0.65}}}
         
         encount_minors = yes
     }
