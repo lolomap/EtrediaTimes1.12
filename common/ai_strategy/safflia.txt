@@ -9,12 +9,12 @@ SFL_neria = {
 	ai_strategy = {
 		type = puppet 
 		id = "NER"
-		value = -100000
+		value = 0
 	}
 	ai_strategy = {
 		type = conquer
 		id = "NER"
-		value = 500
+		value = 100
 	}
 }
 
@@ -28,7 +28,7 @@ SFL_template_design_1 = {
 	ai_strategy = {
 		type = template_prio
 		id = mechanized
-		value = 150
+		value = 100
 	}
 	ai_strategy = {
 		type = template_prio
@@ -37,7 +37,7 @@ SFL_template_design_1 = {
 	}
 }
 
-alliance_with_etredia1 = {
+not_alliance_with_etredia1 = {
 	allowed = {
 		original_tag = SFL
 	}
@@ -79,27 +79,106 @@ sfl_world_war = {
 		SFL = { has_government = democratic }
 	}
 	abort = {
-			is_historical_focus_on = no
+		is_historical_focus_on = no
 	}
 	
 	ai_strategy = {
 		type = protect
 		id = "SHE"
-		value = -9999
+		value = 0
 	}
 	ai_strategy = {
 		type = protect
 		id = "KAS"
-		value = -9999
+		value = 0
 	}
 	ai_strategy = {
 		type = protect
 		id = "DEM"
-		value = -9999
+		value = 0
 	}
 	ai_strategy = {
 		type = pp_spend_priority
 		id = guarantee
-		value = -9999
+		value = -10
+	}
+}
+sfl_external_politics = {
+    allowed = {
+		original_tag = SFL
+    }
+	enable = {
+		OR = {
+			SFL = { has_government = democratic }
+			SFL = { has_government = fascism }
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = RGY
+			has_war_with = MOF
+			has_war_with = NER
+		}
+	}
+	ai_strategy = {
+		type = protect
+		id = "RGY"
+		value = 1
+	}
+	ai_strategy = {
+		type = protect
+		id = "MOF"
+		value = 2
+	}
+	ai_strategy = {
+		type = protect
+		id = "NER"
+		value = 1
+	}
+}
+sfl_fuck_SBU = {
+    allowed = {
+		original_tag = SFL
+    }
+	enable = {
+		OR = {
+			SFL = { has_government = democratic }
+			SFL = { has_government = fascism }
+		}
+	}
+	abort = {
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SBU"
+		value = 5
+	}
+	ai_strategy = {
+		type = contain
+		id = "SBU"
+		value = 2
+	}
+}
+sfl_fuck_ELR = {
+    allowed = {
+		original_tag = SFL
+    }
+	enable = {
+		OR = {
+			SFL = { has_government = democratic }
+			SFL = { has_government = fascism }
+		}
+	}
+	abort = {
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "ELR"
+		value = 10
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = "ELR"
+		value = 5
 	}
 }
