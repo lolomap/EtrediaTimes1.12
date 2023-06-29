@@ -533,11 +533,12 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {check_variable = { sphere_owner = ROOT }}
+                var:OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = oil amount > 0 }
-                #NOT = {has_state_flag = sphere_resources_used}
+                
 			}
+            
 		}
         
         state_target = yes
@@ -567,7 +568,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {check_variable = { sphere_owner = ROOT }}
+                var:OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = steel amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -601,7 +602,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {check_variable = { sphere_owner = ROOT }}
+                var:OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = aluminium amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -635,7 +636,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {check_variable = { sphere_owner = ROOT }}
+                var:OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = chromium amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -669,7 +670,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {check_variable = { sphere_owner = ROOT }}
+                var:OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = tungsten amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -704,7 +705,7 @@ sphere_category = {
 
         target_trigger = {
 			FROM = {
-                OWNER = {check_variable = { sphere_owner = ROOT }}
+                var:OWNER = {check_variable = { sphere_owner = ROOT }}
 
                 has_resources_amount = { resource = uranium amount > 0 }
                 #NOT = {has_state_flag = sphere_resources_used}
@@ -714,12 +715,12 @@ sphere_category = {
         state_target = yes
         on_map_mode = map_only
 
-        cost = 75
+        cost = 100
 
         days_remove = 180
         complete_effect = {
             FROM.OWNER = {
-                add_political_power = 75
+                add_political_power = 100
                 give_resource_rights = {
                     receiver = ROOT
                     state = FROM
@@ -733,12 +734,11 @@ sphere_category = {
             FROM = {clr_state_flag = sphere_resources_used}
         }
     }
-
 }
 
 escalation_category = {
     _esc_blank = {
         visible = {has_variable = escalation_member}
-        allowed = {always = no}
+        #allowed = {always = no}
     }
 }

@@ -3,6 +3,8 @@
  corruption_laws: "Уровень коррупции"
  stability_modifiers: "Уровень легитимности"
  political_form: "Политический строй"
+
+ resources_debuff: "Дефицит сырья"
  
  corp_influence:0 "Власть корпораций"
  thousand_year_of_failure:0 "1000 лет неудач"

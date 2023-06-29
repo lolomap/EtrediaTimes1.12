@@ -1480,8 +1480,7 @@ country_event = { #call in crysis sender
     immediate = {
         if = {
             limit = {
-                has_country_flag = political_crysis
-                country_exists = var:sender_crysis
+                has_variable = political_crysis_member
                 check_variable = {crysis_timer < 100}
             }
             add_to_variable = {crysis_timer = 1.666}
