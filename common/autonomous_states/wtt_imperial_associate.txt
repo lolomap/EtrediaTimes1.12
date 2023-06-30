@@ -5,20 +5,17 @@ autonomy_state = {
 	
 	min_freedom_level = 0.6
 	
-	manpower_influence = 0.7
+	manpower_influence = 0.1
 	
 	rule = {
-		can_not_declare_war = yes
-		can_decline_call_to_war = no
+        can_decline_call_to_war = yes
 	}
 	
 	modifier = {
-		autonomy_manpower_share = 0.7
-		can_master_build_for_us = 1
-		extra_trade_to_overlord_factor = 0.6
-		overlord_trade_cost_factor = -0.6
-		cic_to_overlord_factor = 0.25
-		autonomy_gain_global_factor = -0.3
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.15
+        surrender_limit = 0.05
 	}
 	
 	ai_subject_wants_higher = {
@@ -35,6 +32,9 @@ autonomy_state = {
 
 	allowed = {
 		OVERLORD = {has_government = monarchism}
+        NOT = {
+            has_country_flag = autonomy_state
+        }
 	}
 
 	can_take_level = {
