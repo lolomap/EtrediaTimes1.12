@@ -734,6 +734,22 @@ sphere_category = {
             FROM = {clr_state_flag = sphere_resources_used}
         }
     }
+
+    sphere_debuff = {
+        targets = {sphere_owner}
+        visible = {has_variable = sphere_owner}
+
+        days_remove = -1
+
+        targeted_modifier = {
+            tag = FROM
+            cic_to_target_factor = 0.5
+        }
+
+        complete_effect = {
+            log = "[FROM.GetTag]"
+        }
+    }
 }
 
 escalation_category = {

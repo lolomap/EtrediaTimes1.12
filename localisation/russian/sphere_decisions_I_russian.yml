@@ -5,4 +5,7 @@
  sphere_take_resources_chromium: "Освоение [GetAdjective] хрома"
  sphere_take_resources_uranium: "Освоение [GetAdjective] урана"
  sphere_take_resources_tungsten: "Освоение [GetAdjective] вольфрам"
+
+ operation_sphere_puppet_name: "Подчинить правительство"
+ operation_sphere_puppet_desc: "[From.GetNameDef] уже давно находится непосредственно в нашей сфере влияния, однако это не гарантирует их полной лояльности. Союз на равных условиях с ними - глупость, куда проще будет просто внедриться в их политическую и экономическую системы."
  
