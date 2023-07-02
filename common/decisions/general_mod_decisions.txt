@@ -737,18 +737,23 @@ sphere_category = {
 
     sphere_debuff = {
         targets = {sphere_owner}
-        visible = {has_variable = sphere_owner}
 
+        days_mission_timeout = 0
+        
+        available = {always = no}
+        activation = {has_variable = sphere_owner}
         days_remove = -1
 
         targeted_modifier = {
             tag = FROM
-            cic_to_target_factor = 0.5
+            trade_cost_for_target_factor = -0.5
+            extra_trade_to_target_factor = 0.5
+            #mic_to_target_factor = 0.05
+            attack_bonus_against_cores = 0.05
+            defense_bonus_against = -0.25
         }
 
-        complete_effect = {
-            log = "[FROM.GetTag]"
-        }
+
     }
 }
 
