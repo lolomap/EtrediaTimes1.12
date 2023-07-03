@@ -174,7 +174,7 @@ scripted_gui = {
                 has_war_with = var:nuke_country
 
                 has_game_rule = {
-                    rule = RULE_ALLOW_NUKING
+                    rule = allow_nuking
                     option = FREE
                 }
             }

@@ -99,6 +99,7 @@ scripted_gui = {
                         set_temp_variable = { b = 1 }
                     }
                 }
+                encount_minors = yes
             }
         }
     }
