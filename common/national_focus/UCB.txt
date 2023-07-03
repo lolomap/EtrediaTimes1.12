@@ -12,7 +12,7 @@ focus_tree = {
 
     focus = {
         id = UCB_votum
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_votum
         cost = 10
         x = 27
         y = 0
@@ -32,7 +32,7 @@ focus_tree = {
 
     focus = {
         id = UCB_enprison
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_enprison
         cost = 10
         x = 27
         y = 1
@@ -223,6 +223,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_ndro
 		}
+
+        bypass = {NOT = {country_exists = ORB}}
+
 		completion_reward = {
 			ORB = {
 				country_event = { id = orb.43 days = 30 }
@@ -262,7 +265,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_2
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_ucb_UCB_2
 		cost = 15
 		prerequisite = {
 			focus = UCB_enprison
@@ -293,7 +296,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem1
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_ucb_dem1
 		cost = 3
 		prerequisite = {
 			focus = UCB_2
@@ -388,7 +391,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_gov_reform
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_gov_reform
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem1
@@ -616,7 +619,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_fasc1
-		icon = GFX_goal_support_fascism
+		icon = GFX_goal_ucb_fasc1
 		cost = 3
 		prerequisite = {
 			focus = UCB_2
@@ -652,7 +655,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.1
+				popularity = 0.05
 			}
 			add_stability = 0.05
 		}
@@ -1596,7 +1599,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_sbu
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_sbu
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_foreign_policy
@@ -1623,7 +1626,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_stavka_defense
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_ucb_dem_stavka_defense
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_sbu
@@ -1643,7 +1646,7 @@ focus_tree = {
 	}
     focus = {
         id = UCB_defend_SHE
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_defend_SHE
         cost = 5
         x = 5
         y = 7
