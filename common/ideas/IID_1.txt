@@ -70,6 +70,19 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
+
+        IID_democrats2 = {
+            picture = IID_democrats
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.03
+				political_power_gain = -0.3
+				stability_factor = -0.15
+			}
+		}
 		
 		IID_eco_crisis = {
             picture = iid_economic

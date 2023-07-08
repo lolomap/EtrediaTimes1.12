@@ -109,6 +109,10 @@ focus_tree = {
         available = {democratic > 0.05}
 
 		completion_reward = {
+            add_popularity = {ideology = democratic popularity = 0.03}
+            add_popularity = {ideology = neutrality popularity = 0.03}
+            add_popularity = {ideology = fascism popularity = 0.03}
+            add_popularity = {ideology = communism popularity = 0.03}
 		}
 	}
 
@@ -117,12 +121,14 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 8
 		y = 3
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_thirst_for_freedom
 		}
 
 		completion_reward = {
+            add_popularity = {ideology = democratic popularity = 0.03}
+            add_political_power = 50
 		}
 	}
 
@@ -131,12 +137,14 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 6
 		y = 3
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_thirst_for_freedom
 		}
 
 		completion_reward = {
+            add_stability = -0.15
+            add_political_power = 50
 		}
 	}
 
@@ -145,12 +153,14 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 10
 		y = 3
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_thirst_for_freedom
 		}
 
 		completion_reward = {
+            add_popularity = {ideology = monarchism popularity = -0.03}
+            add_war_support = -0.1
 		}
 	}
 
@@ -166,23 +176,75 @@ focus_tree = {
             focus = IID_show_others
 		}
 
-        available = {democratic > 0.2}
+        available = {monarchism < 0.8}
 
 		completion_reward = {
+            set_temp_variable = {temp = token:democratic}
+            add_to_variable = {var = dem_opposition value = 25 tooltip = party_power_change}
+
+            set_temp_variable = {temp = token:neutrality}
+            add_to_variable = {var = neu_opposition value = 25 tooltip = party_power_change}
+
+            set_temp_variable = {temp = token:fascism}
+            add_to_variable = {var = fas_opposition value = 25 tooltip = party_power_change}
+
+            set_temp_variable = {temp = token:communism}
+            add_to_variable = {var = com_opposition value = 25 tooltip = party_power_change}
+
+            set_party_name = {
+                ideology = neutrality
+                long_name = IID_neutrality_party_new_long
+                name = IID_neutrality_party_new
+            }
+            set_party_name = {
+                ideology = democratic
+                long_name = IID_democratic_party_new_long
+                name = IID_democratic_party_new
+            }
+            set_party_name = {
+                ideology = fascism
+                long_name = IID_fascism_party_new_long
+                name = IID_fascism_party_new
+            }
 		}
 	}
+
+    focus = {
+        id = IID_foreign_agency
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 4
+        y = 5
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_dem_organisation
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
 
     focus = {
 		id = IID_horizontal_connects
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 8
 		y = 5
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_dem_organisation
 		}
 
 		completion_reward = {
+            set_temp_variable = {temp = token:democratic}
+            add_to_variable = {var = dem_opposition_factor value = 0.05 tooltip = party_power_factor}
+            set_temp_variable = {temp = token:neutrality}
+            add_to_variable = {var = neu_opposition_factor value = 0.05 tooltip = party_power_factor}
 		}
 	}
 
@@ -205,12 +267,16 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 10
 		y = 5
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_dem_organisation
 		}
 
 		completion_reward = {
+            swap_ideas = {
+                remove_idea = IID_democrats
+                add_idea = IID_democrats2
+            }
 		}
 	}
 
@@ -257,6 +323,14 @@ focus_tree = {
         }
 
 		completion_reward = {
+            set_party_name = {
+                ideology = neutrality
+                long_name = IID_united_party_long
+                name = IID_united_party
+            }
+
+            set_temp_variable = {temp = token:neutrality}
+            add_to_variable = {var = neu_opposition_factor value = 0.25 tooltip = party_power_factor}
 		}
 	}
 
@@ -265,7 +339,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 8
 		y = 7
-		cost = 10
+		cost = 1
 		prerequisite = {
 			focus = IID_hidden_party
 		}
@@ -279,7 +353,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 6
 		y = 8
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_first_meeting
 		}
@@ -294,7 +368,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 10
 		y = 8
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_first_meeting
 		}
@@ -309,7 +383,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 6
 		y = 9
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_dem_motherland
             focus = IID_dem_power_only
@@ -325,7 +399,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 10
 		y = 9
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = IID_dem_motherland
             focus = IID_dem_power_only
@@ -350,6 +424,198 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+    focus = {
+        id = IID_nationalism_support
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 6
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_big_strike
+        }
+        mutually_exclusive = {
+        	focus = IID_liberal_support
+            focus = IID_balance_party
+        }
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = IID_liberal_support
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 10
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_big_strike
+        }
+        mutually_exclusive = {
+        	focus = IID_nationalism_support
+            focus = IID_balance_party
+        }
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = IID_balance_party
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 8
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_big_strike
+        }
+        mutually_exclusive = {
+        	focus = IID_nationalism_support
+            focus = IID_liberal_support
+        }
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = IID_magna_reto_revolution
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 8
+        y = 12
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_nationalism_support
+            focus = IID_balance_party
+            focus = IID_liberal_support
+        }
+    
+        completion_reward = {
+            release_on_controlled = TUO
+            SKT = {
+                transfer_state = 114
+            }
+            BKH = {
+                transfer_state = 73
+                transfer_state = 79
+                transfer_state = 80
+            }
+
+            start_civil_war = {
+                ruling_party = neutrality
+                ideology = ROOT
+                capital = 94
+                states = {
+                    78 81 74 104 94 93 110 92 95 100 103 101
+                }
+
+                size = 0.5
+
+                declare_war_on = {
+                    target = SKT
+                    type = annex_everything
+                }
+
+                declare_war_on = {
+                    target = BKH
+                    type = annex_everything
+                }
+
+                declare_war_on = {
+                    target = TUO
+                    type = annex_everything
+                }
+            }
+            TUO = {
+                declare_war_on = {
+                    target = GKD
+                    type = annex_everything
+                }
+                hidden_effect = {
+                    add_civil_war_target = GKD
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = IID_new_laws
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 8
+        y = 13
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_magna_reto_revolution
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = IID_regime_continuous
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 6
+        y = 14
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        mutually_exclusive = {
+        	focus = IID_refuse_debts
+        }
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = IID_refuse_debts
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 10
+        y = 14
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        mutually_exclusive = {
+        	focus = IID_regime_continuous
+        }
+    
+        completion_reward = {
+            
+        }
+    }
 	
 	focus = {
 		id = IID_continue_the_dux_way

@@ -173,10 +173,12 @@
   change_party_power:0 "§RРост оппозиционной силы [random_party_name]§!"
   reduce_party_power:0 "§GСнижение оппозиционной силы [random_party_name]§!"
   reduce_party_power_nontarget:0 "§GСнижение оппозиционной силы партии§!"
+  party_power_change: "Оппозиционная сила §Y[?temp.GetTokenLocalizedKey]§!: $RIGHT|%%=-$"
+  party_power_factor: "Скорость роста оппозиционной силы §Y[?temp.GetTokenLocalizedKey]§!: $RIGHT|%%=-$"
 
   province_id_gui_display:0 "[?current_province]"
   border_war_button_loc:0 "Начать пограничный конфликт\n----------------\n\nНаше отношение к ним -20 и ниже"
 
   TRIGGER_IS_LEND_LEASING: "Отправляет ленд-лиз для $COUNTRY|H$"
 
-  modcredits: "§YBunbasss\nLegatt\nD-Kjch\nMonteny§!\n\n\n§6Special thanks to:§!\nSvarob\nLuka (Tornikios-O)\nKit MaB\nCockroach Gosha\nSosoichi\nScapupof"
+  modcredits: "§YBunbasss\nLegatt\nD-Kjch\nMonteny\nEgor Guryanov§!\n\n\n§6Special thanks to:§!\nSvarob\nLuka (Tornikios-O)\nKit MaB\nCockroach Gosha\nSosoichi\nScapupof"

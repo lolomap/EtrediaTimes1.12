@@ -41,12 +41,6 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 	IID_perevoshisha_ordux={
 		name="Perevoshisha Ordux"
