@@ -762,4 +762,6 @@ escalation_category = {
         visible = {has_variable = escalation_member}
         #allowed = {always = no}
     }
+
+    
 }

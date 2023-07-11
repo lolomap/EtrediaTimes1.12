@@ -432,7 +432,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_stabilnost
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_stabilnost
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_gov_reform
@@ -460,7 +460,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_autonomy
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_autonomy
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_stabilnost
@@ -487,7 +487,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_compromis
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_compromis
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_autonomy
@@ -544,7 +544,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_battle
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_battle
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_autonomy

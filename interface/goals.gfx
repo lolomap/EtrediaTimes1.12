@@ -1,6 +1,36 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_dem_stabilnost"
+	texturefile="gfx/interface/goals/goal_ucb_dem_stabilnost.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_foreign_policy"
+	texturefile="gfx/interface/goals/goal_ucb_dem_foreign_policy.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_compromis"
+	texturefile="gfx/interface/goals/goal_ucb_dem_compromis.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_battle"
+	texturefile="gfx/interface/goals/goal_ucb_dem_battle.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_autonomy"
+	texturefile="gfx/interface/goals/goal_ucb_dem_autonomy.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_votum"
 	texturefile="gfx/interface/goals/goal_ucb_votum.dds"
 }
