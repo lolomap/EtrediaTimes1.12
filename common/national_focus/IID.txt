@@ -109,6 +109,8 @@ focus_tree = {
         available = {democratic > 0.05}
 
 		completion_reward = {
+            set_variable = { revol_days = 180 }
+
             add_popularity = {ideology = democratic popularity = 0.03}
             add_popularity = {ideology = neutrality popularity = 0.03}
             add_popularity = {ideology = fascism popularity = 0.03}
@@ -226,7 +228,12 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            set_country_flag = revol_in_sphere
+            add_to_variable = {
+                var = revol_days
+                value = -60
+                tooltip = iid_reduce_revol_days
+            }
         }
     }
 
@@ -245,6 +252,12 @@ focus_tree = {
             add_to_variable = {var = dem_opposition_factor value = 0.05 tooltip = party_power_factor}
             set_temp_variable = {temp = token:neutrality}
             add_to_variable = {var = neu_opposition_factor value = 0.05 tooltip = party_power_factor}
+
+            add_to_variable = {
+                var = revol_days
+                value = -15
+                tooltip = iid_reduce_revol_days
+            }
 		}
 	}
 
@@ -259,6 +272,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+            #add_ideas = IID_dem_recruitment_idea
+            set_country_flag = dem_extra_slot
+            add_to_variable = {
+                var = revol_days
+                value = -20
+                tooltip = iid_reduce_revol_days
+            }
 		}
 	}
 
@@ -285,12 +305,19 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 6
 		y = 6
-		cost = 10
+		cost = 7
 		prerequisite = {
 			focus = IID_dem_recruitment
 		}
 
 		completion_reward = {
+            add_popularity = {
+                ideology = communism popularity = 0.06
+            }
+            add_popularity = {
+                ideology = democratic popularity = 0.08
+            }
+            set_country_flag = revol_com_sup
 		}
 	}
 
@@ -305,6 +332,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+            add_stability = -0.15
+            add_political_power = 100
 		}
 	}
 
@@ -330,7 +359,7 @@ focus_tree = {
             }
 
             set_temp_variable = {temp = token:neutrality}
-            add_to_variable = {var = neu_opposition_factor value = 0.25 tooltip = party_power_factor}
+            add_to_variable = {var = neu_opposition_factor value = 1 tooltip = party_power_factor}
 		}
 	}
 
@@ -360,6 +389,8 @@ focus_tree = {
         mutually_exclusive = {focus = IID_dem_power_only}
 
 		completion_reward = {
+            set_country_flag = regime_regionalism_option
+            custom_effect_tooltip = IID_dem_extra_option_dem
 		}
 	}
 
@@ -375,6 +406,12 @@ focus_tree = {
         mutually_exclusive = {focus = IID_dem_motherland}
 
 		completion_reward = {
+            set_country_flag = regime_leadership_only
+            add_to_variable = {
+                var = revol_days
+                value = -30
+                tooltip = iid_reduce_revol_days
+            }
 		}
 	}
 
@@ -391,6 +428,11 @@ focus_tree = {
         mutually_exclusive = {focus = IID_peace_rebel}
 
 		completion_reward = {
+            add_to_variable = {
+                var = revol_days
+                value = -50
+                tooltip = iid_reduce_revol_days
+            }
 		}
 	}
 
@@ -443,7 +485,13 @@ focus_tree = {
         }
     
         completion_reward = {
-            
+            add_to_variable = {
+                var = right_radical
+                value = -50
+                tooltip = IID_right_radical_change
+            }
+            set_country_flag = revol_nationalism
+            custom_effect_tooltip = IID_dem_extra_option_revol
         }
     }
 
@@ -465,7 +513,13 @@ focus_tree = {
         }
     
         completion_reward = {
-            
+            add_to_variable = {
+                var = left_radical
+                value = -50
+                tooltip = IID_left_radical_change
+            }
+            set_country_flag = revol_liberal
+            custom_effect_tooltip = IID_dem_extra_option_revol
         }
     }
 
@@ -487,14 +541,15 @@ focus_tree = {
         }
     
         completion_reward = {
-            
+            set_country_flag = revol_balance
+            custom_effect_tooltip = IID_dem_extra_option_revol
         }
     }
 
     focus = {
         id = IID_magna_reto_revolution
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 0
         x = 8
         y = 12
         available = {}
@@ -507,50 +562,7 @@ focus_tree = {
         }
     
         completion_reward = {
-            release_on_controlled = TUO
-            SKT = {
-                transfer_state = 114
-            }
-            BKH = {
-                transfer_state = 73
-                transfer_state = 79
-                transfer_state = 80
-            }
-
-            start_civil_war = {
-                ruling_party = neutrality
-                ideology = ROOT
-                capital = 94
-                states = {
-                    78 81 74 104 94 93 110 92 95 100 103 101
-                }
-
-                size = 0.5
-
-                declare_war_on = {
-                    target = SKT
-                    type = annex_everything
-                }
-
-                declare_war_on = {
-                    target = BKH
-                    type = annex_everything
-                }
-
-                declare_war_on = {
-                    target = TUO
-                    type = annex_everything
-                }
-            }
-            TUO = {
-                declare_war_on = {
-                    target = GKD
-                    type = annex_everything
-                }
-                hidden_effect = {
-                    add_civil_war_target = GKD
-                }
-            }
+            country_event = {id = dux.14 days = revol_days}
         }
     }
 
@@ -560,7 +572,9 @@ focus_tree = {
         cost = 10
         x = 8
         y = 13
-        available = {}
+        available = {
+            has_civil_war = no
+        }
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -592,7 +606,8 @@ focus_tree = {
         }
     
         completion_reward = {
-            
+            set_country_flag = regime_continuous_option
+            custom_effect_tooltip = IID_dem_extra_option_dem
         }
     }
 
@@ -613,7 +628,31 @@ focus_tree = {
         }
     
         completion_reward = {
-            
+            add_to_variable = {
+                var = wtire
+                value = -30
+                tooltip = wtire_boost
+            }
+
+            remove_ideas = IID_neutrality_idea
+			add_timed_idea = {
+				idea = IID_sanctions
+				days = 360
+			}
+
+			custom_effect_tooltip = iid_horsemove_relationship
+			hidden_effect = {
+				add_opinion_modifier = {target = UCB modifier = UCB_hateIID}
+				add_opinion_modifier = {target = SFL modifier = SFL_hateIID}
+				add_opinion_modifier = {target = KAR modifier = KAR_hateIID}
+				add_opinion_modifier = {target = SBU modifier = SBU_hateIID}
+				add_opinion_modifier = {target = EIK modifier = EIK_hateIID}
+				UCB = {add_opinion_modifier = {target = IID modifier = UCB_hateIID}}
+				SFL = {add_opinion_modifier = {target = IID modifier = SFL_hateIID}}
+				KAR = {add_opinion_modifier = {target = IID modifier = KAR_hateIID}}
+				SBU = {add_opinion_modifier = {target = IID modifier = SBU_hateIID}}
+				EIK = {add_opinion_modifier = {target = IID modifier = EIK_hateIID}}
+			}
         }
     }
 	

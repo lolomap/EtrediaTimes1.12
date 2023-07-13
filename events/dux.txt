@@ -335,3 +335,224 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+    id = dux.14
+    title = dux.14.t
+    desc = dux.14.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=dux.14.a
+        release_on_controlled = TUO
+        SKT = {
+            transfer_state = 114
+        }
+        BKH = {
+            transfer_state = 73
+            transfer_state = 79
+            transfer_state = 80
+        }
+
+        start_civil_war = {
+            ruling_party = neutrality
+            ideology = ROOT
+            capital = 94
+            states = {
+                78 81 74 104 94 93 110 92 95 100 103 101
+            }
+
+            size = 0.5
+
+            declare_war_on = {
+                target = SKT
+                type = annex_everything
+            }
+
+            declare_war_on = {
+                target = BKH
+                type = annex_everything
+            }
+
+            declare_war_on = {
+                target = TUO
+                type = annex_everything
+            }
+
+            hidden_effect = {
+                IID = {
+                    set_variable = {monarch_civwar = PREV}
+                }   
+            }
+        }
+
+        add_stability = -0.4
+        if = {
+            limiit = {has_country_flag = revol_balance}
+            add_ideas = fractionism
+            set_popularities = {
+                democratic = 28
+                neutrality = 29 
+                fascism = 28
+                communism = 15
+                monarchism = 0
+            }
+        }
+        else_if = {
+            limiit = {has_country_flag = revol_nationalism}
+            set_popularities = {
+                democratic = 25
+                neutrality = 25 
+                fascism = 40
+                communism = 5
+                monarchism = 5
+            }
+        }
+        else_if = {
+            limiit = {has_country_flag = revol_liberal}
+            set_popularities = {
+                democratic = 40
+                neutrality = 25 
+                fascism = 25
+                communism = 10
+                monarchism = 0
+            }
+        }
+
+        if = {
+            limit = {has_country_flag = revol_com_sup}
+            add_popularity = {ideology = communism popularity = 15}
+        }
+
+        if = {
+            limit = {has_country_flag = revol_in_sphere}
+            UCB = { involve_sphere = yes }
+        }
+
+        hidden_effect = {
+            clamp_variable = {
+                var = right_radical
+                min = 0
+                max = 100
+            }
+            clamp_variable = {
+                var = left_radical
+                min = 0
+                max = 100
+            }
+            random = {
+                chance = right_radical
+                country_event = {id = dux.15 random_days = 30}
+            }   
+            random = {
+                chance = left_radical
+                country_event = {id = dux.16 random_days = 30}
+            }   
+        }
+
+        TUO = {
+            declare_war_on = {
+                target = GKD
+                type = annex_everything
+            }
+            hidden_effect = {
+                add_civil_war_target = GKD
+            }
+        }
+    }
+}
+
+country_event = {
+    id = dux.15
+    title = dux.15.t
+    desc = dux.15.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=dux.15.a
+        start_civil_war = {
+            ruling_party = democratic
+            ideology = fascism
+
+            size = 0.3
+
+            declare_war_on = {
+                target = SKT
+                type = annex_everything
+            }
+
+            declare_war_on = {
+                target = BKH
+                type = annex_everything
+            }
+
+            declare_war_on = {
+                target = TUO
+                type = annex_everything
+            }
+
+
+            set_popularities = {
+                democratic = 0
+                neutrality = 30 
+                fascism = 70
+                communism = 0
+                monarchism = 0
+            }
+        }
+    }
+}
+
+country_event = {
+    id = dux.16
+    title = dux.16.t
+    desc = dux.16.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=dux.16.a
+        start_civil_war = {
+            ruling_party = neutrality
+            ideology = democratic
+
+            size = 0.3
+
+            declare_war_on = {
+                target = SKT
+                type = annex_everything
+            }
+
+            declare_war_on = {
+                target = BKH
+                type = annex_everything
+            }
+
+            declare_war_on = {
+                target = TUO
+                type = annex_everything
+            }
+
+            set_popularities = {
+                democratic = 51
+                neutrality = 0
+                fascism = 0
+                communism = 49
+                monarchism = 0
+            }
+        }
+    }
+}
+
+    

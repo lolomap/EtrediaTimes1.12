@@ -260,6 +260,27 @@ ideas = {
 				stability_factor = 0.05
 			}
         }
+
+        IID_dem_recruitment_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                operative_slot = 1
+            }
+        }
 	}
 	
 political_advisor = {
