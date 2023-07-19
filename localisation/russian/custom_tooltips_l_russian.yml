@@ -3,6 +3,12 @@
   MAPMODE_CORRUPTION_MAP_NAME: "Коррупция"
   MAPMODE_INFLUENCE_MAP_NAME: "Мировое влияние"
 
+  recruited: "Завербован"
+
+  decision_cost_CP_5: "£command_power §Y5§!"
+  decision_cost_CP_5_blocked: "£command_power §R5§!"
+  decision_cost_CP_5_tooltip: "Стоимость принятия решения: £command_power §Y5§!"
+
   modalert_tooltip: "[modalert_sl]"
   modalert_polform_tt: "§YДоступно изменение политического строя!"
   modalert_sep_tt: "§YВозможна сепарация региона§! [?modalerts_data^i.GetFlag][?modalerts_data^i.GetNameDef]\n§RУровень сепаратизма больше 75%§!"
@@ -99,6 +105,7 @@
   ORBFindIvestitionsDesc:0 "ИИД поддержит Ортостан, что позволит нам начать проведение собственной политики\n"
   ORBFarmPeace:0 "Будет полученно 50 очков миротворчества\n"
   iid_reduce_revol_days: "Подготовка революции: $RIGHT|=-$ дней"
+  iid_revol_lasts: "Время на подготовку: §Y[?revol_days]§! дней"
   IID_right_radical_change: "Радикализация §Yправых§!: $RIGHT|=-%%$"
   IID_left_radical_change: "Радикализация §Yлевых§!: $RIGHT|=-%%$"
   IID_dem_extra_option_dem: "Будет открыта дополнительная опция на §YКоординационном Собрании§!"

@@ -109,7 +109,7 @@ focus_tree = {
         available = {democratic > 0.05}
 
 		completion_reward = {
-            set_variable = { revol_days = 180 }
+            set_variable = { revol_days = 720 }
 
             add_popularity = {ideology = democratic popularity = 0.03}
             add_popularity = {ideology = neutrality popularity = 0.03}
@@ -217,7 +217,7 @@ focus_tree = {
         cost = 10
         x = 4
         y = 5
-        available = {}
+        available = {not = {has_completed_focus = IID_magna_reto_revolution}}
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -231,7 +231,7 @@ focus_tree = {
             set_country_flag = revol_in_sphere
             add_to_variable = {
                 var = revol_days
-                value = -60
+                value = -30
                 tooltip = iid_reduce_revol_days
             }
         }
@@ -255,7 +255,7 @@ focus_tree = {
 
             add_to_variable = {
                 var = revol_days
-                value = -15
+                value = -10
                 tooltip = iid_reduce_revol_days
             }
 		}
@@ -271,12 +271,14 @@ focus_tree = {
 			focus = IID_dem_organisation
 		}
 
+        available = {not = {has_completed_focus = IID_magna_reto_revolution}}
+
 		completion_reward = {
             #add_ideas = IID_dem_recruitment_idea
             set_country_flag = dem_extra_slot
             add_to_variable = {
                 var = revol_days
-                value = -20
+                value = -10
                 tooltip = iid_reduce_revol_days
             }
 		}
@@ -425,7 +427,6 @@ focus_tree = {
 			focus = IID_dem_motherland
             focus = IID_dem_power_only
 		}
-        mutually_exclusive = {focus = IID_peace_rebel}
 
 		completion_reward = {
             add_to_variable = {
@@ -433,6 +434,7 @@ focus_tree = {
                 value = -50
                 tooltip = iid_reduce_revol_days
             }
+            set_country_flag = strong_revol
 		}
 	}
 
@@ -446,9 +448,9 @@ focus_tree = {
 			focus = IID_dem_motherland
             focus = IID_dem_power_only
 		}
-        mutually_exclusive = {focus = IID_shoot_rebel}
 
 		completion_reward = {
+            set_country_flag = soft_revol
 		}
 	}
 
@@ -462,8 +464,10 @@ focus_tree = {
 			focus = IID_shoot_rebel
             focus = IID_peace_rebel
 		}
+        available = {monarchism < 0.6}
 
 		completion_reward = {
+            country_event = {id = dux.17 days = 1}
 		}
 	}
 
@@ -552,7 +556,7 @@ focus_tree = {
         cost = 0
         x = 8
         y = 12
-        available = {}
+        available = {monarchism < 0.5}
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -562,6 +566,14 @@ focus_tree = {
         }
     
         completion_reward = {
+            custom_effect_tooltip = iid_revol_lasts
+            hidden_effect = {
+                remove_ideas = IID_big_strike   
+                clamp_variable = {
+                    var = revol_days
+                    min = 0
+                }
+            }
             country_event = {id = dux.14 days = revol_days}
         }
     }
@@ -571,21 +583,35 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 8
-        y = 13
+        y = 14
         available = {
             has_civil_war = no
+            OR = {
+                has_government = democratic
+                has_government = neutrality
+            }
         }
         bypass = {}
         allow_branch = {}
         prerequisite = {
-            focus = IID_magna_reto_revolution
+            focus = IID_regime_continuous
+            focus = IID_refuse_debts
         }
         #mutually_exclusive = {
         #	focus = 
         #}
     
         completion_reward = {
-            
+            country_event = {id = dux.18 days = 1}
+            hidden_effect = {
+                country_event = {id = dux.19 days = 14}
+                set_party_name = {
+                    ideology = neutrality
+                    long_name = IID_neutrality_party_new_long
+                    name = IID_neutrality_party_new
+                }
+                set_cosmetic_tag = IID_dem_revol
+            }
         }
     }
 
@@ -594,12 +620,12 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 6
-        y = 14
+        y = 13
         available = {}
         bypass = {}
         allow_branch = {}
         prerequisite = {
-            focus = IID_new_laws
+            focus = IID_magna_reto_revolution
         }
         mutually_exclusive = {
         	focus = IID_refuse_debts
@@ -616,12 +642,12 @@ focus_tree = {
         icon = GFX_goal_unknown
         cost = 10
         x = 10
-        y = 14
+        y = 13
         available = {}
         bypass = {}
         allow_branch = {}
         prerequisite = {
-            focus = IID_new_laws
+            focus = IID_magna_reto_revolution
         }
         mutually_exclusive = {
         	focus = IID_regime_continuous

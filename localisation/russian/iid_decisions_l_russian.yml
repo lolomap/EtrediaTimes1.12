@@ -19,4 +19,14 @@
   IID_pra_law: "Смягчение наказаний праетерцам в судах"
   IID_trp_law: "Смягчение наказаний каратенцам в судах"
   IID_culture_final: "Решение культурного вопроса"
-  
+
+  IID_opposition_activities: "Деятельность оппозиции"
+  IID_opposition_activities_desc: "Радикализованность левых: §Y[?left_radical]§!%\nРадикализованность правых: §Y[?right_radical]§!%"
+  IID_left_soft_labor_unions: "Улучшение профсоюзов"
+  IID_left_soft_rally: "Мирные митинги"
+  IID_left_strong_expropriations: "Экспроприации"
+  IID_left_strong_sabotages: "Саботажи на предприятиях"
+  IID_right_soft_marches: "Марши гордости"
+  IID_right_soft_elite_connections: "Внедрение в элиты"
+  IID_right_strong_murders: "Покушение на представителей власти"
+  IID_right_strong_nations: "Притеснение баркханцев и сектойцев"

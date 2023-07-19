@@ -748,3 +748,197 @@ GKZ_moment = {
 		}
 	}
 }
+
+IID_opposition_activities = {
+    
+    IID_left_soft_labor_unions = {
+        visible = {has_country_flag = soft_revol}
+
+        cost = 25
+        days_re_enable = 15
+        days_remove = 15
+
+        modifier = {
+            democratic_drift = 0.01
+            communism_drift = 0.01
+        }
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -5
+                tooltip = iid_reduce_revol_days
+            }
+            add_command_power = 5
+        }
+    }
+
+    IID_left_soft_rally = {
+        visible = {has_country_flag = soft_revol}
+
+        cost = 10
+        days_re_enable = 15
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -7
+                tooltip = iid_reduce_revol_days
+            }
+            add_stability = -0.03
+            add_command_power = 5
+        }
+    }
+
+    IID_left_strong_expropriations = {
+        visible = {has_country_flag = strong_revol}
+
+        custom_cost_trigger = {
+            command_power > 4
+        }
+        custom_cost_text = decision_cost_CP_5
+
+        days_re_enable = 15
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -15
+                tooltip = iid_reduce_revol_days
+            }
+            add_political_power = 10
+            add_to_variable = {
+                var = left_radical
+                value = 8
+                tooltip = IID_right_radical_change
+            }
+            hidden_effect = {
+                add_command_power = -5   
+            }
+        }
+    }
+
+    IID_left_strong_sabotages = {
+        visible = {has_country_flag = strong_revol}
+
+        custom_cost_trigger = {
+            command_power > 4
+        }
+        custom_cost_text = decision_cost_CP_5
+
+        days_re_enable = 15
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -15
+                tooltip = iid_reduce_revol_days
+            }
+            add_political_power = 10
+            add_to_variable = {
+                var = left_radical
+                value = 8
+                tooltip = IID_right_radical_change
+            }
+            hidden_effect = {
+                add_command_power = -5   
+            }
+        }
+    }
+
+    
+    IID_right_soft_marches = {
+        visible = {has_country_flag = soft_revol}
+
+        cost = 25
+        days_re_enable = 15
+        days_remove = 15
+
+        modifier = {
+            neutrality_drift = 0.01
+            fascism_drift = 0.01
+        }
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -5
+                tooltip = iid_reduce_revol_days
+            }
+            add_command_power = 5
+        }
+    }
+
+    IID_right_soft_elite_connections = {
+        visible = {has_country_flag = soft_revol}
+
+        cost = 10
+        days_re_enable = 15
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -7
+                tooltip = iid_reduce_revol_days
+            }
+            add_stability = -0.03
+            add_command_power = 5
+        }
+    }
+
+    IID_right_strong_murders = {
+        visible = {has_country_flag = strong_revol}
+
+        custom_cost_trigger = {
+            command_power > 4
+        }
+        custom_cost_text = decision_cost_CP_5
+
+        days_re_enable = 15
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -15
+                tooltip = iid_reduce_revol_days
+            }
+            add_political_power = 10
+            add_to_variable = {
+                var = right_radical
+                value = 8
+                tooltip = IID_right_radical_change
+            }
+            hidden_effect = {
+                add_command_power = -5   
+            }
+        }
+    }
+
+    IID_right_strong_nations = {
+        visible = {has_country_flag = strong_revol}
+
+        custom_cost_trigger = {
+            command_power > 4
+        }
+        custom_cost_text = decision_cost_CP_5
+
+        days_re_enable = 15
+
+        complete_effect = {
+            add_to_variable = {
+                var = revol_days
+                value = -15
+                tooltip = iid_reduce_revol_days
+            }
+            add_political_power = 10
+            add_to_variable = {
+                var = right_radical
+                value = 8
+                tooltip = IID_right_radical_change
+            }
+            hidden_effect = {
+                add_command_power = -5   
+            }
+        }
+    }
+}

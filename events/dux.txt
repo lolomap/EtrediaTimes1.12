@@ -363,7 +363,7 @@ country_event = {
             ideology = ROOT
             capital = 94
             states = {
-                78 81 74 104 94 93 110 92 95 100 103 101
+                78 81 74 104 94 93 110 92 95 100 103 101 99 98 75 77
             }
 
             size = 0.5
@@ -478,26 +478,19 @@ country_event = {
     #trigger = {}
     option = {
         name=dux.15.a
-        start_civil_war = {
-            ruling_party = democratic
-            ideology = fascism
+        create_dynamic_country = {
+            original_tag = IID
 
-            size = 0.3
+            transfer_state = 111
+            transfer_state = 105
 
-            declare_war_on = {
-                target = SKT
-                type = annex_everything
-            }
+            load_oob = IID_cw_fas
 
             declare_war_on = {
-                target = BKH
+                target = IID
                 type = annex_everything
             }
-
-            declare_war_on = {
-                target = TUO
-                type = annex_everything
-            }
+            add_civil_war_target = IID
 
 
             set_popularities = {
@@ -507,6 +500,8 @@ country_event = {
                 communism = 0
                 monarchism = 0
             }
+            set_politics = {ruling_party = fascism elections_allowed = no}
+            set_cosmetic_tag = IID_dem_revol
         }
     }
 }
@@ -523,27 +518,19 @@ country_event = {
     #trigger = {}
     option = {
         name=dux.16.a
-        start_civil_war = {
-            ruling_party = neutrality
-            ideology = democratic
+        create_dynamic_country = {
+            original_tag = IID
 
-            size = 0.3
-
-            declare_war_on = {
-                target = SKT
-                type = annex_everything
-            }
+            transfer_state = 91
+            transfer_state = 89
+            load_oob = IID_cw_dem
 
             declare_war_on = {
-                target = BKH
+                target = IID
                 type = annex_everything
             }
-
-            declare_war_on = {
-                target = TUO
-                type = annex_everything
-            }
-
+            add_civil_war_target = IID
+            
             set_popularities = {
                 democratic = 51
                 neutrality = 0
@@ -551,8 +538,157 @@ country_event = {
                 communism = 49
                 monarchism = 0
             }
+            set_politics = {ruling_party = democratic elections_allowed = no}
+            set_cosmetic_tag = IID_dem_revol
         }
     }
 }
 
-    
+country_event = {
+    id = dux.17
+    title = dux.17.t
+    desc = dux.17.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=dux.17.a
+        add_ideas = IID_big_strike
+    }
+}
+
+country_event = {
+    id = dux.18
+    title = dux.18.t
+    desc = dux.18.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=dux.18.a
+        if = { limit = {has_government = democratic}
+            add_ideas = leadership_d
+        }
+        else_if = { limit = {has_government = neutrality}
+            add_ideas = leadership_n
+        }
+    }
+    option = {
+        name = dux.18.b
+
+        add_ideas = regionalism
+
+        trigger = {
+            has_country_flag = regime_regionalism_option
+            NOT = {has_country_flag = regime_leadership_only}
+        }
+    }
+    option = {
+        name = dux.18.c
+
+        if = { limit = {has_government = democratic}
+            add_ideas = continuity_d
+        }
+        else_if = { limit = {has_government = neutrality}
+            add_ideas = continuity_n
+        }
+
+        trigger = {
+            has_country_flag = regime_continuous_option
+            NOT = {has_country_flag = regime_leadership_only}
+        }
+    }
+}
+
+country_event = {
+    id = dux.19
+    title = dux.19.t
+    desc = dux.19.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=dux.19.a
+        
+        set_politics = {
+            ruling_party = democratic
+            elections_allowed = yes
+            election_frequency = 48
+        }
+
+        trigger = {
+            if = { limit = {has_country_flag = revol_liberal}
+                always = yes
+            }
+            else = {
+                democratic > 0.3
+            }
+        }
+    }
+    option = {
+        name = dux.19.b
+
+        set_politics = {
+            ruling_party = neutrality
+            elections_allowed = yes
+            election_frequency = 48
+        }
+
+        trigger = {
+            if = {
+                limit = {has_country_flag = revol_balance}
+                always = yes
+            }
+            else = {
+                neutrality > 0.3
+            }
+        }
+    }
+    option = {
+        name = dux.19.c
+
+        set_politics = {
+            ruling_party = communism
+            elections_allowed = yes
+            election_frequency = 48
+        }
+
+        trigger = {
+            if = {
+                limit = {has_country_flag = revol_liberal}
+                communism > 0.35
+            }
+            else = {
+                communism > 0.55
+            }
+        }
+    }
+    option = {
+        name = dux.19.e
+
+        set_politics = {
+            ruling_party = fascism
+            elections_allowed = yes
+            election_frequency = 48
+        }
+
+        trigger = {
+            if = {
+                limit = {has_country_flag = revol_balance}
+                fascism > 0.3
+            }
+            else = {
+                fascism > 0.45
+            }
+        }
+    }
+}

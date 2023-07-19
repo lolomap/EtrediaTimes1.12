@@ -12,6 +12,12 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+        country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=moderatism
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 	IID_alehandeer_lisnyak={
 		name="Alehandeer Lisnyak"
@@ -22,7 +28,7 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=fascism_ideology
+			ideology=nationalism
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -56,6 +62,8 @@ characters={
 			id=-1
 		}
 	}
+
+    
 	IID_nikita_kostrovsko={
 		name="Nikita Kostrovsko"
 		portraits={
@@ -75,6 +83,8 @@ characters={
 			legacy_id=-1
 		}
 	}
+
+
 	IID_Nero_Kvatini={
 		name="Nero Kvatini"
 		portraits={
@@ -87,6 +97,8 @@ characters={
             idea_token = Nero_Kvatini
             ledger = civilian
 
+            cost = 75
+
             allowed = {
 				original_tag = IID
 			}
@@ -94,6 +106,39 @@ characters={
 				always = yes
 			}
 			traits = { economic_advisor }
+        }
+	}
+    IID_Isaac_Exermel={
+		name="Isaac Exermel"
+		portraits={
+			civilian={
+                small = GFX_idea_generic_democratic_reformer
+			}
+		}
+		advisor = {
+            slot = political_advisor
+            idea_token = Isaac_Exermel
+            ledger = civilian
+
+            cost = 75
+
+            allowed = {
+				original_tag = IID
+			}
+			available = {
+				OR = {
+                    has_government = monarchism
+                    AND = {
+                        has_character_flag = recruited
+                        NOT = {has_government = monarchism}
+                    }
+                }
+			}
+			
+            research_bonus = {
+                artillery = 0.15
+                mot_rockets = 0.15
+            }
         }
 	}
 }

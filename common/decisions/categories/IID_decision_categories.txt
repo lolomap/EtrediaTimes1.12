@@ -4,3 +4,10 @@ GKZ_moment = {
 		always = yes
 	}
 }
+
+IID_opposition_activities = {
+    allowed = {original_tag = IID}
+    visible = {
+        NOT = {has_completed_focus = IID_magna_reto_revolution}
+    }
+}
