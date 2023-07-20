@@ -361,7 +361,7 @@ focus_tree = {
             }
 
             set_temp_variable = {temp = token:neutrality}
-            add_to_variable = {var = neu_opposition_factor value = 1 tooltip = party_power_factor}
+            add_to_variable = {var = neu_opposition_factor value = 0.25 tooltip = party_power_factor}
 		}
 	}
 
@@ -571,7 +571,7 @@ focus_tree = {
                 remove_ideas = IID_big_strike   
                 clamp_variable = {
                     var = revol_days
-                    min = 0
+                    min = 1
                 }
             }
             country_event = {id = dux.14 days = revol_days}
