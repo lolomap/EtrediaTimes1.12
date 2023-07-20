@@ -704,6 +704,32 @@ on_actions = {
 			add_to_variable = {com_opposition = com_opposition_delta}
 			add_to_variable = {mon_opposition = mon_opposition_delta}
 
+            clamp_variable = {
+                var = dem_opposition
+                min = 0
+                max = 100
+            }
+            clamp_variable = {
+                var = fas_opposition
+                min = 0
+                max = 100
+            }
+            clamp_variable = {
+                var = neu_opposition
+                min = 0
+                max = 100
+            }
+            clamp_variable = {
+                var = com_opposition
+                min = 0
+                max = 100
+            }
+            clamp_variable = {
+                var = mon_opposition
+                min = 0
+                max = 100
+            }
+
             #дебаф от отрицательных ресурсов
             if = {limit = {check_variable = {resource@oil < 0}} add_to_variable = { res_factories = resource@oil }}
             if = {limit = {check_variable = {resource@aluminium < 0}} add_to_variable = { res_factories = resource@aluminium }}

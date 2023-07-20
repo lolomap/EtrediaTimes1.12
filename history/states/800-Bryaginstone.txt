@@ -1,0 +1,29 @@
+state={
+	id=800
+	name="STATE_800"
+	manpower = 6890000
+	state_category = megalopolis
+	
+	resources={
+	}
+
+	history={
+		owner = BRT
+		buildings = {
+			infrastructure = 3
+                        industrial_complex = 3
+			arms_factory = 1
+			9654 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = BRT
+		victory_points = {
+			9654 30
+		}
+
+	}
+	provinces={
+		9453 9561 9591 9624 9625 9640 9654 9678 9743 9846 9847 9872 9890 9943 9956 10077 10078 10096 10156 10216 10217 10241 10242 10321 10371 10386 10488 10513 10589 10590 10610 10713 10947 
+	}
+}

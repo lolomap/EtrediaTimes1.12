@@ -1,0 +1,29 @@
+
+state={
+	id=804
+	name="STATE_804"
+	manpower = 1225500
+	state_category = town
+	
+	resources={
+		steel = 36 # was: 45
+		chromium = 12 # was: 18
+		aluminium = 8 # was: 14
+	}
+
+	history={
+		owner = BRT
+		buildings = {
+			infrastructure = 1
+                        industrial_complex = 1
+		}
+		add_core_of = BRT
+		victory_points = {
+			11251 8
+		}
+
+	}
+	provinces={
+		10644 10645 10712 10730 10850 11030 11047 11074 11100 11101 11206 11251 11295 11315 11359 11536 
+	}
+}
