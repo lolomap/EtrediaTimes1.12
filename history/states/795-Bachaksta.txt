@@ -1,5 +1,5 @@
 state={
-	id=796
+	id=795
 	name="STATE_796"
 	manpower=220000
 	state_category=rural

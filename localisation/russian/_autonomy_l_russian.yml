@@ -3,5 +3,9 @@
  autonomy_sphere: "В сфере влияния"
  autonomy_autonomy: "Автономия в составе"
  autonomy_subject: "Субъект"
+ autonomy_colony: "Клиентское государство"
+ autonomy_dominion: "Де-факто государство"
  puppet_initiator_desc:1 "$COUNTRY|UY$ оказывает влияние на государства или контроллирует автономные регионы"
+
+ autonomy_release_btn: "Дать автономию"
  

@@ -1,6 +1,89 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_dem_stabilnost"
+	texturefile="gfx/interface/goals/goal_ucb_dem_stabilnost.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_foreign_policy"
+	texturefile="gfx/interface/goals/goal_ucb_dem_foreign_policy.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_compromis"
+	texturefile="gfx/interface/goals/goal_ucb_dem_compromis.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_battle"
+	texturefile="gfx/interface/goals/goal_ucb_dem_battle.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_autonomy"
+	texturefile="gfx/interface/goals/goal_ucb_dem_autonomy.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_votum"
+	texturefile="gfx/interface/goals/goal_ucb_votum.dds"
+}
+
+SpriteType = {
+	name = "GFX_goal_ucb_UCB_2"
+	texturefile="gfx/interface/goals/goal_ucb_UCB_2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_gov_reform"
+	texturefile="gfx/interface/goals/goal_ucb_gov_reform.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_fasc1"
+	texturefile="gfx/interface/goals/goal_ucb_fasc1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_enprison"
+	texturefile="gfx/interface/goals/goal_ucb_enprison.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem1"
+	texturefile="gfx/interface/goals/goal_ucb_dem1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_stavka_defense"
+	texturefile="gfx/interface/goals/goal_ucb_dem_stavka_defense.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_sbu"
+	texturefile="gfx/interface/goals/goal_ucb_dem_sbu.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_defend_SHE"
+	texturefile="gfx/interface/goals/goal_ucb_defend_SHE.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_sbu_kar_pressure"
 	texturefile="gfx/interface/goals/goal_sbu_kar_pressure.dds"
 }

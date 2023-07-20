@@ -5,7 +5,7 @@ UCB_bop_category = {
         fixed_random_seed = no
         days_remove = 30
         modifier = {
-            power_balance_daily = 0.002
+            power_balance_daily = 0.005
         }
         remove_effect = {
             UCB = {
@@ -13,23 +13,23 @@ UCB_bop_category = {
                     array = minor_countries
                     set_temp_variable = {temp = 0.15}
                     if = {
-                        limit = {has_government = democratic}
+                        limit = {ROOT = {has_government = democratic}}
                         boost_region_dem = yes
                     }
                     else_if = {
-                        limit = {has_government = fascism}
+                        limit = {ROOT = {has_government = fascism}}
                         boost_region_fas = yes
                     }
                     else_if = {
-                        limit = {has_government = neutrality}
+                        limit = {ROOT = {has_government = neutrality}}
                         boost_region_neu = yes
                     }
                     else_if = {
-                        limit = {has_government = communism}
+                        limit = {ROOT = {has_government = communism}}
                         boost_region_com = yes
                     }
                     else_if = {
-                        limit = {has_government = monarchism}
+                        limit = {ROOT = {has_government = monarchism}}
                         boost_region_mon = yes
                     }
                 }
@@ -108,7 +108,7 @@ UCB_bop_category = {
             }
             add_power_balance_value = {
                 id = UCB_parlament_balance
-                value = 0.06
+                value = 0.1
             }
         }
 

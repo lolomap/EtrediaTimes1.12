@@ -1,0 +1,6 @@
+resources_debuff = {
+	#icon = GFX_idea_regionalism
+	
+	civilian_factory_use = res_factories
+	
+}

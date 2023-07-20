@@ -22,8 +22,8 @@ add_ideas = {
 
 	set_autonomy = {
 		target = EGR
-		autonomous_state = autonomy_autonomy
-		freedom_level = 0.3
+		autonomous_state = autonomy_dominion
+		#freedom_level = 0.65
 	}
 
 set_technology = {basic_train = 1

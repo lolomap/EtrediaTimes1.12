@@ -1,21 +1,21 @@
 state={
 	id=793
-	name="STATE_793"
-	manpower=55000
+	name="STATE_794"
+	manpower=68900
 	state_category=rural
 
 	history={
 		owner = DIR
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 		add_core_of = DIR
 		victory_points = {
-			11442 1 
+			12255 1 
 		}
 
 	}
 	provinces={
-		11442 11606 11607 11753 11809 11884 12000 12069 
+		12126 12181 12213 12255 12256 12299 12311 12333 12388 12389 12466 12539 
 	}
 }

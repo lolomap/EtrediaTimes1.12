@@ -15,7 +15,7 @@ crysis_startable = {
         is_subject = no
     }
 
-    threat > 0.04
+    #threat > 0.04
 
     if = {
         limit = {NOT = {has_global_flag = CRYSIS_ALLOWED}}}

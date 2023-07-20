@@ -48,4 +48,59 @@ scripted_gui = {
             }
         }
     }
+
+    release_autonomy = {
+        window_name = "release_autonomy"
+		context_type = selected_state_context
+		parent_window_name = province_info_window
+
+        visible = {
+            controller = {tag = ROOT}
+            if = {
+                limit = {check_variable = {core_countries^num > 1}}
+                always = yes
+            }
+            else = {
+                NOT = {check_variable = {core_countries^0 = ROOT}}
+            }
+        }
+
+        effects = {
+            r_click = {
+                for_each_scope_loop = {
+                    array = core_countries
+                    break = b
+                    
+                    if = {
+                        limit = {
+                            NOT = {tag = ROOT}
+                            OR = {
+                                NOT = {country_exists = THIS}
+                                AND = {
+                                    is_subject_of = ROOT
+                                    OR = {
+                                        has_autonomy_state = autonomy_autonomy
+                                        has_autonomy_state = autonomy_subject
+                                    }
+                                }
+                            }
+                        }
+                        transfer_state = PREV
+                        set_country_flag = autonomy_state
+                        ROOT = {
+                            set_autonomy = {
+                                target = PREV
+                                autonomy_state = autonomy_autonomy
+                                end_wars = no
+                                end_civil_wars = no
+                            }
+                        }
+                        
+                        set_temp_variable = { b = 1 }
+                    }
+                }
+                encount_minors = yes
+            }
+        }
+    }
 }

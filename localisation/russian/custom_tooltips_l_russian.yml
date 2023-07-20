@@ -3,6 +3,12 @@
   MAPMODE_CORRUPTION_MAP_NAME: "Коррупция"
   MAPMODE_INFLUENCE_MAP_NAME: "Мировое влияние"
 
+  recruited: "Завербован"
+
+  decision_cost_CP_5: "£command_power §Y5§!"
+  decision_cost_CP_5_blocked: "£command_power §R5§!"
+  decision_cost_CP_5_tooltip: "Стоимость принятия решения: £command_power §Y5§!"
+
   modalert_tooltip: "[modalert_sl]"
   modalert_polform_tt: "§YДоступно изменение политического строя!"
   modalert_sep_tt: "§YВозможна сепарация региона§! [?modalerts_data^i.GetFlag][?modalerts_data^i.GetNameDef]\n§RУровень сепаратизма больше 75%§!"
@@ -98,6 +104,12 @@
   pi_master_more_then_30:0 "Больше 30 очков миротворчества\n"
   ORBFindIvestitionsDesc:0 "ИИД поддержит Ортостан, что позволит нам начать проведение собственной политики\n"
   ORBFarmPeace:0 "Будет полученно 50 очков миротворчества\n"
+  iid_reduce_revol_days: "Подготовка революции: $RIGHT|=-$ дней"
+  iid_revol_lasts: "Время на подготовку: §Y[?revol_days]§! дней"
+  IID_right_radical_change: "Радикализация §Yправых§!: $RIGHT|=-%%$"
+  IID_left_radical_change: "Радикализация §Yлевых§!: $RIGHT|=-%%$"
+  IID_dem_extra_option_dem: "Будет открыта дополнительная опция на §YКоординационном Собрании§!"
+  IID_dem_extra_option_revol: "Этот выбор повлияет на §Yреволюционные§! события"
   IID_controlKUL:0 "ИИД контролирует все территории Кулиштии\n"
   IID_CreateKaratenPraeterAdminLoc:0 "Будет создана Каратено-Праетерская Администрация\n"
   IID_culture_question_tooltip: "Откроются решения по §Gопределению культуры§! регионов"
@@ -173,10 +185,12 @@
   change_party_power:0 "§RРост оппозиционной силы [random_party_name]§!"
   reduce_party_power:0 "§GСнижение оппозиционной силы [random_party_name]§!"
   reduce_party_power_nontarget:0 "§GСнижение оппозиционной силы партии§!"
+  party_power_change: "Оппозиционная сила §Y[?temp.GetTokenLocalizedKey]§!: $RIGHT|%%=-$"
+  party_power_factor: "Скорость роста оппозиционной силы §Y[?temp.GetTokenLocalizedKey]§!: $RIGHT|%=-$"
 
   province_id_gui_display:0 "[?current_province]"
   border_war_button_loc:0 "Начать пограничный конфликт\n----------------\n\nНаше отношение к ним -20 и ниже"
 
   TRIGGER_IS_LEND_LEASING: "Отправляет ленд-лиз для $COUNTRY|H$"
 
-  modcredits: "§YBunbasss\nLegatt\nD-Kjch\nMonteny§!\n\n\n§6Special thanks to:§!\nSvarob\nLuka (Tornikios-O)\nKit MaB\nCockroach Gosha\nSosoichi\nScapupof"
+  modcredits: "§YBunbasss\nLegatt\nD-Kjch\nMonteny\nEgor Guryanov§!\n\n\n§6Special thanks to:§!\nSvarob\nLuka (Tornikios-O)\nKit MaB\nCockroach Gosha\nSosoichi\nScapupof"

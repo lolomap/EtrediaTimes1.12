@@ -6,7 +6,7 @@ involve_sphere = {
         set_variable = {sphere_owner = overlordscope}
         set_variable = { fembargo_cost = 0 }
 
-        add_ideas = sphere_idea
+        #add_ideas = sphere_idea
 
         set_temp_variable = { spherescope = THIS }
         for_each_scope_loop = {

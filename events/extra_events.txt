@@ -1480,8 +1480,7 @@ country_event = { #call in crysis sender
     immediate = {
         if = {
             limit = {
-                has_country_flag = political_crysis
-                country_exists = var:sender_crysis
+                has_variable = political_crysis_member
                 check_variable = {crysis_timer < 100}
             }
             add_to_variable = {crysis_timer = 1.666}
@@ -1930,37 +1929,6 @@ country_event = {
     option = {
         name=onactev.15.a
         
-    }
-}
-
-country_event = {
-    id = onactev.16
-    title = onactev.16.t
-    desc = onactev.16.d
-    #picture = GFX_event_picture
-
-    is_triggered_only = yes
-    #fire_only_once = yes
-    hidden = yes
-
-    #trigger = {}
-    immediate = {
-        every_subject_country = {
-            if = {
-                limit = {has_autonomy_state = autonomy_sphere}
-                overlord = {
-                    set_autonomy = {
-                        target = PREV
-                        autonomy_state = autonomy_free
-                        end_wars = no
-                        end_civil_wars = no
-                    }
-                    set_variable = {PREV.ovl = THIS}
-                }
-                faction_leader = {remove_from_faction = PREV}
-                #country_event = {id = onactev.17 hours = 5}
-            }
-        }
     }
 }
 

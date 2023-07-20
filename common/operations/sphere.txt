@@ -1,0 +1,68 @@
+operation_sphere_puppet = {
+    icon = GFX_operations_coup_government
+
+    name = operation_sphere_puppet_name
+    desc = operation_sphere_puppet_desc
+
+    priority = 0
+
+    days = 180
+
+    operatives = 3
+
+    network_strength = 100
+
+    risk_chance = 0.5
+
+    ai_will_do = { 
+        factor = 10
+    }
+
+    visible = {
+        has_operation_token = {
+			tag = FROM
+			token = token_civilian
+		}
+        FROM = {check_variable = {sphere_owner = ROOT}}
+    }
+    available = {
+        #always = yes
+        FROM = {
+            check_variable = {sphere_owner = ROOT}
+            has_stability < 0.4
+        }
+    }
+
+    requirements = {
+        
+    }
+
+    required_tokens = {
+		token_civilian
+	}
+
+    equipment = {
+		
+	}
+
+    phases = {
+		infiltration_diplomatic = {
+			base = 33
+		}
+	}
+
+    outcome_execute = {
+        FROM = {
+            remove_from_sphere = yes
+        }
+
+        ROOT = {
+            set_autonomy = {
+                target = FROM
+                autonomy_state = autonomy_colony
+                end_wars = no
+                end_civil_wars = no
+            }
+        }
+    }
+}
