@@ -1,0 +1,26 @@
+state={
+	id=807
+	name="STATE_807"
+	manpower = 3450000
+	state_category = city
+	
+	resources={
+		oil = 14 # was: 28
+	}
+
+	history={
+		owner = BRT
+		buildings = {
+			infrastructure = 3
+                        industrial_complex = 2
+		}
+		add_core_of = BRT
+		victory_points = {
+			10453 10
+		}
+
+	}
+	provinces={
+		10025 10026 10061 10095 10255 10320 10325 10384 10404 10453 10608 10609 10630 10748 10760 10848 10905 11046 11099 
+	}
+}
