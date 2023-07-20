@@ -1,0 +1,30 @@
+state={
+	id=803
+	name="STATE_803"
+	manpower = 4550000
+	state_category = large_city
+	
+	resources={
+	}
+
+	history={
+		owner = BRT
+		buildings = {
+			infrastructure = 3
+                        industrial_complex = 2
+			dockyard = 2
+			arms_factory = 1
+			9116 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = BRT
+		victory_points = {
+			9116 15
+		}
+
+	}
+	provinces={
+		7645 7789 8007 8050 8187 8230 8364 8383 8564 8734 8847 8848 8903 8922 8968 9001 9116 9486 9857 9870 
+	}
+}
