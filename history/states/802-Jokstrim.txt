@@ -1,6 +1,6 @@
 state={
-	id=803
-	name="STATE_803"
+	id=802
+	name="STATE_802"
 	manpower = 1650000
 	state_category = city
 	
