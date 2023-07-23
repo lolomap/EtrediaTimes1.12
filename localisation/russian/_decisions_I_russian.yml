@@ -1,0 +1,9 @@
+l_russian:
+  form_zeld_category:0 "Зельдская Империя"
+  form_zeld_empire:0 "Перевосоздать Зельдскую Империю"
+  form_country_fillrussia_required_states:0 "Контролирует все фильрусские земли"
+  form_country_pinka_required_states:0 "Контролирует все пинькийские земли"
+  form_country_sheregia_required_states:0 "Контролирует все шэрэгские земли"
+  form_country_fillrussia_coring_states:0 "Все фильрусские территории станут национальными"
+  form_country_pinka_coring_states:0 "Все пинькийские территории станут национальными"
+  form_country_sheregia_coring_states:0 "Все шэрэгские территории станут национальными"

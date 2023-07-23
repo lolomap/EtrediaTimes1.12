@@ -63,6 +63,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			cancel = {
+				has_government = democratic
+			}
 			removal_cost = -1
 			modifier = {
 				democratic_drift = 0.02
@@ -75,6 +78,9 @@ ideas = {
             picture = IID_democrats
 			allowed = {
 				always = no
+			}
+			cancel = {
+				has_government = democratic
 			}
 			removal_cost = -1
 			modifier = {

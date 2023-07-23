@@ -26,6 +26,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_SMA_starOfRevolution.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_PIN_military_production"
+		texturefile = "gfx/interface/ideas/idea_PIN_military_production.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_diria_revolt_dop"
 		texturefile = "gfx/interface/ideas/idea_diria_revolt_dop.dds"
 	}
