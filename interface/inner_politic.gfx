@@ -15,4 +15,8 @@ spriteTypes = {
 		name = "GFX_bop_UCB_parlament_side"
 		texturefile = "gfx/interface/bop/bop_UCB_parlament_side.dds"
 	}
+    SpriteType = {
+        name = "GFX_ideology_protection"
+		texturefile = "gfx/interface/custom_gui/ideology_protection.dds"
+    }
 }

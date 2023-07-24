@@ -741,7 +741,9 @@ sphere_category = {
         days_mission_timeout = 0
         
         available = {always = no}
-        activation = {has_variable = sphere_owner}
+        activation = {
+            has_variable = sphere_owner
+        }
         days_remove = -1
 
         targeted_modifier = {

@@ -94,6 +94,10 @@ scripted_gui = {
                                 end_wars = no
                                 end_civil_wars = no
                             }
+                            if = {
+                                limit = {has_government = monarchism}
+                                PREV = {set_politics = {ruling_party = neutrality elections_allowed = no}}
+                            }
                         }
                         
                         set_temp_variable = { b = 1 }

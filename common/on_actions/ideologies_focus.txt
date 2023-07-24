@@ -1,0 +1,31 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            IID = {set_country_flag = ideology_protection}
+            UCB = {set_country_flag = ideology_protection}
+            SBU = {set_country_flag = ideology_protection}
+            SFL = {set_country_flag = ideology_protection}
+        }
+    }
+
+    on_ruling_party_change = {
+        effect = {
+            if = {
+                limit = {tag = IID}
+                if = {
+                    limit = {
+                        has_government = democratic
+                        NOT = {
+                            has_completed_focus = IID_magna_reto_revolution
+                        }
+                    }
+                    unlock_national_focus = IID_new_laws
+                    uncomplete_national_focus = {
+                        focus = IID_magna_reto
+                        uncomplete_children = yes
+                    }
+                }
+            }
+        }
+    }
+}

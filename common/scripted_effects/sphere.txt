@@ -9,6 +9,7 @@ involve_sphere = {
         #add_ideas = sphere_idea
 
         set_temp_variable = { spherescope = THIS }
+
         for_each_scope_loop = {
             array = neighbors
             if = {
@@ -41,5 +42,10 @@ remove_from_sphere = {
     var:sphere_owner = {
         remove_from_array = {sphere_members = PREV}
     }
+    #remove_targeted_decision = {
+    #    target = sphere_owner
+    #    decision = sphere_debuff
+    #}
+    remove_mission = sphere_debuff
     clear_variable = sphere_owner
 }

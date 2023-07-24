@@ -145,7 +145,14 @@ scripted_gui = {
 
 
 
+    ideology_protection = {
+        window_name = "ideology_protection_window"
+		context_type = player_context
+		parent_window_token = politics_tab
 
+		visible = {has_country_flag = ideology_protection}
+        #visible = {always = yes}
+    }
 
 
 

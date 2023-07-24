@@ -2,11 +2,10 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-    TRB = {
-        set_politics = {
-            ruling_party = neutrality
+    activate_targeted_decision = {
+            target = sphere_owner
+            decision = sphere_debuff
         }
-    }
 }
 
 ####
