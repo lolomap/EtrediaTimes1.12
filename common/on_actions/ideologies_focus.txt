@@ -19,11 +19,46 @@ on_actions = {
                             has_completed_focus = IID_magna_reto_revolution
                         }
                     }
-                    unlock_national_focus = IID_new_laws
                     uncomplete_national_focus = {
                         focus = IID_magna_reto
                         uncomplete_children = yes
                     }
+                    unlock_national_focus = IID_new_laws
+                }
+            }
+            else_if = {
+                limit = {
+                    tag = UCB
+                }
+                if = {
+                    limit = {
+                        has_government = fascism
+                        has_completed_focus = UCB_dem1
+                    }
+                    uncomplete_national_focus = {
+                        focus = UCB_2
+                        uncomplete_children = yes
+                    }
+                    unlock_national_focus = UCB_fasc_irtazlin_speech
+                    unlock_national_focus = UCB_destroy_dem
+                    unlock_national_focus = UCB_parlament_fas
+                    unlock_national_focus = UCB_sep_punishment
+                }
+                else_if = {
+                    limit = {
+                        has_government = neutrality
+                        NOT = {has_completed_focus = UCB_fasc1}
+                    }
+                    uncomplete_national_focus = {
+                        focus = UCB_2
+                        uncomplete_children = yes
+                    }
+                    unlock_national_focus = UCB_yurescul_speech
+                    unlock_national_focus = UCB_parlament_fas
+                    unlock_national_focus = UCB_sep_punishment
+                    unlock_national_focus = UCB_neutrality_way
+                    unlock_national_focus = UCB_convergation
+                    unlock_national_focus = UCB_civilian_nationalism
                 }
             }
         }

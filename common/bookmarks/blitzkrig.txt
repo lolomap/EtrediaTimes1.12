@@ -2,7 +2,7 @@ bookmarks = {
 	bookmark = {
 		name = "MINOR_WORLD_NAME"
 		desc = "MINOR_WORLD_DESC"
-		date = 2018.1.1.12
+		date = 2018.9.20.12
 		picture = "GFX_select_date_1939"
 		default_country = "SBU"
 
@@ -200,12 +200,6 @@ bookmarks = {
                 create_faction = EIK_blok_ally
                 add_to_faction = BAE
                 add_to_faction = TOL
-            }
-
-            UCB = {
-                create_faction = UCB_scuit_ally
-                add_to_faction = SBU
-                give_guarantee = SHE
             }
 
             RGY = {

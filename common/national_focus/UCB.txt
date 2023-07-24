@@ -209,6 +209,11 @@ focus_tree = {
 			focus = UCB_dem_anti_IID
 		}
 		will_lead_to_war_with = IID
+
+        available = {
+            IID = {has_completed_focus = IID_Require_the_eastern_trp}
+        }
+
 		completion_reward = {
 			UCB = { country_event = { id = ucnb.21 days = 1 } }
 		}
@@ -433,7 +438,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_stabilnost
 		icon = GFX_goal_ucb_dem_stabilnost
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_gov_reform
 		}
@@ -461,7 +466,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_autonomy
 		icon = GFX_goal_ucb_dem_autonomy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_stabilnost
 		}
@@ -488,7 +493,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_compromis
 		icon = GFX_goal_ucb_dem_compromis
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_autonomy
 		}
@@ -520,7 +525,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_new_parlament
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_compromis
 		}
@@ -545,7 +550,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_battle
 		icon = GFX_goal_ucb_dem_battle
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_autonomy
 		}
@@ -579,7 +584,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_nazi_off
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_battle
 		}
@@ -603,7 +608,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_kolechian_question
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_nazi_off
 			focus = UCB_dem_new_parlament
@@ -874,7 +879,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_dotaci
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_kolechian_question
 		}
@@ -944,7 +949,7 @@ focus_tree = {
 	focus = {
 		id = UCB_dem_separatism_off
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_dem_dotaci
 		}
