@@ -55,6 +55,11 @@ MSA_UNIFIED = {
 	color_ui = rgb { 0 102 204 }
 }
 
+ZLD_UNIFIED = {
+	color = rgb { 237 231 235 }
+	color_ui = rgb { 217 211 215 }
+}
+
 MIS_UNIFIED = {
 	color = rgb { 230 182 38 }
 	color_ui = rgb { 210 162 18 }

@@ -1,9 +1,17 @@
 ﻿l_english:
-   wi_title: "Global Influence"
+   wi_title: "Global influence"
    world_influence_value: "[?world_influence|1]"
-   world_influence_desc: "§HGlobal Influence§!\n"
+   world_influence_desc: "§HGlobal influence§!\n"
    wicost_g: "§G[?winfluence_cost|%]§!"
    wicost_b: "§R[?winfluence_cost|%]§!"
    wicost_n: "§Y[?winfluence_cost|%]§!"
    world_influence_delayed: "Number of divisions: [?division_inf_factor|+]\nNumber of factories: [?factories_inf_factor|+]\nNukes: [?nuke_inf_factor|+]\nResource mining: [?resources_inf_factor|+]\nExport resources: [?eresources_inf_factor| +]\nAvailable: [wicost_sl]\Faction Influence: [?faction_influence|1]\nInfluence is updated monthly\n------\n§LYour influence reflects your position on the global stage. High influence allows you to dictate your terms and even sometimes force other countries to make decisions that are useful to you§!"
    wi_num: "[?wi_i]"
+
+   winfluence_modifier: "Global influence"
+  
+  is_world_influence_more_2:0 "§Yinfluence§! §Y2§! times more than [PREV.GetFlag]§Y[PREV.GetNameDef]§ required!"
+  is_world_influence_more_1_5:0 "§Yinfluence§! §Y1.5§! times more than [PREV.GetFlag]§Y[PREV.GetNameDef]§ required!"
+  is_world_influence_more_2_:0 "[is_world_influence_more_2_sl]"
+  is_world_influence_more_2_yes:0 "§GInfluence 2 times more than [PREV.GetFlag]§!§Y[PREV.GetNameDef]§ required!"
+  is_world_influence_more_2_no:0 "§RInfluence 2 times more than [PREV.GetFlag]§!§Y[PREV.GetNameDef]§ required!"

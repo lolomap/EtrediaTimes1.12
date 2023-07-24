@@ -306,6 +306,9 @@
  EIK_Rashin_concern:0 "Концерн «Rashin»"
  MontaGp_Scientific:0 "«MontaGP Scientific»"
 
+ PIN_military_production:0 "Пинькийский ВПК"
+ PIN_military_production_desc:0 "Пинькийский военно-промышленный комплекс еще со времен Зельдской империи был и остается самым продвинутым в регионе, благодаря чему Пинька может похвастатья крупной механизированной армией, несмотря на свои размеры."
+ 
  FSC_lose:0 "Поражение в войне"
  FSC_desperate_defense:0 "Отчаянная оборона"
  FSC_army_bund:0 "Беспорядки в армии"

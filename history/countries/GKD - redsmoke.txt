@@ -12,6 +12,8 @@ add_ideas = {
 	fifth_corruption_level
     continuity_n
     sforces_6
+	IID_eco_crisis
+	IID_recrut
 }
 
 set_technology = {basic_train = 1

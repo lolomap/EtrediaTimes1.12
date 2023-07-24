@@ -94,6 +94,162 @@ form_scandinavia_category = {
 	}
 }
 
+form_zeld_category = {
+	
+	form_zeld_empire = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = PIN
+				original_tag = SHE
+				original_tag = FIL
+			}
+		}
+
+		available = {
+			is_subject = no
+			#FILLRUSSIA
+			custom_trigger_tooltip = {
+			    tooltip = form_country_fillrussia_required_states
+				controls_state = 146
+				controls_state = 147
+				controls_state = 126
+				controls_state = 127
+				controls_state = 128
+				controls_state = 129
+				controls_state = 130
+				controls_state = 131
+				controls_state = 132
+				controls_state = 133
+				controls_state = 134
+				controls_state = 135
+				controls_state = 115
+				controls_state = 116
+				controls_state = 117
+				controls_state = 118
+				controls_state = 119
+				controls_state = 120
+				controls_state = 121
+				controls_state = 122
+				controls_state = 123
+				controls_state = 124
+				controls_state = 125
+			}
+			#PINKA
+			custom_trigger_tooltip = {
+				tooltip = form_country_pinka_required_states
+				controls_state = 140
+				controls_state = 141
+				controls_state = 142
+				controls_state = 143
+				controls_state = 144
+				controls_state = 145
+				controls_state = 148
+			    controls_state = 149
+				controls_state = 150
+				controls_state = 136
+				controls_state = 137
+				controls_state = 138
+				controls_state = 139
+			}
+			#SHEREGIA
+			custom_trigger_tooltip = {
+				tooltip = form_country_sheregia_required_states
+				controls_state = 156
+				controls_state = 155
+				controls_state = 151
+				controls_state = 152
+				controls_state = 153
+				controls_state = 154
+				controls_state = 136
+			}
+			controls_state = 237
+			controls_state = 242
+			controls_state = 243
+		}
+
+		visible = {
+			OR = {
+				original_tag = PIN
+				original_tag = FIL
+				original_tag = SHE
+			}
+			NOT = { has_global_flag = form_zeld_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = ZLD_UNIFIED
+			custom_effect_tooltip = form_country_fillrussia_coring_states
+			hidden_effect = {
+				146 = { add_core_of = ROOT }
+				147 = { add_core_of = ROOT }
+				126 = { add_core_of = ROOT }
+				127 = { add_core_of = ROOT }
+				128 = { add_core_of = ROOT }
+				129 = { add_core_of = ROOT }
+				130 = { add_core_of = ROOT }
+				131 = { add_core_of = ROOT }
+				132 = { add_core_of = ROOT }
+				133 = { add_core_of = ROOT }
+				134 = { add_core_of = ROOT }
+				135 = { add_core_of = ROOT }
+				115 = { add_core_of = ROOT }
+				116 = { add_core_of = ROOT }
+				117 = { add_core_of = ROOT }
+				118 = { add_core_of = ROOT }
+				119 = { add_core_of = ROOT }
+				120 = { add_core_of = ROOT }
+				121 = { add_core_of = ROOT }
+				122 = { add_core_of = ROOT }
+				123 = { add_core_of = ROOT }
+				124 = { add_core_of = ROOT }
+				125 = { add_core_of = ROOT }
+			}
+			custom_effect_tooltip = form_country_pinka_coring_states
+			hidden_effect = {
+				140 = { add_core_of = ROOT }
+				141 = { add_core_of = ROOT }
+				142 = { add_core_of = ROOT }
+				143 = { add_core_of = ROOT }
+				144 = { add_core_of = ROOT }
+				145 = { add_core_of = ROOT }
+				148 = { add_core_of = ROOT }				
+				149 = { add_core_of = ROOT }
+				150 = { add_core_of = ROOT }
+				136 = { add_core_of = ROOT }
+				137 = { add_core_of = ROOT }
+				138 = { add_core_of = ROOT }
+				139 = { add_core_of = ROOT }
+			}
+			custom_effect_tooltip = form_country_sheregia_coring_states
+			hidden_effect = {
+				156 = { add_core_of = ROOT }
+				155 = { add_core_of = ROOT }
+				151 = { add_core_of = ROOT }
+				152 = { add_core_of = ROOT }
+				153 = { add_core_of = ROOT }
+				154 = { add_core_of = ROOT }
+				136 = { add_core_of = ROOT }				
+			}
+			237 = { add_core_of = ROOT }
+			242 = { add_core_of = ROOT }
+			243 = { add_core_of = ROOT }
+			hidden_effect = {
+				news_event = {id = newss.99 days = 1}
+				set_global_flag = form_zeld_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 10
+			}
+		}
+	}
+}
+
 form_msas_category = {
 
     form_msas2 = {
@@ -237,9 +393,7 @@ form_msas_category = {
 				factor = 200
 			}
 		}
-	}
-
-    
+	}   
 }
 
 form_ucb_minors_category = {
