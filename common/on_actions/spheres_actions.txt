@@ -2,7 +2,14 @@ on_actions = {
     on_startup = {
         effect = {
             ELR = {SBU = {involve_sphere = yes}}
-            TRB = {SBU = {involve_sphere = yes}}
+
+            if = {
+                limit = {
+                    has_start_date < 2018.9.1
+                }
+                TRB = {SBU = {involve_sphere = yes}}
+
+            }
             RGY = {SBU = {involve_sphere = yes}}
 
             SKI = {MOA = {involve_sphere = yes}}

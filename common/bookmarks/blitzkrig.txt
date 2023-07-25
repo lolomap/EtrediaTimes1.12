@@ -109,6 +109,7 @@ bookmarks = {
 
             FSC = {
                 release = ORB
+                ORB = {set_cosmetic_tag = ORB_independent}
                 release = ANR
                 release = KUL
                 release = NER
@@ -134,7 +135,6 @@ bookmarks = {
                 transfer_state = 281
                 transfer_state = 277
                 transfer_state = 282
-                transfer_state = 283
                 transfer_state = 284
                 transfer_state = 280
                 transfer_state = 305
@@ -145,6 +145,14 @@ bookmarks = {
                 transfer_state = 276
                 transfer_state = 278
                 transfer_state = 791
+                transfer_state = 256
+                transfer_state = 257
+                transfer_state = 790
+                transfer_state = 266
+                transfer_state = 285
+                transfer_state = 268
+                transfer_state = 307
+                transfer_state = 269
                 add_state_core = 265
                 add_state_core = 267
                 add_state_core = 307
@@ -203,9 +211,7 @@ bookmarks = {
             }
 
             RGY = {
-                transfer_state = 137
                 transfer_state = 197
-                add_state_core = 137
                 add_state_core = 197
                 
                 add_state_core = 196
@@ -218,20 +224,6 @@ bookmarks = {
                 add_state_core = 230
                 transfer_state = 229
                 add_state_core = 229
-            }
-
-            SBU = {
-                transfer_state = 222
-                add_state_core = 222
-                
-                transfer_state = 218
-                transfer_state = 220
-                add_state_core = 218
-                add_state_core = 220
-                
-                TRB = {remove_from_sphere = yes}
-                puppet = TRB
-                puppet = ELN
             }
             
             KLU = {
