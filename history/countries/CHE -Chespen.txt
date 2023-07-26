@@ -81,6 +81,24 @@ set_popularities = {
 }
 
 #
+2023.1.1 = {
+    puppet = CHO
+    puppet = LIP
+    puppet = BOU
+
+    transfer_state = 579
+    transfer_state = 575
+    transfer_state = 563
+    transfer_state = 561
+    transfer_state = 574
+    transfer_state = 573
+    transfer_state = 563
+    transfer_state = 564
+    transfer_state = 562
+    transfer_state = 559
+    transfer_state = 565
+    transfer_state = 566
+}
 
 recruit_character = CHE_lucas_walker
 

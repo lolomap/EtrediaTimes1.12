@@ -56,6 +56,12 @@ set_popularities = {
         communism = 10
 }
 
+2023.1.1 = {
+transfer_state = 307
+                add_state_core = 307
+			    load_oob = _KRS
+}
+
 #
 
 create_country_leader = {

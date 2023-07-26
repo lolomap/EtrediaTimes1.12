@@ -1,17 +1,6 @@
 on_actions = {
     on_startup = {
         effect = {
-            ELR = {SBU = {involve_sphere = yes}}
-
-            if = {
-                limit = {
-                    has_start_date < 2018.9.1
-                }
-                TRB = {SBU = {involve_sphere = yes}}
-
-            }
-            RGY = {SBU = {involve_sphere = yes}}
-
             SKI = {MOA = {involve_sphere = yes}}
             TOB = {MOA = {involve_sphere = yes}}
 
@@ -24,9 +13,9 @@ on_actions = {
             NEV = {PAL = {involve_sphere = yes}}
 
             every_possible_country = {
-                set_variable_to_random = {var = sc_R min = 0.5}
-                set_variable_to_random = {var = sc_G min = 0.5}
-                set_variable_to_random = {var = sc_B min = 0.5}
+                set_variable_to_random = {var = sc_R min = 0}
+                set_variable_to_random = {var = sc_G min = 0}
+                set_variable_to_random = {var = sc_B min = 0}
             }
         }
     }

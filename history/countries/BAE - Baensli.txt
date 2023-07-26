@@ -70,6 +70,11 @@ set_popularities = {
         communism = 14
 }
 
+2023.1.1 = {
+    transfer_state = 788
+    transfer_state = 789
+}
+
 #
 
 recruit_character = BAE_bob_wilson

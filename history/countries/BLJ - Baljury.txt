@@ -41,6 +41,16 @@ set_popularities = {
 	neutrality = 100
 }
 
+2023.1.1 = {
+    transfer_state = 260
+                transfer_state = 256 
+                transfer_state = 257 
+                add_state_core = 260
+                add_state_core = 256
+				add_state_core = 257
+			    load_oob = _BLJ
+}
+
 #
 create_country_leader = {
 	name = "Gatin Marma"

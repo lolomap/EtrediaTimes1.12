@@ -77,6 +77,19 @@ set_popularities = {
 }
 #
 
+if = {
+    limit = {
+        has_start_date < 2018.9.1
+    }
+    SBU = {involve_sphere = yes}
+}
+
+2023.1.1 = {
+    transfer_state = 198
+    transfer_state = 199
+    transfer_state = 200
+}
+
 recruit_character = TRB_lucas_roberts
 
 recruit_character = TRB_radas_potrush

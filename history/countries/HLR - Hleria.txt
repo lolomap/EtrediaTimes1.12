@@ -79,6 +79,12 @@ set_popularities = {
 	neutrality = 51
 }
 
+2023.1.1 = {
+    transfer_state = 209
+    transfer_state = 210
+    transfer_state = 211
+}
+
 #
 create_country_leader = {
 	name = "Boban Charapich"

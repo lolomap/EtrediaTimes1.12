@@ -43,6 +43,22 @@ set_popularities = {
 	neutrality = 0
 }
 
+2023.1.1 = {
+    transfer_state = 264
+    transfer_state = 263
+    transfer_state = 795
+    transfer_state = 796
+    transfer_state = 797
+    add_state_core = 264
+    add_state_core = 263
+    add_state_core = 795
+    add_state_core = 796
+    add_state_core = 797
+    transfer_state = 794
+    add_state_core = 794
+    load_oob = _NOV
+}
+
 #
 create_country_leader = {
 	name = "Democratic Diria"

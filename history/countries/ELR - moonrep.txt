@@ -49,6 +49,11 @@ set_popularities = {
         communism = 0
 }
 
+if = {
+    limit = {has_start_date < 2023.1.1}
+    SBU = {involve_sphere = yes}
+}
+
 #
 
 recruit_character = ELR_jonas_roberts

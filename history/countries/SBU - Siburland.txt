@@ -87,13 +87,16 @@ set_technology = {basic_train = 1
 }
 
 2018.9.20 = {
-    transfer_state = 222
-    add_state_core = 222
-    
-    transfer_state = 218
-    transfer_state = 220
-    add_state_core = 218
-    add_state_core = 220
+    if = {
+        limit = {has_start_date < 2023.1.1}
+        transfer_state = 222
+        add_state_core = 222
+        
+        transfer_state = 218
+        transfer_state = 220
+        add_state_core = 218
+        add_state_core = 220
+    }
 
     puppet = TRB
     puppet = ELN
@@ -130,7 +133,13 @@ set_technology = {basic_train = 1
     unlock_national_focus = SBU_IID_friendship
     unlock_national_focus = SBU_economic
     complete_national_focus = SBU_investitions_gy
-    complete_national_focus = SBU_sburska_zvezda_ucb
+    if = {
+        limit = {has_start_date < 2023.1.1}
+        complete_national_focus = SBU_sburska_zvezda_ucb
+    }
+    else = {
+        unlock_national_focus = SBU_sburska_zvezda_ucb
+    }
     complete_national_focus = SBU_dockyard
     unlock_national_focus = SBU_tradewar
     complete_national_focus = SBU_pressure_gy

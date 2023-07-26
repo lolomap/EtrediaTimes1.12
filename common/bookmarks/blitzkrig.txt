@@ -203,35 +203,6 @@ bookmarks = {
                 add_ideas = { DIR_revolt }
                 add_ideas = { DEM_bad_economic }
             }
-
-            EIK = {
-                create_faction = EIK_blok_ally
-                add_to_faction = BAE
-                add_to_faction = TOL
-            }
-
-            RGY = {
-                transfer_state = 197
-                add_state_core = 197
-                
-                add_state_core = 196
-                transfer_state = 196
-            }
-            ELN = {
-                transfer_state = 231
-                add_state_core = 231
-                transfer_state = 230
-                add_state_core = 230
-                transfer_state = 229
-                add_state_core = 229
-            }
-            
-            KLU = {
-                #annex_country = {target = DNG}
-                #annex_country = {target = HOR}
-                #annex_country = {target = ZOG}
-                #annex_country = {target = LOD}
-            }
 		}
 	}
 }

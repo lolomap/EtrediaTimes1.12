@@ -52,10 +52,29 @@ set_politics = {
 }
 
 set_popularities = {
-        democratic = 96
-        fascism = 0
-        communism = 0
+    democratic = 96
+    fascism = 0
+    communism = 0
 	neutrality = 4
+}
+
+2023.1.1 = {
+    set_politics = {
+        ruling_party = fascism
+        last_election = "2020.8.25"
+        election_frequency = 45
+        elections_allowed = no
+    }
+
+    set_popularities = {
+        democratic = 20
+        fascism = 65
+        communism = 0
+        neutrality = 15
+    }
+
+    transfer_state = 203
+    transfer_state = 202
 }
 
 #

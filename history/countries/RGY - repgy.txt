@@ -49,6 +49,19 @@ set_popularities = {
 	neutrality = 22
 }
 
+if = {
+    limit = {has_start_date < 2023.1.1}
+    SBU = {involve_sphere = yes}
+}
+
+2018.9.20 = {
+    transfer_state = 197
+    add_state_core = 197
+    
+    add_state_core = 196
+    transfer_state = 196
+}
+
 #
 
 recruit_character = RGY_jonas_jones

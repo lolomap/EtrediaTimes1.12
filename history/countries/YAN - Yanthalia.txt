@@ -105,6 +105,38 @@ set_popularities = {
         communism = 15
 }
 
+2023.1.1 = {
+    puppet = TRB
+    puppet = ELN
+    puppet = SVT
+    puppet = SBU
+    puppet = HLR
+    transfer_state = 233
+    transfer_state = 234
+    transfer_state = 235
+    transfer_state = 236
+    transfer_state = 362
+    transfer_state = 375
+    transfer_state = 376
+    transfer_state = 377
+    transfer_state = 378
+    transfer_state = 379
+    transfer_state = 366
+    transfer_state = 368
+    transfer_state = 357
+    transfer_state = 358
+    transfer_state = 359
+    transfer_state = 360
+    transfer_state = 370
+    transfer_state = 371
+    transfer_state = 372
+    transfer_state = 373
+    transfer_state = 374
+
+
+    create_faction = YAN_swea_faction
+}
+
 #
 
 recruit_character = YAN_general_1
