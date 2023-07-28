@@ -2266,7 +2266,6 @@
  DK2:0 "Дирийская Республика"
  DK2_DEF:0 "Дирийская Республика"
  DK2_ADJ:0 "Дирийск."
- 
  ZLD_UNIFIED:0 "Зельдская Империя"
  ZLD_UNIFIED_DEF:0 "Зельдская Империя"
  ZLD_UNIFIED_ADJ:0 "Зельдск."
@@ -2276,3 +2275,6 @@
  ZLD_UNIFIED_democratic:0 "Зельдская Конфедерация"
  ZLD_UNIFIED_democratic_DEF:0 "Зельдская Конфедерация"
  ZLD_UNIFIED_democratic_ADJ:0 "Зельдск."
+ GRANDANA:0 "Терра-Грандана"
+ GRANDANA_DEF:0 "Терра-Грандана"
+ GRANDANA_ADJ:0 "Гранданск."

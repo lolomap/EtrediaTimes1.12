@@ -250,6 +250,112 @@ form_zeld_category = {
 	}
 }
 
+form_grandana_category = {
+	
+	form_terra_grandana_empire = {
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = TRP
+		}
+
+		available = {
+			is_subject = no
+			#TRP
+			custom_trigger_tooltip = {
+			    tooltip = form_country_trp_required_states
+				controls_state = 59
+				controls_state = 60
+				controls_state = 61
+				controls_state = 62
+				controls_state = 63
+			}
+			#OTHER
+			controls_state = 54
+			controls_state = 53
+			controls_state = 58
+			controls_state = 52
+			controls_state = 57
+			controls_state = 47
+			controls_state = 50
+			controls_state = 51
+			controls_state = 49
+			controls_state = 68
+			controls_state = 69
+			controls_state = 70
+			controls_state = 64
+			controls_state = 65
+			controls_state = 66
+			controls_state = 67
+			controls_state = 73
+			controls_state = 74
+			controls_state = 75
+			controls_state = 76
+			controls_state = 77
+			controls_state = 78
+			controls_state = 79
+			controls_state = 80
+			controls_state = 81
+			controls_state = 112
+			controls_state = 164
+			controls_state = 166
+			controls_state = 167
+		}
+
+		visible = {
+			original_tag = TRP
+			NOT = { has_global_flag = form_grandana_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = GRANDANA
+			custom_effect_tooltip = form_country_grandana_coring_states
+			hidden_effect = {
+				53 = { add_core_of = ROOT }
+				54 = { add_core_of = ROOT }
+				47 = { add_core_of = ROOT }
+				50 = { add_core_of = ROOT }
+				51 = { add_core_of = ROOT }
+				52 = { add_core_of = ROOT }
+				57 = { add_core_of = ROOT }
+				58 = { add_core_of = ROOT }
+				49 = { add_core_of = ROOT }
+				68 = { add_core_of = ROOT }
+				69 = { add_core_of = ROOT }
+				70 = { add_core_of = ROOT }
+				64 = { add_core_of = ROOT }
+				65 = { add_core_of = ROOT }
+				66 = { add_core_of = ROOT }
+				67 = { add_core_of = ROOT }
+				73 = { add_core_of = ROOT }
+				74 = { add_core_of = ROOT }
+				75 = { add_core_of = ROOT }
+				76 = { add_core_of = ROOT }
+				77 = { add_core_of = ROOT }
+				78 = { add_core_of = ROOT }
+				79 = { add_core_of = ROOT }
+				80 = { add_core_of = ROOT }
+				81 = { add_core_of = ROOT }
+				112 = { add_core_of = ROOT }
+				164 = { add_core_of = ROOT }
+				166 = { add_core_of = ROOT }
+				167 = { add_core_of = ROOT }
+			}
+			hidden_effect = {
+				news_event = {id = newss.99 days = 1}
+				set_global_flag = form_grandana_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 10
+			}
+		}
+	}
+}
+
 form_msas_category = {
 
     form_msas2 = {

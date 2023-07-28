@@ -2,6 +2,20 @@ AKV_PUPPET = {
 	color = rgb { 142 130 40 }
 }
 
+MSA_UNIFIED = {
+	color = rgb { 0 102 204 }
+	color_ui = rgb { 0 102 204 }
+}
+
+ZLD_UNIFIED = {
+	color = rgb { 237 231 235 }
+	color_ui = rgb { 217 211 215 }
+}
+
+GRANDANA = {
+	color = rgb { 198 91 100 }
+	color_ui = rgb { 178 71 80 }
+}
 
 
 
@@ -48,16 +62,6 @@ HUN_EMPIRE = {
 AUS_NOT_WHITE = {	
 	color = rgb { 249 126 98 }
 	color_ui = rgb { 255 164 127 }
-}
-
-MSA_UNIFIED = {
-	color = rgb { 0 102 204 }
-	color_ui = rgb { 0 102 204 }
-}
-
-ZLD_UNIFIED = {
-	color = rgb { 237 231 235 }
-	color_ui = rgb { 217 211 215 }
 }
 
 MIS_UNIFIED = {
