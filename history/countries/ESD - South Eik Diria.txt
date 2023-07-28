@@ -55,6 +55,31 @@ set_popularities = {
         communism = 0
 }
 
+2023.1.1 = {
+    transfer_state = 278
+    transfer_state = 280
+    add_state_core = 278
+    add_state_core = 280
+    transfer_state = 282
+    add_state_core = 282
+    transfer_state = 281
+    add_state_core = 281
+					transfer_state = 277
+					add_state_core = 277
+					transfer_state = 305
+					add_state_core = 305
+					transfer_state = 276
+					add_state_core = 276
+					transfer_state = 275
+					add_state_core = 275
+					transfer_state = 279
+					add_state_core = 279
+					transfer_state = 306
+					add_state_core = 306
+
+        
+	load_oob = _ESD
+}
 
 create_country_leader = {
 	name = "Urvy Stassteny"

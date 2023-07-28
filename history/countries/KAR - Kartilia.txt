@@ -77,7 +77,15 @@ set_popularities = {
 	neutrality = 4
 }
 
+2023.1.1 = {
+    252 = {set_demilitarized_zone = yes}
+    253 = {set_demilitarized_zone = yes}
+    254 = {set_demilitarized_zone = yes}
+    255 = {set_demilitarized_zone = yes}
 
+    create_faction = UCB_scuit_ally
+    add_to_faction = RGY
+}
 #
 
 recruit_character = KAR_karl_stotz

@@ -810,7 +810,7 @@ IID_opposition_activities = {
             add_to_variable = {
                 var = left_radical
                 value = 8
-                tooltip = IID_right_radical_change
+                tooltip = IID_left_radical_change
             }
             hidden_effect = {
                 add_command_power = -5   
@@ -838,7 +838,7 @@ IID_opposition_activities = {
             add_to_variable = {
                 var = left_radical
                 value = 8
-                tooltip = IID_right_radical_change
+                tooltip = IID_left_radical_change
             }
             hidden_effect = {
                 add_command_power = -5   

@@ -8,14 +8,14 @@ set_stability = 0.5
 set_war_support = 0.6
 
 add_ideas = {
-        www_best_country
-        SBU_Hleria 
-        SBU_policy
-        free_press
-        free_trade
-        general_entry
-        SBU_Elnia_separatism
-        SBU_SZ_concern
+    www_best_country
+    SBU_Hleria 
+    SBU_policy
+    free_press
+    free_trade
+    general_entry
+    SBU_Elnia_separatism
+    SBU_SZ_concern
 	third_corruption_level
     sforces_5
 }
@@ -84,6 +84,65 @@ set_technology = {basic_train = 1
 	geo_satellites = 1
 	satellites_maps = 1
 	computers_90s = 1
+}
+
+2018.9.20 = {
+    if = {
+        limit = {has_start_date < 2023.1.1}
+        transfer_state = 222
+        add_state_core = 222
+        
+        transfer_state = 218
+        transfer_state = 220
+        add_state_core = 218
+        add_state_core = 220
+    }
+
+    puppet = TRB
+    puppet = ELN
+
+    give_guarantee = ELR
+
+    remove_ideas = {
+        SBU_Hleria
+        SBU_Elnia_separatism
+
+    }
+    add_ideas = {
+        SBU_siburian_star
+    }
+
+    unlock_national_focus = SBU_left
+    complete_national_focus = SBU_klyachek_plan
+    unlock_national_focus = SBU_Hleria_stabilization
+    unlock_national_focus = SBU_aldeko_operation
+    unlock_national_focus = SBU_terbia_minors
+    unlock_national_focus = SBU_sinicino_future
+    unlock_national_focus = SBU_tobina_future
+    unlock_national_focus = SBU_bakli_future
+    unlock_national_focus = SBU_lobuchina_future
+    unlock_national_focus = SBU_east_siburia_future
+    unlock_national_focus = SBU_UCB_friendship
+    complete_national_focus = SBU_children_of_Savaty
+    unlock_national_focus = SBU_dem_brothers
+    complete_national_focus = SBU_safflia_compromiss
+    unlock_national_focus = SBU_sburska_zvezda
+    complete_national_focus = SBU_military_factory
+    complete_national_focus = SBU_unification
+    unlock_national_focus = SBU_militarize_nation
+    unlock_national_focus = SBU_IID_friendship
+    unlock_national_focus = SBU_economic
+    complete_national_focus = SBU_investitions_gy
+    if = {
+        limit = {has_start_date < 2023.1.1}
+        complete_national_focus = SBU_sburska_zvezda_ucb
+    }
+    else = {
+        unlock_national_focus = SBU_sburska_zvezda_ucb
+    }
+    complete_national_focus = SBU_dockyard
+    unlock_national_focus = SBU_tradewar
+    complete_national_focus = SBU_pressure_gy
 }
 
 

@@ -98,6 +98,60 @@ set_popularities = {
         communism = 13
 }
 
+2018.9.20 = {
+    create_faction = EIK_blok_ally
+    add_to_faction = BAE
+    add_to_faction = TOL
+    if = {
+        limit = {has_start_date < 2023.1.1}
+        add_to_faction = YAN
+    }
+}
+
+2023.1.1 = {
+    set_politics = {
+        ruling_party = neutrality
+        last_election = "2022.9.24"
+        election_frequency = 48
+        elections_allowed = yes
+    }
+
+    set_popularities = {
+        neutrality = 37
+        democratic = 23
+        fascism = 37
+        communism = 3
+    }
+
+    transfer_state = 157
+    puppet = SHE
+    puppet = NOV
+    puppet = BLJ
+    puppet = FER
+    puppet = KRS
+    puppet = EDI
+    puppet = ESD
+    puppet = REK
+    puppet = BAE
+    puppet = TOL
+    puppet = VRO
+
+    transfer_state = 259
+    transfer_state = 258
+    transfer_state = 786
+    transfer_state = 261
+    transfer_state = 795
+    transfer_state = 796
+    transfer_state = 793
+    transfer_state = 789
+    transfer_state = 262
+    transfer_state = 792
+    transfer_state = 263
+    transfer_state = 264
+    transfer_state = 317
+    transfer_state = 316
+}
+
 #
 
 recruit_character = EIK_jim_jones

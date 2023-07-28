@@ -80,6 +80,10 @@ set_popularities = {
 	neutrality = 17
 }
 
+2023.1.1 = {
+    UCB = {involve_sphere = yes}
+}
+
 #
 
 recruit_character = SFL_milosh_betovicko

@@ -42,47 +42,16 @@ set_popularities = {
 	neutrality = 0
 }
 
-#
-create_country_leader = {
-	name = "Kirel Inkirech"
-	desc = "POLITICS_MOH_ZAHIR_SHAH_DESC"
-	picture = "Portrait_eln_democratic.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
+2018.20.9 = {
+    transfer_state = 231
+    add_state_core = 231
+    transfer_state = 230
+    add_state_core = 230
+    transfer_state = 229
+    add_state_core = 229
 }
 
-create_country_leader = {
-	name = "Nobody"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_taganrog_ivan_ishenko.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nobody"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_bydlo_yaroslav_obryg.dds"
-	expire = "1965.1.1"
-	ideology = oligarchism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nobody"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_bydlo_yaroslav_obryga.dds"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		#
-	}
+2023.1.1 = {
+    transfer_state = 212
+    transfer_state = 213
 }

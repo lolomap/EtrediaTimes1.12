@@ -1,4 +1,20 @@
 guiTypes = {
+    containerWindowType = {
+        name = "ideology_protection_window"
+		position = {x=0 y=0}
+		orientation = upper_left
+		size = { width=436 height=100% }
+
+		iconType = {
+			name = "ideology_protec_icon"
+			position = {x = 502 y = 285}
+			spriteType = "GFX_ideology_protection"
+
+            pdx_tooltip = ideology_protection
+            pdx_tooltip_delayed = ideology_protection_desc
+		}
+    }
+
 	containerWindowType = {
 		name = "inner_politic_window"
 		position = {x=0 y=0}

@@ -1,13 +1,15 @@
 ﻿capital = 8
 
-OOB = "UCB_2014"
-set_naval_oob = "UCB_2014_naval_legacy"
+if = {
+    limit = {has_start_date < 2023.1.1}
+    OOB = "UCB_2014"
+    set_naval_oob = "UCB_2014_naval_legacy"
 
-set_research_slots = 4
-set_stability = 0.2
-set_war_support = 0.1
+    set_research_slots = 4
+    set_stability = 0.2
+    set_war_support = 0.1
 
-add_ideas = {
+    add_ideas = {
         WWW_best_country
         UCB_polit_crisis
         UCB_poroh_blet
@@ -15,19 +17,20 @@ add_ideas = {
         UCB_des_army
         total_free_press
         limited_entry
-	fourth_corruption_level
-    regionalism
-    UCB_gegemon
+        fourth_corruption_level
+        regionalism
+        UCB_gegemon
+    }
+
+    set_autonomy = {
+        target = EGR
+        autonomous_state = autonomy_dominion
+        #freedom_level = 0.65
+    }
 }
 
-	set_autonomy = {
-		target = EGR
-		autonomous_state = autonomy_dominion
-		#freedom_level = 0.65
-	}
-
-set_technology = {basic_train = 1
-
+set_technology = {
+    basic_train = 1
         tech_engineers = 1
         tech_recon = 1
         tech_support = 1
@@ -124,3 +127,109 @@ recruit_character = UCB_oleje_prigat
 recruit_character = UCB_silvano_albergo
 
 recruit_character = UCB_jimas_beldpo
+
+if = {
+    limit = {has_start_date > 2018.9.19 has_start_date < 2023.1.1}
+    promote_character = {character = UCB_anatoly_zhmirinovan}
+
+    remove_ideas = {
+        UCB_polit_crisis
+        UCB_poroh_blet
+        fourth_corruption_level
+        UCB_des_army
+    }
+    add_ideas = {
+        third_corruption_level
+        UCB_resist2
+        UCB_promka
+    }
+
+    create_faction = UCB_scuit_ally
+    add_to_faction = SBU
+
+    unlock_national_focus = UCB_votum
+    unlock_national_focus = UCB_enprison
+    unlock_national_focus = UCB_2
+    unlock_national_focus = UCB_dem1
+    unlock_national_focus = UCB_dem_foreign_policy
+    unlock_national_focus = UCB_dem_sbu
+    unlock_national_focus = UCB_dem_stavka_defense
+    complete_national_focus = UCB_defend_SHE
+    unlock_national_focus = UCB_dem_fsc_conversation
+    unlock_national_focus = UCB_dem_gov_reform
+    unlock_national_focus = UCB_dem_stabilnost
+    complete_national_focus = UCB_dem_autonomy
+    complete_national_focus = UCB_dem_battle
+    unlock_national_focus = UCB_dem_nazi_off
+    unlock_national_focus = UCB_dem_kolechian_question
+    complete_national_focus = UCB_dem_dotaci
+    complete_national_focus = UCB_dem_separatism_off
+    unlock_national_focus = UCB_dem_military_reform
+    unlock_national_focus = UCB_dem_global_reorganize
+    complete_national_focus = UCB_dem_infrastructure3
+    unlock_national_focus = UCB_dem_army_training
+    complete_national_focus = UCB_dem_slot2
+    complete_national_focus = UCB_dem_economic_reform
+    complete_national_focus = UCB_dem_nologi
+    unlock_national_focus = UCB_dem_granty
+    complete_national_focus = UCB_dem_sbu_investors
+    complete_national_focus = UCB_dem_industrial1
+    complete_national_focus = UCB_dem_infrastructure1
+}
+
+2023.1.1 = {
+    promote_character = {character = UCB_terine_narabel ideology = fascism_ideology}
+    set_politics = {
+        ruling_party = fascism
+        last_election = "2015.2.6"
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        democratic = 5
+        fascism = 90
+        communism = 0
+        neutrality = 5
+    }
+    set_country_flag = closed_parlament
+
+    puppet = LIV
+
+    transfer_state = 35
+    transfer_state = 72
+    transfer_state = 44
+    transfer_state = 45
+    transfer_state = 46
+    transfer_state = 47
+    transfer_state = 48
+    transfer_state = 49
+    transfer_state = 50
+    transfer_state = 51
+    transfer_state = 52
+    transfer_state = 53
+    transfer_state = 54
+    transfer_state = 55
+    transfer_state = 56
+    transfer_state = 57
+    transfer_state = 58
+    transfer_state = 64
+    transfer_state = 65
+    transfer_state = 66
+    transfer_state = 67
+    transfer_state = 68
+    transfer_state = 69
+    transfer_state = 70
+    transfer_state = 59
+    transfer_state = 60
+    transfer_state = 61
+    transfer_state = 62
+    transfer_state = 63
+
+    puppet = BKH
+    set_autonomy = {
+        target = TUO
+        autonomous_state = autonomy_dominion
+    }
+}
+
+set_political_power = 0

@@ -87,7 +87,6 @@ country_event = {
                 }
 	    }
 		    EIK = {
-            puppet = SHE_EIK
 		    puppet = SHE
 			}
             SHE = {

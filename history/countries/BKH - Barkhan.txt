@@ -52,58 +52,13 @@ set_popularities = {
 	monarchism = 0
 }
 
-#
-create_country_leader = {
-	name = "N"
-	desc = "POLITICS_MOH_ZAHIR_SHAH_DESC"
-	picture = "portrait_bydlo_yaroslav_obryg.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "n"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_taganrog_ivan_ishenko.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "n"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "Portrait_iid_neutrality.dds"
-	expire = "1965.1.1"
-	ideology = absolutism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "n"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_bydlo_yaroslav_obryga.dds"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "n"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "portrait_bydlo_yaroslav_obryga.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
+2023.1.1 = {
+    transfer_state = 73
+    transfer_state = 74
+    transfer_state = 75
+    transfer_state = 77
+    transfer_state = 78
+    transfer_state = 79
+    transfer_state = 80
+    transfer_state = 81
 }

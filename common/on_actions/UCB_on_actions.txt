@@ -2,107 +2,110 @@ on_actions = {
     on_startup = {
         effect = {
             UCB = {
-                country_event = {id = ucnb.26 days = 790}
-                set_variable = {region_event_factor = 1.3}
-                set_variable = {press_law = token:total_free_press}
-                set_variable = {migration_law = token:limited_entry}
-                set_variable = {mobilization_law = token:volunteer_only}
-                set_variable = {economy_law = token:civilian_economy}
-                set_variable = {trade_law = token:export_focus}
-                set_variable = {socials_law = token:socials_2}
+                if = {
+                    limit = {has_start_date < 2023.1.1}
+                    country_event = {id = ucnb.26 days = 790}
+                    set_variable = {region_event_factor = 1.3}
+                    set_variable = {press_law = token:total_free_press}
+                    set_variable = {migration_law = token:limited_entry}
+                    set_variable = {mobilization_law = token:volunteer_only}
+                    set_variable = {economy_law = token:civilian_economy}
+                    set_variable = {trade_law = token:export_focus}
+                    set_variable = {socials_law = token:socials_2}
 
-                set_power_balance = {
-                    id = UCB_parlament_balance
-                    left_side = UCB_parlament_side
-                    right_side = UCB_president_side
-                    set_value = -0.3
-                }
-                add_dynamic_modifier = {modifier = ucb_region_ideology}
-
-                for_each_scope_loop = {
-                    array = minor_countries
-                    UCB = {
-                        set_temp_variable = {rest_rand = 1}
-                        set_variable = {max_i_@PREV = 0}
-                        set_temp_variable = {maxi = 0}
-                        set_variable_to_random = {var = dem_@PREV min = 0.1 max = 0.6} set_temp_variable = {maxi = dem_@PREV}
-                        subtract_from_temp_variable = {rest_rand = dem_@PREV}
-                        set_variable_to_random = {var = fas_@PREV max = rest_rand min = 0.3}
-                        if = {limit = {check_variable = {fas_@PREV > maxi}} set_variable = {max_i_@PREV = 1} set_temp_variable = {maxi = fas_@PREV}}
-                        subtract_from_temp_variable = {rest_rand = fas_@PREV}
-                        set_variable_to_random = {var = com_@PREV max = rest_rand}
-                        if = {limit = {check_variable = {com_@PREV > maxi}} set_variable = {max_i_@PREV = 2} set_temp_variable = {maxi = com_@PREV}}
-                        subtract_from_temp_variable = {rest_rand = com_@PREV}
-                        set_variable_to_random = {var = neu_@PREV max = rest_rand}
-                        if = {limit = {check_variable = {neu_@PREV > maxi}} set_variable = {max_i_@PREV = 3} set_temp_variable = {maxi = neu_@PREV}}
-                        subtract_from_temp_variable = {rest_rand = neu_@PREV}
-                        set_variable = {mon_@PREV = rest_rand}
-                        if = {limit = {check_variable = {mon_@PREV > maxi}} set_variable = {max_i_@PREV = 4} set_temp_variable = {maxi = mon_@PREV}}
-
-                        set_variable_to_random = oppos_@PREV
-                        set_variable_to_random = {var = sep_@PREV max = 0.5}
+                    set_power_balance = {
+                        id = UCB_parlament_balance
+                        left_side = UCB_parlament_side
+                        right_side = UCB_president_side
+                        set_value = -0.3
                     }
+                    add_dynamic_modifier = {modifier = ucb_region_ideology}
+
+                    for_each_scope_loop = {
+                        array = minor_countries
+                        UCB = {
+                            set_temp_variable = {rest_rand = 1}
+                            set_variable = {max_i_@PREV = 0}
+                            set_temp_variable = {maxi = 0}
+                            set_variable_to_random = {var = dem_@PREV min = 0.1 max = 0.6} set_temp_variable = {maxi = dem_@PREV}
+                            subtract_from_temp_variable = {rest_rand = dem_@PREV}
+                            set_variable_to_random = {var = fas_@PREV max = rest_rand min = 0.3}
+                            if = {limit = {check_variable = {fas_@PREV > maxi}} set_variable = {max_i_@PREV = 1} set_temp_variable = {maxi = fas_@PREV}}
+                            subtract_from_temp_variable = {rest_rand = fas_@PREV}
+                            set_variable_to_random = {var = com_@PREV max = rest_rand}
+                            if = {limit = {check_variable = {com_@PREV > maxi}} set_variable = {max_i_@PREV = 2} set_temp_variable = {maxi = com_@PREV}}
+                            subtract_from_temp_variable = {rest_rand = com_@PREV}
+                            set_variable_to_random = {var = neu_@PREV max = rest_rand}
+                            if = {limit = {check_variable = {neu_@PREV > maxi}} set_variable = {max_i_@PREV = 3} set_temp_variable = {maxi = neu_@PREV}}
+                            subtract_from_temp_variable = {rest_rand = neu_@PREV}
+                            set_variable = {mon_@PREV = rest_rand}
+                            if = {limit = {check_variable = {mon_@PREV > maxi}} set_variable = {max_i_@PREV = 4} set_temp_variable = {maxi = mon_@PREV}}
+
+                            set_variable_to_random = oppos_@PREV
+                            set_variable_to_random = {var = sep_@PREV max = 0.5}
+                        }
+                    }
+
+                    #DIN
+                    set_variable = {dem_din = 0.6}
+                    set_variable = {fas_din = 0.4}
+                    set_variable = {com_din = 0}
+                    set_variable = {neu_din = 0}
+                    set_variable = {mon_din = 0}
+                    set_variable = {oppos_din = 0.78}
+                    set_variable = {sep_din = 0.3}
+                    DIN = {calc_max_ideology = yes}
+
+                    #IND
+                    set_variable = {dem_ind = 0.9}
+                    set_variable = {fas_ind = 0.1}
+                    set_variable = {com_ind = 0}
+                    set_variable = {neu_ind = 0}
+                    set_variable = {mon_ind = 0}
+                    set_variable = {oppos_ind = 0.9}
+                    set_variable = {sep_ind = 0.02}
+                    IND = {calc_max_ideology = yes}
+
+                    #KIM
+                    set_variable = {dem_kim = 0.3}
+                    set_variable = {fas_kim = 0.65}
+                    set_variable = {com_kim = 0}
+                    set_variable = {neu_kim = 0.05}
+                    set_variable = {mon_kim = 0}
+                    set_variable = {oppos_kim = 0.35}
+                    set_variable = {sep_kim = 0.44}
+                    KIM = {calc_max_ideology = yes}
+
+                    #KOL
+                    set_variable = {dem_kol = 0.16}
+                    set_variable = {fas_kol = 0.84}
+                    set_variable = {com_kol = 0}
+                    set_variable = {neu_kol = 0}
+                    set_variable = {mon_kol = 0}
+                    set_variable = {oppos_kol = 0.18}
+                    set_variable = {sep_kol = 0.55}
+                    KOL = {calc_max_ideology = yes}
+
+                    #ARS
+                    set_variable = {dem_ars = 0.55}
+                    set_variable = {fas_ars = 0.45}
+                    set_variable = {com_ars = 0}
+                    set_variable = {neu_ars = 0}
+                    set_variable = {mon_ars = 0}
+                    set_variable = {oppos_ars = 0.5}
+                    set_variable = {sep_ars = 0.22}
+                    ARS = {calc_max_ideology = yes}
+
+                    #ORB
+                    set_variable = {dem_orb = 0.48}
+                    set_variable = {fas_orb = 0.52}
+                    set_variable = {com_orb = 0}
+                    set_variable = {neu_orb = 0}
+                    set_variable = {mon_orb = 0}
+                    set_variable = {oppos_orb = 0.48}
+                    set_variable = {sep_orb = 0.18}
+                    ORB = {calc_max_ideology = yes}
                 }
-
-                #DIN
-                set_variable = {dem_din = 0.6}
-                set_variable = {fas_din = 0.4}
-                set_variable = {com_din = 0}
-                set_variable = {neu_din = 0}
-                set_variable = {mon_din = 0}
-                set_variable = {oppos_din = 0.78}
-                set_variable = {sep_din = 0.3}
-                DIN = {calc_max_ideology = yes}
-
-                #IND
-                set_variable = {dem_ind = 0.9}
-                set_variable = {fas_ind = 0.1}
-                set_variable = {com_ind = 0}
-                set_variable = {neu_ind = 0}
-                set_variable = {mon_ind = 0}
-                set_variable = {oppos_ind = 0.9}
-                set_variable = {sep_ind = 0.02}
-                IND = {calc_max_ideology = yes}
-
-                #KIM
-                set_variable = {dem_kim = 0.3}
-                set_variable = {fas_kim = 0.65}
-                set_variable = {com_kim = 0}
-                set_variable = {neu_kim = 0.05}
-                set_variable = {mon_kim = 0}
-                set_variable = {oppos_kim = 0.35}
-                set_variable = {sep_kim = 0.44}
-                KIM = {calc_max_ideology = yes}
-
-                #KOL
-                set_variable = {dem_kol = 0.16}
-                set_variable = {fas_kol = 0.84}
-                set_variable = {com_kol = 0}
-                set_variable = {neu_kol = 0}
-                set_variable = {mon_kol = 0}
-                set_variable = {oppos_kol = 0.18}
-                set_variable = {sep_kol = 0.55}
-                KOL = {calc_max_ideology = yes}
-
-                #ARS
-                set_variable = {dem_ars = 0.55}
-                set_variable = {fas_ars = 0.45}
-                set_variable = {com_ars = 0}
-                set_variable = {neu_ars = 0}
-                set_variable = {mon_ars = 0}
-                set_variable = {oppos_ars = 0.5}
-                set_variable = {sep_ars = 0.22}
-                ARS = {calc_max_ideology = yes}
-
-                #ORB
-                set_variable = {dem_orb = 0.48}
-                set_variable = {fas_orb = 0.52}
-                set_variable = {com_orb = 0}
-                set_variable = {neu_orb = 0}
-                set_variable = {mon_orb = 0}
-                set_variable = {oppos_orb = 0.48}
-                set_variable = {sep_orb = 0.18}
-                ORB = {calc_max_ideology = yes}
             }
         }
     }

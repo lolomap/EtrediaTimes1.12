@@ -24,4 +24,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/resources_strip.dds"
 		noOfFrames = 7
 	}
+
+    spriteType = {
+        name = "GFX_select_date_2023"
+        texturefile = "gfx/interface/select_date_2023_2.dds"
+    }
 }

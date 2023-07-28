@@ -80,6 +80,10 @@ set_popularities = {
 	monarchism = 99
 }
 
+2023.1.1 = {
+    UCB = {involve_sphere = yes}
+}
+
 #
 
 recruit_character = IID_nikita_kostrovsko

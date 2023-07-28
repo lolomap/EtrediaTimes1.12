@@ -87,6 +87,13 @@ set_popularities = {
 	neutrality = 49
 }
 
+2023.1.1 = {
+    transfer_state = 204
+    transfer_state = 205
+    transfer_state = 206
+    transfer_state = 207
+}
+
 #
 create_country_leader = {
 	name = "Midhat Shkrlec"

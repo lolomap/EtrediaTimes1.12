@@ -322,7 +322,7 @@ country_event = {
 	        ruling_party = fascism
         }
 		hidden_effect = {
-			load_focus_tree = {	tree = UCB_narabel keep_completed = no }
+			#load_focus_tree = {	tree = UCB_narabel keep_completed = no }
 		}
 	}
 }
@@ -350,7 +350,7 @@ country_event = {
         }
         promote_character = {character = UCB_dmirin_randerko ideology = oligarchism}
 		hidden_effect = {
-			load_focus_tree = {	tree = UCB_bndrnk keep_completed = no }
+			#load_focus_tree = {	tree = UCB_bndrnk keep_completed = no }
 		}
 	}
 }

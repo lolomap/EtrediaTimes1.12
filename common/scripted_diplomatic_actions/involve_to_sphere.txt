@@ -74,7 +74,7 @@ scripted_diplomatic_actions = {
 
         visible = {
             if = {
-                limit = {ROOT = {is_in_faction = no}}
+                limit = {ROOT = {always = yes}}
                 if = {
                     limit = {
                         AND = {
@@ -84,7 +84,6 @@ scripted_diplomatic_actions = {
                     }
                     NOT = {
                         is_subject = yes
-                        is_in_faction = yes
                     }
                 }
                 else = {
@@ -97,7 +96,10 @@ scripted_diplomatic_actions = {
                     }
                     NOT = {
                         is_subject = yes
-                        is_in_faction = yes
+                    }
+                    OR = {
+                        is_in_faction = no
+                        is_in_faction_with = ROOT
                     }
                 }
             }

@@ -61,6 +61,21 @@ set_popularities = {
 
 set_convoys = 45
 
+2023.1.1 = {
+    every_other_country = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = asia
+            }
+            NOT = {tag = KAS}
+            NOT = {tag = BRT}
+        }
+        every_owned_state = {
+            transfer_state_to = KLU
+        }
+    }
+}
+
 
 recruit_character = KLU_john_williams
 

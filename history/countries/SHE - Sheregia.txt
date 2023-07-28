@@ -50,6 +50,10 @@ set_popularities = {
         communism = 2
 }
 
+2023.1.1 = {
+    set_cosmetic_tag = SHE_EIK
+}
+
 #
 
 recruit_character = SHE_walter_weber
