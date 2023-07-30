@@ -67,7 +67,7 @@ set_convoys = 45
             any_owned_state = {
                 is_on_continent = asia
             }
-            NOT = {tag = KAS}
+            NOT = {tag = CHE}
             NOT = {tag = BRT}
         }
         every_owned_state = {

@@ -224,6 +224,7 @@ if = {
     transfer_state = 61
     transfer_state = 62
     transfer_state = 63
+    transfer_state = 707
 
     puppet = BKH
     set_autonomy = {
