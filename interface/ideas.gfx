@@ -16,6 +16,10 @@ spriteTypes = {
 		name = "GFX_IID_political_advisor_Nero_Kvatini"
 		texturefile = "gfx/interface/ideas/IID_political_advisor_Nero_Kvatini.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_FSC_federalization_problem"
+		texturefile = "gfx/interface/ideas/idea_FSC_federalization_problem.dds"
+	}
     spriteType = {
 		name = "GFX_idea_leadership"
 		texturefile = "gfx/interface/ideas/Vozhdestvo.dds"

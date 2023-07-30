@@ -86,7 +86,7 @@ ideas = {
 	}
 	
 	FSC_federalization_problem_idea = {
-		picture = idea
+		picture = FSC_federalization_problem
 
 		allowed = {
 			always = no

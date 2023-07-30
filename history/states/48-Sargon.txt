@@ -1,28 +1,31 @@
+
 state={
 	id=48
 	name="STATE_48"
-	manpower = 2300000
-	
-	state_category = town
-	
 	resources={
-		aluminium = 8 # was: 12
+		aluminium=8.000
 	}
 
 	history={
 		owner = FSC
 		buildings = {
 			infrastructure = 3
-                        industrial_complex = 1
+			industrial_complex = 1
+
 		}
 		add_core_of = FSC
 		add_core_of = ANR
 		victory_points = {
-			4475 10
+			4475 10 
 		}
 
 	}
+
 	provinces={
-		4168 4194 4282 4283 4341 4377 4428 4475 4493 4580 4593 
+		4168 4194 4282 4283 4341 4377 4428 4475 4493 4580 4593 4696 4697 4708 
 	}
+	manpower=2300000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }
