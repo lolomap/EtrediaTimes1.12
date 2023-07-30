@@ -63,7 +63,7 @@ dragan_kzhachich = {
 	}
 	Dux_Emperor = {
 		random = no
-		stability_factor = 0.1
+		stability_factor = 0.6
 		monarchism_drift = 0.02
 		
 		ai_will_do = {
