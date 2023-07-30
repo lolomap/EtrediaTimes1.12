@@ -195,7 +195,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = ucnb.5.a
+		name = ucnb.4.a
 		UCB = { create_wargoal = { type = take_state_focus generator = { 10 } target = ARS } }
 		ARS = {
 			transfer_state = 10
@@ -222,7 +222,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = ucnb.6.a
+		name = ucnb.4.a
 		UCB = { create_wargoal = { type = take_state_focus generator = { 32 } target = SRA } }
 		UCB = { create_wargoal = { type = take_state_focus generator = { 33 } target = NRA } }
 		SRA = {
