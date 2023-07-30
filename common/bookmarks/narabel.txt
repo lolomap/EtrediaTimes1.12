@@ -36,11 +36,6 @@ bookmarks = {
                         ideology = democratic
 		}
 
-		"FSC"={
-			history = "FSC_GATHERING_STORM_DESC"
-                        ideology = democratic
-		}
-
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}

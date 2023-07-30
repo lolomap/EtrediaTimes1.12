@@ -14,12 +14,6 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=stalinism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=nazism
 			expire="1965.1.1.1"
 			id=-1
@@ -31,6 +25,20 @@ characters={
 			id=-1
 		}
 	}
+    TOL_jego_ertsegan = {
+        name="Jego Ertsegan"
+        portraits={
+			civilian={
+				large="gfx/leaders/TOL/portrait_tol_leader1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+    }
 	TOL_djaimoz_bilde={
 		name="Djaimoz Bilde"
 		portraits={

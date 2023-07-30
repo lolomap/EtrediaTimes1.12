@@ -42,7 +42,7 @@ set_popularities = {
 	neutrality = 0
 }
 
-2018.20.9 = {
+2018.9.20 = {
     transfer_state = 231
     add_state_core = 231
     transfer_state = 230
