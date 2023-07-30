@@ -629,6 +629,68 @@ on_actions = {
                 add_ideas = stability_bad
             }
 
+            #Действия оппозиции
+                if = {
+                    limit = {
+                        NOT = {has_government = democratic}
+                        check_variable = { dem_opposition > 80 }
+                        democratic > 0.5
+                    }
+                    random = {
+                        chance = 50
+                        set_temp_variable = { temp = 0 }
+                        country_event = {id = onactev.18 days = 1}
+                    }   
+                }
+                else_if = {
+                    limit = {
+                        NOT = {has_government = fascism}
+                        check_variable = { fas_opposition > 80 }
+                        fascism > 0.5
+                    }
+                    random = {
+                        chance = 50
+                        set_temp_variable = { temp = 1 }
+                        country_event = {id = onactev.18 days = 1}
+                    }   
+                }
+                else_if = {
+                    limit = {
+                        NOT = {has_government = communism}
+                        check_variable = { com_opposition > 80 }
+                        communism > 0.5
+                    }
+                    random = {
+                        chance = 50
+                        set_temp_variable = { temp = 2 }
+                        country_event = {id = onactev.18 days = 1}
+                    }   
+                }
+                else_if = {
+                    limit = {
+                        NOT = {has_government = neutrality}
+                        check_variable = { neu_opposition > 80 }
+                        neutrality > 0.5
+                    }
+                    random = {
+                        chance = 50
+                        set_temp_variable = { temp = 3 }
+                        country_event = {id = onactev.18 days = 1}
+                    }   
+                }
+                else_if = {
+                    limit = {
+                        NOT = {has_government = monarchism}
+                        check_variable = { mon_opposition > 80 }
+                        monarchism > 0.5
+                    }
+                    random = {
+                        chance = 50
+                        set_temp_variable = { temp = 4 }
+                        country_event = {id = onactev.18 days = 1}
+                    }   
+                }
+
             # Влияние и напряга альянса
             if = {
                 limit = {ROOT = {is_faction_leader = yes}}
@@ -686,11 +748,11 @@ on_actions = {
             }
 
             # Рост оппозиции
-			set_temp_variable = {dem_opposition_delta = 1.5}
-			set_temp_variable = {fas_opposition_delta = 1.5}
-			set_temp_variable = {neu_opposition_delta = 1.5}
-			set_temp_variable = {com_opposition_delta = 1.5}
-			set_temp_variable = {mon_opposition_delta = 1.5}
+			set_temp_variable = {dem_opposition_delta = 1}
+			set_temp_variable = {fas_opposition_delta = 1}
+			set_temp_variable = {neu_opposition_delta = 1}
+			set_temp_variable = {com_opposition_delta = 1}
+			set_temp_variable = {mon_opposition_delta = 1}
 
 			multiply_temp_variable = {dem_opposition_delta = dem_opposition_factor}
 			multiply_temp_variable = {fas_opposition_delta = fas_opposition_factor}
