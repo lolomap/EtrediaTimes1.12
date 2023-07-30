@@ -18,6 +18,14 @@ form_scandinavia_category = {
 	}
 }
 
+form_grandana_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_TRP_grandana
+
+}
+
 form_msas_category = {
 
 	icon = generic_formable_nations
