@@ -53,7 +53,7 @@ focus_tree = {
 
 	focus = {
 		id = UCB_dem_fsc_conversation
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_ucb_dem_fsc_conversation
 		cost = 10
 		x = 3
 		y = 8
@@ -82,7 +82,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_ndro
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_ndro
 		cost = 10
 
         prerequisite = {focus = UCB_dem_fsc_conversation}
@@ -131,7 +131,7 @@ focus_tree = {
 	#}
 	focus = {
 		id = UCB_dem_kulishtia
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_kulishtia
 		cost = 10
 		x = 0
 		y = 11
@@ -223,7 +223,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_ndro2
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_ndro2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_ndro
@@ -339,7 +339,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_foreign_policy
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_ucb_dem_foreign_policy
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem1
@@ -1671,7 +1671,7 @@ focus_tree = {
     }
 	focus = {
 		id = UCB_dem_trp_garant
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_trp_garant
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_stavka_defense
