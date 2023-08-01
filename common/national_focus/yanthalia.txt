@@ -1370,16 +1370,16 @@ focus_tree = {
 				factor = 0
 				date < 2017.1.1
 			}
-			modifier = {
-				factor = -1
-				TRB = { is_puppet = yes }
-			}
+			#modifier = {
+			#	factor = -1
+			#	TRB = { is_puppet = yes }
+			#}
 			modifier = {
 				factor = 0
 				YAN = { has_army_manpower = { size < 300000 } }
 			}
 			modifier = {
-				factor = 1
+				add = 1000
 				YAN = { has_army_manpower = { size > 300000 } }
 			}
 		}

@@ -1,6 +1,36 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_dem_ndro2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_ndro2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_ndro"
+	texturefile="gfx/interface/goals/goal_ucb_dem_ndro.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_kulishtia"
+	texturefile="gfx/interface/goals/goal_ucb_dem_kulishtia.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_fsc_conversation"
+	texturefile="gfx/interface/goals/goal_ucb_dem_fsc_conversation.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_trp_garant"
+	texturefile="gfx/interface/goals/goal_ucb_dem_trp_garant.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_dem_stabilnost"
 	texturefile="gfx/interface/goals/goal_ucb_dem_stabilnost.dds"
 }
