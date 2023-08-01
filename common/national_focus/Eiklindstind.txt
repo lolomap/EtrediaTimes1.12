@@ -709,13 +709,6 @@ focus_tree = {
 		completion_reward = {
 			EIK = { country_event = { id = eik.10 days = 1 } }
 		}
-		ai_will_do = {
-			factor = 0.3
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
 		x = 22
 		y = 8
 	}
@@ -733,9 +726,6 @@ focus_tree = {
 		completion_reward = { 
 			BAE = { country_event = { id = baensli.1 days = 1 } }
 			TOL = { country_event = { id = tolchkograd.1 days = 1 } }
-		}
-		ai_will_do = {
-			factor = 0.7
 		}
 		x = 24
 		y = 8

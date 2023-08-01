@@ -18,6 +18,12 @@ EIK_fascism_plan = {
 	}
 
 	ai_national_focuses = {
+        EIK_way
+        EIK_strong_leader
+        EIK_disband_parlament
+        EIK_disperse_criminals
+        EIK_time_is_money
+        EIK_rashin_complex
         EIK_investitions_on_tolchkograd
         EIK_investitions_on_baensli
         EIK_influence_on_neighbors
