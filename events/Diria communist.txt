@@ -981,11 +981,11 @@ country_event = {
 			DIR = { set_cosmetic_tag = DK1 }
 			
 			DIB = {
-				transfer_state = 790
+				transfer_state = 789
 				transfer_state = 794
 				transfer_state = 795
 				transfer_state = 786
-				transfer_state = 789
+				transfer_state = 788
 				transfer_state = 261
 				transfer_state = 796
 				transfer_state = 263

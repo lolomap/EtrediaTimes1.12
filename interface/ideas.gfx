@@ -13,6 +13,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/regionalism.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_UCB_des_army"
+		texturefile = "gfx/interface/ideas/idea_UCB_des_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IID_eco_crisis"
+		texturefile = "gfx/interface/ideas/idea_IID_eco_crisis.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IID_neutrality_politics"
+		texturefile = "gfx/interface/ideas/idea_IID_neutrality_politics.dds"
+	}
+	spriteType = {
 		name = "GFX_IID_political_advisor_Nero_Kvatini"
 		texturefile = "gfx/interface/ideas/IID_political_advisor_Nero_Kvatini.dds"
 	}

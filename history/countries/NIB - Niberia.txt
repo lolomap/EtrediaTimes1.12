@@ -44,8 +44,6 @@ set_popularities = {
 
 #
 
-recruit_character = NIB_alexander_smith
-
 recruit_character = NIB_lemae_goliath
 
 recruit_character = NIB_naromomonga_kaudoeamus
