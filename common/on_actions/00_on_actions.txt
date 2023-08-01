@@ -799,10 +799,10 @@ on_actions = {
             if = {limit = {check_variable = {resource@tungsten < 0}} add_to_variable = { res_factories = resource@tungsten }}
             if = {limit = {check_variable = {resource@steel < 0}} add_to_variable = { res_factories = resource@steel }}
             if = {limit = {check_variable = {resource@chromium < 0}} add_to_variable = { res_factories = resource@chromium }}
-            multiply_variable = { res_factories = -1 }
+            multiply_variable = { res_factories = -0.5 }
             clamp_variable = {
                 var = res_factories
-                max = 25
+                max = 10
             }
             set_temp_variable = {t = num_of_civilian_factories}
             divide_temp_variable = { t = 100 }

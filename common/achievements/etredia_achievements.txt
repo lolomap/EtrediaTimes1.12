@@ -86,7 +86,7 @@ etredia_ach_7 = { #
         tag = TOL
 	}
 	happened = {
-        controls_state = 319
+        319 = {is_owned_by = TOL}
         date < 2018.1.1
 	}
 }
