@@ -31,7 +31,7 @@ EIK_fascism_plan = {
         EIK_one_party_system
         EIK_political_purge
         EIK_eastern_block
-        EIK_conquer_rebellious_regions
+        EIK_cooperation_with_south
         EIK_invite_yanthalia
         EIK_unexpected_partner
 		EIK_ultimatum_to_sheregia

@@ -238,6 +238,42 @@ SBU_sburska_zvezda_war = {
 			base = 100
 		}
     }
+    sz_add_to_country_2 = {
+        visible = {
+            FROM = {
+                owner = {
+                    is_subject_of = SBU
+                }
+            }
+        }
+
+        target_trigger = {
+            FROM = {
+                is_capital = yes
+                if = {
+                    limit = {is_capital = yes}
+                    owner = {
+                        NOT = {tag = SBU}
+                    }
+                }
+            }
+        }
+        state_target = yes
+        on_map_mode = map_only
+        #icon = GFX_goal_sburska_zvezda_potential
+
+        cost = 0
+        complete_effect = {
+            random_list = {
+                30 = {FROM = {OWNER = {add_ideas = SBU_little_sburska_zvezda}}}
+                70 = {}
+            }
+        }
+
+        ai_will_do = {
+			base = 100
+		}
+    }
     sz_set_medium = {
         visible = {
             FROM = {

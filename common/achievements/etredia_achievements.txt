@@ -43,7 +43,11 @@ etredia_ach_5 = { #
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = experiments_ach}
+		has_country_flag = democratic_move
+        has_country_flag = fascism_move
+        has_country_flag = communism_move
+        has_country_flag = neutrality_move
+        has_country_flag = monarchism_move
 	}
 }
 
@@ -130,6 +134,7 @@ etredia_ach_10 = { #
 	}
 	happened = {
         has_country_leader = {character = UCB_terine_narabel}
+        has_country_flag = closed_parlament
 		controls_state = 44
         controls_state = 45
         controls_state = 51
@@ -197,7 +202,7 @@ etredia_ach_15 = { #
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = let_me_sleep_ach}
+		has_country_flag = let_me_sleep_ach
 	}
 }
 
@@ -206,7 +211,12 @@ etredia_ach_16 = { #
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = go_away_ach}
+        date > 2020.1.1
+        custom_trigger_tooltip = {
+            tooltip = pi_master_more_then_70
+            check_variable = {pi_master > 70}
+        }
+        threat < 0.6
 	}
 }
 
@@ -216,27 +226,46 @@ etredia_ach_17 = { #
         tag = UCB
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = unstable_ach}
+        has_country_leader = {character = UCB_Parlament}
+        any_owned_state = {
+            is_core_of = NCU
+        }
+        all_core_state = {
+            is_owned_by = UCB
+        }
+		has_country_flag = unstable_ach
 	}
 }
 
 etredia_ach_18 = { #
 	possible = {
 		achievs_available = yes
-        tag = SUC
+        tag = UCB
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = comitet_ach}
+        tag = SUC
+		UCB = {
+            all_core_state = {
+                is_owned_by = SUC
+            }
+        }
 	}
 }
 
 etredia_ach_19 = { #
 	possible = {
 		achievs_available = yes
-        tag = BDA
+        tag = UCB
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = beldpo_ach}
+		tag = BDA
+		UCB = {
+            all_core_state = {
+                is_owned_by = BDA
+            }
+        }
+        is_in_faction_with = SBU
+        has_war_with = EIK
 	}
 }
 
@@ -281,7 +310,12 @@ etredia_ach_24 = { #
 		achievs_available = yes
 	}
 	happened = {
-		hidden_trigger = {has_global_flag = friendship_ach}
+		country_exists = SOL
+        country_exists = BSH
+        country_exists = DIR
+        country_exists = DEM
+        DIR = {has_civil_war = no}
+        SOL = {has_civil_war = no}
 	}
 }
 
@@ -291,7 +325,13 @@ etredia_ach_25 = { #
         tag = TRP
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = trp_iid_ach}
+		OR = {
+            IID = {is_subject_of = TRP}
+            AND = {
+                94 = {is_controlled_by = TRP}
+                NOT = {country_exists = IID}
+            }
+        }
 	}
 }
 
@@ -307,20 +347,30 @@ etredia_ach_25 = { #
 etredia_ach_27 = { #
 	possible = {
 		achievs_available = yes
-        tag = SDI
+        tag = DIR
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = ancap_ach}
+		tag = SDI
+        DIR = {
+            all_core_state = {
+                is_controlled_by = SDI
+            }
+        }
 	}
 }
 
 etredia_ach_28 = { #
 	possible = {
 		achievs_available = yes
-        tag = DIB
+        tag = DIR
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = chuchkhe_ach}
+		tag = DIB
+        DIR = {
+            all_core_state = {
+                is_controlled_by = DIB
+            }
+        }
 	}
 }
 
@@ -330,7 +380,11 @@ etredia_ach_29 = { #
         tag = MOF
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = rybka_ach}
+        SBU = {
+            has_completed_focus = SBU_divide_MOF
+            NOT = {has_wargoal_against = MOF}
+        }
+		has_country_flag = rybka_ach
 	}
 }
 
@@ -340,7 +394,9 @@ etredia_ach_30 = { #
         tag = TRP
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = oleg_ach}
+		has_government = fascism
+        8 = {is_owned_by = TRP}
+        51 = {is_owned_by = TRP}
 	}
 }
 
@@ -350,29 +406,46 @@ etredia_ach_31 = { #
         tag = TRB
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = mansur_ach}
+        SBU = {
+            has_completed_focus = SBU_aldeko_operation
+            NOT = {has_wargoal_against = TRB}
+        }
+        YAN = {
+            has_completed_focus = YAN_TRB_war
+            NOT = {has_wargoal_against = TRB}
+        }
+		has_country_flag = mansur_ach
 	}
 }
 
 etredia_ach_32 = { #
 	possible = {
 		achievs_available = yes
-        tag = TAL
+        tag = KAS
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = talshik_ach}
+        tag = TAL
+		445 = {is_owned_by = TAL}
+        452 = {is_owned_by = TAL}
+        420 = {is_owned_by = TAL}
+        481 = {is_owned_by = TAL}
 	}
 }
 
-etredia_ach_33 = { #
-	possible = {
-		achievs_available = yes
-        tag = SHE
-	}
-	happened = {
-		hidden_trigger = {has_country_flag = shield_ach}
-	}
-}
+#etredia_ach_33 = { #
+#	possible = {
+#		achievs_available = yes
+#        tag = SHE
+#	}
+#	happened = {
+#        EIK = {
+#            has_completed_focus = EIK_ultimatum_to_sheregia
+#            NOT = {has_wargoal_against = SHE}
+#        }
+#        is_in_faction = no
+#		has_country_flag = shield_ach
+#	}
+#}
 
 etredia_ach_34 = { #
 	possible = {
@@ -380,7 +453,14 @@ etredia_ach_34 = { #
         tag = SMA
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = macar_ach}
+        date < 2018.1.1
+        is_in_faction = no
+        NOT = {has_global_flag = sbu_garanted_sma}
+        YAN = {
+            has_completed_focus = YAN_operation_tischatka
+            NOT = {has_wargoal_against = SMA}
+        }
+		has_country_flag = macar_ach
 	}
 }
 
@@ -390,7 +470,14 @@ etredia_ach_35 = { #
         tag = GKD
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = gkd_ach}
+        is_in_faction = no
+        OR = {
+            IID = {is_subject_of = GKD}
+            AND = {
+                NOT = {country_exists = IID}
+                94 = {is_controlled_by = GKD}
+            }
+        }
 	}
 }
 
@@ -400,16 +487,68 @@ etredia_ach_36 = { #
         tag = FBU
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = sweet_home_ach}
+		all_core_state = {
+            is_controlled_by = FBU
+        }
 	}
 }
 
 etredia_ach_37 = { #
 	possible = {
 		achievs_available = yes
+        OR = {
+            tag = UCB
+            tag = SBU
+            tag = SFL
+            tag = KAR
+            tag = PIN
+            tag = DIR
+            tag = KAS
+            tag = EIK
+            tag = YAN
+            tag = TOL
+            tag = BAE
+            tag = CHE
+        }
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = speedrun_ach}
+        date < 2019.9.20
+        EIK = {
+            has_completed_focus = EIK_ultimatum_to_sheregia
+        }
+        UCB = {
+            has_completed_focus = UCB_defend_SHE
+        }
+        OR = {
+            AND = {
+                is_in_faction_with = UCB
+                OR = {
+                    NOT = {country_exists = EIK}
+                    EIK = {is_subject = yes}
+                }
+            }
+            AND = {
+                is_in_faction_with = EIK
+                OR = {
+                    NOT = {country_exists = UCB}
+                    UCB = {is_subject = yes}
+                }
+            }
+            AND = {
+                is_in_faction_with = SBU
+                AND = {
+                    OR = {
+                        NOT = {country_exists = EIK}
+                        EIK = {is_subject = yes}
+                    }
+                    OR = {
+                        NOT = {country_exists = UCB}
+                        UCB = {is_subject = yes}
+                    }
+                }
+            }
+        }
+		#hidden_trigger = {has_country_flag = speedrun_ach}
 	}
 }
 
@@ -419,7 +558,13 @@ etredia_ach_38 = { #
         tag = SBU
 	}
 	happened = {
-		hidden_trigger = {has_country_flag = sz_total_ach}
+		all_other_country = {
+            OR = {
+                is_on_continent = africa
+                is_on_continent = north_america
+                has_idea = SBU_high_sburska_zvezda
+            }
+        }
 	}
 }
 

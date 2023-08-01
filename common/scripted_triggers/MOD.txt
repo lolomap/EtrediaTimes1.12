@@ -1,5 +1,11 @@
 achievs_available = {
-    is_ironman = no
+    is_ironman = yes
+    has_start_date < 2014.2.1
+    difficulty > 1
+    custom_trigger_tooltip = {
+        tooltip = historical_tt
+        is_historical_focus_on = yes
+    }
 }
 
 crysis_startable = {

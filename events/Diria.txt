@@ -115,7 +115,7 @@ country_event = {
             load_oob = DIR_democrat
             }
 	}
-    DEM = { declare_war_on = { target = DIR type = annex_everything } }
+    DEM = { declare_war_on = { target = DIR type = annex_everything } add_civil_war_target = DIR}
     DIR = {
 		load_oob = DIR_communist
 		add_ideas = { DIR_revolt }
@@ -207,7 +207,7 @@ country_event = {
         }
 	}
 	DEM = { change_tag_from = DIR }
-    DEM = { declare_war_on = { target = DIR type = annex_everything } }
+    DEM = { declare_war_on = { target = DIR type = annex_everything } add_civil_war_target = DIR}
     DIR = {
 		load_oob = DIR_communist
 		add_ideas = { DIR_revolt}

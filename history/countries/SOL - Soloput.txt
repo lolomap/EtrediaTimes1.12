@@ -35,6 +35,7 @@ if = {
 		target = BSH
 		type = annex_everything
 	}
+    add_civil_war_target = BSH
 }
 
 set_politics = {
