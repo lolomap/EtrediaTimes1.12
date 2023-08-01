@@ -1,5 +1,9 @@
 spriteTypes = {
     SpriteType = {
+		name = "GFX_nuke_help"
+		texturefile = "gfx/interface/custom_gui/nuke_help.dds"
+	}
+    SpriteType = {
 		name = "GFX_nuke_bscreen"
 		texturefile = "gfx/interface/custom_gui/screen.dds"
 	}

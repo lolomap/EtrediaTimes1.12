@@ -1365,22 +1365,18 @@ focus_tree = {
 		YAN = { country_event { id = yan.8 days = 1 } }
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 2017.1.1
+			base = 0
+            modifier = {
+				add = 10
+				YAN = { has_army_manpower = { size > 200000 } }
 			}
-			#modifier = {
-			#	factor = -1
-			#	TRB = { is_puppet = yes }
-			#}
-			modifier = {
-				factor = 0
-				YAN = { has_army_manpower = { size < 300000 } }
-			}
-			modifier = {
-				add = 1000
+            modifier = {
+				add = 10
 				YAN = { has_army_manpower = { size > 300000 } }
+			}
+            modifier = {
+				add = -10
+				TRB = { is_puppet = yes }
 			}
 		}
 		x = 38

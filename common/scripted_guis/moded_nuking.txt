@@ -1,4 +1,15 @@
 scripted_gui = {
+    nuke_help = {
+        window_name = "nuke_help_window"
+        visible = {has_country_flag = show_nuke_help}
+
+        effects = {
+            cancelbtn_click = {
+                clr_country_flag = show_nuke_help
+            }
+        }
+    }
+
 	nuke_moded_ = {
 		window_name = "nuking_replace_window"
 		context_type = selected_state_context
@@ -42,6 +53,10 @@ scripted_gui = {
         visible = {has_country_flag = nukemaximized}
 
         effects = {
+
+            nuke_helper_click = {
+                set_country_flag = show_nuke_help
+            }
 
             left_button_click = {
                 add_to_variable = {nuke_index = -1}
