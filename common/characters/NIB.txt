@@ -3,7 +3,7 @@ characters={
 		name="Narototonga Baudosusas"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_6"
+				large="gfx/leaders/NIB/Naromomonga_Kaudeamus.dds"
 			}
 		}
 		country_leader={
@@ -17,7 +17,7 @@ characters={
 		name="Naromomonga Kaudoeamus"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_8"
+				large="gfx/leaders/NIB/Naromomonga_Kaudeamus.dds"
 			}
 		}
 		country_leader={
@@ -56,20 +56,6 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
-		}
-	}
-	NIB_johannes_williams={
-		name="Johannes Williams"
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			traits={ financial_expert }
-			expire="2028.1.1.12"
-			id=-1
 		}
 	}
 }

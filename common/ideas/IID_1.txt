@@ -91,7 +91,7 @@ ideas = {
 		}
 		
 		IID_eco_crisis = {
-            picture = iid_economic
+            picture = IID_eco_crisis
 			allowed = {
 				always = no
 			}
@@ -105,7 +105,7 @@ ideas = {
 		}
 
 		IID_eco_crisis2 = {
-            picture = iid_economic
+            picture = IID_eco_crisis
 			allowed = {
 				always = no
 			}
@@ -118,7 +118,7 @@ ideas = {
 		}
 		
 		IID_neutrality_idea = {
-            picture = iid_economic
+            picture = IID_neutrality_politics
 			allowed = {
 				always = no
 			}
@@ -174,6 +174,7 @@ ideas = {
         }
 
 		IID_investations_climate = {
+			picture = iid_economic
 			allowed = {
 				always = no
 			}
@@ -205,6 +206,7 @@ ideas = {
 		}
 
 		IID_StrategicMemberOfTrading = {
+			picture = iid_economic
 			allowed = {always = no}
 			removal_cost = -1
 

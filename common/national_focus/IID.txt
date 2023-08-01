@@ -743,21 +743,21 @@ focus_tree = {
 				}
 				country_event = {id = trp.3 days = 1}
 			}
-			ai_will_do = {
-			factor = 0
-				modifier = {
-					factor = -1
-					IID = { has_country_flag = FSC_guarentee_trp_flag }
-				}
-				modifier = {
-					factor = 1
-					date > 2015.6.1
-				}
-				modifier = {
-					factor = 1
-					has_army_manpower = {
-						size > 200000
-					}
+		}
+		ai_will_do = {
+		base = 0
+			modifier = {
+				add = -2
+				IID = { has_country_flag = FSC_guarentee_trp_flag }
+			}
+			modifier = {
+				add = 1
+				date > 2015.6.1
+			}
+			modifier = {
+				add = 1
+				has_army_manpower = {
+				size > 200000
 				}
 			}
 		}
@@ -783,19 +783,19 @@ focus_tree = {
 			country_event = {id = dux.1 days = 1}
 		}
 		ai_will_do = {
-			factor = 0
+		base = 0
 			modifier = {
-				factor = -1
+				add = -2
 				IID = { has_country_flag = FSC_guarentee_trp_flag }
 			}
 			modifier = {
-				factor = 1
+				add = 1
 				date > 2015.6.1
 			}
 			modifier = {
-			factor = 1
+				add = 1
 				has_army_manpower = {
-					size > 200000
+				size > 200000
 				}
 			}
 		}
@@ -888,19 +888,19 @@ focus_tree = {
 			TRP = {set_country_flag = iid_integrating}
 		}
 		ai_will_do = {
-			factor = 0
+		base = 0
 			modifier = {
-				factor = -1
+				add = -2
 				IID = { has_country_flag = FSC_guarentee_trp_flag }
 			}
 			modifier = {
-				factor = 1
+				add = 1
 				date > 2015.6.1
 			}
 			modifier = {
-			factor = 1
+				add = 1
 				has_army_manpower = {
-					size > 200000
+				size > 200000
 				}
 			}
 		}
