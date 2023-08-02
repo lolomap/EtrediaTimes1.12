@@ -1582,6 +1582,27 @@ country_event = {
     }
 }
 
+country_event = {
+    id = mechanics.40
+    title = mechanics.40.t
+    desc = mechanics.40.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=mechanics.40.a
+        create_wargoal = {
+            target = FROM
+            type = puppet_wargoal_focus
+        }
+    }
+    option = {
+        name = mechanics.40.b
+    }
+}
 
 
 country_event = {#Аншлюз
@@ -2040,6 +2061,23 @@ country_event = {
         else = {
             start_civil_war = {ideology = monarchism size = 0.5}
         }
+    }
+}
+
+news_event = {
+    id = onactev.19
+    title = onactev.19.t
+    desc = onactev.19.d
+    #picture = GFX_event_picture
+
+    major = yes
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=onactev.19.a
+        
     }
 }
 

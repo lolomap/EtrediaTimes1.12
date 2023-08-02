@@ -11,6 +11,8 @@ nuclear_war = {
 			not = {has_country_flag = nuke_request_accepted}
 		}
 
+        days_re_enable = 30
+
 		complete_effect = {
 			ROOT = {
 				faction_leader = {
@@ -18,6 +20,34 @@ nuclear_war = {
 				}
 			}
 		}
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+                num_of_nukes > 0
+                add = 100
+            }
+            modifier = {
+                surrender_progress < 0.1
+                add = -100
+            }
+            modifier = {
+                surrender_progress < 0.3
+                add = -50
+            }
+            modifier = {
+                has_war_with_major = no
+                add = -100
+            }
+            modifier = {
+                surrender_progress > 0.5
+                add = 300
+            }
+            modifier = {
+                has_country_flag = been_nuked
+                add = 10000
+            }
+        }
 	}
 }
 

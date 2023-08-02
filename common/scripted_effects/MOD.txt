@@ -2,10 +2,9 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-    activate_targeted_decision = {
-            target = sphere_owner
-            decision = sphere_debuff
-        }
+    force_update_map_mode = {
+                    mapmode = nuking
+                }
 }
 
 ####

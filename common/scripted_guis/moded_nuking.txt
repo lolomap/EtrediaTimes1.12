@@ -15,8 +15,8 @@ scripted_gui = {
 		context_type = selected_state_context
 		parent_window_name = province_info_window
 
-		#visible = {owner = {NOT = {tag = ROOT}}}
-        visible = {always = yes}
+		visible = {NOT = {ROOT = {has_full_control_of_state = PREV}}}
+        #visible = {always = yes}
 
 		effects = {
             nuke_province_moded_click = {
@@ -29,6 +29,7 @@ scripted_gui = {
                             remove_from_array = {ROOT.nuke_possible = OWNER}
                         }
                     }
+                    ROOT = {add_to_array = { nuke_target_states = PREV }}
                 }
                 else = {
                     set_state_flag = nuke_target_for_@ROOT
@@ -36,6 +37,7 @@ scripted_gui = {
                         limit = {OWNER = {NOT = {is_in_array = {ROOT.nuke_possible = THIS}}}}
                         add_to_array = {ROOT.nuke_possible = OWNER}
                     }
+                    ROOT = {remove_from_array = { nuke_target_states = PREV }}
                 }
                 force_update_map_mode = {
                     mapmode = nuking
@@ -45,6 +47,110 @@ scripted_gui = {
 
         triggers = {
             nuke_is_selected_visible = {has_state_flag = nuke_target_for_@ROOT}
+        }
+
+        ai_test_interval = 24
+        ai_check = {ROOT = {num_of_nukes > 0 check_variable = { nuke_target_states^num < 20 }}}
+        ai_enabled = {
+			has_game_rule = {
+                rule = allow_nuking
+                option = FREE
+            }	
+		}
+        ai_weights = {
+            nuke_province_moded_click = {
+                ai_will_do = {
+                    base = -60
+                    modifier = {
+                        ROOT = {
+                            has_opinion = {
+                                target = PREV.OWNER
+                                value > 0
+                            }
+                        }
+                        add = -50
+                    }
+                    modifier = {
+                        ROOT = {
+                            has_opinion = {
+                                target = PREV.OWNER
+                                value < 0
+                            }
+                        }
+                        add = 20
+                    }
+                    modifier = {
+                        ROOT = {
+                            has_opinion = {
+                                target = PREV.OWNER
+                                value < -10
+                            }
+                        }
+                        add = 20
+                    }
+                    modifier = {
+                        ROOT = {
+                            has_opinion = {
+                                target = PREV.OWNER
+                                value < -20
+                            }
+                        }
+                        add = 40
+                    }
+                    modifier = {
+                        ROOT = {
+                            has_wargoal_against = PREV.OWNER
+                        }
+                        add = 40
+                    }
+                    modifier = {
+                        ROOT = {
+                            has_war_with = PREV.OWNER
+                        }
+                        add = 100
+                    }
+                    modifier = {
+                        OWNER = {num_of_nukes > 0}
+                        add = 50
+                    }
+                    modifier = {
+                        check_variable = { arms_factory_level < 1 }
+                        check_variable = { industrial_complex_level < 1 }
+                        check_variable = { infrastructure_level < 1 }
+                        check_variable = { building_level@nuclear_rocket_site < 1 }
+                        factor = 0
+                    }
+                    modifier = {
+                        check_variable = { arms_factory_level > 1 }
+                        add = arms_factory_level
+                    }
+                    modifier = {
+                        check_variable = { industrial_complex_level > 1 }
+                        add = industrial_complex_level
+                    }
+                    modifier = {
+                        check_variable = { infrastructure_level > 1 }
+                        add = infrastructure_level
+                    }
+                    modifier = {
+                        check_variable = { building_level@supply_node > 1 }
+                        add = 100
+                    }
+                    modifier = {
+                        check_variable = { building_level@nuclear_rocket_site > 1 }
+                        add = 1000
+                    }
+                    modifier = {
+                        is_capital
+                        add = 20
+                    }
+                    modifier = {
+                        has_state_flag = nuke_target_for_@ROOT
+                        factor = 0
+                        add = -10000
+                    }
+                }
+            }
         }
 	}
     red_button = {
@@ -92,6 +198,38 @@ scripted_gui = {
             bn15_click = {set_variable = {nuke_building = 15}}
             
             launch_nukes_click = {
+
+                if = {
+                    limit = {
+                        is_ai = yes
+                    }
+                    random_list = {
+                        1 = {set_variable = { nuke_per_state = 1 }}
+                        1 = {set_variable = { nuke_per_state = 2 }}
+                        1 = {set_variable = { nuke_per_state = 3 }}
+                    }
+                    random_list = {
+                        2 = {set_variable = { nuke_building = 6 }}
+                        1 = {set_variable = { nuke_building = 1 }}
+                        1 = {set_variable = { nuke_building = 2 }}
+                    }
+                    random_scope_in_array = {
+                        array = enemies
+                        limit = {is_in_array = {nuke_possible = THIS}}
+                        ROOT = {set_variable = { nuke_country = PREV }}
+                    }
+                }
+
+                if = {
+                    limit = {
+                        var:ROOT.nuke_country = {
+                            check_variable = { world_influence < 4 }
+                            is_major = no
+                            num_of_nukes < 1
+                        }
+                    }
+                    add_threat = 50
+                }
             
                 set_temp_variable = {rockets_available = 0}
                 ROOT = {
@@ -103,6 +241,10 @@ scripted_gui = {
                     var:nuke_country = {
                         country_event = {id = onactev.11 hours = 1}
                     }
+                }
+
+                var:ROOT.nuke_country = {
+                    set_country_flag = been_nuked
                 }
                 
                 every_state = {
@@ -185,8 +327,20 @@ scripted_gui = {
 
         triggers = {
             launch_nukes_click_enabled = {
-                NOT = {has_country_flag = nuke_cd}
-                has_war_with = var:nuke_country
+                OR ={
+                    AND = {
+                        NOT = {has_country_flag = nuke_cd}
+                        has_war_with = var:nuke_country
+                    }
+                    AND ={
+                        is_ai = yes
+                        has_war = yes
+                    }
+                }
+                if = {
+                    limit = {is_in_faction = yes}
+                    has_country_flag = nuke_request_accepted
+                }
 
                 has_game_rule = {
                     rule = allow_nuking
@@ -213,6 +367,44 @@ scripted_gui = {
             currentB = {
                 frame = nuke_building
             }
+        }
+        
+        ai_test_interval = 240
+
+        ai_weights = {
+            launch_nukes_click = {
+                ai_will_do = {
+                    base = 0
+                    modifier = {
+                        num_of_nukes > 0
+                        add = 100
+                    }
+                    modifier = {
+                        surrender_progress < 0.1
+                        add = -100
+                    }
+                    modifier = {
+                        surrender_progress < 0.3
+                        add = -50
+                    }
+                    modifier = {
+                        has_war_with_major = no
+                        add = -100
+                    }
+                    modifier = {
+                        surrender_progress > 0.5
+                        add = 300
+                    }
+                    modifier = {
+                        has_country_flag = been_nuked
+                        add = 10000
+                    }
+                    modifier = {
+                        check_variable = { nuke_target_states^num < 5 }
+                        factor = 0
+                    }
+                }
+            }            
         }
     }
 
