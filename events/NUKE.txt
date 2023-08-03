@@ -11,16 +11,38 @@ country_event = {
 		name = nukemod.1.a
 		FROM = {set_country_flag = nuke_request_accepted}
         ai_chance = {
-			base = 50
+			base = 0
+            modifier = {
+                is_major = no
+                add = 30
+            }
+            modifier = {
+                OR = {
+                    tag = UCB
+                    tag = EIK
+                }
+                add = 50
+            }
+            modifier = {
+                surrender_progress > 0.3
+                add = 100
+            }
 		}
 	}
 	option = {
 		name = nukemod.1.b
 		ai_chance = {
-			base = 50
+			base = 100
             modifier = {
-                threat < 100
-                add = -40
+                is_major = no
+                add = -30
+            }
+            modifier = {
+                OR = {
+                    tag = UCB
+                    tag = EIK
+                }
+                add = -50
             }
 		}
 	}

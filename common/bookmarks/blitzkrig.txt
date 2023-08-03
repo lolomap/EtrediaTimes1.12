@@ -4,7 +4,7 @@ bookmarks = {
 		desc = "MINOR_WORLD_DESC"
 		date = 2018.9.20.12
 		picture = "GFX_select_date_1939"
-		default_country = "SBU"
+		default_country = "EIK"
 
 		"UCB"={
 			history = "UCB_GATHERING_STORM_DESC"

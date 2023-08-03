@@ -358,6 +358,7 @@ country_event = { # Олигархи у власти
 			elections_allowed = yes
 			election_frequency = 72
 		}
+        add_popularity = {ideology = neutrality popularity = 0.4}
 		#load_focus_tree = generic_focus
 	}
 }

@@ -1,6 +1,6 @@
 characters={
 	BOK_absalom_didouche={
-		name="Absalom Didouche"
+		name=BOK_Absalom_Didouche
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"

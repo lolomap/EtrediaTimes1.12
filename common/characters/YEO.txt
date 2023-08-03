@@ -1,6 +1,6 @@
 characters={
 	YEO_jongephi_mbizo={
-		name="Jongephi Mbizo"
+		name=YEO_Jongephi_Mbizo
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	YEO_vile_dumalisile={
-		name="Vile Dumalisile"
+		name=YEO_Vile_Dumalisile
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	YEO_songezo_ngubenani={
-		name="Songezo Ngubenani"
+		name=YEO_Songezo_Ngubenani
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	YEO_fezekile_ntsokwana={
-		name="Fezekile Ntsokwana"
+		name=YEO_Fezekile_Ntsokwana
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	YEO_sandile_mandela={
-		name="Sandile Mandela"
+		name=YEO_Sandile_Mandela
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	YEO_john_evans={
-		name="John Evans"
+		name=YEO_John_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

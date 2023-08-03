@@ -1,6 +1,6 @@
 characters={
 	KAS_nurkbultan_memrekaev={
-		name="Nurkbultan Memrekaev"
+		name=KAS_Nurkbultan_Memrekaev
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KAS_kazarzhum_tahyrkaev={
-		name="Kazarzhum Tahyrkaev"
+		name=KAS_Kazarzhum_Tahyrkaev
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	KAS_kendri_losental={
-		name="Kendri Losental"
+		name=KAS_Kendri_Losental
 		portraits={
 			civilian={
 				large="gfx/leaders/KAS/Portrait_kas_autority.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	KAS_ivan_vissarionovich={
-		name="Ivan Vissarionovich"
+		name=KAS_Ivan_Vissarionovich
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	KAS_zhibeka_lonaba={
-		name="Zhibeka Lonaba"
+		name=KAS_Zhibeka_Lonaba
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	KAS_johannes_evans={
-		name="Johannes Evans"
+		name=KAS_Johannes_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

@@ -16,6 +16,12 @@ on_actions = {
 
             for_each_scope_loop = {
                 array = global.countries
+
+                if = {
+                    limit = {is_ai = yes}
+                    set_country_flag = nukemaximaized
+                }
+
                 add_to_array = {global.wi_countries = THIS}
                 
                 if = {
@@ -629,6 +635,17 @@ on_actions = {
                 add_ideas = stability_bad
             }
 
+            #Обновление ИИ целей ШПУ
+            if = {
+                limit = {is_ai = yes num_of_nukes > 0}
+                for_each_scope_loop = {
+                    array = nuke_target_states
+                    
+                    clr_state_flag = nuke_target_for_@ROOT
+                }
+                clear_array = nuke_target_states
+            }
+
             #Действия оппозиции
                 if = {
                     limit = {
@@ -799,10 +816,10 @@ on_actions = {
             if = {limit = {check_variable = {resource@tungsten < 0}} add_to_variable = { res_factories = resource@tungsten }}
             if = {limit = {check_variable = {resource@steel < 0}} add_to_variable = { res_factories = resource@steel }}
             if = {limit = {check_variable = {resource@chromium < 0}} add_to_variable = { res_factories = resource@chromium }}
-            multiply_variable = { res_factories = -1 }
+            multiply_variable = { res_factories = -0.5 }
             clamp_variable = {
                 var = res_factories
-                max = 25
+                max = 10
             }
             set_temp_variable = {t = num_of_civilian_factories}
             divide_temp_variable = { t = 100 }
@@ -1387,11 +1404,13 @@ on_actions = {
 				}
 			}
 
-			set_global_flag = first_nuke_dropped
 			if = {
 				limit = { NOT = { has_global_flag = first_nuke_dropped } }
-				country_event = { id = generic.8 }
+                set_variable = { global.nuked_city = FROM }
+				news_event = { id = onactev.19 hours = 3 }
+                goto_state = FROM
 			}
+            set_global_flag = first_nuke_dropped
 			if = {
 				limit = { has_idea = race_for_the_bomb_outclassed }
 				remove_ideas = race_for_the_bomb_outclassed

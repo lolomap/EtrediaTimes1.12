@@ -52,7 +52,11 @@ replace_path="common/country_tag_aliases"
 replace_path="gfx/flags"
 tags={
 	"Map"
-	"Utilities"
+	"Alternative History"
+	"Gameplay"
+	"National Focuses"
+	"Events"
+	"Technologies"
 }
 supported_version="1.12.*"
 path="mod/EtrediaTimes1.12"

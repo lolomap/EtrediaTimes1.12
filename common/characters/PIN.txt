@@ -1,6 +1,6 @@
 characters={
 	PIN_anatoly_zhmirinovan={
-		name="Anatoly Zhmirinovan"
+		name=PIN_Anatoly_Zhmirinovan
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	PIN_daran_lemingauton={
-		name="Daran Lemingauton"
+		name=PIN_Daran_Lemingauton
 		portraits={
 			civilian={
 				large="gfx/leaders/PIN/portrait_pin_fascism.dds"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	PIN_timur_nafikov={
-		name="Timur Nafikov"
+		name=PIN_Timur_Nafikov
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	PIN_ivan_vissarionovich={
-		name="Ivan Vissarionovich"
+		name=PIN_Ivan_Vissarionovich
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	PIN_biyalos_tere={
-		name="Biyalos Tere"
+		name=PIN_Biyalos_Tere
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	PIN_kopili_nayer={
-		name="Kopili Nayer"
+		name=PIN_Kopili_Nayer
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	PIN_boras_joks={
-		name="Boras Joks"
+		name=PIN_Boras_Joks
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	PIN_ombihunt_yantes={
-		name="Ombihunt Yantes"
+		name=PIN_Ombihunt_Yantes
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -132,7 +132,7 @@ characters={
 		}
 	}
 	PIN_joachim_brendel={
-		name="Joachim Brendel"
+		name=PIN_Joachim_Brendel
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

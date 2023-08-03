@@ -1,6 +1,6 @@
 characters={
 	TOR_savkono_kirin={
-		name="Savkono Kirin"
+		name=TOR_Savkono_Kirin
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	TOR_poupals_poup={
-		name="Poupals Poup"
+		name=TOR_Poupals_Poup
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	TOR_garold={
-		name="Garold"
+		name=TOR_Garold
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	TOR_irapo_sini={
-		name="Irapo Sini"
+		name=TOR_Irapo_Sini
 		portraits={
 			civilian={
 				large="gfx/leaders/TOR/Portrait_tor_communism.dds"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	TOR_general_1={
-		name="General 1"
+		name=TOR_General_1
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	TOR_general_2={
-		name="General 2"
+		name=TOR_General_2
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	TOR_general_3={
-		name="General 3"
+		name=TOR_General_3
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	TOR_lucas_brown={
-		name="Lucas Brown"
+		name=TOR_Lucas_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

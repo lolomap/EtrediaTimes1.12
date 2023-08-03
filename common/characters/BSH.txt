@@ -1,6 +1,6 @@
 characters={
 	BSH_wangdue_nyingpo={
-		name="Wangdue Nyingpo"
+		name=BSH_Wangdue_Nyingpo
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	BSH_choedon_wangpo={
-		name="Choedon Wangpo"
+		name=BSH_Choedon_Wangpo
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	BSH_namgyal_wangchuk_gurung={
-		name="Namgyal Wangchuk Gurung"
+		name=BSH_Namgyal_Wangchuk_Gurung
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	BSH_yungdrung_trengwa={
-		name="Yungdrung Trengwa"
+		name=BSH_Yungdrung_Trengwa
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	BSH_dhardon={
-		name="Dhardon"
+		name=BSH_Dhardon
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

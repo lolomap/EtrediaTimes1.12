@@ -1,6 +1,6 @@
 characters={
 	CHO_espano_gildo={
-		name="Espano Gildo"
+		name=CHO_Espano_Gildo
 		portraits={
 			civilian={
 				large="gfx/leaders/CHO/portrait_cho_democratic.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	CHO_joso_bobes={
-		name="Joso Bobes"
+		name=CHO_Joso_Bobes
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	CHO_nimali_redrizko={
-		name="Nimali Redrizko"
+		name=CHO_Nimali_Redrizko
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"

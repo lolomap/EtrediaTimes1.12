@@ -1,6 +1,6 @@
 characters={
 	SDR_kadir_attali={
-		name="Kadir Attali"
+		name=SDR_Kadir_Attali
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	SDR_khayyat_hmida={
-		name="Khayyat Hmida"
+		name=SDR_Khayyat_Hmida
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	SDR_fathi_gamouh={
-		name="Fathi Gamouh"
+		name=SDR_Fathi_Gamouh
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	SDR_ansari_benguigui={
-		name="Ansari Benguigui"
+		name=SDR_Ansari_Benguigui
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	SDR_silvano_albergo={
-		name="Silvano Albergo"
+		name=SDR_Silvano_Albergo
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	SDR_peter_taylor={
-		name="Peter Taylor"
+		name=SDR_Peter_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

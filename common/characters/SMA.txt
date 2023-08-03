@@ -1,6 +1,6 @@
 characters={
 	SMA_austol_libby={
-		name="Austol Libby"
+		name=SMA_Austol_Libby
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	SMA_jumaat_bin_rabu={
-		name="Jumaat bin Rabu"
+		name=SMA_Jumaat_bin_Rabu
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	SMA_tethion_harvey={
-		name="Tethion Harvey"
+		name=SMA_Tethion_Harvey
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	SMA_veil_kritazano={
-		name="Veil Kritazano"
+		name=SMA_Veil_Kritazano
 		portraits={
 			civilian={
 				large="gfx/leaders/SMA/portrait_sma_communism.dds"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	SMA_illar_mark={
-		name="Illar Mark"
+		name=SMA_Illar_Mark
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	SMA_alex_smith={
-		name="Alex Smith"
+		name=SMA_Alex_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

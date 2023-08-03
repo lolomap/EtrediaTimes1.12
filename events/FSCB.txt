@@ -535,10 +535,7 @@ country_event = {
 		    }
 
             UCB = {
-                if = {
-                    limit = {has_country_flag = parlament_win_civilwar}
-                    set_country_flag = unstable_ach
-                }
+                set_country_flag = unstable_ach
             }
 		}
         ai_chance = {

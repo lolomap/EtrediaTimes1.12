@@ -1,6 +1,6 @@
 characters={
 	NEV_marcus_white={
-		name="Marcus White"
+		name=NEV_Marcus_White
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -13,7 +13,7 @@ characters={
 		}
 	}
 	NEV_johannes_smith={
-		name="Johannes Smith"
+		name=NEV_Johannes_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -27,7 +27,7 @@ characters={
 		}
 	}
 	NEV_bob_brown={
-		name="Bob Brown"
+		name=NEV_Bob_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	NEV_jonas_williams={
-		name="Jonas Williams"
+		name=NEV_Jonas_Williams
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	NEV_alex_williams={
-		name="Alex Williams"
+		name=NEV_Alex_Williams
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"

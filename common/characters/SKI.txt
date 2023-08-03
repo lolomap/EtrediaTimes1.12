@@ -1,6 +1,6 @@
 characters={
 	SKI_jacquelin_nelson={
-		name="Jacquelin Nelson"
+		name=SKI_Jacquelin_Nelson
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	SKI_apineru_fanene={
-		name="Apineru Fanene"
+		name=SKI_Apineru_Fanene
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	SKI_donald_henry={
-		name="Donald Henry"
+		name=SKI_Donald_Henry
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	SKI_robenson_altidor={
-		name="Robenson Altidor"
+		name=SKI_Robenson_Altidor
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	SKI_thony_maurice={
-		name="Thony Maurice"
+		name=SKI_Thony_Maurice
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	SKI_jim_roberts={
-		name="Jim Roberts"
+		name=SKI_Jim_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

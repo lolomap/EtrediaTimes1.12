@@ -1,6 +1,6 @@
 characters={
 	BOV_zaim_amrani={
-		name="Zaim Amrani"
+		name=BOV_Zaim_Amrani
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	BOV_hanan_behired={
-		name="Hanan Behired"
+		name=BOV_Hanan_Behired
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"

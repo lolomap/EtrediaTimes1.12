@@ -1,6 +1,6 @@
 characters={
 	IRI_bakhram_bisar={
-		name="Bakrham Bisar"
+		name=IRI_Bakrham_Bisar
 		portraits={
 			civilian={
 				large="gfx/leaders/IRI/Portrait_iri_fascism.dds"
@@ -20,7 +20,7 @@ characters={
 		}
 	}
 	IRI_viliem_barok={
-		name="Viliem Barok"
+		name=IRI_Viliem_Barok
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -39,7 +39,7 @@ characters={
 		}
 	}
 	IRI_konstantin_ufimav={
-		name="Konstantin Ufimav"
+		name=IRI_Konstantin_Ufimav
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

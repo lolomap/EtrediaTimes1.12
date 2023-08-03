@@ -1,6 +1,6 @@
 characters={
 	TOB_duron_garriques={
-		name="Duron Garriques"
+		name=TOB_Duron_Garriques
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	TOB_jorell_gibbs={
-		name="Jorell Gibbs"
+		name=TOB_Jorell_Gibbs
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	TOB_raymone_hill={
-		name="Raymone Hill"
+		name=TOB_Raymone_Hill
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	TOB_kenton_darcy={
-		name="Kenton Darcy"
+		name=TOB_Kenton_Darcy
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	TOB_lucas_taylor={
-		name="Lucas Taylor"
+		name=TOB_Lucas_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

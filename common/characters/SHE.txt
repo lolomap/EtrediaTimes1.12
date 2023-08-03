@@ -1,6 +1,6 @@
 characters={
 	SHE_daniil_shirokov={
-		name="Daniil Shirokov"
+		name=SHE_Daniil_Shirokov
 		portraits={
 			civilian={
 				large="gfx/leaders/SHE/portrait_she_leader1.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	SHE_daran_lemingauton={
-		name="Daran Lemingauton"
+		name=SHE_Daran_Lemingauton
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	SHE_timur_nafikov={
-		name="Timur Nafikov"
+		name=SHE_Timur_Nafikov
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	SHE_ivan_vissarionovich={
-		name="Ivan Vissarionovich"
+		name=SHE_Ivan_Vissarionovich
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	SHE_karm_vihten={
-		name="Karm Vihten"
+		name=SHE_Karm_Vihten
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	SHE_germen_panrudbolf={
-		name="Germen Pan-Rudbolf"
+		name=SHE_Germen_Pan-Rudbolf
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	SHE_anton_sturm={
-		name="Anton Sturm"
+		name=SHE_Anton_Sturm
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

@@ -1,6 +1,6 @@
 characters={
 	LOK_nay_derrida={
-		name="Nay Derrida"
+		name=LOK_Nay_Derrida
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	LOK_alexander_evans={
-		name="Alexander Evans"
+		name=LOK_Alexander_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	LOK_john_walker={
-		name="John Walker"
+		name=LOK_John_Walker
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	LOK_jim_jones={
-		name="Jim Jones"
+		name=LOK_Jim_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	LOK_alexander_white={
-		name="Alexander White"
+		name=LOK_Alexander_White
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

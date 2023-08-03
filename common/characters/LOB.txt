@@ -1,6 +1,6 @@
 characters={
 	LOB_renier_stander={
-		name="Renier Stander"
+		name=LOB_Renier_Stander
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	LOB_bern_van_rensburg={
-		name="Bern Van Rensburg"
+		name=LOB_Bern_Van_Rensburg
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	LOB_yerodin_opperman={
-		name="Yerodin Opperman"
+		name=LOB_Yerodin_Opperman
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	LOB_zandre_botha={
-		name="Zandre Botha"
+		name=LOB_Zandre_Botha
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	LOB_igmar_brits={
-		name="Igmar Brits"
+		name=LOB_Igmar_Brits
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	LOB_peter_taylor={
-		name="Peter Taylor"
+		name=LOB_Peter_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

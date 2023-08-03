@@ -1,4 +1,4 @@
-EIK_oligarchism_rejection = {
+ EIK_oligarchism_rejection = {
 	EIK_blank = {
 		available = {always = no}
 		visible = {has_government = fascism}
@@ -73,28 +73,28 @@ EIK_oligarchism_rejection = {
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_oli_event
-							days = 30
+							days = 50
 							value = 1
 						}
 					}
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_oli_event
-							days = 60
+							days = 80
 							value = 1
 						}
 					}
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_oli_event
-							days = 90
+							days = 110
 							value = 1
 						}
 					}
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_oli_event
-							days = 120
+							days = 150
 							value = 1
 						}
 					}
@@ -177,28 +177,28 @@ EIK_oligarchism_rejection = {
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_army_event
-							days = 30
+							days = 50
 							value = 1
 						}
 					}
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_army_event
-							days = 60
+							days = 80
 							value = 1
 						}
 					}
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_army_event
-							days = 90
+							days = 110
 							value = 1
 						}
 					}
 					25 = {
 						set_country_flag = {
 							flag = eik_cd_army_event
-							days = 120
+							days = 140
 							value = 1
 						}
 					}

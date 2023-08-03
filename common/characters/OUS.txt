@@ -1,6 +1,6 @@
 characters={
 	OUS_lethabo_goosen={
-		name="Lethabo Goosen"
+		name=OUS_Lethabo_Goosen
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	OUS_johannes_walker={
-		name="Johannes Walker"
+		name=OUS_Johannes_Walker
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	OUS_marcus_smith={
-		name="Marcus Smith"
+		name=OUS_Marcus_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	OUS_john_smith={
-		name="John Smith"
+		name=OUS_John_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	OUS_alexander_brown={
-		name="Alexander Brown"
+		name=OUS_Alexander_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"

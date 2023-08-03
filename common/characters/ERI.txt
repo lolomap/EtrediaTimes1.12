@@ -1,6 +1,6 @@
 characters={
 	ERI_zander_de_vries={
-		name="Zander De Vries"
+		name=ERI_Zander_De_Vries
 		portraits={
 			civilian={
 				large="gfx/leaders/ERI/Portrait_zander_de_vries.dds"

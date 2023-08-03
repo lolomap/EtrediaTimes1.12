@@ -1,6 +1,6 @@
 characters={
 	SFL_deyan_boyko={
-		name="Deyan Boyko"
+		name=SFL_Deyan_Boyko
 		portraits={
 			civilian={
 				large="gfx/leaders/SFL/portrait_sfl_democratic.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	SFL_mikhaylo_philippovic={
-		name="Mikhaylo Philippovic"
+		name=SFL_Mikhaylo_Philippovic
 		portraits={
 			civilian={
 				large="gfx/leaders/SFL/portrait_sfl_democratic.dds"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	SFL_anton_shishky={
-		name="Anton Shishky"
+		name=SFL_Anton_Shishky
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	SFL_mikhail_zhevonic={
-		name="Mikhail Zhevonic"
+		name=SFL_Mikhail_Zhevonic
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	SFL_varfolomei_zaboric={
-		name="Varfolomei Zaboric"
+		name=SFL_Varfolomei_Zaboric
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -70,7 +70,7 @@ characters={
 		}
 	}
 	SFL_milosh_betovicko={
-		name="Milosh Betovicko"
+		name=SFL_Milosh_Betovicko
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

@@ -1,6 +1,6 @@
 characters={
 	CHE_lobek_keerizhbeza={
-		name="Lobek Keerizh-Beza"
+		name=CHE_Lobek_Keerizh-Beza
 		portraits={
 			civilian={
 				large="gfx/leaders/CHE/portrait_CHE_fascism.dds"

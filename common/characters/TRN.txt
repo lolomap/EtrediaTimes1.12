@@ -1,6 +1,6 @@
 characters={
 	TRN_maleko_keon={
-		name="Maleko Keon"
+		name=TRN_Maleko_Keon
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	TRN_kapahu_mahiai={
-		name="Kapahu Mahi'ai"
+		name=TRN_Kapahu_Mahi'ai
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	TRN_haupuehuehu_alohilani={
-		name="Haupuehuehu Alohilani"
+		name=TRN_Haupuehuehu_Alohilani
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	TRN_maui_lala={
-		name="Maui Lala"
+		name=TRN_Maui_Lala
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	TRN_marcus_williams={
-		name="Marcus Williams"
+		name=TRN_Marcus_Williams
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

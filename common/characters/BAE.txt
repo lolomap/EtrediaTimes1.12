@@ -1,6 +1,6 @@
 characters={
 	BAE_tobarec_itan={
-		name="Tobarec Itan"
+		name=BAE_Tobarec_Itan
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	BAE_kendri_losental={
-		name="Kendri Losental"
+		name=BAE_Kendri_Losental
 		portraits={
 			civilian={
 				large="gfx/leaders/BAE/portrait_bae_leader1.dds"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	BAE_vitaly={
-		name="Vitaly"
+		name=BAE_Vitaly
 		portraits={
 			civilian={
 				large="gfx/leaders/BAE/portrait_bae_leader2.dds"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	BAE_viliem_barok={
-		name="Viliem Barok"
+		name=BAE_Viliem_Barok
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -67,7 +67,7 @@ characters={
 		}
 	}
 	BAE_konstantin_ufimav={
-		name="Konstantin Ufimav"
+		name=BAE_Konstantin_Ufimav
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -86,7 +86,7 @@ characters={
 		}
 	}
 	BAE_boris_hekson={
-		name="Boris Hekson"
+		name=BAE_Boris_Hekson
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

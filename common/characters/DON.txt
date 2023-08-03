@@ -1,6 +1,6 @@
 characters={
 	DON_doronas_iv={
-		name="Doronas IV"
+		name=DON_Doronas_IV
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -21,7 +21,7 @@ characters={
 		}
 	}
 	DON_titek_domonos={
-		name="Titek Domonos"
+		name=DON_Titek_Domonos
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -35,7 +35,7 @@ characters={
 		}
 	}
 	DON_rolear_pighuan={
-		name="Rolear Pighuan"
+		name=DON_Rolear_Pighuan
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -49,7 +49,7 @@ characters={
 		}
 	}
 	DON_anant_alexech={
-		name="Anant Alexech"
+		name=DON_Anant_Alexech
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"

@@ -1,6 +1,6 @@
 characters={
 	MCH_nde_ntumba={
-		name="Nde Ntumba"
+		name=MCH_Nde_Ntumba
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	MCH_lucas_taylor={
-		name="Lucas Taylor"
+		name=MCH_Lucas_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -27,7 +27,7 @@ characters={
 		}
 	}
 	MCH_lucas_brown={
-		name="Lucas Brown"
+		name=MCH_Lucas_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	MCH_peter_jones={
-		name="Peter Jones"
+		name=MCH_Peter_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	MCH_alex_taylor={
-		name="Alex Taylor"
+		name=MCH_Alex_Taylor
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"

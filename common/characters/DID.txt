@@ -1,6 +1,6 @@
 characters={
 	DID_lyubcho_velizarov={
-		name="Lyubcho Velizarov"
+		name=DID_Lyubcho_Velizarov
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	DID_hubert_mazal={
-		name="Hubert Mazal"
+		name=DID_Hubert_Mazal
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	DID_iom_haim={
-		name="Iom Haim"
+		name=DID_Iom_Haim
 		portraits={
 			civilian={
 				large="gfx/leaders/DID/Portrait_did_democratic.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	DID_turi_la_penta={
-		name="Turi La Penta"
+		name=DID_Turi_La_Penta
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	DID_johannes_wilson={
-		name="Johannes Wilson"
+		name=DID_Johannes_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

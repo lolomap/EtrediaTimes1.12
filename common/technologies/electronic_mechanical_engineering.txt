@@ -1,4 +1,170 @@
 technologies = {
+	
+	centimetric_radar = {
+
+		# radar boost in air/sea combat depends on radar level
+		enable_building = {
+			building = radar_station
+			level = 4
+		}
+
+		enable_equipment_modules = { 
+			ship_radar_3
+		}
+
+		static_anti_air_hit_chance_factor = 0.2
+		
+		path = {
+			leads_to_tech = improved_centimetric_radar 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 2014
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 4
+			}
+			modifier = {
+				date < "2018.1.1"
+				factor = 0.5
+			}
+		}
+		
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+	
+	improved_centimetric_radar = {
+
+		# radar boost in air/sea combat depends on radar level
+		enable_building = {
+			building = radar_station
+			level = 5
+		}
+
+		
+
+		static_anti_air_hit_chance_factor = 0.2
+		
+		path = {
+			leads_to_tech = advanced_centimetric_radar 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 2016
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 4
+			}
+			modifier = {
+				date < "2019.1.1"
+				factor = 0.5
+			}
+		}
+		
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+	
+	advanced_centimetric_radar = {
+
+		# radar boost in air/sea combat depends on radar level
+		enable_building = {
+			building = radar_station
+			level = 6
+		}
+
+		enable_equipment_modules = { 
+			ship_radar_4
+		}
+		
+		static_anti_air_hit_chance_factor = 0.2
+		
+		research_cost = 2.5
+		start_year = 2018
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
+		}
+		
+		categories = {
+			electronics
+			radar_tech
+		}
+	}
+
+    radio = {
+
+		# units with radios can more efficiently join combats when there is room
+		land_reinforce_rate = 0.05
+		
+		research_cost = 1.5
+
+        path = {
+			leads_to_tech = electronic_proto
+			research_cost_coeff = 1
+		}
+		
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 5 y = 0 }
+		}
+		
+		folder = {
+			name = support_folder
+			position = { x = 11 y = 9 } # x = 12 y = 0
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		categories = {
+			electronics
+		}
+	}
+
 	electronic_proto = {
 
 		# small boost to research speed
@@ -120,6 +286,9 @@ technologies = {
 			name = electronics_folder
 			position = { x = -2 y = 2 }
 		}
+        allow_branch = {
+			NOT = {has_dlc = "La Resistance"}
+		}
 		
 		ai_will_do = {
 			factor = 30
@@ -149,7 +318,9 @@ technologies = {
 			name = electronics_folder
 			position = { x = 2 y = 2 }
 		}
-		
+		allow_branch = {
+			NOT = {has_dlc = "La Resistance"}
+		}
 		ai_will_do = {
 			factor = 30
 			
@@ -220,6 +391,9 @@ technologies = {
 		folder = {
 			name = electronics_folder
 			position = { x = -2 y = 6 }
+		}
+        allow_branch = {
+			NOT = {has_dlc = "La Resistance"}
 		}
 		
 		ai_will_do = {
@@ -471,7 +645,9 @@ technologies = {
 
 		# small boost to research speed
 		encryption = 3
-		
+		allow_branch = {
+			NOT = {has_dlc = "La Resistance"}
+		}
 		
 		research_cost = 1
 		start_year = 2016
@@ -502,7 +678,9 @@ technologies = {
 		# small boost to research speed
 		decryption = 3
 		
-		
+		allow_branch = {
+			NOT = {has_dlc = "La Resistance"}
+		}
 		research_cost = 1
 		start_year = 2016
 		folder = {

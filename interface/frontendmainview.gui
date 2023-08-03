@@ -249,6 +249,18 @@ guiTypes = {
 			maxHeight = 20	
 		}
 
+        instantTextBoxType = {
+
+			name ="version_label_mod"
+			position = { x = 35 y = 370 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = mod_version	
+			format = centre
+			maxWidth = 250
+			maxHeight = 20	
+		}
+
 		positionType = {
 			name = "version_label_subscription_position"
 			position = { x = 35 y = 524 }

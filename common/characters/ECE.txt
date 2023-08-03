@@ -1,6 +1,6 @@
 characters={
 	ECE_qadim_benlabed={
-		name="Qadim Benlabed"
+		name=ECE_Qadim_Benlabed
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ECE_sud_nitpattanasai={
-		name="Sud Nitpattanasai"
+		name=ECE_Sud_Nitpattanasai
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	ECE_disorn_tangwongsan={
-		name="Disorn Tangwongsan"
+		name=ECE_Disorn_Tangwongsan
 		portraits={
 			civilian={
 				large="gfx/leaders/ECE/portrait_ece_mop.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	ECE_kaliq_salem={
-		name="Kaliq Salem"
+		name=ECE_Kaliq_Salem
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	ECE_nawanthorn_shinawatra={
-		name="Nawanthorn Shinawatra"
+		name=ECE_Nawanthorn_Shinawatra
 		portraits={
 			army={
 				small=""
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	ECE_supoj_traivut={
-		name="Supoj Traivut"
+		name=ECE_Supoj_Traivut
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	ECE_asnee_sintawichai={
-		name="Asnee Sintawichai"
+		name=ECE_Asnee_Sintawichai
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	ECE_lucas_brown={
-		name="Lucas Brown"
+		name=ECE_Lucas_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

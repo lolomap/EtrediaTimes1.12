@@ -1,6 +1,6 @@
 characters={
 	CSH_pyae_myat={
-		name="Pyae Myat"
+		name=CSH_Pyae_Myat
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
@@ -19,7 +19,7 @@ characters={
 		}
 	}
 	CSH_khant_yarzar_soe={
-		name="Khant Yarzar Soe"
+		name=CSH_Khant_Yarzar_Soe
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
@@ -38,7 +38,7 @@ characters={
 		}
 	}
 	CSH_win_thuta_zaw_zeyar={
-		name="Win Thuta Zaw Zeyar"
+		name=CSH_Win_Thuta_Zaw_Zeyar
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
@@ -57,7 +57,7 @@ characters={
 		}
 	}
 	CSH_khaing_htun={
-		name="Khaing Htun"
+		name=CSH_Khaing_Htun
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"

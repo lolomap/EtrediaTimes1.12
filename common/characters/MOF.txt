@@ -1,6 +1,6 @@
 characters={
 	MOF_cassandra_caso={
-		name="Cassandra Caso"
+		name=MOF_Cassandra_Caso
 		portraits={
 			civilian={
 				large="gfx/leaders/MOF/Portrait_mof_democratic.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	MOF_petro_pedroshenko={
-		name="Petro Pedroshenko"
+		name=MOF_Petro_Pedroshenko
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	MOF_ivan_vissarionovich={
-		name="Ivan Vissarionovich"
+		name=MOF_Ivan_Vissarionovich
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	MOF_marcus_smith={
-		name="Marcus Smith"
+		name=MOF_Marcus_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
     MOF_alexandra_rybka = {
-        name="Alexandra Rybka"
+        name=MOF_Alexandra_Rybka
 		portraits={
 			civilian={
 				large= GFX_portrait_unknown

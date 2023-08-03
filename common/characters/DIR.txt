@@ -1,6 +1,6 @@
 characters={
 	DIR_ardre_minh={
-		name="Ardre Minh"
+		name=DIR_Ardre_Minh
 		portraits={
 			civilian={
 				large="gfx/leaders/DIR/portrait_DIR_democratic.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	DIR_ostar_karbonal={
-		name="Ostar Karbonal"
+		name=DIR_Ostar_Karbonal
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	DIR_ilya_furman={
-		name="Ilya Furman"
+		name=DIR_Ilya_Furman
 		portraits={
 			civilian={
 				large="gfx/leaders/DIR/Portrait_dir_furman.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	DIR_Detskitch_Pukesch={
-		name="Detskitch Pukesch"
+		name=DIR_Detskitch_Pukesch
 		portraits={
 			civilian={
 				large="gfx/leaders/DIR/portrait_Detskitch_Pukesch.dds"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	DIR_keren_lopuskay={
-		name="Keren Lopuskay"
+		name=DIR_Keren_Lopuskay
 		portraits={
 			civilian={
 				large="gfx/leaders/DIR/portrait_dir_communism.dds"
@@ -70,7 +70,7 @@ characters={
 		}
 	}
 	DIR_vikot_lobinov={
-		name="Vikot Lobinov"
+		name=DIR_Vikot_Lobinov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -89,7 +89,7 @@ characters={
 		}
 	}
 	DIR_tartabe_sinquer={
-		name="Tartabe Sinquer"
+		name=DIR_Tartabe_Sinquer
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -108,7 +108,7 @@ characters={
 		}
 	}
 	DIR_galchi_portasa={
-		name="Galchi Portasa"
+		name=DIR_Galchi_Portasa
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -127,7 +127,7 @@ characters={
 		}
 	}
 	DIR_elena_vassental={
-		name="Elena Vassental"
+		name=DIR_Elena_Vassental
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -146,7 +146,7 @@ characters={
 		}
 	}
 	DIR_john_wilson={
-		name="John Wilson"
+		name=DIR_John_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

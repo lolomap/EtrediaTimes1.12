@@ -1,6 +1,6 @@
 characters={
 	MOA_aleki_multiauaopele={
-		name="Aleki Multiauaopele"
+		name=MOA_Aleki_Multiauaopele
 		portraits={
 			civilian={
 				large="gfx/leaders/MOA/portrait_moa_democratic.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	MOA_apineru_fanene={
-		name="Apineru Fanene"
+		name=MOA_Apineru_Fanene
 		portraits={
 			civilian={
 				large="gfx/leaders/MOA/portrait_moa_fascism.dds"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	MOA_loto_faaeteete={
-		name="Loto Faaeteete"
+		name=MOA_Loto_Faaeteete
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	MOA_tamati_lotomau={
-		name="Tamati Lotomau"
+		name=MOA_Tamati_Lotomau
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	MOA_tataio_papani={
-		name="Tataio Papani"
+		name=MOA_Tataio_Papani
 		portraits={
 			army={
 				small=""
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	MOA_apa_sifu={
-		name="Apa Sifu"
+		name=MOA_Apa_Sifu
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	MOA_lucas_wilson={
-		name="Lucas Wilson"
+		name=MOA_Lucas_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

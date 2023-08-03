@@ -104,7 +104,7 @@ characters={
         }
 	}
 	SBU_iret_kolert={
-		name="Iret Kolert"
+		name=SBU_Iret_Kolert
 		portraits={
 			civilian={
 				large="gfx/leaders/SBU/Portrait_sbu_kolert.dds"
@@ -118,7 +118,7 @@ characters={
 		}
 	}
 	SBU_dragan_kzhachich={
-		name="Dragan Kzhachich"
+		name=SBU_Dragan_Kzhachich
 		portraits={
 			civilian={
 				large="gfx/leaders/SBU/Portrait_sbu_democratic.dds"
@@ -139,7 +139,7 @@ characters={
 		}
 	}
 	SBU_anad_drogobush={
-		name="Anad Drogobush"
+		name=SBU_Anad_Drogobush
 		portraits={
 			civilian={
 				large="gfx/leaders/SBU/Portrait_sbu_fascism.dds"
@@ -153,7 +153,7 @@ characters={
 		}
 	}
 	SBU_anler_rigel={
-		name="Anler Rigel"
+		name=SBU_Anler_Rigel
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -167,7 +167,7 @@ characters={
 		}
 	}
 	SBU_shkedera_vedzhan={
-		name="Shkedera Vedzhan"
+		name=SBU_Shkedera_Vedzhan
 		portraits={
 			civilian={
 				large="gfx/leaders/SBU/Portrait_sbu_communism.dds"
@@ -181,7 +181,7 @@ characters={
 		}
 	}
 	SBU_victoria_iv={
-		name="Victoria IV"
+		name=SBU_Victoria_IV
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -195,7 +195,7 @@ characters={
 		}
 	}
 	SBU_biyalos_tere={
-		name="Biyalos Tere"
+		name=SBU_Biyalos_Tere
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -214,7 +214,7 @@ characters={
 		}
 	}
 	SBU_kopili_nayer={
-		name="Kopili Nayer"
+		name=SBU_Kopili_Nayer
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -233,7 +233,7 @@ characters={
 		}
 	}
 	SBU_boras_joks={
-		name="Boras Joks"
+		name=SBU_Boras_Joks
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -252,7 +252,7 @@ characters={
 		}
 	}
 	SBU_ombihunt_yantes={
-		name="Ombihunt Yantes"
+		name=SBU_Ombihunt_Yantes
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

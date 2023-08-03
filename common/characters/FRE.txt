@@ -1,6 +1,6 @@
 characters={
 	FRE_no_government={
-		name="No government"
+		name=FRE_No_government
 		portraits={
 			civilian={
 				large="gfx/leaders/FRE/field.dds"

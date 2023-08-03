@@ -1,6 +1,6 @@
 characters={
 	ZHE_natanael_kade_tanaka_catindig={
-		name="Natanael Kade Tanaka Catindig"
+		name=ZHE_Natanael_Kade_Tanaka_Catindig
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ZHE_conor_gabino_sanderson_espejo={
-		name="Conor Gabino Sanderson Espejo"
+		name=ZHE_Conor_Gabino_Sanderson_Espejo
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	ZHE_braydon_godfredo_dinguinbayan_caparas={
-		name="Braydon Godfredo Dinguinbayan Caparas"
+		name=ZHE_Braydon_Godfredo_Dinguinbayan_Caparas
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	ZHE_montrel_ernesto_lavapiz_guadarrama={
-		name="Montrel Ernesto Lavapiz Guadarrama"
+		name=ZHE_Montrel_Ernesto_Lavapiz_Guadarrama
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	ZHE_oliverios_ricardo_={
-		name="Oliverios Ricardo "
+		name=ZHE_Oliverios_Ricardo_
 		portraits={
 			army={
 				small=""
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	ZHE_guillelmina_kory={
-		name="Guillelmina Kory"
+		name=ZHE_Guillelmina_Kory
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	ZHE_marcus_smith={
-		name="Marcus Smith"
+		name=ZHE_Marcus_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

@@ -1,6 +1,6 @@
 characters={
 	FSC_vlad_solodov={
-		name="Soland Vlanora"
+		name=FSC_Soland_Vlanora
 		portraits={
 			civilian={
 				large="gfx/leaders/FSC/portrait_fsc_democratic_leader.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	FSC_sork_banovar={
-		name="Sork Banovar"
+		name=FSC_Sork_Banovar
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	FSC_harold_nartkhol={
-		name="Harold Nartkhol"
+		name=FSC_Harold_Nartkhol
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	FSC_opogales_smoke={
-		name="Opogales Smoke"
+		name=FSC_Opogales_Smoke
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	FSC_carlos_malekich={
-		name="Carlos Malekich"
+		name=FSC_Carlos_Malekich
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	FSC_chob_vairaho={
-		name="Chob Vairaho"
+		name=FSC_Chob_Vairaho
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

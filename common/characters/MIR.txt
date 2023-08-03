@@ -1,6 +1,6 @@
 characters={
 	MIR_nazir_ammar={
-		name="Nazir Ammar"
+		name=MIR_Nazir_Ammar
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	MIR_jim_taylor={
-		name="Jim Taylor"
+		name=MIR_Jim_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -27,7 +27,7 @@ characters={
 		}
 	}
 	MIR_alexander_wilson={
-		name="Alexander Wilson"
+		name=MIR_Alexander_Wilson
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"
@@ -40,7 +40,7 @@ characters={
 		}
 	}
 	MIR_bob_walker={
-		name="Bob Walker"
+		name=MIR_Bob_Walker
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -54,7 +54,7 @@ characters={
 		}
 	}
 	MIR_alex_white={
-		name="Alex White"
+		name=MIR_Alex_White
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

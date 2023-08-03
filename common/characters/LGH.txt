@@ -1,6 +1,6 @@
 characters={
 	LGH_alexander_roberts={
-		name="Alexander Roberts"
+		name=LGH_Alexander_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -13,7 +13,7 @@ characters={
 		}
 	}
 	LGH_alexander_evans={
-		name="Alexander Evans"
+		name=LGH_Alexander_Evans
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -27,7 +27,7 @@ characters={
 		}
 	}
 	LGH_jim_white={
-		name="Jim White"
+		name=LGH_Jim_White
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	LGH_lucas_roberts={
-		name="Lucas Roberts"
+		name=LGH_Lucas_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	LGH_jim_taylor={
-		name="Jim Taylor"
+		name=LGH_Jim_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"

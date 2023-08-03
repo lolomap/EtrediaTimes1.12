@@ -1,6 +1,6 @@
 characters={
 	NUR_adam_zambi={
-		name="Adam Zambi"
+		name=NUR_Adam_Zambi
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	NUR_john_white={
-		name="John White"
+		name=NUR_John_White
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -27,7 +27,7 @@ characters={
 		}
 	}
 	NUR_lucas_roberts={
-		name="Lucas Roberts"
+		name=NUR_Lucas_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	NUR_johannes_taylor={
-		name="Johannes Taylor"
+		name=NUR_Johannes_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	NUR_johannes_smith={
-		name="Johannes Smith"
+		name=NUR_Johannes_Smith
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"

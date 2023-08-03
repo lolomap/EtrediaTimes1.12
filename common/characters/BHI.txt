@@ -1,6 +1,6 @@
 characters={
 	BHI_rahul_nandi={
-		name="Rahul Nandi"
+		name=BHI_Rahul_Nandi
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -26,7 +26,7 @@ characters={
 		}
 	}
 	BHI_anand_mudaliyar={
-		name="Anand Mudaliyar"
+		name=BHI_Anand_Mudaliyar
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -40,7 +40,7 @@ characters={
 		}
 	}
 	BHI_chandra_ayyangar={
-		name="Chandra Ayyangar"
+		name=BHI_Chandra_Ayyangar
 		portraits={
 			army={
 				small="GFX_Portrait_Europe_Generic_land_1_small"

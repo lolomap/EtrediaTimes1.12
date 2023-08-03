@@ -1,6 +1,6 @@
 characters={
 	YAN_gulyas_szilveszter={
-		name="Gulyas Szilveszter"
+		name=YAN_Gulyas_Szilveszter
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	YAN_regzho_ontrilat={
-		name="Regzho Ontrilat"
+		name=YAN_Regzho_Ontrilat
 		portraits={
 			civilian={
 				large="gfx/leaders/YAN/Portrait_yan_fascism.dds"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
     YAN_atar_onodar = {
-        name="Atar Onodar"
+        name=YAN_Atar_Onodar
 		portraits={
 			civilian={
 				large="gfx/leaders/YAN/Portrait_yan_fascism2.dds"
@@ -48,7 +48,7 @@ characters={
 		}
     }
 	YAN_borbely_bertalat={
-		name="Borbely Bertalat"
+		name=YAN_Borbely_Bertalat
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -62,7 +62,7 @@ characters={
 		}
 	}
 	YAN_dezaro_karcih={
-		name="Dezaro Karcih"
+		name=YAN_Dezaro_Karcih
 		portraits={
 			army={
 				small="skill_small"
@@ -81,7 +81,7 @@ characters={
 		}
 	}
 	YAN_mearal_garbac={
-		name="Mearal Garbac"
+		name=YAN_Mearal_Garbac
 		portraits={
 			army={
 				small="skill_small"
@@ -100,7 +100,7 @@ characters={
 		}
 	}
 	YAN_general_1={
-		name="Vikram Kumarasetz"
+		name=YAN_Vikram_Kumarasetz
 		portraits={
             civilian={
 				large="gfx/leaders/YAN/portrait_vikram_kumarasetz.dds"

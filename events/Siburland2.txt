@@ -1677,7 +1677,10 @@ country_event = { # удачный переворот
 		add_war_support = 0.15
 		set_country_flag = sbu_try_success
 		FBU = {transfer_state = 72}
-		UCB = {give_guarantee = FBU}
+		if = {
+            limit = {UCB = {has_government = democratic}}
+            UCB = {give_guarantee = FBU}
+        }
 
 		hidden_effect = {
 			SBU = {
@@ -1698,7 +1701,10 @@ country_event = { # удачный переворот
             add_war_support = 0.15
             set_country_flag = sbu_try_success
             FBU = {transfer_state = 72}
-            UCB = {give_guarantee = FBU}
+            if = {
+                limit = {UCB = {has_government = democratic}}
+                UCB = {give_guarantee = FBU}
+            }
 
             SBU = {
                 every_owned_state = {

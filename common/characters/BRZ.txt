@@ -1,6 +1,6 @@
 characters={
 	BRZ_thant_wunna_kan_kaung={
-		name="Thant Wunna Kan Kaung"
+		name=BRZ_Thant_Wunna_Kan_Kaung
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"

@@ -1,6 +1,6 @@
 characters={
 	GWA_qadim_benlabed={
-		name="Qadim Benlabed"
+		name=GWA_Qadim_Benlabed
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	GWA_kamel_rimitti={
-		name="Kamel Rimitti"
+		name=GWA_Kamel_Rimitti
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	GWA_pattama_aromdee={
-		name="Pattama Aromdee"
+		name=GWA_Pattama_Aromdee
 		portraits={
 			civilian={
 				large="gfx/leaders/GWA/portrait_europe_generic_4.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	GWA_kaliq_salem={
-		name="Kaliq Salem"
+		name=GWA_Kaliq_Salem
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	GWA_kiet_mahidol={
-		name="Kiet Mahidol"
+		name=GWA_Kiet_Mahidol
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	GWA_johannes_jones={
-		name="Johannes Jones"
+		name=GWA_Johannes_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

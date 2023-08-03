@@ -1,6 +1,6 @@
 characters={
 	KTL_louis_bona={
-		name="Louis Bona"
+		name=KTL_Louis_Bona
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KTL_bob_wilson={
-		name="Bob Wilson"
+		name=KTL_Bob_Wilson
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -27,7 +27,7 @@ characters={
 		}
 	}
 	KTL_alex_wilson={
-		name="Alex Wilson"
+		name=KTL_Alex_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	KTL_alex_white={
-		name="Alex White"
+		name=KTL_Alex_White
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -54,7 +54,7 @@ characters={
 		}
 	}
 	KTL_johannes_smith={
-		name="Johannes Smith"
+		name=KTL_Johannes_Smith
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"

@@ -1,6 +1,6 @@
 characters={
 	BOU_piker_demontue={
-		name="Piker Demontue"
+		name=BOU_Piker_Demontue
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	BOU_shadovkizh_iusterema={
-		name="Shadovkizh Iusterema"
+		name=BOU_Shadovkizh_Iusterema
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	BOU_artyom_kekulele={
-		name="Artyom kekulele"
+		name=BOU_Artyom_kekulele
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

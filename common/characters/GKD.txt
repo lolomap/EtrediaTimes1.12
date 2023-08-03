@@ -1,6 +1,6 @@
 characters={
 	GKD_bob_evans={
-		name="Bob Evans"
+		name=GKD_Bob_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -20,7 +20,7 @@ characters={
 		}
 	}
 	GKD_end_spectator={
-		name="End Spectator"
+		name=GKD_End_Spectator
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	GKD_kakt_f.={
-		name="Kakt F."
+		name=GKD_Kakt_F.
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	GKD_dux_the_emperor={
-		name="Dux the Emperor"
+		name=GKD_Dux_the_Emperor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

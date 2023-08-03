@@ -46,7 +46,7 @@
  UCB_PMC: "Officially not present"
  UCB_diria_pmc: "Officially not present in Diria"
  UCB_aldeko_pmc: "Officially not present in Terbia"
- UCB_sma_pmc: "Officially not present in Mazara"
+ UCB_sma_pmc: "Officially not present in Mazar"
 
  UCB_dem_gov_reform:0 "Reform of the institution of power"
  UCB_dem_stabilnost:0 "Stabilization of the domestic environment"
@@ -62,7 +62,7 @@
  UCB_dem_sbu:0 "Convergence with Seaburland"
  UCB_dem_stavka_defense:0 "Betting on defense"
  UCB_dem_trp_garant:0 "Guarantee Terrapilia"
- UCB_dem_fsc_conversation:0 "Negotiate with FSCB"
+ UCB_dem_fsc_conversation:0 "Negotiate with FSKB"
  UCB_dem_anti_IID:0 "Reassure the Empire"
  UCB_dem_IID:0 "Negotiate Trade Privileges"
  UCB_dem_iid_war:0 "Invasion to the Dux Empire"

@@ -1,5 +1,25 @@
 ﻿l_russian:
   etredia_ach: "Etredia Times"
+
+  TRIGGER_IS_NOT_IRONMAN:0 "Игра в режиме Ironman."
+  TRIGGER_IS_IRONMAN:0 "Игра не в режиме Ironman."
+  historical_tt: "Исторический фокус включен"
+
+  democratic_move: "В прошлом: §YДемократия§!"
+  fascism_move: "В прошлом: §YФашизм§!"
+  communism_move: "В прошлом: §YСоциализм§!"
+  neutrality_move: "В прошлом: §YАвторитаризм§!"
+  monarchism_move: "В прошлом: §YМонархизм§!"
+
+  sbu_garanted_sma: "Сибурленд встал на защиту Мацара"
+  macar_ach: "[YAN.GetFlag][YAN.GetNameDEF] подписала мир"
+  gkd_ach: "ИИД капитулировал"
+  let_me_sleep_ach: "Восстание из-за военной усталости"
+  unstable_ach: "[FSC.GetFlag][FSC.GetNameDEF] потерпел поражение в войне за Ортостан"
+  rybka_ach: "[SBU.GetFlag][SBU.GetNameDEF] и [SFL.GetFlag][SFL.GetNameDEF] подписали мир"
+  mansur_ach: "[SBU.GetFlag][SBU.GetNameDEF] и [YAN.GetFlag][YAN.GetNameDEF] подписали мир"
+  shield_ach: "[EIK.GetFlag][EIK.GetNameDEF] подписал мир"
+
   etredia_ach_1_NAME: "Воины света..."
   etredia_ach_1_DESC: "Победите в Мировой войне на стороне Этредийского Содружества"
 
@@ -52,7 +72,7 @@
   etredia_ach_17_DESC: "Победите в гражданской войне в ОсНБ за Парламент и отразите интервенцию ФШКБ"
 
   etredia_ach_18_NAME: "Власть Комитету!"
-  etredia_ach_18_DESC: "Победите в гражданской войне в ОсНБ за Комитет спасения Каратении и верните все регионы ОСНБ"
+  etredia_ach_18_DESC: "Победите в гражданской войне в ОсНБ за Комитет спасения Каратении и верните все регионы ОcНБ"
 
   etredia_ach_19_NAME: "Куриллец, который смог"
   etredia_ach_19_DESC: "Победите в гражданской войне в ОсНБ за Бельдпо и вступите в Мировую войну"
@@ -112,7 +132,7 @@
   etredia_ach_37_DESC: "Победите в Мировой войне за год"
 
   etredia_ach_38_NAME: "Хлеро-рептилоид"
-  etredia_ach_38_DESC: "Установите сильное влияние Sburska Zvezda во всех возможных странах"
+  etredia_ach_38_DESC: "Установите сильное влияние Sburska Zvezda во всей Этредии"
 
   etredia_ach_39_NAME: "Пока вы громко воевали, они тихо..."
   etredia_ach_39_DESC: "Захватите мир. За Ктевен. Удачи."

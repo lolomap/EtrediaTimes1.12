@@ -5,3 +5,4 @@
   anti_nuclear_building_desc:0 "Комплекс противоракетной обороны, включающий УББ, генераторы активных помех и системы включающие высотные ядерные взрывы"
   PRODUCTION_MATERIALS_URANIUM:0 "Уран"
   uranium_desc:0 "Обогащенный уран, используемый в ядерном оружии"
+  nukes_per_state_tt: "[?nuke_per_state]"
