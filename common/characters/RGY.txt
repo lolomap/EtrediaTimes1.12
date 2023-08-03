@@ -1,6 +1,6 @@
 characters={
 	RGY_varvara_dibult={
-		name="Varvara Dibult"
+		name=RGY_Varvara_Dibult
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	RGY_ostar_karbonal={
-		name="Ostar Karbonal"
+		name=RGY_Ostar_Karbonal
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	RGY_ilya_furman={
-		name="Ilya Furman"
+		name=RGY_Ilya_Furman
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	RGY_keren_lopuskay={
-		name="Keren Lopuskay"
+		name=RGY_Keren_Lopuskay
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	RGY_karl_simvols={
-		name="Karl Simvols"
+		name=RGY_Karl_Simvols
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	RGY_eugeny_urusinh={
-		name="Eugeny Urusinh"
+		name=RGY_Eugeny_Urusinh
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	RGY_bob_brown={
-		name="Bob Brown"
+		name=RGY_Bob_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

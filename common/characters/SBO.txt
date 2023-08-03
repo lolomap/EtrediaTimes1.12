@@ -1,6 +1,6 @@
 characters={
 	SBO_kekoto_jobe={
-		name="Kekoto Jobe"
+		name=SBO_Kekoto_Jobe
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	SBO_edrissa_kujabi={
-		name="Edrissa Kujabi"
+		name=SBO_Edrissa_Kujabi
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	SBO_dembo_marenah={
-		name="Dembo Marenah"
+		name=SBO_Dembo_Marenah
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	SBO_karamba_ceesay={
-		name="Karamba Ceesay"
+		name=SBO_Karamba_Ceesay
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	SBO_yoro_sonko={
-		name="Yoro Sonko"
+		name=SBO_Yoro_Sonko
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	SBO_bob_white={
-		name="Bob White"
+		name=SBO_Bob_White
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"

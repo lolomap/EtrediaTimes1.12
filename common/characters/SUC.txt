@@ -1,6 +1,6 @@
 characters={
 	SUC_karlos_fongrade={
-		name="Karlos Fongrade"
+		name=SUC_Karlos_Fongrade
 		portraits={
 			civilian={
 				large="gfx/leaders/SUC/Portrait_suc_neutrality.dds"
@@ -15,7 +15,7 @@ characters={
 	}
 
     SUC_ponti_sasal={
-		name="Ponti Sas'al"
+		name=SUC_Ponti_Sas'al
 		portraits={
 			army={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"

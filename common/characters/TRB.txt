@@ -1,6 +1,6 @@
 characters={
 	TRB_sudzhuk_shirwanits={
-		name="Sudzhuk Shirwanits"
+		name=TRB_Sudzhuk_Shirwanits
 		portraits={
 			civilian={
 				large="gfx/leaders/TRB/Portrait_trb_sudzhuk.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	TRB_ivan_ishenko={
-		name="Ivan Ishenko"
+		name=TRB_Ivan_Ishenko
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	TRB_irkaz_korhazhin={
-		name="Irkaz Korhazhin"
+		name=TRB_Irkaz_Korhazhin
 		portraits={
 			civilian={
 				large="gfx/leaders/TRB/Portrait_trb_neutrality.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	TRB_mansur_horezhin={
-		name="Mansur Horezhin"
+		name=TRB_Mansur_Horezhin
 		portraits={
 			civilian={
 				large="gfx/leaders/TRB/Portrait_trb_mansur.dds"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	TRB_strechko_lutich={
-		name="Strechko Lutich"
+		name=TRB_Strechko_Lutich
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	TRB_karlos_shmidt={
-		name="Karlos Shmidt"
+		name=TRB_Karlos_Shmidt
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	TRB_radas_potrush={
-		name="Radas Potrush"
+		name=TRB_Radas_Potrush
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	TRB_lucas_jones={
-		name="Lucas Jones"
+		name=TRB_Lucas_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

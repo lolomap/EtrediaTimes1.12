@@ -1,6 +1,6 @@
 characters={
 	NBL_berekta_bambasache={
-		name="Berekta Bambasache"
+		name=NBL_Berekta_Bambasache
 		portraits={
 			civilian={
 				large="gfx/leaders/NBL/portrait_nbl_leader1.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	NBL_naromomonga_kaudoeamus={
-		name="Naromomonga Kaudoeamus"
+		name=NBL_Naromomonga_Kaudoeamus
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -40,7 +40,7 @@ characters={
 		}
 	}
 	NBL_bast_becker={
-		name="Bast Becker"
+		name=NBL_Bast_Becker
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -59,7 +59,7 @@ characters={
 		}
 	}
 	NBL_bob_wilson={
-		name="Bob Wilson"
+		name=NBL_Bob_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

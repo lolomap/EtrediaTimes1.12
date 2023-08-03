@@ -1,6 +1,6 @@
 characters={
 	KER_chachi_dennis={
-		name="Chachi Dennis"
+		name=KER_Chachi_Dennis
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KER_alexander_wilson={
-		name="Alexander Wilson"
+		name=KER_Alexander_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	KER_alex_white={
-		name="Alex White"
+		name=KER_Alex_White
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	KER_johannes_white={
-		name="Johannes White"
+		name=KER_Johannes_White
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	KER_marcus_jones={
-		name="Marcus Jones"
+		name=KER_Marcus_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"

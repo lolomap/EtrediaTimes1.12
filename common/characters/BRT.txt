@@ -1,6 +1,6 @@
 characters={
 	BRT_vladisal_pompitte={
-		name="Vladisal Pompitte"
+		name=BRT_Vladisal_Pompitte
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"

@@ -1,6 +1,6 @@
 characters={
 	BUP_king_bolampulalanogo_xiv={
-		name="King Bolampulalanogo XIV"
+		name=BUP_King_Bolampulalanogo_XIV
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"

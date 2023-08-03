@@ -1,6 +1,6 @@
 characters={
 	ELR_alisa_selistra={
-		name="Alisa Selistra"
+		name=ELR_Alisa_Selistra
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ELR_terine_narabel={
-		name="Terine Narabel"
+		name=ELR_Terine_Narabel
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	ELR_petro_pedroshenko={
-		name="Petro Pedroshenko"
+		name=ELR_Petro_Pedroshenko
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	ELR_ivan_vissarionovich={
-		name="Ivan Vissarionovich"
+		name=ELR_Ivan_Vissarionovich
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	ELR_marcus_walker={
-		name="Marcus Walker"
+		name=ELR_Marcus_Walker
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

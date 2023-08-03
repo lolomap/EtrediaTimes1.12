@@ -1,6 +1,6 @@
 characters={
 	HOR_dhian_ladhana={
-		name="Dhian Ladhana"
+		name=HOR_Dhian_Ladhana
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	HOR_kamel_rimitti={
-		name="Kamel Rimitti"
+		name=HOR_Kamel_Rimitti
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	HOR_anoopjot_jondah={
-		name="Anoopjot Jondah"
+		name=HOR_Anoopjot_Jondah
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	HOR_kaliq_salem={
-		name="Kaliq Salem"
+		name=HOR_Kaliq_Salem
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	HOR_bob_wilson={
-		name="Bob Wilson"
+		name=HOR_Bob_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

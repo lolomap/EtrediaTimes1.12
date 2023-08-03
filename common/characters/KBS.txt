@@ -1,6 +1,6 @@
 characters={
 	KBS_nari_baden={
-		name="Nari Baden"
+		name=KBS_Nari_Baden
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KBS_jonas_jones={
-		name="Jonas Jones"
+		name=KBS_Jonas_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	KBS_marcus_taylor={
-		name="Marcus Taylor"
+		name=KBS_Marcus_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	KBS_peter_roberts={
-		name="Peter Roberts"
+		name=KBS_Peter_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	KBS_bob_brown={
-		name="Bob Brown"
+		name=KBS_Bob_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

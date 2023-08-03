@@ -1,6 +1,6 @@
 characters={
 	EMO_Detskitch_Pukesch={
-		name="Detskitch Pukeshch"
+		name=EMO_Detskitch_Pukeshch
 		portraits={
 			civilian={
 				large="gfx/leaders/DIR/portrait_Detskitch_Pukesch.dds"

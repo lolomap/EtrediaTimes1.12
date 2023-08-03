@@ -1,6 +1,6 @@
 characters={
 	DOS_jim_smith={
-		name="Jim Smith"
+		name=DOS_Jim_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	DOS_lucas_wilson={
-		name="Lucas Wilson"
+		name=DOS_Lucas_Wilson
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -27,7 +27,7 @@ characters={
 		}
 	}
 	DOS_john_evans={
-		name="John Evans"
+		name=DOS_John_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	DOS_alexander_evans={
-		name="Alexander Evans"
+		name=DOS_Alexander_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -54,7 +54,7 @@ characters={
 		}
 	}
 	DOS_john_roberts={
-		name="John Roberts"
+		name=DOS_John_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"

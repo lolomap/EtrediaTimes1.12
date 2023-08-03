@@ -1,6 +1,6 @@
 characters={
 	EIK_vanikh_urssu={
-		name="Vanikh Urssu"
+		name=EIK_Vanikh_Urssu
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	EIK_jakili_nobarans={
-		name="Jakili Nobarans"
+		name=EIK_Jakili_Nobarans
 		portraits={
 			civilian={
 				large="gfx/leaders/EIK/portrait_eik_fascism2.dds"
@@ -29,7 +29,7 @@ characters={
 		}
 	}
 	EIK_vanzader_karamto={
-		name="Vanzader Karamto"
+		name=EIK_Vanzader_Karamto
 		portraits={
 			civilian={
 				large="gfx/leaders/EIK/portrait_eik_fascism1.dds"
@@ -44,7 +44,7 @@ characters={
 		}
 	}
 	EIK_ballitiri_baoughizilli={
-		name="Ballitiri Baoughizilli"
+		name=EIK_Ballitiri_Baoughizilli
 		portraits={
 			civilian={
 				large="gfx/leaders/EIK/portrait_eik_neutrality1.dds"
@@ -59,7 +59,7 @@ characters={
 		}
 	}
 	EIK_tizore_remeko={
-		name="Tizore Remeko"
+		name=EIK_Tizore_Remeko
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -73,7 +73,7 @@ characters={
 		}
 	}
 	EIK_vegim_luga={
-		name="Vegim Luga"
+		name=EIK_Vegim_Luga
 		portraits={
 			army={
 				small=""
@@ -92,7 +92,7 @@ characters={
 		}
 	}
 	EIK_marush_metarali={
-		name="Marush Metarali"
+		name=EIK_Marush_Metarali
 		portraits={
 			army={
 				small=""
@@ -111,7 +111,7 @@ characters={
 		}
 	}
 	EIK_artor_gasho={
-		name="Artor Gasho"
+		name=EIK_Artor_Gasho
 		portraits={
 			army={
 				small=""
@@ -130,7 +130,7 @@ characters={
 		}
 	}
 	EIK_dituror_zhungali={
-		name="Dituror Zhungali"
+		name=EIK_Dituror_Zhungali
 		portraits={
 			army={
 				small=""
@@ -149,7 +149,7 @@ characters={
 		}
 	}
 	EIK_jim_roberts={
-		name="Jim Roberts"
+		name=EIK_Jim_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

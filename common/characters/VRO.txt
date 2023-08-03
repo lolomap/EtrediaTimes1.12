@@ -1,6 +1,6 @@
 characters={
 	VRO_anatoly_kats={
-		name="Anatoly Kats"
+		name=VRO_Anatoly_Kats
 		portraits={
 			civilian={
 				large="gfx/leaders/VRO/portrait_vro_democratic.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	VRO_timur_danilov={
-		name="Timur Danilov"
+		name=VRO_Timur_Danilov
 		portraits={
 			civilian={
 				large="gfx/leaders/VRO/portrait_vro_fascism.dds"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	VRO_timur_nafikov={
-		name="Timur Nafikov"
+		name=VRO_Timur_Nafikov
 		portraits={
 			civilian={
 				large="gfx/leaders/VRO/portrait_vro_fascism.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	VRO_ivan_vissarionovich={
-		name="Ivan Vissarionovich"
+		name=VRO_Ivan_Vissarionovich
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	VRO_artyom_kekulele={
-		name="Artyom kekulele"
+		name=VRO_Artyom_kekulele
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	VRO_dmitry_bochka={
-		name="Dmitry Bochka"
+		name=VRO_Dmitry_Bochka
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	VRO_denis_nazrakov={
-		name="Denis Nazrakov"
+		name=VRO_Denis_Nazrakov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	VRO_jeka_uyuna={
-		name="Jeka Uyuna"
+		name=VRO_Jeka_Uyuna
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -132,7 +132,7 @@ characters={
 		}
 	}
 	VRO_egor_pagrom={
-		name="Egor Pagrom"
+		name=VRO_Egor_Pagrom
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -151,7 +151,7 @@ characters={
 		}
 	}
 	VRO_ivan_lyache={
-		name="Ivan Lyache"
+		name=VRO_Ivan_Lyache
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -170,7 +170,7 @@ characters={
 		}
 	}
 	VRO_john_white={
-		name="John White"
+		name=VRO_John_White
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

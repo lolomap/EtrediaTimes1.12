@@ -1,6 +1,6 @@
 characters={
 	ATI_nikilau_shitero={
-		name="Nikilau Shitero"
+		name=ATI_Nikilau_Shitero
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ATI_rames_berily={
-		name="Rames Berily"
+		name=ATI_Rames_Berily
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
@@ -33,7 +33,7 @@ characters={
 		}
 	}
 	ATI_osa_wancho={
-		name="Osa Wancho"
+		name=ATI_Osa_Wancho
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"

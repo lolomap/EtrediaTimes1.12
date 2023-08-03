@@ -1,6 +1,6 @@
 characters={
 	KYU_xiao_kun={
-		name="Xiao Kun"
+		name=KYU_Xiao_Kun
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KYU_liu_zhenkang={
-		name="Liu ZhenKang"
+		name=KYU_Liu_ZhenKang
 		portraits={
 			civilian={
 				large="gfx/leaders/KYU/Portrait_kyu_fascism_leader.dds"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	KYU_teng_guanting={
-		name="Teng Guanting"
+		name=KYU_Teng_Guanting
 		portraits={
 			civilian={
 				large="gfx/leaders/KYU/Portrait_kyu_neutrality_leader.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	KYU_kong_tao={
-		name="Kong Tao"
+		name=KYU_Kong_Tao
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	KYU_geng_zemin={
-		name="Geng Zemin"
+		name=KYU_Geng_Zemin
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	KYU_lu_huang={
-		name="Lu Huang"
+		name=KYU_Lu_Huang
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	KYU_jonas_williams={
-		name="Jonas Williams"
+		name=KYU_Jonas_Williams
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

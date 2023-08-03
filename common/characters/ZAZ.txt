@@ -1,6 +1,6 @@
 characters={
 	ZAZ_baki_kalhoro={
-		name="Baki Kalhoro"
+		name=ZAZ_Baki_Kalhoro
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ZAZ_kamel_rimitti={
-		name="Kamel Rimitti"
+		name=ZAZ_Kamel_Rimitti
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	ZAZ_nasrallah_chagatai={
-		name="Nasrallah Chagatai"
+		name=ZAZ_Nasrallah_Chagatai
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	ZAZ_shahyar_qureshi={
-		name="Shahyar Qureshi"
+		name=ZAZ_Shahyar_Qureshi
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -67,7 +67,7 @@ characters={
 		}
 	}
 	ZAZ_jim_brown={
-		name="Jim Brown"
+		name=ZAZ_Jim_Brown
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

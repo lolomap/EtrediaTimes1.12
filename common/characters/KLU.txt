@@ -1,6 +1,6 @@
 characters={
 	KLU_qadim_benlabed={
-		name="Qadim Benlabed"
+		name=KLU_Qadim_Benlabed
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KLU_kamel_rimitti={
-		name="Kamel Rimitti"
+		name=KLU_Kamel_Rimitti
 		portraits={
 			civilian={
 				large="gfx/leaders/KLU/portrait_klu_fascism.dds"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	KLU_kaliq_salem={
-		name="Kaliq Salem"
+		name=KLU_Kaliq_Salem
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	KLU_kadir_kouiret={
-		name="Kadir Kouiret"
+		name=KLU_Kadir_Kouiret
 		portraits={
 			army={
 				small=""
@@ -67,7 +67,7 @@ characters={
 		}
 	}
 	KLU_faisal_abbas={
-		name="Faisal Abbas"
+		name=KLU_Faisal_Abbas
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -86,7 +86,7 @@ characters={
 		}
 	}
 	KLU_kamel_arkour={
-		name="Kamel Arkour"
+		name=KLU_Kamel_Arkour
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -105,7 +105,7 @@ characters={
 		}
 	}
 	KLU_alborz_ressam={
-		name="Alborz Ressam"
+		name=KLU_Alborz_Ressam
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -124,7 +124,7 @@ characters={
 		}
 	}
 	KLU_ayman_aboulker={
-		name="Ayman Aboulker"
+		name=KLU_Ayman_Aboulker
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -143,7 +143,7 @@ characters={
 		}
 	}
 	KLU_tarafah_kateb={
-		name="Tarafah Kateb"
+		name=KLU_Tarafah_Kateb
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -162,7 +162,7 @@ characters={
 		}
 	}
 	KLU_shunnar_zekkal={
-		name="Shunnar Zekkal"
+		name=KLU_Shunnar_Zekkal
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -181,7 +181,7 @@ characters={
 		}
 	}
 	KLU_taweel_bennabi={
-		name="Taweel Bennabi"
+		name=KLU_Taweel_Bennabi
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -200,7 +200,7 @@ characters={
 		}
 	}
 	KLU_tahar_hasni={
-		name="Tahar Hasni"
+		name=KLU_Tahar_Hasni
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -219,7 +219,7 @@ characters={
 		}
 	}
 	KLU_lucas_taylor={
-		name="Lucas Taylor"
+		name=KLU_Lucas_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

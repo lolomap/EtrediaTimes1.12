@@ -1,6 +1,6 @@
 characters={
 	GAR_malang_umarzai={
-		name="Malang Umarzai"
+		name=GAR_Malang_Umarzai
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	GAR_zalmay_zand={
-		name="Zalmay Zand"
+		name=GAR_Zalmay_Zand
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	GAR_roshan_dall={
-		name="Roshan Dall"
+		name=GAR_Roshan_Dall
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	GAR_zigar_khushk={
-		name="Zigar Khushk"
+		name=GAR_Zigar_Khushk
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	GAR_pamir_tauqi={
-		name="Pamir Tauqi"
+		name=GAR_Pamir_Tauqi
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	GAR_gulab_hussaini={
-		name="Gulab Hussaini"
+		name=GAR_Gulab_Hussaini
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	GAR_wadaan_rajpar={
-		name="Wadaan Rajpar"
+		name=GAR_Wadaan_Rajpar
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	GAR_marcus_smith={
-		name="Marcus Smith"
+		name=GAR_Marcus_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

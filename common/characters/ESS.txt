@@ -1,6 +1,6 @@
 characters={
 	ESS_mino_kostneregir={
-		name="Mino Kost-Neregir"
+		name=ESS_Mino_Kost-Neregir
 		portraits={
 			civilian={
 				large="gfx/leaders/ESS/minokost.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ESS_horiza_lyuis={
-		name="Horiza Lyuis"
+		name=ESS_Horiza_Lyuis
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -33,7 +33,7 @@ characters={
 		}
 	}
 	ESS_mar_dermontie={
-		name="Mar Der-Montie"
+		name=ESS_Mar_Der-Montie
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -52,7 +52,7 @@ characters={
 		}
 	}
 	ESS_obes_astro={
-		name="Obes Astro"
+		name=ESS_Obes_Astro
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

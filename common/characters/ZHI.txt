@@ -1,6 +1,6 @@
 characters={
 	ZHI_zuthimalin_skandrani={
-		name="Zuthimalin Skandrani"
+		name=ZHI_Zuthimalin_Skandrani
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ZHI_alexander_smith={
-		name="Alexander Smith"
+		name=ZHI_Alexander_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	ZHI_jim_taylor={
-		name="Jim Taylor"
+		name=ZHI_Jim_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	ZHI_alexander_roberts={
-		name="Alexander Roberts"
+		name=ZHI_Alexander_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	ZHI_john_taylor={
-		name="John Taylor"
+		name=ZHI_John_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

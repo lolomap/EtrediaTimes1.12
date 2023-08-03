@@ -1,6 +1,6 @@
 characters={
 	SHK_ryan_abou={
-		name="Ryan Abou"
+		name=SHK_Ryan_Abou
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	SHK_jonas_jones={
-		name="Jonas Jones"
+		name=SHK_Jonas_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	SHK_bob_evans={
-		name="Bob Evans"
+		name=SHK_Bob_Evans
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -41,7 +41,7 @@ characters={
 		}
 	}
 	SHK_johannes_evans={
-		name="Johannes Evans"
+		name=SHK_Johannes_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
@@ -55,7 +55,7 @@ characters={
 		}
 	}
 	SHK_alexander_walker={
-		name="Alexander Walker"
+		name=SHK_Alexander_Walker
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"

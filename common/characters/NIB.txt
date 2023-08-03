@@ -1,6 +1,6 @@
 characters={
 	NIB_narototonga_baudosusas={
-		name="Narototonga Baudosusas"
+		name=NIB_Narototonga_Baudosusas
 		portraits={
 			civilian={
 				large="gfx/leaders/NIB/Naromomonga_Kaudeamus.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	NIB_naromomonga_kaudoeamus={
-		name="Naromomonga Kaudoeamus"
+		name=NIB_Naromomonga_Kaudoeamus
 		portraits={
 			civilian={
 				large="gfx/leaders/NIB/Naromomonga_Kaudeamus.dds"
@@ -40,7 +40,7 @@ characters={
 		}
 	}
 	NIB_lemae_goliath={
-		name="Lemae Goliath"
+		name=NIB_Lemae_Goliath
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

@@ -1,6 +1,6 @@
 characters={
 	CUS_darkeem_pearson={
-		name="Darkeem Pearson"
+		name=CUS_Darkeem_Pearson
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"

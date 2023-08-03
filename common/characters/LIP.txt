@@ -1,6 +1,6 @@
 characters={
 	LIP_not_found={
-		name="Not Found"
+		name=LIP_Not_Found
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -40,7 +40,7 @@ characters={
 		}
 	}
 	LIP_jonas_jones={
-		name="Jonas Jones"
+		name=LIP_Jonas_Jones
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

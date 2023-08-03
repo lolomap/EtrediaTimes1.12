@@ -1,6 +1,6 @@
 characters={
 	ZAM_name_name={
-		name="Horto Manerem"
+		name=ZAM_Horto_Manerem
 		portraits={
 			civilian={
 				large="gfx/leaders/ZAM/Portrait_zam_fascism.dds"

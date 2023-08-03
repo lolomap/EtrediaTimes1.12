@@ -1,6 +1,6 @@
 characters={
 	ZOG_qadim_benlabed={
-		name="Qadim Benlabed"
+		name=ZOG_Qadim_Benlabed
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	ZOG_mavo_mazeona={
-		name="Mavo Mazeona"
+		name=ZOG_Mavo_Mazeona
 		portraits={
 			civilian={
 				large="gfx/leaders/ZOG/portrait_zog_neutrality.dds"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	ZOG_kaliq_salem={
-		name="Kaliq Salem"
+		name=ZOG_Kaliq_Salem
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	ZOG_marcus_walker={
-		name="Marcus Walker"
+		name=ZOG_Marcus_Walker
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

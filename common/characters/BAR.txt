@@ -1,6 +1,6 @@
 characters={
 	BAR_garrinno_iostaner={
-		name="Garrinno Iostaner"
+		name=BAR_Garrinno_Iostaner
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -20,7 +20,7 @@ characters={
 		}
 	}
 	BAR_braks_joustanou={
-		name="Braks Joustanou"
+		name=BAR_Braks_Joustanou
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	BAR_luri_pekarize={
-		name="Luri Pekarize"
+		name=BAR_Luri_Pekarize
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	BAR_kantiris_veksha={
-		name="Kantiris Veksha"
+		name=BAR_Kantiris_Veksha
 		portraits={
 			army={
 				small=""
@@ -67,7 +67,7 @@ characters={
 		}
 	}
 	BAR_ion_swan={
-		name="Ion Swan"
+		name=BAR_Ion_Swan
 		portraits={
 			army={
 				small=""
@@ -86,7 +86,7 @@ characters={
 		}
 	}
 	BAR_silvano_venom={
-		name="Silvano Venom"
+		name=BAR_Silvano_Venom
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -105,7 +105,7 @@ characters={
 		}
 	}
 	BAR_octavianus_babudis={
-		name="Octavianus Babudis"
+		name=BAR_Octavianus_Babudis
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -124,7 +124,7 @@ characters={
 		}
 	}
 	BAR_aberana_newlands={
-		name="Aberana Newlands"
+		name=BAR_Aberana_Newlands
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -143,7 +143,7 @@ characters={
 		}
 	}
 	BAR_quidico_codman={
-		name="Quidico Codman"
+		name=BAR_Quidico_Codman
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -162,7 +162,7 @@ characters={
 		}
 	}
 	BAR_dukker_arnold={
-		name="Dukker Arnold"
+		name=BAR_Dukker_Arnold
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"

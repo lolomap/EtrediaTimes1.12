@@ -1,6 +1,6 @@
 characters={
 	LBD_ubaida_bin_ghaamid={
-		name="Ubaida bin Ghaamid"
+		name=LBD_Ubaida_bin_Ghaamid
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	LBD_atan_bin_jebat={
-		name="Atan bin Jebat"
+		name=LBD_Atan_bin_Jebat
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	LBD_zulkarnain_bin_dumadi={
-		name="Zulkarnain bin Dumadi"
+		name=LBD_Zulkarnain_bin_Dumadi
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	LBD_lukman_budiarto={
-		name="Lukman Budiarto"
+		name=LBD_Lukman_Budiarto
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	LBD_mail_bin_putera={
-		name="Mail bin Putera"
+		name=LBD_Mail_bin_Putera
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	LBD_marcus_walker={
-		name="Marcus Walker"
+		name=LBD_Marcus_Walker
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

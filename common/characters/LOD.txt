@@ -1,6 +1,6 @@
 characters={
 	LOD_ndothusile_sikali={
-		name="Ndothusile Sikali"
+		name=LOD_Ndothusile_Sikali
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	LOD_kamel_rimitti={
-		name="Kamel Rimitti"
+		name=LOD_Kamel_Rimitti
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	LOD_kaliq_salem={
-		name="Kaliq Salem"
+		name=LOD_Kaliq_Salem
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	LOD_alex_taylor={
-		name="Alex Taylor"
+		name=LOD_Alex_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

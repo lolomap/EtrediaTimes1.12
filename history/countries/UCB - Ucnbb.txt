@@ -129,6 +129,12 @@ recruit_character = UCB_silvano_albergo
 
 recruit_character = UCB_jimas_beldpo
 
+recruit_character = UCB_Daniel_Ovchinnikov
+recruit_character = UCB_Heindrih_Vaofren
+recruit_character = UCB_Konnur_Teregor
+recruit_character = UCB_Omak_Bursch
+recruit_character = UCB_Norm_Shieldesven
+
 if = {
     limit = {has_start_date > 2018.9.19 has_start_date < 2023.1.1}
     promote_character = {character = UCB_anatoly_zhmirinovan}

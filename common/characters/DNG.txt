@@ -1,6 +1,6 @@
 characters={
 	DNG_jamtso_bhutia={
-		name="Jamtso Bhutia"
+		name=DNG_Jamtso_Bhutia
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	DNG_lhakpa_damdul={
-		name="Lhakpa Damdul"
+		name=DNG_Lhakpa_Damdul
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	DNG_jungney_wangpok={
-		name="Jungney Wangpok"
+		name=DNG_Jungney_Wangpok
 		portraits={
 			civilian={
 				large="gfx/leaders/DNG/Portrait_dng_neutrality.dds"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	DNG_sangyal={
-		name="Sangyal"
+		name=DNG_Sangyal
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	DNG_choedon_dhanacktsang={
-		name="Choedon Dhanacktsang"
+		name=DNG_Choedon_Dhanacktsang
 		portraits={
 			army={
 				small=""
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	DNG_ngawang_damdul={
-		name="Ngawang Damdul"
+		name=DNG_Ngawang_Damdul
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	DNG_sangey_sambhota={
-		name="Sangey Sambhota"
+		name=DNG_Sangey_Sambhota
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	DNG_wangdak={
-		name="Wangdak"
+		name=DNG_Wangdak
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -132,7 +132,7 @@ characters={
 		}
 	}
 	DNG_tseten={
-		name="Tseten"
+		name=DNG_Tseten
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -151,7 +151,7 @@ characters={
 		}
 	}
 	DNG_gelek_manriwa={
-		name="Gelek Manriwa"
+		name=DNG_Gelek_Manriwa
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -170,7 +170,7 @@ characters={
 		}
 	}
 	DNG_alexander_walker={
-		name="Alexander Walker"
+		name=DNG_Alexander_Walker
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

@@ -1,6 +1,6 @@
 characters={
 	KAR_parlamentum={
-		name="Parlamentum"
+		name=KAR_Parlamentum
 		portraits={
 			civilian={
 				large="gfx/leaders/KAR/portrait_kar_democratic.dds"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KAR_avl_marten={
-		name="Avl Marten"
+		name=KAR_Avl_Marten
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	KAR_tibery_sever={
-		name="Tibery Sever"
+		name=KAR_Tibery_Sever
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_3"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	KAR_roman_nikona={
-		name="Roman Nikona"
+		name=KAR_Roman_Nikona
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	KAR_djegosh_bilma={
-		name="Djegosh Bilma"
+		name=KAR_Djegosh_Bilma
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	KAR_balier_montje={
-		name="Balier Montje"
+		name=KAR_Balier_Montje
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	KAR_karl_hartmann={
-		name="Karl Hartmann"
+		name=KAR_Karl_Hartmann
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

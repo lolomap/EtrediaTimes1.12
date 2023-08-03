@@ -1,6 +1,6 @@
 characters={
 	GOD_not_found={
-		name="Not Found"
+		name=GOD_Not_Found
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_4"
@@ -40,7 +40,7 @@ characters={
 		}
 	}
 	GOD_alexander_smith={
-		name="Alexander Smith"
+		name=GOD_Alexander_Smith
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

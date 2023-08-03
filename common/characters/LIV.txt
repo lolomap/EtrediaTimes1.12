@@ -1,6 +1,6 @@
 characters={
 	LIV_amren_mikaelyan={
-		name="Amren Mikaelyan"
+		name=LIV_Amren_Mikaelyan
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	LIV_jannig_houssian={
-		name="Jannig Houssian"
+		name=LIV_Jannig_Houssian
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	LIV_hamparzoum_boyajian={
-		name="Hamparzoum Boyajian"
+		name=LIV_Hamparzoum_Boyajian
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	LIV_ohan_aznavourian={
-		name="Ohan Aznavourian"
+		name=LIV_Ohan_Aznavourian
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	LIV_viliem_barok={
-		name="Viliem Barok"
+		name=LIV_Viliem_Barok
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	LIV_konstantin_ufimav={
-		name="Konstantin Ufimav"
+		name=LIV_Konstantin_Ufimav
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -94,7 +94,7 @@ characters={
 		}
 	}
 	LIV_boris_hekson={
-		name="Boris Hekson"
+		name=LIV_Boris_Hekson
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -113,7 +113,7 @@ characters={
 		}
 	}
 	LIV_peter_evans={
-		name="Peter Evans"
+		name=LIV_Peter_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

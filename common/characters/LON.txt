@@ -1,6 +1,6 @@
 characters={
 	LON_kim_tarnetilio={
-		name="Kim Tarnetilio"
+		name=LON_Kim_Tarnetilio
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_2"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	LON_kendri_losental={
-		name="Kendri Losental"
+		name=LON_Kendri_Losental
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_6"
@@ -34,7 +34,7 @@ characters={
 		}
 	}
 	LON_ivan_vissarionovich={
-		name="Ivan Vissarionovich"
+		name=LON_Ivan_Vissarionovich
 		portraits={
 			civilian={
 				large="GFX_Portrait_Europe_Generic_1"
@@ -48,7 +48,7 @@ characters={
 		}
 	}
 	LON_johannes_williams={
-		name="Johannes Williams"
+		name=LON_Johannes_Williams
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

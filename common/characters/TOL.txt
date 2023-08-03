@@ -1,6 +1,6 @@
 characters={
 	TOL_ivshebi_mahiro={
-		name="Ivshebi Mahiro"
+		name=TOL_Ivshebi_Mahiro
 		portraits={
 			civilian={
 				large="gfx/leaders/TOL/portrait_tol_leader1.dds"
@@ -26,7 +26,7 @@ characters={
 		}
 	}
     TOL_jego_ertsegan = {
-        name="Jego Ertsegan"
+        name=TOL_Jego_Ertsegan
         portraits={
 			civilian={
 				large="gfx/leaders/TOL/portrait_tol_leader1.dds"
@@ -40,7 +40,7 @@ characters={
 		}
     }
 	TOL_djaimoz_bilde={
-		name="Djaimoz Bilde"
+		name=TOL_Djaimoz_Bilde
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -59,7 +59,7 @@ characters={
 		}
 	}
 	TOL_karains_milti={
-		name="Karains Milti"
+		name=TOL_Karains_Milti
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -78,7 +78,7 @@ characters={
 		}
 	}
 	TOL_john_roberts={
-		name="John Roberts"
+		name=TOL_John_Roberts
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

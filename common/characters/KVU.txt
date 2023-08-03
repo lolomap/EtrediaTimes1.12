@@ -1,6 +1,6 @@
 characters={
 	KVU_pravarasena_ghoshal={
-		name="Pravarasena Ghoshal"
+		name=KVU_Pravarasena_Ghoshal
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	KVU_dasra_kayal={
-		name="Dasra Kayal"
+		name=KVU_Dasra_Kayal
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	KVU_prem_phadanis={
-		name="Prem Phadanis"
+		name=KVU_Prem_Phadanis
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	KVU_ashutosh_dhebar={
-		name="Ashutosh Dhebar"
+		name=KVU_Ashutosh_Dhebar
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	KVU_alexander_evans={
-		name="Alexander Evans"
+		name=KVU_Alexander_Evans
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"

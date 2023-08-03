@@ -1,6 +1,6 @@
 characters={
 	RTT_sergiy_ozo={
-		name="Sergiy Ozo"
+		name=RTT_Sergiy_Ozo
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_5"
@@ -14,7 +14,7 @@ characters={
 		}
 	}
 	RTT_tuparo_lukich={
-		name="Tuparo Lukich"
+		name=RTT_Tuparo_Lukich
 		portraits={
 			civilian={
 				large="GFX_Portrait_europe_generic_7"
@@ -28,7 +28,7 @@ characters={
 		}
 	}
 	RTT_kana_laisak={
-		name="Kana Laisak"
+		name=RTT_Kana_Laisak
 		portraits={
 			civilian={
 				large="GFX_portrait_europe_generic_8"
@@ -42,7 +42,7 @@ characters={
 		}
 	}
 	RTT_bekria_mitrovich={
-		name="Bekria Mitrovich"
+		name=RTT_Bekria_Mitrovich
 		portraits={
 			civilian={
 				large="gfx/leaders/RTT/portrait_rtt_bekriya.dds"
@@ -56,7 +56,7 @@ characters={
 		}
 	}
 	RTT_stabozha_stanislav={
-		name="Stabozha Stanislav"
+		name=RTT_Stabozha_Stanislav
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	RTT_jonas_taylor={
-		name="Jonas Taylor"
+		name=RTT_Jonas_Taylor
 		portraits={
 			civilian={
 				large="GFX_portrait_unknown"
