@@ -62,7 +62,3 @@ set_popularities = {
 
 #
 
-recruit_character = GOD_jim_white
-
-recruit_character = GOD_not_found
-

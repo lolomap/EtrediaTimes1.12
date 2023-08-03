@@ -4,7 +4,7 @@ country_event = {
 	id = ucnb.1
 	title = ucnb.1.t
 	desc = ucnb.1.d
-	picture = GFX_news_even
+	picture = GFX_report_event_ucnb_tolyan_stoit
 	
 	is_triggered_only = yes
 
@@ -830,7 +830,7 @@ country_event = {
     id = ucnb.31
     title = ucnb.31.t
     desc = ucnb.31.d
-    #picture = GFX_event_picture
+    picture = GFX_report_event_ucnb_randero_arest
 
     is_triggered_only = yes
     #fire_only_once = yes

@@ -74,7 +74,7 @@ equipments = {
 		ap_attack = 15
 		air_attack = 0
 
-		build_cost_ic = 6 #gw tanks are clunky
+		build_cost_ic = 3 #6
 	}
 
 	light_tank_equipment_1 = {
@@ -112,7 +112,7 @@ equipments = {
 		ap_attack = 30
 		air_attack = 0		
 		
-		build_cost_ic = 8
+		build_cost_ic = 5 #8
 		resources = {
 			oil = 1
 			steel = 3
@@ -143,7 +143,7 @@ equipments = {
 		ap_attack = 50
 		air_attack = 0	
 		
-		build_cost_ic = 9
+		build_cost_ic = 6 #9
 		resources = {
 			oil = 2
 			steel = 4

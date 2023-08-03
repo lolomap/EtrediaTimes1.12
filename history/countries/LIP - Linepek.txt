@@ -59,7 +59,4 @@ set_popularities = {
 
 #
 
-recruit_character = LIP_jonas_brown
-
-recruit_character = LIP_not_found
 
