@@ -1,0 +1,76 @@
+ideas = {
+    country = {
+		
+		NIB_Ardemama_development_plan = {
+            picture = NIB_Ardemama_development_plan
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				OR = {
+					has_ruling_party = communism
+					has_ruling_party = democratic
+					has_ruling_party = fascism
+					date > 2017.1.1
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                production_speed_buildings_factor = 0.08
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+		
+		NIB_self_sufficiency_policy = {
+            picture = NIB_self_sufficiency_policy
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				has_ruling_party = democratic
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                consumer_goods_factor = 0.025
+				stability_factor = 0.1
+				local_resources_factor = 0.1
+				trade_opinion_factor = -0.25
+			}
+		}
+		
+		NIB_property_redistribution = {
+            picture = NIB_property_redistribution
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				OR = {
+					has_ruling_party = communism
+					has_ruling_party = democratic
+					date > 2016.1.1
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+                stability_factor = 0.05
+				political_power_gain = -0.25
+				neutrality_drift = 0.05
+				communism_drift = 0.02
+			}
+		}
+		
+	}
+}

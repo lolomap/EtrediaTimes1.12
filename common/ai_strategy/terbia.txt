@@ -73,7 +73,7 @@ trb_commi_make_divisions = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 10
+		value = 20
 	}
 	ai_strategy = {
 		type = role_ratio
@@ -98,6 +98,6 @@ trb_commi_make_divisions = {
 	ai_strategy = {
 		type = prepare_for_war
 		id = "SBU"			
-		value = 5
+		value = 1
 	}
 }

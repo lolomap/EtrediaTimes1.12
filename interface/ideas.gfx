@@ -13,6 +13,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/regionalism.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_NIB_property_redistribution"
+		texturefile = "gfx/interface/ideas/idea_NIB_property_redistribution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NIB_self_sufficiency_policy"
+		texturefile = "gfx/interface/ideas/idea_NIB_self_sufficiency_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NIB_Ardemama_development_plan"
+		texturefile = "gfx/interface/ideas/idea_NIB_Ardemama_development_plan.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_UCB_des_army"
 		texturefile = "gfx/interface/ideas/idea_UCB_des_army.dds"
 	}

@@ -34,7 +34,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 0.15 #0.4
+		build_cost_ic = 0.12 #0.4
 		resources = {
 			steel = 2
 		}
@@ -71,7 +71,7 @@ equipments = {
 		ap_attack = 4
 		air_attack = 0.3
 
-		build_cost_ic = 0.2 #0.5
+		build_cost_ic = 0.18 #0.5
 	}
 
 	# Improved weapons  ~1939
@@ -93,9 +93,9 @@ equipments = {
 		ap_attack = 5
 		air_attack = 0.5
 		
-		build_cost_ic = 0.35 #0.6
+		build_cost_ic = 0.26 #0.6
 		resources = {
-			steel = 3
+			steel = 2.5
 		}
 	}
 	
@@ -119,9 +119,9 @@ equipments = {
 		air_attack = 1
 		
 		reliability = 0.8
-		build_cost_ic = 0.5 #0.7
+		build_cost_ic = 0.4 #0.7
 		resources = {
-			steel = 4
+			steel = 3
 		}
 	}
 }

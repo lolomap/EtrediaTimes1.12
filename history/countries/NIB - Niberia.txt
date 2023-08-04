@@ -12,6 +12,10 @@ add_ideas = {
         total_nonfree_press
         limited_entry
 	third_corruption_level
+
+	NIB_Ardemama_development_plan
+	NIB_self_sufficiency_policy
+	NIB_property_redistribution
 }
 
 set_technology = {basic_train = 1

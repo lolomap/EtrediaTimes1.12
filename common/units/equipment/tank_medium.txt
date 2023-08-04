@@ -40,7 +40,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 12
 		
-		build_cost_ic = 12 
+		build_cost_ic = 9 #12 
 		resources = {
 			#oil = 1
 			tungsten = 1
@@ -84,7 +84,7 @@ equipments = {
 		ap_attack = 81
 		air_attack = 0
 
-		build_cost_ic = 13
+		build_cost_ic = 10 #13
 		resources = {
 			#oil = 1
 			tungsten = 1
@@ -116,7 +116,7 @@ equipments = {
 		ap_attack = 91
 		air_attack = 0
 		
-		build_cost_ic = 14
+		build_cost_ic = 12 #14
 		resources = {
 			#oil = 2
 			tungsten = 1
@@ -166,7 +166,7 @@ equipments = {
 		ap_attack = 10
 		air_attack = 0
 
-		build_cost_ic = 28
+		build_cost_ic = 20 #28
 		
 		resources = {
 			#oil = 1
@@ -205,7 +205,7 @@ equipments = {
 		soft_attack = 120
 		hard_attack = 4.5
 		
-		build_cost_ic = 32
+		build_cost_ic = 24 #32
 		
 		resources = {
 			steel = 4
@@ -233,7 +233,7 @@ equipments = {
 		soft_attack = 150
 		hard_attack = 6
 		
-		build_cost_ic = 40
+		build_cost_ic = 30 #40
 		
 		resources = {
 			steel = 4
@@ -280,7 +280,7 @@ equipments = {
 		ap_attack = 165
 		air_attack = 0
 		
-		build_cost_ic = 28
+		build_cost_ic = 20
 		
 		resources = {
 			#oil = 1
@@ -319,7 +319,7 @@ equipments = {
 		hard_attack = 56
 		ap_attack = 185
 		
-		build_cost_ic = 34
+		build_cost_ic = 24
 		
 		resources = {
 			#oil = 1
@@ -350,7 +350,7 @@ equipments = {
 		hard_attack = 70
 		ap_attack = 210
 		
-		build_cost_ic = 44
+		build_cost_ic = 30
 		
 		resources = {
 			#oil = 2
@@ -399,7 +399,7 @@ equipments = {
 		ap_attack = 100
 		air_attack = 50
 
-		build_cost_ic = 28
+		build_cost_ic = 20
 		
 		resources = {
 			#oil = 1
@@ -440,7 +440,7 @@ equipments = {
 		ap_attack = 110
 		air_attack = 70
 		
-		build_cost_ic = 34
+		build_cost_ic = 24
 		
 		resources = {
 			chromium = 4
@@ -471,7 +471,7 @@ equipments = {
 		ap_attack = 125
 		air_attack = 90
 		
-		build_cost_ic = 44
+		build_cost_ic = 30
 		
 		resources = {
 			chromium = 4
