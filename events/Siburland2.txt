@@ -17,14 +17,22 @@ country_event = {
 	UCB = {
 	    add_to_faction = SBU
 	} 
-	ai_chance = { factor = 90 }		
+	ai_chance = {
+        base = 50
+    }		
     }
 	option = {
 	name = sbu.1.b
 	UCB = {
 	    country_event = { id = ucnb.17 days = 1 }
 		}
-	ai_chance = { factor = 10 }		
+	ai_chance = {
+        base = 50
+        modifier = {
+            is_historical_focus_on = yes
+            factor = 0
+        }
+    }		
     }
 }
 
