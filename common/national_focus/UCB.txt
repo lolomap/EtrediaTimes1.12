@@ -328,14 +328,6 @@ focus_tree = {
 				UCB = { country_event = { id = ucb.2 days = 10 } }
 			}
 		}
-		
-		ai_will_do = {
-		factor = 5
-		    modifier = {
-			factor = 5
-			is_historical_focus_on = yes
-			}
-		}
 	}
 	focus = {
 		id = UCB_dem_foreign_policy
@@ -638,13 +630,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
-		}
-		ai_will_do = {
-		factor = 5
-		    modifier = {
-			factor = 0
-			is_historical_focus_on = yes
-		}
 		}
 		x = 33
 		y = 3

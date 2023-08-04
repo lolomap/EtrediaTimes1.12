@@ -19,6 +19,7 @@
   rybka_ach: "[SBU.GetFlag][SBU.GetNameDEF] и [SFL.GetFlag][SFL.GetNameDEF] подписали мир"
   mansur_ach: "[SBU.GetFlag][SBU.GetNameDEF] и [YAN.GetFlag][YAN.GetNameDEF] подписали мир"
   shield_ach: "[EIK.GetFlag][EIK.GetNameDEF] подписал мир"
+  EIK_VRO_war: "[EIK.GetFlag][EIK.GetNameDEF] вступил в войну"
 
   etredia_ach_1_NAME: "Воины света..."
   etredia_ach_1_DESC: "Победите в Мировой войне на стороне Этредийского Содружества"

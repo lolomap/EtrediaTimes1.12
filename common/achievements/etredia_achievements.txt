@@ -87,6 +87,7 @@ etredia_ach_7 = { #
 	}
 	happened = {
         319 = {is_owned_by = TOL}
+        NOT = {has_global_flag = EIK_VRO_war}
         date < 2018.1.1
 	}
 }

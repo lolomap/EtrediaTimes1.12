@@ -82,39 +82,12 @@ on_actions = {
 
     on_declare_war = {
         effect = {
-            if = {limit = {tag = TOB}
-
-                if = {
-                    limit = {
-                        FROM = {
-                            OR = {
-                                tag = EIK
-                                tag = UCB
-                            }
-                        }
-                        has_global_flag = WORLD_WAR
-                        num_divisions < 3
-                    }
-                    set_country_flag = shop_security_ach
+            if = {
+                limit = {
+                    tag = EIK
+                    FROM = {tag = VRO}
                 }
-            }
-            else_if = { limit = {tag = BDA}
-
-                if = {
-                    limit = {
-                        FROM = {
-                            OR = {
-                                tag = EIK
-                                tag = UCB
-                                is_in_faction_with = EIK
-                                is_in_faction_with = UCB
-                            }
-                        }
-                        has_global_flag = WORLD_WAR
-                        has_country_flag = beldpo_win_civilwar
-                    }
-                    set_country_flag = beldpo_ach
-                }
+                set_global_flag = EIK_VRO_war
             }
         }
     }

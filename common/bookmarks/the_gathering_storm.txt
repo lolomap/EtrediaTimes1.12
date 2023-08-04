@@ -16,9 +16,9 @@ bookmarks = {
                 UCB_des_army
             }
             focuses={
-                UCB_2
-                UCB_dem_fsc_conversation
-                UCB_fasc_rospusk_parlament
+                UCB_defend_SHE
+                UCB_dem_ndro2
+                UCB_fasc1
             }
 		}
 
@@ -31,7 +31,7 @@ bookmarks = {
             }
             focuses = {
                 SBU_aldeko_operation
-                SBU_sburska_zvezda
+                SBU_children_of_Savaty
                 SBU_fascism_focus
             }
 		}
@@ -97,9 +97,9 @@ bookmarks = {
 			history = "FSC_GATHERING_STORM_DESC"
                         ideology = democratic
             focuses = {
-                FSC_sponsorkolechianterrorist
-                FSC_declarerequirements
-                FSC_NewCaratenianState
+                FSC_anti_siburian_policy
+                FSC_ortostan_ultimatum
+                FSC_great_mission
             }
 		}
 
