@@ -183,6 +183,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_fsc_conversation
 		}
+        available = {
+            IID = {has_completed_focus = IID_Require_the_eastern_trp}
+        }
 		mutually_exclusive = {
 			focus = UCB_dem_IID
 		}
@@ -211,7 +214,7 @@ focus_tree = {
 		will_lead_to_war_with = IID
 
         available = {
-            IID = {has_completed_focus = IID_Require_the_eastern_trp}
+            IID = {has_completed_focus = IID_finish_off_the_minor}
         }
 
 		completion_reward = {
@@ -336,6 +339,60 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem1
 		}
+        completion_reward = {
+            hidden_effect = {
+                add_opinion_modifier = {
+                    target = SBU
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+                add_opinion_modifier = {
+                    target = SFL
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+                add_opinion_modifier = {
+                    target = KAR
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+                add_opinion_modifier = {
+                    target = TRB
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+                add_opinion_modifier = {
+                    target = OIK
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+            }
+            SBU = {
+                add_opinion_modifier = {
+                    target = UCB
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+            }
+            SFL = {
+                add_opinion_modifier = {
+                    target = UCB
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+            }
+            KAR = {
+                add_opinion_modifier = {
+                    target = UCB
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+            }
+            TRB = {
+                add_opinion_modifier = {
+                    target = UCB
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+            }
+            OIK = {
+                add_opinion_modifier = {
+                    target = UCB
+                    modifier = UCB_dem_foreign_policy_opinion
+                }
+            }
+        }
 		ai_will_do = {
 		factor = 2
 		    modifier = {
@@ -1987,7 +2044,7 @@ focus_tree = {
 	
     focus = {
         id = UCB_strong_arm
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_strong_arm
         cost = 5
         x = 45
         y = 4
@@ -2004,7 +2061,7 @@ focus_tree = {
 
     focus = {
         id = UCB_fascism_way
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_fascism_way
         cost = 5
         x = 47
         y = 5
@@ -2022,7 +2079,7 @@ focus_tree = {
 
     focus = {
         id = UCB_neutrality_way
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_neutrality_way
         cost = 5
         x = 55
         y = 5
@@ -2478,7 +2535,7 @@ focus_tree = {
     focus = {
 		id = UCB_fasc_south_ORB
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_sep_punishment
 		}
@@ -2763,7 +2820,7 @@ focus_tree = {
 
     focus = {
         id = UCB_parlament_fas
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas
         cost = 5
         x = 43
         y = 5
@@ -2779,7 +2836,7 @@ focus_tree = {
     
     focus = {
         id = UCB_parlament_fas2
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas2
         cost = 5
         x = 43
         y = 6
@@ -2799,7 +2856,7 @@ focus_tree = {
     
     focus = {
         id = UCB_parlament_fas3
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas3
         cost = 5
         x = 43
         y = 7
@@ -2816,7 +2873,7 @@ focus_tree = {
 
     focus = {
         id = UCB_parlament_fas4
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas4
         cost = 5
         x = 41
         y = 8
@@ -2839,7 +2896,7 @@ focus_tree = {
 
     focus = {
         id = UCB_parlament_fas5
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas5
         cost = 7
         x = 43
         y = 8
@@ -2859,7 +2916,7 @@ focus_tree = {
 
     focus = {
         id = UCB_parlament_fas6
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas6
         cost = 10
         x = 43
         y = 9
@@ -2889,7 +2946,7 @@ focus_tree = {
 
     focus = {
         id = UCB_parlament_fas7
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas7
         cost = 10
         x = 43
         y = 10
@@ -2961,7 +3018,7 @@ focus_tree = {
 
     focus = {
         id = UCB_parlament_fas8
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas8
         cost = 10
         x = 45
         y = 10
@@ -2983,7 +3040,7 @@ focus_tree = {
 
     focus = {
         id = UCB_parlament_fas9
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_parlament_fas9
         cost = 10
         x = 41
         y = 10

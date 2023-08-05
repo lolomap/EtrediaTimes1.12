@@ -22,7 +22,7 @@
   UCB_president_side: "[UCB.GetLeader]"
   UCB_parlament_side: "[UCB_parlament_sl]"
   UCB_parlament_dem: "Парламент ОСНБ"
-  UCB_parlament_fas: "Национальный Совет Каратении"
+  UCB_parlament_fas_: "Национальный Совет Каратении"
   UCB_parlament_com: "Федеративный комитет"
   UCB_parlament_mon: "Императорское Вече"
   UCB_parlament_range: "Неформальные полномочия"

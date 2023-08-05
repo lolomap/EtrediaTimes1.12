@@ -60,7 +60,7 @@ defined_text = {
         trigger = {
             UCB = {has_government = fascism}
         }
-        localization_key = UCB_parlament_fas
+        localization_key = UCB_parlament_fas_
     }
     text = {
         trigger = {

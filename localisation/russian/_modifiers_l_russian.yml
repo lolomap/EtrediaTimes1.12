@@ -18,6 +18,9 @@
  KAR_hateIID:0 "Санкции от Картилии"
  SBU_hateIID:0 "Санкции от Сибурленда"
  EIK_hateIID:0 "Санкции от Эйклиндстинда"
+
+ UCB_dem_foreign_policy_opinion": "Политика Жмиринована"
+
  FSC_IID_partner:0 "Партнерские отношения"
 
  SBU_eik_relations:0 "Южный партнер"
