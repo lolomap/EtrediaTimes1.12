@@ -486,6 +486,13 @@ scripted_gui = {
                         }
                         add = 10000
                     }
+                    modifier = {
+                        OR = {
+                            var:ROOT.cr_ai_minor_target = { tag = PREV}
+                            check_variable = { ROOT.cr_ai_minor_target = 0 }
+                        }
+                        factor = 0
+                    }
                 }
             }
             puppet_button_click = {
@@ -521,7 +528,7 @@ scripted_gui = {
 
             cRelease_click = {
                 if = {
-                    limit = {always = yes}
+                    limit = {OR = {var:ROOT.cr_ai_minor_target = {NOT = {tag = PREV}}} is_ai = no}}
 
                     ROOT = {
                         set_country_flag = {
@@ -531,7 +538,12 @@ scripted_gui = {
                         }
                         set_variable = {to_crysis = PREV}
                         set_variable = {sender_crysis = ROOT}
-                        set_variable = {minor_crysis = v}
+                        if = { limit = {is_ai = no}
+                            set_variable = {minor_crysis = v}
+                        }
+                        else = {
+                            set_variable = { minor_crysis = cr_ai_minor_target }
+                        }
 
                         set_variable = {type_crysis = 2}
 

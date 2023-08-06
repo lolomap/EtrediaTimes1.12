@@ -1,6 +1,84 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_strong_arm"
+	texturefile="gfx/interface/goals/goal_ucb_strong_arm.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas10"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas10.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas9"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas9.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas8"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas8.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas7"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas7.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas6"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas6.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas5"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas5.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas4"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas4.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas3"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas3.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas2"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_parlament_fas"
+	texturefile="gfx/interface/goals/goal_ucb_parlament_fas.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_neutrality_way"
+	texturefile="gfx/interface/goals/goal_ucb_neutrality_way.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_fascism_way"
+	texturefile="gfx/interface/goals/goal_ucb_fascism_way.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_dem_ndro2"
 	texturefile="gfx/interface/goals/goal_ucb_dem_ndro2.dds"
 }

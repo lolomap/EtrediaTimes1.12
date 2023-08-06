@@ -58,6 +58,10 @@ opinion_modifiers = {
 		value = 50
 	}
 
+    UCB_dem_foreign_policy_opinion = {  
+        value = 15
+    }
+
 	UCB_hateIID = {
 		value = -50
 	}

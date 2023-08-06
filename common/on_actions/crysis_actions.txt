@@ -170,7 +170,7 @@ on_actions = {
                                     limit = {check_variable = {crysis_wish > 0}}
 
                                     set_variable = {crysis_chance = 2}
-                                    #multiply_temp_variable = {crysis_wish = 0.25}
+                                    multiply_temp_variable = {crysis_wish = 0.5}
                                     add_to_variable = {crysis_chance = crysis_wish}
 
                                     set_variable_to_random = crysis_fire

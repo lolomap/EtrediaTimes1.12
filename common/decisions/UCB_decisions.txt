@@ -38,6 +38,22 @@ UCB_bop_category = {
 
         ai_will_do = {
             base = 200
+            modifier = {
+                OR = {
+                    power_balance_value = {
+                        id = UCB_parlament_balance
+                        value > 0.5
+                    }
+                    AND = {
+                        has_country_leader = {character = UCB_terine_narabel}
+                        power_balance_value = {
+                            id = UCB_parlament_balance
+                            value > 0.9
+                        }
+                    }
+                }
+                factor = 0
+            }
         }
     }
     UCB_support_vote_company = {
@@ -60,6 +76,22 @@ UCB_bop_category = {
 
         ai_will_do = {
             base = 10
+            modifier = {
+                OR = {
+                    power_balance_value = {
+                        id = UCB_parlament_balance
+                        value > 0.5
+                    }
+                    AND = {
+                        has_country_leader = {character = UCB_terine_narabel}
+                        power_balance_value = {
+                            id = UCB_parlament_balance
+                            value > 0.9
+                        }
+                    }
+                }
+                factor = 0
+            }
         }
     }
 
@@ -76,6 +108,22 @@ UCB_bop_category = {
 
         ai_will_do = {
             base = 200
+            modifier = {
+                OR = {
+                    power_balance_value = {
+                        id = UCB_parlament_balance
+                        value > 0.5
+                    }
+                    AND = {
+                        has_country_leader = {character = UCB_terine_narabel}
+                        power_balance_value = {
+                            id = UCB_parlament_balance
+                            value > 0.9
+                        }
+                    }
+                }
+                factor = 0
+            }
         }
     }
 
@@ -94,6 +142,22 @@ UCB_bop_category = {
 
         ai_will_do = {
             base = 500
+            modifier = {
+                OR = {
+                    power_balance_value = {
+                        id = UCB_parlament_balance
+                        value > 0.5
+                    }
+                    AND = {
+                        has_country_leader = {character = UCB_terine_narabel}
+                        power_balance_value = {
+                            id = UCB_parlament_balance
+                            value > 0.9
+                        }
+                    }
+                }
+                factor = 0
+            }
         }
     }
 
@@ -113,7 +177,27 @@ UCB_bop_category = {
         }
 
         ai_will_do = {
-            base = 1000
+            base = 100
+            modifier = {
+                has_idea = UCB_poroh_blet
+                factor = 100
+            }
+            modifier = {
+                OR = {
+                    power_balance_value = {
+                        id = UCB_parlament_balance
+                        value > 0.5
+                    }
+                    AND = {
+                        has_country_leader = {character = UCB_terine_narabel}
+                        power_balance_value = {
+                            id = UCB_parlament_balance
+                            value > 0.9
+                        }
+                    }
+                }
+                factor = 0
+            }
         }
     }
 
@@ -130,6 +214,22 @@ UCB_bop_category = {
             modifier = {
                 check_variable = { wtire > 100 }
                 add = 700
+            }
+            modifier = {
+                OR = {
+                    power_balance_value = {
+                        id = UCB_parlament_balance
+                        value > 0.5
+                    }
+                    AND = {
+                        has_country_leader = {character = UCB_terine_narabel}
+                        power_balance_value = {
+                            id = UCB_parlament_balance
+                            value > 0.9
+                        }
+                    }
+                }
+                factor = 0
             }
         }
     }
@@ -245,6 +345,22 @@ UCB_bop_category = {
                 check_variable = { ucb_reg_fas > 0.25 }
                 has_government = democratic
                 add = 500
+            }
+            modifier = {
+                OR = {
+                    power_balance_value = {
+                        id = UCB_parlament_balance
+                        value > 0.5
+                    }
+                    AND = {
+                        has_country_leader = {character = UCB_terine_narabel}
+                        power_balance_value = {
+                            id = UCB_parlament_balance
+                            value > 0.9
+                        }
+                    }
+                }
+                factor = 0
             }
         }
     }
