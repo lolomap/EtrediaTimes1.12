@@ -427,8 +427,10 @@ focus_tree = {
 			focus = SBU_dem_RGY_alliance
 		}
 		completion_reward = {
-		SBU = { country_event = { id = sbu.23 days = 1 } }
-        add_to_variable = {trade_war = 15}
+            SBU = { country_event = { id = sbu.23 days = 1 } }
+            add_to_variable = {trade_war = 15}
+            RGY = {remove_from_sphere = yes}
+            ELR = {remove_from_sphere = yes}
 		}
 		ai_will_do = {
 		factor = 70

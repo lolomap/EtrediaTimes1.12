@@ -21,6 +21,7 @@ ideas = {
 			modifier = {
 			conscription_factor = -0.6
                 	consumer_goods_factor = 0.45
+                    surrender_limit = -0.2
 			}
 		}
 		IID_recrut_reduced = {

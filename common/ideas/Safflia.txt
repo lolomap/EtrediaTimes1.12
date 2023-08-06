@@ -176,6 +176,30 @@ ideas = {
             }
         }
 
+    SFL_tradewar_loss  = {
+        allowed = {
+            always = no
+        }
+        
+        removal_cost = -1
+        cancel = {
+            OR = {
+                NOT = {country_exists = SFL}
+                NOT = {country_exists = SBU}
+            }
+        }
+
+
+        modifier = {
+            custom_modifier_tooltip = world_influence_cost_clamp
+            consumer_goods_factor = 0.05
+            production_speed_industrial_complex_factor = -0.08
+            production_speed_infrastructure_factor = -0.08
+            local_resources_factor = -0.1
+            winfluence_modifier = -0.05
+        }
+    }
+
 	SFL_politizol = {
 
 		picture = polit_

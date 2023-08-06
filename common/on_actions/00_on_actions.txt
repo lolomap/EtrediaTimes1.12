@@ -747,6 +747,16 @@ on_actions = {
                     }
                     clr_country_flag = tradewar
                     SBU = {clr_country_flag = tradewar}
+                    if = {
+                        limit = {
+                            SFL = {check_variable = {trade_war < 1}}
+                        }
+                        SBU = {add_ideas = SFL_tradewar_loss}
+                    }
+                    else_if = {
+                        limit = {SBU = {check_variable = {trade_war > 99}}}
+                        SFL = {add_ideas = SFL_tradewar_loss}
+                    }
                 }
             }
         }
