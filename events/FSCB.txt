@@ -176,6 +176,20 @@ country_event = {
 		    KUL = { declare_war_on = { target = FSC type = annex_everything } }
 			country_event = { id = fscb.7 days = 5 }
 			IID = { country_event = { id = dux.4 days = 200 } }
+            FSC = {
+                delete_units = { 
+                    division_template = "FSCB Mechanized"
+                    disband = no
+                }
+                delete_units = { 
+                    division_template = "Main Tank-Division"
+                    disband = no
+                }
+                delete_units = { 
+                    division_template = "Mech. Rocket Brigade"
+                    disband = no
+                }
+            }
         }
 	}
 }
@@ -280,15 +294,6 @@ country_event = {
 				set_rule = {can_join_factions = no}
 			}
 		    ANR = { declare_war_on = { target = FSC type = annex_everything } }
-            FSC = { delete_unit = { 
-            state = 47
-            state = 48
-			state = 49
-			state = 50
-			state = 65
-			state = 66
-            disband = yes
-            }}
         }	
 	}
 }

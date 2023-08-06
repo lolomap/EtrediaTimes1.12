@@ -747,6 +747,16 @@ on_actions = {
                     }
                     clr_country_flag = tradewar
                     SBU = {clr_country_flag = tradewar}
+                    if = {
+                        limit = {
+                            SFL = {check_variable = {trade_war < 1}}
+                        }
+                        SBU = {add_ideas = SFL_tradewar_loss}
+                    }
+                    else_if = {
+                        limit = {SBU = {check_variable = {trade_war > 99}}}
+                        SFL = {add_ideas = SFL_tradewar_loss}
+                    }
                 }
             }
         }
@@ -765,17 +775,26 @@ on_actions = {
             }
 
             # Рост оппозиции
-			set_temp_variable = {dem_opposition_delta = 1}
-			set_temp_variable = {fas_opposition_delta = 1}
-			set_temp_variable = {neu_opposition_delta = 1}
-			set_temp_variable = {com_opposition_delta = 1}
-			set_temp_variable = {mon_opposition_delta = 1}
+			set_variable = {dem_opposition_delta = 1}
+			set_variable = {fas_opposition_delta = 1}
+			set_variable = {neu_opposition_delta = 1}
+			set_variable = {com_opposition_delta = 1}
+			set_variable = {mon_opposition_delta = 1}
 
-			multiply_temp_variable = {dem_opposition_delta = dem_opposition_factor}
-			multiply_temp_variable = {fas_opposition_delta = fas_opposition_factor}
-			multiply_temp_variable = {neu_opposition_delta = neu_opposition_factor}
-			multiply_temp_variable = {com_opposition_delta = com_opposition_factor}
-			multiply_temp_variable = {mon_opposition_delta = mon_opposition_factor}
+			multiply_variable = {dem_opposition_delta = dem_opposition_factor}
+			multiply_variable = {fas_opposition_delta = fas_opposition_factor}
+			multiply_variable = {neu_opposition_delta = neu_opposition_factor}
+			multiply_variable = {com_opposition_delta = com_opposition_factor}
+			multiply_variable = {mon_opposition_delta = mon_opposition_factor}
+
+            if = {
+                limit = {has_country_flag = ideology_protection}
+                add_to_variable = {dem_opposition_delta = -0.5}
+                add_to_variable = {fas_opposition_delta = -0.5}
+                add_to_variable = {neu_opposition_delta = -0.5}
+                add_to_variable = {com_opposition_delta = -0.5}
+                add_to_variable = {mon_opposition_delta = -0.5}
+            }
 
 			add_to_variable = {dem_opposition = dem_opposition_delta}
 			add_to_variable = {fas_opposition = fas_opposition_delta}

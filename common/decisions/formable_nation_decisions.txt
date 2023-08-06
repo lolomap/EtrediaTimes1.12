@@ -367,6 +367,7 @@ form_msas_category = {
         visible = {
             original_tag = SFL
             has_global_flag = form_scandinavia_flag
+            RGY = {check_variable = { sphere_owner = SFL }}
         }
 
         available = {

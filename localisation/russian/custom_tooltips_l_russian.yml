@@ -83,7 +83,12 @@
   wtire_boost: "Военная усталость: $RIGHT|-=$"
   world_influence_cost_clamp:0 "§RДругие модификаторы влияния не работают§!"
 
+  involve_to_sphere_tt: "§Y[PREV.GetFlag][PREV.GetNameDef]§! §Rпопадет§! под сферу [GetFlag]§Y[GetAdjective]§! влияния."
   remove_from_sphere_tt: "Страна §Yвыйдет§! из-под сферы [?sphere_owner.GetFlag]§Y[?sphere_owner.GetAdjective]§! влияния."
+  is_in_sphere_tt: "В §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
+  is_in_sphere_tt_NOT: "Не в §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
+
+  failed_orb: "Провалившиеся переговоры"
 
   DEM_train_modern_army_tooltip:0 "§CНам станет доступна подготовка новых войск при поддержке Картилии§"
   kar_political_support_tooltip:0 "§Мы поможем Дирии сохранить внутренную стабильность государства.§"

@@ -524,7 +524,7 @@ country_event = {
 		is_puppet = no
         if = {
             limit = {has_country_flag = ideology_protection}
-            always = yes
+            always = no
         }
 	}
 	
@@ -567,7 +567,7 @@ country_event = {
 		is_puppet = no
         if = {
             limit = {has_country_flag = ideology_protection}
-            always = yes
+            always = no
         }
 	}
 	
@@ -610,7 +610,7 @@ country_event = {
 		is_puppet = no
         if = {
             limit = {has_country_flag = ideology_protection}
-            always = yes
+            always = no
         }
 	}
 	
@@ -653,7 +653,7 @@ country_event = {
 		is_puppet = no
         if = {
             limit = {has_country_flag = ideology_protection}
-            always = yes
+            always = no
         }
 	}
 	

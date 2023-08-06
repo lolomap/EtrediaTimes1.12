@@ -137,21 +137,22 @@ country_event = {
     }
 
     option = {
-    name = sfl.5.a
-	SBU = { country_event = { id = sbu.24 days = 1 } }
-	ai_chance = { 
-	factor = 80 
-        modifier = {
-			factor = 1
-			is_historical_focus_on = yes
-		}
-	}
+        name = sfl.5.a
+        SBU = { country_event = { id = sbu.24 days = 1 } }
+        ai_chance = { 
+            base = 50
+        }
 	}
     option = {
-    name = sfl.5.b
-	SBU = { country_event = { id = sbu.28 days = 1 } }
-	give_guarantee = ELR
-	ai_chance = { factor = 20 }
+        name = sfl.5.b
+        SBU = { country_event = { id = sbu.28 days = 1 } }
+        ELR = {MOF = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        ai_chance = {
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
 	}
 }
 
@@ -168,9 +169,9 @@ country_event = {
     }
 
     option = {
-    name = sfl.6.a
-	give_guarantee = MOF
-	SBU = { country_event = { id = sbu.25 days = 1 } }
+        name = sfl.6.a
+        MOF = {SFL = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        SBU = { country_event = { id = sbu.25 days = 1 } }
 	}
 }
 
@@ -187,8 +188,8 @@ country_event = {
     }
 
     option = {
-    name = sfl.7.a
-	SBU = { country_event = { id = sbu.26 days = 5 } }
+        name = sfl.7.a
+        SBU = { country_event = { id = sbu.26 days = 5 } }
 	}
 }
 
@@ -206,19 +207,21 @@ country_event = {
 
     option = {
     name = sfl.8.a
-	SBU = { country_event = { id = sbu.27 days = 1 } }
-	ai_chance = { 
-	factor = 90 
-        modifier = {
-			factor = 1
-			is_historical_focus_on = yes
-		}
-	}
+        SBU = { country_event = { id = sbu.27 days = 1 } }
+        ai_chance = { 
+            base = 50
+        }
 	}
     option = {
-    name = sfl.8.b
-	SBU = { country_event = { id = sbu. days = 1 } }
-	ai_chance = { factor = 10 }
+        name = sfl.8.b
+        SBU = { country_event = { id = sbu.62 days = 1 } }
+        ai_chance = {
+            base = 50
+            modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+        }
 	}
 }
 
@@ -236,18 +239,18 @@ country_event = {
 
     option = {
     name = sfl.9.a
-	SBU = {
-	    add_opinion_modifier = {
-        target = SFL
-        modifier = SBU_SFL_bad_deal
+        SBU = {
+            add_opinion_modifier = {
+            target = SFL
+            modifier = SBU_SFL_bad_deal
+            }
         }
-    }
-	SFL = {
-	    add_opinion_modifier = {
-        target = SBU
-        modifier = SBU_SFL_bad_deal
+        SFL = {
+            add_opinion_modifier = {
+            target = SBU
+            modifier = SBU_SFL_bad_deal
+            }
         }
-    }
 	}
 }
 
@@ -316,6 +319,7 @@ country_event = {
     }
     option = {
         name = sfl.11.b
+        SBU = {country_event = {id = sbu.78}}
         ai_chance = {factor = 20}
     }
 }
@@ -343,7 +347,7 @@ country_event = {
     }
 }
 
-сcountry_event = {
+country_event = {
     id = sfl.13
     title = sfl.13.t
     desc = sfl.13.d
@@ -387,9 +391,9 @@ country_event = {
     }
 
     option = {
-    name = sfl.14.a
-	puppet = ELR
-	SBU = { country_event = { id = sbu.60 days = 1 } }
+        name = sfl.14.a
+        ELR = {SFL = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        SBU = { country_event = { id = sbu.60 days = 1 } }
 	}
 }
 
@@ -406,16 +410,16 @@ country_event = {
     }
 
     option = {
-    name = sfl.15.a
-	SBU = { give_guarantee = MOF }
-	SBU = { country_event = { id = sbu.61 days = 1 } }
+        name = sfl.15.a
+        MOF = {SBU = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        SBU = { country_event = { id = sbu.61 days = 1 } }
 		ai_chance = { 
 			factor = 0.7
 		}
 	}
     option = {
-    name = sfl.15.b
-	SBU = { country_event = { id = sbu.63 days = 1 } }
+        name = sfl.15.b
+	    SBU = { country_event = { id = sbu.63 days = 1 } }
 		ai_chance = { 
 			factor = 0.3
 		}
@@ -435,8 +439,8 @@ country_event = {
     }
 
     option = {
-    name = sfl.16.a
-	SBU = { country_event = { id = sbu.27 days = 1 } }
+        name = sfl.16.a
+	    SBU = { country_event = { id = sbu.27 days = 1 } }
 		ai_chance = { 
 			factor = 0.3
 		}
@@ -456,9 +460,9 @@ country_event = {
     }
 
     option = {
-    name = sfl.17.a
-	SBU = { give_guarantee = RGY }
-	SBU = { country_event = { id = sbu.27 days = 1 } }
+        name = sfl.17.a
+        RGY = {SBU = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        SBU = { country_event = { id = sbu.27 days = 1 } }
 		ai_chance = { 
 			factor = 0.5
 		}
@@ -516,30 +520,8 @@ country_event = {
 
     option = {
     name = sfl.19.a
-	SBU = { give_guarantee = RGY }
-	SBU = { country_event = { id = sbu.27 days = 1 } }
-	}
-}
-
-country_event = {
-    id = sfl.20
-    title = sfl.20.t
-    desc = sfl.20.d
-	picture = GFX_news_event
-
-    is_triggered_only = yes
-
-	trigger = {
-        TAG = SFL
-    }
-
-    option = {
-    name = sfl.20.a
-	SBU = { give_guarantee = RGY }
-	SBU = { country_event = { id = sbu.27 days = 1 } }
-		ai_chance = { 
-			factor = 0.5
-		}
+	    RGY = {SBU = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+	    SBU = { country_event = { id = sbu.27 days = 1 } }
 	}
 }
 

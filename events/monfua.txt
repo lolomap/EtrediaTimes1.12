@@ -32,34 +32,44 @@ country_event = {
 
 	option = {
 		name = monfua.2.a
+        trigger = {
+            OR = {
+                NOT = {has_variable = sphere_owner}
+                check_variable = { sphere_owner = SFL }
+            }
+        }
 		SFL = {
 			annex_country = {
 			    target = MOF
 			    transfer_troops = yes
 			}
 		}
-                ai_chance = { factor = 90 }
-        }
+        ai_chance = { base = 90 }
+    }
 	option = {
-	name = monfua.2.b
+	    name = monfua.2.b
         MOF = { add_ideas = MOF_glory_to_independence }
 		MOF = { remove_ideas = MOF_fascismpower }
         SFL = { country_event = { id = sfl.3 days = 1 } }
 		
 		ai_chance = { 
-		factor = 10 
+		    base = 10 
 			modifier = {
 				MOF = {
 					has_opinion = {
 					target = SBU
-					value > 49
+					value > 59
 					}
 				}
-			factor = 50
+			    add = 15
 			}
+            modifier = {
+                check_variable = { sphere_owner = SBU }
+                factor = 0
+            }
 			modifier = {
 				is_historical_focus_on = yes
-				factor = -100
+				factor = 0
 			}
 		}
     }
