@@ -55,8 +55,8 @@ focus_tree = {
 		id = UCB_dem_fsc_conversation
 		icon = GFX_goal_ucb_dem_fsc_conversation
 		cost = 10
-		x = 3
-		y = 8
+		x = 6
+		y = 7
 
         available = {FSC = {has_completed_focus = FSC_Alende_group}}
 
@@ -87,8 +87,8 @@ focus_tree = {
 
         prerequisite = {focus = UCB_dem_fsc_conversation}
 
-		x = 1
-		y = 9
+		x = 2
+		y = 8
 
 		completion_reward = {
 			UCB = { give_guarantee = ORB }
@@ -133,8 +133,8 @@ focus_tree = {
 		id = UCB_dem_kulishtia
 		icon = GFX_goal_ucb_dem_kulishtia
 		cost = 10
-		x = 0
-		y = 11
+		x = 4
+		y = 9
 
         prerequisite = {focus = UCB_dem_ndro}
         prerequisite = {focus = UCB_dem_trp_garant}
@@ -173,8 +173,8 @@ focus_tree = {
 				add_state_core = 58
 			}
 		}
-		x = 1
-		y = 12
+		x = 5
+		y = 10
 	}
 	focus = {
 		id = UCB_dem_anti_IID
@@ -200,8 +200,8 @@ focus_tree = {
 			54 = { is_controlled_by = IID }
 			}
 		}
-		x = 3
-		y = 9
+		x = 6
+		y = 8
 
 	}
 	focus = {
@@ -220,8 +220,8 @@ focus_tree = {
 		completion_reward = {
 			UCB = { country_event = { id = ucnb.21 days = 1 } }
 		}
-		x = 3
-		y = 10
+		x = 6
+		y = 9
 
 	}
 	focus = {
@@ -239,8 +239,8 @@ focus_tree = {
 				country_event = { id = orb.43 days = 30 }
 			}
 		}
-		x = 1
-		y = 10
+		x = 2
+		y = 9
 
 	}
 	focus = {
@@ -256,8 +256,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		x = 5
-		y = 9
+		x = 8
+		y = 8
 
 	}
 	focus = {
@@ -267,8 +267,8 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_IID
 		}
-		x = 5
-		y = 10
+		x = 8
+		y = 9
 
 	}
 	focus = {
@@ -400,8 +400,8 @@ focus_tree = {
 				date > 2016.1.1
 			}
 		}
-		x = 3
-		y = 5
+		x = 6
+		y = 4
 
 	}
 	focus = {
@@ -422,8 +422,8 @@ focus_tree = {
 			date > 2016.1.1
 			}
 		}
-		x = 9
-		y = 5
+		x = 12
+		y = 4
 
 	}
 	focus = {
@@ -439,8 +439,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}
-		x = 15
-		y = 5
+		x = 17
+		y = 4
 
 	}
 	focus = {
@@ -451,7 +451,7 @@ focus_tree = {
 			focus = UCB_dem1
 		}
 		x = 21
-		y = 5
+		y = 4
 		
 		completion_reward = {
 			add_political_power = 150
@@ -492,7 +492,7 @@ focus_tree = {
 			focus = UCB_dem_gov_reform
 		}
 		x = 21
-		y = 6
+		y = 5
 
 		completion_reward = {
 			add_stability = 0.05
@@ -520,7 +520,7 @@ focus_tree = {
 			focus = UCB_dem_stabilnost
 		}
 		x = 21
-		y = 7
+		y = 6
 
 		completion_reward = {
 			add_stability = 0.1
@@ -550,7 +550,7 @@ focus_tree = {
 			focus = UCB_dem_battle
 		}
 		x = 20
-		y = 8
+		y = 7
 
 		completion_reward = {
 			#add_stability = 0.05
@@ -579,7 +579,7 @@ focus_tree = {
 			focus = UCB_dem_compromis
 		}
 		x = 20
-		y = 9
+		y = 8
 
 		completion_reward = {
 			add_political_power = 100
@@ -607,7 +607,7 @@ focus_tree = {
 			focus = UCB_dem_compromis
 		}
 		x = 22
-		y = 8
+		y = 7
 
 		completion_reward = {
 			add_stability = 0.05
@@ -638,7 +638,7 @@ focus_tree = {
 			focus = UCB_dem_battle
 		}
 		x = 22
-		y = 9
+		y = 8
 
 		completion_reward = {
 			add_political_power = 150
@@ -668,7 +668,7 @@ focus_tree = {
 		}
 
 		x = 21
-		y = 10
+		y = 9
 
 	}
 	focus = {
@@ -985,7 +985,7 @@ focus_tree = {
 				}
 		}
 		x = 21
-		y = 11
+		y = 10
 
 	}
 	focus = {
@@ -1011,7 +1011,7 @@ focus_tree = {
             }
 		}
 		x = 21
-		y = 12
+		y = 11
 
 	}
 	focus = {
@@ -1027,8 +1027,8 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
-		x = 15
-		y = 6
+		x = 17
+		y = 5
 
 	}
 	focus = {
@@ -1042,8 +1042,8 @@ focus_tree = {
 			add_ideas = { UCB_promka }
 			country_event = { id = ucnb.22 days = 1 }
 		}
-		x = 15
-		y = 7
+		x = 17
+		y = 6
 
 	}
 	focus = {
@@ -1119,8 +1119,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 15
-		y = 8
+		x = 17
+		y = 7
 
 	}
 	focus = {
@@ -1140,8 +1140,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 15
-		y = 9
+		x = 16
+		y = 8
 
 	}
 	focus = {
@@ -1177,8 +1177,8 @@ focus_tree = {
 				UCB = { add_ideas = first_corruption_level }
 			}
 		}
-		x = 17
-		y = 9
+		x = 18
+		y = 8
 
 	}
 	focus = {
@@ -1186,7 +1186,10 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = UCB_dem_stab_regions
+			focus = UCB_dem_oil_factory
+		}
+		prerequisite = {
+			focus = UCB_dem_kolechian_question
 		}
 		completion_reward = {
 			add_resource = {
@@ -1195,7 +1198,7 @@ focus_tree = {
             state = 24
 			}
 		}
-		x = 17
+		x = 19
 		y = 10
 
 	}
@@ -1204,7 +1207,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = UCB_dem_mgahvatia_oil
+			focus = UCB_dem_stab_regions
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1216,8 +1219,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 17
-		y = 11
+		x = 18
+		y = 9
 
 	}
 	focus = {
@@ -1237,8 +1240,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 15
-		y = 10
+		x = 16
+		y = 9
 
 	}
 	focus = {
@@ -1247,9 +1250,10 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_industrial2
+			focus = UCB_dem_oil_factory
 		}
-		x = 15
-		y = 11
+		x = 17
+		y = 10
 
 	}
 	focus = {
@@ -1269,8 +1273,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 15
-		y = 12
+		x = 17
+		y = 11
 
 	}
 	focus = {
@@ -1279,6 +1283,8 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_industrial1
+			focus = UCB_dem_planes
+			focus = UCB_dem_arms3
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1306,8 +1312,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 13
-		y = 10
+		x = 14
+		y = 9
 
 	}
 	focus = {
@@ -1343,25 +1349,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 13
-		y = 11
-
-	}
-	focus = {
-		id = UCB_dem_forum
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_dem_industrial3
-		}
-		prerequisite = {
-			focus = UCB_dem_infrastructure2
-		}
-		prerequisite = {
-			focus = UCB_dem_oil_factory
-		}
-		x = 15
-		y = 13
+		x = 14
+		y = 10
 
 	}
 	focus = {
@@ -1397,56 +1386,8 @@ focus_tree = {
 			factor = 1
 		}
 				
-		x = 9
-		y = 6
-
-	}
-	focus = {
-		id = UCB_dem_infrastructure3
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
-		prerequisite = {
-			focus = UCB_dem_global_reorganize
-		}
-		completion_reward = {
-			31 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			785 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			11 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			23 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		x = 9
-		y = 7
+		x = 12
+		y = 5
 
 	}
 	focus = {
@@ -1454,14 +1395,14 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		cost = 10
 		prerequisite = {
-			focus = UCB_dem_infrastructure3
+			focus = UCB_dem_global_reorganize
 		}
 		completion_reward = {
 			remove_ideas = UCB_des_army2
 			army_experience = 25
 		}
-		x = 9
-		y = 8
+		x = 10
+		y = 6
 
 	}
 	focus = {
@@ -1469,7 +1410,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10
 		prerequisite = {
-			focus = UCB_dem_army_training
+			focus = UCB_dem_nologi
+			focus = UCB_dem_global_reorganize
 		}
 		completion_reward = {
 			add_timed_idea = { 
@@ -1485,8 +1427,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 9
-		y = 9
+		x = 14
+		y = 6
 
 	}
 	focus = {
@@ -1506,8 +1448,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 7
-		y = 10
+		x = 14
+		y = 7
 
 	}
 	focus = {
@@ -1527,8 +1469,8 @@ focus_tree = {
 				}
 			}
 		}
-		x = 7
-		y = 11
+		x = 14
+		y = 8
 
 	}
 	focus = {
@@ -1536,7 +1478,10 @@ focus_tree = {
 		icon = GFX_focus_research
 		cost = 10
 		prerequisite = {
-			focus = UCB_dem_arms1
+			focus = UCB_dem_arms3
+		}
+		prerequisite = {
+			focus = UCB_dem_planes
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1555,8 +1500,8 @@ focus_tree = {
 				category = electronics
 			}
 		}
-		x = 9
-		y = 11
+		x = 12
+		y = 9
 
 	}
 	focus = {
@@ -1572,8 +1517,8 @@ focus_tree = {
 			add_war_support = 0.05
 			add_research_slot = 1
 		}
-		x = 11
-		y = 7
+		x = 12
+		y = 6
 
 	}
 	focus = {
@@ -1590,8 +1535,8 @@ focus_tree = {
 				category = armor
 			}
 		}
-		x = 11
-		y = 8
+		x = 12
+		y = 7
 
 	}
 	focus = {
@@ -1599,7 +1544,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 10
 		prerequisite = {
-			focus = UCB_dem_slot2
+			focus = UCB_dem_army_training
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1608,8 +1553,8 @@ focus_tree = {
 				category = infantry_weapons
 			}
 		}
-		x = 13
-		y = 8
+		x = 10
+		y = 7
 
 	}
 	focus = {
@@ -1626,8 +1571,8 @@ focus_tree = {
 				category = light_fighter
 			}
 		}
-		x = 11
-		y = 9
+		x = 12
+		y = 8
 
 	}
 	focus = {
@@ -1640,8 +1585,8 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = { idea = UCB_rearmament days = 160 }
 		}
-		x = 11
-		y = 10
+		x = 10
+		y = 9
 
 	}
 	focus = {
@@ -1651,8 +1596,8 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_foreign_policy
 		}
-		x = 3
-		y = 6
+		x = 6
+		y = 5
 
 		completion_reward = {
 			hidden_effect = {create_faction = UCB_scuit_ally}
@@ -1678,8 +1623,8 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_sbu
 		}
-		x = 3
-		y = 7
+		x = 6
+		y = 6
 
 		completion_reward = {
 			add_timed_idea = {
@@ -1695,8 +1640,8 @@ focus_tree = {
         id = UCB_defend_SHE
         icon = GFX_goal_ucb_defend_SHE
         cost = 5
-        x = 5
-        y = 7
+        x = 8
+        y = 6
         available = {}
         bypass = {NOT = {country_exists = SHE}}
         allow_branch = {}
@@ -1719,8 +1664,8 @@ focus_tree = {
 			focus = UCB_dem_stavka_defense
 		}
 		bypass = { NOT = {country_exists = TRP} }
-		x = 0
-		y = 8
+		x = 4
+		y = 7
 
 		completion_reward = {
 			give_guarantee = TRP
