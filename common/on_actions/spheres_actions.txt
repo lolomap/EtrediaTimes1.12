@@ -43,6 +43,15 @@ on_actions = {
                 limit = {has_variable = sphere_owner}
                 remove_from_sphere = yes
             }
+            if = {
+                limit = {check_variable = { sphere_members^num > 0 }}
+                for_each_scope_loop = {
+                    array = sphere_members
+                    
+                    remove_from_sphere = yes
+                }
+                clear_array = sphere_members
+            }
         }
     }
 
@@ -51,6 +60,15 @@ on_actions = {
             if = {
                 limit = {has_variable = sphere_owner}
                 remove_from_sphere = yes
+            }
+            if = {
+                limit = {check_variable = { sphere_members^num > 0 }}
+                for_each_scope_loop = {
+                    array = sphere_members
+                    
+                    remove_from_sphere = yes
+                }
+                clear_array = sphere_members
             }
         }
     }
