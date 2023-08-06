@@ -66,7 +66,6 @@ ideas = {
                 custom_modifier_tooltip = ucb_opp_rise_tooltip
 			}
 		}
-		
 		UCB_raskol = {
             picture = hol_liberation
 
@@ -95,40 +94,35 @@ ideas = {
 				surrender_limit = 0.3
 			}
 		}
-
 		UCB_poroh_blet = {
             picture = chi_war_of_resistance3
-
 			allowed = {
 				always = no
 			}
-			
 			removal_cost = -1
-	
 
 			modifier = {
                 custom_modifier_tooltip = ucb_sep_rise_tooltip
                 stability_factor = -0.1
 			}
 		}
-
 		UCB_corruption = {
             picture = generic_spy_coup
-
 			allowed = {
 				always = no
 			}
-			
 			removal_cost = -1
-	
 
 			modifier = {
-                production_factory_max_efficiency_factor = -0.1
-                production_speed_buildings_factor = -0.1
+                production_factory_max_efficiency_factor = -0.15
+                production_speed_buildings_factor = -0.15
                 max_command_power = -100
+				stability_factor = -0.1
+				army_defence_factor = -0.08
+                army_attack_factor = -0.08
+                training_time_army_factor = 0.25
 			}
 		}
-		
 		ucb_democratic_opposition = {
 			picture = generic_democratic_drift_bonus
 
@@ -146,7 +140,6 @@ ideas = {
 				conscription_factor = -0.15
 			}
 		}
-		
 		UCB_gov_dotations = {
 			picture = generic_democratic_drift_bonus
 
