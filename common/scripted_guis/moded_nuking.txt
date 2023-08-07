@@ -215,110 +215,117 @@ scripted_gui = {
                     }
                     random_scope_in_array = {
                         array = enemies
-                        limit = {is_in_array = {nuke_possible = THIS}}
+                        limit = {is_in_array = {ROOT.nuke_possible = THIS}}
                         ROOT = {set_variable = { nuke_country = PREV }}
                     }
                 }
-
                 if = {
                     limit = {
-                        var:ROOT.nuke_country = {
-                            check_variable = { world_influence < 4 }
-                            is_major = no
-                            num_of_nukes < 1
+                        ROOT = {
+                            has_war_with = var:nuke_country
+                            NOT = {has_country_flag = nuke_cd}
                         }
                     }
-                    add_threat = 50
-                }
-            
-                set_temp_variable = {rockets_available = 0}
-                ROOT = {
-                    set_country_flag = {flag = nuke_cd days = 14 value = 1}
-                    every_owned_state = {
-                        add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
-                        add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
-                    }
-                    var:nuke_country = {
-                        country_event = {id = onactev.11 hours = 1}
-                    }
-                }
-
-                var:ROOT.nuke_country = {
-                    set_country_flag = been_nuked
-                }
-                
-                every_state = {
-                    limit = {has_state_flag = nuke_target_for_@ROOT}
-
                     if = {
-                        limit = {OWNER = {tag = var:ROOT.nuke_country}}
+                        limit = {
+                            var:ROOT.nuke_country = {
+                                check_variable = { world_influence < 4 }
+                                is_major = no
+                                num_of_nukes < 1
+                            }
+                        }
+                        add_threat = 50
+                    }
+                
+                    set_temp_variable = {rockets_available = 0}
+                    ROOT = {
+                        set_country_flag = {flag = nuke_cd days = 14 value = 1}
+                        every_owned_state = {
+                            add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
+                            add_to_temp_variable = {rockets_available = building_level@nuclear_rocket_site}
+                        }
+                        var:nuke_country = {
+                            country_event = {id = onactev.11 hours = 1}
+                        }
+                    }
 
-                        for_loop_effect = {
-                            end = ROOT.nuke_per_state
-                            if = {
-                                limit = {check_variable = {rockets_available > 0}}
+                    var:ROOT.nuke_country = {
+                        set_country_flag = been_nuked
+                    }
+                    
+                    every_state = {
+                        limit = {has_state_flag = nuke_target_for_@ROOT}
+
+                        if = {
+                            limit = {OWNER = {tag = var:ROOT.nuke_country}}
+
+                            for_loop_effect = {
+                                end = ROOT.nuke_per_state
                                 if = {
-                                    limit = {anti_nuclear_building < 1}
-                                    ROOT = {
-                                        launch_nuke = {
-                                            controller = var:ROOT.nuke_country
-                                            state = PREV
-                                            use_nuke = yes
+                                    limit = {check_variable = {rockets_available > 0}}
+                                    if = {
+                                        limit = {anti_nuclear_building < 1}
+                                        ROOT = {
+                                            launch_nuke = {
+                                                controller = var:ROOT.nuke_country
+                                                state = PREV
+                                                use_nuke = yes
+                                            }
+                                            add_to_temp_variable = {nukes_reached = 1}
                                         }
-                                        add_to_temp_variable = {nukes_reached = 1}
                                     }
-                                }
-                                else = {
-                                    random_list = {
-                                        70 = {ROOT = {add_nuclear_bombs = -1}}
-                                        30 = {
-                                            ROOT = {
-                                                launch_nuke = {
-                                                    controller = var:ROOT.nuke_country
-                                                    state = PREV
-                                                    use_nuke = yes
+                                    else = {
+                                        random_list = {
+                                            70 = {ROOT = {add_nuclear_bombs = -1}}
+                                            30 = {
+                                                ROOT = {
+                                                    launch_nuke = {
+                                                        controller = var:ROOT.nuke_country
+                                                        state = PREV
+                                                        use_nuke = yes
+                                                    }
+                                                    add_to_temp_variable = {nukes_reached = 1}
                                                 }
-                                                add_to_temp_variable = {nukes_reached = 1}
                                             }
                                         }
                                     }
-                                }
-                                add_to_temp_variable = {rockets_available = -1}
-                            }
-                        }
-                        
-                        divide_temp_variable = {nukes_reached = 2}
-                        round_temp_variable = nukes_reached
-
-                        if = {
-                            limit = {check_variable = {nukes_reached = 0}}
-                            set_temp_variable = {nnbr = 1}
-                            set_variable_to_random = {var = ROOT.nuke_building min = 1 max = 16 integer = yes}
-                        }
-
-                        
-                                log = "[?nukes_reached]"
-                                log = "[building_id_sl]"
-                        meta_effect = {
-                            text = {
-                                if = {
-                                    limit = {
-                                        NOT = {check_variable = {nuke_building = 5}}
-                                        NOT = {check_variable = {nuke_building = 7}}
-                                    }
-                                    remove_building = {
-                                        type = [BTYPE]
-                                        level = nukes_reached
-                                    }
+                                    add_to_temp_variable = {rockets_available = -1}
                                 }
                             }
-                            BTYPE = "[building_id_sl]"
-                        }
+                            
+                            divide_temp_variable = {nukes_reached = 2}
+                            round_temp_variable = nukes_reached
 
-                        if = {
-                            limit = {check_variable = {nnbr > 0}}
-                            set_temp_variable = {nnbr = 0}
-                            set_variable = {ROOT.nuke_building = 0}
+                            if = {
+                                limit = {check_variable = {nukes_reached = 0}}
+                                set_temp_variable = {nnbr = 1}
+                                set_variable_to_random = {var = ROOT.nuke_building min = 1 max = 16 integer = yes}
+                            }
+
+                            
+                                    log = "[?nukes_reached]"
+                                    log = "[building_id_sl]"
+                            meta_effect = {
+                                text = {
+                                    if = {
+                                        limit = {
+                                            NOT = {check_variable = {nuke_building = 5}}
+                                            NOT = {check_variable = {nuke_building = 7}}
+                                        }
+                                        remove_building = {
+                                            type = [BTYPE]
+                                            level = nukes_reached
+                                        }
+                                    }
+                                }
+                                BTYPE = "[building_id_sl]"
+                            }
+
+                            if = {
+                                limit = {check_variable = {nnbr > 0}}
+                                set_temp_variable = {nnbr = 0}
+                                set_variable = {ROOT.nuke_building = 0}
+                            }
                         }
                     }
                 }
@@ -328,8 +335,9 @@ scripted_gui = {
         triggers = {
             launch_nukes_click_enabled = {
                 OR ={
-                    NOT = {has_country_flag = nuke_cd}
+                    
                     AND = {
+                        NOT = {has_country_flag = nuke_cd}
                         has_war_with = var:nuke_country
                     }
                     AND ={
@@ -381,7 +389,7 @@ scripted_gui = {
         ai_weights = {
             launch_nukes_click = {
                 ai_will_do = {
-                    base = 100
+                    base = 50
                     modifier = {
                         ROOT = {surrender_progress < 0.1}
                         add = -50
@@ -400,7 +408,7 @@ scripted_gui = {
                     }
                     modifier = {
                         ROOT = {has_country_flag = been_nuked}
-                        add = 10000000
+                        add = 1000000
                         #factor = 1000
                     }
                     modifier = {
