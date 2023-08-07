@@ -1,10 +1,18 @@
 on_actions = {
     on_startup = {
         effect = {
-            IID = {set_country_flag = ideology_protection}
-            UCB = {set_country_flag = ideology_protection}
-            SBU = {set_country_flag = ideology_protection}
-            SFL = {set_country_flag = ideology_protection}
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = ideology_protection_enabled
+                        option = FREE
+                    }
+                }
+                IID = {set_country_flag = ideology_protection}
+                UCB = {set_country_flag = ideology_protection}
+                SBU = {set_country_flag = ideology_protection}
+                SFL = {set_country_flag = ideology_protection}
+            }
         }
     }
 

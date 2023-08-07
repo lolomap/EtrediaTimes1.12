@@ -29,7 +29,7 @@ scripted_gui = {
                             remove_from_array = {ROOT.nuke_possible = OWNER}
                         }
                     }
-                    ROOT = {add_to_array = { nuke_target_states = PREV }}
+                    ROOT = {remove_from_array = { nuke_target_states = PREV }}
                 }
                 else = {
                     set_state_flag = nuke_target_for_@ROOT
@@ -37,7 +37,7 @@ scripted_gui = {
                         limit = {OWNER = {NOT = {is_in_array = {ROOT.nuke_possible = THIS}}}}
                         add_to_array = {ROOT.nuke_possible = OWNER}
                     }
-                    ROOT = {remove_from_array = { nuke_target_states = PREV }}
+                    ROOT = {add_to_array = { nuke_target_states = PREV }}
                 }
                 force_update_map_mode = {
                     mapmode = nuking
@@ -338,7 +338,7 @@ scripted_gui = {
                     }
                 }
                 if = {
-                    limit = {is_in_faction = yes}
+                    limit = {is_in_faction = yes is_faction_leader = no}
                     has_country_flag = nuke_request_accepted
                 }
 
@@ -369,38 +369,46 @@ scripted_gui = {
             }
         }
         
-        ai_test_interval = 240
+        ai_test_interval = 24
+        ai_check = {ROOT = {num_of_nukes > 0 has_war = yes}}
+        ai_enabled = {
+			has_game_rule = {
+                rule = allow_nuking
+                option = FREE
+            }	
+		}
 
         ai_weights = {
             launch_nukes_click = {
                 ai_will_do = {
                     base = 0
                     modifier = {
-                        num_of_nukes > 0
+                        ROOT = {num_of_nukes > 0}
                         add = 100
                     }
                     modifier = {
-                        surrender_progress < 0.1
+                        ROOT = {surrender_progress < 0.1}
                         add = -100
                     }
                     modifier = {
-                        surrender_progress < 0.3
+                        ROOT = {surrender_progress < 0.3}
                         add = -50
                     }
                     modifier = {
-                        has_war_with_major = no
+                        ROOT = {has_war_with_major = no}
                         add = -100
                     }
                     modifier = {
-                        surrender_progress > 0.5
+                        ROOT = {surrender_progress > 0.5}
                         add = 300
                     }
                     modifier = {
-                        has_country_flag = been_nuked
+                        ROOT = {has_country_flag = been_nuked}
                         add = 10000
+                        #factor = 1000
                     }
                     modifier = {
-                        check_variable = { nuke_target_states^num < 5 }
+                        check_variable = { ROOT.nuke_target_states^num < 5 }
                         factor = 0
                     }
                 }

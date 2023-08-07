@@ -1112,6 +1112,7 @@ country_event = { # изменение в полит поле
 	desc = mechanics.12.d
 
 	is_triggered_only = yes
+    minor_flavor = yes
 
 	option = {
 		name = mechanics.12.a
@@ -1150,6 +1151,7 @@ country_event = { # рост настроений
 	desc = mechanics.13.d
 
 	is_triggered_only = yes
+    minor_flavor = yes
 
 	option = {
 		name = mechanics.13.a
@@ -1188,6 +1190,7 @@ country_event = { # выступления партии
 	desc = mechanics.14.d
 
 	is_triggered_only = yes
+    minor_flavor = yes
 
 	option = {
 		name = mechanics.14.a
@@ -1226,6 +1229,7 @@ country_event = { # организованная опоз
 	desc = mechanics.15.d
 
 	is_triggered_only = yes
+    minor_flavor = yes
 
 	option = {
 		name = mechanics.15.a
@@ -1264,6 +1268,7 @@ country_event = { # требуют отставку
 	desc = mechanics.16.d
 
 	is_triggered_only = yes
+    minor_flavor = yes
 
 	option = {
 		name = mechanics.16.a

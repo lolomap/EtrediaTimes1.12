@@ -19,7 +19,7 @@ on_actions = {
 
                 if = {
                     limit = {is_ai = yes}
-                    set_country_flag = nukemaximaized
+                    set_country_flag = nukemaximized
                 }
 
                 add_to_array = {global.wi_countries = THIS}
