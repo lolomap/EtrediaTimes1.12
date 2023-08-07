@@ -109,7 +109,7 @@ music = {
 }
 
 music = {
-    song = "Sub_Morphine_-_High_Castle_MMCT"
+    song = "maintheme"
     chance = {
       modifier = { factor = 1 }
       #modifier = { factor = 0 has_war = yes } #example modifier: music will not play when at war

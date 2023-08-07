@@ -2,7 +2,7 @@
 music_station = "HOI4"
 
 music = {
-	song = "maintheme"
+	song = "_maintheme"
 	chance = {
 		modifier = {
 			factor = 0.5
