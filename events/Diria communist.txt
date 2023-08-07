@@ -661,7 +661,7 @@ country_event = {
 			add_state_core = 287
 			add_state_core = 288
 			add_state_core = 786
-			add_state_core = 791
+			add_state_core = 790
 			add_state_core = 792
 			add_state_core = 793
 			add_state_core = 794
@@ -726,7 +726,7 @@ country_event = {
 			add_state_core = 287
 			add_state_core = 288
 			add_state_core = 786
-			add_state_core = 791
+			add_state_core = 790
 			add_state_core = 792
 			add_state_core = 793
 			add_state_core = 794
@@ -1020,7 +1020,7 @@ country_event = {
 			REK = {
 				transfer_state = 265
 				transfer_state = 266
-				transfer_state = 791
+				transfer_state = 790
 			}
 			EMO = { load_oob = EMO_arms }
 			DAR = { load_oob = DAR_arms }

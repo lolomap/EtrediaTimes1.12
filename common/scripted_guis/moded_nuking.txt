@@ -328,8 +328,8 @@ scripted_gui = {
         triggers = {
             launch_nukes_click_enabled = {
                 OR ={
+                    NOT = {has_country_flag = nuke_cd}
                     AND = {
-                        NOT = {has_country_flag = nuke_cd}
                         has_war_with = var:nuke_country
                     }
                     AND ={
@@ -381,34 +381,34 @@ scripted_gui = {
         ai_weights = {
             launch_nukes_click = {
                 ai_will_do = {
-                    base = 0
-                    modifier = {
-                        ROOT = {num_of_nukes > 0}
-                        add = 100
-                    }
+                    base = 100
                     modifier = {
                         ROOT = {surrender_progress < 0.1}
-                        add = -100
-                    }
-                    modifier = {
-                        ROOT = {surrender_progress < 0.3}
                         add = -50
                     }
                     modifier = {
+                        ROOT = {surrender_progress < 0.3}
+                        add = -30
+                    }
+                    modifier = {
                         ROOT = {has_war_with_major = no}
-                        add = -100
+                        add = -50
                     }
                     modifier = {
                         ROOT = {surrender_progress > 0.5}
-                        add = 300
+                        add = 10000
                     }
                     modifier = {
                         ROOT = {has_country_flag = been_nuked}
-                        add = 10000
+                        add = 10000000
                         #factor = 1000
                     }
                     modifier = {
-                        check_variable = { ROOT.nuke_target_states^num < 5 }
+                        check_variable = { ROOT.nuke_target_states^num < 1 }
+                        factor = 0
+                    }
+                    modifier = {
+                        ROOT = {num_of_nukes < 1}
                         factor = 0
                     }
                 }

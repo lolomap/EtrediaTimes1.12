@@ -20,6 +20,7 @@ on_actions = {
                 if = {
                     limit = {is_ai = yes}
                     set_country_flag = nukemaximized
+                    set_variable = {red_button_hook_x = -490}
                 }
 
                 add_to_array = {global.wi_countries = THIS}
