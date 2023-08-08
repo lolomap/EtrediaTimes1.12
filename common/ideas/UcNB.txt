@@ -1,5 +1,45 @@
 ideas = {
     country = {	
+        UCB_nukes_rockets_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                production_speed_nuclear_rocket_site_factor = 1
+            }
+        }
+        UCB_nukes_anti_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                production_speed_anti_nuclear_building_factor = 1
+            }
+        }
         UCB_gegemon = {
             allowed = {
                 always = no

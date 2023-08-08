@@ -21,6 +21,24 @@
 #	}
 # }
 
+ideology_protection_enabled = {
+    name = "RULE_IDEOLOGY_PROTECTION"
+    group = "RULE_GROUP_MOD"
+    icon = "GFX_boosting_party_popularity"
+    option = {
+		name = FREE
+		text = "RULE_OPTION_FREE"
+		desc = "RULE_ALLOW_IPROC_FREE_DESC"
+        allow_achievements = yes
+	}
+    option = {
+		name = BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_IPROC_BLOCKED_DESC"
+        allow_achievements = no
+	}
+}
+
 allow_crysis = {
 	name = "RULE_ALLOW_CRYSIS"
 	group = "RULE_GROUP_MOD"
@@ -55,7 +73,7 @@ allow_nuking = {
 		name = BLOCKED
 		text = "RULE_OPTION_BLOCKED"
 		desc = "RULE_ALLOW_NUKING_BLOCKED_DESC"
-        allow_achievements = yes
+        allow_achievements = no
 	}
 }
 allow_fembargo = {
@@ -72,7 +90,7 @@ allow_fembargo = {
 		name = BLOCKED
 		text = "RULE_OPTION_BLOCKED"
 		desc = "RULE_ALLOW_FORCE_EMBARGO_BLOCKED_DESC"
-        allow_achievements = yes
+        allow_achievements = no
 	}
 }
 
