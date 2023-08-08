@@ -25,6 +25,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_NIB_Ardemama_development_plan.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_TRB_ports_rentals_pic"
+		texturefile = "gfx/interface/ideas/idea_TRB_ports_rentals_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BAE_beer_industry_pic"
+		texturefile = "gfx/interface/ideas/idea_BAE_beer_industry_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RTT_fortress_of_riverland_pic"
+		texturefile = "gfx/interface/ideas/idea_RTT_fortress_of_riverland_pic.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_UCB_des_army"
 		texturefile = "gfx/interface/ideas/idea_UCB_des_army.dds"
 	}

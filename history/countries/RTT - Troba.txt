@@ -7,19 +7,22 @@ set_stability = 0.6
 set_war_support = 0.2
 
 add_ideas = {
-        www_medium_country
-        limited_conscription
-        total_nonfree_press
-        limited_entry
+    RTT_fortress_of_riverland
+	RTT_ports_rentals
+	
+	www_medium_country
+    limited_conscription
+    total_nonfree_press
+    limited_entry
 	third_corruption_level
     leadership_c
 }
 
-set_technology = {basic_train = 1
-
-        tech_engineers = 1
-        tech_recon = 1
-        tech_support = 1
+set_technology = {
+	basic_train = 1
+    tech_engineers = 1
+    tech_recon = 1
+    tech_support = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	early_fighter = 1
@@ -28,14 +31,14 @@ set_technology = {basic_train = 1
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	motorised_infantry = 1
-        mechanised_infantry = 1
+    mechanised_infantry = 1
 	jeep_unit = 1
 	jeep_unit_2 = 1
 	motorized_rocket_unit = 1
 	basic_light_tank = 1
 	improved_light_tank = 1
 	improved_medium_tank = 1
-        basic_medium_tank = 1
+    basic_medium_tank = 1
 	advanced_medium_tank = 1
 	main_battle_tank = 1
 
@@ -58,15 +61,13 @@ set_politics = {
 }
 
 set_popularities = {
-        democratic = 2
-        fascism = 8
-        communism = 78
+    democratic = 2
+    fascism = 8
+    communism = 78
 	neutrality = 12
 }
 
 #
-
-recruit_character = RTT_marcus_brown
 
 recruit_character = RTT_stabozha_stanislav
 

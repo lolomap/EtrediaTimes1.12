@@ -506,3 +506,4 @@ industrial_concern = {
 		}
 	}
 }
+}

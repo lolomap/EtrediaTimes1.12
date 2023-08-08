@@ -1,0 +1,36 @@
+ideas = {
+    country = {
+
+		RTT_fortress_of_riverland = {
+            picture = RTT_fortress_of_riverland_pic
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1	
+
+			modifier = {
+                production_speed_bunker_factor = 0.1
+                army_core_attack_factor = 0.15
+                army_core_defence_factor = 0.15
+                conscription_factor = 0.1
+                ai_focus_defense_factor = 1
+			}
+		}
+		RTT_ports_rentals = {
+            picture = TRB_ports_rentals_pic
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+                consumer_goods_factor = 0.025
+			}
+			targeted_modifier = {
+    			tag = TRB
+    			trade_cost_for_target_factor = -0.15
+			}
+		}
+	}
+}
