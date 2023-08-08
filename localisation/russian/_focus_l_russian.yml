@@ -47,6 +47,11 @@
  UCB_diria_pmc: "Их нет в Дирии"
  UCB_aldeko_pmc: "Их нет в Тербии"
  UCB_sma_pmc: "Их нет в Мацаре"
+ UCB_nukes: "Немирный атом"
+ UCB_nukes_rockets: "Ядерная дубина"
+ UCB_nukes_anti: "Передовая оборона"
+ UCB_dem_anrax: "Внедрение в Анракскую экономику"
+ UCB_dem_anrax2: "Федерация Каратении"
 
  UCB_dem_gov_reform:0 "Реформа института власти"
  UCB_dem_stabilnost:0 "Стабилизация внутренней обстановки"

@@ -144,6 +144,11 @@ focus_tree = {
 			country_exists = KUL
 			KUL = {is_subject = no}
 		}
+
+        bypass = {
+            NOT = {country_exists = FSC}
+            NOT = {country_exists = KUL}
+        }
 		
 		completion_reward = {
 			UCB = { give_guarantee = KUL }
@@ -151,7 +156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_kulishtia2
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_kulishtia2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_kulishtia
@@ -178,7 +183,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_anti_IID
-		icon = GFX_focus_rom_abdicate
+		icon = GFX_goal_ucb_dem_anti_IID
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_fsc_conversation
@@ -206,7 +211,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_iid_war
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_iid_war
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_anti_IID
@@ -224,6 +229,69 @@ focus_tree = {
 		y = 9
 
 	}
+    focus = {
+        id = UCB_nukes_anti
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 10
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_nukes
+        }
+        mutually_exclusive = {
+            focus = UCB_nukes_rockets
+        }
+    
+        completion_reward = {
+            add_ideas = UCB_nukes_anti_idea
+        }
+    }
+    focus = {
+        id = UCB_nukes
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 9
+        y = 10
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_dem_iid_war
+            focus = UCB_dem_newfactories
+        }
+        prerequisite = {focus = UCB_dem_slot1}
+    
+        completion_reward = {
+            add_building_construction = {
+                type = nuclear_reactor
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+    focus = {
+        id = UCB_nukes_rockets
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 8
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_nukes
+        }
+        mutually_exclusive = {
+        	focus = UCB_nukes_anti
+        }
+    
+        completion_reward = {
+            add_ideas = UCB_nukes_rockets_idea
+        }
+    }
 	focus = {
 		id = UCB_dem_ndro2
 		icon = GFX_goal_ucb_dem_ndro2
@@ -240,12 +308,55 @@ focus_tree = {
 			}
 		}
 		x = 2
-		y = 9
+		y = 10
 
 	}
+    focus = {
+        id = UCB_dem_anrax
+        icon = GFX_goal_ucb_dem_anrax
+        cost = 10
+        x = 5
+        y = 11
+        available = {has_war = no}
+        bypass = {NOT = {country_exists = ANR}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_dem_ndro2
+        }
+        prerequisite = {
+            focus = UCB_dem_kulishtia2
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            ANR = {UCB = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        }
+    }
+    focus = {
+        id = UCB_dem_anrax2
+        icon = GFX_goal_ucb_dem_anrax2
+        cost = 10
+        x = 5
+        y = 12
+        available = {ANR = {is_subject_of = UCB}}
+        bypass = {NOT = {country_exists = ANR}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_dem_anrax
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            annex_country = {target = ANR transfer_troops = yes}
+        }
+    }
 	focus = {
 		id = UCB_dem_IID
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_ucb_dem_IID
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_fsc_conversation
@@ -2937,7 +3048,7 @@ focus_tree = {
         cost = 15
         x = 43
         y = 13
-        available = {}
+        available = {has_war = yes}
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -2951,6 +3062,11 @@ focus_tree = {
             add_building_construction = {
                 type = nuclear_reactor
                 level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = nuclear_rocket_site
+                level = 2
                 instant_build = yes
             }
             add_building_construction = {

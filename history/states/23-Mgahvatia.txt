@@ -14,7 +14,7 @@ state={
 		owner = UCB
 		buildings = {
 			infrastructure = 2
-			nuclear_rocket_site = 1
+			nuclear_rocket_site = 2
 		}
 		add_core_of = UCB
 		add_core_of = KOL

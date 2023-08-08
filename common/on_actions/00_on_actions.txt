@@ -216,18 +216,8 @@ on_actions = {
 					ORB = {is_subject = no}
 					not = {has_country_flag = orb_separated}
 				}
-				ORB = {country_event = orb.35}
-				IID = {
-					puppet = ORB
-                    ORB = {
-                        set_politics = {
-                            ruling_party = neutrality
-                            elections_allowed = no
-                        }
-                        add_popularity = {ideology = neutrality popularity = 0.2}
-                        set_country_leader_ideology = conservatism
-                    }
-				}
+				#ORB = {country_event = orb.35}
+				ORB = {IID = {involve_sphere = yes}}
 			}
 		}
 	}

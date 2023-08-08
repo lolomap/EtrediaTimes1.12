@@ -83,7 +83,7 @@
   wtire_boost: "Военная усталость: $RIGHT|-=$"
   world_influence_cost_clamp:0 "§RДругие модификаторы влияния не работают§!"
 
-  involve_to_sphere_tt: "§Y[PREV.GetFlag][PREV.GetNameDef]§! §Rпопадет§! под сферу [GetFlag]§Y[GetAdjective]§! влияния."
+  involve_to_sphere_tt: "§Y[PREV.GetFlag][PREV.GetNameDef]§! §Rпопадет§! под сферу [THIS.GetFlag]§Y[THIS.GetAdjective]§! влияния."
   remove_from_sphere_tt: "Страна §Yвыйдет§! из-под сферы [?sphere_owner.GetFlag]§Y[?sphere_owner.GetAdjective]§! влияния."
   is_in_sphere_tt: "В §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
   is_in_sphere_tt_NOT: "Не в §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
