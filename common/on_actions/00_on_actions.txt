@@ -179,6 +179,7 @@ on_actions = {
 					ORB = {is_subject = no}
 					ORB = {check_variable = {fsc_influence < 100.14}}
 					ORB = {not = {has_country_flag = no_iid_fsc_influence}}
+                    NOT = {has_war_with = FSC}
 				}
 				add_to_variable = {fsc_influence = 4.08}
 			}

@@ -1,0 +1,29 @@
+oppos_infrastructure_activity = {
+    activate_mission = oppos_infrastructure
+}
+
+oppos_blocked_ways_activity = {
+    random_owned_state = {
+        set_state_flag = opposition_activity
+        add_state_modifier = {
+            modifier = {
+                local_supplies = -0.7
+                state_resources_factor = -0.5
+                army_speed_factor_for_controller = -0.5
+                state_production_speed_buildings_factor = -1
+            }
+        }
+    }
+}
+
+oppos_press_activity = {
+    activate_mission = oppos_press
+}
+
+oppos_regional_politicians_activity = {
+    random_owned_state = {
+        set_state_flag = opposition_activity
+        force_enable_resistance = PREV
+        start_resistance = yes
+    }
+}

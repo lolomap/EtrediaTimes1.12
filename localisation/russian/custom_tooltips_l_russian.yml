@@ -9,6 +9,10 @@
   decision_cost_CP_5_blocked: "£command_power §R5§!"
   decision_cost_CP_5_tooltip: "Стоимость принятия решения: £command_power §Y5§!"
 
+  decision_cost_CP_20: "£command_power §Y20§!"
+  decision_cost_CP_20_blocked: "£command_power §R20§!"
+  decision_cost_CP_20_tooltip: "Стоимость принятия решения: £command_power §Y20§!"
+
   modalert_tooltip: "[modalert_sl]"
   modalert_polform_tt: "§YДоступно изменение политического строя!"
   modalert_sep_tt: "§YВозможна сепарация региона§! [?modalerts_data^i.GetFlag][?modalerts_data^i.GetNameDef]\n§RУровень сепаратизма больше 75%§!"

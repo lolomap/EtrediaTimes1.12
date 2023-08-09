@@ -1,4 +1,27 @@
 ideas = {
+    country = {
+        oppos_press_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                political_power_gain = -0.5
+                stability_factor = -0.15
+            }
+        }
+    }
 
         press_laws = {
             law = yes

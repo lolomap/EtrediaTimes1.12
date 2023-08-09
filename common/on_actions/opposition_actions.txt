@@ -1,0 +1,55 @@
+on_actions = {
+    on_weekly = {
+        effect = {
+            set_temp_variable = { dem_act_chance = dem_opposition }
+            set_temp_variable = { fas_act_chance = fas_opposition }
+            set_temp_variable = { com_act_chance = com_opposition }
+            set_temp_variable = { mon_act_chance = mon_opposition }
+            set_temp_variable = { neu_act_chance = neu_opposition }
+
+            multiply_temp_variable = { dem_act_chance = 0.3 } #divide by 3
+            multiply_temp_variable = { fas_act_chance = 0.3 }
+            multiply_temp_variable = { com_act_chance = 0.3 }
+            multiply_temp_variable = { mon_act_chance = 0.3 }
+            multiply_temp_variable = { neu_act_chance = 0.3 }
+
+            if = {limit = {NOT = {has_government = democratic}} add_to_temp_variable = { act_chance = dem_act_chance }}
+            if = {limit = {NOT = {has_government = fascism}} add_to_temp_variable = { act_chance = fas_act_chance }}
+            if = {limit = {NOT = {has_government = communism}} add_to_temp_variable = { act_chance = com_act_chance }}
+            if = {limit = {NOT = {has_government = monarchism}} add_to_temp_variable = { act_chance = mon_act_chance }}
+            if = {limit = {NOT = {has_government = neutrality}} add_to_temp_variable = { act_chance = neu_act_chance }}
+
+            clamp_temp_variable = {
+                var = act_chance
+                min = 0
+                max = 100
+            }
+
+            random = {
+                chance = act_chance
+                random_list = {
+                    1 = {oppos_infrastructure_activity = yes}
+                    1 = {oppos_press_activity = yes}
+                    1 = {oppos_regional_politicians_activity = yes}
+                    1 = {
+                        oppos_infrastructure_activity = yes
+                        oppos_press_activity = yes
+                    }
+                    1 = {
+                        oppos_regional_politicians_activity = yes
+                        oppos_press_activity = yes
+                    }
+                    1 = {
+                        oppos_infrastructure_activity = yes
+                        oppos_regional_politicians_activity = yes
+                    }
+                    1 = {
+                        oppos_infrastructure_activity = yes
+                        oppos_regional_politicians_activity = yes
+                        oppos_press_activity = yes
+                    }
+                }
+            }
+        }
+    }
+}
