@@ -13,20 +13,6 @@ characters={
 			id=-1
 		}
 	}
-	TRB_ivan_ishenko={
-		name=TRB_Ivan_Ishenko
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_5"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 	TRB_irkaz_korhazhin={
 		name=TRB_Irkaz_Korhazhin
 		portraits={
@@ -110,20 +96,6 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			legacy_id=-1
-		}
-	}
-	TRB_lucas_jones={
-		name=TRB_Lucas_Jones
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=absolutism
-			traits={ smooth_talking_charmer fortification_engineer }
-			expire="2032.1.1.12"
-			id=-1
 		}
 	}
 }

@@ -1,19 +1,36 @@
 ideas = {
-    country = {	
-	BAE_eik_vliyanie = {
+    country = {
 
+		BAE_eik_vliyanie = {
             picture = generic_political_advisor_europe_5
 
 			allowed = {
 				always = no
 			}
 			
-			removal_cost = -1
-	
+			removal_cost = -1	
 
 			modifier = {
-                                fascism_drift = 0.05
+                fascism_drift = 0.05
 			}
 		}
-}
+		
+		BAE_beer_industry = {
+            picture = BAE_beer_industry_pic
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1	
+
+			modifier = {
+                stability_factor = 0.05
+				political_power_factor = 0.1
+				monthly_population = 0.1
+				consumer_goods_factor = -0.025
+			}
+		}
+
+	}
 }
