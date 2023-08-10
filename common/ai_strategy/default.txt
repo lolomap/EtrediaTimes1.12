@@ -774,8 +774,21 @@ DEFAULT_midlate_template_design = {
 }
 
 dirian_civilwar_template_design = {
+	allowed = {
+		OR = {
+			original_tag = DEM
+			original_tag = DIR
+			original_tag = DIB
+			original_tag = SDI
+			original_tag = BLJ
+			original_tag = REK
+		}
+	}
 	enable = {
 		has_idea = DIR_revolt
+	}
+	abort = {
+		NOT = { has_idea = DIR_revolt }
 	}
 
 	ai_strategy = {
@@ -793,13 +806,13 @@ dirian_civilwar_template_design = {
 	ai_strategy = {
 		type = template_prio
 		id = infantry
-		value = 100
+		value = 10
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = jeep
-		value = 15
+		value = 5
 	}
 }
 
@@ -1109,5 +1122,82 @@ allies_avoid_starting_wars_during_endgame = { #Allies should avoid attacking.. w
 	ai_strategy = {
 		type = avoid_starting_wars
 		value = -400
+	}
+}
+
+#building
+
+build_fucking_arms_factory = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		is_major = yes
+	}
+	abort = {
+		is_major = no
+	}
+	
+	ai_strategy = {
+		ai_strategy = {
+			type = building_target
+			id = infrastructure
+			value = 70
+		}
+		ai_strategy = {
+			type = building_target
+			id = arms_factory
+			value = 100
+		}
+		ai_strategy = {
+			type = building_target
+			id = industrial_complex
+			value = 100
+		}
+		ai_strategy = {
+			type = building_target
+			id = supply_node
+			value = 50
+		}
+		ai_strategy = {
+			type = building_target
+			id = rail_way
+			value = 100
+		}
+		ai_strategy = {
+			type = building_target
+			id = naval_base
+			value = 25
+		}
+		ai_strategy = {
+			type = building_target
+			id = dockyard
+			value = 100
+		}
+		ai_strategy = {
+			type = building_target
+			id = synthetic_refinery
+			value = 50
+		}
+		ai_strategy = {
+			type = building_target
+			id = fuel_silo
+			value = 25
+		}
+		ai_strategy = {
+			type = building_target
+			id = radar_station
+			value = 25
+		}
+		ai_strategy = {
+			type = building_target
+			id = nuclear_reactor
+			value = 0
+		}
+		ai_strategy = {
+			type = building_target
+			id = nuclear_reactor
+			value = -99999999999
+		}
 	}
 }
