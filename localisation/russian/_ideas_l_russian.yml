@@ -340,6 +340,7 @@
  FSC_Glanvich_corpus:0 "КСГР"
  FSC_Glanvich_corpus_desc:0 "Корпус Стражей Гланвичской Революции"
 
+ SFL_national_idea_idea: "Великая Саффлия"
  SFL_politizol:0 "Политическая изоляция"
  SFL_fascist_army:0 "Новая Саффлийская армия"
  SFL_communismdrift:0 "Государственная поддержка коммунизма"
@@ -347,6 +348,7 @@
  SFL_mondrift:0 "Государственная поддержка абсолютной монархии"
  SFL_fascismrift:0 "Государственная поддержка национализма"
  SFL_ishtrade:0 "Зона торговли среди стран бывшей ИСХ"
+ SFL_ishtrade2:0 "Зона торговли среди стран бывшей ИСХ"
  SFL_democratpeople:0 "Либеральное общество"
  SFL_oil_IID:0 "Нефтяная сделка"
  SFL_fascismdrift:0 "Рост националистических настроений"

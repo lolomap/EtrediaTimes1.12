@@ -2,10 +2,12 @@ spriteTypes = {
     spriteType = {
 		name = "GFX_autonomy_autonomy_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_autonomy_icon.dds"
+        legacy_lazy_load = no
 	}
     spriteType = {
 		name = "GFX_autonomy_dependent_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_dependent_icon.dds"
+        legacy_lazy_load = no
 	}
     spriteType = {
 		name = "GFX_autonomy_sphere_icon"
@@ -14,5 +16,6 @@ spriteTypes = {
     spriteType = {
 		name = "GFX_autonomy_subject_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_subject_icon.dds"
+        legacy_lazy_load = no
 	}
 }

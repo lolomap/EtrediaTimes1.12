@@ -130,7 +130,7 @@ country_event = {
 	
 	option = {
 	name = dux.5.b
-	ai_chance = { factor = 40 }
+	ai_chance = { factor = 40 modifier = {is_historical_focus_on = yes factor = 0}}
     }
 }
 

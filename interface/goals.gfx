@@ -1,6 +1,90 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_sfl_SBU_enemy"
+	texturefile="gfx/interface/goals/goal_sfl_SBU_enemy.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_SBU_friend"
+	texturefile="gfx/interface/goals/goal_sfl_SBU_friend.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_influence_MOF"
+	texturefile="gfx/interface/goals/goal_sfl_influence_MOF.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_economic_connections"
+	texturefile="gfx/interface/goals/goal_sfl_economic_connections.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_cultural_connections"
+	texturefile="gfx/interface/goals/goal_sfl_cultural_connections.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_create_MSAC"
+	texturefile="gfx/interface/goals/goal_sfl_create_MSAC.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_unitarian"
+	texturefile="gfx/interface/goals/goal_sfl_unitarian.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_trade_war"
+	texturefile="gfx/interface/goals/goal_sfl_trade_war.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_trade_ISH"
+	texturefile="gfx/interface/goals/goal_sfl_trade_ISH.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_SBU_competitors"
+	texturefile="gfx/interface/goals/goal_sfl_SBU_competitors.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_past_present_future"
+	texturefile="gfx/interface/goals/goal_sfl_past_present_future.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_federalization"
+	texturefile="gfx/interface/goals/goal_sfl_federalization.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_exit_isolation"
+	texturefile="gfx/interface/goals/goal_sfl_exit_isolation.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_democratic_changes"
+	texturefile="gfx/interface/goals/goal_sfl_democratic_changes.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_dem_kulishtia2"
 	texturefile="gfx/interface/goals/goal_ucb_dem_kulishtia2.dds"
 }

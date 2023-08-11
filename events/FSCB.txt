@@ -254,7 +254,6 @@ country_event = {
 				set_rule = {can_join_factions = no}
 			}
 		    NER = { declare_war_on = { target = FSC type = annex_everything } }
-			SFL = { country_event = { id = sfl.1 days = 240 } }
         }	
 	}
 }

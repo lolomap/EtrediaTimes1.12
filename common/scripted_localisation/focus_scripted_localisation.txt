@@ -1,0 +1,12 @@
+defined_text = {
+    name = SFL_influence_MOF_sl
+    text = {
+        trigger = {
+            MOF = {check_variable = { sphere_owner = SBU }}
+        }
+        localization_key = SFL_influence_MOF_SBU
+    }
+    text = {
+        localization_key = SFL_influence_MOF_default
+    }
+}

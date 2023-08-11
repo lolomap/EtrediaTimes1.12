@@ -37,6 +37,8 @@ guiTypes = {
 			quadTextureSprite = "GFX_logo_animation"
 			position = { x= 20 y = 20 }
 		}
+
+        
         #background = {
 		#	name = "Background"		
 		#	quadTextureSprite ="GFX_logo_animation"
@@ -82,15 +84,48 @@ guiTypes = {
 		{
 			name ="frontend_dev_logo"
 			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 15 y = 15 }
+			position = { x= -400 y = 15 }
 		}
 		
 		iconType =
 		{
 			name ="pdx_int_logo"
 			spriteType = "GFX_pdx_int_logo"
-			position = { x= 135 y = 15 }
-		}		
+			position = { x= -250 y = 15 }
+		}	
+
+        containerWindowType = {
+            name ="changelog_window"
+            position = { x=-100 y = 25}
+            size = { width = 320 height = 835 }
+            
+            clipping = yes
+            #verticalScrollbar = "right_vertical_slider"
+                    
+            background = {
+                name = "Background"		
+                quadTextureSprite ="GFX_tiled_bg"
+            }
+
+            instantTextBoxType = {
+                name = "title"
+                position = {x = 50% y = 25}
+                format = center
+                
+                font = hoi_36header
+                text = patchnote_title
+            }
+            instantTextBoxType = {
+                name = "text"
+                position = {x = 30 y = 90}
+                #format = center
+                maxWidth = 300
+                
+                font = hoi_16mbs
+                text = patchnote_text
+            }
+
+        }			
 		
 	}		
 
@@ -194,10 +229,11 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=200 y =-350}
+		position = { x=200 y =-450}
 		size = { width = 320 height = 435 }
 		Orientation = LOWER_LEFT
 		Origo = center		
+        clipping = no
 
 		positionType = {
 			name = "subscription_size"

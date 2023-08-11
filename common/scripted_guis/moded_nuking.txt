@@ -99,20 +99,14 @@ scripted_gui = {
                     }
                     modifier = {
                         ROOT = {
-                            has_wargoal_against = PREV.OWNER
-                        }
-                        add = 40
-                    }
-                    modifier = {
-                        ROOT = {
                             has_war_with = PREV.OWNER
                         }
                         add = 100
                     }
-                    modifier = {
-                        OWNER = {num_of_nukes > 0}
-                        add = 50
-                    }
+                    #modifier = {
+                    #    OWNER = {num_of_nukes > 0}
+                    #    add = 50
+                    #}
                     modifier = {
                         check_variable = { arms_factory_level < 1 }
                         check_variable = { industrial_complex_level < 1 }

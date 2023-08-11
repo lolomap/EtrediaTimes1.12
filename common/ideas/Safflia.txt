@@ -1,6 +1,28 @@
 ideas = {
 	country = {	
 
+        SFL_national_idea_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                army_core_defence_factor = 0.15
+                army_core_attack_factor = 0.05
+            }
+        }
+
         SFL_tradewar_idea = {
             allowed = {
                 always = no
@@ -354,6 +376,28 @@ ideas = {
 			production_speed_industrial_complex_factor = 0.05
 			production_speed_infrastructure_factor = 0.08
 			production_speed_synthetic_refinery_factor = 0.05
+		}
+	}
+
+    SFL_ishtrade2 = {
+
+		picture = polit_
+
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+			trade_opinion_factor = 0.25
+			production_speed_industrial_complex_factor = 0.05
+			production_speed_infrastructure_factor = 0.08
+			production_speed_synthetic_refinery_factor = 0.05
+            production_speed_supply_node_factor = 0.08
+            consumer_goods_factor = -0.05
+            min_export = 0.1
 		}
 	}
 

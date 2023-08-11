@@ -8,42 +8,24 @@ country_event = {
 
     is_triggered_only = yes
 
-	trigger = {
-        TAG = SFL
-		NER = { exists = yes }
-    }
 
     option = {
-    name = sfl.1.a
+        name = sfl.1.a
 		SFL = {
             create_wargoal = {
-            type = annex_everything
-            target = NER
+                type = annex_everything
+                target = NER
             }
 			add_state_claim = 68
 			add_state_claim = 69
 			add_state_claim = 70
-		}
-	SFL = {
-    	add_ai_strategy = {
-    	   type = puppet_wargoal
-    	   id = "NER"
-    	   value = 0
-    	}
+            add_ai_strategy = {
+                type = puppet_wargoal
+                id = "NER"
+                value = 0
+            }
+        }
 	}
-    ai_chance = { 
-	factor = 80 
-        modifier = {
-			factor = 1
-			is_historical_focus_on = yes
-		}
-	}
-	}
-	
-	option = {
-	name = sfl.1.b
-	ai_chance = { factor = 20 }
-    }
 }
 
 country_event = {
@@ -412,7 +394,16 @@ country_event = {
     option = {
         name = sfl.15.a
         MOF = {SBU = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        diplomatic_relation = {
+            country = SBU
+            relation = non_aggression_pact
+            active = yes
+        }
         SBU = { country_event = { id = sbu.61 days = 1 } }
+
+        hidden_effect = {
+            SFL = {mark_focus_tree_layout_dirty = yes}   
+        }
 		ai_chance = { 
 			factor = 0.7
 		}

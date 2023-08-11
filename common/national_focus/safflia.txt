@@ -2,10 +2,10 @@ focus_tree = {
 	id = safflia
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = SFL
-		}
+		#modifier = {
+		#	add = 10
+		#	tag = SFL
+		#}
 	}
 	default = no
 	continuous_focus_position = {x = 0 y = 92}
