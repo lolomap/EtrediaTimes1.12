@@ -119,7 +119,7 @@ guiTypes = {
                 name = "text"
                 position = {x = 30 y = 90}
                 #format = center
-                maxWidth = 300
+                maxWidth = 280
                 
                 font = hoi_16mbs
                 text = patchnote_text
