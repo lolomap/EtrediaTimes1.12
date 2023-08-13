@@ -508,7 +508,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_ideas = SFL_economic_MOF
         }
     }
 
@@ -530,7 +530,16 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            set_temp_variable = { temp = MOF }
+            add_to_variable = {
+                var = sphere_cost_MOF
+                value = -100
+                tooltip = sphere_cost_change_tt
+            }
+            clamp_variable = {
+                var = sphere_cost_MOF
+                min = 0
+            }
         }
     }
 
@@ -563,7 +572,15 @@ focus_tree = {
         x = -1
         y = 1
         relative_position_id = SFL_cultural_connections
-        available = {}
+        available = {
+            MOF = {
+                set_temp_variable = { temp = SFL }
+                custom_trigger_tooltip = {
+                    tooltip = is_in_sphere_tt
+                    check_variable = { sphere_owner = SFL }
+                }
+            }
+        }
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -645,7 +662,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_ideas = SFL_volunteers_idea
         }
     }
 
@@ -656,7 +673,11 @@ focus_tree = {
         x = -2
         y = 1
         relative_position_id = SFL_SBU_friend
-        available = {}
+        available = {
+            UCB = {
+                is_faction_leader = yes
+            }
+        }
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -678,7 +699,11 @@ focus_tree = {
         x = -1
         y = 1
         relative_position_id = SFL_volunteers
-        available = {}
+        available = {
+            UCB = {
+                is_faction_leader = yes
+            }
+        }
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -692,7 +717,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            UCB = {country_event = {id = ucnb.32 days = 1}}
         }
     }
 
@@ -714,7 +739,7 @@ focus_tree = {
         }
     
         completion_reward = {
-            
+            add_political_power = 75
         }
     }
 
@@ -725,8 +750,18 @@ focus_tree = {
         x = 0
         y = 1
         relative_position_id = SFL_SBU_enemy
-        available = {}
-        bypass = {}
+        available = {NOT = {country_exists = MOF}}
+        bypass = {
+            SBU = {
+                OR = {
+                    exist = no
+                    NOT = {
+                        owns_state = 202
+                        owns_state = 203
+                    }
+                }
+            }
+        }
         allow_branch = {}
         prerequisite = {
             focus = SFL_SBU_enemy
@@ -736,7 +771,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            SBU = {country_event = {id = sbu.79 days = 1}}
         }
     }
 

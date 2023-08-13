@@ -533,3 +533,74 @@ country_event = {
         ai_chance = {factor = 2}
     }
 }
+
+country_event = {
+    id = sfl.22
+    title = sfl.22.t
+    desc = sfl.22.d
+    #picture = GFX_event_picture
+
+    #is_triggered_only = yes
+    #fire_only_once = yes
+
+    trigger = {
+        date > 2019.6.1
+        if = { limit = {date > 2019.6.1}
+            SFL = {has_government = democratic}
+            UCB = {has_government = democratic}
+            SBU = {
+                is_in_faction_with = UCB
+                has_war_with = EIK
+            }
+        }
+    }
+    option = {
+        name=sfl.22.a
+        UCB = {add_to_faction = SFL}
+        ai_chance = {
+            base = 50
+        }
+    }
+    option = {
+        name = sfl.22.b
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sfl.23
+    title = sfl.23.t
+    desc = sfl.23.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.23.a
+        
+    }
+}
+
+country_event = {
+    id = sfl.24
+    title = sfl.24.t
+    desc = sfl.24.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.24.a
+        
+    }
+}

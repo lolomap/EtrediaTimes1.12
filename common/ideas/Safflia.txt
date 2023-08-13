@@ -541,5 +541,67 @@ ideas = {
 			}
 	}
 
+    SFL_economic_MOF = {
+        allowed = {
+            always = no
+        }
+    
+    
+        removal_cost = -1
+    
+        on_add = {
+            
+        }
+    
+        on_remove = {
+            
+        }
+
+        cancel = {
+            MOF = {
+                OR = {
+                    exists = no
+                    AND = {
+                        is_subject = yes
+                        NOT = {is_subject_of = SFL}
+                    }
+                }
+            }
+        }
+    
+        modifier = {
+            
+        }
+
+        targeted_modifier = {
+            tag = MOF
+            trade_cost_for_target_factor = -0.5
+            production_factory_max_efficiency_factor = 0.1
+        }
+    }
+
+    SFL_volunteers_idea = {
+        allowed = {
+            always = no
+        }
+    
+    
+        removal_cost = -1
+    
+        on_add = {
+            
+        }
+    
+        on_remove = {
+            
+        }
+    
+        modifier = {
+            send_volunteer_divisions_required = -1
+            send_volunteers_tension = -1
+            send_volunteer_size = 8
+        }
+    }
+
 }
 }

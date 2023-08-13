@@ -92,6 +92,7 @@
   remove_from_sphere_tt: "Страна §Yвыйдет§! из-под сферы [?sphere_owner.GetFlag]§Y[?sphere_owner.GetAdjective]§! влияния."
   is_in_sphere_tt: "В §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
   is_in_sphere_tt_NOT: "Не в §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
+  sphere_cost_change_tt: "Стоимость вовлечения §Y[?temp.GetFlag][?temp.GetNameDef]§! в сферу влияния: $RIGHT|-=$"
 
   failed_orb: "Провалившиеся переговоры"
 

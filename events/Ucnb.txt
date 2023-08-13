@@ -842,3 +842,33 @@ country_event = {
         add_stability = 0.08
     }
 }
+
+country_event = {
+    id = ucnb.32
+    title = ucnb.32.t
+    desc = ucnb.32.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=ucnb.32.a
+        UCB = {add_to_faction = SFL}
+        ai_chance = {
+            base = 50
+        }
+    }
+    option = {
+        name = ucnb.32.b
+        country_event = {id = sfl.23 days = 1}
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+}
