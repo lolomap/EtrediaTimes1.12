@@ -18,6 +18,7 @@ state={
 		}
 		add_core_of = FSC
 		add_core_of = NER
+        add_claim_by = SFL
 		victory_points = {
 			4675 2
 		}

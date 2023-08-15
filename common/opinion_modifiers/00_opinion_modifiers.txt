@@ -22,6 +22,12 @@ opinion_modifiers = {
 		value = -50
 		min_trust = -35
 	}
+    FSC_isles_way = {
+        value = 10
+    }
+    FSC_sfl_relations = {
+        value = 20
+    }
 	FSC_IID_partner = {
 		value = 15
 		min_trust = 15

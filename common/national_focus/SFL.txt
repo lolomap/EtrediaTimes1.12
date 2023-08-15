@@ -458,6 +458,7 @@ focus_tree = {
                 has_political_power > 149
                 NOT = {has_non_aggression_pact_with = SBU}
             }
+            NOT = {completed_national_focus = SFL_no_monfua}
         }
         bypass = {NOT = {country_exists = MOF}}
         allow_branch = {}
@@ -546,7 +547,7 @@ focus_tree = {
     focus = {
         id = SFL_no_monfua
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 5
         x = -2
         y = 2
         relative_position_id = SFL_influence_MOF

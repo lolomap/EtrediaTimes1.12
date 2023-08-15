@@ -604,3 +604,59 @@ country_event = {
         
     }
 }
+
+country_event = {
+    id = sfl.25
+    title = sfl.25.t
+    desc = sfl.25.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.25.a
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+    option = {
+        name = sfl.25.b
+
+        68 = {remove_claim_by = SFL}
+        69 = {remove_claim_by = SFL}
+        70 = {remove_claim_by = SFL}
+
+        ai_chance = {
+            base = 50
+        }
+    }
+    option = {
+        name = sfl.25.c
+        trigger = {
+            NOT = {
+                any_country = {
+                    has_guaranteed = FSC
+                }
+            }
+            OR = {
+                country_exists = KUL
+                country_exists = ANR
+                AND = {
+                    country_exists = ORB
+                    NOT = {31 = {is_owned_by = ORB}}
+                }
+            }
+        }
+
+        FSC = {country_event = {id = fscb.27 days = 1}}
+        ai_chance = {
+            base = 1000
+        }
+    }
+}

@@ -6,7 +6,11 @@
   RULE_IDEOLOGY_PROTECTION: "Защита идеологии мажоров"
   RULE_ALLOW_IPROC_FREE_DESC: "Для стран, имеющих ветки фокусов на смену политического режима, защита идеологий предотвращает смену партии некоторыми стандартными способами (например через решения советника). Это необходимо, чтобы предотвратить слишком быстрое изменение режима и намеренный обход дерева фокусов."
   
-
+  RULE_OPTION_DEFAULT: "Исторический"
+  RULE_OPTION_DEFAULT_AI_DESC: "Поведение ИИ будет приближено к истинным событиям лора."
+  RULE_OPTION_FASCIST_UCB: "Терине Нарабел (радикал.)"
+  RULE_OPTION_NEUTRALITY_UCB: "Терине Наребел (умерен.)"
+  RULE_OPTION_DEMOCRATIC_UCB: "Анатолий Жмиринован"
   RULE_OPTION_MONARCHIST:0 "Монархизм"
   RULE_OPTION_NEUTRALITY:0 "Авторитаризм"
   RULE_OPTION_CIVILWAR: "Гражданская война"
@@ -16,6 +20,7 @@
   SBU_AI_BEHAVIOR:0 "Сибурленд"
   SFL_AI_BEHAVIOR:0 "Саффлия"
   IID_AI_BEHAVIOR:0 "ИИД"
+  FSC_AI_BEHAVIOR: "ФШКБ"
 
   custom_diff_strong_eik:0 "Усилить Эйклиндстинд"
   custom_diff_strong_yan:0 "Усилить Янтхалию"
