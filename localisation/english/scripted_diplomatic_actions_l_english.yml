@@ -8,7 +8,7 @@
    EMBARGO_TITLE:0 "Embargo"
    EMBARGO_ACTION_DESC:0 "This country will not be able to buy resources from you."
    END_EMBARGO_TITLE:0 "End embargo"
-   END_EMBARGO_ACTION_DESC:0 "This nation will be able to buy resources from you again."
+   END_EMBARGO_ACTION_DESC:0 "This country will be able to buy resources from you again."
 
    PEACE_DEAL_TITLE:0 "Peace offer"
    PEACE_DEAL_ACTION_DESC:0 "§RYour alliance members won't like this§! \nA peace treaty with no changes in territorry ownership will be signed."
@@ -27,7 +27,7 @@
    minor_pp:0 "Our superiority"
 
    opinion_emb:0 "Our relationship"
-   influence_emb:0 "Our Influence"
+   influence_emb:0 "Our influence"
    base_emb:0 "Base unwillingness"
 
    sphere_status_text: "[sphere_status_sl]"
