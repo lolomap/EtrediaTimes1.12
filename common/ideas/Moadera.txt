@@ -1,7 +1,6 @@
 ideas = {
     country = {	
 		MOA_recrut = {
-
             picture = pol
 
 			allowed = {
@@ -9,11 +8,104 @@ ideas = {
 			}
 			
 			removal_cost = -1
-	
 
 			modifier = {
-				conscription_factor = -0.7
+				conscription_factor = -0.5
+				max_planning_factor = -0.15
+				breakthrough_factor = -0.1
+				army_org_factor = -0.1
                 mobilization_laws_cost_factor = 1
+			}
+		}
+		MOA_difficult_construct = {
+            picture = pol
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		MOA_debts = {
+            picture = pol
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = GOD
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SBO
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = KOI
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = CHO
+				cic_to_target_factor = 0.05
+			}
+		}
+		MOA_earthquake_1 = {
+            picture = pol
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.5
+				industrial_capacity_factory = -0.5
+				monthly_population = -0.75
+			}
+		}
+		MOA_earthquake_2 = {
+            picture = pol
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.25
+				monthly_population = -0.5
+			}
+		}
+		MOA_earthquake_3 = {
+            picture = pol
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.25
 			}
 		}
 	}
