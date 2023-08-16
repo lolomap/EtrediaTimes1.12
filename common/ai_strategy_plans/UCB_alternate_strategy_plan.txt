@@ -56,3 +56,27 @@ UCB_fascist_plan = {
 		}
 	}
 }
+
+UCB_neutrality_plan = {
+
+	enable = {
+		original_tag = UCB
+        has_game_rule = {
+            rule = UCB_AI_BEHAVIOR
+            option = NEUTRALITY
+        }
+	}
+
+	ai_national_focuses = {
+		UCB_fasc1
+        UCB_neutrality_way
+	}
+
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

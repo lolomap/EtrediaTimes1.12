@@ -642,12 +642,17 @@ UCB_ai_behavior = {
 	}
 	option = {
 		name = FASCIST
-		text = "RULE_OPTION_FASCIST"
+		text = "RULE_OPTION_FASCIST_UCB"
 		desc = "RULE_OPTION_FASCIST_UCB_AI_DESC"
+	}
+    option = {
+		name = NEUTRALITY
+		text = "RULE_OPTION_NEUTRALITY_UCB"
+		desc = "RULE_OPTION_NEUTRALITY_UCB_AI_DESC"
 	}
 	option = {
 		name = DEMOCRATIC
-		text = "RULE_OPTION_DEMOCRATIC"
+		text = "RULE_OPTION_DEMOCRATIC_UCB"
 		desc = "RULE_DEMOCRATIC_UCB_AI_DESC"
 		allow_achievements = yes
 	}
@@ -720,30 +725,10 @@ SFL_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = COMMUNIST
-		text = "RULE_OPTION_COMMUNIST"
-		desc = "RULE_OPTION_COMMUNIST_SBU_AI_DESC"
-	}
-	option = {
-		name = NEUTRALITY
-		text = RULE_OPTION_NEUTRALITY
-		desc = RULE_OPTION_NEUTRALITY_SBU_AI_DESC
-	}
-	option = {
 		name = DEMOCRATIC
 		text = "RULE_OPTION_DEMOCRATIC"
 		desc = "RULE_DEMOCRATIC_SBU_AI_DESC"
 		allow_achievements = yes
-	}
-	option = {
-		name = FASCIST
-		text = "RULE_OPTION_FASCIST"
-		desc = "RULE_FASCIST_SBU_AI_DESC"
-	}
-	option = {
-		name = MONARCHIST
-		text = RULE_OPTION_MONARCHIST
-		desc = RULE_MONARCHIST_SBU_AI_DESC
 	}
 	option = {
 		name = RANDOM
@@ -751,6 +736,35 @@ SFL_ai_behavior = {
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
 	}
 }
+
+FSC_ai_behavior = {
+	name = FSC_AI_BEHAVIOR
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRATIC
+		text = "RULE_OPTION_DEMOCRATIC"
+		desc = "RULE_DEMOCRATIC_FSC_AI_DESC"
+		allow_achievements = no
+	}
+    option = {
+		name = FASCISM
+		text = "RULE_OPTION_FASCIST"
+		desc = "RULE_DEMOCRATIC_FSC_AI_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
 
 IID_ai_behavior = {
 	name = IID_AI_BEHAVIOR

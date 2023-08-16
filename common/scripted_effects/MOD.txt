@@ -2,9 +2,12 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-    force_update_map_mode = {
-                    mapmode = nuking
-                }
+    11 = {
+        remove_building = {
+            type = supply_node
+            level = 1
+        }
+    }
 }
 
 ####

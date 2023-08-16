@@ -1,0 +1,74 @@
+FSC_democratic_plan = {
+
+	enable = {
+		original_tag = FSC
+        has_game_rule = {
+            rule = FSC_AI_BEHAVIOR
+            option = DEMOCRATIC
+        }
+	}
+
+	ai_national_focuses = {
+		FSC_save_traditions
+        FSC_Alende_group
+        FSC_save_TRP
+	}
+
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FSC_historical_plan = {
+
+	enable = {
+		original_tag = FSC
+        has_game_rule = {
+            rule = FSC_AI_BEHAVIOR
+            option = DEFAULT
+        }
+        is_historical_focus_on = yes
+	}
+
+	ai_national_focuses = {
+		FSC_save_traditions
+        FSC_no_compromises
+        FSC_continue_destabilization
+        FSC_END_friend
+	}
+
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+FSC_fascist_plan = {
+
+	enable = {
+		original_tag = FSC
+        has_game_rule = {
+            rule = FSC_AI_BEHAVIOR
+            option = FASCIST
+        }
+	}
+
+	ai_national_focuses = {
+		FSC_great_mission
+	}
+
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

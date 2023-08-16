@@ -1,0 +1,779 @@
+focus_tree = {
+	id = saffl
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SFL
+		}
+	}
+	default = no
+    continuous_focus_position = {x = 0 y = 1500}
+
+    focus = {
+        id = SFL_exit_isolation
+        icon = GFX_goal_sfl_exit_isolation
+        cost = 10
+        x = 10
+        y = 0
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            remove_ideas = SFL_politizol
+        }
+    }
+
+    focus = {
+        id = SFL_trade_ISH
+        icon = GFX_goal_sfl_trade_ISH
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_exit_isolation
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_exit_isolation
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = { SFL_ishtrade }
+        }
+    }
+
+    focus = {
+        id = SFL_improve_MOF_relations
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_exit_isolation
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_exit_isolation
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = SFL_past_present_future
+        icon = GFX_goal_sfl_past_present_future
+        cost = 10
+        x = 0
+        y = 2
+        relative_position_id = SFL_exit_isolation
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_exit_isolation
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_stability = 0.05
+            set_temp_variable = { temp = token:fascism }
+            add_to_variable = {
+                var = fas_opposition_factor
+                value = -0.15
+                tooltip = party_power_factor
+            }
+            set_temp_variable = { temp = token:neutrality }
+            add_to_variable = {
+                var = neu_opposition_factor
+                value = -0.15
+                tooltip = party_power_factor
+            }
+            set_temp_variable = { temp = token:monarchism }
+            add_to_variable = {
+                var = mon_opposition_factor
+                value = -0.15
+                tooltip = party_power_factor
+            }
+        }
+    }
+
+    focus = {
+        id = SFL_federalization
+        icon = GFX_goal_sfl_federalization
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_past_present_future
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_past_present_future
+        }
+        mutually_exclusive = {
+        	focus = SFL_unitarian
+        }
+    
+        completion_reward = {
+            HLR = {
+                set_country_flag = autonomy_state
+            }
+            SZE = {
+                set_country_flag = autonomy_state
+            }
+            hidden_effect = {
+                release_puppet_on_controlled = HLR
+                SZE = {transfer_state = 185}
+            }
+            set_autonomy = {
+                target = HLR
+                autonomy_state = autonomy_autonomy
+                end_wars = no
+                end_civil_wars = no
+            }
+            set_autonomy = {
+                target = SZE
+                autonomy_state = autonomy_autonomy
+                end_wars = no
+                end_civil_wars = no
+            }
+            
+            add_ideas = regionalism
+        }
+    }
+
+    focus = {
+        id = SFL_unitarian
+        icon = GFX_goal_sfl_unitarian
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_past_present_future
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_past_present_future
+        }
+        mutually_exclusive = {
+        	focus = SFL_federalization
+        }
+    
+        completion_reward = {
+            add_ideas = continuity_d
+            add_ideas = sforces_5
+        }
+    }
+
+    focus = {
+        id = SFL_democratic_changes
+        icon = GFX_goal_sfl_democratic_changes
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_unitarian
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_unitarian
+            focus = SFL_federalization
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = SFL_democratpeople
+        }
+    }
+
+    focus = {
+        id = SFL_improve_trading
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_democratic_changes
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_democratic_changes
+        }
+        prerequisite = {
+            focus = SFL_trade_war
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = SFL_ishtrade
+                add_idea = SFL_ishtrade2
+            }
+        }
+    }
+
+    focus = {
+        id = SFL_national_idea
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_democratic_changes
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_democratic_changes
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = SFL_national_idea_idea
+        }
+    }
+
+    focus = {
+        id = SFL_economic_program
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 4
+        y = 2
+        relative_position_id = SFL_exit_isolation
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_exit_isolation
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = SFL_investition_plan
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_economic_program
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_economic_program
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = SFL_oil_in_IID
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_investition_plan
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_investition_plan
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            IID = { country_event = { id = dux.5 days = 1 } }
+        }
+    }
+
+    focus = {
+        id = SFL_support_metal_productions
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_investition_plan
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_investition_plan
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_resource = {
+                type = steel
+                amount = 18
+                state = 186
+            }
+        }
+    }
+
+    focus = {
+        id = SFL_sm_economic_zone
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 2
+        relative_position_id = SFL_investition_plan
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_investition_plan
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = SFL_HLE_resources 
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_sm_economic_zone
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_sm_economic_zone
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = SFL_SBU_competitors
+        icon = GFX_goal_sfl_SBU_competitors
+        cost = 10
+        x = -2
+        y = 2
+        relative_position_id = SFL_trade_ISH
+        available = {}
+        bypass = {NOT = {country_exists = SBU}}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_trade_ISH
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            SBU = { add_opinion_modifier { target = ROOT modifier = SFL_concurent } }
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = SFL_trade_war
+        icon = GFX_goal_sfl_trade_war
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_SBU_competitors
+        available = {}
+        bypass = {OR = {SBU = {has_idea = SFL_tradewar_idea} NOT = {country_exists = SBU}}}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_SBU_competitors
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            hidden_effect = {
+                SFL = {add_ideas = SFL_tradewar_idea}
+                SBU = {
+                    add_opinion_modifier { target = ROOT modifier = SFL_tradewar }
+                    add_ideas = SFL_tradewar_idea
+                }
+                SBU = {set_country_flag = tradewar}
+                set_country_flag = tradewar
+                country_event = {id = mechanics.39 days = 1}
+                set_variable = {trade_war = 100}
+            }
+            custom_effect_tooltip = start_trade_war_tooltip
+        }
+    }
+
+    focus = {
+        id = SFL_influence_MOF
+        icon = GFX_goal_sfl_influence_MOF
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_trade_war
+        available = {
+            if = {
+                limit = {MOF = {check_variable = { sphere_owner = SBU }}}
+                has_political_power > 149
+                NOT = {has_non_aggression_pact_with = SBU}
+            }
+            NOT = {completed_national_focus = SFL_no_monfua}
+        }
+        bypass = {NOT = {country_exists = MOF}}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_trade_war
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            if = {
+                limit = {MOF = {NOT = {check_variable = { sphere_owner = SBU }}}}
+                MOF = {
+                    SFL = {involve_to_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}
+                    add_ideas = MOF_sflunfluence
+                    country_event = { id = monfua.1 days = 1 }
+                }
+            }
+            else = {
+                add_political_power = -150
+                MOF = {
+                    remove_from_sphere = yes
+                    custom_effect_tooltip = remove_from_sphere_tt
+                    add_ideas = MOF_sflunfluence
+                    country_event = { id = monfua.1 days = 1 }
+                }
+            }
+            mark_focus_tree_layout_dirty = yes
+        }
+    }
+
+    focus = {
+        id = SFL_economic_connections
+        icon = GFX_goal_sfl_economic_connections
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_influence_MOF
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_influence_MOF
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = SFL_economic_MOF
+        }
+    }
+
+    focus = {
+        id = SFL_cultural_connections
+        icon = GFX_goal_sfl_cultural_connections
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_influence_MOF
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_influence_MOF
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            set_temp_variable = { temp = MOF }
+            add_to_variable = {
+                var = sphere_cost_MOF
+                value = -100
+                tooltip = sphere_cost_change_tt
+            }
+            clamp_variable = {
+                var = sphere_cost_MOF
+                min = 0
+            }
+        }
+    }
+
+    focus = {
+        id = SFL_no_monfua
+        icon = GFX_goal_unknown
+        cost = 5
+        x = -2
+        y = 2
+        relative_position_id = SFL_influence_MOF
+        available = {}
+        bypass = {}
+        allow_branch = {MOF = {check_variable = { sphere_owner = SBU }}}
+        prerequisite = {
+            focus = SFL_trade_war
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_political_power = -25
+        }
+    }
+
+    focus = {
+        id = SFL_create_MSAC
+        icon = GFX_goal_sfl_create_MSAC
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_cultural_connections
+        available = {
+            MOF = {
+                set_temp_variable = { temp = SFL }
+                custom_trigger_tooltip = {
+                    tooltip = is_in_sphere_tt
+                    check_variable = { sphere_owner = SFL }
+                }
+            }
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_cultural_connections
+        }
+        prerequisite = {
+            focus = SFL_economic_connections
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            MOF = { country_event = { id = monfua.2 days = 1 } }
+        }
+    }
+
+    focus = {
+        id = SFL_involve_NER
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 3
+        y = 1
+        relative_position_id = SFL_create_MSAC
+        available = {country_exists = NER has_global_flag = form_scandinavia_flag}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_create_MSAC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            country_event = {id = sfl.1 days = 1}
+        }
+    }
+
+    focus = {
+        id = SFL_SBU_friend
+        icon = GFX_goal_sfl_SBU_friend
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_create_MSAC
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_create_MSAC
+            focus = SFL_no_monfua
+        }
+        mutually_exclusive = {
+        	focus = SFL_SBU_enemy
+        }
+    
+        completion_reward = {
+            SBU = { remove_opinion_modifier = { target = ROOT modifier = SFL_tradewar } }
+
+        }
+    }
+
+    focus = {
+        id = SFL_volunteers
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_SBU_friend
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_SBU_friend
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = SFL_volunteers_idea
+        }
+    }
+
+    focus = {
+        id = SFL_industry_EC
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = SFL_SBU_friend
+        available = {
+            UCB = {
+                is_faction_leader = yes
+            }
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_SBU_friend
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = SFL_join_EC
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_volunteers
+        available = {
+            UCB = {
+                is_faction_leader = yes
+            }
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_volunteers
+        }
+        prerequisite = {
+            focus = SFL_industry_EC
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            UCB = {country_event = {id = ucnb.32 days = 1}}
+        }
+    }
+
+    focus = {
+        id = SFL_SBU_enemy
+        icon = GFX_goal_sfl_SBU_enemy
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_create_MSAC
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_create_MSAC
+        }
+        mutually_exclusive = {
+        	focus = SFL_SBU_friend
+        }
+    
+        completion_reward = {
+            add_political_power = 75
+        }
+    }
+
+    focus = {
+        id = SFL_east_mof_autonomy
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_SBU_enemy
+        available = {NOT = {country_exists = MOF}}
+        bypass = {
+            SBU = {
+                OR = {
+                    exist = no
+                    NOT = {
+                        owns_state = 202
+                        owns_state = 203
+                    }
+                }
+            }
+        }
+        allow_branch = {}
+        prerequisite = {
+            focus = SFL_SBU_enemy
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            SBU = {country_event = {id = sbu.79 days = 1}}
+        }
+    }
+
+}

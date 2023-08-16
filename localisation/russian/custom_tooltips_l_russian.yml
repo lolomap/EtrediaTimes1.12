@@ -26,6 +26,7 @@
   sz_bonus_tt2: "Вам будет добавлено на §Y90§! дней:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §G-10%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+10%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$:§G+10%§!"
   sz_bonus_tt3: "Вам будет добавлено на §Y90§! дней:\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §G-15%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+15%§!\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$:§G+15%§!"
   tradewar_starter_tooltip: "Начал торговую войну"
+  start_trade_war_tooltip: "Будут открыты решения §YТорговой войны§!"
   trade_b5: "Очков торговли: §R-5§!"
   trade_b8: "Очков торговли: §R-8§!"
   trade_b10: "Очков торговли: §R-10§!"
@@ -91,6 +92,7 @@
   remove_from_sphere_tt: "Страна §Yвыйдет§! из-под сферы [?sphere_owner.GetFlag]§Y[?sphere_owner.GetAdjective]§! влияния."
   is_in_sphere_tt: "В §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
   is_in_sphere_tt_NOT: "Не в §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
+  sphere_cost_change_tt: "Стоимость вовлечения §Y[?temp.GetFlag][?temp.GetNameDef]§! в сферу влияния: $RIGHT|-=$"
 
   failed_orb: "Провалившиеся переговоры"
 
@@ -142,7 +144,7 @@
   ISH_rebel_tooltip: "§CОткрывает решения для ослабления сопротивления§!"
   safflia_compromiss_tooltip: "МСАС не будет претендовать на [RGY.GetNameDef]"
   safflia_compromiss_trigger_tooltip: "Не найден компромисс с Саффлией"
-  form_scandinavia_flag: "МСАС существует"
+  form_scandinavia_flag: "[SFL.GetFlag]§YМСАС§! сформирован"
   sz_allow_extra_support:0 "§GПоявится возможность получить дополнительную помощь от Sburska Zvezda за дополнительную плату§!\n"
   eik_oligarchism_change:0 "Лояльность олигархии: [?eik_ol_ch|+%]\n"
   eik_oligarchism_reduce:0 "Лояльность олигархии: [?eik_ol_red|+%]\n"

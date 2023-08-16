@@ -18,103 +18,31 @@ SFL_democratic_plan = {
 		
 	}
 
-	focus_factors = {
-		SFL_democraticc = 1000
-	}
-
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-SFL_communist_plan = {
-
-	enable = {
-		original_tag = SFL
-		has_game_rule = {
-			rule = SFL_AI_BEHAVIOR
-			option = COMMUNIST
-		}
-	}
-
-	focus_factors = {
-		SFL_communismm = 1000
-	}
-
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-SFL_fascist_plan = {
-
-	enable = {
-		original_tag = SFL
-		has_game_rule = {
-			rule = SFL_AI_BEHAVIOR
-			option = FASCIST
-		}
-	}
-
-	focus_factors = {
-		SFL_fascismm = 1000
-	}
-
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-SFL_monarchist_plan = {
-
-	enable = {
-		original_tag = SFL
-		has_game_rule = {
-			rule = SFL_AI_BEHAVIOR
-			option = MONARCHIST
-		}
-	}
-
-	focus_factors = {
-		SFL_neutralityy = 1000
-		SFL_monarh = 1000
-	}
-
-
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-SFL_neutrality_plan = {
-
-	enable = {
-		original_tag = SFL
-		has_game_rule = {
-			rule = SFL_AI_BEHAVIOR
-			option = NEUTRALITY
-		}
-	}
-
-	focus_factors = {
-		SFL_neutralityy = 1000
-		SFL_demking = 1000
-	}
+	ai_national_focuses = {
+        SFL_exit_isolation
+        SFL_trade_ISH
+        SFL_SBU_competitors
+        SFL_past_present_future
+        SFL_unitarian
+        SFL_economic_program
+        SFL_investition_plan
+        SFL_oil_in_IID
+        SFL_trade_war
+        SFL_support_metal_productions
+        SFL_democratic_changes
+        SFL_influence_MOF
+        SFL_economic_connections
+        SFL_sm_economic_zone
+        SFL_HLE_resources
+        SFL_cultural_connections
+        SFL_create_MSAC
+        SFL_national_idea
+        SFL_improve_trading
+        SFL_SBU_friend
+        SFL_volunteers
+        SFL_industry_EC
+        SFL_join_EC
+    }
 
 
 	weight = {

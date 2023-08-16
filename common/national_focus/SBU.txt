@@ -94,31 +94,6 @@ focus_tree = {
 	}
 
     focus = {
-		id = SBU_end_tradewar
-		icon = GFX_goal_unknown
-		cost = 45
-		x = 49
-		y = 5
-
-        prerequisite = {focus = SBU_pressure_gy}
-
-        available = {
-            has_idea = SFL_tradewar_idea
-            custom_trigger_tooltip = {
-                tooltip = tradewar_starter_tooltip
-                has_country_flag = tradewar_starter
-            }
-        }
-
-		completion_reward = {
-            SFL = { remove_opinion_modifier = { target = ROOT modifier = SFL_tradewar } }
-            clr_country_flag = tradewar
-            SFL = {clr_country_flag = tradewar}
-		}
-
-	}
-
-    focus = {
 		id = SBU_uranian_question
 		icon = GFX_goal_sburska_zvezda_potential
 		cost = 10
@@ -349,7 +324,6 @@ focus_tree = {
         }
 		completion_reward = { 
 		IID = { country_event = { id = dux.6 days = 1 } }
-            SBU = {add_to_variable = {trade_war = 15}}
 		}
 		x = 7
 		y = 3
@@ -388,7 +362,6 @@ focus_tree = {
 		}
 		completion_reward = { 
 		SBU = { country_event = { id = sbu.9 days = 1 } }
-        add_to_variable = {trade_war = 10}
 		}
 		ai_will_do = {
 		factor = 30
@@ -410,7 +383,6 @@ focus_tree = {
 		}
 		completion_reward = { 
 		MOF = { country_event = { id = monfua.4 days = 1 } }
-        SFL = {add_to_variable = {trade_war = 15}}
 		}
 		x = 8
 		y = 5
@@ -428,7 +400,6 @@ focus_tree = {
 		}
 		completion_reward = {
             SBU = { country_event = { id = sbu.23 days = 1 } }
-            add_to_variable = {trade_war = 15}
             RGY = {remove_from_sphere = yes}
             ELR = {remove_from_sphere = yes}
 		}
