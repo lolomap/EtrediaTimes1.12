@@ -18,6 +18,8 @@ country_event = {
             if = {
                 limit = { TRP = { owns_state = 63 controls_state = 63 } } 
 		        transfer_state = 63
+            }
+            if = {
                 limit = { TRP = { owns_state = 62 controls_state = 62 } } 
 		        transfer_state = 62
 		    }
