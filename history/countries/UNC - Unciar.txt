@@ -13,6 +13,11 @@ add_ideas = {
     sforces_3
 }
 
+set_autonomy = {
+	target = MHI
+	autonomous_state = autonomy_puppet
+}
+
 set_technology = {basic_train = 1
 
         tech_engineers = 1
@@ -34,7 +39,7 @@ set_technology = {basic_train = 1
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = monarchism
 	last_election = "2012.3.5"
 	election_frequency = 48
 	elections_allowed = no
@@ -44,13 +49,12 @@ set_popularities = {
         democratic = 0
         fascism = 0
         communism = 0
-	neutrality = 100
+	neutrality = 0
+	monarchism = 100
 }
 
 set_convoys = 0
 
-
-recruit_character = UNC_alexander_evans
 
 recruit_character = UNC_gurbhagat_parer
 

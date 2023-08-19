@@ -561,7 +561,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem1
 		}
-		x = 21
+		x = 22
 		y = 4
 		
 		completion_reward = {
@@ -602,7 +602,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_gov_reform
 		}
-		x = 21
+		x = 22
 		y = 5
 
 		completion_reward = {
@@ -630,7 +630,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_stabilnost
 		}
-		x = 21
+		x = 22
 		y = 6
 
 		completion_reward = {
@@ -651,6 +651,24 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = UCB_fight_with_mafia
+		icon = GFX_goal
+		cost = 5
+		prerequisite = {
+			focus = UCB_dem_autonomy
+		}
+		x = 19
+		y = 7
+
+		completion_reward = {
+			add_political_power = 50
+			UCB = { country_event = ucnb.99 days = 10 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = UCB_dem_compromis
 		icon = GFX_goal_ucb_dem_compromis
 		cost = 5
@@ -660,7 +678,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UCB_dem_battle
 		}
-		x = 20
+		x = 21
 		y = 7
 
 		completion_reward = {
@@ -689,7 +707,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_compromis
 		}
-		x = 20
+		x = 21
 		y = 8
 
 		completion_reward = {
@@ -717,7 +735,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UCB_dem_compromis
 		}
-		x = 22
+		x = 23
 		y = 7
 
 		completion_reward = {
@@ -748,7 +766,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_battle
 		}
-		x = 22
+		x = 23
 		y = 8
 
 		completion_reward = {
@@ -778,7 +796,7 @@ focus_tree = {
 			country_event = { id = ucnb.17 days = 1 }
 		}
 
-		x = 21
+		x = 22
 		y = 9
 
 	}
@@ -1363,6 +1381,10 @@ focus_tree = {
 			focus = UCB_dem_industrial2
 			focus = UCB_dem_oil_factory
 		}
+		completion_reward = {
+			add_ideas = UCB_tajiki_idea
+			add_ideas = free_entry
+		}
 		x = 17
 		y = 10
 
@@ -1694,6 +1716,7 @@ focus_tree = {
 			focus = UCB_dem_planes
 		}
 		completion_reward = {
+			add_war_support = 0.05
 			add_timed_idea = { idea = UCB_rearmament days = 160 }
 		}
 		x = 10

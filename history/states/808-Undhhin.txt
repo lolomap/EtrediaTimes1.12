@@ -1,0 +1,22 @@
+state={
+	id=808
+	name="STATE_808"
+	history={
+		owner = MHI
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = MHI
+		victory_points = {
+			8228 3
+		}
+
+	}
+	provinces={
+		7664 7747 7952 7988 8227 8228 
+	}
+	manpower=885000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

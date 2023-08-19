@@ -12,12 +12,12 @@ trb_ally = {
 	
 	ai_strategy = {
 		type = befriend
-		id = "SBU"			
+		id = SBU
 		value = 100
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SBU"			
+		id = SBU
 		value = 100
 	}
 }
@@ -33,26 +33,25 @@ trb_nonally = {
 	
 	ai_strategy = {
 		type = befriend
-		id = "SBU"			
+		id = SBU			
 		value = -1000
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SBU"			
+		id = SBU			
 		value = -1000
 	}
     ai_strategy = {
 		type = befriend
-		id = "YAN"			
+		id = YAN		
 		value = -1000
 	}
 	ai_strategy = {
 		type = alliance
-		id = "YAN"			
+		id = YAN		
 		value = -1000
 	}
 }
-
 
 trb_commi_make_divisions = {
     allowed = {
@@ -87,17 +86,50 @@ trb_commi_make_divisions = {
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "SBU"			
+		id = SBU			
 		value = 25
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "YAN"			
+		id = YAN			
 		value = 25
 	}
 	ai_strategy = {
 		type = prepare_for_war
-		id = "SBU"			
+		id = SBU			
 		value = 1
+	}
+}
+
+trb_friendship_with_rtt = {
+    allowed = {
+        tag = RTT
+    }
+	enable = {
+		country_exists = RTT
+		TRB = { has_government = communism }
+		RTT = { has_government = communism }
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = RTT }
+			NOT = { RTT = { has_government = communism } }
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = RTT
+		value = 50
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = RTT
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = RTT
+		value = 50
 	}
 }

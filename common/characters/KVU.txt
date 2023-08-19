@@ -31,12 +31,12 @@ characters={
 		name=KVU_Prem_Phadanis
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_8"
+				large="gfx/leaders/KVU/portrait_kvu_leader1.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
+			ideology=conservatism
 			expire="1965.1.1.1"
 			id=-1
 		}

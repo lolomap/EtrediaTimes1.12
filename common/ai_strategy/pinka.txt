@@ -16,7 +16,7 @@ sheregia_war_goal = {
 	
 	ai_strategy = {
 		type = antagonize
-		id = "SHE"			
+		id = SHE
 		value = 200
 	}		
 }
@@ -39,7 +39,7 @@ fillrussia_war_goal = {
 	
 	ai_strategy = {
 		type = antagonize
-		id = "FIL"			
+		id = FIL
 		value = 200
 	}		
 }
@@ -62,7 +62,7 @@ sheregia_war1 = {
 	
 	ai_strategy = {
 	    type = declare_war
-		id = "SHE"
+		id = SHE
 		value = 200
 	}
 }
@@ -85,7 +85,7 @@ sheregia_war1 = {
 	
 	ai_strategy = {
 	    type = invade
-		id = "SHE"
+		id = SHE
 		value = 200
 	}
 }
@@ -103,12 +103,12 @@ eik_not_ally = {
 	
 	ai_strategy = {
 		type = alliance
-		id = "EIK"			
+		id = EIK		
 		value = -200
 	}
 	ai_strategy = {
 		type = alliance
-		id = "UCB"			
+		id = UCB
 		value = 500
 	}
 }

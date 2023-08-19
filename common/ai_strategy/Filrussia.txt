@@ -6,7 +6,7 @@ fil_help_EC = {
 		OR = {
 			NOT = { KAR = { has_government = communism } }
 			NOT = { KAR = { has_government = fascism } }
-			NOT = { has_war = yes }
+			NOT = { FIL = { has_war = yes } }
 		}
 		OR = {
 			UCB = { has_war_with = EIK }
@@ -23,27 +23,42 @@ fil_help_EC = {
 
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "SBU"
-		value = 15
+		id = SBU
+		value = 100
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "KAR"
-		value = 15
+		id = KAR
+		value = 100
 	}
 	ai_strategy = {
 		type = support
-		id = "UCB"
-		value = 20
+		id = UCB
+		value = 100
 	}
 	ai_strategy = {
 		type = support
-		id = "KAR"
-		value = 20
+		id = KAR
+		value = 100
 	}
 	ai_strategy = {
 		type = support
-		id = "SBU"
-		value = 20
+		id = SBU
+		value = 100
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = UCB
+		value = 100
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = KAR
+		value = 100
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SBU
+		value = 100
 	}
 }

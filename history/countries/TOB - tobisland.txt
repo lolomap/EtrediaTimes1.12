@@ -7,6 +7,8 @@ set_stability = 0.9
 set_war_support = 0.1
 
 add_ideas = {
+	MOA_difficult_construct
+
         WWW_medium_country
         free_entry
 	second_corruption_level

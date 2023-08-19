@@ -3,19 +3,15 @@ ideas = {
         UCB_nukes_rockets_idea = {
             allowed = {
                 always = no
-            }
-        
-        
+            }   
             removal_cost = -1
         
             on_add = {
                 
             }
-        
             on_remove = {
                 
             }
-        
             modifier = {
                 production_speed_nuclear_rocket_site_factor = 1
             }
@@ -24,18 +20,14 @@ ideas = {
             allowed = {
                 always = no
             }
-        
-        
             removal_cost = -1
         
             on_add = {
                 
             }
-        
             on_remove = {
                 
             }
-        
             modifier = {
                 production_speed_anti_nuclear_building_factor = 1
             }
@@ -49,6 +41,20 @@ ideas = {
         
             modifier = {
                 winfluence_modifier = 0.15
+            }
+        }
+		UCB_tajiki_idea = {
+            allowed = {
+                always = no
+            }
+
+            removal_cost = -1
+        
+            modifier = {
+                consumer_goods_factor = -0.06
+				production_speed_buildings_factor = 0.1
+				monthly_population = 0.1
+				stability_factor = -0.05
             }
         }
         UCB_PMC_idea = {

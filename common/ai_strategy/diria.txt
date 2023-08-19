@@ -1,30 +1,17 @@
 DIR_war = {
     allowed = {
-		original_tag = DIR
+		OR = {
+			original_tag = DIR
+			original_tag = DEM
+		}
     }
 	enable = {
 		EIK = { has_war_with = KAS }
 	}
-
 	ai_strategy = {
 		type = prepare_for_war
-		id = "EIK"
-		value = 100
-	}
-}
-
-DIR_war_dem = {
-    allowed = {
-		original_tag = DEM
-    }
-	enable = {
-		EIK = { has_war_with = KAS }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "EIK"
-		value = 100
+		id = EIK
+		value = 5
 	}
 }
 
@@ -39,25 +26,61 @@ DIR_dont_join_war = {
 	ai_strategy = {
         type = diplo_action_desire
         id = UCB
-        value = -50
+        value = 0
         target = call_allies
     }
 	ai_strategy = {
 		type = alliance
 		id = UCB	
-		value = -25
+		value = 0
 	}
 	ai_strategy = {
         type = diplo_action_acceptance
         id = UCB
-        value = -50
+        value = 0
         target = join_allies
     }
 	ai_strategy = {
-    type = dont_join_wars_with
-    id = DEM
-    value = 100000
-    target_country = EIK
+		type = dont_join_wars_with
+		id = UCB
+		value = 100000
+		target_country = EIK
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SBU
+		value = 100000
+		target_country = EIK
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = KAR
+		value = 100000
+		target_country = EIK
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = PIN
+		value = 100000
+		target_country = EIK
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = TRB
+		value = 100000
+		target_country = EIK
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SFL
+		value = 100000
+		target_country = EIK
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = RGY
+		value = 100000
+		target_country = EIK
 	}
 }
 
@@ -71,17 +94,17 @@ dem_world_war = {
 	
 	ai_strategy = {
 		type = protect
-		id = "SHE"
+		id = SHE
 		value = -9999
 	}
 	ai_strategy = {
 		type = protect
-		id = "KAS"
+		id = KAS
 		value = -9999
 	}
 	ai_strategy = {
 		type = protect
-		id = "DEM"
+		id = DEM
 		value = -9999
 	}
 	ai_strategy = {

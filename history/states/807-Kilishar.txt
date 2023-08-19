@@ -1,0 +1,24 @@
+state={
+	id=807
+	name="STATE_807"
+
+	history={
+		owner = HGN
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = HGN
+		victory_points = {
+			4086 3
+		}
+
+	}
+	provinces={
+		3961 4086 4156 4266 4491 4750 
+	}
+	manpower=1780000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

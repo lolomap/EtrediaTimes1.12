@@ -957,3 +957,7 @@
  develop_nejd_oil_fields:0 "Разработать нефтяные месторождения в Гаваре"
  develop_eastern_desert_oil_fields:0 "Разработать нефтяные месторождения в Рас-Гарибе"
  develop_qatar_oil_fields:0 "Разработать нефтяные месторождения в Духане"
+ 
+ war_time_decisions:0 "Решения военного времени"
+ patriotic_speech:0 "Патриотическая речь перед народом"
+ glorify_the_fallen_heroes:0 "Восславить павших героев войны"

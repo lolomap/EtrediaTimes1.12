@@ -28,3 +28,99 @@ country_event = {
 	ai_chance = { factor = 0 }
 	}
 }
+
+country_event = {
+	id = moa.2
+	title = moa.2.t
+	desc = moa.2.d
+	picture = GFX_news_event
+	
+    fire_only_once = yes
+
+	trigger = {
+        TAG = MOA
+		date > 2014.6.20
+    }
+	
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+	name = moa.2.a
+		MOA = { add_ideas = MOA_earthquake_1 }
+		hidden_effect = {
+			MOA = { country_event = { id = moa.3 days = 360 } }
+		}
+	}
+}
+
+country_event = {
+	id = moa.3
+	title = moa.3.t
+	desc = moa.3.d
+	picture = GFX_news_event
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = MOA
+    }
+	
+	option = {
+	name = moa.3.a
+		MOA = { 
+			swap_ideas = {
+				remove_idea = MOA_earthquake_1
+		        add_idea = MOA_earthquake_2
+	        }
+		}
+		hidden_effect = {
+			MOA = { country_event = { id = moa.4 days = 180 } }
+		}
+	}
+}
+
+country_event = {
+	id = moa.4
+	title = moa.4.t
+	desc = moa.4.d
+	picture = GFX_news_event
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = MOA
+    }
+	
+	option = {
+	name = moa.4.a
+		MOA = { 
+			swap_ideas = {
+				remove_idea = MOA_earthquake_2
+		        add_idea = MOA_earthquake_3
+	        }
+		}
+		hidden_effect = {
+			MOA = { country_event = { id = moa.5 days = 180 } }
+		}
+	}
+}
+
+country_event = {
+	id = moa.5
+	title = moa.5.t
+	desc = moa.5.d
+	picture = GFX_news_event
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = MOA
+    }
+	
+	option = {
+	name = moa.5.a
+		MOA = { 
+			remove_idea = MOA_earthquake_3
+		}
+	}
+}

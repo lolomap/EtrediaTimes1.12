@@ -394,6 +394,117 @@ political_actions = {
 	}
 }
 
+war_time_decisions = {
+
+	patriotic_speech = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war = yes
+            check_variable = {wtire > 10}
+		}
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 28
+		days_re_enable = 180
+
+		custom_cost_trigger = {
+            command_power = 40
+        }
+		custom_cost_text = decision_cost_CP_20
+
+		modifier = {
+			war_support_weekly = 0.01
+		}
+
+		complete_effect = {
+			add_to_variable = {var = wtire value = -10 tooltip = wtire_boost}
+		}
+
+		ai_will_do = {
+			base = 0.5
+			modifier = {
+				add = 0.5
+				has_war_support < 0.5
+			}
+			modifier = {
+				add = 1
+				has_war_support < 0.1
+			}
+			modifier = {
+				add = 0.5
+				check_variable = {wtire > 50}
+			}
+			modifier = {
+				add = 1
+				check_variable = {wtire > 100}
+			}
+			modifier = {
+				add = 5
+				check_variable = {wtire > 200}
+			}
+		}
+	}
+	glorify_the_fallen_heroes = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war = yes
+            check_variable = {wtire > 5}
+		}
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 14
+		days_re_enable = 120
+
+		custom_cost_trigger = {
+            command_power = 20
+        }
+		custom_cost_text = decision_cost_CP_10
+
+		modifier = {
+			war_support_weekly = 0.015
+		}
+
+		complete_effect = {
+			add_to_variable = {var = wtire value = -5 tooltip = wtire_boost}
+		}
+
+		ai_will_do = {
+			base = 0.5
+			modifier = {
+				add = 0.5
+				has_war_support < 0.5
+			}
+			modifier = {
+				add = 1
+				has_war_support < 0.1
+			}
+			modifier = {
+				add = 0.5
+				check_variable = {wtire > 50}
+			}
+			modifier = {
+				add = 1
+				check_variable = {wtire > 100}
+			}
+			modifier = {
+				add = 5
+				check_variable = {wtire > 200}
+			}
+		}
+	}
+
+}
+
 propaganda_efforts = {
 
 	war_propaganda = {

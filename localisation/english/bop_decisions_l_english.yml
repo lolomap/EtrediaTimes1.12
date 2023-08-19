@@ -1,9 +1,11 @@
 ﻿l_english:
+  closed_parlament: "Parliament disbanded"
   UCB_boost_ideology: "Support for civic initiatives"
   UCB_support_vote_company: "Support for election campaigns".
-  UCB_support_citizens: "Benefits for vulnerable people".
+  UCB_support_citizens: "Benefits for vulnerable population groups".
   UCB_visit_regions: "Visit regions"
-  UCB_support_olig: "Support for oligarchs"
-  UCB_extra_voting: "Early parliamentary elections"
+  UCB_support_olig: "Support for magnates"
+  UCB_extra_voting: "Early Parliament elections"
   UCB_state_of_emergancy: "Visit regions"
-  UCB_extend_parlament: "Expansion of parliamentary powers"
+  UCB_extend_parlament: "Expansion of Parliament powers"
+  UCB_press_regions: "Regional pressure"
