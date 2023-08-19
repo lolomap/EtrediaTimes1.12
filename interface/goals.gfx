@@ -1,6 +1,30 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_sfl_volunteers"
+	texturefile="gfx/interface/goals/goal_sfl_volunteers.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_east_mof_autonomy"
+	texturefile="gfx/interface/goals/goal_sfl_east_mof_autonomy.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_join_EC"
+	texturefile="gfx/interface/goals/goal_sfl_join_EC.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_involve_NER"
+	texturefile="gfx/interface/goals/goal_sfl_involve_NER.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_sfl_SBU_enemy"
 	texturefile="gfx/interface/goals/goal_sfl_SBU_enemy.dds"
 }

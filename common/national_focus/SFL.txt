@@ -601,7 +601,7 @@ focus_tree = {
 
     focus = {
         id = SFL_involve_NER
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_involve_NER
         cost = 10
         x = 3
         y = 1
@@ -647,7 +647,7 @@ focus_tree = {
 
     focus = {
         id = SFL_volunteers
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_volunteers
         cost = 10
         x = 0
         y = 1
@@ -695,7 +695,7 @@ focus_tree = {
 
     focus = {
         id = SFL_join_EC
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_join_EC
         cost = 10
         x = -1
         y = 1
@@ -746,7 +746,7 @@ focus_tree = {
 
     focus = {
         id = SFL_east_mof_autonomy
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_east_mof_autonomy
         cost = 10
         x = 0
         y = 1

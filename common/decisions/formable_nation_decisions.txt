@@ -462,33 +462,21 @@ form_msas_category = {
             }
 			custom_effect_tooltip = form_country_norway_coring_states_tt
 			hidden_effect = {
-				198 = { add_core_of = ROOT }
-				199 = { add_core_of = ROOT }
-				165 = { add_core_of = ROOT }
-				166 = { add_core_of = ROOT }
-				167 = { add_core_of = ROOT }
-				168 = { add_core_of = ROOT }
-				178 = { add_core_of = ROOT }
-				179 = { add_core_of = ROOT }
-				180 = { add_core_of = ROOT }
+				every_owned_state = {
+                    limit = {
+                        is_core_of = SFL
+                    }
+                    add_core_of = ROOT
+                }
 			}
 			custom_effect_tooltip = form_country_sweden_coring_states_tt
 			hidden_effect = {
-				158 = { add_core_of = ROOT }
-				159 = { add_core_of = ROOT }
-				160 = { add_core_of = ROOT }
-				161 = { add_core_of = ROOT }
-				162 = { add_core_of = ROOT }
-				163 = { add_core_of = ROOT }
-				169 = { add_core_of = ROOT }				
-				170 = { add_core_of = ROOT }
-				171 = { add_core_of = ROOT }
-				172 = { add_core_of = ROOT }
-				173 = { add_core_of = ROOT }
-				174 = { add_core_of = ROOT }
-				175 = { add_core_of = ROOT }
-				176 = { add_core_of = ROOT }
-				177 = { add_core_of = ROOT }
+				every_owned_state = {
+                    limit = {
+                        is_core_of = MOF
+                    }
+                    add_core_of = ROOT
+                }
 			}
 			hidden_effect = {
 				news_event = {id = newss.28 days = 1}
