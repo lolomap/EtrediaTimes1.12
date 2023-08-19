@@ -1,7 +1,7 @@
 ideas = {
     country = {	
 		MOA_recrut = {
-            picture = pol
+            picture = MOA_recrut_pic
 
 			allowed = {
 				always = no
@@ -18,7 +18,7 @@ ideas = {
 			}
 		}
 		MOA_difficult_construct = {
-            picture = pol
+            picture = MOA_difficult_construct_pic
 
 			allowed = {
 				always = no
@@ -31,7 +31,7 @@ ideas = {
 			}
 		}
 		MOA_debts = {
-            picture = pol
+            picture = MOA_debts_pic
 
 			allowed = {
 				always = no
@@ -59,7 +59,7 @@ ideas = {
 			}
 		}
 		MOA_earthquake_1 = {
-            picture = pol
+            picture = MOA_earthquake_pic
 
 			allowed = {
 				always = no
@@ -76,7 +76,7 @@ ideas = {
 			}
 		}
 		MOA_earthquake_2 = {
-            picture = pol
+            picture = MOA_earthquake_pic
 
 			allowed = {
 				always = no
@@ -93,7 +93,7 @@ ideas = {
 			}
 		}
 		MOA_earthquake_3 = {
-            picture = pol
+            picture = MOA_earthquake_pic
 
 			allowed = {
 				always = no

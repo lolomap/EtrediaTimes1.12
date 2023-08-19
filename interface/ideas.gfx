@@ -13,6 +13,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/regionalism.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_MOA_recrut_pic"
+		texturefile = "gfx/interface/ideas/idea_MOA_recrut_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOA_difficult_construct_pic"
+		texturefile = "gfx/interface/ideas/idea_MOA_difficult_construct_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOA_debts_pic"
+		texturefile = "gfx/interface/ideas/idea_MOA_debts_pic.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_NIB_property_redistribution"
 		texturefile = "gfx/interface/ideas/idea_NIB_property_redistribution.dds"
 	}

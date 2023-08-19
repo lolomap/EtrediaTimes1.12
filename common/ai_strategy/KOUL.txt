@@ -8,7 +8,7 @@ alliance_koul = {
 	
 	ai_strategy = {
 		type = occupation_policy
-		id = "ROOT"			
+		id = ROOT		
 		value = 3
 	}
 }

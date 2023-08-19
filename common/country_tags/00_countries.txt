@@ -192,3 +192,6 @@ DNF = "countries/DirianNF.txt"
 EMO = "countries/EmpireMovement.txt"
 FRE = "countries/FreeTerritory.txt"
 ZLD_UNIFIED = "countries/ZLD_UNIFIED.txt"
+
+MHI = "countries/Makhir.txt"
+HGN = "countries/Hirgartian.txt"

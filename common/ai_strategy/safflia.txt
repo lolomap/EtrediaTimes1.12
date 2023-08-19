@@ -8,12 +8,12 @@ SFL_neria = {
 	
 	ai_strategy = {
 		type = puppet 
-		id = "NER"
+		id = NER
 		value = 0
 	}
 	ai_strategy = {
 		type = conquer
-		id = "NER"
+		id = NER
 		value = 100
 	}
 }
@@ -43,8 +43,12 @@ not_alliance_with_etredia1 = {
 	}
 	abort = {
 		OR = {
-		SBU = { surrender_progress > 0.3 }
-		SFL = { has_war_with = EIK }
+			SBU = { surrender_progress > 0.1 }
+			TRB = { surrender_progress > 0.5 }
+			KAR = { surrender_progress > 0.1 }
+			DIR = { surrender_progress > 0.3 }
+			SFL = { has_war_with = EIK }
+			date > 2020.1.1
 		}
 	}
 	
@@ -84,17 +88,17 @@ sfl_world_war = {
 	
 	ai_strategy = {
 		type = protect
-		id = "SHE"
+		id = SHE
 		value = 0
 	}
 	ai_strategy = {
 		type = protect
-		id = "KAS"
+		id = KAS
 		value = 0
 	}
 	ai_strategy = {
 		type = protect
-		id = "DEM"
+		id = DEM
 		value = 0
 	}
 	ai_strategy = {
@@ -122,17 +126,17 @@ sfl_external_politics = {
 	}
 	ai_strategy = {
 		type = protect
-		id = "RGY"
+		id = RGY
 		value = 1
 	}
 	ai_strategy = {
 		type = protect
-		id = "MOF"
+		id = MOF
 		value = 2
 	}
 	ai_strategy = {
 		type = protect
-		id = "NER"
+		id = NER
 		value = 1
 	}
 }
@@ -150,12 +154,12 @@ sfl_fuck_SBU = {
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "SBU"
+		id = SBU
 		value = 5
 	}
 	ai_strategy = {
 		type = contain
-		id = "SBU"
+		id = SBU
 		value = 2
 	}
 }
@@ -173,12 +177,12 @@ sfl_fuck_ELR = {
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "ELR"
+		id = ELR
 		value = 10
 	}
 	ai_strategy = {
 		type = consider_weak
-		id = "ELR"
+		id = ELR
 		value = 5
 	}
 }
