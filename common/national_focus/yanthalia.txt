@@ -62,6 +62,18 @@ focus_tree = {
 		x = 14
 		y = 3
 
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = dd_tech
+            }
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = cl_tech
+            }
+        }
 	}
 	focus = {
 		id = YAN_flot3.2
@@ -73,6 +85,9 @@ focus_tree = {
 		x = 12
 		y = 3
 
+        completion_reward = {
+            add_timed_idea = { idea = YAN_build_ships days = 365 }   
+        }
 	}
 	focus = {
 		id = YAN_flot6
@@ -83,7 +98,17 @@ focus_tree = {
 		}
 		x = 12
 		y = 4
-
+        
+        completion_reward = {
+            297 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }   
+        }
 	}
 	focus = {
 		id = YAN_flot4.1
@@ -95,6 +120,13 @@ focus_tree = {
 		x = 14
 		y = 4
 
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.5
+                uses = 1
+                category = ss_tech
+            }   
+        }
 	}
 	focus = {
 		id = YAN_flot5.1
@@ -106,6 +138,13 @@ focus_tree = {
 		x = 10
 		y = 3
 
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 3
+                category = naval_doctrine
+            }   
+        }
 	}
 	focus = {
 		id = YAN_plan
@@ -367,12 +406,11 @@ focus_tree = {
 			focus = YAN_production1
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
+			add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 2
+                category = land_doctrine
+            }   
 		}
 		x = 17
 		y = 7
@@ -381,7 +419,7 @@ focus_tree = {
 	focus = {
 		id = YAN_pehotka
 		icon = GFX_goal_unknown
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = YAN_doctrine1
 		}
@@ -390,6 +428,14 @@ focus_tree = {
 		}
 		x = 17
 		y = 8
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = infantry_tech
+            }
+        }
 	}
 	focus = {
 		id = YAN_tanks
@@ -399,7 +445,7 @@ focus_tree = {
 			focus = YAN_pehotka
 		}
 		completion_reward = {
-			custom_effect_tooltip = yan_tank_concern
+			custom_effect_tooltip = YAN_tank_concern
 		}
 		x = 15
 		y = 9
@@ -412,7 +458,7 @@ focus_tree = {
 			focus = YAN_pehotka
 		}
 		completion_reward = {
-			custom_effect_tooltip = yan_electronika_concern
+			custom_effect_tooltip = YAN_electronika_concern
 		}
 		x = 17
 		y = 9
@@ -2017,5 +2063,13 @@ focus_tree = {
 		x = 44
 		y = 7
 
+        will_lead_to_war_with = VRO
+
+        completion_reward = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+				target = VRO
+            }   
+        }
 	}
 }

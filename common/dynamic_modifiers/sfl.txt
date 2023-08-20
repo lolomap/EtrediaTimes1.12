@@ -1,5 +1,5 @@
 SFL_sm_economic_zone_modifier = {
     icon = GFX_state_economic_zone
 
-    state_production_speed_buildings_factor = 1.5
+    state_production_speed_buildings_factor = 1
 }
