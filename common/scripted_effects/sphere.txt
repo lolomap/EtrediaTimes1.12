@@ -3,6 +3,7 @@ involve_sphere = {
     set_temp_variable = { overlordscope = THIS }
     add_to_array = { sphere_members = PREV }
     PREV = {
+        remove_from_sphere = yes
         set_variable = {sphere_owner = overlordscope}
         set_variable = { fembargo_cost = 0 }
 

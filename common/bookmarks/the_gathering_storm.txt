@@ -100,6 +100,11 @@ bookmarks = {
                 FSC_ortostan_ultimatum
                 FSC_great_mission
             }
+            ideas = {
+                FSC_divided_ortostan
+                FSC_language_problem
+                FSC_federalization_problem_idea
+            }
 		}
 
 		"---"={

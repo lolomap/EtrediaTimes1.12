@@ -53,7 +53,7 @@ focus_tree = {
     focus = {
         id = SFL_improve_MOF_relations
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 5
         x = 1
         y = 1
         relative_position_id = SFL_exit_isolation
@@ -68,7 +68,8 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            MOF = { add_opinion_modifier = { target = SFL modifier = SFL_mof_relations } }
+            SFL = { add_opinion_modifier = { target = MOF modifier = SFL_mof_relations } }
         }
     }
 
@@ -352,7 +353,19 @@ focus_tree = {
         x = 0
         y = 2
         relative_position_id = SFL_investition_plan
-        available = {}
+        available = {
+            OR = {
+                owns_state = 177
+                MOF = {has_opinion = {target = SFL value > 30 }}
+                MOF = {
+                    custom_trigger_tooltip = {
+                        set_temp_variable = { temp = SFL }
+                        check_variable = { sphere_owner = SFL }
+                        tooltip = is_in_sphere_tt   
+                    }
+                }
+            }
+        }
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -363,7 +376,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            177 = {add_dynamic_modifier = {modifier = SFL_sm_economic_zone_modifier}}
         }
     }
 
@@ -385,7 +398,11 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_resource = {
+                type = tungsten
+                amount = 8
+                state = 186
+            }
         }
     }
 
@@ -473,7 +490,7 @@ focus_tree = {
             if = {
                 limit = {MOF = {NOT = {check_variable = { sphere_owner = SBU }}}}
                 MOF = {
-                    SFL = {involve_to_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}
+                    SFL = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}
                     add_ideas = MOF_sflunfluence
                     country_event = { id = monfua.1 days = 1 }
                 }
@@ -532,14 +549,20 @@ focus_tree = {
     
         completion_reward = {
             set_temp_variable = { temp = MOF }
-            add_to_variable = {
-                var = sphere_cost_MOF
-                value = -100
-                tooltip = sphere_cost_change_tt
-            }
-            clamp_variable = {
-                var = sphere_cost_MOF
-                min = 0
+            SBU = {
+                if = {
+                    limit = {NOT = {has_variable = sphere_cost_MOF}}
+                    set_variable = { sphere_cost_MOF = 75 }
+                }
+                add_to_variable = {
+                    var = sphere_cost_MOF
+                    value = 150
+                    tooltip = sphere_cost_change_tt
+                }
+                clamp_variable = {
+                    var = sphere_cost_MOF
+                    min = 0
+                }
             }
         }
     }

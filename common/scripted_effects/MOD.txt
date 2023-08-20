@@ -2,12 +2,7 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-    11 = {
-        remove_building = {
-            type = supply_node
-            level = 1
-        }
-    }
+    177 = {add_dynamic_modifier = {modifier = SFL_sm_economic_zone_modifier}}
 }
 
 ####

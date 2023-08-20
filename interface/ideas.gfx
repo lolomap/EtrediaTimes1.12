@@ -1,5 +1,10 @@
 spriteTypes = {	
 
+    SpriteType = {
+        name = "GFX_state_economic_zone"
+        texturefile = "gfx/interface/stateview/economic_zone.dds"
+    }
+
     spriteType = {
 		name = "GFX_idea_fractionism"
 		texturefile = "gfx/interface/ideas/frakcionnost.dds"
