@@ -8,6 +8,10 @@
   decision_cost_CP_5: "£command_power §Y5§!"
   decision_cost_CP_5_blocked: "£command_power §R5§!"
   decision_cost_CP_5_tooltip: "Стоимость принятия решения: £command_power §Y5§!"
+  
+  decision_cost_CP_10: "£command_power §Y10§!"
+  decision_cost_CP_10_blocked: "£command_power §R10§!"
+  decision_cost_CP_10_tooltip: "Стоимость принятия решения: £command_power §Y10§!"
 
   decision_cost_CP_20: "£command_power §Y20§!"
   decision_cost_CP_20_blocked: "£command_power §R20§!"
