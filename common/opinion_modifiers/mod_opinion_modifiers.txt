@@ -1,0 +1,183 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	embargo_bitch = {
+		trade = yes
+		value = -10000
+	}
+	embargo_initiator = {
+		value = -50
+		min_trust = -10
+	}
+	embargo_target = {
+		value = -50
+		min_trust = -35
+	}
+    FSC_isles_way = {
+        value = 10
+    }
+    FSC_sfl_relations = {
+        value = 20
+    }
+	FSC_IID_partner = {
+		value = 15
+		min_trust = 15
+	}
+	UCB_FSC_Ortostan_question = {
+		value = -20
+	}
+    SBU_annex_RGY_SFL = {
+        value = -25
+    }
+    SBU_east_monfua_SFL = {
+        value = -30
+    }
+	hostile_status = { #special used for civil wars that are on hold and blocks faction stuff
+		value = -100
+	}
+
+	SBU_UCB_fascist_enemy = {
+		value = -30
+	}
+
+	IID_pressureTRP = {
+		value = -50
+	}
+    IID_dem_improve_relations = {
+        value = 20
+    }
+    IID_forgive_duxlands_opinion = {
+        value = 10
+    }
+	
+	fsc_ucb_ortostan_deal = {
+		value = 15
+	}
+
+	FSC_friendly_advisor_in_TRP = {
+		value = 25
+	}
+	TRP_friendly_advisor_to_FSC = {
+		value = 50
+	}
+
+    UCB_dem_foreign_policy_opinion = {  
+        value = 15
+    }
+
+	UCB_hateIID = {
+		value = -50
+	}
+	SFL_hateIID = {
+		value = -60
+	}
+	KAR_hateIID = {
+		value = -50
+	}
+	SBU_hateIID = {
+		value = -40
+	}
+	EIK_hateIID = {
+		value = -20
+	}
+
+	fil_fascism = {
+		value = +15
+	}
+	fsc_ucb_feud = {
+		value = -50
+	}
+	EIK_pinka_etredia_deal = {
+	    value = -1000
+	}
+	fil_fascism2 = {
+		value = +25
+	}
+
+	SBU_eik_relations = {
+        value = 50
+    }
+
+    SBU_democracy_enemy = {
+    	value = -50
+    }
+    SBU_democracy_friendly = {
+    	value = -5
+    }
+
+    ORB_DemExample_opinion = {
+    	value = +25
+    }
+
+    SFL_mof_relations = {
+        value = 15
+    }
+	SFL_tradewar = {
+        value = -40
+    }
+    SFL_concurent = {
+        value = -10
+    }
+    SFL_rtt_otkaz = {
+        value = -50
+    }
+    SFL_iid_deal = {
+        value = 25
+    }
+    YAN_oceanic_relations = {
+        value = -50
+    }
+    IID_invest_otkaz = {
+        value = -30
+    }
+    SBU_TRB_compromiss_not_result = {
+        value = -50
+    }
+    SBU_TRB_compromiss = {
+        value = 100
+    }
+    SBU_children_savaty = {
+        value = 10
+    }
+    cho_yan_commonwealth = {
+        value = 50
+    }
+    pin_ucb_notdeal = {
+        value = -50
+    }
+    pin_ucb_deal = {
+        value = 80
+    }
+    rtt_ucb_deal = {
+        value = 90
+    }
+    SBU_rtt_pact = {
+        value = 60
+    }
+	MOF_SBU_relationship = {
+	    value = 50
+	}
+	SBU_UCB_friendship = {
+	    value = 50
+	}
+	SBU_IID_friendship = {
+	    value = 30
+	}
+	SBU_SFL_perfect_deal = {
+	    value = 40
+	}
+	SBU_SFL_bad_deal = {
+	    value = -40
+	}
+	
+	
+}	

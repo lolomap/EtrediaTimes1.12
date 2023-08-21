@@ -2,6 +2,7 @@
   MAPMODE_NUKING_NAME: "Цели ШПУ"
   MAPMODE_CORRUPTION_MAP_NAME: "Коррупция"
   MAPMODE_INFLUENCE_MAP_NAME: "Мировое влияние"
+  MAPMODE_SPHERES_MAP_NAME: "Сферы влияния"
 
   recruited: "Завербован"
 

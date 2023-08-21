@@ -619,6 +619,38 @@ focus_tree = {
     }
 
     focus = {
+        id = IID_return_republics
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 4
+        y = 1
+        relative_position_id = IID_new_laws
+        available = {
+            OR = {
+                country_exists = SKT
+                country_exists = BKH
+                country_exists = TUO
+                AND = {
+                    country_exists = GKD
+                    NOT = {is_subject_of = IID}
+                }
+            }
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
         id = IID_dem_trade_weapon
         icon = GFX_goal_unknown
         cost = 10
@@ -662,6 +694,8 @@ focus_tree = {
         }
     }
 
+
+
     focus = {
         id = IID_north_faction
         icon = GFX_goal_unknown
@@ -702,7 +736,10 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_political_power = 15
+            UCB = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            SBU = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            SFL = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
         }
     }
 
@@ -746,7 +783,9 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_political_power = 15
+            VRO = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            MOA = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
         }
     }
 
@@ -768,7 +807,10 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_political_power = 15
+            FIL = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            OIK = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            SHE = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
         }
     }
 
@@ -805,7 +847,7 @@ focus_tree = {
         y = 1
         relative_position_id = IID_dem_north_relations
         available = {}
-        bypass = {}
+        bypass = {owns_state = 121}
         allow_branch = {}
         prerequisite = {
             focus = IID_dem_north_relations
@@ -815,7 +857,28 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            var:121.owner = {
+                add_opinion_modifier = {target = IID modifier = IID_forgive_duxlands_opinion}
+                set_temp_variable = { temp = THIS }
+                IID = {
+                    if = {
+                        limit = {NOT = {has_variable = sphere_cost_@PREV}}
+                        set_variable = { sphere_cost_@PREV = 75 }
+                    }
+                    add_to_variable = {
+                        var = sphere_cost_@PREV
+                        value = -50
+                        tooltip = sphere_cost_change_tt
+                    }
+                    clamp_variable = {
+                        var = sphere_cost_@PREV
+                        min = 0
+                    }
+                }
+            }
+            121 = {
+                remove_core_of = IID
+            }
         }
     }
 
@@ -839,7 +902,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            give_guarantee = TRP
         }
     }
 
