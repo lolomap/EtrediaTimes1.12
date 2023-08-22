@@ -52,7 +52,7 @@ focus_tree = {
 
     focus = {
         id = SFL_improve_MOF_relations
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_improve_MOF_relations
         cost = 5
         x = 1
         y = 1
@@ -206,7 +206,7 @@ focus_tree = {
 
     focus = {
         id = SFL_improve_trading
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_improve_trading
         cost = 10
         x = -1
         y = 1
@@ -234,7 +234,7 @@ focus_tree = {
 
     focus = {
         id = SFL_national_idea
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_national_idea
         cost = 10
         x = 1
         y = 1
@@ -256,7 +256,7 @@ focus_tree = {
 
     focus = {
         id = SFL_economic_program
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_economic_program
         cost = 10
         x = 4
         y = 2
@@ -278,7 +278,7 @@ focus_tree = {
 
     focus = {
         id = SFL_investition_plan
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_investition_plan
         cost = 10
         x = 0
         y = 1
@@ -300,7 +300,7 @@ focus_tree = {
 
     focus = {
         id = SFL_oil_in_IID
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_oil_in_IID
         cost = 10
         x = -1
         y = 1
@@ -322,7 +322,7 @@ focus_tree = {
 
     focus = {
         id = SFL_support_metal_productions
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_support_metal_production
         cost = 10
         x = 1
         y = 1
@@ -348,7 +348,7 @@ focus_tree = {
 
     focus = {
         id = SFL_sm_economic_zone
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_sm_economic_zone
         cost = 10
         x = 0
         y = 2
@@ -382,7 +382,7 @@ focus_tree = {
 
     focus = {
         id = SFL_HLE_resources 
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_HLE_resources 
         cost = 10
         x = 1
         y = 1
@@ -692,7 +692,7 @@ focus_tree = {
 
     focus = {
         id = SFL_industry_EC
-        icon = GFX_goal_unknown
+        icon = GFX_goal_sfl_industry_EC
         cost = 10
         x = -2
         y = 1

@@ -5,6 +5,9 @@
 
  political_form_cost_factor: "Затраты на смену политического строя"
  press_laws_cost_factor: "Затраты на законы о СМИ"
+ operation_sphere_puppet_risk: "Риск при подчинении правительства"
+ operation_sphere_puppet_outcome: "Эффективность подчинения правительства"
+ operation_sphere_puppet_cost: "Стоимость подчинения правительства"
 
  IID_pressureTRP:0 "Давление от ИИД"
  IID_dem_improve_relations: "Праетерские демократы"
