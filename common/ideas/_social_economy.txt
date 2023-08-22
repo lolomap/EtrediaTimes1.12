@@ -3,6 +3,8 @@ ideas = {
         law = yes
 
         socials_4 = { #high socials
+		
+			picture = socials_4
  
             removal_cost = -1
             
@@ -67,6 +69,8 @@ ideas = {
         }
 
         socials_3 = {
+		
+			picture = socials_3
  
             removal_cost = -1
             
@@ -134,6 +138,8 @@ ideas = {
         }
 
         socials_2 = {
+		
+			picture = socials_2
  
             removal_cost = -1
             
@@ -185,6 +191,8 @@ ideas = {
         }
 
         socials_1 = { #low socials
+		
+			picture = socials_1
  
             removal_cost = -1
             
@@ -220,10 +228,20 @@ ideas = {
 					add = -10
 					has_stability < 0.1
 				}
+				modifier = {
+					add = -5
+					has_government = democratic
+				}
+				modifier = {
+					add = -5
+					has_government = communism
+				}
 			}
         }
 
         socials_0 = { #low socials
+		
+			picture = socials_0
  
             removal_cost = -1
             
@@ -260,6 +278,14 @@ ideas = {
 				modifier = {
 					add = -10
 					has_war_support < 0.3
+				}
+				modifier = {
+					add = -10
+					has_government = democratic
+				}
+				modifier = {
+					add = -5
+					has_government = communism
 				}
 			}
         }

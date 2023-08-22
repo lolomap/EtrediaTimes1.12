@@ -1,6 +1,7 @@
 ideas = {
 	stability_modifiers = {
 		stability_heaven_f = {
+			picture = stability_heaven
 			allowed_to_remove = {
                 always = no
             }
@@ -32,6 +33,7 @@ ideas = {
 			}
 		}
 		stability_heaven_d = {
+			picture = stability_heaven
 			allowed_to_remove = {
                 always = no
             }
@@ -63,6 +65,7 @@ ideas = {
 			}
 		}
 		stability_heaven_c = {
+			picture = stability_heaven
 			allowed_to_remove = {
                 always = no
             }
@@ -94,6 +97,7 @@ ideas = {
 			}
 		}
 		stability_heaven_n = {
+			picture = stability_heaven
 			allowed_to_remove = {
                 always = no
             }
@@ -125,6 +129,7 @@ ideas = {
 			}
 		}
 		stability_heaven_m = {
+			picture = stability_heaven
 			allowed_to_remove = {
                 always = no
             }
@@ -157,6 +162,7 @@ ideas = {
 		}
 
 		stability_great = {
+			picture = stability_great
 			allowed_to_remove = {
                 always = no
             }
@@ -183,6 +189,7 @@ ideas = {
 			}
 		}
 		stability_nice = {
+			picture = stability_nice
 			allowed_to_remove = {
                 always = no
             }
@@ -205,6 +212,7 @@ ideas = {
 			}
 		}
 		stability_middle = {
+			picture = stability_middle
 			allowed_to_remove = {
                 always = no
             }
@@ -231,6 +239,7 @@ ideas = {
 			}
 		}
 		stability_bad = {
+			picture = stability_bad
 			allowed_to_remove = {
                 always = no
             }

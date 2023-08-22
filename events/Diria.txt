@@ -68,6 +68,7 @@ country_event = {
 			transfer_state = 276
 			transfer_state = 278
 			transfer_state = 790
+			transfer_state = 809
 		    add_state_core = 265
 			add_state_core = 267
 			add_state_core = 307
@@ -112,6 +113,7 @@ country_event = {
 			add_state_core = 795
 			add_state_core = 796
 			add_state_core = 797
+			add_state_core = 809
             load_oob = DIR_democrat
             }
 	}
@@ -159,6 +161,7 @@ country_event = {
 			transfer_state = 276
 			transfer_state = 278
 			transfer_state = 826
+			transfer_state = 809
 		    add_state_core = 265
 		    add_state_core = 307
 			add_state_core = 267
@@ -203,6 +206,7 @@ country_event = {
 			add_state_core = 795
 			add_state_core = 796
 			add_state_core = 797
+			add_state_core = 809
             load_oob = DIR_democrat
         }
 	}
@@ -770,8 +774,10 @@ country_event = {
 			MOU = {
 				transfer_state = 276
 				transfer_state = 305
+				transfer_state = 809
 				add_state_core = 276
 				add_state_core = 305
+				add_state_core = 809
 			}
 			HEK = {
 				transfer_state = 281

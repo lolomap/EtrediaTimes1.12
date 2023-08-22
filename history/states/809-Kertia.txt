@@ -1,0 +1,27 @@
+state={
+	id=809
+	name="STATE_809"
+
+	resources={
+		steel=13.000
+	}
+
+	history={
+		owner = DIR
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = DIR
+		victory_points = {
+		}
+
+	}
+
+	provinces={
+		7640 7888 7922 7942 8091 8108 8313 8555 8576 8784 8940 
+	}
+	manpower=98000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

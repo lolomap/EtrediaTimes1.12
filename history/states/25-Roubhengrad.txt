@@ -9,7 +9,7 @@ state={
 		owner = UCB
 		buildings = {
 			infrastructure = 3
-                        industrial_complex = 1
+                        industrial_complex = 3
 		}
 		add_core_of = UCB
                 add_core_of = TIR

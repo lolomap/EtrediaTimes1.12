@@ -1147,7 +1147,7 @@ build_fucking_arms_factory = {
 		ai_strategy = {
 			type = building_target
 			id = arms_factory
-			value = 70
+			value = 50
 		}
 		ai_strategy = {
 			type = building_target

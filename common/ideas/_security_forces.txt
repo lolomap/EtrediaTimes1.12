@@ -249,6 +249,18 @@ ideas = {
 					add = -10
 					garrison_manpower_need > 150000
 				}
+				modifier = {
+					add = -5
+					has_government = fascism
+				}
+				modifier = {
+					add = -5
+					has_government = neutrality
+				}
+				modifier = {
+					add = -5
+					has_government = communism
+				}
 			}
         }
         sforces_1 = {
@@ -285,6 +297,18 @@ ideas = {
 				modifier = {
 					add = -5
 					garrison_manpower_need > 150000
+				}
+				modifier = {
+					add = -5
+					has_government = fascism
+				}
+				modifier = {
+					add = -5
+					has_government = neutrality
+				}
+				modifier = {
+					add = -5
+					has_government = communism
 				}
 			}
         }

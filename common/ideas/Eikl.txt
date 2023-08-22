@@ -13,7 +13,7 @@ ideas = {
 	                production_speed_infrastructure_factor = -0.6
 					production_factory_efficiency_gain_factor = -0.15
 				    production_speed_arms_factory_factor = -0.3
-	                consumer_goods_factor = 0.3
+	                consumer_goods_factor = 0.2
 				}
 		}
 			
@@ -31,7 +31,7 @@ ideas = {
 				    production_speed_arms_factory_factor = -0.1
 	                production_speed_infrastructure_factor = -0.3
 					production_factory_start_efficiency_factor = -0.05
-	                consumer_goods_factor = 0.15
+	                consumer_goods_factor = 0.1
 				}
 		}
 			

@@ -257,6 +257,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 8687;8784;impassable;-1;-1;-1;-1;-1;;diria
 8885;8784;impassable;-1;-1;-1;-1;-1;;diria
 8885;8940;impassable;-1;-1;-1;-1;-1;;diria
+8885;8576;impassable;-1;-1;-1;-1;-1;;diria
 9081;8976;impassable;-1;-1;-1;-1;-1;;diria
 9081;9127;impassable;-1;-1;-1;-1;-1;;diria
 9081;9299;impassable;-1;-1;-1;-1;-1;;diria

@@ -4,8 +4,47 @@ spriteTypes = {
         name = "GFX_state_economic_zone"
         texturefile = "gfx/interface/stateview/economic_zone.dds"
     }
-
     spriteType = {
+		name = "GFX_idea_stability_bad"
+		texturefile = "gfx/interface/ideas/idea_stability_bad.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_middle"
+		texturefile = "gfx/interface/ideas/idea_stability_middle.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_nice"
+		texturefile = "gfx/interface/ideas/idea_stability_nice.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_great"
+		texturefile = "gfx/interface/ideas/idea_stability_great.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_heaven"
+		texturefile = "gfx/interface/ideas/idea_stability_heaven.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_0"
+		texturefile = "gfx/interface/ideas/idea_socials_0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_1"
+		texturefile = "gfx/interface/ideas/idea_socials_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_2"
+		texturefile = "gfx/interface/ideas/idea_socials_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_3"
+		texturefile = "gfx/interface/ideas/idea_socials_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_4"
+		texturefile = "gfx/interface/ideas/idea_socials_4.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_fractionism"
 		texturefile = "gfx/interface/ideas/frakcionnost.dds"
 	}
