@@ -8,6 +8,10 @@ ideas = {
             level = 6
 
             cancel_if_invalid = yes
+			
+			cancel = {
+				num_of_civilian_factories_available_for_projects < 1
+			}
 
             modifier = {
                 stability_factor = 0.15
@@ -19,6 +23,37 @@ ideas = {
                 resistance_activity = -0.2
                 consumer_goods_factor = 0.16
             }
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects > 20
+				}
+				modifier = {
+					add = 2
+					num_of_civilian_factories_available_for_projects > 15
+				}
+				modifier = {
+					add = 10
+					has_government = fascism
+				}
+				modifier = {
+					add = 10
+					is_major = no
+				}
+				modifier = {
+					add = 5
+					has_war = yes
+				}
+				modifier = {
+					add = -10
+					is_major = yes
+				}
+				modifier = {
+					add = -50
+					num_of_civilian_factories_available_for_projects < 10
+				}
+			}
         }
         sforces_5 = {
             removal_cost = -1
@@ -26,6 +61,10 @@ ideas = {
             level = 5
 
             cancel_if_invalid = yes
+			
+			cancel = {
+				num_of_civilian_factories_available_for_projects < 1
+			}
 
             modifier = {
                 stability_factor = 0.08
@@ -36,13 +75,45 @@ ideas = {
                 resistance_activity = -0.1
                 consumer_goods_factor = 0.12
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects > 17
+				}
+				modifier = {
+					add = 2
+					num_of_civilian_factories_available_for_projects > 12
+				}
+				modifier = {
+					add = 10
+					has_government = fascism
+				}
+				modifier = {
+					add = 10
+					is_major = no
+				}
+				modifier = {
+					add = 5
+					has_war = yes
+				}
+				modifier = {
+					add = -5
+					is_major = yes
+				}
+				modifier = {
+					add = -30
+					num_of_civilian_factories_available_for_projects < 8
+				}
+			}
         }
         sforces_4 = {
             removal_cost = -1
             
             level = 4
 
-            cancel_if_invalid = yes
+            cancel_if_invalid = no
             default = yes
 
             modifier = {
@@ -55,6 +126,38 @@ ideas = {
                 resistance_activity = -0.05
                 consumer_goods_factor = 0.05
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects > 8
+				}
+				modifier = {
+					add = 5
+					has_government = fascism
+				}
+				modifier = {
+					add = 10
+					is_major = yes
+				}
+				modifier = {
+					add = 5
+					has_war = no
+				}
+				modifier = {
+					add = -25
+					num_of_civilian_factories_available_for_projects < 1
+				}
+				modifier = {
+					add = -5
+					garrison_manpower_need > 50000
+				}
+				modifier = {
+					add = -10
+					garrison_manpower_need > 100000
+				}
+			}
         }
         sforces_3 = {
             removal_cost = -1
@@ -70,6 +173,38 @@ ideas = {
                 resistance_activity = 0.02
                 consumer_goods_factor = -0.025
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects < 3
+				}
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects < 1
+				}
+				modifier = {
+					add = 5
+					has_war = no
+				}
+				modifier = {
+					add = 5
+					has_idea = WWW_bad_country
+				}
+				modifier = {
+					add = -15
+					num_of_civilian_factories_available_for_projects > 5
+				}
+				modifier = {
+					add = -5
+					garrison_manpower_need > 100000
+				}
+				modifier = {
+					add = -10
+					garrison_manpower_need > 150000
+				}
+			}
         }
         sforces_2 = {
             removal_cost = -1
@@ -87,6 +222,34 @@ ideas = {
                 war_support_factor = 0.15
                 consumer_goods_factor = -0.1
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects < 1
+				}
+				modifier = {
+					add = 5
+					has_war = no
+				}
+				modifier = {
+					add = 5
+					has_idea = WWW_bad_country
+				}
+				modifier = {
+					add = -15
+					num_of_civilian_factories_available_for_projects > 3
+				}
+				modifier = {
+					add = -5
+					garrison_manpower_need > 100000
+				}
+				modifier = {
+					add = -10
+					garrison_manpower_need > 150000
+				}
+			}
         }
         sforces_1 = {
             removal_cost = -1
@@ -104,6 +267,26 @@ ideas = {
                 war_support_factor = 0.1
                 consumer_goods_factor = -0.15
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects < 1
+				}
+				modifier = {
+					add = 5
+					has_idea = WWW_bad_country
+				}
+				modifier = {
+					add = -5
+					garrison_manpower_need > 100000
+				}
+				modifier = {
+					add = -5
+					garrison_manpower_need > 150000
+				}
+			}
         }
     }
 }
