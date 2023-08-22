@@ -5,6 +5,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			cancel = {
+				NOT = { country_exists = YAN }
+			}
 			removal_cost = -1
 			modifier = {
                 political_power_gain = -0.5
@@ -40,6 +43,9 @@ ideas = {
             picture = TRB_ports_rentals_pic
 			allowed = {
 				always = no
+			}
+			cancel = {
+				NOT = { country_exists = RTT }
 			}
 			removal_cost = -1
 			modifier = {

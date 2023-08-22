@@ -170,4 +170,124 @@ scripted_map_modes = {
         }
         update_daily = no
     }
+	
+	social_map = {
+        bottom = {
+            type = country
+
+            color = {
+                if = {
+                    limit = {FROM = {has_idea = socials_0}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = socials_1}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.6 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = socials_2}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = socials_3}}
+
+                    set_temp_variable = { red = 0.8 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = socials_4}}
+
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 0.7 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else = {
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+ 		    }
+        }
+        update_daily = no
+    }
+	
+	security_map = {
+        bottom = {
+            type = country
+
+            color = {
+                if = {
+                    limit = {FROM = {has_idea = sforces_1}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = sforces_2}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.6 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = sforces_3}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 0.8 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = sforces_4}}
+
+                    set_temp_variable = { red = 1.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else_if = {
+                    limit = {FROM = {has_idea = sforces_5}}
+
+                    set_temp_variable = { red = 0.8 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+				else_if = {
+                    limit = {FROM = {has_idea = sforces_6}}
+
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 0.7 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+                else = {
+                    set_temp_variable = { red = 0.0 }
+                    set_temp_variable = { blue = 0.0 }
+                    set_temp_variable = { green = 1.0 }
+                    set_temp_variable = { alpha = 1.0 }
+                }
+ 		    }
+        }
+        update_daily = no
+    }
 }
