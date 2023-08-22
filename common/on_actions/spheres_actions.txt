@@ -29,10 +29,29 @@ on_actions = {
             LGH = {PAL = {involve_sphere = yes}}
             NEV = {PAL = {involve_sphere = yes}}
 
+
+            set_variable = {global.sphere_color_last = 0}
+            every_country = {
+                limit = {
+                    #is_major = yes
+                    OR = {
+                        check_variable = {sphere_members^num > 0}
+                        check_variable = {subjects^num > 0}
+                    }
+                }
+                #log = "[THIS.GetName] COLORIZED [?global.sphere_color_last]"
+
+                add_to_variable = { global.sphere_color_last = 1 }
+                set_variable = { sphere_color = global.sphere_color_last }
+                colorize_sphere = yes
+            }
+
             every_possible_country = {
-                set_variable_to_random = {var = sc_R min = 0}
-                set_variable_to_random = {var = sc_G min = 0}
-                set_variable_to_random = {var = sc_B min = 0}
+                limit = {NOT = {has_variable = sphere_color}}
+
+                set_variable = { sphere_color = global.sphere_color_last }
+                add_to_variable = { global.sphere_color_last = 1 }
+                colorize_sphere = yes
             }
         }
     }

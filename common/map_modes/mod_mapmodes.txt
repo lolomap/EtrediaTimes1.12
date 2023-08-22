@@ -37,7 +37,7 @@ scripted_map_modes = {
 
             color = {
                 if = {
-                    limit = {FROM = {is_subject = yes}}
+                    limit = {FROM = {is_subject = yes NOT = {has_country_flag = autonomy_state}}}
                     FROM.OVERLORD = {
                         set_temp_variable = { red = sc_R}
                         set_temp_variable = { blue = sc_B }
@@ -57,7 +57,19 @@ scripted_map_modes = {
                     }
                 }
                 else_if = {
-                    limit = {FROM = {num_subjects > 0}}
+                    limit = {
+                        FROM = {
+                            if = {
+                                limit = {num_subjects > 0}
+                                any_subject_country = {
+                                    NOT = {has_country_flag = autonomy_state}
+                                }
+                            }
+                            else = {
+                                always = no
+                            }
+                        }
+                    }
                     FROM = {
                         set_temp_variable = { red = sc_R}
                         set_temp_variable = { blue = sc_B }

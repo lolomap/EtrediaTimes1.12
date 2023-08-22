@@ -7,6 +7,8 @@
  press_laws_cost_factor: "Затраты на законы о СМИ"
 
  IID_pressureTRP:0 "Давление от ИИД"
+ IID_dem_improve_relations: "Праетерские демократы"
+ IID_forgive_duxlands_opinion: "Территориальный компромисс"
 
  war_tire_value:0 "[?wtire|0]"
  war_tire_desc:0 "§HВоенная усталость§!\n"
@@ -34,4 +36,6 @@
 
  SFL_concurent: "Конкуренты на рынке"
  SFL_tradewar: "Торговая война"
+ SFL_mof_relations: "Саффо-монфуйские отношения"
+ SFL_sm_economic_zone_modifier: "Сафо-Монфуйская экономическая зона"
 

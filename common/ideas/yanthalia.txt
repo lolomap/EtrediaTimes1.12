@@ -1,5 +1,26 @@
 ideas = {
     country = {	
+    YAN_build_ships = {
+        allowed = {
+            always = no
+        }
+    
+    
+        removal_cost = -1
+    
+        on_add = {
+            
+        }
+    
+        on_remove = {
+            
+        }
+    
+        modifier = {
+            industrial_capacity_dockyard = 0.3
+        }
+    }
+
 	YAN_ambitions = {
         picture = fff
 		allowed = {
