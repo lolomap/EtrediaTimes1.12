@@ -1,5 +1,37 @@
 ideas = {
     country = {
+        IID_dem_return_republics_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+
+            cancel = {
+                NOT = {
+                    country_exists = SKT
+                    country_exists = BKH
+                    country_exists = GKD
+                    country_exists = TUO
+                }
+            }
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                operation_sphere_puppet_risk = -0.25
+                operation_sphere_puppet_cost = -0.5
+                intel_network_gain_factor = 0.15
+            }
+        }
+
 		IID_ucbsbupolit = {
             picture = polit_cris
 			allowed = {

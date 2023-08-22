@@ -1,6 +1,6 @@
 ideas = {
     country = {
-	fsc.iidinvestition = {
+	fsc_iidinvestition = {
 		picture = generic_political_advisor_europe_5
 
 		allowed = {

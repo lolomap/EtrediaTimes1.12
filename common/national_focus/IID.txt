@@ -627,9 +627,18 @@ focus_tree = {
         relative_position_id = IID_new_laws
         available = {
             OR = {
-                country_exists = SKT
-                country_exists = BKH
-                country_exists = TUO
+                AND = {
+                    country_exists = SKT
+                    NOT = {is_subject_of = IID}
+                }
+                AND = {
+                    country_exists = BKH
+                    NOT = {is_subject_of = IID}
+                }
+                AND = {
+                    country_exists = TUO
+                    NOT = {is_subject_of = IID}
+                }
                 AND = {
                     country_exists = GKD
                     NOT = {is_subject_of = IID}
@@ -646,7 +655,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            country_event = {id = dux.21 days = 1}
         }
     }
 
