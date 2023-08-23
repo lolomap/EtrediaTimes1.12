@@ -323,8 +323,27 @@ focus_tree = {
         prerequisite = {
 			focus = FSC_invite_narabel
 		}
+        available = {
+            UCB = {
+                is_in_faction = no
+                has_idea = UCB_des_army
+                has_country_leader = {character = UCB_Parlament}
+            }
+        }
 		completion_reward = {
-			31 = {set_border_war = yes}
+			start_border_war = {
+                change_state_after_war = yes
+                attacker = {
+                    state = 44
+                    num_provinces = 4
+                    on_win = fscb.29
+                }	
+                defender = {
+                    state = 31
+                    num_provinces = 4
+                    #on_lose = fscb.29
+                }
+            }
 		}
         ai_will_do = {
 			factor = 0.2
@@ -395,7 +414,7 @@ focus_tree = {
 			NOT = { country_exists = TRP }
 		}
 		available = {
-			FSC = { has_government = fascism }
+			#FSC = { has_government = fascism }
 		}
 		completion_reward = {
 			TRP = { country_event = { id = trp.2 days = 1 } }
@@ -414,7 +433,10 @@ focus_tree = {
 			focus = FSC_integrate_TRP
 		}
 		completion_reward = {
-			#
+			IID = {
+                add_stability = -.1
+                add_popularity = {ideology = monarchism popularity = -0.1}
+            }
 		}
         ai_will_do = {
 			factor = 0.2
@@ -426,11 +448,17 @@ focus_tree = {
 		id = FSC_support_Barkhan_separatists
 		icon = GFX_focus_generic_military_mission
 		cost = 10
+        bypass = {
+            IID = {NOT = {owns_state = 80}}
+        }
         prerequisite = {
 			focus = FSC_fire_Empire
 		}
 		completion_reward = {
-			#
+			80 = {
+                force_enable_resistance = IID
+                start_resistance = BKH
+            }
 		}
         ai_will_do = {
 			factor = 0.2
@@ -596,14 +624,31 @@ focus_tree = {
 			focus = FSC_Glanvish_corpus
 			focus = FSC_ortostan_ultimatum
 		}
-		completion_reward = {
-			#
-		}
+
+        bypass = {
+            OR = {
+                NOT = {country_exists = SBU}
+                SBU = {is_subject_of = FSC}
+            }
+        }
+
         ai_will_do = {
 			factor = 0.2
 		}
 		x = 15
 		y = 8
+
+        completion_reward = {
+            send_embargo = SBU
+            every_subject_country = {
+                send_embargo = SBU
+            }
+            every_other_country = {
+                limit = {check_variable = { sphere_owner = FSC }}
+                
+                send_embargo = SBU
+            }
+        }
 	}
 	focus = {
 		id = FSC_support_safflia
@@ -613,7 +658,7 @@ focus_tree = {
 			focus = FSC_anti_siburian_policy
 		}
 		completion_reward = {
-			#
+			SFL = {country_event = {id = sfl.26 days = 1}}
 		}
         ai_will_do = {
 			factor = 0.2
@@ -673,7 +718,7 @@ focus_tree = {
 			focus = FSC_integrate_TRP
 		}
 		completion_reward = {
-			#
+			add_ideas = FSC_UCB_network
 		}
         ai_will_do = {
 			factor = 0.2
@@ -692,7 +737,7 @@ focus_tree = {
 			focus = FSC_agency_network_in_UCNB
 		}
 		completion_reward = {
-			#
+			custom_effect_tooltip = FSC_prevent_poroh_blet
 		}
         ai_will_do = {
 			factor = 0.2

@@ -26,7 +26,10 @@ defined_text = {
     name = sphere_status_icon
     text = {
         trigger = {
-            has_variable = sphere_owner
+            OR = {
+                has_variable = sphere_owner
+                is_subject = yes
+            }
         }
         localization_key = "GFX_autonomy_dependent_icon"
     }
@@ -37,6 +40,12 @@ defined_text = {
 
 defined_text = {
     name = sphere_status_sl
+    text = {
+        trigger = {
+            is_subject = yes
+        }
+        localization_key = sphere_status_subject
+    }
     text = {
         trigger = {
             has_variable = sphere_owner

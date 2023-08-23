@@ -1124,6 +1124,17 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_dotaci
 		}
+
+        available = {
+            FSC = {
+                OR = {
+                    NOT = {has_completed_focus = FSC_fuel_desire_to_be_free}
+                    exists = no
+                    is_subject = yes
+                    has_idea = FSC_lose
+                }
+            }
+        }
 		
 		completion_reward = {
 			add_political_power = 25
@@ -2587,7 +2598,11 @@ focus_tree = {
         x = 51
         y = 6
         available = {}
-        bypass = {}
+        bypass = {
+            FSC = {
+                has_completed_focus = FSC_fuel_desire_to_be_free
+            }
+        }
         prerequisite = {
             focus = UCB_fascism_way
             focus = UCB_neutrality_way
