@@ -72,6 +72,7 @@
   YAN_electronika_concern:0 "Станет доступен концерн §Y«Omnish Inovation Group»"§!
   EIK_scientific_concern:0 "Станет доступен ислледовательский центр §Y«MontaGp Scientific»§!"
   EIK_production_concern:0 "Станет доступен концерн §Y«Rashin»§!"
+  FSC_prevent_poroh_blet: "§GЗаблокирует§! для [UCB.GetFlag]§Y[UCB.GetNameDef]§! возможность избавиться от идеи «§YПороховая Бочка§!»"
 
   pra_nation_tooltip: "Праетерская культура"
   all_nation_tooltip: "Многонациональная культура"

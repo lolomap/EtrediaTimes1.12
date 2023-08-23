@@ -660,3 +660,70 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = sfl.26
+    title = sfl.26.t
+    desc = sfl.26.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.26.a
+        
+        FSC = {country_event = {id = fscb.28 days = 1}}
+
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                NOT = {
+                    is_in_faction_with = SBU
+                    is_subject_of = SBU
+                    check_variable = { sphere_owner = SBU }
+                }
+
+                factor = 0
+            }
+        }
+    }
+    option = {
+        name = sfl.26.b
+        SBU = {
+            add_opinion_modifier = {
+                target = SFL
+                modifier = FSC_SFL_support_claims
+            }
+            add_opinion_modifier = {
+                target = FSC
+                modifier = FSC_SFL_support_claims
+            }
+        }
+        FSC = {
+            hidden_effect = {
+                add_opinion_modifier = {
+                    target = SBU
+                    modifier = FSC_SFL_support_claims
+                }
+            }
+            give_guarantee = SFL
+        }
+        give_guarantee = FSC
+
+        ai_chance = {
+            base = 50
+            modifier = {
+                OR = {
+                    is_in_faction_with = SBU
+                    is_subject_of = SBU
+                    check_variable = { sphere_owner = SBU }
+                }
+
+                factor = 0
+            }
+        }
+    }
+}

@@ -32,6 +32,10 @@ opinion_modifiers = {
 		value = 15
 		min_trust = 15
 	}
+    FSC_SFL_support_claims = {
+        value = -20
+    }
+
 	UCB_FSC_Ortostan_question = {
 		value = -20
 	}

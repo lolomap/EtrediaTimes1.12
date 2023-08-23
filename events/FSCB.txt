@@ -746,3 +746,41 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = fscb.28
+    title = fscb.28.t
+    desc = fscb.28.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.28.a
+        
+    }
+}
+
+country_event = {
+    id = fscb.29
+    title = fscb.29.t
+    desc = fscb.29.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.29.a
+        hidden_effect = {ORB = {set_country_flag = autonomy_state transfer_state = 31}}
+        FSC = {
+            hidden_effect = {
+                release_puppet_on_controlled = ORB
+            }
+        }
+        set_autonomy = {target = ORB autonomy_state = autonomy_autonomy}  
+    }
+}
