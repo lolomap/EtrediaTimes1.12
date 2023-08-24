@@ -540,7 +540,7 @@ political_actions = {
 			has_government = communism
 		}
 
-		cost = 50
+		cost =50
 
 		days_remove = 90
 		days_re_enable = 1080
@@ -771,10 +771,10 @@ sphere_category = {
         days_mission_timeout = 0
         
         available = {always = no}
-        activation = {
-            has_variable = sphere_owner
-        }
-        days_remove = -1
+        #activation = {
+        #    has_variable = sphere_owner
+        #}
+        #days_remove = -1
 
         targeted_modifier = {
             tag = FROM
@@ -787,6 +787,331 @@ sphere_category = {
 
 
     }
+
+    sphere_buy_infantry = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    infantry_equipment > 1000
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = infantry_equipment
+                    amount = 1000
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_extra = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    support_equipment > 300
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = support_equipment
+                    amount = 300
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_artillery = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    artillery_equipment > 50
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = artillery_equipment
+                    amount = 50
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_anti_tank = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    anti_tank_equipment > 50
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = anti_tank_equipment
+                    amount = 50
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_anti_air = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    anti_air_equipment > 50
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = anti_air_equipment
+                    amount = 50
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_trucks = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    motorized_equipment > 100
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = motorized_equipment
+                    amount = 100
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_mechanized = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    mechanized_equipment > 100
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = mechanized_equipment
+                    amount = 100
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_fighters = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    fighter_equipment > 10
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = fighter_equipment
+                    amount = 10
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_cas = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    CAS_equipment > 10
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = CAS_equipment
+                    amount = 10
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_trains = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    train_equipment > 5
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = train_equipment
+                    amount = 5
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_convoys = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    convoy > 25
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = convoy
+                    amount = 25
+                    target = PREV
+                }
+            }
+        }
+    }
+
+    sphere_buy_tanks = {
+        cost = 15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    modern_tank_equipment > 25
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = modern_tank_equipment
+                    amount = 25
+                    target = PREV
+                }
+            }
+        }
+    }
+
 }
 
 escalation_category = {

@@ -310,6 +310,9 @@ technologies = {
 		enable_equipments = {
 			medium_tank_artillery_equipment_1
 		}
+        enable_subunits = {
+            tank_artellery_support
+        }
 
 		path = {
 			leads_to_tech = improved_medium_art 
@@ -365,6 +368,10 @@ technologies = {
 		enable_equipments = {
 			medium_tank_aa_equipment_1
 		}
+        
+        enable_subunits = {
+            tank_anti_air_support
+        }
 
 		path = {
 			leads_to_tech = improved_medium_spaa 
@@ -851,6 +858,9 @@ technologies = {
 		enable_equipments = {
 			modern_tank_equipment_1
 		}	
+        enable_subunits = {
+            armored_support
+        }
 		
 		research_cost = 2.5
 		start_year = 2010

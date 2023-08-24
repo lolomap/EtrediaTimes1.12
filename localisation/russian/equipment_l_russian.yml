@@ -1,4 +1,8 @@
 ﻿l_russian:
+  tank_artellery_support: "Поддержка САУ"
+  tank_anti_air_support: "Поддержка ЗСУ"
+  armored_support: "Ударная рота поддержки"
+
  train_equipment:0 "Поезд"
  train_equipment_desc:0 "Поезда перевозят припасы из столицы снабжения в центры снабжения, соединенные железной дорогой."
  train_equipment_1:0 "Гражданский поезд"

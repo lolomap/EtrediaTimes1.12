@@ -44,7 +44,10 @@ operation_sphere_puppet = {
 	}
 
     equipment = {
-		civilian_factories = 8
+		civilian_factories = {
+			amount = 10
+			days = 60
+		}
 	}
 
     phases = {

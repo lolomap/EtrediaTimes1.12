@@ -287,10 +287,10 @@ focus_tree = {
 			focus = EIK_rashin_complex
 		}
 		completion_reward = { 
-            remove_ideas = EIK_corruption01
-			add_ideas = {
-				EIK_corruption02
-			}
+            swap_ideas = {
+                remove_idea = EIK_corruption01
+                add_idea = EIK_corruption02
+            }
 				if = {
 					limit = { has_idea = sixth_corruption_level }
 					EIK = { add_ideas = fifth_corruption_level }
