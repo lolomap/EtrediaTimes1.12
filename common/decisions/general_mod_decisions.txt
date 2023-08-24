@@ -765,28 +765,28 @@ sphere_category = {
         }
     }
 
-    sphere_debuff = {
-        targets = {sphere_owner}
+    #sphere_debuff = {
+    #    targets = {sphere_owner}
 
-        days_mission_timeout = 0
+        #days_mission_timeout = 0
         
-        available = {always = no}
+        #available = {always = no}
         #activation = {
         #    has_variable = sphere_owner
         #}
         #days_remove = -1
 
-        targeted_modifier = {
-            tag = FROM
-            trade_cost_for_target_factor = -0.5
-            extra_trade_to_target_factor = 0.5
+        #targeted_modifier = {
+        #    tag = FROM
+        #    trade_cost_for_target_factor = -0.5
+        #    extra_trade_to_target_factor = 0.5
             #mic_to_target_factor = 0.05
-            attack_bonus_against_cores = 0.05
-            defense_bonus_against = -0.25
-        }
+        #    attack_bonus_against_cores = 0.05
+        #    defense_bonus_against = -0.25
+        #}
 
 
-    }
+    #}
 
     sphere_buy_infantry = {
         cost = 15
@@ -800,6 +800,10 @@ sphere_category = {
             FROM = {
                 has_equipment = {
                     infantry_equipment > 1000
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
                 }
             }
         }
@@ -828,6 +832,10 @@ sphere_category = {
                 has_equipment = {
                     support_equipment > 300
                 }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
             }
         }
 
@@ -854,6 +862,10 @@ sphere_category = {
             FROM = {
                 has_equipment = {
                     artillery_equipment > 50
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
                 }
             }
         }
@@ -882,6 +894,10 @@ sphere_category = {
                 has_equipment = {
                     anti_tank_equipment > 50
                 }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
             }
         }
 
@@ -908,6 +924,10 @@ sphere_category = {
             FROM = {
                 has_equipment = {
                     anti_air_equipment > 50
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
                 }
             }
         }
@@ -936,6 +956,10 @@ sphere_category = {
                 has_equipment = {
                     motorized_equipment > 100
                 }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
             }
         }
 
@@ -962,6 +986,10 @@ sphere_category = {
             FROM = {
                 has_equipment = {
                     mechanized_equipment > 100
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
                 }
             }
         }
@@ -990,6 +1018,10 @@ sphere_category = {
                 has_equipment = {
                     fighter_equipment > 10
                 }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
             }
         }
 
@@ -1016,6 +1048,10 @@ sphere_category = {
             FROM = {
                 has_equipment = {
                     CAS_equipment > 10
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
                 }
             }
         }
@@ -1044,6 +1080,10 @@ sphere_category = {
                 has_equipment = {
                     train_equipment > 5
                 }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
             }
         }
 
@@ -1070,6 +1110,10 @@ sphere_category = {
             FROM = {
                 has_equipment = {
                     convoy > 25
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
                 }
             }
         }
@@ -1098,6 +1142,10 @@ sphere_category = {
                 has_equipment = {
                     modern_tank_equipment > 25
                 }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
             }
         }
 
@@ -1109,6 +1157,58 @@ sphere_category = {
                     target = PREV
                 }
             }
+        }
+    }
+
+    sphere_ask_export = {
+        cost = 15
+
+        #days_re_enable = 30
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                NOT = {has_country_flag = allow_export_eq_@ROOT}
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                country_event = {id = mechanics.41 days = 1}
+            }
+        }
+    }
+
+    sphere_allow_export = {
+        #days_re_enable = 30
+        target_array = sphere_members
+
+        priority = 1000
+
+        visible = {
+            NOT = {has_country_flag = allow_export_eq_@FROM}
+        }
+
+        complete_effect = {
+            set_country_flag = allow_export_eq_@FROM
+            set_temp_variable = { temp = FROM }
+            custom_effect_tooltip = allow_export_eq_tt
+        }
+    }
+    sphere_cancel_export = {
+        #days_re_enable = 30
+        target_array = sphere_members
+
+        priority = 1000
+
+        visible = {
+            has_country_flag = allow_export_eq_@FROM
+        }
+
+        complete_effect = {
+            clr_country_flag = allow_export_eq_@FROM
+            set_temp_variable = { temp = FROM }
+            custom_effect_tooltip = cancel_export_eq_tt
         }
     }
 

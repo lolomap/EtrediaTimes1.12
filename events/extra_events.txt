@@ -1609,6 +1609,29 @@ country_event = {
     }
 }
 
+country_event = {
+    id = mechanics.41
+    title = mechanics.41.t
+    desc = mechanics.41.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=mechanics.41.a
+        
+    }
+    option = {
+        name = mechanics.41.b
+
+        set_country_flag = allow_export_eq_@FROM
+        set_temp_variable = { temp = FROM }
+        custom_effect_tooltip = allow_export_eq_tt
+    }
+}
+
 
 country_event = {#Аншлюз
 	id = onactev.1

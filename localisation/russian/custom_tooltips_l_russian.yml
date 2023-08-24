@@ -99,6 +99,8 @@
   is_in_sphere_tt: "В §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
   is_in_sphere_tt_NOT: "Не в §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния"
   sphere_cost_change_tt: "Стоимость вовлечения §Y[?temp.GetFlag][?temp.GetNameDef]§! в сферу влияния: $RIGHT|-=$"
+  allow_export_eq_tt: "[?temp.GetFlag]§Y[?temp.GetNameDef]§! сможет §Yэкспортировать§! технику из наших запасов"
+  cancel_export_eq_tt: "[?temp.GetFlag]§Y[?temp.GetNameDef]§! не сможет §Yэкспортировать§! технику из наших запасов"
 
   failed_orb: "Провалившиеся переговоры"
 

@@ -60,7 +60,7 @@ remove_from_sphere = {
     #    target = sphere_owner
     #    decision = sphere_debuff
     #}
-    remove_mission = sphere_debuff
+    #remove_mission = sphere_debuff
     clear_variable = sphere_owner
     force_update_map_mode = {mapmode = spheres_map}
 }
