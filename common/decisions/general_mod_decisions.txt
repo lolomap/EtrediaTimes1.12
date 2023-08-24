@@ -790,6 +790,14 @@ sphere_category = {
 
     sphere_buy_infantry = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
 
@@ -816,11 +824,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_extra = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
 
@@ -847,11 +867,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_artillery = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
 
@@ -878,11 +910,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_anti_tank = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
 
@@ -909,11 +953,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_anti_air = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
 
@@ -940,11 +996,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_trucks = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
 
@@ -971,11 +1039,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_mechanized = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 30
+		}
+		hidden_effect = {
+			add_command_power = -30
+		}
+		custom_cost_text = decision_cost_CP_30
 
         #days_re_enable = 30
 
@@ -1002,11 +1082,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 10
+			}
         }
     }
 
     sphere_buy_fighters = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 40
+		}
+		hidden_effect = {
+			add_command_power = -40
+		}
+		custom_cost_text = decision_cost_CP_40
 
         #days_re_enable = 30
 
@@ -1033,11 +1125,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 5
+				add_command_power = 15
+			}
         }
     }
 
     sphere_buy_cas = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 40
+		}
+		hidden_effect = {
+			add_command_power = -40
+		}
+		custom_cost_text = decision_cost_CP_40
 
         #days_re_enable = 30
 
@@ -1064,11 +1168,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 5
+				add_command_power = 15
+			}
         }
     }
 
     sphere_buy_trains = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
 
@@ -1095,11 +1211,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_convoys = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 15
+		}
+		hidden_effect = {
+			add_command_power = -15
+		}
+		custom_cost_text = decision_cost_CP_15
 
         #days_re_enable = 30
 
@@ -1126,11 +1254,23 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
         }
     }
 
     sphere_buy_tanks = {
         cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 30
+		}
+		hidden_effect = {
+			add_command_power = -30
+		}
+		custom_cost_text = decision_cost_CP_30
 
         #days_re_enable = 30
 
@@ -1157,6 +1297,10 @@ sphere_category = {
                     target = PREV
                 }
             }
+			FROM = {
+				army_experience = 5
+				add_command_power = 15
+			}
         }
     }
 
