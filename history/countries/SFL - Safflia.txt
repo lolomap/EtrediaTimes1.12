@@ -80,6 +80,11 @@ set_popularities = {
 	neutrality = 17
 }
 
+create_intelligence_agency = {
+    name = "Safflian National Security Organization"
+}
+
+
 2023.1.1 = {
     UCB = {involve_sphere = yes}
 }
