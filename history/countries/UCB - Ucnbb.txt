@@ -96,7 +96,7 @@ set_technology = {
 }
 
 create_intelligence_agency = {
-    name = "UcNB Internal Security Service"
+    name = "UcNB Secret Operations Service"
 }
 
 set_politics = {
