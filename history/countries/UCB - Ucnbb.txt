@@ -95,6 +95,10 @@ set_technology = {
 	transport = 1
 }
 
+create_intelligence_agency = {
+    name = "UcNB Internal Security Service"
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "2012.3.5"

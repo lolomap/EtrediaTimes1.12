@@ -27,6 +27,10 @@
   decision_cost_CP_40: "£command_power §Y40§!"
   decision_cost_CP_40_blocked: "£command_power §R40§!"
   decision_cost_CP_40_tooltip: "Стоимость принятия решения: £command_power §Y40§!"
+  
+  decision_cost_flat_15: "§Y15§!"
+  decision_cost_flat_15_blocked: "§R15§!"
+  decision_cost_flat_15_tooltip: "Стоимость принятия решения: §Y15§!"
 
   modalert_tooltip: "[modalert_sl]"
   modalert_polform_tt: "§YДоступно изменение политического строя!"
@@ -89,8 +93,10 @@
   bkh_nation_tooltip: "Баркханская культура"
   skt_nation_tooltip: "Сектойская культура"
 
+  close_diplomacy_tooltip: "Мы §Yне сможем§! вести §Yдипломатию§! по отношении друг к другу"
+  open_diplomacy_tooltip: "Мы §Yсможем§! вести §Yдипломатию§! по отношении друг к другу"
   ACCEPT_EXISTANCE_tooltip: "§Y[Root.GetFlag][Root.GetNameDef]§! признает независимость §Y[?temp.GetFlag][?temp.GetNameDef]§!"
-  ALLOW_ACCEPT_EXISTANCE_tooltip: "Мы должны признать независимость этого государства"
+  ALLOW_ACCEPT_EXISTANCE_tooltip: "Отсутствуют дипломатические отношения"
   ALLOW_BANNED_CRYSIS_tooltip: "Нельзя во время войны из-за кризиса"
   ALLOW_BANNED_UCB_BOP_tooltip: "Невозможно возразить Парламенту"
   ALLOW_BANNED_UCB_BOP_OUT_tooltip: "Эта страна не может возразить Парламенту"
@@ -103,6 +109,13 @@
   wtire_change: "Рост военной усталости: $RIGHT|-=%$"
   wtire_boost: "Военная усталость: $RIGHT|-=$"
   world_influence_cost_clamp:0 "§RДругие модификаторы влияния не работают§!"
+  escalation_hotness_bar_tt: "§Y[?escalation_member:escalation_hotness]%§!"
+  escalation_score_change_tooltip: "Очки эскалации: $RIGHT|+=$"
+  escalation_hotness_change_tooltip: "Градус эскалации: $RIGHT|=%%Y$"
+  has_escalation_crysis_tt: "Эскалация кризиса"
+  has_escalation_crysis_tt_NOT: "Не участвует в действующих конфликтах"
+  escalation_timeout: "Наши действия потеряли актуальность"
+  has_escalation_hotness: "Градус эскалации больше §Y[?temp]%§!"
 
   involve_to_sphere_tt: "§Y[PREV.GetFlag][PREV.GetNameDef]§! §Rпопадет§! под сферу [THIS.GetFlag]§Y[THIS.GetAdjective]§! влияния."
   remove_from_sphere_tt: "Страна §Yвыйдет§! из-под сферы [?sphere_owner.GetFlag]§Y[?sphere_owner.GetAdjective]§! влияния."

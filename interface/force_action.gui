@@ -1,4 +1,23 @@
 guiTypes = {
+    containerWindowType = {
+        name = "escalation_decisions_window"
+        position = {x = 0 y = 0}
+        size = { width = 500 height= 150 }
+
+
+        iconType = {
+            name = "escalation_hotness"
+            spriteType = "GFX_escalation_bar"
+            position = {x = 30 y = 8}
+            #size = {height = 25 width = 300}
+            #alwaystransparent = yes
+
+            pdx_tooltip = escalation_hotness_bar_tt
+        }
+    }
+
+
+
 	containerWindowType = {
 		name = "force_action_window"
 		position = { x=0 y=180 }	

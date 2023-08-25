@@ -1359,10 +1359,272 @@ sphere_category = {
 }
 
 escalation_category = {
-    _esc_blank = {
-        visible = {has_variable = escalation_member}
+    #_esc_blank = {
+    #    visible = {has_variable = escalation_member}
         #allowed = {always = no}
+    #}
+
+    esc_timer = {
+        available = {always = no}
+        activation = {has_variable = escalation_member NOT = {has_country_flag = escaltion_timeout}}
+
+        is_good = no
+
+        days_mission_timeout = 90
+        priority = 1000
+
+        timeout_effect  = {
+            set_country_flag = escalation_timeout
+        }
     }
 
-    
+    esc_demand_requirements = {
+        targets = {
+            escalation_friend
+        }
+
+        visible = {has_variable = escalation_member}
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            
+            set_temp_variable = { temp = 0 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > 0 }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        days_re_enable = 30
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 5
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+    esc_embargo = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_to
+                }
+                else = {
+                    has_country_flag = escalation_on_sender
+                }
+            }
+            NOT = {is_embargoing = FROM}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            set_temp_variable = { temp = 24 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > 24 }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 8
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            send_embargo = FROM
+            
+
+            escalation_decision_effect = yes
+        }
+
+        days_remove = 90
+
+        remove_effect = {
+            break_embargo = FROM
+        }
+    }
+
+    esc_guarantee = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_sender
+                }
+                else = {
+                    has_country_flag = escalation_on_to
+                }
+            }
+            NOT = {has_guaranteed = FROM}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            set_temp_variable = { temp = 40 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > 40 }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 12
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            give_guarantee = FROM
+            
+
+            escalation_decision_effect = yes
+        }
+
+        days_remove = 90
+
+        remove_effect = {
+            diplomatic_relation = {
+                country = FROM
+                relation = guarantee
+                active = no
+            }
+        }
+    }
+
+    esc_close_diplomacy = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_to
+                }
+                else = {
+                    has_country_flag = escalation_on_sender
+                }
+            }
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            set_temp_variable = { temp = 50 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > 50 }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 8
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            set_country_flag = closed_diplomacy_@FROM
+            custom_effect_tooltip = close_diplomacy_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        days_remove = 120
+
+        remove_effect = {
+            clr_country_flag = closed_diplomacy_@FROM
+            custom_effect_tooltip = open_diplomacy_tooltip
+        }
+    }
+
+    esc_osuzhdayu_maximalno = {
+        targets = {escalation_enemy}
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            set_temp_variable = { temp = 15 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > 15 }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        days_re_enable = 30
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 5
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+
+
 }
