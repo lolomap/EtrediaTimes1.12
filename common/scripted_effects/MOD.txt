@@ -434,3 +434,22 @@ escalation_decision_effect = {
         days = 7
     }
 }
+
+escalation_stop = {
+    var:escalation_member = {
+        clr_country_flag = escalation_war_start
+        clear_variable = escalation_hotness
+        every_country = {
+            limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+            remove_mission = esc_timer
+            clear_variable = escalation_member
+            clear_variable = escalation_score
+            clear_variable = escalation_enemy
+            clear_variable = escalation_friend
+            clear_variable = escalation_war_score
+            clr_country_flag = escalation_on_sender
+            clr_country_flag = escalation_on_to
+            clr_country_flag = escalation_timeout
+        }
+    }
+}

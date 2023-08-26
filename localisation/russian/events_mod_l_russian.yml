@@ -139,9 +139,9 @@
  mechanics.35.a:0 "Отлично"
 
  mechanics.41.t: "Запрос экспорта"
- mechanics.42.d: "[FROM.GetNameDef] просит разрешить закупку военной продукции с наших складов."
- mechanics.42.a: "Отказ"
- mechanics.42.b: "Принять"
+ mechanics.41.d: "[FROM.GetNameDef] просит разрешить закупку военной продукции с наших складов."
+ mechanics.41.a: "Отказ"
+ mechanics.41.b: "Принять"
 
 
  randev.2.t:0 "Митинги в столице"

@@ -31,6 +31,9 @@
   decision_cost_flat_15: "§Y15§!"
   decision_cost_flat_15_blocked: "§R15§!"
   decision_cost_flat_15_tooltip: "Стоимость принятия решения: §Y15§!"
+  decision_cost_flat_esc_war: "§Y[?escalation_war_score]§!"
+  decision_cost_flat_esc_war_blocked: "§R[?escalation_war_score]§!"
+  decision_cost_flat_esc_war_tooltip: "Стоимость принятия решения: §Y[?escalation_war_score]§!"
 
   modalert_tooltip: "[modalert_sl]"
   modalert_polform_tt: "§YДоступно изменение политического строя!"

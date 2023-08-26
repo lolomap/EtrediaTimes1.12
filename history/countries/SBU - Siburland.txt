@@ -87,11 +87,6 @@ set_technology = {basic_train = 1
 	computers_90s = 1
 }
 
-	
-create_intelligence_agency = {
-    name = "Federal Security Bureau"
-}
-
 2018.9.20 = {
     if = {
         limit = {has_start_date < 2023.1.1}

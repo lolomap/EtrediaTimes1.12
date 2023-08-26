@@ -95,10 +95,6 @@ set_technology = {
 	transport = 1
 }
 
-create_intelligence_agency = {
-    name = "UcNB Secret Operations Service"
-}
-
 set_politics = {
 	ruling_party = democratic
 	last_election = "2012.3.5"

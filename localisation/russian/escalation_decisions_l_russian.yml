@@ -9,3 +9,6 @@
   esc_guarantee: "Протекция над [FROM.GetNameDef]"
   esc_close_diplomacy: "Прекратить дипломатические отношения с [FROM.GetNameDef]"
   esc_osuzhdayu_maximalno: "Официально осудить [FROM.GetAdjective] правительство"
+  esc_exile_embassy: "Выслать [FROM.GetAdjective] посольство"
+  esc_spys: "Политический шпионаж"
+  esc_war: "Начать вооруженный конфликт"

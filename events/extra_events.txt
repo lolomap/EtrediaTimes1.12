@@ -1414,6 +1414,14 @@ country_event = { # Кризис закончился (call in crysis sender)
                     set_variable = { escalation_friend = PREV.to_crysis }
                 }
                 set_variable = {escalation_member = PREV}
+                add_ideas = escalation_idea
+
+                set_temp_variable = { temp = crysis_influence }
+                multiply_temp_variable= { temp = 1.5 }
+                add_to_temp_variable = { temp = 30 }
+                divide_temp_variable = { temp = 100 }
+                multiply_temp_variable = { temp = escalation_score }
+                set_variable = { escalation_war_score = temp }
             }
             set_variable = { escalation_hotness = 25 }
 
