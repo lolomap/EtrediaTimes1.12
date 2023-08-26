@@ -867,8 +867,6 @@ focus_tree = {
 				available = { CHE = { has_country_flag = che_kaspa_deal } }
 			}
 			hidden_effect = {
-				DEM = { country_event = { id = dirnews.8 days = 1 } }
-				DIR = { country_event = { id = dirnews.8 days = 1 } }
 				VRO = { country_event = { id = vro.2 days = 1 } }
 			}
 		}
