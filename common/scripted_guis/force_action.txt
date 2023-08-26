@@ -1,4 +1,16 @@
 scripted_gui = {
+    escalation_decisions = {
+        window_name = "escalation_decisions_window"
+        context_type = decision_category
+
+        properties = {
+            escalation_hotness = {
+                frame = escalation_member:escalation_hotness
+            }
+        }
+    }
+
+
     crysis = {
         window_name = "crysis_window"
         
@@ -528,7 +540,8 @@ scripted_gui = {
 
             cRelease_click = {
                 if = {
-                    limit = {OR = {var:ROOT.cr_ai_minor_target = {NOT = {tag = PREV}}} is_ai = no}}
+                    limit = {OR = {var:ROOT.cr_ai_minor_target = {NOT = {tag = PREV}}} is_ai = no}
+                    #limit = {always = yes}
 
                     ROOT = {
                         set_country_flag = {
@@ -561,7 +574,7 @@ scripted_gui = {
 
             cores_button_click = {
                 ROOT = {
-                    set_global_flag = {
+                    set_country_flag = {
                         flag = political_crysis
                         days = 60
                         value = 1
