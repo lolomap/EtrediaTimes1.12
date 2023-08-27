@@ -1369,6 +1369,7 @@ country_event = { # Кризис закончился (call in crysis sender)
     }
 
     immediate = {
+        set_country_flag = STOP_FUCKING_CRYSIS
         var:sender_crysis = {set_country_flag = {flag = crysis_delay days = 360 value = 1}}
         if = { # Оба не уступили
             limit = {
@@ -1437,7 +1438,9 @@ country_event = { # Кризис закончился (call in crysis sender)
             limit = {
                 var:cr_send_op = {not = {has_country_flag = crysis_press}}
                 var:cr_to_op = {has_country_flag = crysis_press}
+                #has_country_flag = cr_a_allow
             }
+            log = "ATACKERS ALLOW"
             for_each_scope_loop = {
                 array = crysis_senders
                 add_timed_idea = {idea = sender_loose_crysis days = 150}
@@ -1446,11 +1449,13 @@ country_event = { # Кризис закончился (call in crysis sender)
                 add_timed_idea = {idea = sender_loose_crysis days = 150}
             }
         }
-        else_if = { # Оборона уступила
-            limit = {
-                var:cr_send_op = {has_country_flag = crysis_press}
-                var:cr_to_op = {not = {has_country_flag = crysis_press}}
-            }
+        else = { #else_if = { # Оборона уступила
+            #limit = {
+                #var:cr_send_op = {has_country_flag = crysis_press}
+                #var:cr_to_op = {not = {has_country_flag = crysis_press}}
+                #has_country_flag = cr_d_allow
+            #}
+            log = "DEFENDERS ALLOW"
             
             var:sender_crysis = {crysis_reward = yes}
         }
@@ -1505,7 +1510,8 @@ country_event = { #call in crysis sender
             add_to_variable = {crysis_timer = 1.666}
             country_event = {id = mechanics.37 days = 1}
         }
-        else = {
+        else_if = {
+            limit = {NOT = {has_country_flag = STOP_FUCKING_CRYSIS}}
             force_press = yes
             country_event = {id = mechanics.36 days = 2}
         }

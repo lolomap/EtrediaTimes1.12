@@ -3,7 +3,7 @@ on_actions = {
         effect = {
             #Начало кризиса
             if = {
-                limit = {has_global_flag = CRYSIS_ALLOWED}
+                limit = {has_global_flag = CRYSIS_ALLOWED always = no}
                 if = {
                     limit = {
                         threat > 0.4

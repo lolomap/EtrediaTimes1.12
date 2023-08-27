@@ -112,6 +112,11 @@ on_actions = {
 
     on_weekly_UCB = {  
 		effect = {
+            
+            country_event = {id = ucnb.30 days = 10}
+            country_event = {id = ucnb.30 days = 25}
+            country_event = {id = ucnb.30 days = 40}
+
 			set_variable = {ucb_reg_dem = 0}
 			set_variable = {ucb_reg_fas = 0}
 			set_variable = {ucb_reg_com = 0}
@@ -269,10 +274,6 @@ on_actions = {
                         max = 1
                     }
                 }
-
-                country_event = {id = ucnb.30 days = 10}
-                country_event = {id = ucnb.30 days = 25}
-                country_event = {id = ucnb.30 days = 40}
             }
         }
     }

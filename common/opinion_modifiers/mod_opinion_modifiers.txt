@@ -10,6 +10,15 @@
 
 opinion_modifiers = {
 
+    escalation_negotiations_suc_opinion = {
+        value = 10
+        days = 30
+    }
+    escalation_negotiations_fail_opinion = {
+        value = -10
+        days = 30
+    }
+
 	embargo_bitch = {
 		trade = yes
 		value = -10000
