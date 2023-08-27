@@ -138,6 +138,9 @@ d_calc_wi = {
     
     #add_to_array = {global.wi_values = world_influence}
     #set_variable = {global.wi_countries^world_influence = THIS}
+
+    set_variable = { crysis_influence = world_influence }
+    add_to_variable = { crysis_influence = nuke_inf_factor }
 }
 
 d_calc_wi_e = {
@@ -240,9 +243,26 @@ encount_majors = { #call in crysis  sender
     set_temp_variable = { sender_cr = sender_crysis }
     set_temp_variable = { to_cr = to_crysis }
 
-    set_variable = {political_crysis_member = THIS}
+    var:sender_crysis = {
+        set_variable = {political_crysis_member = THIS}
+        set_country_flag = {
+            flag = political_crysis
+            days = 60
+            value = 1
+        }
+        set_variable = {crtoflag = to_crysis}
+    }
     #set_variable = {crto = to_crysis}
-    var:to_crysis = {set_variable = {political_crysis_member = PREV} set_variable = {crto = PREV.to_crysis}}
+    var:to_crysis = {
+        set_variable = {political_crysis_member = PREV}
+        set_variable = {crto = PREV.to_crysis}
+        set_country_flag = {
+            flag = political_crysis
+            days = 60
+            value = 1
+        }
+        set_variable = {crtoflag = to_crysis}
+    }
 
     every_country = {
         limit = {
@@ -270,7 +290,12 @@ encount_majors = { #call in crysis  sender
 
         var:sender_cr = {add_to_array = {crysis_majors = PREV}}
         set_variable = {political_crysis_member = PREV}
-        #set_variable = {crto = to_crysis}
+        set_country_flag = {
+            flag = political_crysis
+            days = 60
+            value = 1
+        }
+        set_variable = {crtoflag = to_crysis}
     }
     if = {
         limit = {var:to_crysis = {is_subject = yes}}
@@ -312,37 +337,37 @@ d_calc_crysis = { #call in crysis sender
     for_each_scope_loop = {
         array = crysis_senders
         if = {
-            limit = {check_variable = {world_influence > cr_smax}}
-            set_temp_variable = {cr_smax = world_influence}
+            limit = {check_variable = {crysis_influence > cr_smax}}
+            set_temp_variable = {cr_smax = crysis_influence}
             var:sender_cr = {set_variable = {cr_send_op = PREV}}
         }
-        var:sender_cr = {add_to_variable = {crysis_s_totalwi = PREV.world_influence}}
+        var:sender_cr = {add_to_variable = {crysis_s_totalwi = PREV.crysis_influence}}
     }
     for_each_scope_loop = {
         array = crysis_tos
         if = {
-            limit = {check_variable = {world_influence > cr_tmax}}
-            set_temp_variable = {cr_tmax = world_influence}
+            limit = {check_variable = {crysis_influence > cr_tmax}}
+            set_temp_variable = {cr_tmax = crysis_influence}
             var:sender_cr = {set_variable = {cr_to_op = PREV}}
         }
-        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.world_influence}}
+        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.crysis_influence}}
     }
 
     var:sender_crysis = {
         if = {
-            limit = {check_variable = {cr_smax > world_influence}}
+            limit = {check_variable = {cr_smax > crysis_influence}}
             var:cr_send_op = { set_variable = {is_highest_crysis = 2} }
         }
         else = {
             set_variable = {cr_send_op = THIS}
             set_variable = {sender_crysis_op_status = 2}
         }
-        add_to_variable = {crysis_s_totalwi = world_influence}
+        add_to_variable = {crysis_s_totalwi = crysis_influence}
     }
 
     var:to_crysis = {
         if = {
-            limit = {var:sender_cr = {check_variable = {cr_smax > PREV.world_influence}}}
+            limit = {var:sender_cr = {check_variable = {cr_smax > PREV.crysis_influence}}}
             var:sender_cr = {var:cr_to_op = { set_variable = {is_highest_crysis = 2} }}
         }
         else = {
@@ -351,17 +376,20 @@ d_calc_crysis = { #call in crysis sender
                 set_variable = {to_crysis_op_status = 2}
             }
         }
-        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.world_influence}}
+        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.crysis_influence}}
     }
 }
 
 force_press = {
     if = {
-        limit = {NOT = {check_variable = {cr_d_status = 3}}}
+        #limit = {NOT = {check_variable = {cr_d_status = 3}}}
+        limit = {has_country_flag = cr_a_allow}
+        log = "FORCE PRESS FOR DEFENDERS"
         var:cr_to_op = {set_country_flag = crysis_press}
     }
     if = {
-        limit = {NOT = {check_variable = {cr_a_status = 3}}}
+        #limit = {NOT = {check_variable = {cr_a_status = 3}}}
+        limit = {has_country_flag = cr_d_allow}
         var:cr_send_op = {set_country_flag = crysis_press}
     }
 }
@@ -392,6 +420,23 @@ crysis_reward = { #call in crysis sender
             release_on_controlled = minor_crysis
         }
     }
+    else_if = { #spheres
+        limit = {check_variable = { type_crysis = 3 }}
+        var:minor_crysis = {
+            remove_from_sphere = yes
+        }
+    }
+    else_if = { #release puppet
+        limit = {check_variable = { type_crysis = 4 }}
+        var:to_crysis = {
+            set_autonomy = {
+                target = PREV.minor_crysis
+                autonomy_state = autonomy_free
+                end_wars = no
+                end_civil_wars = no
+            }
+        } 
+    }
 }
 
 d_show_crysis = {
@@ -402,4 +447,57 @@ d_show_crysis = {
     else = {
         set_country_flag = cheat_show_cr_win
     }
+}
+
+escalation_decision_effect = {
+    add_days_mission_timeout = {mission = esc_timer days = 20}
+    if = {
+        limit = {has_country_flag = escalation_delay}
+        hidden_effect = {
+            every_other_country = {
+                limit = {
+                    check_variable = { escalation_member = ROOT.escalation_member }
+                    if = {
+                        limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                        has_country_flag = escalation_on_to
+                    }
+                    else = {
+                        has_country_flag = escalation_on_sender
+                    }
+                }
+
+                add_to_variable = { escalation_score = 5 }
+            }
+        }
+    }
+    set_country_flag = {
+        flag = escalation_delay
+        value = 1
+        days = 7
+    }
+}
+
+escalation_stop = {
+    var:escalation_member = {
+        clr_country_flag = escalation_war_start
+        clear_variable = escalation_hotness
+        every_country = {
+            limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+            remove_mission = esc_timer
+            clear_variable = escalation_member
+            clear_variable = escalation_score
+            clear_variable = escalation_enemy
+            clear_variable = escalation_friend
+            clear_variable = escalation_war_score
+            clr_country_flag = escalation_on_sender
+            clr_country_flag = escalation_on_to
+            clr_country_flag = escalation_timeout
+        }
+    }
+}
+
+force_action_close_all_gb = {
+    clr_country_flag = fa_sphere_gb_show
+    clr_country_flag = fa_minor_gb_show
+    clr_country_flag = fa_puppet_gb_show
 }

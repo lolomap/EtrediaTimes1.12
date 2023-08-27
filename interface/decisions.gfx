@@ -1,7 +1,10 @@
 spriteTypes = {	
 
 	### categories
-	
+	spriteType = {
+        name = "GFX_decision_escalation_category"
+        texturefile = "gfx/interface/decisions/escalation_category.dds"
+    }
 
 	spriteType = {
 		name = "GFX_decision_category_generic"
@@ -12,6 +15,8 @@ spriteTypes = {
 		name = "GFX_decision_TRP_grandana"
 		texturefile = "gfx/interface/decisions/decision_TRP_grandana.dds"
 	}
+
+    #####################
 	
 	spriteType = {
 		name = "GFX_decision_category_border_conflicts"

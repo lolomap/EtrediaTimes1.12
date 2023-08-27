@@ -1,4 +1,6 @@
 ﻿l_russian:
+ escalation_negotiations_suc_opinion: "Удачные переговоры"
+ escalation_negotiations_fail_opinion: "Проавлившиеся переговоры"
  embargo_bitch:0 "Эмбарго"
  embargo_initiator:0 "Инициатор эмбарго"
  embargo_target:0 "Цель эмбарго"

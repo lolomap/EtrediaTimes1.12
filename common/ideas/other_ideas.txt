@@ -547,5 +547,31 @@ ideas = {
 				political_power_factor = -0.25
 			}
 		}
+
+        escalation_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+
+            cancel = {
+                NOT = {has_variable = escalation_member}
+            }
+        
+            modifier = {
+                political_power_gain = -0.3
+                stability_factor = -0.08
+            }
+        }
 	}
 }

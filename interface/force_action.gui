@@ -1,4 +1,31 @@
 guiTypes = {
+    containerWindowType = {
+        name = "escalation_decisions_window"
+        position = {x = 0 y = 0}
+        size = { width = 500 height= 350 }
+
+
+        iconType = {
+            name = "escalation_hotness"
+            spriteType = "GFX_escalation_bar"
+            position = {x = 25 y = 8}
+            #size = {height = 25 width = 300}
+            #alwaystransparent = yes
+
+            pdx_tooltip = escalation_hotness_bar_tt
+        }
+
+        iconType = {
+            name = "image"
+            spriteType = "GFX_decision_escalation_category"
+            position = {x = 15 y = 45}
+            #size = {height = 25 width = 300}
+            #alwaystransparent = yes
+        }
+    }
+
+
+
 	containerWindowType = {
 		name = "force_action_window"
 		position = { x=0 y=180 }	
@@ -33,7 +60,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "l2"
-			position = {x = 50 y = 175}
+			position = {x = 50 y = 105}
 			text = fa_cores
 			font = hoi_18mbs
 			format = left
@@ -46,13 +73,91 @@ guiTypes = {
 			spriteType = "GFX_button_221x34"
 			buttonText = fa_send	
 			buttonFont = hoi_18mbs
-			position = { x = 290 y = 175 }
+			position = { x = 290 y = 105 }
+			Orientation = "UPPER_LEFT"
+		}
+
+        
+        instantTextBoxType = {
+			name = "l_s"
+			position = {x = 50 y = 165}
+			text = fa_open_sphere
+			font = hoi_18mbs
+			format = left
+			
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "show_sphere_button"
+			spriteType = "GFX_button_221x34"
+			buttonText = fa_show	
+			buttonFont = hoi_18mbs
+			position = { x = 290 y = 165 }
+			Orientation = "UPPER_LEFT"
+		}
+
+        instantTextBoxType = {
+			name = "l_p"
+			position = {x = 50 y = 225}
+			text = fa_open_puppets
+			font = hoi_18mbs
+			format = left
+			
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "show_puppets_button"
+			spriteType = "GFX_button_221x34"
+			buttonText = fa_show	
+			buttonFont = hoi_18mbs
+			position = { x = 290 y = 225 }
+			Orientation = "UPPER_LEFT"
+		}
+
+        instantTextBoxType = {
+			name = "l_m"
+			position = {x = 50 y = 285}
+			text = fa_open_minors
+			font = hoi_18mbs
+			format = left
+			
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "show_minors_button"
+			spriteType = "GFX_button_221x34"
+			buttonText = fa_show	
+			buttonFont = hoi_18mbs
+			position = { x = 290 y = 285 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		gridboxtype = {
 			name = "minors_gb"
-			position = {x = 50 y = 250}
+			position = {x = 50 y = 350}
+			orientation = "UPPER_LEFT"
+			size = {width = 100 height = 100}
+			slotsize = {width = 100 height = 50}
+			add_horizontal = no
+	
+		}
+
+        gridboxtype = {
+			name = "fa_sphere_gb"
+			position = {x = 50 y = 350}
+			orientation = "UPPER_LEFT"
+			size = {width = 100 height = 100}
+			slotsize = {width = 100 height = 50}
+			add_horizontal = no
+	
+		}
+
+        gridboxtype = {
+			name = "fa_puppet_gb"
+			position = {x = 50 y = 350}
 			orientation = "UPPER_LEFT"
 			size = {width = 100 height = 100}
 			slotsize = {width = 100 height = 50}
@@ -60,6 +165,83 @@ guiTypes = {
 	
 		}
 	}
+
+    containerWindowType = {
+        name = "fa_sphere_entry"
+        position = {x = 0 y = 0}
+        size = {width = 100 height = 100}
+
+        buttonType = {
+			name = "fa_sphere_Flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = {x = 0 y = 5}
+		}
+
+		iconType = {
+			name = "fa_sphere_FlagBorder"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = {x = -4 y = 2}
+			alwaystransparent = yes
+		}
+
+        instantTextBoxType = {
+			name = "fa_sphere_Name"
+			position = {x = 50 y = 8}
+			text = fa_sphere
+			font = hoi_18mbs
+			format = left
+			
+			alwaystransparent = yes
+		}
+
+        buttonType = {
+			name = "fa_sphere_button"
+			spriteType = "GFX_button_221x34"
+			buttonText = fa_send	
+			buttonFont = hoi_18mbs
+			position = { x = 240 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+    }
+
+    containerWindowType = {
+        name = "fa_puppet_entry"
+        position = {x = 0 y = 0}
+        size = {width = 100 height = 100}
+
+        buttonType = {
+			name = "fa_puppet_Flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = {x = 0 y = 5}
+		}
+
+		iconType = {
+			name = "fa_puppet_FlagBorder"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = {x = -4 y = 2}
+			alwaystransparent = yes
+		}
+
+        instantTextBoxType = {
+			name = "fa_puppet_Name"
+			position = {x = 50 y = 8}
+			text = fa_rpuppet
+			font = hoi_18mbs
+			format = left
+            maxWidth = 180
+			
+			alwaystransparent = yes
+		}
+
+        buttonType = {
+			name = "fa_puppet_button"
+			spriteType = "GFX_button_221x34"
+			buttonText = fa_send	
+			buttonFont = hoi_18mbs
+			position = { x = 240 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+    }
 
 	containerWindowType = {
 		name = "minors_entry"

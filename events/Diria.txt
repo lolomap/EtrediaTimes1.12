@@ -396,7 +396,7 @@ country_event = {
 		UCB = { country_event = { id = ucnb.15 days = 1 } }
 		add_ideas = { DIR_eik }
 		ai_chance = { 
-		factor = 0.9
+			factor = 0.9
 		}
    	}
 	option = {
