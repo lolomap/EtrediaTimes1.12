@@ -3,7 +3,7 @@
    neutrality_drift: "Authoritarianism daily support"
 
    ideology_protection: "§YIdeology protection§!"
-   ideology_protection_desc: "§LIn countries with ideology protection, the ruling party can be changed only with national focus or some special events and as a consequence of military revolution. These countries also have permanent multiplier §G-0.5%§! oppositional force of all parties weekly§!"
+   ideology_protection_desc: "§LIn countries with ideology protection, the ruling party can be changed only with national focus or some special events and as a consequence of military revolution. These countries also have permanent modifier §G-0.5%§! oppositional force of all parties weekly§!"
    
    dem_region_l: "§CDemocracy: [?UCB.dem_@THIS|%1]§!"
    fas_region_l: "§LFascism: [?UCB.fas_@THIS|%1]§!"
