@@ -2,4 +2,4 @@
    force_button_loc:0 "Force"
    FORCE_EMBARGO_TITLE:0 "Force embargo"
    FORCE_EMBARGO_ACTION_DESC:0 "Force the state to impose an embargo against someone"
-   has_any_embargo:0 "An embargo has been imposed on at least one State"
+   has_any_embargo:0 "An embargo has been imposed on at least one state"
