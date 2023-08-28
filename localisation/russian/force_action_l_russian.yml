@@ -21,7 +21,7 @@
     cw_title_cores: "Территориальные претензии к [?political_crysis_member:to_crysis.GetAdjective] государству от [?political_crysis_member.GetNameDef]"
     cw_title_minor: "Отделение [?political_crysis_member:minor_crysis.GetAdjective] территорий от [?political_crysis_member:to_crysis.GetNameDef]"
     cw_title_sphere: "Вывод [?political_crysis_member:minor_crysis.GetAdjective] региона из-под [?political_crysis_member:to_crysis.GetAdjective] влияния"
-    cw_title_rpuppet: "Прекращние [?political_crysis_member:to_crysis.GetAdjective] контроля над [?political_crysis_member:minor_crysis.GetAdjective] правительством"
+    cw_title_rpuppet: "Прекращение [?political_crysis_member:to_crysis.GetAdjective] контроля над [?political_crysis_member:minor_crysis.GetAdjective] правительством"
     cw_cname: "[THIS.GetNameDef]"
     cw_cname_hl: "§Y[THIS.GetNameDef]§!"
     cw_waiters: "Воздержались"
