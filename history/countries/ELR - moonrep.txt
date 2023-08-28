@@ -13,6 +13,7 @@ add_ideas = {
         SBU_high_sburska_zvezda
 	first_corruption_level
     sforces_5
+	socials_2
 }
 
 set_technology = {basic_train = 1

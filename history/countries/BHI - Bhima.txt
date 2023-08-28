@@ -11,6 +11,7 @@ add_ideas = {
         free_press
 	third_corruption_level
     sforces_3
+	socials_0
 }
 
 set_technology = {basic_train = 1

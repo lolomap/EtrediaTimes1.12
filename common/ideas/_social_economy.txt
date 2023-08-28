@@ -225,16 +225,8 @@ ideas = {
 					has_stability < 0.2
 				}
 				modifier = {
-					add = 10
-					has_stability > 0.2
-				}
-				modifier = {
 					add = -10
 					has_stability < 0.1
-				}
-				modifier = {
-					add = 10
-					has_stability > 0.1
 				}
 				modifier = {
 					add = 5

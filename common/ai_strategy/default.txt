@@ -1039,8 +1039,94 @@ default_produce_floating_harbors = {
 
 ###
 
-#Africania
+#EastEtredia_minor_wars
+loardina_minor_wars_1 = {
+	allowed = {
+		original_tag = ECE
+	}
+	enable = {
+		always = yes
+	}
+	ai_strategy = {
+		type = conquer
+		id = KYU
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = GWA
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = SOL
+		value = 50
+	}
+}
+loardina_minor_wars_2 = {
+	allowed = {
+		original_tag = KCE
+	}
+	enable = {
+		always = yes
+	}
+	ai_strategy = {
+		type = conquer
+		id = ZOG
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = LOD
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = GAR
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = KLU
+		value = 25
+	}
+	ai_strategy = {
+		type = conquer
+		id = HOR
+		value = 35
+	}
+}
+loardina_minor_wars_3 = {
+	allowed = {
+		original_tag = KLU
+	}
+	enable = {
+		KLU = { is_neighbor_of = CHE }
+	}
+	ai_strategy = {
+		type = conquer
+		id = CHE
+		value = 50
+	}
+}
+loardina_minor_wars_4 = {
+	allowed = {
+		original_tag = CHE
+	}
+	enable = {
+		CHE = { is_neighbor_of = BOU }
+		CHE = { surrender_progress < 0.1 }
+		date > 2020.1.1
+	}
+	ai_strategy = {
+		type = conquer
+		id = BOU
+		value = 100
+	}
+}
 
+
+#Africania
 loardina_minor_wars = {
 	allowed = {
 		OR = {
@@ -1054,17 +1140,17 @@ loardina_minor_wars = {
 	ai_strategy = {
 		type = conquer
 		id = STB
-		value = 1000
+		value = 100
 	}
 	ai_strategy = {
 		type = conquer
 		id = LFS
-		value = 1000
+		value = 100
 	}
 	ai_strategy = {
 		type = conquer
 		id = YBA
-		value = 1000
+		value = 100
 	}
 }
 

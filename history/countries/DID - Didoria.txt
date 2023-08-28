@@ -13,6 +13,7 @@ add_ideas = {
         DID_traditions
 	fourth_corruption_level
     sforces_3
+	socials_1
 }
 
 set_technology = {basic_train = 1
