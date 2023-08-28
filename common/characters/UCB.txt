@@ -139,7 +139,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/leaders/UCB/Portrait_UCB_Beldpo.dds"
 			}
 		}
 		field_marshal={
@@ -164,7 +164,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/leaders/UCB/Portrait_UCB_Albergo.dds"
 			}
 		}
 		corps_commander={

@@ -1039,89 +1039,32 @@ default_produce_floating_harbors = {
 
 ###
 
-comintern_avoid_starting_wars_during_endgame = { #Sov should avoid attacking allies while ww2 is still going on
+#Africania
 
+loardina_minor_wars = {
 	allowed = {
 		OR = {
-			original_tag = SOV
-			is_in_faction_with = SOV
+			original_tag = MIR
+			original_tag = ZHI
 		}
 	}
 	enable = {
-		is_historical_focus_on = yes
-		SOV = { has_government = communism }
-		OR = {
-			USA = {
-				has_capitulated = no
-				has_war_with = JAP
-			}
-			ENG = {
-				has_capitulated = no
-				has_war_with = JAP
-			}
-		}
-		date > 1943.1.1
-		date < 1945.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = avoid_starting_wars
-		value = -400
+		always = yes
 	}
 	ai_strategy = {
 		type = conquer
-		id = POL
-		value = -400 #REALLY dont try and conquer poland
-	}
-	ai_strategy = {
-		type = befriend
-		id = "POL"
-		value = 200
+		id = STB
+		value = 1000
 	}
 	ai_strategy = {
 		type = conquer
-		id = JAP
-		value = 400 #These values offset each other. Basically we won't start wars with anyone except for japan while this strategy is active
+		id = LFS
+		value = 1000
 	}
 	ai_strategy = {
 		type = conquer
-		id = FIN
-		value = 400 #These values offset each other. Basically we won't start wars with anyone except for finland while this strategy is active
-	}
-	ai_strategy = {
-		type = conquer
-		id = PER
-		value = 400 #These values offset each other. Basically we won't start wars with anyone except for iran while this strategy is active
-	}
-}
-
-allies_avoid_starting_wars_during_endgame = { #Allies should avoid attacking.. well, anyone while ww2 is in endgame
-	allowed = {
-		OR = {
-			tag = ENG
-			is_in_faction_with = ENG
-		}
-	}
-	enable = {
-		is_historical_focus_on = yes
-		ENG = { has_government = democratic }
-		OR = {
-			tag = ENG
-			is_in_faction_with = ENG
-		}
-		has_war_with = JAP
-		JAP = {
-			has_government = fascism #Just to make sure we're not looking at a puppet or sth
-		}
-		date > 1943.1.1
-		date < 1945.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = avoid_starting_wars
-		value = -400
+		id = YBA
+		value = 1000
 	}
 }
 
