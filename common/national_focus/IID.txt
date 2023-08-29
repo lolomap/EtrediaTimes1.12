@@ -677,7 +677,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_ideas = IID_dem_trade_weapon_idea
         }
     }
 
@@ -688,7 +688,7 @@ focus_tree = {
         x = 0
         y = 1
         relative_position_id = IID_dem_trade_weapon
-        available = {}
+        available = {has_completed_focus = IID_dem_TRP_question}
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -699,7 +699,11 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            TRP = {IID = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+            if = {
+                limit = {country_exists = KUL}
+                KUL = {IID = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+            }
         }
     }
 
@@ -723,7 +727,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            create_faction = IID_dem_faction
         }
     }
 
@@ -770,7 +774,8 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_political_power = 150
+            KAR = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
         }
     }
 

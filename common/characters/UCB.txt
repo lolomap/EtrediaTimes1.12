@@ -199,6 +199,8 @@ characters={
         }
 
         advisor = {
+            available = {owns_state = 17}
+
             slot = political_advisor
             modifier = {
                 production_oil_factor = 0.5

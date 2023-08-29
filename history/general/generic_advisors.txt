@@ -33,77 +33,13 @@ every_possible_country = {
     }
 }
 
-# Political advisors
+#industry
 every_possible_country = {
-	limit = {
-		always = yes
-	}
-	generate_character = {
-		token_base = generic_communist_revolutionary # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { communist_revolutionary }
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_communist_revolutionary }
-		}
-	}
-}
+    limit = {
+        NOT = UCB
+    }
 
-every_possible_country = {
-	limit = {
-		always = yes
-	}
-	generate_character = {
-		token_base = generic_democratic_reformer # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { democratic_reformer }
-			available = {
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_democratic_reformer }
-		}
-	}
-}
-
-every_possible_country = {
-	limit = {
-		always = yes
-	}
-	generate_character = {
-		token_base = generic_fascist_demagogue # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { fascist_demagogue }
-			available = {				
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_fascist_demagogue }
-		}
-	}
-}
-
-
-
-# Military advisors
-every_possible_country = {
-	limit = {
-		always = yes
-	}
-	# generic political advisors
-	generate_character = {
+    generate_character = {
 		token_base = generic_captain_of_industry # token will be TAG_token_base
 		advisor = {
 			slot = political_advisor
@@ -132,6 +68,107 @@ every_possible_country = {
 		portraits = { 
 			army = { small = GFX_idea_generic_war_industrialist }
 		}
+	}
+}
+
+# Political advisors
+every_possible_country = {
+	limit = {
+		NOT = {
+            tag = UCB
+        }
+	}
+	generate_character = {
+		token_base = generic_communist_revolutionary # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { communist_revolutionary }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_communist_revolutionary }
+		}
+	}
+
+	generate_character = {
+		token_base = generic_democratic_reformer # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { democratic_reformer }
+			available = {
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_democratic_reformer }
+		}
+	}
+
+	generate_character = {
+		token_base = generic_fascist_demagogue # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fascist_demagogue }
+			available = {				
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fascist_demagogue }
+		}
+	}
+
+    generate_character = {
+		token_base = generic_authoritarist # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { authoritarist }
+			available = {				
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fascist_demagogue }
+		}
+	}
+}
+
+
+every_possible_country = {
+    limit = {
+        has_government = monarchism
+    }
+
+    generate_character = {
+		token_base = generic_royalist # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { royalist }
+			available = {				
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fascist_demagogue }
+		}
+	}
+}
+
+
+# Military advisors
+every_possible_country = {
+	limit = {
+		always = yes
 	}
 	# generic army chiefs
 	generate_character = {
@@ -292,37 +329,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-        always = yes
-	}
-	generate_character = {
-		token_base = generic_captain_of_industry # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { captain_of_industry }
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_captain_of_industry }
-		}
-	}
-	generate_character = {
-		token_base = generic_fortification_engineer # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { fortification_engineer }
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_fortification_engineer }
-		}
-	}
-	generate_character = {
-		token_base = generic_war_industrialist # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { war_industrialist }
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_war_industrialist }
-		}
+        NOT = {tag = UCB}
 	}
 	generate_character = { #Apparently MAN needs this to get an Illusive Gentleman with the new character sytem
 		token_base = generic_head_of_intelligence # token will be TAG_token_base

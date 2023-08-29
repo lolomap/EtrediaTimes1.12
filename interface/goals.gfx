@@ -1,6 +1,84 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_dem_army_training"
+	texturefile="gfx/interface/goals/goal_ucb_dem_army_training.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_tanks"
+	texturefile="gfx/interface/goals/goal_ucb_dem_tanks.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_slot2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_slot2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_planes"
+	texturefile="gfx/interface/goals/goal_ucb_dem_planes.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_pehotka"
+	texturefile="gfx/interface/goals/goal_ucb_dem_pehotka.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_global_reorganize"
+	texturefile="gfx/interface/goals/goal_ucb_dem_global_reorganize.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_military_reform"
+	texturefile="gfx/interface/goals/goal_ucb_dem_military_reform.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_separatism_off"
+	texturefile="gfx/interface/goals/goal_ucb_dem_separatism_off.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_new_parlament"
+	texturefile="gfx/interface/goals/goal_ucb_dem_new_parlament.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_nazi_off"
+	texturefile="gfx/interface/goals/goal_ucb_dem_nazi_off.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_kolechian_question"
+	texturefile="gfx/interface/goals/goal_ucb_dem_kolechian_question.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_fight_with_mafia"
+	texturefile="gfx/interface/goals/goal_ucb_dem_fight_with_mafia.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_dotaci"
+	texturefile="gfx/interface/goals/goal_ucb_dem_dotaci.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_sfl_support_metal_production"
 	texturefile="gfx/interface/goals/goal_sfl_support_metal_production.dds"
 }
