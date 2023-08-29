@@ -21,3 +21,4 @@
   esc_escalation_puppets: "§YКурс на эскалацию§!"
   esc_deescalation_puppets: "§CКурс на деэскалацию§!"
   esc_sphere_block: "Не допустить [FROM.GetAdjective] правительство к действиям"
+  esc_block_all: "Сабботировать переговоры через [FROM.GetAdjective] дипломатов"

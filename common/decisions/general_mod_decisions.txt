@@ -2139,7 +2139,7 @@ escalation_category = {
         }
     }
 
-    esc_sphere_block = {
+    esc_block_all = {
 
         target_trigger = {
             FROM = {
