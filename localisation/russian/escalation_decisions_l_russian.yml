@@ -18,3 +18,6 @@
   esc_agreements: "§CСоглашения по деэскалации§!"
   esc_concessions: "§CПолитические уступки§!"
   esc_froze: "§CЗаморозка конфликта§!"
+  esc_escalation_puppets: "§YКурс на эскалацию§!"
+  esc_deescalation_puppets: "§CКурс на деэскалацию§!"
+  esc_sphere_block: "Не допустить [FROM.GetAdjective] правительство к действиям"

@@ -292,11 +292,79 @@ scripted_gui = {
             sender_choose_button_click = {
                 add_to_array = {political_crysis_member:crysis_senders = ROOT}
                 remove_from_array = {political_crysis_member:crysis_majors = ROOT}
+
+                for_each_scope_loop = {
+                    array = sphere_members
+                    
+                    if = {
+                        limit = {NOT = {has_variable = political_crysis_member}}
+                        set_variable = {political_crysis_member = PREV.political_crysis_member}
+                        set_country_flag = {
+                            flag = political_crysis
+                            days = 60
+                            value = 1
+                        }
+                        set_variable = {crtoflag = political_crysis_member:to_crysis}
+                    }
+                    add_to_array = {political_crysis_member:crysis_senders = THIS}
+                }
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    if = { limit = {NOT = {has_country_flag = autonomy_state}}
+                        if = {
+                            limit = {NOT = {has_variable = political_crysis_member}}
+                            set_variable = {political_crysis_member = PREV.political_crysis_member}
+                            set_country_flag = {
+                                flag = political_crysis
+                                days = 60
+                                value = 1
+                            }
+                            set_variable = {crtoflag = political_crysis_member:to_crysis}
+                        }
+                        add_to_array = {political_crysis_member:crysis_senders = THIS}
+                    }
+                }
+
                 d_calc_crysis = yes
             }
             to_choose_button_click = {
                 add_to_array = {political_crysis_member:crysis_tos = ROOT}
                 remove_from_array = {political_crysis_member:crysis_majors = ROOT}
+
+                for_each_scope_loop = {
+                    array = sphere_members
+                    
+                    if = {
+                        limit = {NOT = {has_variable = political_crysis_member}}
+                        set_variable = {political_crysis_member = PREV.political_crysis_member}
+                        set_country_flag = {
+                            flag = political_crysis
+                            days = 60
+                            value = 1
+                        }
+                        set_variable = {crtoflag = political_crysis_member:to_crysis}
+                    }
+                    add_to_array = {political_crysis_member:crysis_tos = THIS}
+                }
+
+                for_each_scope_loop = {
+                    array = subjects
+                    if = { limit = {NOT = {has_country_flag = autonomy_state}}
+                        if = {
+                            limit = {NOT = {has_variable = political_crysis_member}}
+                            set_variable = {political_crysis_member = PREV.political_crysis_member}
+                            set_country_flag = {
+                                flag = political_crysis
+                                days = 60
+                                value = 1
+                            }
+                            set_variable = {crtoflag = political_crysis_member:to_crysis}
+                        }
+                        add_to_array = {political_crysis_member:crysis_tos = THIS}
+                    }
+                }
+
                 d_calc_crysis = yes
             }
 
