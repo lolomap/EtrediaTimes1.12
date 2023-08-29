@@ -229,11 +229,11 @@ ideas = {
 					has_stability < 0.1
 				}
 				modifier = {
-					add = -5
+					add = 5
 					has_government = democratic
 				}
 				modifier = {
-					add = -5
+					add = 5
 					has_government = communism
 				}
 			}
@@ -284,7 +284,7 @@ ideas = {
 					has_government = democratic
 				}
 				modifier = {
-					add = -5
+					add = -10
 					has_government = communism
 				}
 			}

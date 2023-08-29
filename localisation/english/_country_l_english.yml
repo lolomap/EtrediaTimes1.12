@@ -1,0 +1,18 @@
+﻿l_english:
+ STABILITY:0 "Legitimacy"
+ STABILITY_DESC:0 "Legitimacy reflects the level of support for the current government by the people. High legitimacy simplifies the implementation of political transformations and helps in economical management."
+ STABILITY_EFFECT_TITLE:0 "\n§HImpact of current legitimacy:§!\n"
+ MANPOWER_USAGE:2 "Current manpower: $FREE|^2H$$EXILE$\nApplied manpower:\nArmy: $ARMY|^2H$\n    - On the battlefield: $FIELD|^2H$\n    - Training in progress: $TRAINING|^2H$\nВВС: $AIR|^2H$\nFleet: $NAVAL|^2H$\nGarrison: $GARRISON|^2H$"
+ INDUSTRIAL_CAPACITY_DESC:0 "Factories form the basis of the country's §HIndustrial Capacity§!. §HMilitary Factories§! produce equipment for the army and the airforce, while §HNaval Dockyards§! produce and repair ships for the navy. §HCivilian Factories§! construct and repair buildings and infrastructure as well as facilitating trade."
+ EQUIPMENT_IN_USE:0 "Battle equipment"
+ EQUIPMENT_IN_USE_DESC:0 "Shows how well divisions are equipped."
+ EQUIPMENT_IN_USE_GARRISON:0 "Garrison equipment"
+ EQUIPMENT_IN_USE_GARRISON_DESC:0 "Shows how well garrisons are equipped."
+ NAVY_EQUIPMENT_TOTAL:0 "Total ships"
+ NAVY_EQUIPMENT_TOTAL_DESC:0 "Shows the total number of ships."
+ AIR_EQUIPMENT_TOTAL:0 "Total aircraft"
+ AIR_EQUIPMENT_TOTAL_DESC:0 "Shows the total number of aircraft."
+ AIR_EQUIPMENT_IN_USE:0 "Aircraft equipment"
+ AIR_EQUIPMENT_IN_USE_DESC:0 "Shows how well aircraft is equipped."
+ RULES_DESC:0 "The laws of your country depend on your ideology, the ideology of your alliance and your national spirit."
+

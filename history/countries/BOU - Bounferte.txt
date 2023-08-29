@@ -10,6 +10,7 @@ add_ideas = {
         www_best_country
         total_free_press
 	second_corruption_level
+	socials_2
 }
 
 set_technology = {basic_train = 1

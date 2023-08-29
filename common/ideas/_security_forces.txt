@@ -26,11 +26,11 @@ ideas = {
 			ai_will_do = {
    				base = 5
 				modifier = {
-					add = 5
+					add = 10
 					num_of_civilian_factories_available_for_projects > 20
 				}
 				modifier = {
-					add = 2
+					add = 5
 					num_of_civilian_factories_available_for_projects > 15
 				}
 				modifier = {
@@ -79,11 +79,11 @@ ideas = {
 			ai_will_do = {
    				base = 5
 				modifier = {
-					add = 5
+					add = 10
 					num_of_civilian_factories_available_for_projects > 17
 				}
 				modifier = {
-					add = 2
+					add = 5
 					num_of_civilian_factories_available_for_projects > 12
 				}
 				modifier = {
@@ -130,7 +130,7 @@ ideas = {
 			ai_will_do = {
    				base = 5
 				modifier = {
-					add = 5
+					add = 10
 					num_of_civilian_factories_available_for_projects > 8
 				}
 				modifier = {
@@ -193,7 +193,7 @@ ideas = {
 					has_idea = WWW_bad_country
 				}
 				modifier = {
-					add = -15
+					add = 10
 					num_of_civilian_factories_available_for_projects > 5
 				}
 				modifier = {
@@ -238,7 +238,7 @@ ideas = {
 					has_idea = WWW_bad_country
 				}
 				modifier = {
-					add = -15
+					add = 5
 					num_of_civilian_factories_available_for_projects > 3
 				}
 				modifier = {

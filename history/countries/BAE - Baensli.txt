@@ -12,6 +12,7 @@ add_ideas = {
     nonfree_press
     general_entry
 	BAE_beer_industry
+	socials_1
 }
 
 set_technology = {
