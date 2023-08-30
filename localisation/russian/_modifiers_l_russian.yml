@@ -19,7 +19,6 @@
  war_tire_desc:0 "§HВоенная усталость§!\n"
  war_tire_effect:0 "Военная усталость\nЛегитимность: [?wtire_stability|%+0]\nПоддержка войны: [?wtire_warsup|%+0]\nАтака дивизии: [?wtire_attack|%+0]\nЗащита дивизии: [?wtire_deffence|%+0]\nСкорость восстановления дивизии: [?wtire_restore|%+0]\nСкорость подготовки дивизии: [?wtire_mobolize|%+0]"
  
- 
  UCB_hateIID:0 "Санкции от ОсНБ"
  SFL_hateIID:0 "Санкции от Саффлии"
  KAR_hateIID:0 "Санкции от Картилии"
@@ -44,4 +43,7 @@
  SFL_tradewar: "Торговая война"
  SFL_mof_relations: "Саффо-монфуйские отношения"
  SFL_sm_economic_zone_modifier: "Сафо-Монфуйская экономическая зона"
+ 
+ partnership:0 "Сотруденичество"
+ confrontation:0 "Соперничество"
 

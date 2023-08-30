@@ -6,6 +6,7 @@ add_ideas = {
         www_bad_country
         nonfree_press
         general_entry
+	socials_0
 }
 
 set_technology = {basic_train = 1

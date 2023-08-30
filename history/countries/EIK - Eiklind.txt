@@ -4,7 +4,7 @@ oob = "EIK_2014"
 set_naval_oob = "EIK_2014_naval_legacy"
 
 set_research_slots = 3
-set_stability = 0.7
+set_stability = 0.5
 set_war_support = 0.5
 
 add_ideas = {
@@ -94,9 +94,9 @@ set_politics = {
 }
 
 set_popularities = {
-	neutrality = 0
+	neutrality = 10
         democratic = 21
-        fascism = 66
+        fascism = 56
         communism = 13
 }
 

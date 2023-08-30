@@ -10,6 +10,7 @@ add_ideas = {
         WWW_bad_country
 	fourth_corruption_level
     sforces_1
+	socials_0
 }
 
 set_technology = {basic_train = 1

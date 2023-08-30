@@ -12,6 +12,7 @@ add_ideas = {
         WWW_medium_country
         free_entry
 	second_corruption_level
+	socials_1
 }
 
 set_technology = {basic_train = 1

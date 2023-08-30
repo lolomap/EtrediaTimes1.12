@@ -13,6 +13,7 @@ add_ideas = {
         general_entry
         DON_politics
 	second_corruption_level
+	socials_3
 }
 
 set_technology = {basic_train = 1

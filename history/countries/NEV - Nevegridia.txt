@@ -9,6 +9,7 @@ set_technology = {basic_train = 1
 add_ideas = {
         www_bad_country
     sforces_3
+	socials_1
 }
 
 set_convoys = 78

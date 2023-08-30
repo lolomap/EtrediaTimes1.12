@@ -16,6 +16,7 @@ add_ideas = {
     limited_entry
 	third_corruption_level
     leadership_c
+	socials_1
 }
 
 set_technology = {

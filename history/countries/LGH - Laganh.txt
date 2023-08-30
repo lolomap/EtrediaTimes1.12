@@ -10,6 +10,7 @@ add_ideas = {
         www_bad_country
 	sixth_corruption_level
     sforces_2
+	socials_0
 }
 
 set_convoys = 41
