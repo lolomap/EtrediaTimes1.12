@@ -84,7 +84,7 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/SBU/Portrait_sbu_klyachek.dds"
-                small= GFX_idea_generic_democratic_reformer
+                small= GFX_SBU_political_advisor_klyacheck
 			}
 		}
 		country_leader={

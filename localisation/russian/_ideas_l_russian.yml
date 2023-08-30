@@ -283,6 +283,7 @@
  IID_all_culture: "Новая историческая общность"
  IID_dem_recruitment_idea: "Широкая сеть"
  IID_dem_return_republics_idea: "Подконтрольные правительства"
+ IID_dem_trade_weapon_idea: "Оружейный барон"
 
  EIK_corruption01:0 "Высокий уровень коррупции"
  EIK_corruption1_desc:0 ""

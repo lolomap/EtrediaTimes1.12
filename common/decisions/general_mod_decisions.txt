@@ -1404,7 +1404,7 @@ escalation_category = {
 
         visible = {has_variable = escalation_member}
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
             
             set_temp_variable = { temp = 0 }
             custom_trigger_tooltip = {
@@ -1458,7 +1458,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
             set_temp_variable = { temp = 24 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness > temp }}
@@ -1518,7 +1518,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
             set_temp_variable = { temp = 40 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness > temp }}
@@ -1581,7 +1581,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
             set_temp_variable = { temp = 50 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness > temp }}
@@ -1626,7 +1626,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
             set_temp_variable = { temp = 15 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness > temp }}
@@ -1663,7 +1663,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
             set_temp_variable = { temp = 50 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness > temp }}
@@ -1699,7 +1699,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
             set_temp_variable = { temp = 5 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness > temp }}
@@ -1745,7 +1745,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
             set_temp_variable = { temp = 70 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness < temp }}
@@ -1780,7 +1780,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
             set_temp_variable = { temp = 80 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness < temp }}
@@ -1831,7 +1831,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
             set_temp_variable = { temp = 101 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness < temp }}
@@ -1883,7 +1883,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
             set_temp_variable = { temp = 50 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness < temp }}
@@ -1939,7 +1939,7 @@ escalation_category = {
             has_variable = escalation_member
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
             set_temp_variable = { temp = 90 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness < temp }}
@@ -2001,13 +2001,212 @@ escalation_category = {
         }
     }
 
-    esc_froze = {
+    esc_escalation_puppets = {
+        remove_trigger = {
+            OR = {
+                NOT = {has_variable = escalation_member}
+                has_decision = esc_deescalation_puppets
+            }
+        }
+
+        visible = {
+            has_variable = escalation_member
+            num_subjects > 0
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} is_subject = no
+        }
+
+        days_remove = -1
+        complete_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    set_country_flag = escalation_course
+                }    
+            }
+            custom_effect_tooltip = set_escalation_course_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    clr_country_flag = escalation_course
+                }    
+            }
+        }
+
+    }
+    esc_deescalation_puppets = {
+        remove_trigger = {
+            OR = {
+                NOT = {has_variable = escalation_member}
+                has_decision = esc_escalation_puppets
+            }
+        }
+
+        visible = {
+            has_variable = escalation_member
+            num_subjects > 0
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} is_subject = no
+        }
+
+        days_remove = -1
+        complete_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    set_country_flag = deescalation_course
+                }    
+            }
+            custom_effect_tooltip = set_deescalation_course_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    clr_country_flag = deescalation_course
+                }    
+            }
+        }
+
+    }
+
+    esc_sphere_block = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                check_variable = { sphere_owner = ROOT }
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
 
         visible = {
             has_variable = escalation_member
         }
         available = {
             NOT = {has_country_flag = escalation_timeout}
+            is_subject = no
+            NOT = {has_variable = sphere_owner}
+            set_temp_variable = { temp = 5 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 4.9 }
+        }
+        custom_cost_text = decision_cost_flat_5
+
+        days_remove = -1
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -5}   
+                FROM = {
+                    set_country_flag = escalation_course
+                    set_country_flag = deescalation_course
+                }
+            }
+            custom_effect_tooltip = escalation_block_sphere_decisions_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_country_flag = escalation_course
+                    clr_country_flag = deescalation_course
+                }
+            }
+        }
+    }
+
+    esc_block_all = {
+
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                check_variable = { sphere_owner = ROOT }
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+            NOT = {has_decision = esc_sphere_block}
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            is_subject = no
+            NOT = {has_variable = sphere_owner}
+            set_temp_variable = { temp = 5 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 29.9 }
+        }
+        custom_cost_text = decision_cost_flat_30
+
+        days_remove = 20
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -30}   
+                every_country = {
+                    limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+                    set_country_flag = escalation_course
+                    set_country_flag = deescalation_course
+                }
+            }
+            custom_effect_tooltip = escalation_block_all_decisions_tooltip
+
+            #escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                every_country = {
+                    limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+                    clr_country_flag = escalation_course
+                    clr_country_flag = deescalation_course
+                }
+            }
+
+            custom_effect_tooltip = escalation_allow_all_decisions_tooltip
+        }
+    }
+
+    esc_froze = {
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
             set_temp_variable = { temp = 5 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness < temp }}
@@ -2037,7 +2236,7 @@ escalation_category = {
             var:escalation_member = {NOT = {has_country_flag = escalation_war_start}}
         }
         available = {
-            NOT = {has_country_flag = escalation_timeout}
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
             set_temp_variable = { temp = 90 }
             custom_trigger_tooltip = {
                 var:escalation_member = {check_variable = { escalation_hotness > temp }}

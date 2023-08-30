@@ -517,7 +517,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_military_reform
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_goal_ucb_dem_military_reform
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem1
@@ -652,7 +652,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_fight_with_mafia
-		icon = GFX_goal
+		icon = GFX_goal_ucb_dem_fight_with_mafia
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_autonomy
@@ -662,7 +662,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
-			UCB = { country_event = ucnb.99 days = 10 }
+			UCB = { country_event = ucnb.34 days = 10 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -702,7 +702,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_new_parlament
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_new_parlament
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_compromis
@@ -715,6 +715,10 @@ focus_tree = {
             add_popularity = {
 				ideology = fascism
 				popularity = 0.1
+			}
+            add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
 			}
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
@@ -761,7 +765,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_nazi_off
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_nazi_off
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_battle
@@ -785,7 +789,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_kolechian_question
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_kolechian_question
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_nazi_off
@@ -1049,7 +1053,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_dotaci
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_dotaci
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_kolechian_question
@@ -1119,7 +1123,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_separatism_off
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_separatism_off
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_dotaci
@@ -1499,7 +1503,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_global_reorganize
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_ucb_dem_global_reorganize
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_military_reform
@@ -1536,7 +1540,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_army_training
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_ucb_dem_army_training
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_global_reorganize
@@ -1650,7 +1654,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_slot2
-		icon = GFX_focus_research
+		icon = GFX_goal_ucb_dem_slot2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_global_reorganize
@@ -1667,7 +1671,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_tanks
-		icon = GFX_focus_generic_license_production
+		icon = GFX_goal_ucb_dem_tanks
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_slot2
@@ -1685,7 +1689,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_pehotka
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_ucb_dem_pehotka
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_army_training
@@ -1703,7 +1707,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_planes
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_planes
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_tanks

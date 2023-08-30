@@ -28,6 +28,9 @@
   decision_cost_CP_40_blocked: "£command_power §R40§!"
   decision_cost_CP_40_tooltip: "Decision cost: £command_power §Y40§!"
   
+  decision_cost_flat_5: "§Y5§!"
+  decision_cost_flat_5_blocked: "§R5§!"
+  decision_cost_flat_5_tooltip: "Decision cost: §Y5§!"
   decision_cost_flat_15: "§Y15§!"
   decision_cost_flat_15_blocked: "§R15§!"
   decision_cost_flat_15_tooltip: "Decision cost: §Y15§!"
