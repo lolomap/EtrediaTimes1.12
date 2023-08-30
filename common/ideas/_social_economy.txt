@@ -22,9 +22,6 @@ ideas = {
                     }
                 }
             }
-			cancel = {
-				num_of_civilian_factories_available_for_projects < 1
-			}
             cancel_if_invalid = yes
 
             modifier = {
@@ -87,9 +84,6 @@ ideas = {
                     }
                 }
             }
-			cancel = {
-				num_of_civilian_factories_available_for_projects < 1
-			}
             cancel_if_invalid = yes
 
             modifier = {
@@ -109,6 +103,14 @@ ideas = {
 				modifier = {
 					add = 10
 					num_of_civilian_factories_available_for_projects > 25
+				}
+				modifier = {
+					add = 1
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects < 5
 				}
 				modifier = {
 					add = 10
@@ -153,9 +155,6 @@ ideas = {
                     has_idea = tot_economic_mobilisation
                 }
             }
-			cancel = {
-				num_of_civilian_factories_available_for_projects < 1
-			}
             cancel_if_invalid = yes
 
             modifier = {
@@ -166,8 +165,24 @@ ideas = {
 			ai_will_do = {
    				base = 5
 				modifier = {
-					add = 10
+					add = 25
+					num_of_civilian_factories_available_for_projects > 25
+				}
+				modifier = {
+					add = 15
 					num_of_civilian_factories_available_for_projects > 15
+				}
+				modifier = {
+					add = 1
+					num_of_civilian_factories_available_for_projects < 15
+				}
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects < 5
 				}
 				modifier = {
 					add = 10
@@ -200,9 +215,6 @@ ideas = {
             on_add = {
                 set_variable = {socials_law = token:socials_1}
             }
-			cancel = {
-				num_of_civilian_factories_available_for_projects < 1
-			}
 
             modifier = {
                 consumer_goods_factor = -0.08
@@ -215,6 +227,10 @@ ideas = {
 				modifier = {
 					add = 10
 					num_of_civilian_factories_available_for_projects < 15
+				}
+				modifier = {
+					add = 15
+					num_of_civilian_factories_available_for_projects < 5
 				}
 				modifier = {
 					add = 20
@@ -258,7 +274,7 @@ ideas = {
             }
 			
 			ai_will_do = {
-   				base = 5
+   				base = 1
 				modifier = {
 					add = 10
 					num_of_civilian_factories_available_for_projects < 10

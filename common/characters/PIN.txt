@@ -1,18 +1,4 @@
 characters={
-	PIN_anatoly_zhmirinovan={
-		name=PIN_Anatoly_Zhmirinovan
-		portraits={
-			civilian={
-				large="GFX_Portrait_europe_generic_7"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
-			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 	PIN_daran_lemingauton={
 		name=PIN_Daran_Lemingauton
 		portraits={
@@ -23,34 +9,6 @@ characters={
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	PIN_timur_nafikov={
-		name=PIN_Timur_Nafikov
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_5"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	PIN_ivan_vissarionovich={
-		name=PIN_Ivan_Vissarionovich
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_5"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=stalinism
 			expire="1965.1.1.1"
 			id=-1
 		}

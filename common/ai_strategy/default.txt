@@ -1050,17 +1050,17 @@ loardina_minor_wars_1 = {
 	ai_strategy = {
 		type = conquer
 		id = KYU
-		value = 100
+		value = 500
 	}
 	ai_strategy = {
 		type = conquer
 		id = GWA
-		value = 100
+		value = 500
 	}
 	ai_strategy = {
 		type = conquer
 		id = SOL
-		value = 50
+		value = 500
 	}
 }
 loardina_minor_wars_2 = {
@@ -1073,27 +1073,27 @@ loardina_minor_wars_2 = {
 	ai_strategy = {
 		type = conquer
 		id = ZOG
-		value = 50
+		value = 250
 	}
 	ai_strategy = {
 		type = conquer
 		id = LOD
-		value = 50
+		value = 250
 	}
 	ai_strategy = {
 		type = conquer
 		id = GAR
-		value = 50
+		value = 250
 	}
 	ai_strategy = {
 		type = conquer
 		id = KLU
-		value = 25
+		value = 250
 	}
 	ai_strategy = {
 		type = conquer
 		id = HOR
-		value = 35
+		value = 250
 	}
 }
 loardina_minor_wars_3 = {
@@ -1106,7 +1106,7 @@ loardina_minor_wars_3 = {
 	ai_strategy = {
 		type = conquer
 		id = CHE
-		value = 50
+		value = 250
 	}
 }
 loardina_minor_wars_4 = {
@@ -1121,7 +1121,7 @@ loardina_minor_wars_4 = {
 	ai_strategy = {
 		type = conquer
 		id = BOU
-		value = 100
+		value = 500
 	}
 }
 
@@ -1140,17 +1140,17 @@ loardina_minor_wars = {
 	ai_strategy = {
 		type = conquer
 		id = STB
-		value = 100
+		value = 500
 	}
 	ai_strategy = {
 		type = conquer
 		id = LFS
-		value = 100
+		value = 500
 	}
 	ai_strategy = {
 		type = conquer
 		id = YBA
-		value = 100
+		value = 500
 	}
 }
 
@@ -1168,65 +1168,63 @@ build_fucking_arms_factory = {
 	}
 	
 	ai_strategy = {
-		ai_strategy = {
-			type = building_target
-			id = infrastructure
-			value = 50
-		}
-		ai_strategy = {
-			type = building_target
-			id = arms_factory
-			value = 50
-		}
-		ai_strategy = {
-			type = building_target
-			id = industrial_complex
-			value = 100
-		}
-		ai_strategy = {
-			type = building_target
-			id = supply_node
-			value = 50
-		}
-		ai_strategy = {
-			type = building_target
-			id = rail_way
-			value = 70
-		}
-		ai_strategy = {
-			type = building_target
-			id = naval_base
-			value = 25
-		}
-		ai_strategy = {
-			type = building_target
-			id = dockyard
-			value = 90
-		}
-		ai_strategy = {
-			type = building_target
-			id = synthetic_refinery
-			value = 50
-		}
-		ai_strategy = {
-			type = building_target
-			id = fuel_silo
-			value = 25
-		}
-		ai_strategy = {
-			type = building_target
-			id = radar_station
-			value = 25
-		}
-		ai_strategy = {
-			type = building_target
-			id = nuclear_reactor
-			value = 0
-		}
-		ai_strategy = {
-			type = building_target
-			id = nuclear_reactor
-			value = -99999999999
-		}
+		type = building_target
+		id = infrastructure
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+	ai_strategy = {
+		type = building_target
+		id = supply_node
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = rail_way
+		value = 70
+	}
+	ai_strategy = {
+		type = building_target
+		id = naval_base
+		value = 25
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 90
+	}
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = fuel_silo
+		value = 25
+	}
+	ai_strategy = {
+		type = building_target
+		id = radar_station
+		value = 25
+	}
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor
+		value = 0
+	}
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor
+		value = -99999999999
 	}
 }
