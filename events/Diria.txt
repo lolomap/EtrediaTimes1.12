@@ -111,7 +111,6 @@ country_event = {
 			add_state_core = 794
 			add_state_core = 795
 			add_state_core = 796
-			add_state_core = 797
             load_oob = DIR_democrat
             }
 	}
@@ -158,6 +157,7 @@ country_event = {
 			transfer_state = 275
 			transfer_state = 276
 			transfer_state = 278
+			transfer_state = 790
 			transfer_state = 826
 		    add_state_core = 265
 		    add_state_core = 307
@@ -202,7 +202,6 @@ country_event = {
 			add_state_core = 794
 			add_state_core = 795
 			add_state_core = 796
-			add_state_core = 797
             load_oob = DIR_democrat
         }
 	}

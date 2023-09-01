@@ -667,7 +667,6 @@ country_event = {
 			add_state_core = 794
 			add_state_core = 795
 			add_state_core = 796
-			add_state_core = 797
 		}
 		}
 		DIB = {
@@ -732,7 +731,6 @@ country_event = {
 			add_state_core = 794
 			add_state_core = 795
 			add_state_core = 796
-			add_state_core = 797
 		}
 		}
 		DIB = {
@@ -987,7 +985,7 @@ country_event = {
 				transfer_state = 786
 				transfer_state = 788
 				transfer_state = 261
-				transfer_state = 796
+				transfer_state = 795
 				transfer_state = 263
 			}
 			DAR = {
@@ -995,8 +993,8 @@ country_event = {
 				add_state_core = 285
 			}
 			FRE = {
-				transfer_state = 797
-				add_state_core = 797
+				transfer_state = 796
+				add_state_core = 796
 			}
 			EMO = {
 				transfer_state = 288
