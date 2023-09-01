@@ -12,12 +12,12 @@ sbu_trb_ally = {
 	
 	ai_strategy = {
 		type = befriend
-		id = "TRB"			
+		id = TRB			
 		value = 100
 	}
 	ai_strategy = {
 		type = alliance
-		id = "TRB"			
+		id = TRB			
 		value = 100
 	}	
 }

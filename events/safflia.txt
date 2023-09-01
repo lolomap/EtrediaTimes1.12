@@ -8,42 +8,24 @@ country_event = {
 
     is_triggered_only = yes
 
-	trigger = {
-        TAG = SFL
-		NER = { exists = yes }
-    }
 
     option = {
-    name = sfl.1.a
+        name = sfl.1.a
 		SFL = {
             create_wargoal = {
-            type = annex_everything
-            target = NER
+                type = annex_everything
+                target = NER
             }
 			add_state_claim = 68
 			add_state_claim = 69
 			add_state_claim = 70
-		}
-	SFL = {
-    	add_ai_strategy = {
-    	   type = puppet_wargoal
-    	   id = "NER"
-    	   value = 0
-    	}
+            add_ai_strategy = {
+                type = puppet_wargoal
+                id = "NER"
+                value = 0
+            }
+        }
 	}
-    ai_chance = { 
-	factor = 80 
-        modifier = {
-			factor = 1
-			is_historical_focus_on = yes
-		}
-	}
-	}
-	
-	option = {
-	name = sfl.1.b
-	ai_chance = { factor = 20 }
-    }
 }
 
 country_event = {
@@ -412,7 +394,16 @@ country_event = {
     option = {
         name = sfl.15.a
         MOF = {SBU = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        diplomatic_relation = {
+            country = SBU
+            relation = non_aggression_pact
+            active = yes
+        }
         SBU = { country_event = { id = sbu.61 days = 1 } }
+
+        hidden_effect = {
+            SFL = {mark_focus_tree_layout_dirty = yes}   
+        }
 		ai_chance = { 
 			factor = 0.7
 		}
@@ -540,5 +531,199 @@ country_event = {
     option = {
         name = sfl.21.b
         ai_chance = {factor = 2}
+    }
+}
+
+country_event = {
+    id = sfl.22
+    title = sfl.22.t
+    desc = sfl.22.d
+    #picture = GFX_event_picture
+
+    #is_triggered_only = yes
+    #fire_only_once = yes
+
+    trigger = {
+        date > 2019.6.1
+        if = { limit = {tag = SFL date > 2019.6.1}
+            SFL = {has_government = democratic}
+            UCB = {has_government = democratic}
+            SBU = {
+                is_in_faction_with = UCB
+                has_war_with = EIK
+            }
+        }
+    }
+    option = {
+        name=sfl.22.a
+        UCB = {add_to_faction = SFL}
+        ai_chance = {
+            base = 50
+        }
+    }
+    option = {
+        name = sfl.22.b
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sfl.23
+    title = sfl.23.t
+    desc = sfl.23.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.23.a
+        
+    }
+}
+
+country_event = {
+    id = sfl.24
+    title = sfl.24.t
+    desc = sfl.24.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.24.a
+        
+    }
+}
+
+country_event = {
+    id = sfl.25
+    title = sfl.25.t
+    desc = sfl.25.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.25.a
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+    option = {
+        name = sfl.25.b
+
+        68 = {remove_claim_by = SFL}
+        69 = {remove_claim_by = SFL}
+        70 = {remove_claim_by = SFL}
+
+        ai_chance = {
+            base = 50
+        }
+    }
+    option = {
+        name = sfl.25.c
+        trigger = {
+            NOT = {
+                any_country = {
+                    has_guaranteed = FSC
+                }
+            }
+            OR = {
+                country_exists = KUL
+                country_exists = ANR
+                AND = {
+                    country_exists = ORB
+                    NOT = {31 = {is_owned_by = ORB}}
+                }
+            }
+        }
+
+        FSC = {country_event = {id = fscb.27 days = 1}}
+        ai_chance = {
+            base = 1000
+        }
+    }
+}
+
+country_event = {
+    id = sfl.26
+    title = sfl.26.t
+    desc = sfl.26.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sfl.26.a
+        
+        FSC = {country_event = {id = fscb.28 days = 1}}
+
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                NOT = {
+                    is_in_faction_with = SBU
+                    is_subject_of = SBU
+                    check_variable = { sphere_owner = SBU }
+                }
+
+                factor = 0
+            }
+        }
+    }
+    option = {
+        name = sfl.26.b
+        SBU = {
+            add_opinion_modifier = {
+                target = SFL
+                modifier = FSC_SFL_support_claims
+            }
+            add_opinion_modifier = {
+                target = FSC
+                modifier = FSC_SFL_support_claims
+            }
+        }
+        FSC = {
+            hidden_effect = {
+                add_opinion_modifier = {
+                    target = SBU
+                    modifier = FSC_SFL_support_claims
+                }
+            }
+            give_guarantee = SFL
+        }
+        give_guarantee = FSC
+
+        ai_chance = {
+            base = 50
+            modifier = {
+                OR = {
+                    is_in_faction_with = SBU
+                    is_subject_of = SBU
+                    check_variable = { sphere_owner = SBU }
+                }
+
+                factor = 0
+            }
+        }
     }
 }

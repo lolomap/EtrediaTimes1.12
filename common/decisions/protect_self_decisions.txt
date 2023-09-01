@@ -1,4 +1,137 @@
 protect_self = {
+    
+    oppos_infrastructure = {
+        icon = generic_crisis
+        is_good = no
+		selectable_mission = yes
+		days_mission_timeout = 5
+        fixed_random_seed = no
+		timeout_effect = {
+			random_owned_state = {
+                damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+            }
+            random_owned_state = {
+                damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+            }
+		}
+		complete_effect = {
+			
+		}
+        cost = 15
+
+		activation = {
+			always = no
+		}
+		ai_will_do = {factor = 1000}
+    }
+
+    oppos_press = {
+        icon = generic_crisis
+        is_good = no
+		selectable_mission = yes
+		days_mission_timeout = 5
+        fixed_random_seed = no
+
+        available = {
+            OR = {
+                has_idea = nonfree_press
+                has_idea = total_nonfree_press
+            }
+        }
+
+		timeout_effect = {
+			add_timed_idea = { idea = oppos_press_idea days = 90 }
+		}
+		complete_effect = {
+            ROOT = {
+                hidden_effect = {
+                    add_command_power = -20   
+                }
+            }
+		}
+        custom_cost_trigger = {
+            command_power > 19
+        }
+        custom_cost_text = decision_cost_CP_20
+
+		activation = {
+			always = no
+		}
+		ai_will_do = {factor = 1000}
+    }
+
+    oppos_regional_politicians = {
+        icon = generic_crisis
+		
+        fixed_random_seed = no
+        
+        state_target = yes
+        target_array = owned_controlled_states
+        target_trigger = {
+            FROM = {
+                has_state_flag = opposition_activity
+            }
+        }
+
+		complete_effect = {
+            FROM = {
+                cancel_resistance = yes
+                force_disable_resistance = ROOT
+                clr_state_flag = opposition_activity
+            }
+            ROOT = {
+                hidden_effect = {
+                    add_command_power = -20   
+                }
+            }
+		}
+        custom_cost_trigger = {
+            command_power > 19
+        }
+        custom_cost_text = decision_cost_CP_20
+
+		ai_will_do = {factor = 1000}
+    }
+
+    oppos_blocked_ways = {
+        icon = generic_crisis
+		
+        fixed_random_seed = no
+        
+        state_target = yes
+        target_array = owned_controlled_states
+        target_trigger = {
+            FROM = {
+                has_state_flag = opposition_activity____
+            }
+        }
+
+		complete_effect = {
+            FROM = {
+                add_state_modifier = {
+                    modifier = {
+                        local_supplies = 0.7
+                        local_resources = 0.5
+                        army_speed_factor_for_controller = 0.5
+                        state_production_speed_buildings_factor = 1
+                    }
+                }
+                clr_state_flag = opposition_activity
+            }
+		}
+        cost = 25
+
+		ai_will_do = {factor = 1000}
+    }
+
+
+
 	TRP_RebelIID = {
 		icon = generic_crisis
 		available = {

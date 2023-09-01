@@ -2040,3 +2040,40 @@ country_event = {
         
     }
 }
+
+country_event = {
+    id = sbu.79
+    title = sbu.79.t
+    desc = sbu.79.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=sbu.79.a
+        country_event = {id = sfl.24 days = 1}
+        ai_chance = {
+            base = 50
+        }
+    }
+    option = {
+        name = sbu.79.b
+        MOF = {
+            set_country_flag = autonomy_state
+        }
+        hidden_effect = {
+            release_puppet_on_controlled = MOF   
+        }
+        set_autonomy = {
+            target = MOF
+            autonomy_state = autonomy_autonomy
+            end_wars = no
+            end_civil_wars = no
+        }
+        ai_chance = {
+            base = 50
+        }
+    }
+}

@@ -63,7 +63,7 @@ focus_tree = {
     focus = {
 		id = FSC_problems_with_administration
 		icon = GFX_goal_support_democracy
-		cost = 10
+		cost = 5
         prerequisite = {
 			focus = FSC_save_traditions
 			focus = FSC_great_mission
@@ -89,10 +89,8 @@ focus_tree = {
 	    }
 		completion_reward = {
 			FSC = { remove_ideas = { FSC_federalization_problem_idea } }
-			swap_ideas = {
-    			remove_idea = continuity_d
-    			add_idea = regionalism
-			}
+			add_ideas = regionalism
+			
 		}
         ai_will_do = {
 			factor = 0.3
@@ -270,8 +268,8 @@ focus_tree = {
             }
 		}
 		completion_reward = {
-			SBU = {SBU_anad_drogobush = {set_nationality = NER}}
-			NER = {promote_character = {character = SBU_anad_drogobush ideology = nazism}}
+			SBU = {SBU_anad_drogobush = {set_nationality = FBU}}
+			FBU = {promote_character = {character = SBU_anad_drogobush ideology = nazism}}
 		}
         ai_will_do = {
 			factor = 0.2
@@ -325,8 +323,27 @@ focus_tree = {
         prerequisite = {
 			focus = FSC_invite_narabel
 		}
+        available = {
+            UCB = {
+                is_in_faction = no
+                has_idea = UCB_des_army
+                has_country_leader = {character = UCB_Parlament}
+            }
+        }
 		completion_reward = {
-			#
+			start_border_war = {
+                change_state_after_war = yes
+                attacker = {
+                    state = 44
+                    num_provinces = 4
+                    on_win = fscb.29
+                }	
+                defender = {
+                    state = 31
+                    num_provinces = 4
+                    #on_lose = fscb.29
+                }
+            }
 		}
         ai_will_do = {
 			factor = 0.2
@@ -397,7 +414,7 @@ focus_tree = {
 			NOT = { country_exists = TRP }
 		}
 		available = {
-			FSC = { has_government = fascism }
+			#FSC = { has_government = fascism }
 		}
 		completion_reward = {
 			TRP = { country_event = { id = trp.2 days = 1 } }
@@ -416,7 +433,10 @@ focus_tree = {
 			focus = FSC_integrate_TRP
 		}
 		completion_reward = {
-			#
+			IID = {
+                add_stability = -.1
+                add_popularity = {ideology = monarchism popularity = -0.1}
+            }
 		}
         ai_will_do = {
 			factor = 0.2
@@ -428,11 +448,17 @@ focus_tree = {
 		id = FSC_support_Barkhan_separatists
 		icon = GFX_focus_generic_military_mission
 		cost = 10
+        bypass = {
+            IID = {NOT = {owns_state = 80}}
+        }
         prerequisite = {
 			focus = FSC_fire_Empire
 		}
 		completion_reward = {
-			#
+			80 = {
+                force_enable_resistance = IID
+                start_resistance = BKH
+            }
 		}
         ai_will_do = {
 			factor = 0.2
@@ -598,14 +624,31 @@ focus_tree = {
 			focus = FSC_Glanvish_corpus
 			focus = FSC_ortostan_ultimatum
 		}
-		completion_reward = {
-			#
-		}
+
+        bypass = {
+            OR = {
+                NOT = {country_exists = SBU}
+                SBU = {is_subject_of = FSC}
+            }
+        }
+
         ai_will_do = {
 			factor = 0.2
 		}
 		x = 15
 		y = 8
+
+        completion_reward = {
+            send_embargo = SBU
+            every_subject_country = {
+                send_embargo = SBU
+            }
+            every_other_country = {
+                limit = {check_variable = { sphere_owner = FSC }}
+                
+                send_embargo = SBU
+            }
+        }
 	}
 	focus = {
 		id = FSC_support_safflia
@@ -615,7 +658,7 @@ focus_tree = {
 			focus = FSC_anti_siburian_policy
 		}
 		completion_reward = {
-			#
+			SFL = {country_event = {id = sfl.26 days = 1}}
 		}
         ai_will_do = {
 			factor = 0.2
@@ -675,7 +718,7 @@ focus_tree = {
 			focus = FSC_integrate_TRP
 		}
 		completion_reward = {
-			#
+			add_ideas = FSC_UCB_network
 		}
         ai_will_do = {
 			factor = 0.2
@@ -694,7 +737,7 @@ focus_tree = {
 			focus = FSC_agency_network_in_UCNB
 		}
 		completion_reward = {
-			#
+			custom_effect_tooltip = FSC_prevent_poroh_blet
 		}
         ai_will_do = {
 			factor = 0.2
@@ -949,9 +992,6 @@ focus_tree = {
 		completion_reward = {
 			FSC = { add_ideas = { FSC_karatenia_defender } }
 		}
-        ai_will_do = {
-			factor = 0.2
-		}
 		x = 8
 		y = 3
 	}
@@ -979,9 +1019,6 @@ focus_tree = {
 				add_state_claim = 31
 			}
 		}
-        ai_will_do = {
-			factor = 0.2
-		}
 		x = 8
 		y = 4
 	}
@@ -1001,9 +1038,6 @@ focus_tree = {
 	    }
 		completion_reward = {
 			#
-		}
-        ai_will_do = {
-			factor = 0.2
 		}
 		x = 7
 		y = 5
@@ -1033,9 +1067,6 @@ focus_tree = {
 			add_command_power = 50
 			army_experience = 15
 		}
-        ai_will_do = {
-			factor = 0.8
-		}
 		x = 9
 		y = 5
 	}
@@ -1043,19 +1074,16 @@ focus_tree = {
 		id = FSC_agreement_of_free_borders
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10
+        available = {NOT = {has_country_flag = failed_orb}}
 		bypass = {
 			31 = { is_controlled_by = FSC }
-            has_country_flag = failed_orb
 		}
 		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_Alende_group
 		}
 		completion_reward = {
-			#
-		}
-        ai_will_do = {
-			factor = 0.2
+			FSC = { remove_ideas = { FSC_divided_ortostan }}
 		}
 		x = 7
 		y = 6
@@ -1074,10 +1102,18 @@ focus_tree = {
             
 		}
 		completion_reward = {
-			FSC = { remove_ideas = { FSC_divided_ortostan }}
-		}
-        ai_will_do = {
-			factor = 0.2
+			create_import = {
+                resource = steel
+                amount = 20
+                exporter = UCB
+            }
+            44 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 5
+                    instant_build = yes
+                }
+            }
 		}
 		x = 7
 		y = 7
@@ -1087,7 +1123,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
 		available = {
-			UCB = { has_completed_focus = UCB_dem_sbu }
+			UCB = { is_faction_leader = yes }
 		}
         prerequisite = {
 			focus = FSC_economic_integration_of_ortostan
@@ -1098,10 +1134,7 @@ focus_tree = {
 			focus = FSC_agree_with_IE
 		}
 		completion_reward = {
-			UCB = { add_to_faction = FSC }
-		}
-        ai_will_do = {
-			factor = 0.2
+			UCB = {country_event = {id = ucnb.33 days = 1}}
 		}
 		x = 6
 		y = 8
@@ -1159,14 +1192,27 @@ focus_tree = {
 		id = FSC_UcNB_separatism
 		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 10
+
+        available = {
+            if = {
+                limit = {has_completed_focus = FSC_Alende_group}
+                has_country_flag = failed_orb
+            }
+        }
 		bypass = {
 			31 = { is_controlled_by = FSC }
 		}
 		cancel_if_invalid = yes
         prerequisite = {
 			focus = FSC_no_compromises
+            focus = FSC_Alende_group
 		}
 		completion_reward = {
+            if = {
+                limit = {has_completed_focus = FSC_Alende_group}
+                add_political_power = -100
+            }
+
 			KIM = {add_to_variable = { var = UCB.sep_KIM value = 0.8 tooltip = add_region_separatism_tooltip }}
             clamp_variable = {var = UCB.sep_KIM max = 1}
             KOL = {add_to_variable = { var = UCB.sep_KOL value = 0.8 tooltip = add_region_separatism_tooltip }}
@@ -1204,13 +1250,14 @@ focus_tree = {
 			add_threat = 10
 		}
         ai_will_do = {
-			factor = 0.2
 			modifier = {
 				factor = -1
+                is_historical_focus_on = yes
 				SBU = { NOT = { has_completed_focus = SBU_aldeko_operation } }
 			}
 			modifier = {
 				factor = 5
+                is_historical_focus_on = yes
 				SBU = { has_completed_focus = SBU_aldeko_operation }
 			}
 		}
@@ -1246,9 +1293,6 @@ focus_tree = {
 		completion_reward = {
 			#
 		}
-        ai_will_do = {
-			factor = 0.35
-		}
 		x = 9
 		y = 9
 	}
@@ -1280,9 +1324,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			#
-		}
-        ai_will_do = {
-			factor = 0.65
 		}
 		x = 11
 		y = 9
@@ -1332,13 +1373,6 @@ focus_tree = {
 				IID = { set_country_flag = FSC_guarentee_trp_flag }
 			}
 		}
-        ai_will_do = {
-			factor = 0.3
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
 		x = 3
 		y = 3
 	}
@@ -1369,9 +1403,6 @@ focus_tree = {
 				} 
 			}
 			add_stability = 0.05
-		}
-        ai_will_do = {
-			factor = 0.7
 		}
 		x = 5
 		y = 3
@@ -1405,9 +1436,6 @@ focus_tree = {
 				state = 46
 			}
 		}
-        ai_will_do = {
-			factor = 0.2
-		}
 		x = 5
 		y = 4
 	}
@@ -1427,9 +1455,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		}
-        ai_will_do = {
-			factor = 0.2
 		}
 		x = 5
 		y = 5
@@ -1490,9 +1515,6 @@ focus_tree = {
 			create_faction = FSC_help_bloc_alliance
 			TRP = { country_event = { id = trp.6 days = 1 }}
 		}
-        ai_will_do = {
-			factor = 0.2
-		}
 		x = 3
 		y = 4
 	}
@@ -1506,9 +1528,6 @@ focus_tree = {
 		completion_reward = {
 			FSC = { country_event = { id = fscb.19 days = 1 } }
 		}
-        ai_will_do = {
-			factor = 0.2
-		}
 		x = 3
 		y = 5
 	}
@@ -1520,10 +1539,30 @@ focus_tree = {
 			focus = FSC_agreement_with_dux
 		}
 		completion_reward = {
+        
+            add_political_power = 50
 
-		}
-        ai_will_do = {
-			factor = 0.2
+            add_opinion_modifier = {
+                target = LIV
+                modifier = FSC_isles_way
+            } 
+            add_opinion_modifier = {
+                target = OIK
+                modifier = FSC_isles_way
+            }
+            LIV = {
+                add_opinion_modifier = {
+    				target = FSC
+    				modifier = FSC_isles_way
+				} 
+            }
+            OIK = {
+                add_opinion_modifier = {
+    				target = FSC
+    				modifier = FSC_isles_way
+				} 
+            }
+
 		}
 		x = 3
 		y = 6
@@ -1536,10 +1575,16 @@ focus_tree = {
 			focus = FSC_our_way_to_isles
 		}
 		completion_reward = {
-
-		}
-        ai_will_do = {
-			factor = 0.2
+            add_opinion_modifier = {
+                target = SFL
+                modifier = FSC_sfl_relations
+            } 
+            SFL = {
+                add_opinion_modifier = {
+    				target = FSC
+    				modifier = FSC_sfl_relations
+				} 
+            }
 		}
 		x = 0
 		y = 7
@@ -1548,14 +1593,23 @@ focus_tree = {
 		id = FSC_conversations_about_neria
 		icon = GFX_goal_generic_position_armies
 		cost = 10
+
+        bypass = {
+            OR = {
+                country_exists = NER
+                NOT = {
+                    68 = {is_owned_by = FSC}
+                    69 = {is_owned_by = FSC}
+                    70 = {is_owned_by = FSC}
+                }
+            }
+        }
+
         prerequisite = {
 			focus = FSC_relations_with_safflia
 		}
 		completion_reward = {
-
-		}
-        ai_will_do = {
-			factor = 0.2
+            SFL = {country_event = {id = sfl.25 days = 1}}
 		}
 		x = 0
 		y = 8
@@ -1568,10 +1622,7 @@ focus_tree = {
 			focus = FSC_our_way_to_isles
 		}
 		completion_reward = {
-
-		}
-        ai_will_do = {
-			factor = 0.2
+            OIK = {country_event = {id = fscb.24 days = 1}}
 		}
 		x = 2
 		y = 7
@@ -1584,7 +1635,7 @@ focus_tree = {
 			focus = FSC_our_way_to_isles
 		}
 		completion_reward = {
-
+            LIV = {country_event = {id = fscb.24 days = 1}}
 		}
         ai_will_do = {
 			factor = 0.2

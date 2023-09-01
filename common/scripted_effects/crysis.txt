@@ -1,0 +1,372 @@
+war_crysis_ban_factions = {
+    if = {
+        limit = {always = yes} #{not = {is_in_faction}}
+
+        if = {
+            limit = {has_rule = can_join_factions}
+            set_country_flag = wcrysis_can_join_factions
+        }
+        else = {clr_country_flag = wcrysis_can_join_factions}
+        
+        set_rule = {can_join_factions = no}
+    }
+    
+    set_country_flag = banned_for_factions
+}
+
+war_crysis_unban_factions = {
+    if = {
+        limit = {has_country_flag = wcrysis_can_join_factions}
+        set_rule = {can_join_factions = yes}
+        clr_country_flag = wcrysis_can_join_factions
+    }
+    clr_country_flag = banned_for_factions
+}
+
+encount_majors = { #call in crysis  sender
+    add_threat = 8
+    clear_array = crysis_senders
+    clear_array = crysis_tos
+    clear_array = crysis_majors
+
+    set_temp_variable = { sender_cr = sender_crysis }
+    set_temp_variable = { to_cr = to_crysis }
+
+    var:sender_crysis = {
+        set_variable = {political_crysis_member = THIS}
+        set_country_flag = {
+            flag = political_crysis
+            days = 60
+            value = 1
+        }
+        set_variable = {crtoflag = to_crysis}
+    }
+    #set_variable = {crto = to_crysis}
+    var:to_crysis = {
+        set_variable = {political_crysis_member = PREV}
+        set_variable = {crto = PREV.to_crysis}
+        set_country_flag = {
+            flag = political_crysis
+            days = 60
+            value = 1
+        }
+        set_variable = {crtoflag = to_crysis}
+    }
+
+    every_country = {
+        limit = {
+            not = {tag = PREV.sender_crysis}
+            not = {tag = PREV.to_crysis}
+            not = {has_variable = political_crysis_member}
+            OR = {
+                AND = {
+                    var:sender_cr = {is_major = yes}
+                    is_major = yes
+                }
+                AND = {
+                    var:sender_cr = {is_major = no}
+                    OR = {
+                        var:sender_cr = {is_in_array = {neighbors = PREV}}
+                        var:to_cr = {is_in_array = {neighbors = PREV}}
+                    }
+                }
+            }
+            has_war = no
+            is_subject = no
+            
+            not = {var:sender_cr = {is_in_array = {crysis_majors = PREV}}}
+        }
+
+        var:sender_cr = {add_to_array = {crysis_majors = PREV}}
+        set_variable = {political_crysis_member = PREV}
+        set_country_flag = {
+            flag = political_crysis
+            days = 60
+            value = 1
+        }
+        set_variable = {crtoflag = PREV.to_crysis}
+    }
+    if = {
+        limit = {var:to_crysis = {is_subject = yes}}
+        var:to_crysis = {
+            OVERLORD = {
+                var:sender_cr = {add_to_array = {crysis_majors = PREV}}
+                set_variable = {political_crysis_member = PREV.PREV}
+                set_country_flag = {
+                    flag = political_crysis
+                    days = 60
+                    value = 1
+                }
+                set_variable = {crtoflag = political_crysis_member:to_crysis}
+            }
+        }
+    }
+    if = {
+        limit = {var:to_crysis = {has_variable = sphere_owner}}
+        var:to_crysis = {
+            var:sphere_owner = {
+                var:sender_cr = {add_to_array = {crysis_majors = PREV}}
+                set_variable = {political_crysis_member = PREV.PREV}
+                set_country_flag = {
+                    flag = political_crysis
+                    days = 60
+                    value = 1
+                }
+                set_variable = {crtoflag = political_crysis_member:to_crysis}
+            }
+        }
+    }
+}
+
+d_calc_crysis = { #call in crysis sender
+
+    set_temp_variable = { sender_cr = sender_crysis }
+    set_temp_variable = { to_cr = to_crysis }
+
+    for_each_scope_loop = {
+        array = crysis_senders
+        set_variable = {is_highest_crysis = 1}
+    }
+    for_each_scope_loop = {
+        array = crysis_tos
+        set_variable = {is_highest_crysis = 1}
+    }
+
+    set_variable = {sender_crysis_op_status = 1}
+    set_variable = {to_crysis_op_status = 1}
+
+    set_temp_variable = {cr_smax = 0}
+    set_temp_variable = {cr_tmax = 0}
+
+    set_variable = {cr_send_op = sender_crysis}
+    set_variable = {cr_to_op = to_crysis}
+
+
+    set_variable = {crysis_s_totalwi = 0}
+    set_variable = {crysis_t_totalwi = 0}
+    for_each_scope_loop = {
+        array = crysis_senders
+        if = {
+            limit = {check_variable = {crysis_influence > cr_smax}}
+            set_temp_variable = {cr_smax = crysis_influence}
+            var:sender_cr = {set_variable = {cr_send_op = PREV}}
+        }
+        var:sender_cr = {add_to_variable = {crysis_s_totalwi = PREV.crysis_influence}}
+    }
+    for_each_scope_loop = {
+        array = crysis_tos
+        if = {
+            limit = {check_variable = {crysis_influence > cr_tmax}}
+            set_temp_variable = {cr_tmax = crysis_influence}
+            var:sender_cr = {set_variable = {cr_to_op = PREV}}
+        }
+        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.crysis_influence}}
+    }
+
+    var:sender_crysis = {
+        if = {
+            limit = {check_variable = {cr_smax > crysis_influence}}
+            var:cr_send_op = { set_variable = {is_highest_crysis = 2} }
+        }
+        else = {
+            set_variable = {cr_send_op = THIS}
+            set_variable = {sender_crysis_op_status = 2}
+        }
+        add_to_variable = {crysis_s_totalwi = crysis_influence}
+    }
+
+    var:to_crysis = {
+        if = {
+            limit = {var:sender_cr = {check_variable = {cr_smax > PREV.crysis_influence}}}
+            var:sender_cr = {var:cr_to_op = { set_variable = {is_highest_crysis = 2} }}
+        }
+        else = {
+            var:sender_cr = {
+                set_variable = {cr_to_op = PREV}
+                set_variable = {to_crysis_op_status = 2}
+            }
+        }
+        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.crysis_influence}}
+    }
+}
+
+force_press = {
+    if = {
+        #limit = {NOT = {check_variable = {cr_d_status = 3}}}
+        limit = {has_country_flag = cr_a_allow}
+        log = "FORCE PRESS FOR DEFENDERS"
+        var:cr_to_op = {set_country_flag = crysis_press}
+    }
+    if = {
+        #limit = {NOT = {check_variable = {cr_a_status = 3}}}
+        limit = {has_country_flag = cr_d_allow}
+        var:cr_send_op = {set_country_flag = crysis_press}
+    }
+}
+
+crysis_reward = { #call in crysis sender
+    set_temp_variable = { sender_cr = sender_crysis }
+    set_temp_variable = { to_cr = to_crysis }
+    log = "CREWARD"
+    if = { #корки
+        limit = {check_variable = {type_crysis = 1}}
+        var:to_crysis = {
+            every_owned_state = {
+                limit = {
+                    OR = {
+                        is_claimed_by = PREV.PREV.sender_crysis
+                        is_core_of = PREV.PREV.sender_crysis
+                    }
+                }
+                var:sender_cr = {
+                    transfer_state = PREV
+                }
+            }
+        }
+    }
+    else_if = { #минор
+        limit = {check_variable = {type_crysis = 2}}
+        var:to_crysis = {
+            release_on_controlled = minor_crysis
+        }
+    }
+    else_if = { #spheres
+        limit = {check_variable = { type_crysis = 3 }}
+        var:minor_crysis = {
+            remove_from_sphere = yes
+        }
+    }
+    else_if = { #release puppet
+        limit = {check_variable = { type_crysis = 4 }}
+        var:to_crysis = {
+            set_autonomy = {
+                target = PREV.minor_crysis
+                autonomy_state = autonomy_free
+                end_wars = no
+                end_civil_wars = no
+            }
+        } 
+    }
+}
+
+d_show_crysis = {
+    if = {
+        limit = {has_country_flag = cheat_show_cr_win}
+        clr_country_flag = cheat_show_cr_win
+    }
+    else = {
+        set_country_flag = cheat_show_cr_win
+    }
+}
+
+calc_escalation_scores = {
+    set_temp_variable = {swie = crysis_s_totalwi}
+    if = { limit = {crysis_t_totalwi > 1}
+        divide_temp_variable = {swie = crysis_t_totalwi }
+    }
+    set_temp_variable = {twie = crysis_t_totalwi}
+    if = { limit = {crysis_s_totalwi > 1}
+        divide_temp_variable = {twie = crysis_s_totalwi }
+    }
+
+    every_country = {
+        limit = {
+            OR = {
+                check_variable = {political_crysis_member = PREV}
+                tag = var:PREV.sender_crysis
+                tag = var:PREV.to_crysis
+            }
+            NOT = {is_in_array = {PREV.crysis_majors = THIS}}
+        }
+        set_variable = { escalation_score = 30 }
+        if = {  limit = {check_variable = { crysis_influence > 1 }}
+            add_to_variable = { escalation_score = crysis_influence }
+        }
+        if = {  limit = {check_variable = {faction_leader.faction_influence > 1}}
+            add_to_variable = {escalation_score = faction_leader.faction_influence }
+        }
+        if = { limit = {OR = {is_in_array = {PREV.crysis_senders = THIS} tag = var:PREV.sender_crysis}}
+            multiply_variable = {escalation_score = swie}
+            set_country_flag = escalation_on_sender
+            set_variable = { escalation_enemy = PREV.to_crysis }
+            set_variable = { escalation_friend = PREV.sender_crysis }
+        }
+        if = { limit = {OR = {is_in_array = {PREV.crysis_tos = THIS} tag = var:PREV.to_crysis}}
+            multiply_variable = {escalation_score = twie}
+            set_country_flag = escalation_on_to
+            set_variable = { escalation_enemy = PREV.sender_crysis }
+            set_variable = { escalation_friend = PREV.to_crysis }
+        }
+        set_variable = {escalation_member = PREV}
+        add_ideas = escalation_idea
+
+        set_temp_variable = { temp = crysis_influence }
+        multiply_temp_variable= { temp = 1.5 }
+        add_to_temp_variable = { temp = 30 }
+        divide_temp_variable = { temp = 100 }
+        multiply_temp_variable = { temp = escalation_score }
+        set_variable = { escalation_war_score = temp }
+    }
+    set_variable = { escalation_hotness = 25 }
+
+    var:sender_crysis = {
+        add_to_variable = { escalation_score = 35 }
+    }
+    var:to_crysis = {
+        add_to_variable = { escalation_score = 25 }
+    }
+
+}
+
+escalation_decision_effect = {
+    add_days_mission_timeout = {mission = esc_timer days = 20}
+    if = {
+        limit = {has_country_flag = escalation_delay}
+        hidden_effect = {
+            every_other_country = {
+                limit = {
+                    check_variable = { escalation_member = ROOT.escalation_member }
+                    if = {
+                        limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                        has_country_flag = escalation_on_to
+                    }
+                    else = {
+                        has_country_flag = escalation_on_sender
+                    }
+                }
+
+                add_to_variable = { escalation_score = 5 }
+            }
+        }
+    }
+    set_country_flag = {
+        flag = escalation_delay
+        value = 1
+        days = 7
+    }
+}
+
+escalation_stop = {
+    var:escalation_member = {
+        clr_country_flag = escalation_war_start
+        clear_variable = escalation_hotness
+        every_country = {
+            limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+            remove_mission = esc_timer
+            clear_variable = escalation_member
+            clear_variable = escalation_score
+            clear_variable = escalation_enemy
+            clear_variable = escalation_friend
+            clear_variable = escalation_war_score
+            clr_country_flag = escalation_on_sender
+            clr_country_flag = escalation_on_to
+            clr_country_flag = escalation_timeout
+        }
+    }
+}
+
+force_action_close_all_gb = {
+    clr_country_flag = fa_sphere_gb_show
+    clr_country_flag = fa_minor_gb_show
+    clr_country_flag = fa_puppet_gb_show
+}

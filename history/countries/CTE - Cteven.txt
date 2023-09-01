@@ -10,6 +10,7 @@ set_war_support = 0.5
 add_ideas = {
         WWW_bad_country
     sforces_3
+	socials_1
 }
 
 set_technology = {basic_train = 1

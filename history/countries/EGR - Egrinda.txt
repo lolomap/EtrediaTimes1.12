@@ -12,6 +12,7 @@ add_ideas = {
         free_entry
         DON_politics
 	first_corruption_level
+	socials_3
 }
 
 set_technology = {basic_train = 1

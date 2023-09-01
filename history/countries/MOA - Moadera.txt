@@ -10,6 +10,8 @@ set_war_support = 0.4
 add_ideas = {
         WWW_best_country
         MOA_recrut
+	MOA_debts
+	MOA_difficult_construct
         neutrality_idea
         total_free_press
         free_entry

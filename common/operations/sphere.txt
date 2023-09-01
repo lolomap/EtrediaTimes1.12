@@ -12,6 +12,8 @@ operation_sphere_puppet = {
 
     network_strength = 100
 
+    danger_level = 5
+
     risk_chance = 0.5
 
     ai_will_do = { 
@@ -42,7 +44,10 @@ operation_sphere_puppet = {
 	}
 
     equipment = {
-		
+		civilian_factories = {
+			amount = 10
+			days = 60
+		}
 	}
 
     phases = {

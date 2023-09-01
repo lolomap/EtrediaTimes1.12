@@ -14,6 +14,7 @@ add_ideas = {
 	fifth_corruption_level
     continuity_f
     sforces_6
+	socials_1
 }
 
 	set_autonomy = {

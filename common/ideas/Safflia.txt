@@ -1,6 +1,28 @@
 ideas = {
 	country = {	
 
+        SFL_national_idea_idea = {
+            allowed = {
+                always = no
+            }
+        
+        
+            removal_cost = -1
+        
+            on_add = {
+                
+            }
+        
+            on_remove = {
+                
+            }
+        
+            modifier = {
+                army_core_defence_factor = 0.15
+                army_core_attack_factor = 0.05
+            }
+        }
+
         SFL_tradewar_idea = {
             allowed = {
                 always = no
@@ -357,6 +379,28 @@ ideas = {
 		}
 	}
 
+    SFL_ishtrade2 = {
+
+		picture = polit_
+
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+
+
+		modifier = {
+			trade_opinion_factor = 0.25
+			production_speed_industrial_complex_factor = 0.05
+			production_speed_infrastructure_factor = 0.08
+			production_speed_synthetic_refinery_factor = 0.05
+            production_speed_supply_node_factor = 0.08
+            consumer_goods_factor = -0.05
+            min_export = 0.1
+		}
+	}
+
 	SFL_democratpeople = {
 
 			picture = polit_
@@ -496,6 +540,68 @@ ideas = {
 			production_oil_factor = 0.1
 			}
 	}
+
+    SFL_economic_MOF = {
+        allowed = {
+            always = no
+        }
+    
+    
+        removal_cost = -1
+    
+        on_add = {
+            
+        }
+    
+        on_remove = {
+            
+        }
+
+        cancel = {
+            MOF = {
+                OR = {
+                    exists = no
+                    AND = {
+                        is_subject = yes
+                        NOT = {is_subject_of = SFL}
+                    }
+                }
+            }
+        }
+    
+        modifier = {
+            
+        }
+
+        targeted_modifier = {
+            tag = MOF
+            trade_cost_for_target_factor = -0.5
+            production_factory_max_efficiency_factor = 0.1
+        }
+    }
+
+    SFL_volunteers_idea = {
+        allowed = {
+            always = no
+        }
+    
+    
+        removal_cost = -1
+    
+        on_add = {
+            
+        }
+    
+        on_remove = {
+            
+        }
+    
+        modifier = {
+            send_volunteer_divisions_required = -1
+            send_volunteers_tension = -1
+            send_volunteer_size = 8
+        }
+    }
 
 }
 }

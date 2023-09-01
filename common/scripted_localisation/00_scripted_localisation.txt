@@ -26,7 +26,10 @@ defined_text = {
     name = sphere_status_icon
     text = {
         trigger = {
-            has_variable = sphere_owner
+            OR = {
+                has_variable = sphere_owner
+                is_subject = yes
+            }
         }
         localization_key = "GFX_autonomy_dependent_icon"
     }
@@ -37,6 +40,12 @@ defined_text = {
 
 defined_text = {
     name = sphere_status_sl
+    text = {
+        trigger = {
+            is_subject = yes
+        }
+        localization_key = sphere_status_subject
+    }
     text = {
         trigger = {
             has_variable = sphere_owner
@@ -474,16 +483,20 @@ defined_text = {
 defined_text = {
     name = cw_title_bot_sl
     text = {
-        trigger = {var:political_crysis_member = {check_variable = {type_crysis = 0}}}
-        localization_key = "Смена правительства в [?political_crysis_member:to_crysis.GetNameDef]"
-    }
-    text = {
         trigger = {var:political_crysis_member = {check_variable = {type_crysis = 1}}}
-        localization_key = "Территориальные претензии к [?political_crysis_member:to_crysis.GetNameDef] от [?political_crysis_member.GetNameDef]"
+        localization_key = cw_title_cores
     }
     text = {
         trigger = {var:political_crysis_member = {check_variable = {type_crysis = 2}}}
-        localization_key = "Отделение [?political_crysis_member:minor_crysis.GetNameDef] от [?political_crysis_member:to_crysis.GetNameDef]"
+        localization_key = cw_title_minor
+    }
+    text = {
+        trigger = {var:political_crysis_member = {check_variable = {type_crysis = 3}}}
+        localization_key = cw_title_sphere
+    }
+    text = {
+        trigger = {var:political_crysis_member = {check_variable = {type_crysis = 4}}}
+        localization_key = cw_title_rpuppet
     }
     text = {
         localization_key = ""

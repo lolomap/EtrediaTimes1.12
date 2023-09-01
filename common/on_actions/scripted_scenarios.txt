@@ -1,0 +1,51 @@
+on_actions = {
+    on_peaceconference_ended = {
+        effect = {
+            if = {
+                limit = {
+                    FROM = {tag = FSC}
+                    ROOT = {
+                        OR = {
+                            tag = ANR
+                            tag = ORB
+                            tag = KLU
+                            tag = NER
+                        }
+                    }
+                }
+
+                44 = {transfer_state_to = ORB}
+                45 = {transfer_state_to = ORB}
+
+                ANR = {
+                    transfer_state = 46
+                    transfer_state = 47
+                    transfer_state = 48
+                    transfer_state = 49
+                    transfer_state = 50
+                    transfer_state = 51
+                    transfer_state = 52
+                    transfer_state = 64
+                    transfer_state = 65
+                    transfer_state = 66
+                    transfer_state = 67
+                }
+
+                NER = {
+                    transfer_state = 68
+                    transfer_state = 69
+                    transfer_state = 70
+                }
+
+                KUL = {
+                    transfer_state = 53
+                    transfer_state = 54
+                    transfer_state = 55
+                    transfer_state = 56
+                    transfer_state = 57
+                    transfer_state = 58
+                }
+            }       
+        }
+    }
+}

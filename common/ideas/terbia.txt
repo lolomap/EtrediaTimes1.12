@@ -1,10 +1,12 @@
 ideas = {
     country = {	
 		YAN_spy = {
-
             picture = polit
 			allowed = {
 				always = no
+			}
+			cancel = {
+				NOT = { country_exists = YAN }
 			}
 			removal_cost = -1
 			modifier = {
@@ -13,9 +15,7 @@ ideas = {
                 political_advisor_cost_factor = 0.1
 			}
 		}
-		
 		TRB_call_for_unity_1 = {
-
             picture = polit
 			allowed = {
 				always = no
@@ -30,7 +30,6 @@ ideas = {
 				defence = 0.5
 			}
 		}
-
         TRB_western_puppet = {
             allowed = {
 				always = no
@@ -40,5 +39,22 @@ ideas = {
                 winfluence_modifier = -0.15
 			}
         }
+		TRB_ports_rentals = {
+            picture = TRB_ports_rentals_pic
+			allowed = {
+				always = no
+			}
+			cancel = {
+				NOT = { country_exists = RTT }
+			}
+			removal_cost = -1
+			modifier = {
+                consumer_goods_factor = -0.05
+			}
+			targeted_modifier = {
+    			tag = RTT
+    			trade_cost_for_target_factor = 0.15
+			}
+		}
 	}
 }

@@ -24,4 +24,8 @@ sphere_category = {
 }
 
 escalation_category = {
+    icon = generic_crisis
+    scripted_gui = escalation_decisions
+
+    priority = 1000
 }

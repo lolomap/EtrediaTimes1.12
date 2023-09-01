@@ -74,18 +74,4 @@ characters={
 			legacy_id=-1
 		}
 	}
-	RTT_jonas_taylor={
-		name=RTT_Jonas_Taylor
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=absolutism
-			traits={ smooth_talking_con_man quartermaster_trainee }
-			expire="2030.1.1.12"
-			id=-1
-		}
-	}
 }

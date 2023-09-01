@@ -11,6 +11,11 @@ add_ideas = {
         free_press
 }
 
+set_autonomy = {
+	target = HGN
+	autonomous_state = autonomy_puppet
+}
+
 set_technology = {basic_train = 1
 
         tech_engineers = 1

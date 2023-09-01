@@ -168,20 +168,26 @@ KAR_dirian_civil_war = {
                 type = puppet_wargoal_focus
                 target = DIR
             }
+			KAR = { give_military_access = DEM }
+			DEM = { give_military_access = KAR }
 		}
 		
 		ai_will_do = {
-			factor = 0.1
+			base = 1
 			modifier = {
-				factor = -100
+				add = -100
 				KAR = { has_war = yes }
 			}
 			modifier = {
-				factor = 5
+				add = 5
 				DEM = { surrender_progress > 0.5 }
 			}
 			modifier = {
-				factor = -5
+				add = 10
+				date > 2018.1.1
+			}
+			modifier = {
+				add = -5
 				DEM = { surrender_progress < 0.5 }
 			}
 		}

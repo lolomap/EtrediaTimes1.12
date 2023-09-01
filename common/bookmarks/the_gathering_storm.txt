@@ -87,9 +87,8 @@ bookmarks = {
                 SFL_politizol
             }
             focuses = {
-                SFL_Polit_izolyacia
-                SFL_mofsouz
-                SFL_monarh
+                SFL_trade_war
+                SFL_create_MSAC
             }
 		}
 
@@ -100,6 +99,11 @@ bookmarks = {
                 FSC_anti_siburian_policy
                 FSC_ortostan_ultimatum
                 FSC_great_mission
+            }
+            ideas = {
+                FSC_divided_ortostan
+                FSC_language_problem
+                FSC_federalization_problem_idea
             }
 		}
 

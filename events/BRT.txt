@@ -1,0 +1,32 @@
+add_namespace = brt
+
+country_event = {
+	id = brt.1
+	title = brt.1.t
+	desc = brt.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = brt.1.a
+		add_stability = 0.1
+        add_war_support = -0.1
+        diplomatic_relation = {
+            country = EIK
+            relation = non_aggression_pact
+        }
+        hidden_effect = {
+            EIK = { country_event = eik.32 days = 1} 
+        }
+        ai_chance = { factor = 1 }
+	}
+    option = {
+		name = brt.1.b
+		add_stability = -0.1
+        add_war_support = 0.1
+        hidden_effect = {
+            EIK = { country_event = eik.33 days = 1}
+        }
+        ai_chance = { factor = 0 }
+	}
+}

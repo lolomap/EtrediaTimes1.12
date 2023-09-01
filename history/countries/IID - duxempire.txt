@@ -19,6 +19,7 @@ add_ideas = {
 	fourth_corruption_level
     leadership_m
     sforces_6
+	socials_1
 }
 
 set_autonomy = {

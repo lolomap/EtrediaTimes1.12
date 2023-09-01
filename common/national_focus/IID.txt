@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	
 	reset_on_civilwar = no
-    continuous_focus_position = { x = 0 y = 2000 }
+    continuous_focus_position = { x = 0 y = 3000 }
 
 	focus = {
 		id = IID_magna_reto
@@ -435,6 +435,7 @@ focus_tree = {
                 tooltip = iid_reduce_revol_days
             }
             set_country_flag = strong_revol
+            custom_effect_tooltip = IID_unlock_extremist_rebel
 		}
 	}
 
@@ -451,6 +452,7 @@ focus_tree = {
 
 		completion_reward = {
             set_country_flag = soft_revol
+            custom_effect_tooltip = IID_unlock_peace_rebel
 		}
 	}
 
@@ -605,6 +607,7 @@ focus_tree = {
             country_event = {id = dux.18 days = 1}
             hidden_effect = {
                 country_event = {id = dux.19 days = 14}
+                country_event = {id = dux.20 days = 3}
                 set_party_name = {
                     ideology = neutrality
                     long_name = IID_neutrality_party_new_long
@@ -612,6 +615,333 @@ focus_tree = {
                 }
                 set_cosmetic_tag = IID_dem_revol
             }
+        }
+    }
+
+    focus = {
+        id = IID_return_republics
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 4
+        y = 1
+        relative_position_id = IID_new_laws
+        available = {
+            OR = {
+                AND = {
+                    country_exists = SKT
+                    NOT = {is_subject_of = IID}
+                }
+                AND = {
+                    country_exists = BKH
+                    NOT = {is_subject_of = IID}
+                }
+                AND = {
+                    country_exists = TUO
+                    NOT = {is_subject_of = IID}
+                }
+                AND = {
+                    country_exists = GKD
+                    NOT = {is_subject_of = IID}
+                }
+            }
+        }
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            country_event = {id = dux.21 days = 1}
+        }
+    }
+
+    focus = {
+        id = IID_dem_trade_weapon
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -4
+        y = 1
+        relative_position_id = IID_new_laws
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_ideas = IID_dem_trade_weapon_idea
+        }
+    }
+
+    focus = {
+        id = IID_expand_influence
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = IID_dem_trade_weapon
+        available = {has_completed_focus = IID_dem_TRP_question}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_dem_trade_weapon
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            TRP = {IID = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+            if = {
+                limit = {country_exists = KUL}
+                KUL = {IID = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+            }
+        }
+    }
+
+
+
+    focus = {
+        id = IID_north_faction
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = IID_expand_influence
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_expand_influence
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            create_faction = IID_dem_faction
+        }
+    }
+
+    focus = {
+        id = IID_dem_west_relations
+        icon = GFX_goal_unknown
+        cost = 5
+        x = -2
+        y = 1
+        relative_position_id = IID_new_laws
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_political_power = 15
+            UCB = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            SBU = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            SFL = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+        }
+    }
+
+    focus = {
+        id = IID_dem_KAR_relations
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 0
+        y = 2
+        relative_position_id = IID_dem_west_relations
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_dem_west_relations
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_political_power = 150
+            KAR = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+        }
+    }
+
+    focus = {
+        id = IID_dem_east_relations
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 0
+        y = 1
+        relative_position_id = IID_new_laws
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_political_power = 15
+            VRO = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            MOA = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+        }
+    }
+
+    focus = {
+        id = IID_dem_north_relations
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 2
+        y = 1
+        relative_position_id = IID_new_laws
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_new_laws
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            add_political_power = 15
+            FIL = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            OIK = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+            SHE = {add_opinion_modifier = {target = IID modifier = IID_dem_improve_relations}}
+        }
+    }
+
+    focus = {
+        id = IID_PIN_pressure
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 1
+        y = 3
+        relative_position_id = IID_dem_north_relations
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_dem_north_relations
+        }
+        prerequisite = {
+            focus = IID_dem_TRP_question
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = IID_forgive_duxlands
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 0
+        y = 1
+        relative_position_id = IID_dem_north_relations
+        available = {}
+        bypass = {owns_state = 121}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_dem_north_relations
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            var:121.owner = {
+                add_opinion_modifier = {target = IID modifier = IID_forgive_duxlands_opinion}
+                set_temp_variable = { temp = THIS }
+                IID = {
+                    if = {
+                        limit = {NOT = {has_variable = sphere_cost_@PREV}}
+                        set_variable = { sphere_cost_@PREV = 75 }
+                    }
+                    add_to_variable = {
+                        var = sphere_cost_@PREV
+                        value = -50
+                        tooltip = sphere_cost_change_tt
+                    }
+                    clamp_variable = {
+                        var = sphere_cost_@PREV
+                        min = 0
+                    }
+                }
+            }
+            121 = {
+                remove_core_of = IID
+            }
+        }
+    }
+
+    focus = {
+        id = IID_dem_TRP_question
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 2
+        relative_position_id = IID_dem_east_relations
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_forgive_duxlands
+            focus = IID_dem_west_relations
+            focus = IID_dem_east_relations
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            give_guarantee = TRP
+        }
+    }
+
+    focus = {
+        id = IID_support_diria
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = IID_dem_TRP_question
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = IID_dem_TRP_question
+        }
+        prerequisite = {
+            focus = IID_dem_KAR_relations
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            
         }
     }
 

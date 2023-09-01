@@ -12,6 +12,7 @@ add_ideas = {
         general_entry
         SBU_little_sburska_zvezda
 	fourth_corruption_level
+	socials_1
 }
 
 set_technology = {basic_train = 1

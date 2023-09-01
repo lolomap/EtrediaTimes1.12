@@ -2,9 +2,7 @@ d_wic = {
     clear_array = global.wi_countries
 }
 d_mtest = {
-    force_update_map_mode = {
-                    mapmode = nuking
-                }
+    177 = {add_dynamic_modifier = {modifier = SFL_sm_economic_zone_modifier}}
 }
 
 ####
@@ -140,6 +138,9 @@ d_calc_wi = {
     
     #add_to_array = {global.wi_values = world_influence}
     #set_variable = {global.wi_countries^world_influence = THIS}
+
+    set_variable = { crysis_influence = world_influence }
+    add_to_variable = { crysis_influence = nuke_inf_factor }
 }
 
 d_calc_wi_e = {
@@ -191,30 +192,6 @@ d_sort_wi = {
 
 }
 
-war_crysis_ban_factions = {
-    if = {
-        limit = {always = yes} #{not = {is_in_faction}}
-
-        if = {
-            limit = {has_rule = can_join_factions}
-            set_country_flag = wcrysis_can_join_factions
-        }
-        else = {clr_country_flag = wcrysis_can_join_factions}
-        
-        set_rule = {can_join_factions = no}
-    }
-    
-    set_country_flag = banned_for_factions
-}
-
-war_crysis_unban_factions = {
-    if = {
-        limit = {has_country_flag = wcrysis_can_join_factions}
-        set_rule = {can_join_factions = yes}
-        clr_country_flag = wcrysis_can_join_factions
-    }
-    clr_country_flag = banned_for_factions
-}
 
 encount_minors = {
     clear_array = minor_countries
@@ -233,175 +210,4 @@ encount_minors = {
     }
 }
 
-encount_majors = { #call in crysis  sender
-    add_threat = 8
-    clear_array = crysis_senders
-    clear_array = crysis_tos
-    clear_array = crysis_majors
 
-    set_temp_variable = { sender_cr = sender_crysis }
-    set_temp_variable = { to_cr = to_crysis }
-
-    set_variable = {political_crysis_member = THIS}
-    #set_variable = {crto = to_crysis}
-    var:to_crysis = {set_variable = {political_crysis_member = PREV} set_variable = {crto = PREV.to_crysis}}
-
-    every_country = {
-        limit = {
-            not = {tag = PREV.sender_crysis}
-            not = {tag = PREV.to_crysis}
-            not = {has_variable = political_crysis_member}
-            OR = {
-                AND = {
-                    var:sender_cr = {is_major = yes}
-                    is_major = yes
-                }
-                AND = {
-                    var:sender_cr = {is_major = no}
-                    OR = {
-                        var:sender_cr = {is_in_array = {neighbors = PREV}}
-                        var:to_cr = {is_in_array = {neighbors = PREV}}
-                    }
-                }
-            }
-            has_war = no
-            is_subject = no
-            
-            not = {var:sender_cr = {is_in_array = {crysis_majors = PREV}}}
-        }
-
-        var:sender_cr = {add_to_array = {crysis_majors = PREV}}
-        set_variable = {political_crysis_member = PREV}
-        #set_variable = {crto = to_crysis}
-    }
-    if = {
-        limit = {var:to_crysis = {is_subject = yes}}
-        var:to_crysis = {
-            OVERLORD = {
-                var:sender_crysis = {add_to_array = {crysis_majors = PREV}}
-                set_variable = {political_crysis_member = PREV.PREV}
-            }
-        }
-    }
-}
-
-d_calc_crysis = { #call in crysis sender
-
-    set_temp_variable = { sender_cr = sender_crysis }
-    set_temp_variable = { to_cr = to_crysis }
-
-    for_each_scope_loop = {
-        array = crysis_senders
-        set_variable = {is_highest_crysis = 1}
-    }
-    for_each_scope_loop = {
-        array = crysis_tos
-        set_variable = {is_highest_crysis = 1}
-    }
-
-    set_variable = {sender_crysis_op_status = 1}
-    set_variable = {to_crysis_op_status = 1}
-
-    set_temp_variable = {cr_smax = 0}
-    set_temp_variable = {cr_tmax = 0}
-
-    set_variable = {cr_send_op = sender_crysis}
-    set_variable = {cr_to_op = to_crysis}
-
-
-    set_variable = {crysis_s_totalwi = 0}
-    set_variable = {crysis_t_totalwi = 0}
-    for_each_scope_loop = {
-        array = crysis_senders
-        if = {
-            limit = {check_variable = {world_influence > cr_smax}}
-            set_temp_variable = {cr_smax = world_influence}
-            var:sender_cr = {set_variable = {cr_send_op = PREV}}
-        }
-        var:sender_cr = {add_to_variable = {crysis_s_totalwi = PREV.world_influence}}
-    }
-    for_each_scope_loop = {
-        array = crysis_tos
-        if = {
-            limit = {check_variable = {world_influence > cr_tmax}}
-            set_temp_variable = {cr_tmax = world_influence}
-            var:sender_cr = {set_variable = {cr_to_op = PREV}}
-        }
-        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.world_influence}}
-    }
-
-    var:sender_crysis = {
-        if = {
-            limit = {check_variable = {cr_smax > world_influence}}
-            var:cr_send_op = { set_variable = {is_highest_crysis = 2} }
-        }
-        else = {
-            set_variable = {cr_send_op = THIS}
-            set_variable = {sender_crysis_op_status = 2}
-        }
-        add_to_variable = {crysis_s_totalwi = world_influence}
-    }
-
-    var:to_crysis = {
-        if = {
-            limit = {var:sender_cr = {check_variable = {cr_smax > PREV.world_influence}}}
-            var:sender_cr = {var:cr_to_op = { set_variable = {is_highest_crysis = 2} }}
-        }
-        else = {
-            var:sender_cr = {
-                set_variable = {cr_to_op = PREV}
-                set_variable = {to_crysis_op_status = 2}
-            }
-        }
-        var:sender_cr = {add_to_variable = {crysis_t_totalwi = PREV.world_influence}}
-    }
-}
-
-force_press = {
-    if = {
-        limit = {NOT = {check_variable = {cr_d_status = 3}}}
-        var:cr_to_op = {set_country_flag = crysis_press}
-    }
-    if = {
-        limit = {NOT = {check_variable = {cr_a_status = 3}}}
-        var:cr_send_op = {set_country_flag = crysis_press}
-    }
-}
-
-crysis_reward = { #call in crysis sender
-    set_temp_variable = { sender_cr = sender_crysis }
-    set_temp_variable = { to_cr = to_crysis }
-    log = "CREWARD"
-    if = { #корки
-        limit = {check_variable = {type_crysis = 1}}
-        var:to_crysis = {
-            every_owned_state = {
-                limit = {
-                    OR = {
-                        is_claimed_by = PREV.PREV.sender_crysis
-                        is_core_of = PREV.PREV.sender_crysis
-                    }
-                }
-                var:sender_cr = {
-                    transfer_state = PREV
-                }
-            }
-        }
-    }
-    else_if = { #минор
-        limit = {check_variable = {type_crysis = 2}}
-        var:to_crysis = {
-            release_on_controlled = minor_crysis
-        }
-    }
-}
-
-d_show_crysis = {
-    if = {
-        limit = {has_country_flag = cheat_show_cr_win}
-        clr_country_flag = cheat_show_cr_win
-    }
-    else = {
-        set_country_flag = cheat_show_cr_win
-    }
-}

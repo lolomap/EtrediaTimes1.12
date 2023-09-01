@@ -144,6 +144,11 @@ focus_tree = {
 			country_exists = KUL
 			KUL = {is_subject = no}
 		}
+
+        bypass = {
+            NOT = {country_exists = FSC}
+            NOT = {country_exists = KUL}
+        }
 		
 		completion_reward = {
 			UCB = { give_guarantee = KUL }
@@ -151,7 +156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_kulishtia2
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_kulishtia2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_kulishtia
@@ -178,7 +183,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_anti_IID
-		icon = GFX_focus_rom_abdicate
+		icon = GFX_goal_ucb_dem_anti_IID
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_fsc_conversation
@@ -206,7 +211,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_iid_war
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_iid_war
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_anti_IID
@@ -224,6 +229,69 @@ focus_tree = {
 		y = 9
 
 	}
+    focus = {
+        id = UCB_nukes_anti
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 10
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_nukes
+        }
+        mutually_exclusive = {
+            focus = UCB_nukes_rockets
+        }
+    
+        completion_reward = {
+            add_ideas = UCB_nukes_anti_idea
+        }
+    }
+    focus = {
+        id = UCB_nukes
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 9
+        y = 10
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_dem_iid_war
+            focus = UCB_dem_newfactories
+        }
+        prerequisite = {focus = UCB_dem_slot1}
+    
+        completion_reward = {
+            add_building_construction = {
+                type = nuclear_reactor
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+    focus = {
+        id = UCB_nukes_rockets
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 8
+        y = 11
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_nukes
+        }
+        mutually_exclusive = {
+        	focus = UCB_nukes_anti
+        }
+    
+        completion_reward = {
+            add_ideas = UCB_nukes_rockets_idea
+        }
+    }
 	focus = {
 		id = UCB_dem_ndro2
 		icon = GFX_goal_ucb_dem_ndro2
@@ -240,12 +308,55 @@ focus_tree = {
 			}
 		}
 		x = 2
-		y = 9
+		y = 10
 
 	}
+    focus = {
+        id = UCB_dem_anrax
+        icon = GFX_goal_ucb_dem_anrax
+        cost = 10
+        x = 5
+        y = 11
+        available = {has_war = no}
+        bypass = {NOT = {country_exists = ANR}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_dem_ndro2
+        }
+        prerequisite = {
+            focus = UCB_dem_kulishtia2
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            ANR = {UCB = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}}
+        }
+    }
+    focus = {
+        id = UCB_dem_anrax2
+        icon = GFX_goal_ucb_dem_anrax2
+        cost = 10
+        x = 5
+        y = 12
+        available = {ANR = {is_subject_of = UCB}}
+        bypass = {NOT = {country_exists = ANR}}
+        allow_branch = {}
+        prerequisite = {
+            focus = UCB_dem_anrax
+        }
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+    
+        completion_reward = {
+            annex_country = {target = ANR transfer_troops = yes}
+        }
+    }
 	focus = {
 		id = UCB_dem_IID
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_goal_ucb_dem_IID
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_fsc_conversation
@@ -406,7 +517,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_military_reform
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_goal_ucb_dem_military_reform
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem1
@@ -450,7 +561,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem1
 		}
-		x = 21
+		x = 22
 		y = 4
 		
 		completion_reward = {
@@ -491,7 +602,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_gov_reform
 		}
-		x = 21
+		x = 22
 		y = 5
 
 		completion_reward = {
@@ -519,7 +630,7 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_dem_stabilnost
 		}
-		x = 21
+		x = 22
 		y = 6
 
 		completion_reward = {
@@ -540,6 +651,24 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = UCB_fight_with_mafia
+		icon = GFX_goal_ucb_dem_fight_with_mafia
+		cost = 5
+		prerequisite = {
+			focus = UCB_dem_autonomy
+		}
+		x = 19
+		y = 7
+
+		completion_reward = {
+			add_political_power = 50
+			UCB = { country_event = ucnb.34 days = 10 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = UCB_dem_compromis
 		icon = GFX_goal_ucb_dem_compromis
 		cost = 5
@@ -549,7 +678,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UCB_dem_battle
 		}
-		x = 20
+		x = 21
 		y = 7
 
 		completion_reward = {
@@ -573,12 +702,12 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_new_parlament
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_new_parlament
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_compromis
 		}
-		x = 20
+		x = 21
 		y = 8
 
 		completion_reward = {
@@ -586,6 +715,10 @@ focus_tree = {
             add_popularity = {
 				ideology = fascism
 				popularity = 0.1
+			}
+            add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
 			}
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
@@ -606,7 +739,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UCB_dem_compromis
 		}
-		x = 22
+		x = 23
 		y = 7
 
 		completion_reward = {
@@ -632,12 +765,12 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_nazi_off
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_nazi_off
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_battle
 		}
-		x = 22
+		x = 23
 		y = 8
 
 		completion_reward = {
@@ -656,7 +789,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_kolechian_question
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_kolechian_question
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_nazi_off
@@ -667,7 +800,7 @@ focus_tree = {
 			country_event = { id = ucnb.17 days = 1 }
 		}
 
-		x = 21
+		x = 22
 		y = 9
 
 	}
@@ -920,7 +1053,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_dotaci
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_dotaci
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_kolechian_question
@@ -990,11 +1123,22 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_separatism_off
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_separatism_off
 		cost = 5
 		prerequisite = {
 			focus = UCB_dem_dotaci
 		}
+
+        available = {
+            FSC = {
+                OR = {
+                    NOT = {has_completed_focus = FSC_fuel_desire_to_be_free}
+                    exists = no
+                    is_subject = yes
+                    has_idea = FSC_lose
+                }
+            }
+        }
 		
 		completion_reward = {
 			add_political_power = 25
@@ -1252,6 +1396,10 @@ focus_tree = {
 			focus = UCB_dem_industrial2
 			focus = UCB_dem_oil_factory
 		}
+		completion_reward = {
+			add_ideas = UCB_tajiki_idea
+			add_ideas = free_entry
+		}
 		x = 17
 		y = 10
 
@@ -1355,7 +1503,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_global_reorganize
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_ucb_dem_global_reorganize
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_military_reform
@@ -1392,7 +1540,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_army_training
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_ucb_dem_army_training
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_global_reorganize
@@ -1506,7 +1654,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_slot2
-		icon = GFX_focus_research
+		icon = GFX_goal_ucb_dem_slot2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_global_reorganize
@@ -1523,7 +1671,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_tanks
-		icon = GFX_focus_generic_license_production
+		icon = GFX_goal_ucb_dem_tanks
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_slot2
@@ -1541,7 +1689,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_pehotka
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_ucb_dem_pehotka
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_army_training
@@ -1559,7 +1707,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_planes
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_planes
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_tanks
@@ -1583,6 +1731,7 @@ focus_tree = {
 			focus = UCB_dem_planes
 		}
 		completion_reward = {
+			add_war_support = 0.05
 			add_timed_idea = { idea = UCB_rearmament days = 160 }
 		}
 		x = 10
@@ -2453,7 +2602,11 @@ focus_tree = {
         x = 51
         y = 6
         available = {}
-        bypass = {}
+        bypass = {
+            FSC = {
+                has_completed_focus = FSC_fuel_desire_to_be_free
+            }
+        }
         prerequisite = {
             focus = UCB_fascism_way
             focus = UCB_neutrality_way
@@ -2937,7 +3090,7 @@ focus_tree = {
         cost = 15
         x = 43
         y = 13
-        available = {}
+        available = {has_war = yes}
         bypass = {}
         allow_branch = {}
         prerequisite = {
@@ -2951,6 +3104,11 @@ focus_tree = {
             add_building_construction = {
                 type = nuclear_reactor
                 level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = nuclear_rocket_site
+                level = 2
                 instant_build = yes
             }
             add_building_construction = {

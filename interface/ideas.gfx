@@ -1,6 +1,50 @@
 spriteTypes = {	
 
+    SpriteType = {
+        name = "GFX_state_economic_zone"
+        texturefile = "gfx/interface/stateview/economic_zone.dds"
+    }
     spriteType = {
+		name = "GFX_idea_stability_bad"
+		texturefile = "gfx/interface/ideas/idea_stability_bad.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_middle"
+		texturefile = "gfx/interface/ideas/idea_stability_middle.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_nice"
+		texturefile = "gfx/interface/ideas/idea_stability_nice.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_great"
+		texturefile = "gfx/interface/ideas/idea_stability_great.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_heaven"
+		texturefile = "gfx/interface/ideas/idea_stability_heaven.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_0"
+		texturefile = "gfx/interface/ideas/idea_socials_0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_1"
+		texturefile = "gfx/interface/ideas/idea_socials_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_2"
+		texturefile = "gfx/interface/ideas/idea_socials_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_3"
+		texturefile = "gfx/interface/ideas/idea_socials_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_socials_4"
+		texturefile = "gfx/interface/ideas/idea_socials_4.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_fractionism"
 		texturefile = "gfx/interface/ideas/frakcionnost.dds"
 	}
@@ -11,6 +55,18 @@ spriteTypes = {
     spriteType = {
 		name = "GFX_idea_regionalism"
 		texturefile = "gfx/interface/ideas/regionalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOA_recrut_pic"
+		texturefile = "gfx/interface/ideas/idea_MOA_recrut_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOA_difficult_construct_pic"
+		texturefile = "gfx/interface/ideas/idea_MOA_difficult_construct_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOA_debts_pic"
+		texturefile = "gfx/interface/ideas/idea_MOA_debts_pic.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_NIB_property_redistribution"
@@ -25,6 +81,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_NIB_Ardemama_development_plan.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_TRB_ports_rentals_pic"
+		texturefile = "gfx/interface/ideas/idea_TRB_ports_rentals_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BAE_beer_industry_pic"
+		texturefile = "gfx/interface/ideas/idea_BAE_beer_industry_pic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RTT_fortress_of_riverland_pic"
+		texturefile = "gfx/interface/ideas/idea_RTT_fortress_of_riverland_pic.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_UCB_des_army"
 		texturefile = "gfx/interface/ideas/idea_UCB_des_army.dds"
 	}
@@ -36,6 +104,10 @@ spriteTypes = {
 		name = "GFX_idea_IID_neutrality_politics"
 		texturefile = "gfx/interface/ideas/idea_IID_neutrality_politics.dds"
 	}
+    spriteType = {
+        name = "GFX_SBU_political_advisor_klyacheck"
+        texturefile = "gfx/interface/ideas/SBU_political_advisor_klyacheck.dds"
+    }
 	spriteType = {
 		name = "GFX_IID_political_advisor_Nero_Kvatini"
 		texturefile = "gfx/interface/ideas/IID_political_advisor_Nero_Kvatini.dds"

@@ -5,62 +5,62 @@ UCB_annex_minors = {
 
 	ai_strategy = {
 		type = annex
-		id = "KOL"
+		id = KOL
 		value = 10000
 	}
 	ai_strategy = {
 		type = conquer
-		id = "KOL"
+		id = KOL
 		value = 10000
 	}
 	ai_strategy = {
 		type = annex
-		id = "KIM"
+		id = KIM
 		value = 10000
 	}
 	ai_strategy = {
 		type = conquer
-		id = "KIM"
+		id = KIM
 		value = 10000
 	}
 	ai_strategy = {
 		type = annex
-		id = "DIN"
+		id = DIN
 		value = 10000
 	}
 	ai_strategy = {
 		type = conquer
-		id = "DIN"
+		id = DIN
 		value = 10000
 	}
 	ai_strategy = {
 		type = annex
-		id = "ARS"
+		id = ARS
 		value = 10000
 	}
 	ai_strategy = {
 		type = conquer
-		id = "ARS"
+		id = ARS
 		value = 10000
 	}
 	ai_strategy = {
 		type = annex
-		id = "NRA"
+		id = NRA
 		value = 10000
 	}
 	ai_strategy = {
 		type = conquer
-		id = "NRA"
+		id = NRA
 		value = 10000
 	}
 	ai_strategy = {
 		type = annex
-		id = "SRA"
+		id = SRA
 		value = 10000
 	}
 	ai_strategy = {
 		type = conquer
-		id = "SRA"
+		id = SRA
 		value = 10000
 	}
 }
@@ -78,22 +78,22 @@ ucb_protect_democratic_sheregia = {
 	
 	ai_strategy = {
 		type = protect
-		id = "SHE"
+		id = SHE
 		value = 100
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "SHE"
+		id = SHE
 		value = 100
 	}
 	ai_strategy = {
 		type = support
-		id = "SHE"
+		id = SHE
 		value = 100
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SHE"
+		id = SHE
 		value = 100
 	}
 }
@@ -114,17 +114,17 @@ ucb_protect_democratic_diria = {
 
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "DEM"
+		id = DEM
 		value = 50
 	}
 	ai_strategy = {
 		type = support
-		id = "DEM"
+		id = DEM
 		value = 100
 	}
 	ai_strategy = {
 		type = alliance
-		id = "DIR"
+		id = DIR
 		value = -500
 	}
 }
@@ -141,7 +141,7 @@ ucb_dem_alliance = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "DEM"
+		id = DEM
 		value = 500
 	}
 }

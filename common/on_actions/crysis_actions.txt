@@ -3,7 +3,7 @@ on_actions = {
         effect = {
             #Начало кризиса
             if = {
-                limit = {has_global_flag = CRYSIS_ALLOWED}
+                limit = {has_global_flag = CRYSIS_ALLOWED always = no}
                 if = {
                     limit = {
                         threat > 0.4
@@ -23,8 +23,8 @@ on_actions = {
                                 limit = {crysis_startable = yes}
                             
                                 set_temp_variable = {crysis_wish = -70}
-                                set_temp_variable = {widif = ROOT.world_influence}
-                                subtract_from_temp_variable = {widif = THIS.world_influence}
+                                set_temp_variable = {widif = ROOT.crysis_influence}
+                                subtract_from_temp_variable = {widif = THIS.crysis_influence}
 
                                 #НАЛИЧИЕ ПРИЧИНЫ
 

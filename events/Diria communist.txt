@@ -254,6 +254,7 @@ country_event = {
     }
 }
 
+#Ивент на признание
 country_event = {
 	id = dircom.11
 	title = dircom.11.t
@@ -276,98 +277,7 @@ country_event = {
 		}
         ai_chance = { factor = 10 }
 	}
-	option = {
-		name = dircom.11.ucb2
-		trigger = {
-			TAG = UCB
-		}
-		DIR = { country_event = { id = dircom.12 days = 3 }
-		
-        }
-        ai_chance = { factor = 90 }
-	}
-	option = {
-		name = dircom.11.sbu1
-		trigger = {
-			TAG = SBU
-		}
-		DIR = { country_event = { id = dircom.13 days = 6 }
-		
-    }ai_chance = { factor = 10 }
-	}
-	option = {
-		name = dircom.11.sbu2
-		trigger = {
-			TAG = SBU
-		}
-		DIR = { country_event = { id = dircom.14 days = 6 }
-		
-    }ai_chance = { factor = 90 }
-	}
-	option = {
-		name = dircom.11.eik1
-		trigger = {
-			TAG = EIK
-		}
-		DIR = { country_event = { id = dircom.15 days = 2 }
-		
-    }ai_chance = { factor = 10 }
-	}
-	option = {
-		name = dircom.11.eik2
-		trigger = {
-			TAG = EIK
-		}
-		DIR = { country_event = { id = dircom.16 days = 2 }
-		
-    }ai_chance = { factor = 90 }
-	}
-	option = {
-		name = dircom.11.yan1
-		trigger = {
-			TAG = YAN
-		}
-		DIR = { country_event = { id = dircom.17 days = 5 }
-		
-    }ai_chance = { factor = 15 }
-	}
-	option = {
-		name = dircom.11.yan2
-		trigger = {
-			TAG = YAN
-		}
-		DIR = { country_event = { id = dircom.18 days = 5 }
-		
-    }ai_chance = { factor = 85 }
-	}
-	
-	option = {
-		name = dircom.11.moa1
-		trigger = {
-			TAG = MOA
-		}
-		DIR = { country_event = { id = dircom.19 days = 16 }
-		
-    }ai_chance = { factor = 10 }
-	}
-	
-	option = {
-		name = dircom.11.moa2
-		trigger = {
-			TAG = MOA
-		}
-		DIR = { country_event = { id = dircom.20 days = 16 }
-		
-    }ai_chance = { factor = 90 }
-	}
-	option = {
-		name = dircom.11.iid1
-		trigger = {
-			TAG = IID
-		}
-		DIR = { country_event = { id = dircom.21 days = 12 }
-    }
-	}
+	############
 }
 
 country_event = {
@@ -667,6 +577,8 @@ country_event = {
 			add_state_core = 794
 			add_state_core = 795
 			add_state_core = 796
+			add_state_core = 797
+			add_state_core = 809
 		}
 		}
 		DIB = {
@@ -731,6 +643,8 @@ country_event = {
 			add_state_core = 794
 			add_state_core = 795
 			add_state_core = 796
+			add_state_core = 797
+			add_state_core = 809
 		}
 		}
 		DIB = {

@@ -13,6 +13,7 @@ add_ideas = {
         limited_entry
         regionalism
     sforces_5
+	socials_3
 }
 
 set_technology = {basic_train = 1

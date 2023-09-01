@@ -1369,6 +1369,7 @@ country_event = { # Кризис закончился (call in crysis sender)
     }
 
     immediate = {
+        set_country_flag = STOP_FUCKING_CRYSIS
         var:sender_crysis = {set_country_flag = {flag = crysis_delay days = 360 value = 1}}
         if = { # Оба не уступили
             limit = {
@@ -1376,54 +1377,15 @@ country_event = { # Кризис закончился (call in crysis sender)
                 var:cr_to_op = {has_country_flag = crysis_press}
             }
 
-            set_temp_variable = {swie = crysis_s_totalwi}
-            if = { limit = {crysis_t_totalwi > 1}
-                divide_temp_variable = {swie = crysis_t_totalwi }
-            }
-            set_temp_variable = {twie = crysis_t_totalwi}
-            if = { limit = {crysis_s_totalwi > 1}
-                divide_temp_variable = {twie = crysis_s_totalwi }
-            }
-
-            every_country = {
-                limit = {
-                    OR = {
-                        check_variable = {political_crysis_member = PREV}
-                        tag = var:PREV.sender_crysis
-                        tag = var:PREV.to_crysis
-                    }
-                    NOT = {is_in_array = {PREV.crysis_majors = THIS}}
-                }
-                set_variable = { escalation_score = 30 }
-                if = {  limit = {check_variable = { world_influence > 1 }}
-                    add_to_variable = { escalation_score = world_influence }
-                }
-                if = {  limit = {check_variable = {faction_leader.faction_influence > 1}}
-                    add_to_variable = {escalation_score = faction_leader.faction_influence }
-                }
-                if = { limit = {OR = {is_in_array = {PREV.crysis_senders = THIS} tag = var:PREV.sender_crysis}}
-                    multiply_variable = {escalation_score = swie}
-                }
-                if = { limit = {OR = {is_in_array = {PREV.crysis_tos = THIS} tag = var:PREV.to_crysis}}
-                    multiply_variable = {escalation_score = twie}
-                }
-                set_variable = {escalation_member = PREV}
-            }
-
-            var:sender_crysis = {
-                add_to_variable = { escalation_score = 35 }
-                set_variable = {escalation_timer = 0}
-            }
-            var:to_crysis = {
-                add_to_variable = { escalation_score = 25 }
-            }
-
+            calc_escalation_scores = yes
         }
         else_if = { # Атака уступила
             limit = {
                 var:cr_send_op = {not = {has_country_flag = crysis_press}}
                 var:cr_to_op = {has_country_flag = crysis_press}
+                #has_country_flag = cr_a_allow
             }
+            log = "ATACKERS ALLOW"
             for_each_scope_loop = {
                 array = crysis_senders
                 add_timed_idea = {idea = sender_loose_crysis days = 150}
@@ -1432,11 +1394,13 @@ country_event = { # Кризис закончился (call in crysis sender)
                 add_timed_idea = {idea = sender_loose_crysis days = 150}
             }
         }
-        else_if = { # Оборона уступила
-            limit = {
-                var:cr_send_op = {has_country_flag = crysis_press}
-                var:cr_to_op = {not = {has_country_flag = crysis_press}}
-            }
+        else = { #else_if = { # Оборона уступила
+            #limit = {
+                #var:cr_send_op = {has_country_flag = crysis_press}
+                #var:cr_to_op = {not = {has_country_flag = crysis_press}}
+                #has_country_flag = cr_d_allow
+            #}
+            log = "DEFENDERS ALLOW"
             
             var:sender_crysis = {crysis_reward = yes}
         }
@@ -1491,7 +1455,8 @@ country_event = { #call in crysis sender
             add_to_variable = {crysis_timer = 1.666}
             country_event = {id = mechanics.37 days = 1}
         }
-        else = {
+        else_if = {
+            limit = {NOT = {has_country_flag = STOP_FUCKING_CRYSIS}}
             force_press = yes
             country_event = {id = mechanics.36 days = 2}
         }
@@ -1606,6 +1571,29 @@ country_event = {
     }
     option = {
         name = mechanics.40.b
+    }
+}
+
+country_event = {
+    id = mechanics.41
+    title = mechanics.41.t
+    desc = mechanics.41.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=mechanics.41.a
+        
+    }
+    option = {
+        name = mechanics.41.b
+
+        set_country_flag = allow_export_eq_@FROM
+        set_temp_variable = { temp = FROM }
+        custom_effect_tooltip = allow_export_eq_tt
     }
 }
 

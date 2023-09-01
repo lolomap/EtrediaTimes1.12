@@ -62,57 +62,61 @@ scripted_gui = {
                 ai_will_do = {
                     base = -60
                     modifier = {
-                        ROOT = {
-                            has_opinion = {
-                                target = PREV.OWNER
-                                value > 0
+                        OWNER = {
+                            ROOT = {
+                                has_opinion = {
+                                    target = PREV
+                                    value > 0
+                                }
                             }
                         }
                         add = -50
                     }
                     modifier = {
-                        ROOT = {
-                            has_opinion = {
-                                target = PREV.OWNER
-                                value < 0
+                        OWNER = {
+                            ROOT = {
+                                has_opinion = {
+                                    target = PREV
+                                    value < 0
+                                }
                             }
                         }
                         add = 20
                     }
                     modifier = {
-                        ROOT = {
-                            has_opinion = {
-                                target = PREV.OWNER
-                                value < -10
+                        OWNER = {
+                            ROOT = {
+                                has_opinion = {
+                                    target = PREV
+                                    value < -10
+                                }
                             }
                         }
                         add = 20
                     }
                     modifier = {
-                        ROOT = {
-                            has_opinion = {
-                                target = PREV.OWNER
-                                value < -20
+                        OWNER = {
+                            ROOT = {
+                                has_opinion = {
+                                    target = PREV
+                                    value < -20
+                                }
                             }
                         }
                         add = 40
                     }
                     modifier = {
-                        ROOT = {
-                            has_wargoal_against = PREV.OWNER
-                        }
-                        add = 40
-                    }
-                    modifier = {
-                        ROOT = {
-                            has_war_with = PREV.OWNER
+                        OWNER = {
+                            ROOT = {
+                                has_war_with = PREV
+                            }
                         }
                         add = 100
                     }
-                    modifier = {
-                        OWNER = {num_of_nukes > 0}
-                        add = 50
-                    }
+                    #modifier = {
+                    #    OWNER = {num_of_nukes > 0}
+                    #    add = 50
+                    #}
                     modifier = {
                         check_variable = { arms_factory_level < 1 }
                         check_variable = { industrial_complex_level < 1 }
@@ -141,7 +145,7 @@ scripted_gui = {
                         add = 1000
                     }
                     modifier = {
-                        is_capital
+                        is_capital = yes
                         add = 20
                     }
                     modifier = {

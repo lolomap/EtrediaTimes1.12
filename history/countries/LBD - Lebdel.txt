@@ -11,6 +11,7 @@ add_ideas = {
         nonfree_press
 	fifth_corruption_level
     sforces_3
+	socials_1
 }
 
 set_technology = {basic_train = 1

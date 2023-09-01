@@ -13,6 +13,7 @@ add_ideas = {
         limited_entry
 	third_corruption_level
     continuity_d
+	socials_3
 }
 
 set_technology = {basic_train = 1

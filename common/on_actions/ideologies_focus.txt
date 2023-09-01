@@ -12,6 +12,7 @@ on_actions = {
                 UCB = {set_country_flag = ideology_protection}
                 SBU = {set_country_flag = ideology_protection}
                 SFL = {set_country_flag = ideology_protection}
+                FSC = {set_country_flag = ideology_protection}
             }
         }
     }

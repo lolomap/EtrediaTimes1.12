@@ -2,7 +2,7 @@ state={
 	id=213
 	name="STATE_213"
 	manpower = 647000
-	state_category = pastoral
+	state_category = rural
 	
 	resources={
 	}
@@ -10,9 +10,7 @@ state={
 	history={
 		owner = SBU
 		buildings = {
-			infrastructure = 2
-                        industrial_complex = 0
-                        arms_factory = 0
+			infrastructure = 1
 		}
 		add_core_of = SBU
 		add_core_of = ELN

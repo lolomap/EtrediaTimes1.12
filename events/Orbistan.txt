@@ -264,36 +264,6 @@ country_event = {
 }
 
 country_event = {
-	id = orb.42
-	title = orb.42.t
-	desc = orb.42.d
-
-	fire_only_once = yes
-	trigger = {
-		country_exists = UCB
-		ORB = {
-			has_war = no
-		}
-		not = {country_exists = FSC}
-	}
-
-	mean_time_to_happen = {days = 30}
-
-	option = {
-		name = orb.42.a
-
-		UCB = {annex_country = {target = ORB transfer_troops = yes}}
-
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		name = 42.b
-	}
-}
-
-country_event = {
 	id = orb.43
 	title = orb.43.t
 	desc = orb.43.d
@@ -303,6 +273,7 @@ country_event = {
 	option = {
 		name = orb.43.a
 
+        set_cosmetic_tag = ORB_UCB
 		UCB = {annex_country = {target = ORB transfer_troops = yes}}
 		UCB = { country_event = { id = ucnb.23 days = 1 } }
 

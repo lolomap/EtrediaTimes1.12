@@ -1,6 +1,288 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_dem_army_training"
+	texturefile="gfx/interface/goals/goal_ucb_dem_army_training.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_tanks"
+	texturefile="gfx/interface/goals/goal_ucb_dem_tanks.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_slot2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_slot2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_planes"
+	texturefile="gfx/interface/goals/goal_ucb_dem_planes.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_pehotka"
+	texturefile="gfx/interface/goals/goal_ucb_dem_pehotka.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_global_reorganize"
+	texturefile="gfx/interface/goals/goal_ucb_dem_global_reorganize.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_military_reform"
+	texturefile="gfx/interface/goals/goal_ucb_dem_military_reform.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_separatism_off"
+	texturefile="gfx/interface/goals/goal_ucb_dem_separatism_off.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_new_parlament"
+	texturefile="gfx/interface/goals/goal_ucb_dem_new_parlament.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_nazi_off"
+	texturefile="gfx/interface/goals/goal_ucb_dem_nazi_off.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_kolechian_question"
+	texturefile="gfx/interface/goals/goal_ucb_dem_kolechian_question.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_fight_with_mafia"
+	texturefile="gfx/interface/goals/goal_ucb_dem_fight_with_mafia.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_dotaci"
+	texturefile="gfx/interface/goals/goal_ucb_dem_dotaci.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_support_metal_production"
+	texturefile="gfx/interface/goals/goal_sfl_support_metal_production.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_sm_economic_zone"
+	texturefile="gfx/interface/goals/goal_sfl_sm_economic_zone.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_oil_in_IID"
+	texturefile="gfx/interface/goals/goal_sfl_oil_in_IID.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_national_idea"
+	texturefile="gfx/interface/goals/goal_sfl_national_idea.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_investition_plan"
+	texturefile="gfx/interface/goals/goal_sfl_investition_plan.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_industry_EC"
+	texturefile="gfx/interface/goals/goal_sfl_industry_EC.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_improve_trading"
+	texturefile="gfx/interface/goals/goal_sfl_improve_trading.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_improve_MOF_relations"
+	texturefile="gfx/interface/goals/goal_sfl_improve_MOF_relations.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_HLE_resources"
+	texturefile="gfx/interface/goals/goal_sfl_HLE_resources.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_economic_program"
+	texturefile="gfx/interface/goals/goal_sfl_economic_program.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_volunteers"
+	texturefile="gfx/interface/goals/goal_sfl_volunteers.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_east_mof_autonomy"
+	texturefile="gfx/interface/goals/goal_sfl_east_mof_autonomy.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_join_EC"
+	texturefile="gfx/interface/goals/goal_sfl_join_EC.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_involve_NER"
+	texturefile="gfx/interface/goals/goal_sfl_involve_NER.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_SBU_enemy"
+	texturefile="gfx/interface/goals/goal_sfl_SBU_enemy.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_SBU_friend"
+	texturefile="gfx/interface/goals/goal_sfl_SBU_friend.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_influence_MOF"
+	texturefile="gfx/interface/goals/goal_sfl_influence_MOF.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_economic_connections"
+	texturefile="gfx/interface/goals/goal_sfl_economic_connections.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_cultural_connections"
+	texturefile="gfx/interface/goals/goal_sfl_cultural_connections.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_create_MSAC"
+	texturefile="gfx/interface/goals/goal_sfl_create_MSAC.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_unitarian"
+	texturefile="gfx/interface/goals/goal_sfl_unitarian.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_trade_war"
+	texturefile="gfx/interface/goals/goal_sfl_trade_war.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_trade_ISH"
+	texturefile="gfx/interface/goals/goal_sfl_trade_ISH.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_SBU_competitors"
+	texturefile="gfx/interface/goals/goal_sfl_SBU_competitors.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_past_present_future"
+	texturefile="gfx/interface/goals/goal_sfl_past_present_future.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_federalization"
+	texturefile="gfx/interface/goals/goal_sfl_federalization.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_exit_isolation"
+	texturefile="gfx/interface/goals/goal_sfl_exit_isolation.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_democratic_changes"
+	texturefile="gfx/interface/goals/goal_sfl_democratic_changes.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_kulishtia2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_kulishtia2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_iid_war"
+	texturefile="gfx/interface/goals/goal_ucb_dem_iid_war.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_IID"
+	texturefile="gfx/interface/goals/goal_ucb_dem_IID.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_anti_IID"
+	texturefile="gfx/interface/goals/goal_ucb_dem_anti_IID.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_anrax2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_anrax2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_anrax"
+	texturefile="gfx/interface/goals/goal_ucb_dem_anrax.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_strong_arm"
 	texturefile="gfx/interface/goals/goal_ucb_strong_arm.dds"
 }

@@ -168,7 +168,7 @@ news_event = {
 		id = newss.5 #Республика Сибурленд объявляет операцию «Альдеко»
 		title = newss.5.t
 		desc = newss.5.d
-		picture = GFX_news_event_001
+		picture = GFX_news_event_aldeko
 
 	major = yes
  
@@ -348,7 +348,7 @@ news_event = {
 	id = newss.12 #Коммунисты Дирии
 	title = newss.12.t
 	desc = newss.12.d
-	picture = GFX_news_event_001
+	picture = GFX_news_event_diria_revolution
  
 	major = yes
 
@@ -570,6 +570,7 @@ news_event = { #Генцоид в Дангарии
 	id = newss.21
 	title = newss.21.t
 	desc = newss.21.d
+    picture = GFX_news_event_dangaria
 
 	is_triggered_only = yes
 	
@@ -704,6 +705,7 @@ news_event = { #Янтхалия вторгается на острова
 	id = newss.25
 	title = newss.25.t
 	desc = newss.25.d
+    picture = GFX_news_event_yanthalia_invades_isles
 
 	is_triggered_only = yes
 	

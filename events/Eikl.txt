@@ -18,7 +18,6 @@ country_event = {
 		   transfer_state = 157
 		   }
     }
-	
 	option = {
 		name = eik.1.b
             country_event = { id = eik.2 days = 1 }
@@ -27,76 +26,72 @@ country_event = {
 }
 
 country_event = {
-        id = eik.2
-        title = eik.2.t
-        desc = eik.2.d
+    id = eik.2
+    title = eik.2.t
+     desc = eik.2.d
 
-        is_triggered_only = yes
+     is_triggered_only = yes
 
-        trigger = {
-            TAG = EIK
-		}
+    trigger = {
+        TAG = EIK
+	}
 
     option = {
     name = eik.2.a
     create_wargoal = {
-    type = take_state_focus
-    generator = { 157 }
-    target = SHE
+    	type = take_state_focus
+    	generator = { 157 }
+    	target = SHE
     }
-	add_threat = 20
+	add_threat = 15
 	UCB = { country_event = { id = ucnb.7 days = 1 } }
 	}
 }
 
 country_event = {
-        id = eik.3
-        title = eik.3.t
-        desc = eik.3.d
+    id = eik.3
+    title = eik.3.t
+    desc = eik.3.d
 
-        is_triggered_only = yes
+    is_triggered_only = yes
 
-        trigger = {
-            TAG = EIK
-		}
-
-        option = {
-		name = eik.3.a
-		TAG = EIK
-            create_wargoal = {
-                type = annex_everything
-                target = DIR
-            }
-            create_wargoal = {
-                type = annex_everything
-                target = DEM
-            }
-	    add_threat = 30
-		}
-}
-
-country_event = {
-        id = eik.4
-        title = eik.4.t
-        desc = eik.4.d
-
-        is_triggered_only = yes
-
-        trigger = {
-            TAG = EIK
-		}
-
-        option = {
-		name = eik.4.a
-		        TAG = EIK
-                create_wargoal = {
-                type = annex_everything
-                target = KAS
-                }
-				add_threat = 5
+    trigger = {
+        TAG = EIK
+	}
+    option = {
+	name = eik.3.a
+	TAG = EIK
+        create_wargoal = {
+            type = annex_everything
+            target = DIR
+        }
+        create_wargoal = {
+            type = annex_everything
+            target = DEM
+        }
+	add_threat = 50
 	}
 }
+country_event = {
+    id = eik.4
+    title = eik.4.t
+    desc = eik.4.d
 
+    is_triggered_only = yes
+
+    trigger = {
+        TAG = EIK
+	}
+
+    option = {
+	name = eik.4.a
+    create_wargoal = {
+        type = annex_everything
+        target = KAS
+    }
+	add_threat = 5
+	}
+}
 country_event = { # Роспуск парламента
     id = eik.5
     title = eik.5.t
@@ -119,39 +114,38 @@ country_event = { # Роспуск парламента
 		add_to_variable = {eik_oligarchism = 0.05}	
 	}
 }
-
+#Шэрэгия сдается
 country_event = {
-        id = eik.6
-        title = eik.6.t
-        desc = eik.6.d
+    id = eik.6
+    title = eik.6.t
+    desc = eik.6.d
 
-        is_triggered_only = yes
+    is_triggered_only = yes
 
-        trigger = {
-            TAG = EIK
-	    }
+    trigger = {
+        TAG = EIK
+	}
 
-        option = {
-		name = eik.6.a
-            EIK = {
-                if = {
-                limit = { SHE = { owns_state = 157 controls_state = 157 } } 
-		        transfer_state = 157
-                }
-			}
-			SHE = {
-            white_peace = EIK
-			country_event = { id = sheregia.3 days = 2 }
+    option = {
+	name = eik.6.a
+        EIK = {
+            if = {
+            limit = { SHE = { owns_state = 157 controls_state = 157 } } 
+		    transfer_state = 157
             }
-		    EIK = {
+		}
+		SHE = {
+        	white_peace = EIK
+			country_event = { id = sheregia.3 days = 2 }
+        }
+		EIK = {
             puppet = SHE_EIK
 		    puppet = SHE
 			}
-            ai_chance = { factor = 80 }		
+        ai_chance = { factor = 80 }		
 	    }
-
-        option = {
-		name = eik.6.b
+    option = {
+	name = eik.6.b
 		EIK = {
 			annex_country = {
 			    target = SHE
@@ -159,22 +153,23 @@ country_event = {
 			}
 		}
         ai_chance = { factor = 20 }	
-	    }
+	}
 }
 
 country_event = {
-        id = eik.7
-        title = eik.7.t
-        desc = eik.7.d
+    id = eik.7
+    title = eik.7.t
+    desc = eik.7.d
 
-        is_triggered_only = yes
+    is_triggered_only = yes
 
-        trigger = {
-            TAG = EIK
-		}
+    trigger = {
+        TAG = EIK
+	}
 
-        option = {
-		name = eik.7.a	
+    option = {
+		name = eik.7.a
+		add_stability = 0.025
 	}
 }
 
@@ -311,7 +306,6 @@ country_event = {
 			}
 		}
 }
-
 country_event = {
         id = eik.12
         title = eik.12.t
@@ -327,7 +321,6 @@ country_event = {
 		name = eik.12.a	
 		}
 }
-
 country_event = {
         id = eik.13
         title = eik.13.t
@@ -343,7 +336,6 @@ country_event = {
 		name = eik.13.a	
 		}
 }
-
 country_event = { # Олигархи у власти
 	id = eik.14
 	title = eik.14.t
@@ -362,7 +354,6 @@ country_event = { # Олигархи у власти
 		#load_focus_tree = generic_focus
 	}
 }
-
 country_event = { # Генерал у власти
 	id = eik.15
 	title = eik.15.t
@@ -987,7 +978,6 @@ country_event = { #Запуск случайного олигархическо�
 	}
 	option = {name = eik.29.a}
 }
-
 country_event = {
 	id = eik.30
 	title = eik.30.t
@@ -999,5 +989,91 @@ country_event = {
 		name = eik.30.a
 		add_political_power = 50
 		add_ideas = EIK_nord_ideals
+	}
+}
+#Однопартийная система
+country_event = {
+	id = eik.31
+	title = eik.31.t
+	desc = eik.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = eik.31.a
+		add_stability = 0.05
+	}
+}
+#Бартеньяны согласны на сотрудничество
+country_event = {
+	id = eik.32
+	title = eik.32.t
+	desc = eik.32.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = eik.32.a
+		add_stability = 0.05
+		hidden_effect = {
+			EIK = {
+				add_opinion_modifier = {
+                target = BRT
+                modifier = partnership
+				}
+            }
+			BRT = {
+				add_opinion_modifier = {
+                target = EIK
+                modifier = partnership
+            	}
+			}
+		}
+	}
+}
+#Бартеньяны отказались от сотрудничества
+country_event = {
+	id = eik.33
+	title = eik.33.t
+	desc = eik.33.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = eik.33.a
+		add_stability = -0.05
+		hidden_effect = {
+			EIK = {
+				add_opinion_modifier = {
+                target = BRT
+                modifier = confrontation
+				}
+            }
+			BRT = {
+				add_opinion_modifier = {
+                target = EIK
+                modifier = confrontation
+            	}
+			}
+		}
+	}
+}
+#Радикалы вооружаются
+country_event = {
+	id = eik.34
+	title = eik.34.t
+	desc = eik.34.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = eik.34.a
+		add_stability = -0.05
+		custom_effect_tooltip = change_party_power
+		add_to_variable = {dem_opposition = 25}
+		swap_ideas = {
+			remove_idea = EIK_democratpartizan
+		    add_idea = EIK_democratpartizan_1
+		}
 	}
 }

@@ -39,6 +39,14 @@ war_measures = {
 	}
 }
 
+war_time_decisions = {
+	icon = generic_propaganda
+
+	visible = {
+		has_war = yes
+	}
+}
+
 foreign_support = {
 	icon = generic_political_actions
 	

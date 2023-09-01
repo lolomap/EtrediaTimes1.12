@@ -1,4 +1,3 @@
-
 FSC_protect_ortostan = {
 	allowed = {
 		original_tag = FSC
@@ -6,22 +5,22 @@ FSC_protect_ortostan = {
 	
 	ai_strategy = {
 		type = protect
-		id = "ORB"
+		id = ORB
 		value = 100
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "ORB"
+		id = ORB
 		value = 100
 	}
 	ai_strategy = {
 		type = support
-		id = "ORB"
+		id = ORB
 		value = 100
 	}
 	ai_strategy = {
 		type = conquer
-		id = "ORB"
+		id = ORB
 		value = 200
 	}
 }
@@ -33,13 +32,12 @@ FSC_UCB_rivalry = {
 	
 	ai_strategy = {
 		type = antagonize
-		id = "UCB"
-		value = 1000
+		id = UCB
+		value = 100
 	}
-	
 	ai_strategy = {
 		type = declare_war
-		id = "UCB"
+		id = UCB
 		value = 100
 	}
 }
@@ -57,13 +55,13 @@ FSC_UCB_war = {
 	
 	ai_strategy = {
 		type = declare_war
-		id = "UCB"
+		id = UCB
 		value = 100
 	}
 	
 	ai_strategy = {
 		type = prepare_for_war
-		id = "UCB"
+		id = UCB
 		value = 10
 	}
 }

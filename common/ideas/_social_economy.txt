@@ -3,6 +3,8 @@ ideas = {
         law = yes
 
         socials_4 = { #high socials
+		
+			picture = socials_4
  
             removal_cost = -1
             
@@ -29,9 +31,43 @@ ideas = {
                 political_power_factor = 0.15
                 MONTHLY_POPULATION = 0.5
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects > 25
+				}
+				modifier = {
+					add = 2
+					num_of_civilian_factories_available_for_projects > 15
+				}
+				modifier = {
+					add = 10
+					has_government = democratic
+				}
+				modifier = {
+					add = 10
+					is_major = no
+				}
+				modifier = {
+					add = -10
+					has_war = yes
+				}
+				modifier = {
+					add = -10
+					is_major = yes
+				}
+				modifier = {
+					add = -50
+					num_of_civilian_factories_available_for_projects < 10
+				}
+			}
         }
 
         socials_3 = {
+		
+			picture = socials_3
  
             removal_cost = -1
             
@@ -57,9 +93,55 @@ ideas = {
                 political_power_factor = 0.08
                 MONTHLY_POPULATION = 0.25
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects > 18
+				}
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects > 25
+				}
+				modifier = {
+					add = 1
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = 10
+					has_government = democratic
+				}
+				modifier = {
+					add = 10
+					has_government = communism
+				}
+				modifier = {
+					add = 10
+					is_major = no
+				}
+				modifier = {
+					add = -10
+					has_war = yes
+				}
+				modifier = {
+					add = -30
+					num_of_civilian_factories_available_for_projects < 10
+				}
+				modifier = {
+					add = 10
+					has_stability < 0.1
+				}
+			}
         }
 
         socials_2 = {
+		
+			picture = socials_2
  
             removal_cost = -1
             
@@ -79,11 +161,53 @@ ideas = {
                 stability_factor = 0.03
                 political_power_factor = 0.03
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 25
+					num_of_civilian_factories_available_for_projects > 25
+				}
+				modifier = {
+					add = 15
+					num_of_civilian_factories_available_for_projects > 15
+				}
+				modifier = {
+					add = 1
+					num_of_civilian_factories_available_for_projects < 15
+				}
+				modifier = {
+					add = 5
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = 10
+					has_government = democratic
+				}
+				modifier = {
+					add = 10
+					has_government = communism
+				}
+				modifier = {
+					add = 10
+					has_stability < 0.3
+				}
+				modifier = {
+					add = 10
+					has_stability < 0.1
+				}
+			}
 
             default = yes
         }
 
         socials_1 = { #low socials
+		
+			picture = socials_1
  
             removal_cost = -1
             
@@ -94,12 +218,46 @@ ideas = {
 
             modifier = {
                 consumer_goods_factor = -0.08
-                stability_factor = -0.05
+                stability_factor = -0.08
                 MONTHLY_POPULATION = -0.5
             }
+			
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects < 15
+				}
+				modifier = {
+					add = 15
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = 20
+					num_of_civilian_factories_available_for_projects < 5
+				}
+				modifier = {
+					add = -10
+					has_stability < 0.2
+				}
+				modifier = {
+					add = -10
+					has_stability < 0.1
+				}
+				modifier = {
+					add = 5
+					has_government = democratic
+				}
+				modifier = {
+					add = 5
+					has_government = communism
+				}
+			}
         }
 
         socials_0 = { #low socials
+		
+			picture = socials_0
  
             removal_cost = -1
             
@@ -114,6 +272,38 @@ ideas = {
                 MONTHLY_POPULATION = -1
                 war_support_factor = -0.1
             }
+			
+			ai_will_do = {
+   				base = 1
+				modifier = {
+					add = 10
+					num_of_civilian_factories_available_for_projects < 10
+				}
+				modifier = {
+					add = 20
+					num_of_civilian_factories_available_for_projects < 1
+				}
+				modifier = {
+					add = -10
+					has_stability < 0.3
+				}
+				modifier = {
+					add = -20
+					has_stability < 0.1
+				}
+				modifier = {
+					add = -10
+					has_war_support < 0.3
+				}
+				modifier = {
+					add = -10
+					has_government = democratic
+				}
+				modifier = {
+					add = -10
+					has_government = communism
+				}
+			}
         }
     }
 }

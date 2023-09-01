@@ -118,6 +118,20 @@ characters={
 			id=-1
 		}
 	}
+	UCB_Lucas_Onturtenfuer={
+		name=UCB_Lucas_Onturtenfuer
+		portraits={
+			civilian={
+				large="gfx/leaders/UCB/portrait_ucb_lucas.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	UCB_jimas_beldpo={
 		name=UCB_Jimas_Beldpo
 		portraits={
@@ -125,7 +139,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/leaders/UCB/Portrait_UCB_Beldpo.dds"
 			}
 		}
 		field_marshal={
@@ -150,7 +164,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/leaders/UCB/Portrait_UCB_Albergo.dds"
 			}
 		}
 		corps_commander={
@@ -185,6 +199,8 @@ characters={
         }
 
         advisor = {
+            available = {owns_state = 17}
+
             slot = political_advisor
             modifier = {
                 production_oil_factor = 0.5

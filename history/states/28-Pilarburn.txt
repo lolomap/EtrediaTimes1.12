@@ -3,14 +3,13 @@ state={
 	name="STATE_28"
 	manpower = 1000000
 	
-	state_category = rural
+	state_category = town
 
 	history={
 		owner = UCB
 		buildings = {
 			infrastructure = 3
-                        industrial_complex = 0
-                        arms_factory = 0
+                        industrial_complex = 2
 		}
 		add_core_of = UCB
                 add_core_of = TIR

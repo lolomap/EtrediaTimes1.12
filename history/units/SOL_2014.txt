@@ -88,7 +88,7 @@ units = {
 
 	division = {
 		name = "Infantry Militia"
-		location = 1018
+		location = 9029
 		division_template = "Infantry Militia"
 		start_experience_factor = 0.2
                 start_equipment_factor = 0.9

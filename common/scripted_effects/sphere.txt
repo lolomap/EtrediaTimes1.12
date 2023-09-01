@@ -2,7 +2,20 @@ involve_sphere = {
     remove_from_array = {sphere_neighbors = PREV}
     set_temp_variable = { overlordscope = THIS }
     add_to_array = { sphere_members = PREV }
+
+    if = {
+        limit = {
+            OR = {
+                NOT = {has_variable = sphere_color}
+            }
+        }
+        set_variable = { sphere_color = global.sphere_color_last }
+        add_to_variable = { global.sphere_color_last = 1 }
+        colorize_sphere = yes
+    }
+
     PREV = {
+        remove_from_sphere = yes
         set_variable = {sphere_owner = overlordscope}
         set_variable = { fembargo_cost = 0 }
 
@@ -34,7 +47,8 @@ involve_sphere = {
             }
         }
     }
-
+    
+    force_update_map_mode = {mapmode = spheres_map}
 }
 
 remove_from_sphere = {
@@ -46,6 +60,59 @@ remove_from_sphere = {
     #    target = sphere_owner
     #    decision = sphere_debuff
     #}
-    remove_mission = sphere_debuff
+    #remove_mission = sphere_debuff
     clear_variable = sphere_owner
+    force_update_map_mode = {mapmode = spheres_map}
+}
+
+colorize_sphere = {
+    if = {
+        limit = {check_variable = { sphere_color = 1 }}
+        set_variable = { sc_R = 1.0}
+        set_variable = { sc_B = 0.0}
+        set_variable = { sc_G = 0.0}
+    }
+    else_if = {
+        limit = {check_variable = { sphere_color = 2 }}
+        set_variable = { sc_R = 0.0}
+        set_variable = { sc_B = 1.0}
+        set_variable = { sc_G = 0.0}
+    }
+    else_if = {
+        limit = {check_variable = { sphere_color = 3 }}
+        set_variable = { sc_R = 0.0}
+        set_variable = { sc_B = 0.0}
+        set_variable = { sc_G = 1.0}
+    }
+    else_if = {
+        limit = {check_variable = { sphere_color = 4 }}
+        set_variable = { sc_R = 1.0}
+        set_variable = { sc_B = 0.0}
+        set_variable = { sc_G = 1.0}
+    }
+    else_if = {
+        limit = {check_variable = { sphere_color = 5 }}
+        set_variable = { sc_R = 1.0}
+        set_variable = { sc_B = 1.0}
+        set_variable = { sc_G = 1.0}
+    }
+    else_if = {
+        limit = {check_variable = { sphere_color = 6 }}
+        set_variable = { sc_R = 1.0}
+        set_variable = { sc_B = 1.0}
+        set_variable = { sc_G = 0.0}
+    }
+    else_if = {
+        limit = {check_variable = { sphere_color = 7 }}
+        set_variable = { sc_R = 0.0}
+        set_variable = { sc_B = 1.0}
+        set_variable = { sc_G = 1.0}
+    }
+
+
+    else = {
+        set_variable_to_random = {var = sc_R min = 0}
+        set_variable_to_random = {var = sc_G min = 0}
+        set_variable_to_random = {var = sc_B min = 0}
+    }
 }

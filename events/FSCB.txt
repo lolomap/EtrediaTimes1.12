@@ -254,7 +254,6 @@ country_event = {
 				set_rule = {can_join_factions = no}
 			}
 		    NER = { declare_war_on = { target = FSC type = annex_everything } }
-			SFL = { country_event = { id = sfl.1 days = 240 } }
         }	
 	}
 }
@@ -659,4 +658,129 @@ country_event = {
             target = TRP
 		}
 	}
+}
+
+country_event = {
+    id = fscb.24
+    title = fscb.24.t
+    desc = fscb.24.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.24.a
+        ai_chance = {
+            base = 50
+            modifier = {
+                is_historical_focus_on = yes
+                factor = 0
+            }
+        }
+    }
+    option = {
+        name = fscb.24.b
+        FROM = {give_guarantee = ROOT}
+        give_guarantee = FROM
+        ai_chance = {
+            base = 50
+        }
+    }
+}
+
+country_event = {
+    id = fscb.25
+    title = fscb.25.t
+    desc = fscb.25.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.25.a
+        
+    }
+}
+
+country_event = {
+    id = fscb.26
+    title = fscb.26.t
+    desc = fscb.26.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.26.a
+        
+    }
+}
+
+country_event = {
+    id = fscb.27
+    title = fscb.27.t
+    desc = fscb.27.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.27.a
+        hidden_effect = {
+            FSC = { release_on_controlled = NER }
+            NER = {set_country_flag = autonomy_state}
+        }
+        SFL = {
+            set_autonomy = {
+                target = NER
+                autonomy_state = autonomy_autonomy
+            }
+        }
+    }
+}
+
+country_event = {
+    id = fscb.28
+    title = fscb.28.t
+    desc = fscb.28.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.28.a
+        
+    }
+}
+
+country_event = {
+    id = fscb.29
+    title = fscb.29.t
+    desc = fscb.29.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=fscb.29.a
+        hidden_effect = {ORB = {set_country_flag = autonomy_state transfer_state = 31}}
+        FSC = {
+            hidden_effect = {
+                release_puppet_on_controlled = ORB
+            }
+        }
+        set_autonomy = {target = ORB autonomy_state = autonomy_autonomy}  
+    }
 }

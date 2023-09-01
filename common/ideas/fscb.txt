@@ -1,6 +1,28 @@
 ideas = {
     country = {
-	fsc.iidinvestition = {
+    FSC_UCB_network = {
+        allowed = {
+            always = no
+        }
+    
+    
+        removal_cost = -1
+    
+        on_add = {
+            
+        }
+    
+        on_remove = {
+            
+        }
+
+        modifier = {
+            intel_network_gain_factor = 0.15
+            operation_cost = -0.3
+        }
+    }
+
+	fsc_iidinvestition = {
 		picture = generic_political_advisor_europe_5
 
 		allowed = {

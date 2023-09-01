@@ -540,7 +540,7 @@ political_actions = {
 			has_government = communism
 		}
 
-		cost = 50
+		cost =50
 
 		days_remove = 90
 		days_re_enable = 1080
@@ -765,35 +765,1557 @@ sphere_category = {
         }
     }
 
-    sphere_debuff = {
+    #sphere_debuff = {
+    #    targets = {sphere_owner}
+
+        #days_mission_timeout = 0
+        
+        #available = {always = no}
+        #activation = {
+        #    has_variable = sphere_owner
+        #}
+        #days_remove = -1
+
+        #targeted_modifier = {
+        #    tag = FROM
+        #    trade_cost_for_target_factor = -0.5
+        #    extra_trade_to_target_factor = 0.5
+            #mic_to_target_factor = 0.05
+        #    attack_bonus_against_cores = 0.05
+        #    defense_bonus_against = -0.25
+        #}
+
+
+    #}
+
+    sphere_buy_infantry = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
         targets = {sphere_owner}
 
-        days_mission_timeout = 0
-        
-        available = {always = no}
-        activation = {
-            has_variable = sphere_owner
-        }
-        days_remove = -1
-
-        targeted_modifier = {
-            tag = FROM
-            trade_cost_for_target_factor = -0.5
-            extra_trade_to_target_factor = 0.5
-            #mic_to_target_factor = 0.05
-            attack_bonus_against_cores = 0.05
-            defense_bonus_against = -0.25
+        visible = {
+            FROM = {
+                has_equipment = {
+                    infantry_equipment > 1000
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
         }
 
-
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = infantry_equipment
+                    amount = 1000
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
     }
+
+    sphere_buy_extra = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    support_equipment > 300
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = support_equipment
+                    amount = 300
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
+    }
+
+    sphere_buy_artillery = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    artillery_equipment > 50
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = artillery_equipment
+                    amount = 50
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
+    }
+
+    sphere_buy_anti_tank = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    anti_tank_equipment > 50
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = anti_tank_equipment
+                    amount = 50
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
+    }
+
+    sphere_buy_anti_air = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    anti_air_equipment > 50
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = anti_air_equipment
+                    amount = 50
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
+    }
+
+    sphere_buy_trucks = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    motorized_equipment > 100
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = motorized_equipment
+                    amount = 100
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
+    }
+
+    sphere_buy_mechanized = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 30
+		}
+		hidden_effect = {
+			add_command_power = -30
+		}
+		custom_cost_text = decision_cost_CP_30
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    mechanized_equipment > 100
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = mechanized_equipment
+                    amount = 100
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 10
+			}
+        }
+    }
+
+    sphere_buy_fighters = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 40
+		}
+		hidden_effect = {
+			add_command_power = -40
+		}
+		custom_cost_text = decision_cost_CP_40
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    fighter_equipment > 10
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = fighter_equipment
+                    amount = 10
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 5
+				add_command_power = 15
+			}
+        }
+    }
+
+    sphere_buy_cas = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 40
+		}
+		hidden_effect = {
+			add_command_power = -40
+		}
+		custom_cost_text = decision_cost_CP_40
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    CAS_equipment > 10
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = CAS_equipment
+                    amount = 10
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 5
+				add_command_power = 15
+			}
+        }
+    }
+
+    sphere_buy_trains = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 20
+		}
+		hidden_effect = {
+			add_command_power = -20
+		}
+		custom_cost_text = decision_cost_CP_20
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    train_equipment > 5
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = train_equipment
+                    amount = 5
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
+    }
+
+    sphere_buy_convoys = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 15
+		}
+		hidden_effect = {
+			add_command_power = -15
+		}
+		custom_cost_text = decision_cost_CP_15
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    convoy > 25
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = convoy
+                    amount = 25
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 1
+				add_command_power = 5
+			}
+        }
+    }
+
+    sphere_buy_tanks = {
+        cost = 15
+		
+		custom_cost_trigger = {
+			command_power > 30
+		}
+		hidden_effect = {
+			add_command_power = -30
+		}
+		custom_cost_text = decision_cost_CP_30
+
+        #days_re_enable = 30
+
+        target_array = sphere_members
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                has_equipment = {
+                    modern_tank_equipment > 25
+                }
+                if = {
+                    limit = {ROOT = {check_variable = { sphere_owner = FROM }}}
+                    has_country_flag = allow_export_eq_@ROOT
+                }
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                send_equipment = {
+                    equipment = modern_tank_equipment
+                    amount = 25
+                    target = PREV
+                }
+            }
+			FROM = {
+				army_experience = 5
+				add_command_power = 15
+			}
+        }
+    }
+
+    sphere_ask_export = {
+        cost = 15
+
+        #days_re_enable = 30
+        targets = {sphere_owner}
+
+        visible = {
+            FROM = {
+                NOT = {has_country_flag = allow_export_eq_@ROOT}
+            }
+        }
+
+        complete_effect = {
+            FROM = {
+                country_event = {id = mechanics.41 days = 1}
+            }
+        }
+    }
+
+    sphere_allow_export = {
+        #days_re_enable = 30
+        target_array = sphere_members
+
+        priority = 1000
+
+        visible = {
+            NOT = {has_country_flag = allow_export_eq_@FROM}
+        }
+
+        complete_effect = {
+            set_country_flag = allow_export_eq_@FROM
+            set_temp_variable = { temp = FROM }
+            custom_effect_tooltip = allow_export_eq_tt
+        }
+    }
+    sphere_cancel_export = {
+        #days_re_enable = 30
+        target_array = sphere_members
+
+        priority = 1000
+
+        visible = {
+            has_country_flag = allow_export_eq_@FROM
+        }
+
+        complete_effect = {
+            clr_country_flag = allow_export_eq_@FROM
+            set_temp_variable = { temp = FROM }
+            custom_effect_tooltip = cancel_export_eq_tt
+        }
+    }
+
 }
 
 escalation_category = {
-    _esc_blank = {
-        visible = {has_variable = escalation_member}
+    #_esc_blank = {
+    #    visible = {has_variable = escalation_member}
         #allowed = {always = no}
+    #}
+
+    esc_timer = {
+        available = {always = no}
+        activation = {has_variable = escalation_member NOT = {has_country_flag = escaltion_timeout}}
+
+        is_good = no
+
+        days_mission_timeout = 90
+        priority = 1000
+
+        timeout_effect  = {
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = -15
+                tooltip=escalation_hotness_change_tooltip
+            }
+            hidden_effect = {
+                set_country_flag = escalation_timeout
+                every_country = {
+                    limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+                    if = {
+                        limit = {has_country_flag = escalation_timeout}
+                        add_to_temp_variable = { timeouts = 1 }
+                    }
+                    add_to_temp_variable = { all_escalators = 1 }
+                }
+                if = {
+                    limit = {check_variable = { timeouts = all_escalators }}
+                    escalation_stop = yes
+                }
+            }
+        }
+    }
+
+    esc_demand_requirements = {
+        targets = {
+            escalation_friend
+        }
+
+        visible = {has_variable = escalation_member}
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
+            
+            set_temp_variable = { temp = 0 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        days_re_enable = 30
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 5
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+    esc_embargo = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_to
+                }
+                else = {
+                    has_country_flag = escalation_on_sender
+                }
+            }
+            NOT = {is_embargoing = FROM}
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
+            set_temp_variable = { temp = 24 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 8
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            send_embargo = FROM
+            
+
+            escalation_decision_effect = yes
+        }
+
+        days_remove = 90
+
+        remove_effect = {
+            break_embargo = FROM
+        }
+    }
+
+    esc_guarantee = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_sender
+                }
+                else = {
+                    has_country_flag = escalation_on_to
+                }
+            }
+            NOT = {has_guaranteed = FROM}
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
+            set_temp_variable = { temp = 40 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 12
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            give_guarantee = FROM
+            
+
+            escalation_decision_effect = yes
+        }
+
+        days_remove = 90
+
+        remove_effect = {
+            diplomatic_relation = {
+                country = FROM
+                relation = guarantee
+                active = no
+            }
+        }
+    }
+
+    esc_close_diplomacy = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_to
+                }
+                else = {
+                    has_country_flag = escalation_on_sender
+                }
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
+            set_temp_variable = { temp = 50 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 8
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            set_country_flag = closed_diplomacy_@FROM
+            custom_effect_tooltip = close_diplomacy_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        days_remove = 120
+
+        remove_effect = {
+            clr_country_flag = closed_diplomacy_@FROM
+            custom_effect_tooltip = open_diplomacy_tooltip
+        }
+    }
+
+    esc_osuzhdayu_maximalno = {
+        targets = {escalation_enemy}
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
+            set_temp_variable = { temp = 15 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        days_re_enable = 30
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 5
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+    esc_exile_embassy = {
+        targets = {escalation_enemy}
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
+            set_temp_variable = { temp = 50 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        fire_only_once = yes
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 10
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+    esc_spys = {
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = deescalation_course}}
+            set_temp_variable = { temp = 5 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = 3
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+
+        days_remove = 30
+
+        modifier = {
+            intel_network_gain_factor = 0.2
+            operation_outcome = 0.15
+        }
     }
 
     
+    esc_be_third = {
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
+            set_temp_variable = { temp = 70 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        days_re_enable = 20
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = -8
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+    esc_find_compromiss = {
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
+            set_temp_variable = { temp = 80 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 7.9 }
+        }
+        custom_cost_text = decision_cost_flat_8
+
+        days_re_enable = 20
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -8}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = -5
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+    esc_concessions = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_to
+                }
+                else = {
+                    has_country_flag = escalation_on_sender
+                }
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
+            set_temp_variable = { temp = 101 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+            has_political_power > 30
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        days_remove = 15
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+            add_political_power = -30
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = -15
+                tooltip=escalation_hotness_change_tooltip
+            }
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            FROM = {add_political_power = 30}
+        }
+    }
+
+    esc_agreements = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_to
+                }
+                else = {
+                    has_country_flag = escalation_on_sender
+                }
+            }
+        }
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
+            set_temp_variable = { temp = 50 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_8
+
+        days_re_enable = 30
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            add_to_variable = {
+                var = escalation_member:escalation_hotness
+                value = -5
+                tooltip=escalation_hotness_change_tooltip
+            }
+            add_war_support = -0.01
+            random = {
+                chance = 50
+                FROM = {add_war_support = -0.01}
+            }
+
+            escalation_decision_effect = yes
+        }
+    }
+
+    esc_negotiations = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                if = {
+                    limit = {ROOT = {has_country_flag = escalation_on_sender}}
+                    has_country_flag = escalation_on_to
+                }
+                else = {
+                    has_country_flag = escalation_on_sender
+                }
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
+            set_temp_variable = { temp = 90 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        days_remove = 15
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+            }
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            random_list = {
+                50 = {
+                    add_to_variable = {
+                        var = escalation_member:escalation_hotness
+                        value = -10
+                        tooltip=escalation_hotness_change_tooltip
+                    }
+                    add_opinion_modifier = {
+                        target = FROM
+                        modifier = escalation_negotiations_suc_opinion
+                    }
+                    FROM = {
+                        add_opinion_modifier = {
+                            target = ROOT
+                            modifier = escalation_negotiations_suc_opinion
+                        }
+                    }
+                }
+                50 = {
+                    add_to_variable = {
+                        var = escalation_member:escalation_hotness
+                        value = -5
+                        tooltip=escalation_hotness_change_tooltip
+                    }
+                    add_opinion_modifier = {
+                        target = FROM
+                        modifier = escalation_negotiations_fail_opinion
+                    }
+                    FROM = {
+                        add_opinion_modifier = {
+                            target = ROOT
+                            modifier = escalation_negotiations_fail_opinion
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    esc_escalation_puppets = {
+        remove_trigger = {
+            OR = {
+                NOT = {has_variable = escalation_member}
+                has_decision = esc_deescalation_puppets
+            }
+        }
+
+        visible = {
+            has_variable = escalation_member
+            num_subjects > 0
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} is_subject = no
+        }
+
+        days_remove = -1
+        complete_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    set_country_flag = escalation_course
+                }    
+            }
+            custom_effect_tooltip = set_escalation_course_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    clr_country_flag = escalation_course
+                }    
+            }
+        }
+
+    }
+    esc_deescalation_puppets = {
+        remove_trigger = {
+            OR = {
+                NOT = {has_variable = escalation_member}
+                has_decision = esc_escalation_puppets
+            }
+        }
+
+        visible = {
+            has_variable = escalation_member
+            num_subjects > 0
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} is_subject = no
+        }
+
+        days_remove = -1
+        complete_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    set_country_flag = deescalation_course
+                }    
+            }
+            custom_effect_tooltip = set_deescalation_course_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                for_each_scope_loop = {
+                    array = subjects
+                    
+                    clr_country_flag = deescalation_course
+                }    
+            }
+        }
+
+    }
+
+    esc_sphere_block = {
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                check_variable = { sphere_owner = ROOT }
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            is_subject = no
+            NOT = {has_variable = sphere_owner}
+            set_temp_variable = { temp = 5 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 4.9 }
+        }
+        custom_cost_text = decision_cost_flat_5
+
+        days_remove = -1
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -5}   
+                FROM = {
+                    set_country_flag = escalation_course
+                    set_country_flag = deescalation_course
+                }
+            }
+            custom_effect_tooltip = escalation_block_sphere_decisions_tooltip
+
+            escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_country_flag = escalation_course
+                    clr_country_flag = deescalation_course
+                }
+            }
+        }
+    }
+
+    esc_block_all = {
+
+        target_trigger = {
+            FROM = {
+                check_variable = { escalation_member = ROOT.escalation_member }
+                check_variable = { sphere_owner = ROOT }
+            }
+        }
+
+        remove_trigger = {
+            NOT = {has_variable = escalation_member}
+        }
+
+        visible = {
+            has_variable = escalation_member
+            NOT = {has_decision = esc_sphere_block}
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout}
+            is_subject = no
+            NOT = {has_variable = sphere_owner}
+            set_temp_variable = { temp = 5 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 29.9 }
+        }
+        custom_cost_text = decision_cost_flat_30
+
+        days_remove = 20
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -30}   
+                every_country = {
+                    limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+                    set_country_flag = escalation_course
+                    set_country_flag = deescalation_course
+                }
+            }
+            custom_effect_tooltip = escalation_block_all_decisions_tooltip
+
+            #escalation_decision_effect = yes
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                every_country = {
+                    limit = {check_variable = { escalation_member = ROOT.escalation_member }}
+                    clr_country_flag = escalation_course
+                    clr_country_flag = deescalation_course
+                }
+            }
+
+            custom_effect_tooltip = escalation_allow_all_decisions_tooltip
+        }
+    }
+
+    esc_froze = {
+
+        visible = {
+            has_variable = escalation_member
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
+            set_temp_variable = { temp = 5 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness < temp }}
+                tooltip = less_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > 14.9 }
+        }
+        custom_cost_text = decision_cost_flat_15
+
+        days_re_enable = 20
+        complete_effect = {
+            hidden_effect = {
+                add_to_variable = {escalation_score = -15}   
+                escalation_stop = yes
+            }
+        }
+    }
+    
+
+    esc_war = {
+
+        visible = {
+            has_variable = escalation_member
+            var:escalation_member = {NOT = {has_country_flag = escalation_war_start}}
+        }
+        available = {
+            NOT = {has_country_flag = escalation_timeout} OR = {is_subject = no NOT = {has_country_flag = escalation_course}}
+            set_temp_variable = { temp = 90 }
+            custom_trigger_tooltip = {
+                var:escalation_member = {check_variable = { escalation_hotness > temp }}
+                tooltip = has_escalation_hotness
+            }
+        }
+
+        custom_cost_trigger = {
+            check_variable = { escalation_score > escalation_war_score }
+        }
+        custom_cost_text = decision_cost_flat_esc_war
+
+        complete_effect = {
+            hidden_effect = {
+                subtract_from_variable = {escalation_score = escalation_war_score}   
+                var:escalation_member = {set_country_flag = escalation_war_start}
+            }
+        }
+
+        days_remove = 30
+        war_with_on_remove = escalation_enemy
+        
+        remove_effect = {
+            declare_war_on = {
+                target = escalation_enemy
+                type = puppet_wargoal_focus
+            }
+
+            if = {
+                limit = {has_country_flag = escalation_on_sender}
+                set_temp_variable = { sender_gang = THIS }
+                set_temp_variable = { to_gang = escalation_enemy }
+            }
+            else = {
+                set_temp_variable = { to_gang = THIS }
+                set_temp_variable = { sender_gang = escalation_enemy }
+            }
+
+            hidden_effect = {
+                var:escalation_member = {clr_country_flag = escalation_war_start}
+                every_other_country = {
+                    limit = {
+                        check_variable = { escalation_member = ROOT.escalation_member }
+                    }
+                    set_temp_variable = { this_scope = THIS }
+                    if = {
+                        limit = {
+                            has_country_flag = escalation_on_sender
+                        }
+                        var:sender_gang = {
+                            var:to_gang = {
+                                var:this_scope = {
+                                    add_to_war = {
+                                        targeted_alliance = PREV.PREV
+                                        enemy = PREV
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else = {
+                        var:sender_gang = {
+                            var:to_gang = {
+                                var:this_scope = {
+                                    add_to_war = {
+                                        targeted_alliance = PREV
+                                        enemy = PREV.PREV
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+                escalation_stop = yes
+            }
+            
+        }
+    }
+
 }

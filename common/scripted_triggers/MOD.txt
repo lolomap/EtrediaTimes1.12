@@ -10,6 +10,12 @@ achievs_available = {
 
 crysis_startable = {
     not = {has_country_flag = political_crysis}
+    not = {
+        custom_trigger_tooltip = {
+            tooltip = has_escalation_crysis_tt
+            has_variable = escalation_member
+        }
+    }
     not = {is_subject_of = ROOT}
     not = {has_war_with = ROOT}
     not = {has_non_aggression_pact_with = ROOT}
@@ -17,11 +23,23 @@ crysis_startable = {
 
     ROOT = {
         not = {has_country_flag = political_crysis}
+        not = {
+            custom_trigger_tooltip = {
+                tooltip = has_escalation_crysis_tt
+                has_variable = escalation_member
+            }
+        }
         not = {has_country_flag = crysis_delay}
         is_subject = no
+        NOT = {
+            custom_trigger_tooltip = {
+                tooltip = is_in_any_sphere_tt
+                has_variable = sphere_owner
+            }
+        }
     }
 
-    #threat > 0.04
+    threat > 0.04
 
     if = {
         limit = {NOT = {has_global_flag = CRYSIS_ALLOWED}}}

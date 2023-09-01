@@ -3,7 +3,7 @@ state={
 	name="STATE_170"
 	manpower = 3000000
 	
-	state_category = large_town
+	state_category = large_city
 	
 	resources={
 	}
@@ -12,7 +12,7 @@ state={
 		owner = ELR
 		buildings = {
 			infrastructure = 4
-                        industrial_complex = 3
+                        industrial_complex = 6
                         arms_factory = 1
 			3840 = {
 				naval_base = 3

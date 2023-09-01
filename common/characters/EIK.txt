@@ -98,7 +98,7 @@ characters={
 				small=""
 			}
 			army={
-				large="gfx/leaders/EIK/portrait_eik_general_generic.dds"
+				large="gfx/leaders/EIK/portrait_eik_marush_metarali.dds"
 			}
 		}
 		corps_commander={
@@ -146,19 +146,6 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			legacy_id=-1
-		}
-	}
-	EIK_jim_roberts={
-		name=EIK_Jim_Roberts
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=absolutism
-			expire="2032.1.1.12"
-			id=-1
 		}
 	}
 }

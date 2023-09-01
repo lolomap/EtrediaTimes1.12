@@ -3935,6 +3935,37 @@ dragan_kzhachich = {
 			}
 		}
 	}
+
+    authoritarist = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		neutrality_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				not = { has_completed_focus = USA_america_first }
+				factor = 0
+			}
+		}
+	}
+
+    royalist = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		monarchism_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				not = { has_completed_focus = USA_america_first }
+				factor = 0
+			}
+		}
+	}
+
 	staunch_monarchist = {
 		random = no
 		# Boosts Unaligned
