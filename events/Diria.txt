@@ -732,7 +732,7 @@ country_event = {
     fire_only_once = yes
 
 	trigger = {
-        TAG = DEM
+        TAG = DIB
 		DEM = { has_idea = DIR_collapse }
 		DIR = { has_idea = DIR_collapse }
     }
@@ -753,6 +753,12 @@ country_event = {
 			SDI = { white_peace = DIB }
 			
 			DEM = { set_cosmetic_tag = DK2 }
+			
+			DEM = {
+				transfer_state = 275
+				transfer_state = 306
+				transfer_state = 279
+			}
 			
 			DNF = {
 				transfer_state = 280

@@ -45,8 +45,8 @@ DIB_dirian_civil_war = {
 		available = {
 			DIB = {
 				controls_state = 262
-				controls_state = 793
-				controls_state = 790
+				controls_state = 789
+				controls_state = 792
 			}
 		}
 		
@@ -81,8 +81,8 @@ DIB_dirian_civil_war = {
 		available = {
 			DIB = {
 				controls_state = 262
-				controls_state = 793
-				controls_state = 790
+				controls_state = 789
+				controls_state = 792
 			}
 		}
 		

@@ -158,7 +158,7 @@ KAR_dirian_civil_war = {
 		}
 		available = {
 			OR = {
-				DEM = { surrender_progress > 0.3 }
+				DEM = { surrender_progress > 0.5 }
 				date > 2018.1.1
 			}
 		}

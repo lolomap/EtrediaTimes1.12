@@ -870,7 +870,7 @@ country_event = {
     fire_only_once = yes
 
 	trigger = {
-        TAG = DIR
+        TAG = DIB
 		DEM = { has_idea = DIR_collapse }
 		DIR = { has_idea = DIR_collapse }
     }
@@ -894,6 +894,9 @@ country_event = {
 			
 			DIB = {
 				transfer_state = 789
+				transfer_state = 792
+				transfer_state = 793
+				transfer_state = 262
 				transfer_state = 794
 				transfer_state = 795
 				transfer_state = 786

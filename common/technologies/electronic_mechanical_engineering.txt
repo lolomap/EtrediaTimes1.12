@@ -230,7 +230,7 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				date > 1996.1.1"
+				date > "1996.1.1"
 			}
 		}
 		
@@ -260,8 +260,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 30
-			
-			
 			modifier = {
 				factor = 3
 				date > "2000.1.1"
