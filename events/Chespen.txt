@@ -104,9 +104,6 @@ country_event = {
                 target = BOU
             }
 			ai_chance = { factor = 100 }
-			hidden_effect = {
-			MOA = { country_event = { id = moa.1 days = 1 } }
-			}
 	    }
 
         option = {

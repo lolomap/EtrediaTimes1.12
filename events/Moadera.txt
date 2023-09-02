@@ -22,11 +22,6 @@ country_event = {
 		TOB = { country_event = { id = tob.2 days = 1 } }
 	ai_chance = { factor = 100 }
 	}
-	
-	option = {
-	name = moa.1.b
-	ai_chance = { factor = 0 }
-	}
 }
 
 country_event = {

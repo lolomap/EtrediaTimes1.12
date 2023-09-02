@@ -30,6 +30,9 @@ opinion_modifiers = {
 		value = -50
 		min_trust = -35
 	}
+	MOA_padla = {
+		value -25
+	}
 	partnership = {
 		value = 10
 	}
