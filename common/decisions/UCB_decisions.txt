@@ -237,9 +237,9 @@ UCB_bop_category = {
     UCB_support_olig = {
         cost = 75
 
-        days_remove = 120
+        days_remove = 60
         modifier = {
-            power_balance_daily = 0.01
+            power_balance_daily = 0.008
         }
         fixed_random_seed = no
         remove_effect = {
@@ -249,7 +249,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -260,7 +260,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -271,7 +271,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c2 = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -283,7 +283,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c3 = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -295,7 +295,7 @@ UCB_bop_category = {
                     }
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.15 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
             }

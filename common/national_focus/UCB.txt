@@ -437,7 +437,8 @@ focus_tree = {
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
-			}		     
+			}		 
+            add_power_balance_value = {id = UCB_parlament_balance value = 0.15}   
 		    hidden_effect = {
 				UCB = { country_event = { id = ucb.2 days = 10 } }
 			}

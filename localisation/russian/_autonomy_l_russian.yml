@@ -8,4 +8,11 @@
  puppet_initiator_desc:1 "$COUNTRY|UY$ оказывает влияние на государства или контроллирует автономные регионы"
 
  autonomy_release_btn: "Дать автономию"
+ attach_autonomy_tooltip: "[autonomy_tooltip]"
+ attach_autonomy_normal_tooltip: "[?ROOT.attach_autonomy.GetName]"
+ attach_autonomy_new_tooltip: "[THIS.GetName]"
+ attach_autonomy_flag: "[autonomy_flag]"
+ attach_autonomy_normal_flag: "[?ROOT.attach_autonomy.GetFlag]"
+ attach_autonomy_new_flag1: "[?THIS.core_countries^0.GetFlag]"
+ attach_autonomy_new_flag2: "[?THIS.core_countries^1.GetFlag]"
  

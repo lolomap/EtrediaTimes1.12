@@ -545,7 +545,8 @@ country_event = {
 
     trigger = {
         date > 2019.6.1
-        if = { limit = {tag = SFL date > 2019.6.1}
+        tag = SFL
+        if = { limit = { date > 2019.6.1}
             SFL = {has_government = democratic}
             UCB = {has_government = democratic}
             SBU = {

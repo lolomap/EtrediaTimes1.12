@@ -56,6 +56,25 @@ on_actions = {
         }
     }
 
+    on_subject_annexed = {
+        effect = {
+            if = {
+                limit = {
+                    ROOT = {
+                        has_country_flag = autonomy_state
+                    }
+                }
+                ROOT = {
+                    clr_country_flag = autonomy_state
+                }
+                FROM = {
+                    remove_from_array = {autonomies = ROOT}
+                    set_variable = { attach_autonomy = THIS }
+                }
+            }
+        }
+    }
+
     on_annex = {
         effect = {
             if = {
