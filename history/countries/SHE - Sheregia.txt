@@ -12,6 +12,7 @@ add_ideas = {
         total_free_press
         free_entry
 	third_corruption_level
+	socials_1
 }
 
 set_technology = {basic_train = 1

@@ -1,0 +1,1250 @@
+focus_tree = {
+	id = moaderal
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MOA
+		}
+	}
+	default = no
+    continuous_focus_position = {x = 0 y = 1500}
+
+    focus = {
+        id = MOA_ocean_svetoch
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 16
+        y = 0
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+                political_power = 50
+        }
+    }
+    focus = {
+        id = MOA_admiral_academy
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -3
+        y = 2
+        relative_position_id = MOA_ocean_svetoch
+        prerequisite = {
+            focus = MOA_ocean_svetoch
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_volontery
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 3
+        y = 2
+        relative_position_id = MOA_ocean_svetoch
+        prerequisite = {
+            focus = MOA_ocean_svetoch
+        }
+        available = { threat > 0.5 }
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_sustainable_development
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 2
+        relative_position_id = MOA_ocean_svetoch
+        prerequisite = {
+            focus = MOA_ocean_svetoch
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_banking
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_sustainable_development
+        prerequisite = {
+            focus = MOA_sustainable_development
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            add_stability = 0.05
+        }
+    }
+    focus = {
+        id = MOA_our_duty
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_banking
+        prerequisite = {
+            focus = MOA_banking
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_disclaimer_of_obligations
+        }
+
+        completion_reward = {
+            add_stability = 0.1
+            hidden_effect = {
+                GOD = { 
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = partnership
+                    }
+				}
+                KOI = { 
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = partnership
+                    }
+				}
+                SBO = { 
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = partnership
+                    }
+				}
+                CHO = {
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = partnership
+                    }
+				}
+            }
+        }
+    }
+    focus = {
+        id = MOA_our_friends
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_our_duty
+        prerequisite = {
+            focus = MOA_our_duty
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_fight_for_market
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -3
+        y = 1
+        relative_position_id = MOA_our_duty
+        prerequisite = {
+            focus = MOA_our_duty
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_disclaimer_of_obligations
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_banking
+        prerequisite = {
+            focus = MOA_banking
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_our_duty
+        }
+
+        completion_reward = {
+            MOA = { remove_ideas = MOA_debts }
+            hidden_effect = {
+                GOD = { 
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = MOA_padla
+                    }
+				}
+                KOI = { 
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = MOA_padla
+                    }
+				}
+                SBO = { 
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = MOA_padla
+                    }
+                    set_country_flag = moa_padla_flag
+				}
+                CHO = {
+                    add_opinion_modifier = {
+					    target = MOA
+    				    modifier = MOA_padla
+                    }
+                    set_country_flag = moa_padla_flag
+				}
+            }
+        }
+    }
+    focus = {
+        id = MOA_on_their_own
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_disclaimer_of_obligations
+        prerequisite = {
+            focus = MOA_disclaimer_of_obligations
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = MOA_our_duty
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_in_fight_for_oceania
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 3
+        y = 1
+        relative_position_id = MOA_disclaimer_of_obligations
+        prerequisite = {
+            focus = MOA_disclaimer_of_obligations
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = MOA_our_duty
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_influence
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_in_fight_for_oceania
+        prerequisite = {
+            focus = MOA_in_fight_for_oceania
+        }
+        prerequisite = {
+            focus = MOA_on_their_own
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = MOA_our_duty
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_neutralize_the_consequences_of_disaster
+        icon = GFX_goal_moadera
+        cost = 5
+        x = 0
+        y = 2
+        relative_position_id = MOA_banking
+        prerequisite = {
+            focus = MOA_banking
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_support_program
+        icon = GFX_goal_moadera
+        cost = 5
+        x = 0
+        y = 1
+        relative_position_id = MOA_neutralize_the_consequences_of_disaster
+        prerequisite = {
+            focus = MOA_neutralize_the_consequences_of_disaster
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_increase_investitions_in_civilians
+        icon = GFX_goal_moadera
+        cost = 5
+        x = 0
+        y = 1
+        relative_position_id = MOA_support_program
+        prerequisite = {
+            focus = MOA_support_program
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_risk_assessment
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_increase_investitions_in_civilians
+        prerequisite = {
+            focus = MOA_increase_investitions_in_civilians
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_army_modernization
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_risk_assessment
+        prerequisite = {
+            focus = MOA_risk_assessment
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_exploration_of_new_fields
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_increase_investitions_in_civilians
+        prerequisite = {
+            focus = MOA_increase_investitions_in_civilians
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_econommy_modernization
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_exploration_of_new_fields
+        prerequisite = {
+            focus = MOA_exploration_of_new_fields
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_we_are_ready
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_econommy_modernization
+        prerequisite = {
+            focus = MOA_econommy_modernization
+        }
+        prerequisite = {
+            focus = MOA_army_modernization
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_island_republic
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = MOA_ocean_svetoch
+        prerequisite = {
+            focus = MOA_ocean_svetoch
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_island_empire
+        }
+
+        completion_reward = {
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+            }
+        }
+    }
+    focus = {
+        id = MOA_working_labor_groups
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -10
+        y = 1
+        relative_position_id = MOA_island_republic
+        prerequisite = {
+            focus = MOA_island_republic
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = MOA_island_empire
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_basics_of_non_interference
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -4
+        y = 1
+        relative_position_id = MOA_island_republic
+        prerequisite = {
+            focus = MOA_island_republic
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_prelude_to_the_dawn
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_basics_of_non_interference
+        prerequisite = {
+            focus = MOA_basics_of_non_interference
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            political_power = 150
+        }
+    }
+    focus = {
+        id = MOA_citizens_needs
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_prelude_to_the_dawn
+        prerequisite = {
+            focus = MOA_prelude_to_the_dawn
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+			}
+            random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+			}
+        }
+    }
+    focus = {
+        id = MOA_progressive_capital
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_citizens_needs
+        prerequisite = {
+            focus = MOA_citizens_needs
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_state_investment_pool
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_progressive_capital
+        prerequisite = {
+            focus = MOA_progressive_capital
+        }
+        prerequisite = {
+            focus = MOA_fight_for_market
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_sea_traditions
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_progressive_capital
+        prerequisite = {
+            focus = MOA_progressive_capital
+        }
+        prerequisite = {
+            focus = MOA_fight_for_market
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_contributions_to_partner_countries
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 3
+        y = 1
+        relative_position_id = MOA_progressive_capital
+        prerequisite = {
+            focus = MOA_progressive_capital
+        }
+        prerequisite = {
+            focus = MOA_fight_for_market
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_oceanic_region_security
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_contributions_to_partner_countries
+        prerequisite = {
+            focus = MOA_contributions_to_partner_countries
+            focus = MOA_sea_traditions
+            focus = MOA_state_investment_pool
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_choramta_contracts
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_sea_traditions
+        prerequisite = {
+            focus = MOA_contributions_to_partner_countries
+            focus = MOA_sea_traditions
+            focus = MOA_state_investment_pool
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_god_koi_contracts
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_state_investment_pool
+        prerequisite = {
+            focus = MOA_contributions_to_partner_countries
+            focus = MOA_sea_traditions
+            focus = MOA_state_investment_pool
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_koi_infrastructure_porjects
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_god_koi_contracts
+        prerequisite = {
+            focus = MOA_god_koi_contracts
+        }
+        prerequisite = {
+            focus = MOA_choramta_contracts
+            focus = MOA_oceanic_region_security
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_grants_for_military_concerns
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_koi_infrastructure_porjects
+        prerequisite = {
+            focus = MOA_koi_infrastructure_porjects
+        }
+        prerequisite = {
+            focus = MOA_modernize_arms_factory
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				    type = arms_factory
+				    level = 3
+				    instant_build = yes
+				}
+			}
+        }
+    }
+    focus = {
+        id = MOA_in_waiting_for_big_war
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_grants_for_military_concerns
+        prerequisite = {
+            focus = MOA_grants_for_military_concerns
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_modernize_arms_factory
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_choramta_contracts
+        prerequisite = {
+            focus = MOA_choramta_contracts
+        }
+        prerequisite = {
+            focus = MOA_god_koi_contracts
+            focus = MOA_oceanic_region_security
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_south_defensive_block
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_oceanic_region_security
+        prerequisite = {
+            focus = MOA_oceanic_region_security
+        }
+        prerequisite = {
+            focus = MOA_god_koi_contracts
+            focus = MOA_choramta_contracts
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            MOA = { country_event = moa.1 days = 1 }
+        }
+    }
+    focus = {
+        id = MOA_save_neutrality
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_south_defensive_block
+        prerequisite = {
+            focus = MOA_south_defensive_block
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_support_EC
+        }
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_bounferte_for_peace
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_save_neutrality
+        prerequisite = {
+            focus = MOA_save_neutrality
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = MOA_support_EC
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_support_EC
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_south_defensive_block
+        prerequisite = {
+            focus = MOA_south_defensive_block
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_save_neutrality
+        }
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_embargo_for_EB
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_support_EC
+        prerequisite = {
+            focus = MOA_support_EC
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_occupy_happy_islands
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = MOA_embargo_for_EB
+        prerequisite = {
+            focus = MOA_embargo_for_EB
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_support_zhereminente
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_embargo_for_EB
+        prerequisite = {
+            focus = MOA_embargo_for_EB
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_oceanic_army_exercises
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_oceanic_region_security
+        prerequisite = {
+            focus = MOA_oceanic_region_security
+            focus = MOA_god_koi_contracts
+            focus = MOA_choramta_contracts
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_island_empire
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 2
+        y = 1
+        relative_position_id = MOA_ocean_svetoch
+        prerequisite = {
+            focus = MOA_ocean_svetoch
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_island_republic
+        }
+
+        completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
+        }
+    }
+    focus = {
+        id = MOA_our_sea
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 6
+        y = 1
+        relative_position_id = MOA_island_empire
+        prerequisite = {
+            focus = MOA_island_empire
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            add_war_support = 0.05
+            526 = { add_claim_by = MOA }
+            527 = { add_claim_by = MOA }
+            528 = { add_claim_by = MOA }
+            529 = { add_claim_by = MOA }
+            530 = { add_claim_by = MOA }
+            531 = { add_claim_by = MOA }
+            556 = { add_claim_by = MOA }
+        }
+    }
+    focus = {
+        id = MOA_our_ocean
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_our_sea
+        prerequisite = {
+            focus = MOA_our_sea
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            add_war_support = 0.05
+        }
+    }
+    focus = {
+        id = MOA_lessons_of_the_20_century
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 4
+        y = 1
+        relative_position_id = MOA_island_empire
+        prerequisite = {
+            focus = MOA_island_empire
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            army_experience = 15
+            navy_experience = 15
+        }
+    }
+    focus = {
+        id = MOA_love_your_country
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = MOA_lessons_of_the_20_century
+        prerequisite = {
+            focus = MOA_lessons_of_the_20_century
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = 
+        #}
+
+        completion_reward = {
+            add_stability = 0.1
+            add_war_support = 0.1
+        }
+    }
+    focus = {
+        id = MOA_revenge
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_love_your_country
+        prerequisite = {
+            focus = MOA_love_your_country
+            focus = MOA_our_ocean
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_rational_beginning
+        }
+        mutually_exclusive = {
+        	focus = MOA_our_share
+        }
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_rational_beginning
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_love_your_country
+        prerequisite = {
+            focus = MOA_love_your_country
+            focus = MOA_our_ocean
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_revenge
+        }
+        mutually_exclusive = {
+        	focus = MOA_our_share
+        }
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_our_share
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 3
+        y = 1
+        relative_position_id = MOA_love_your_country
+        prerequisite = {
+            focus = MOA_love_your_country
+            focus = MOA_our_ocean
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        mutually_exclusive = {
+        	focus = MOA_rational_beginning
+        }
+        mutually_exclusive = {
+        	focus = MOA_revenge
+        }
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_protectionism
+        icon = GFX_goal_moadera
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = MOA_rational_beginning
+        prerequisite = {
+            focus = MOA_rational_beginning
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = MOA_revenge
+        #}
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = MOA_government_reform
+        icon = GFX_goal_moadera
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = MOA_our_share
+        prerequisite = {
+            focus = MOA_our_share
+            focus = MOA_revenge
+        }
+        available = {}
+        bypass = {}
+        allow_branch = {}
+        #mutually_exclusive = {
+        #	focus = MOA_revenge
+        #}
+
+        completion_reward = {
+            political_power = 100
+            set_politics = {
+	            ruling_party = fascism
+                elections_allowed = no
+            }
+        }
+    }
+}

@@ -12,6 +12,7 @@ add_ideas = {
         general_entry
 	third_corruption_level
     sforces_5
+	socials_3
 }
 
 set_technology = {basic_train = 1

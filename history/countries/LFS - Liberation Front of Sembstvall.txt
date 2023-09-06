@@ -11,6 +11,7 @@ add_ideas = {
 	fifth_corruption_level
 	extensive_conscription 
     sforces_1
+	socials_0
 }
 
 if = {

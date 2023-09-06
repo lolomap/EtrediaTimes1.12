@@ -188,8 +188,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = DEM
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 	}
 	
@@ -206,8 +206,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = DEM
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.08
+				defense_bonus_against = 0.08
 			}
 	}
 	
@@ -224,8 +224,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = DEM
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.2
+				attack_bonus_against = 0.12
+				defense_bonus_against = 0.12
 			}
 	}
 	

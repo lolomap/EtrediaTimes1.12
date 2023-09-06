@@ -10,6 +10,7 @@ add_ideas = {
 	MOA_difficult_construct
         WWW_medium_country
     sforces_3
+	socials_1
 }
 
 set_technology = {basic_train = 1

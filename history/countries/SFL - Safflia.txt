@@ -14,6 +14,7 @@ add_ideas = {
         free_entry
         free_trade
 	first_corruption_level
+	socials_3
 }
 
 set_technology = {basic_train = 1

@@ -8,10 +8,6 @@ ideas = {
             level = 6
 
             cancel_if_invalid = yes
-			
-			cancel = {
-				num_of_civilian_factories_available_for_projects < 1
-			}
 
             modifier = {
                 stability_factor = 0.15
@@ -61,10 +57,6 @@ ideas = {
             level = 5
 
             cancel_if_invalid = yes
-			
-			cancel = {
-				num_of_civilian_factories_available_for_projects < 1
-			}
 
             modifier = {
                 stability_factor = 0.08

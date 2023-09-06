@@ -10,6 +10,7 @@ add_ideas = {
         WWW_bad_country
         nonfree_press
 	fifth_corruption_level
+	socials_0
 }
 
 set_technology = {basic_train = 1

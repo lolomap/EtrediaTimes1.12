@@ -108,7 +108,7 @@ focus_tree = {
 	
 	focus = {
 		id = EIK_nord_way
-		icon = GFX_goal_unknown
+		icon = GFX_goal_eik_unknown_way
 		cost = 10
 		prerequisite = {
 			focus = EIK_Dalhein_help
@@ -147,7 +147,7 @@ focus_tree = {
 	
 	focus = {
 		id = EIK_powerful_scientific_base
-		icon = GFX_goal_unknown
+		icon = GFX_goal_eik_scientist_hero
 		cost = 10
 		prerequisite = {
 			focus = EIK_investitions_on_tolchkograd
@@ -172,7 +172,7 @@ focus_tree = {
 	
 	focus = {
 		id = EIK_robotics
-		icon = GFX_goal_unknown
+		icon = GFX_goal_eik_scientist_hero
 		cost = 10
 		prerequisite = {
 			focus = EIK_powerful_scientific_base
@@ -332,6 +332,11 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = EIK_profsouz
 		}
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
 		x = 18
 		y = 4
 	}
@@ -362,6 +367,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.05	}
+			add_war_support = 0.1
 			add_stability = -0.05
 		}
 		x = 16
@@ -398,6 +404,7 @@ focus_tree = {
 			add_ideas = {
 				EIK_verha2
 			}
+			add_command_power = 25
 		}
 		x = 15
 		y = 7
@@ -490,12 +497,13 @@ focus_tree = {
 	
 	focus = {
 		id = EIK_innovation_in_production
-		icon = GFX_goal_unknown
+		icon = GFX_goal_eik_scientist_hero
 		cost = 10
 		prerequisite = {
 			focus = EIK_propaganda_in_schools
 		}
 		completion_reward = {
+			add_political_power = 50
 			add_tech_bonus = {
 				bonus = 1.0
 				uses = 1
@@ -525,12 +533,14 @@ focus_tree = {
 	
 	focus = {
 		id = EIK_increased_funding
-		icon = GFX_goal_unknown
+		icon = GFX_goal_eik_scientist_hero
 		cost = 10
 		prerequisite = {
 			focus = EIK_scientist_is_hero
 		}
 		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
 			add_research_slot = 1
 		}
 		x = 17
@@ -545,7 +555,11 @@ focus_tree = {
 			focus = EIK_expanding_civil_support
 		}
 		completion_reward = {
-			add_popularity = { ideology = fascism popularity = 0.1	}
+			EIK = { country_event = eik.31 days = 1 }
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			hidden_effect = {
+				EIK = { country_event = eik.34 days = 30 }
+			}
 		}
 		ai_chance = { 
 		factor = 1
@@ -582,7 +596,27 @@ focus_tree = {
 		x = 21
 		y = 6
 	}
-	
+	focus = {
+		id = EIK_empire_sphere
+		icon = GFX_goal_eik_neighbours_influence
+		cost = 5
+		prerequisite = {
+			focus = EIK_influence_on_neighbors
+		}
+		completion_reward = {
+			TOL = { country_event = { id = tolchkograd.2 days = 1 } }
+			BAE = { country_event = { id = baensli.2 days = 1 } }
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 1
+				date > 2016.1.1
+			}
+		}
+		x = 23
+		y = 7
+	}
 	focus = {
 		id = EIK_political_purge
 		icon = GFX_goal_eik_political_clean
@@ -679,6 +713,84 @@ focus_tree = {
 		prerequisite = {
 			focus = EIK_invite_yanthalia
 		}
+		completion_reward = {
+			BRT = { country_event = brt.1 days = 1}
+		}
+		ai_chance = { 
+		factor = 0.1
+			modifier = {
+				factor = 0
+				date < 2017.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 2017.1.1
+			}
+		}
+		x = 21
+		y = 9
+	}
+	focus = {
+		id = EIK_conversation_with_Chespen
+		icon = GFX_goal_eik_unexpected_friend
+		cost = 5
+		prerequisite = {
+			focus = EIK_invite_yanthalia
+		}
+		completion_reward = { 				
+			CHE = { country_event = { id = che.3 days = 1 } }
+		}
+		ai_chance = { 
+		factor = 0.1
+			modifier = {
+				factor = 0
+				date < 2017.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 2017.1.1
+			}
+		}
+		x = 19
+		y = 9
+	}
+	focus = {
+		id = EIK_Kaspatian_protectorate
+		icon = GFX_goal_eik_unexpected_friend
+		cost = 5
+		prerequisite = {
+			focus = EIK_conversation_with_Chespen
+		}
+		mutually_exclusive = {
+			focus = EIK_our_territory
+		}
+		completion_reward = { 				
+			
+		}
+		ai_chance = { 
+		factor = 0.1
+			modifier = {
+				factor = 0
+				date < 2017.1.1
+			}
+			modifier = {
+				factor = 5
+				date > 2017.1.1
+			}
+		}
+		x = 18
+		y = 10
+	}
+	focus = {
+		id = EIK_our_territory
+		icon = GFX_goal_eik_unexpected_friend
+		cost = 5
+		prerequisite = {
+			focus = EIK_conversation_with_Chespen
+		}
+		completion_reward = { 				
+			
+		}
 		ai_chance = { 
 		factor = 0.1
 			modifier = {
@@ -691,9 +803,8 @@ focus_tree = {
 			}
 		}
 		x = 20
-		y = 9
+		y = 10
 	}
-	
 	focus = {
 		id = EIK_conquer_rebellious_regions
 		icon = GFX_goal_eik_regions_purge
@@ -702,6 +813,9 @@ focus_tree = {
 		will_lead_to_war_with = TOL
 		prerequisite = {
 			focus = EIK_eastern_block
+		}
+		prerequisite = {
+			focus = EIK_empire_sphere
 		}
 		mutually_exclusive = {
 			focus = EIK_cooperation_with_south
@@ -719,6 +833,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = EIK_eastern_block
+		}
+		prerequisite = {
+			focus = EIK_empire_sphere
 		}
 		mutually_exclusive = {
 			focus = EIK_conquer_rebellious_regions
@@ -740,6 +857,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			BAE = { country_event = { id = baensli.3 days = 1 } }
+		}
+		available = { 
+            has_army_manpower  = { size > 500000 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -769,7 +889,27 @@ focus_tree = {
 		x = 24
 		y = 10
 	}
-	
+	focus = {
+		id = EIK_open_wound
+		icon = GFX_goal_eik_she_ultimatum
+		cost = 10
+		prerequisite = {
+			focus = EIK_cooperation_with_south
+			focus = EIK_conquer_rebellious_regions
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			157 = { add_claim_by = EIK }
+			258 = { add_claim_by = EIK }
+			259 = { add_claim_by = EIK }
+			438 = { add_claim_by = EIK }
+			439 = { add_claim_by = EIK }
+			440 = { add_claim_by = EIK }
+			786 = { add_claim_by = EIK }
+		}
+		x = 22
+		y = 10
+	}
 	focus = {
 		id = EIK_ultimatum_to_sheregia
 		icon = GFX_goal_eik_she_ultimatum
@@ -779,8 +919,7 @@ focus_tree = {
 			focus = EIK_unexpected_partner
 		}
 		prerequisite = {
-			focus = EIK_cooperation_with_south
-			focus = EIK_conquer_rebellious_regions
+			focus = EIK_open_wound
 		}
 		completion_reward = { 
 			SHE = { country_event = { id = sheregia.1 days = 1 } }
@@ -813,40 +952,6 @@ focus_tree = {
 			}
 		}
 		x = 22
-		y = 10
-	}
-	
-	focus = {
-		id = EIK_prepare_to_war
-		icon = GFX_goal_unknown
-		cost = 5
-		will_lead_to_war_with = KAS
-		prerequisite = {
-			focus = EIK_ultimatum_to_sheregia
-		}
-		completion_reward = { 				
-			add_timed_idea = {
-				idea = EIK_armybaf1
-				days = 300
-			}
-			CHE = { country_event = { id = che.3 days = 1 } }
-		}
-		ai_will_do = {
-		factor = 0.5
-			modifier = {
-			factor = -5
-				NOT = { 157 = { is_controlled_by = EIK } }
-			}
-			modifier = {
-			factor = -5
-				NOT = { 392 = { is_controlled_by = EIK } }
-			}
-			modifier = {
-			factor = -5
-				NOT = { 326 = { is_controlled_by = EIK } }
-			}
-		}
-		x = 22
 		y = 11
 	}
 	
@@ -856,9 +961,13 @@ focus_tree = {
 		cost = 5
 		will_lead_to_war_with = KAS
 		prerequisite = {
-			focus = EIK_prepare_to_war
+			focus = EIK_ultimatum_to_sheregia
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = EIK_armybaf1
+				days = 300
+			}
 			EIK = { country_event = { id = eik.4 days = 1 } }
 			CHE = { 
 				country_event = { 

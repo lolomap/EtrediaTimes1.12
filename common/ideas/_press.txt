@@ -17,8 +17,8 @@ ideas = {
             }
         
             modifier = {
-                political_power_gain = -0.5
-                stability_factor = -0.15
+                political_power_gain = -0.25
+                stability_factor = -0.1
             }
         }
     }
@@ -39,7 +39,7 @@ ideas = {
 
                  modifier = {
                          stability_factor = 0.1
-                         research_speed_factor = 0.10
+                         research_speed_factor = 0.08
                          political_power_gain = -0.2
                          drift_defence_factor = -0.1
                  }
@@ -111,7 +111,7 @@ ideas = {
                  modifier = {
 						 conscription_factor = 0.05
                          stability_factor = -0.1
-                         research_speed_factor = -0.10
+                         research_speed_factor = -0.08
                          political_power_gain = 0.4
                          drift_defence_factor = 0.2
                  }

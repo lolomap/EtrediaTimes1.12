@@ -472,14 +472,11 @@ ideas = {
             allowed = {
                 always = no
             }
-        
-        
             removal_cost = -1
         
             on_add = {
                 
             }
-            
             on_remove = {
                 
             }

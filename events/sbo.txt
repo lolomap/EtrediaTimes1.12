@@ -14,10 +14,22 @@ country_event = {
     option = {
 	name = bou.1.a
 		MOA = { add_to_faction = SBO }
-    ai_chance = { factor = 100 }
+        ai_chance = {
+            base = 100
+            modifier = {
+                add = -100
+                has_country_flag = moa_padla_flag
+            }
+        }
 	}
     option = {
 	name = bou.1.b
-    ai_chance = { factor = 0 }
+        ai_chance = {
+            base = 0
+            modifier = {
+                add = 100
+                has_country_flag = moa_padla_flag
+            }
+        }
 	}
 }
