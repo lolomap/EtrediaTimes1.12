@@ -304,6 +304,7 @@ focus_tree = {
 
 		completion_reward = {
 			ORB = {
+                set_temp_variable = { temp = 30 }
 				country_event = { id = orb.43 days = 30 }
 			}
 		}
@@ -373,7 +374,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_newfactories
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_goal_ucb_dem_newfactories
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_IID
@@ -540,7 +541,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_economic_reform
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_economic_reform
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem1
@@ -1161,7 +1162,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_nologi
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_nologi
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_economic_reform
@@ -1178,7 +1179,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_granty
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_granty
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_nologi
@@ -1193,7 +1194,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_sbu_investors
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_sbu_investors
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_granty
@@ -1270,7 +1271,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_industrial1
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_industrial1
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_sbu_investors
@@ -1291,7 +1292,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_stab_regions
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_stab_regions
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_sbu_investors
@@ -1349,7 +1350,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_oil_factory
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_oil_factory
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_stab_regions
@@ -1391,7 +1392,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_tajiki
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_tajiki
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_industrial2
@@ -1624,7 +1625,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_slot1
-		icon = GFX_focus_research
+		icon = GFX_goal_ucb_dem_slot1
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_arms3
@@ -1726,7 +1727,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_rearmament
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_rearmament
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_planes

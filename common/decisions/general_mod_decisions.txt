@@ -794,9 +794,6 @@ sphere_category = {
 		custom_cost_trigger = {
 			command_power > 20
 		}
-		hidden_effect = {
-			add_command_power = -20
-		}
 		custom_cost_text = decision_cost_CP_20
 
         #days_re_enable = 30
@@ -817,6 +814,10 @@ sphere_category = {
         }
 
         complete_effect = {
+        
+		hidden_effect = {
+			add_command_power = -20
+		}
             FROM = {
                 send_equipment = {
                     equipment = infantry_equipment
@@ -836,9 +837,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 20
-		}
-		hidden_effect = {
-			add_command_power = -20
 		}
 		custom_cost_text = decision_cost_CP_20
 
@@ -860,6 +858,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -20
+		}
             FROM = {
                 send_equipment = {
                     equipment = support_equipment
@@ -879,9 +880,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 20
-		}
-		hidden_effect = {
-			add_command_power = -20
 		}
 		custom_cost_text = decision_cost_CP_20
 
@@ -903,6 +901,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -20
+		}
             FROM = {
                 send_equipment = {
                     equipment = artillery_equipment
@@ -922,9 +923,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 20
-		}
-		hidden_effect = {
-			add_command_power = -20
 		}
 		custom_cost_text = decision_cost_CP_20
 
@@ -946,6 +944,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -20
+		}
             FROM = {
                 send_equipment = {
                     equipment = anti_tank_equipment
@@ -965,9 +966,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 20
-		}
-		hidden_effect = {
-			add_command_power = -20
 		}
 		custom_cost_text = decision_cost_CP_20
 
@@ -989,6 +987,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -20
+		}
             FROM = {
                 send_equipment = {
                     equipment = anti_air_equipment
@@ -1008,9 +1009,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 20
-		}
-		hidden_effect = {
-			add_command_power = -20
 		}
 		custom_cost_text = decision_cost_CP_20
 
@@ -1032,6 +1030,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -20
+		}
             FROM = {
                 send_equipment = {
                     equipment = motorized_equipment
@@ -1051,9 +1052,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 30
-		}
-		hidden_effect = {
-			add_command_power = -30
 		}
 		custom_cost_text = decision_cost_CP_30
 
@@ -1075,6 +1073,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -30
+		}
             FROM = {
                 send_equipment = {
                     equipment = mechanized_equipment
@@ -1094,9 +1095,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 40
-		}
-		hidden_effect = {
-			add_command_power = -40
 		}
 		custom_cost_text = decision_cost_CP_40
 
@@ -1118,6 +1116,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -40
+		}
             FROM = {
                 send_equipment = {
                     equipment = fighter_equipment
@@ -1137,9 +1138,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 40
-		}
-		hidden_effect = {
-			add_command_power = -40
 		}
 		custom_cost_text = decision_cost_CP_40
 
@@ -1161,6 +1159,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -40
+		}
             FROM = {
                 send_equipment = {
                     equipment = CAS_equipment
@@ -1180,9 +1181,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 20
-		}
-		hidden_effect = {
-			add_command_power = -20
 		}
 		custom_cost_text = decision_cost_CP_20
 
@@ -1204,6 +1202,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -20
+		}
             FROM = {
                 send_equipment = {
                     equipment = train_equipment
@@ -1223,9 +1224,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 15
-		}
-		hidden_effect = {
-			add_command_power = -15
 		}
 		custom_cost_text = decision_cost_CP_15
 
@@ -1247,6 +1245,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -15
+		}
             FROM = {
                 send_equipment = {
                     equipment = convoy
@@ -1266,9 +1267,6 @@ sphere_category = {
 		
 		custom_cost_trigger = {
 			command_power > 30
-		}
-		hidden_effect = {
-			add_command_power = -30
 		}
 		custom_cost_text = decision_cost_CP_30
 
@@ -1290,6 +1288,9 @@ sphere_category = {
         }
 
         complete_effect = {
+		hidden_effect = {
+			add_command_power = -30
+		}
             FROM = {
                 send_equipment = {
                     equipment = modern_tank_equipment

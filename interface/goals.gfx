@@ -1,6 +1,71 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_dem_newfactories"
+	texturefile="gfx/interface/goals/goal_ucb_dem_newfactories.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_tajiki"
+	texturefile="gfx/interface/goals/goal_ucb_tajiki.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_stab_regions"
+	texturefile="gfx/interface/goals/goal_ucb_dem_stab_regions.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_slot1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_slot1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_sbu_investors"
+	texturefile="gfx/interface/goals/goal_ucb_dem_sbu_investors.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_rearmament"
+	texturefile="gfx/interface/goals/goal_ucb_dem_rearmament.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_oil_factory"
+	texturefile="gfx/interface/goals/goal_ucb_dem_oil_factory.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_nologi"
+	texturefile="gfx/interface/goals/goal_ucb_dem_nologi.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_industrial1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_industrial1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_granty"
+	texturefile="gfx/interface/goals/goal_ucb_dem_granty.dds"
+}
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_economic_reform"
+	texturefile="gfx/interface/goals/goal_ucb_dem_economic_reform.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_dem_army_training"
 	texturefile="gfx/interface/goals/goal_ucb_dem_army_training.dds"
 }

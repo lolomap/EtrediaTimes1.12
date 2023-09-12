@@ -60,10 +60,6 @@ generic_light_tanks = {
 	basic_light_tank_default = {
 		priority = {
 			factor = 50
-			modifier = { 
-				has_tech = improved_light_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				has_tech = main_battle_tank
 				factor = -5000
@@ -124,10 +120,6 @@ generic_light_tanks = {
 	improved_light_tank_default = {
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = advanced_light_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				has_tech = main_battle_tank
 				factor = -5000
@@ -271,13 +263,6 @@ generic_light_tank_destroyers = {
 
 	priority = {
 		factor = 100
-		modifier = {
-			NOT = { has_tech = basic_medium_tank_chassis } 
-			any_enemy_country = {
-				has_tech = basic_medium_tank_chassis
-			}
-			factor = 15
-		}
 	}
 	light_tank_destroyer_1 = {
 		priority = {
@@ -708,10 +693,6 @@ generic_medium_tanks = {
 	basic_medium_tank_default = {
 		priority = {
 			factor = 100
-			modifier = { 
-				has_tech = improved_medium_tank_chassis
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				has_tech = main_battle_tank
 				factor = -2000
@@ -773,10 +754,6 @@ generic_medium_tanks = {
 	improved_medium_tank_default = {
 		priority = {
 			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				has_tech = main_battle_tank
 				factor = -2000
@@ -927,13 +904,6 @@ generic_medium_tank_destroyer = {
 
 	priority = {
 		factor = 500
-		modifier = {
-			NOT = { has_tech = basic_heavy_tank_chassis } 
-			any_enemy_country = {
-				has_tech = basic_heavy_tank_chassis
-			}
-			factor = 3
-		}
 	}
 	medium_tank_destroyer_1 = {
 		priority = {
@@ -1433,10 +1403,6 @@ generic_heavy_tanks = {
 	basic_heavy_tank_default = {
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = improved_heavy_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
 			
 		}
 
@@ -1499,10 +1465,6 @@ generic_heavy_tanks = {
 	improved_heavy_tank_default = {
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = advanced_heavy_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
 		}
 
 		target_variant = {
@@ -1648,13 +1610,6 @@ generic_heavy_tank_destroyer = {
 
 	priority = {
 		factor = 500
-		modifier = {
-			NOT = { has_tech = basic_heavy_tank_chassis } 
-			any_enemy_country = {
-				has_tech = basic_heavy_tank_chassis
-			}
-			factor = 3
-		}
 	}
 	heavy_tank_destroyer_1 = {
 		priority = {
