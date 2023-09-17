@@ -129,6 +129,9 @@ technology_folders = {
 	air_techs_folder = {
 		ledger = air
 	}
+    drones_techs_folder = {
+        ledger = air
+    }
 	naval_folder = {
 		ledger = navy
 	}
