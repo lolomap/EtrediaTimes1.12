@@ -89,8 +89,24 @@ focus_tree = {
 	    }
 		completion_reward = {
 			FSC = { remove_ideas = { FSC_federalization_problem_idea } }
-			add_ideas = regionalism
 			
+            hidden_effect = {
+                FSC = { release_on_controlled = KUL }
+                KUL = {set_country_flag = autonomy_state}
+                FSC = { release_on_controlled = ORB }
+                ORB = {set_country_flag = autonomy_state}
+            }
+            set_autonomy = {
+                target = KUL
+                autonomy_state = autonomy_autonomy
+            }
+            set_autonomy = {
+                target = ORB
+                autonomy_state = autonomy_autonomy
+            }
+
+            add_political_power = 50
+			add_stability = 0.1
 		}
         ai_will_do = {
 			factor = 0.3
@@ -109,11 +125,20 @@ focus_tree = {
         prerequisite = {
 			focus = FSC_problems_with_administration
 		}
+        available = {
+            has_democratic < 0.65
+            NOT = {
+                has_idea = regionalism
+                has_idea = fractionism
+            }
+        }
         mutually_exclusive = {
 			focus = FSC_federalization_or_death
 	    }
 		completion_reward = {
 			FSC = { remove_ideas = { FSC_federalization_problem_idea } }
+            add_stability = -0.1
+            add_political_power = 50
 		}
         ai_will_do = {
 			factor = 0.7
@@ -1271,8 +1296,11 @@ focus_tree = {
         prerequisite = {
 			focus = FSC_ortostan_ultimatum
 		}
+        available = {
+            31 = {is_owned_by = FSC}
+        }
 		completion_reward = {
-			#
+			31 = {add_core_of = FSC}
 		}
         ai_will_do = {
 			factor = 0.2
@@ -1291,7 +1319,12 @@ focus_tree = {
 			focus = FSC_continue_destabilization
 		}
 		completion_reward = {
-			#
+			diplomatic_relation = {
+                country = UCB
+                relation = non_aggression_pact
+                active = yes
+            }
+            add_stability = 0.15
 		}
 		x = 9
 		y = 9
@@ -1304,7 +1337,7 @@ focus_tree = {
 			focus = FSC_truce_with_UCNB
 		}
 		completion_reward = {
-			#
+			add_ideas = FSC_passport
 		}
         ai_will_do = {
 			factor = 0.2

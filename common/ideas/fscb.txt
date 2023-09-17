@@ -1,5 +1,26 @@
 ideas = {
     country = {
+    FSC_passport = {
+        allowed = {
+            always = no
+        }
+    
+    
+        removal_cost = -1
+    
+        on_add = {
+            
+        }
+    
+        on_remove = {
+            
+        }
+    
+        modifier = {
+            MONTHLY_POPULATION = 0.15
+        }
+    }
+
     FSC_UCB_network = {
         allowed = {
             always = no

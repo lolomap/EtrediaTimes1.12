@@ -41,11 +41,6 @@ autonomy_state = {
         }
 		has_dlc = "Death or Dishonor"
 		has_government = fascism
-		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			NOT = { OVERLORD = { original_tag = JAP } }
-			NOT = { OVERLORD = { original_tag = MAN } }
-		}
 	}
 	
 	can_take_level = {

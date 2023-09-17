@@ -102,22 +102,6 @@ form_commonwealth_category = {
 	}
 }
 
-form_united_netherlands_category = {
-
-	icon = generic_formable_nations
-
-	picture = GFX_decision_cat_generic_united_netherlands
-
-	allowed = {
-		OR = {
-			has_dlc = "Waking the Tiger"
-			AND = {
-				has_dlc = "Man the Guns"
-				tag = HOL
-			}
-		}
-	}
-}
 
 form_united_central_america_category = {
 
