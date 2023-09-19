@@ -1,30 +1,49 @@
 ﻿l_english:
+ escalation_negotiations_suc_opinion: "Successful negotiations"
+ escalation_negotiations_fail_opinion: "Failed negotiations"
  embargo_bitch:0 "Embargo"
  embargo_initiator:0 "Embargo initiator"
  embargo_target:0 "Embargo target"
 
  political_form_cost_factor: "The cost of changing the political regime"
  press_laws_cost_factor: "Costs of media laws"
+ operation_sphere_puppet_risk: "Government obedience risk"
+ operation_sphere_puppet_outcome: "Efficiency of government obedience"
+ operation_sphere_puppet_cost: "Government obedience cost"
 
- IID_pressureTRP:0 "Pressure from the END"
+ IID_pressureTRP:0 "Pressure from the EoD"
+ IID_dem_improve_relations: "Praeter democrats"
+ IID_forgive_duxlands_opinion: "Territorial compromise"
 
  war_tire_value:0 "[?wtire|0]"
  war_tire_desc:0 "§HWar Fatigue§!\n"
- war_tire_effect:0 "War fatigue\nLegitimacy: [?wtire_stability|%+0]\nWarfare: [?wtire_warsup|%+0]\nAttack Division: [?wtire_attack|%+0]nDivision Defense: [?wtire_deffence|%+0]nDivision Recovery Rate: [?wtire_restore|%+0]nDivision training speed: [?wtire_mobolize|%+0]"
- 
+ war_tire_effect:0 "War fatigue\nLegitimacy: [?wtire_stability|%+0]\nWar support: [?wtire_warsup|%+0]\nDivision attack: [?wtire_attack|%+0]nDivision defense: [?wtire_deffence|%+0]nDivision recovery rate: [?wtire_restore|%+0]nDivision training speed: [?wtire_mobolize|%+0]"
  
  UCB_hateIID:0 "Sanctions from the UcNB"
  SFL_hateIID:0 "Sanctions from Safflia"
- KAR_hateIID:0 "Kartilia Sanctions"
+ KAR_hateIID:0 "Sanctions from Kartilia"
  SBU_hateIID:0 "Sanctions from Siburland"
  EIK_hateIID:0 "Sanctions from Eiklindstind"
+
+ UCB_dem_foreign_policy_opinion: "Zhmirinovan's policy"
+
+ FSC_IID_partner:0 "Parnership"
+ FSC_isles_way: "Island conference"
+ FSC_sfl_relations: "Safflian-Karatenian market"
+ FSC_SFL_support_claims: "FSKB supports the Safflian claims"
 
  SBU_eik_relations:0 "Southern partner"
  SBU_democracy_enemy:0 "Traitor to Democracy"
  SBU_democracy_friendly:0 "Forced authoritarianism"
  SBU_UCB_fascist_enemy:0 "Broken diplomatic relations"
-
  SBU_annex_RGY_SFL: "Annexation of Gy"
- SBU_east_monfua_SFL: "Presence in Monfua"
+ SBU_east_monfua_SFL: "Presence in Monfuya"
 
- ORB_DemExample_opinion:0 "Democracy stronghold"
+ SFL_concurent: "Market competition"
+ SFL_tradewar: "Trade war"
+ SFL_mof_relations: "Saffo-Monfuy relations"
+ SFL_sm_economic_zone_modifier: "Saffo-Monfuy economic zone"
+ 
+ partnership:0 "Сотруденичество"
+ confrontation:0 "Соперничество"
+ MOA_padla:0 "Отказ от выплат обязательств"
