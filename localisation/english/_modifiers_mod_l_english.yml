@@ -44,6 +44,6 @@
  SFL_mof_relations: "Saffo-Monfuy relations"
  SFL_sm_economic_zone_modifier: "Saffo-Monfuy economic zone"
  
- partnership:0 "Сотруденичество"
- confrontation:0 "Соперничество"
- MOA_padla:0 "Отказ от выплат обязательств"
+ partnership:0 "Cooperation"
+ confrontation:0 "Confrontations"
+ MOA_padla:0 "Refusal to pay obligations"
