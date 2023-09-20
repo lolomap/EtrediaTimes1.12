@@ -48,3 +48,5 @@
  confrontation:0 "Соперничество"
  MOA_padla:0 "Отказ от выплат обязательств"
 
+ modifier_production_speed_nuclear_rocket_site_factor:0 "£construction_speed_reactor_texticon  Скорость строительства §YШПУ§!"
+ modifier_production_speed_anti_nuclear_building_factor:0 "£construction_speed_reactor_texticon  Скорость строительства §YПРО§!"

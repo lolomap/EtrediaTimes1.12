@@ -2,12 +2,16 @@
   tank_artellery_support: "Поддержка САУ"
   tank_anti_air_support: "Поддержка ЗСУ"
   armored_support: "Ударная рота поддержки"
+  drones_support: "Поддержка дронами"
 
+  drone_equipment: "Ударный БПЛА"
   drone_equipment_0: "Ранний БПЛА"
   drone_equipment_1: "Ударный БПЛА"
+  copter_equipment: "Коптер"
   copter_equipment_0: "Ранние коптеры"
   copter_equipment_1: "FPV-дрон"
-  drone_suicidal_equipment_0: "Барражирующий боеприпас"
+  drone_suicidal_equipment: "Барражирующий боеприпас"
+  drone_suicidal_equipment_0: "Дрон-камикадзе"
 
  medium_tank_equipment:0 "Танк 50х"
  medium_tank_equipment_desc:0 "Танки 50х умеренно мобильны и при этом универсальны: они способны выполнять роль разведки, поддержки и даже танков прорыва."

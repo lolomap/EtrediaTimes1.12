@@ -137,7 +137,7 @@ focus_tree = {
 		y = 9
 
         prerequisite = {focus = UCB_dem_ndro}
-        prerequisite = {focus = UCB_dem_trp_garant}
+        #prerequisite = {focus = UCB_dem_trp_garant}
         prerequisite = {focus = UCB_dem_anti_IID}
 
 		available = {
@@ -191,6 +191,9 @@ focus_tree = {
         available = {
             IID = {has_completed_focus = IID_Require_the_eastern_trp}
         }
+        bypass = {
+            has_war_with = IID
+        }
 		mutually_exclusive = {
 			focus = UCB_dem_IID
 		}
@@ -220,6 +223,10 @@ focus_tree = {
 
         available = {
             IID = {has_completed_focus = IID_finish_off_the_minor}
+        }
+        
+        bypass = {
+            has_war_with = IID
         }
 
 		completion_reward = {
