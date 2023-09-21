@@ -247,6 +247,19 @@ on_actions = {
                             14 = {boost_region_mon = yes}
                             14 = {boost_region_com = yes}
                         }
+                        if = {
+                            limit = {
+                                has_idea = UCB_resist
+                            }
+                            boost_region_fas = yes
+                            boost_region_fas = yes
+                        }
+                        else_if = {
+                            limit = {
+                                has_idea = UCB_resist2
+                            }
+                            boost_region_fas = yes
+                        }
                     }
 
                     random_list = {

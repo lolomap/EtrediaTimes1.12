@@ -1,5 +1,8 @@
 involve_sphere = {
-    remove_from_array = {sphere_neighbors = PREV}
+    if = {
+        limit = {is_in_array = {sphere_neighbors = PREV }}
+        remove_from_array = {sphere_neighbors = PREV }
+    }
     set_temp_variable = { overlordscope = THIS }
     add_to_array = { sphere_members = PREV }
 
@@ -54,7 +57,10 @@ involve_sphere = {
 remove_from_sphere = {
     clear_variable = fembargo_cost
     var:sphere_owner = {
-        remove_from_array = {sphere_members = PREV}
+        if = {
+            limit = {is_in_array = {sphere_members = PREV }}
+            remove_from_array = {sphere_members = PREV}
+        }
     }
     #remove_targeted_decision = {
     #    target = sphere_owner

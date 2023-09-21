@@ -264,7 +264,7 @@ focus_tree = {
         y = 10
         available = {}
         bypass = {}
-        allow_branch = {}
+        allow_branch = {always = false}
         prerequisite = {
             focus = UCB_dem_iid_war
             focus = UCB_dem_newfactories
@@ -1336,7 +1336,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_mgahvatia_oil
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_mgahvatia_oil
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_oil_factory
@@ -1378,7 +1378,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_industrial2
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_industrial2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_industrial1
@@ -1415,7 +1415,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_industrial3
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_industrial3
 		cost = 10
 		prerequisite = {
 			focus = UCB_tajiki
@@ -1436,7 +1436,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_infrastructure1
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_ucb_dem_infrastructure1
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_industrial1
@@ -1475,7 +1475,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_infrastructure2
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_ucb_dem_infrastructure1
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_infrastructure1
@@ -1564,7 +1564,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_arms1
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_ucb_dem_arms1
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_nologi
@@ -1590,7 +1590,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_arms2
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_ucb_dem_arms2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_arms1
@@ -1611,7 +1611,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UCB_dem_arms3
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_ucb_dem_arms2
 		cost = 10
 		prerequisite = {
 			focus = UCB_dem_arms2

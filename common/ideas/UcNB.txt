@@ -366,6 +366,7 @@ ideas = {
 		 
 			modifier = {
 				political_power_gain = -0.4
+                custom_modifier_tooltip = ucb_fas_rise_tooltip
 			}
 		}
 
@@ -380,6 +381,7 @@ ideas = {
 		 
 			modifier = {
 				political_power_gain = -0.2
+                custom_modifier_tooltip = ucb_fas_rise_tooltip
 			}
 		}
 

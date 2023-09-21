@@ -1,6 +1,42 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_ucb_dem_mgahvatia_oil"
+	texturefile="gfx/interface/goals/goal_ucb_dem_mgahvatia_oil.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_industrial3"
+	texturefile="gfx/interface/goals/goal_ucb_dem_industrial3.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_industrial2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_industrial2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_infrastructure1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_infrastructure1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_arms2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_arms2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_arms1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_arms1.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_dem_newfactories"
 	texturefile="gfx/interface/goals/goal_ucb_dem_newfactories.dds"
 }
