@@ -90,7 +90,7 @@
   randomize_region_ideology_tooltip: "Идеологии регионов изменятся случайным образом\n"
   ucb_sep_rise_tooltip: "§RРост§! сепаратизма в регионах"
   ucb_opp_rise_tooltip: "§RСнижение§! поддержки Президента в регионах"
-  ucb_fas_rise_tooltip: "§RРост§! фашизма в регионах"
+  ucb_fas_rise_tooltip: "§RРост§! авторитаризма в регионах"
   enable_karatenia_unification: "Становятся доступны §Yрешения§! для §Gобъединения§! регионов"
 
 

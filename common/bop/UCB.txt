@@ -127,6 +127,11 @@ UCB_parlament_balance = {
             }
             on_activate = {
                 set_variable = {
+					var = region_ideology_factor
+					value = 0
+					tooltip = change_region_ideology_factor_tooltip
+				}
+                set_variable = {
                     var = region_event_factor
                     value = 0.1
                     tooltip = change_region_event_factor_tooltip

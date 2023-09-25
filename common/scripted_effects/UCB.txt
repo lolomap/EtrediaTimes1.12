@@ -243,6 +243,24 @@ calc_max_ideology = {
     }
 }
 
+region_event_advisor_remove = {
+    set_variable = { region_event_type = 3 }
+    random_character = {
+        limit = {
+            #can_be_country_leader = no
+            OR = {
+                is_advisor = yes
+                is_unit_leader = yes
+                is_army_chief = yes
+                is_navy_chief = yes
+                is_air_chief = yes
+            }
+        }
+
+        set_variable = { UCB.region_event_advisor = THIS }
+    }
+}
+
 region_event_change_law = {
     set_variable = {region_event_type = 0}
     set_variable_to_random = {var = region_law_change max = 5 integer = yes}

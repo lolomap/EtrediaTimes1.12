@@ -658,14 +658,33 @@ country_event = {
     option = {
         name = ucnb.27.a
 
-        meta_effect = {
-            text = {
-                add_ideas = [NEW_LAW_ACCEPTED]
+        if = {
+            limit = {check_variable = { region_event_type = 0 }}
+
+            meta_effect = {
+                text = {
+                    add_ideas = [NEW_LAW_ACCEPTED]
+                }
+                NEW_LAW_ACCEPTED = "[?region_idea_change.GetTokenKey]"
             }
-            NEW_LAW_ACCEPTED = "[?region_idea_change.GetTokenKey]"
+            
+            var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}}
         }
-        
-        var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}}
+        else_if = {
+            limit = {check_variable = { region_event_type = 2 }} 
+
+            add_power_balance_value = {
+                id = UCB_parlament_balance
+                value = -0.08
+            }
+        }
+        else_if = {
+            limit = {
+                check_variable = { region_event_type = 3 }
+            }
+
+            retire_character = var:region_event_advisor
+        }
 
         ai_chance = {
             base = 100
@@ -674,7 +693,22 @@ country_event = {
     option = {
         name = ucnb.27.b
 
-        add_political_power = -75
+        trigger = {
+            NOT = {
+                check_variable = { region_event_type = 2 }
+            }
+        }
+
+        if = {
+            limit = {check_variable = { region_event_type = 3 }}
+            add_power_balance_value = {
+                id = UCB_parlament_balance
+                value = -0.08
+            }
+        }
+        else = {
+            add_political_power = -40
+        }
         var:region_event = {add_to_variable = {var = UCB.oppos_@THIS value = -0.1 tooltip = add_region_opposition_tooltip}}
 
         ai_chance = {
@@ -814,17 +848,14 @@ country_event = {
             chance = var:ych
 
             random_list = {
-                1 = {  #ивент по закону
-                    region_event_change_law = yes
-                    country_event = ucnb.27
-                }
-                0 = {set_variable = {region_event_type = 1}} #ивент по коррупции
-                0 = {set_variable = {region_event_type = 2}} #ивент по балансу
-                0 = {set_variable = {region_event_type = 3}} #ивент по советнику
+                100 = { region_event_change_law = yes } #ивент по закону
+                0 = {set_variable = {region_event_type = 1}} #ивент по экономике
+                100 = {set_variable = {region_event_type = 2}} #ивент по балансу
+                50 = {region_event_advisor_remove = yes} #ивент по советнику
                 0 = {set_variable = {region_event_type = 4}} #ивент по торговле
-                0 = {set_variable = {region_event_type = 5}} #ивент по напряженности
             }
-
+            
+            country_event = {id = ucnb.27 hours = 1}
         }
 
     }
