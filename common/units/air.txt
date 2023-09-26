@@ -1,4 +1,25 @@
 sub_units = {
+    drone = {
+        sprite = light_plane
+		priority = 1
+		active = yes
+		type = { tactical_bomber }
+		need = { drone_equipment = 1 }
+		
+		land_air_wing_size = 100
+    }
+
+    drone_suicidal = {
+        sprite = light_plane
+		priority = 1
+		active = yes
+		type = { suicide }
+		need = { drone_suicidal_equipment = 1 }
+		categories = { category_fighter }
+		
+		land_air_wing_size = 100
+    }
+
 	fighter = {
 		sprite = light_plane
 		priority = 1

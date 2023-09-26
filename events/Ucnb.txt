@@ -954,3 +954,45 @@ country_event = {
         remove_ideas = UCB_corruption
     }
 }
+
+country_event = {
+    id = ucnb.35
+    title = ucnb.35.t
+    desc = ucnb.35.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=ucnb.35.a
+        trigger = {country_exists = DEM}
+        DEM = {UCB = {accept_existance = yes set_easy_sphere = yes}}
+        send_equipment = {
+            equipment = infantry_equipment
+            amount = 1500
+            target = DEM
+        }
+    }
+    option = {
+        name=ucnb.35.b
+        trigger = {country_exists = DIR}
+        DIR = {UCB = {accept_existance = yes set_easy_sphere = yes}}
+        send_equipment = {
+            equipment = infantry_equipment
+            amount = 1500
+            target = DIR
+        }
+    }
+    option = {
+        name=ucnb.35.c
+        trigger = {country_exists = SDI}
+        SDI = {UCB = {accept_existance = yes set_easy_sphere = yes}}
+        send_equipment = {
+            equipment = infantry_equipment
+            amount = 1500
+            target = SDI
+        }
+    }
+}

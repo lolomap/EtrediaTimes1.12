@@ -30,6 +30,10 @@ scripted_diplomatic_actions = {
                 limit = {ROOT = {tag = SBU} has_idea = SBU_high_sburska_zvezda}
                 has_idea = SBU_high_sburska_zvezda
             }
+            else_if = {
+                limit = {ROOT = {has_country_flag = EASY_INVOLVE_@PREV}}
+                custom_trigger_tooltip = easy_involve_sphere_tooltip
+            }
             else = {
 
                 AND = {

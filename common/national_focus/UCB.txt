@@ -2372,7 +2372,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            country_event = {id = ucnb.35 days = 1}
         }
     }
 
@@ -2397,7 +2397,12 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            TRB = {UCB = {set_easy_sphere = yes}}
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 1500
+                target = TRB
+            }
         }
     }
 
@@ -2420,7 +2425,12 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            SMA = {UCB = {set_easy_sphere = yes}}
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 1000
+                target = SMA
+            }
         }
     }
 
@@ -2658,7 +2668,7 @@ focus_tree = {
     focus = {
         id = UCB_reduce_local_power
         icon = GFX_goal_unknown
-        cost = 10
+        cost = 7
         x = 51
         y = 8
         available = {}
@@ -2672,7 +2682,11 @@ focus_tree = {
         #}
     
         completion_reward = {
-            
+            add_political_power = 50
+            if = {
+                limit = {has_power_balance = {id = UCB_parlament_balance}}
+                add_power_balance_value = {id = UCB_parlament_balance value = 0.15}
+            }
         }
     }
 
@@ -2695,12 +2709,12 @@ focus_tree = {
         completion_reward = {
             if = {
                 limit = {TRP = {is_ai = yes}}
-                puppet = TRP
                 send_equipment = {
                     equipment = infantry_equipment
                     amount = 350
                     target = TRP
                 }
+                puppet = TRP
             }
             else = {
                 create_wargoal = {
