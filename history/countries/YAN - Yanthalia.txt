@@ -152,6 +152,6 @@ recruit_character = YAN_borbely_bertalat
 
 recruit_character = YAN_regzho_ontrilat
 
-recruit_character = YAN_gulyas_szilveszter
-
 recruit_character = YAN_atar_onodar
+
+recruit_character = YAN_gulyas_szilveszter

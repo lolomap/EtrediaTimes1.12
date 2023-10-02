@@ -537,3 +537,37 @@ defined_text = {
     }
     text = {localization_key = cw_press_y}
 }
+
+defined_text = {
+    name = autonomy_tooltip
+    text = {
+        trigger = {
+            ROOT = {check_variable = { ataucount = autonomies^num }}
+        }
+        localization_key = attach_autonomy_new_tooltip
+    }
+    text = {
+        localization_key = attach_autonomy_normal_tooltip
+    }
+}
+
+defined_text = {
+    name = autonomy_flag
+    text = {
+        trigger = {
+            ROOT = {check_variable = { ataucount = autonomies^num }}
+            NOT = {check_variable = { core_countries^0 = ROOT }}
+        }
+        localization_key = attach_autonomy_new_flag1
+    }
+    text = {
+        trigger = {
+            ROOT = {check_variable = { ataucount = autonomies^num }}
+            NOT = {check_variable = { core_countries^1 = ROOT }}
+        }
+        localization_key = attach_autonomy_new_flag2
+    }
+    text = {
+        localization_key = attach_autonomy_normal_flag
+    }
+}

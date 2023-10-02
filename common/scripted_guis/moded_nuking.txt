@@ -62,7 +62,7 @@ scripted_gui = {
                 ai_will_do = {
                     base = -60
                     modifier = {
-                        OWNER = {
+                        var:OWNER = {
                             ROOT = {
                                 has_opinion = {
                                     target = PREV
@@ -73,7 +73,7 @@ scripted_gui = {
                         add = -50
                     }
                     modifier = {
-                        OWNER = {
+                        var:OWNER = {
                             ROOT = {
                                 has_opinion = {
                                     target = PREV
@@ -84,7 +84,7 @@ scripted_gui = {
                         add = 20
                     }
                     modifier = {
-                        OWNER = {
+                        var:OWNER = {
                             ROOT = {
                                 has_opinion = {
                                     target = PREV
@@ -95,7 +95,7 @@ scripted_gui = {
                         add = 20
                     }
                     modifier = {
-                        OWNER = {
+                        var:OWNER = {
                             ROOT = {
                                 has_opinion = {
                                     target = PREV
@@ -106,7 +106,7 @@ scripted_gui = {
                         add = 40
                     }
                     modifier = {
-                        OWNER = {
+                        var:OWNER = {
                             ROOT = {
                                 has_war_with = PREV
                             }

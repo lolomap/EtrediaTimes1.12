@@ -108,7 +108,7 @@ ideas = {
 
 			modifier = {
                 political_power_gain = -0.6
-                power_balance_daily = -0.0017
+                power_balance_daily = -0.001
                 custom_modifier_tooltip = ucb_opp_rise_tooltip
 			}
 		}
@@ -150,6 +150,7 @@ ideas = {
 			modifier = {
                 custom_modifier_tooltip = ucb_sep_rise_tooltip
                 stability_factor = -0.1
+                power_balance_daily = -0.0007
 			}
 		}
 		UCB_corruption = {
@@ -167,6 +168,7 @@ ideas = {
 				army_defence_factor = -0.08
                 army_attack_factor = -0.08
                 training_time_army_factor = 0.25
+                power_balance_daily = -0.0005
 			}
 		}
 		ucb_democratic_opposition = {
@@ -364,6 +366,7 @@ ideas = {
 		 
 			modifier = {
 				political_power_gain = -0.4
+                custom_modifier_tooltip = ucb_fas_rise_tooltip
 			}
 		}
 
@@ -378,6 +381,7 @@ ideas = {
 		 
 			modifier = {
 				political_power_gain = -0.2
+                custom_modifier_tooltip = ucb_fas_rise_tooltip
 			}
 		}
 

@@ -1760,18 +1760,6 @@ guiTypes = {
 			}
 			
 			
-			containerWindowType = {
-				name = "tiled_research_bg"
-				position = { x=390 y=807 }
-				size = { width = 1475 height = 350 }
-				clipping = no
-	
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_tiled_research_bg"
-				}			
-			}
-				
 			gridboxtype = {
 				name = "early_fighter_tree"
 				position = { x = 340 y = 32 }
@@ -1792,6 +1780,31 @@ guiTypes = {
 				name = "experimental_rockets_tree"
 				position = { x = 640 y = 0 }
 				size = { width = 400 height = 400 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+		}
+
+        containerWindowType = {
+			name = "drones_techs_folder"
+			position = { x=0 y=47 }
+			size = { width = 100%% height = 100%% }
+			margin = { top = 13 left = 13 bottom = 24 right = 25}
+			drag_scroll = { left middle }
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+
+			
+				
+			gridboxtype = {
+				name = "early_drone_tree"
+				position = { x = 340 y = 32 }
+				size = { width = 400 height = 1000 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
@@ -2832,7 +2845,23 @@ containerWindowType = {
 				frame = 1
 				clicksound = click_default
 			}
+
+            buttonType = {
+				name = "support_folder_tab"
+				position = { x = 111 y = 0 }
+				quadTextureSprite = "GFX_support_folder_tab"
+				frame = 1
+				clicksound = click_default
+			}
 			
+            buttonType = {
+				name = "armour_folder_tab"
+				position = { x = 200 y = 0 }
+				quadTextureSprite = "GFX_armour_folder_tab"
+				frame = 1
+				clicksound = click_default
+			}
+
 			buttonType = {
 				name = "mechanized_support_folder_tab"
 				position = { x = 289 y = 0 }
@@ -2850,21 +2879,6 @@ containerWindowType = {
 			}
 
 			buttonType = {
-				name = "support_folder_tab"
-				position = { x = 111 y = 0 }
-				quadTextureSprite = "GFX_support_folder_tab"
-				frame = 1
-				clicksound = click_default
-			}
-			buttonType = {
-				name = "armour_folder_tab"
-				position = { x = 200 y = 0 }
-				quadTextureSprite = "GFX_armour_folder_tab"
-				frame = 1
-				clicksound = click_default
-			}
-
-			buttonType = {
 				name = "artillery_folder_tab"
 				position = { x = 378 y = 0 }
 				quadTextureSprite = "GFX_artillery_folder_tab"
@@ -2872,16 +2886,7 @@ containerWindowType = {
 				clicksound = click_default
 			}
 
-
-			buttonType = {
-				name = "naval_folder_tab"
-				position = { x = 586 y = 0 }
-				quadTextureSprite = "GFX_naval_folder_tab"
-				frame = 1
-				clicksound = click_default
-			}
-
-			buttonType = {
+            buttonType = {
 				name = "air_techs_folder_tab"
 				position = { x = 497 y = 0 }
 				quadTextureSprite = "GFX_air_techs_folder_tab"
@@ -2889,9 +2894,24 @@ containerWindowType = {
 				clicksound = click_default
 			}
 
+            buttonType = {
+				name = "drones_techs_folder_tab"
+				position = { x = 586 y = 0 }
+				quadTextureSprite = "GFX_air_techs_folder_tab"
+				frame = 1
+				clicksound = click_default
+			}
 
 			buttonType = {
-				position = { x = 700 y = 0 }
+				name = "naval_folder_tab"
+				position = { x = 675 y = 0 }
+				quadTextureSprite = "GFX_naval_folder_tab"
+				frame = 1
+				clicksound = click_default
+			}
+
+			buttonType = {
+				position = { x = 783 y = 0 }
 				name = "electronics_folder_tab"
 				quadTextureSprite = "GFX_techtree_engineering_tab"
 				frame = 1
@@ -2901,7 +2921,7 @@ containerWindowType = {
 			iconType = {
 				name = "highlight_engineering_folder"
 				spriteType = "GFX_tutorial_research_folder_icon_glow"
-				position = { x=783 y=0}
+				position = { x=866 y=0}
 				hide = yes
 				alwaystransparent = yes
 			}
@@ -2915,7 +2935,7 @@ containerWindowType = {
 			#}			
 				
 			buttonType = {
-				position = { x = 800 y = 0 }
+				position = { x = 872 y = 0 }
 				name = "industry_folder_tab"
 				quadTextureSprite = "GFX_industry_folder_tab"
 				frame = 1
@@ -3648,6 +3668,77 @@ containerWindowType = {
 
 	containerWindowType = {
 		name = "techtree_air_techs_folder_item"
+		position = { x=-60 y=0 }
+		size = { width = 183 height = 84 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		instantTextBoxType = {
+			name = "Name"
+			position = { x = 3 y = -1 }
+			textureFile = ""
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = ""
+			maxWidth = 166
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=89 y=50 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes	
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "bonus_icon"
+			position = { x=111 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 111 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+
+		containerWindowType = {
+			name = "sub_technology_slot_0"
+			position = { x=142 y=5 }
+			size = { width = 35 height = 26 }
+			clipping = no
+			
+			background = {
+				name = "Background"
+				spriteType ="GFX_subtech_carrier_plane_bg"
+			}
+			
+			iconType = {
+				name = "picture"
+				position = { x=6 y=2 }
+				spriteType = "GFX_airwing_carrier_icon"
+				alwaystransparent = yes
+			}
+		}		
+		
+	}
+
+    containerWindowType = {
+		name = "techtree_drones_techs_folder_item"
 		position = { x=-60 y=0 }
 		size = { width = 183 height = 84 }
 		clipping = no

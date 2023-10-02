@@ -111,6 +111,11 @@ set_popularities = {
 
 set_convoys = 600
 
+add_equipment_to_stockpile = {
+    type = train_equipment
+    amount = 200
+}
+
 recruit_character = UCB_karl_larhson
 
 recruit_character = UCB_anna_helshten

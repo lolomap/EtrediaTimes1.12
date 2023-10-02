@@ -197,14 +197,6 @@ country_event = {
             type = annex_everything
         }
     }
-    option = {
-        name = ucbf.8.b
-        cancel_border_war = {
-            dont_fire_events = yes
-            defender = 44
-            attacker = 45
-        }
-    }
 }
 
 country_event = {

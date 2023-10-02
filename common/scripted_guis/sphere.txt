@@ -56,54 +56,156 @@ scripted_gui = {
 
         visible = {
             controller = {tag = ROOT}
-            if = {
-                limit = {check_variable = {core_countries^num > 1}}
-                always = yes
-            }
-            else = {
-                NOT = {check_variable = {core_countries^0 = ROOT}}
+            #if = {
+            #    limit = {check_variable = {core_countries^num > 1}}
+            #    always = yes
+            #}
+            #else = {
+            #    NOT = {check_variable = {core_countries^0 = ROOT}}
+            #}
+        }
+
+        triggers = {
+            left_button_visible = {ROOT = {has_variable = attach_autonomy}}
+            right_button_visible = {ROOT = {has_variable = attach_autonomy}}
+            cFlag_visible = {ROOT = {has_variable = attach_autonomy}}
+            cFlagBorder_visible = {ROOT = {has_variable = attach_autonomy}}
+        }
+
+        properties = {
+            cFlag = {
+                image = [autonomy_flag]
             }
         }
 
         effects = {
+            left_button_click = {
+                ROOT = {
+                    add_to_variable = { ataucount = -1 }
+                    clamp_variable = {
+                        var = ataucount
+                        min = 0
+                        max = autonomies^num
+                    }
+                    set_variable = { attach_autonomy = autonomies^ataucount }
+                }
+            }
+            right_button_click = {
+                ROOT = {
+                    add_to_variable = { ataucount = 1 }
+                    clamp_variable = {
+                        var = ataucount
+                        min = 0
+                        max = autonomies^num
+                    }
+                    set_variable = { attach_autonomy = autonomies^ataucount }
+                }
+            }
+
             r_click = {
-                for_each_scope_loop = {
-                    array = core_countries
-                    break = b
-                    
-                    if = {
-                        limit = {
-                            NOT = {tag = ROOT}
-                            OR = {
-                                NOT = {country_exists = THIS}
-                                AND = {
-                                    is_subject_of = ROOT
-                                    OR = {
-                                        has_autonomy_state = autonomy_autonomy
-                                        has_autonomy_state = autonomy_subject
+                if = {
+                    limit = {
+                        OR = {
+                            check_variable = {core_countries^num > 1}
+                            NOT = {check_variable = {core_countries^0 = ROOT}}
+                        }
+                    }
+                        
+                    for_each_scope_loop = {
+                        array = core_countries
+                        break = b
+                        
+                        if = {
+                            limit = {
+                                NOT = {tag = ROOT}
+                                OR = {
+                                    NOT = {country_exists = THIS}
+                                    AND = {
+                                        is_subject_of = ROOT
+                                        OR = {
+                                            has_autonomy_state = autonomy_autonomy
+                                            has_autonomy_state = autonomy_subject
+                                        }
                                     }
                                 }
                             }
+                            transfer_state = PREV
+                            set_country_flag = autonomy_state
+                            ROOT = {
+                                if = {
+                                    limit = {NOT = {is_in_array = {autonomies = PREV}}}
+                                    set_variable = { attach_autonomy = PREV }
+                                    add_to_array = { autonomies = PREV }
+                                }
+                                set_autonomy = {
+                                    target = PREV
+                                    autonomy_state = autonomy_autonomy
+                                    end_wars = no
+                                    end_civil_wars = no
+                                }
+                                if = {
+                                    limit = {has_government = monarchism}
+                                    PREV = {set_politics = {ruling_party = neutrality elections_allowed = no}}
+                                }
+                            }
+                            
+                            set_temp_variable = { b = 1 }
                         }
-                        transfer_state = PREV
-                        set_country_flag = autonomy_state
+                    }
+                    encount_minors = yes
+                }
+                else = {
+                    if = {
+                        limit = {
+                            ROOT = {
+                                OR = {
+                                    NOT = {ROOT = {has_variable = attach_autonomy}}
+                                    check_variable = { attach_autonomy = ROOT }
+                                    check_variable = { attach_autonomy = 0 }
+                                }
+                            }
+                        }
+                        create_dynamic_country = {
+                            original_tag = ROOT
+
+                            meta_effect = {
+                                text = {
+                                    set_cosmetic_tag = [cosmetic]
+                                }
+                                cosmetic = "STATE_[PREV.GetID]"
+                            }
+                            
+                            transfer_state = PREV
+                            every_core_state = {
+                                limit = {NOT = {is_owned_by = PREV}}
+                                remove_core_of = PREV
+                            }
+                            set_country_flag = autonomy_state
+                            set_variable = { AUTONOMY_STATE_NAME = PREV }
+                            ROOT = {
+                                set_variable = { attach_autonomy = PREV }
+                                add_to_array = { autonomies = PREV }
+                                set_autonomy = {
+                                    target = PREV
+                                    autonomy_state = autonomy_autonomy
+                                    end_wars = no
+                                    end_civil_wars = no
+                                }
+                                if = {
+                                    limit = {has_government = monarchism}
+                                    PREV = {set_politics = {ruling_party = neutrality elections_allowed = no}}
+                                }
+                            }
+                        }
+                    }
+                    else = {
                         ROOT = {
-                            set_autonomy = {
-                                target = PREV
-                                autonomy_state = autonomy_autonomy
-                                end_wars = no
-                                end_civil_wars = no
-                            }
-                            if = {
-                                limit = {has_government = monarchism}
-                                PREV = {set_politics = {ruling_party = neutrality elections_allowed = no}}
+                            var:attach_autonomy = {
+                                transfer_state = PREV.PREV
                             }
                         }
-                        
-                        set_temp_variable = { b = 1 }
                     }
                 }
-                encount_minors = yes
             }
         }
     }

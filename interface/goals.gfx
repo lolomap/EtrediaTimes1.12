@@ -1,6 +1,185 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_UCB_destroy_dem"
+	texturefile="gfx/interface/goals/goal_UCB_destroy_dem.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_fascism_support_formations"
+	texturefile="gfx/interface/goals/goal_UCB_fascism_support_formations.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_fasc_united_caratenia"
+	texturefile="gfx/interface/goals/goal_UCB_fasc_united_caratenia.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_yurescul_speech"
+	texturefile="gfx/interface/goals/goal_UCB_yurescul_speech.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_support_separs"
+	texturefile="gfx/interface/goals/goal_UCB_support_separs.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_sep_punishment"
+	texturefile="gfx/interface/goals/goal_UCB_sep_punishment.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_reduce_local_power"
+	texturefile="gfx/interface/goals/goal_UCB_reduce_local_power.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_pepene_incedent"
+	texturefile="gfx/interface/goals/goal_UCB_pepene_incedent.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_irtazlin_speech"
+	texturefile="gfx/interface/goals/goal_UCB_irtazlin_speech.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_independent_ndro"
+	texturefile="gfx/interface/goals/goal_UCB_independent_ndro.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_convergation"
+	texturefile="gfx/interface/goals/goal_UCB_convergation.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_civilian_nationalism"
+	texturefile="gfx/interface/goals/goal_UCB_civilian_nationalism.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_UCB_assental_pogrom"
+	texturefile="gfx/interface/goals/goal_UCB_assental_pogrom.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_mgahvatia_oil"
+	texturefile="gfx/interface/goals/goal_ucb_dem_mgahvatia_oil.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_industrial3"
+	texturefile="gfx/interface/goals/goal_ucb_dem_industrial3.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_industrial2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_industrial2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_infrastructure1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_infrastructure1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_arms2"
+	texturefile="gfx/interface/goals/goal_ucb_dem_arms2.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_arms1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_arms1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_newfactories"
+	texturefile="gfx/interface/goals/goal_ucb_dem_newfactories.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_tajiki"
+	texturefile="gfx/interface/goals/goal_ucb_tajiki.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_stab_regions"
+	texturefile="gfx/interface/goals/goal_ucb_dem_stab_regions.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_slot1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_slot1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_sbu_investors"
+	texturefile="gfx/interface/goals/goal_ucb_dem_sbu_investors.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_rearmament"
+	texturefile="gfx/interface/goals/goal_ucb_dem_rearmament.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_oil_factory"
+	texturefile="gfx/interface/goals/goal_ucb_dem_oil_factory.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_nologi"
+	texturefile="gfx/interface/goals/goal_ucb_dem_nologi.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_industrial1"
+	texturefile="gfx/interface/goals/goal_ucb_dem_industrial1.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_granty"
+	texturefile="gfx/interface/goals/goal_ucb_dem_granty.dds"
+}
+
+SpriteType = {
+	name = "GFX_goal_ucb_dem_economic_reform"
+	texturefile="gfx/interface/goals/goal_ucb_dem_economic_reform.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_ucb_dem_army_training"
 	texturefile="gfx/interface/goals/goal_ucb_dem_army_training.dds"
 }

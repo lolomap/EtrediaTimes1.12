@@ -498,6 +498,40 @@ country_event = {
 
     option = {
         name = yan.24.a
-        promote_character = YAN_atar_onodar
+        promote_character = {
+            character = YAN_atar_onodar
+            ideology = nazism
+        }
+        retire_character = YAN_regzho_ontrilat
+    }
+}
+
+country_event = {
+    id = yan.25
+    title = yan.25.t
+    desc = yan.25.d
+    #picture = GFX_event_picture
+
+    is_triggered_only = yes
+    #fire_only_once = yes
+
+    #trigger = {}
+    option = {
+        name=yan.25.a
+        YAN = {
+            create_wargoal = {
+                type = take_state
+                generator = { 276 809 305 }
+                target = PREV
+            }
+        }
+    }
+    option = {
+        name = yan.25.b
+        YAN = {
+            transfer_state = 276
+            transfer_state = 809
+            transfer_state = 305
+        }
     }
 }

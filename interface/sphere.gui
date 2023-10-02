@@ -96,6 +96,31 @@ guiTypes = {
         size = {width = 100% height = 50}
 
         buttonType = {
+            name = "cFlag"
+            quadTextureSprite = "GFX_flag_small2"
+            position = {x = 210 y = 7}
+            pdx_tooltip = attach_autonomy_tooltip
+        }
+
+        iconType = {
+            name = "cFlagBorder"
+            quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+            position = {x = 205 y = 2}
+            alwaystransparent = yes
+        }
+
+        buttonType = {
+            name = "left_button"
+            spriteType = "GFX_production_line_arrow_left"
+            position = { x = 170 y = 7 }
+        }
+        buttonType = {
+            name = "right_button"
+            spriteType = "GFX_production_line_arrow_right"
+            position = { x = 260 y = 7 }
+        }
+
+        buttonType = {
             name = "r"
             quadTextureSprite = "GFX_occupation_release_button"
             buttonText = autonomy_release_btn
@@ -103,6 +128,7 @@ guiTypes = {
 
             position = {x = 0 y = 0}
         }
+
     }
     
 }
