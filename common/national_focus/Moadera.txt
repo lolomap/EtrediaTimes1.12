@@ -127,7 +127,6 @@ focus_tree = {
 
         completion_reward = {
             add_stability = 0.1
-            hidden_effect = {
                 GOD = { 
                     add_opinion_modifier = {
 					    target = MOA
@@ -152,7 +151,6 @@ focus_tree = {
     				    modifier = partnership
                     }
 				}
-            }
         }
     }
     focus = {
@@ -214,7 +212,6 @@ focus_tree = {
 
         completion_reward = {
             MOA = { remove_ideas = MOA_debts }
-            hidden_effect = {
                 GOD = { 
                     add_opinion_modifier = {
 					    target = MOA
@@ -241,7 +238,6 @@ focus_tree = {
                     }
                     set_country_flag = moa_padla_flag
 				}
-            }
         }
     }
     focus = {
