@@ -62,6 +62,7 @@ focus_tree = {
 
         bypass = {
             OR = {
+                has_completed_focus = UCB_pepene_incedent
                 has_war_with = FSC
                 NOT = {country_exists = FSC}
                 country_exists = ORB
@@ -311,7 +312,6 @@ focus_tree = {
 
 		completion_reward = {
 			ORB = {
-                set_temp_variable = { temp = 30 }
 				country_event = { id = orb.43 days = 30 }
 			}
 		}
@@ -2199,7 +2199,7 @@ focus_tree = {
 
     focus = {
         id = UCB_convergation
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_convergation
         cost = 5
         x = 55
         y = 6
@@ -2220,7 +2220,7 @@ focus_tree = {
 
     focus = {
         id = UCB_civilian_nationalism
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_civilian_nationalism
         cost = 5
         x = 55
         y = 7
@@ -2242,11 +2242,12 @@ focus_tree = {
 
     focus = {
         id = UCB_yurescul_speech
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_yurescul_speech
         cost = 10
         x = 55
         y = 8
         available = {
+            has_completed_focus = UCB_parlament_fas6
         }
         bypass = {}
         allow_branch = {}
@@ -2436,7 +2437,7 @@ focus_tree = {
 
     focus = {
         id = UCB_pepene_incedent
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_pepene_incedent
         cost = 10
         x = 53
         y = 9
@@ -2463,12 +2464,11 @@ focus_tree = {
 
     focus = {
         id = UCB_independent_ndro
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_independent_ndro
         cost = 5
         x = 53
         y = 10
         available = {
-            has_completed_focus = UCB_parlament_fas6
             country_exists = ORB
             ORB = {has_border_war = yes}
         }
@@ -2493,7 +2493,7 @@ focus_tree = {
 
     focus = {
         id = UCB_support_separs
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_support_separs
         cost = 1
         x = 53
         y = 11
@@ -2529,7 +2529,7 @@ focus_tree = {
 
     focus = {
         id = UCB_narabel_referendum
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ucb_dem_ndro2
         cost = 5
         x = 53
         y = 12
@@ -2616,11 +2616,14 @@ focus_tree = {
 
     focus = {
         id = UCB_sep_punishment
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_sep_punishment
         cost = 10
         x = 51
         y = 6
-        available = {}
+        available = {
+            has_stability > 0.4
+            has_idea = sforces_5
+        }
         bypass = {
             FSC = {
                 has_completed_focus = FSC_fuel_desire_to_be_free
@@ -2651,7 +2654,7 @@ focus_tree = {
 
     focus = {
 		id = UCB_fasc_south_ORB
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ucb_dem_ndro
 		cost = 5
 		prerequisite = {
 			focus = UCB_sep_punishment
@@ -2667,7 +2670,7 @@ focus_tree = {
 
     focus = {
         id = UCB_reduce_local_power
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_reduce_local_power
         cost = 7
         x = 51
         y = 8
@@ -2692,7 +2695,7 @@ focus_tree = {
 
     focus = {
         id = UCB_assental_pogrom
-        icon = GFX_goal_unknown
+        icon = GFX_goal_UCB_assental_pogrom
         cost = 10
         x = 51
         y = 9
@@ -2763,7 +2766,7 @@ focus_tree = {
 
     focus = {
 		id = UCB_fascism_support_formations
-		icon = GFX_goal_unknown
+		icon = GFX_goal_UCB_fascism_support_formations
 		cost = 10
 		prerequisite = {
 			focus = UCB_fascism_way
@@ -2801,7 +2804,7 @@ focus_tree = {
 
     focus = {
 		id = UCB_destroy_dem
-		icon = GFX_goal_unknown
+		icon = GFX_goal_UCB_destroy_dem
 		cost = 10
 		prerequisite = {
 			focus = UCB_fascism_support_formations
@@ -2818,7 +2821,7 @@ focus_tree = {
 
     focus = {
 		id = UCB_fasc_united_caratenia
-		icon = GFX_goal_unknown
+		icon = GFX_goal_UCB_fasc_united_caratenia
 		cost = 10
 		prerequisite = {
 			focus = UCB_destroy_dem
@@ -2867,7 +2870,7 @@ focus_tree = {
 
     focus = {
 		id = UCB_fasc_irtazlin_speech
-		icon = GFX_goal_unknown
+		icon = GFX_goal_UCB_irtazlin_speech
 		cost = 10
 		prerequisite = {
 			focus = UCB_fasc_unitarian

@@ -2,7 +2,8 @@
   tank_artellery_support: "Поддержка САУ"
   tank_anti_air_support: "Поддержка ЗСУ"
   armored_support: "Ударная рота поддержки"
-  drones_support: "Поддержка дронами"
+  copters_support: "Поддержка коптерами"
+  drones_support: "Подержка барражирующими боеприпасами"
 
   drone_equipment: "Ударный БПЛА"
   drone_equipment_0: "Ранний БПЛА"

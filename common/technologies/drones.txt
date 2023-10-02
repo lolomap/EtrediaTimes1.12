@@ -207,6 +207,13 @@ technologies = {
 			drone_suicidal_equipment_0
 		}
 				
+        
+        #on_research_complete = {
+        #    set_rule = {
+        #        can_use_kamikaze_pilots = yes
+        #    }
+        #}
+		
 
 		research_cost = 2
 		start_year = 2010

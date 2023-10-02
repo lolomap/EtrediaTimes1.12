@@ -1192,7 +1192,7 @@ technologies = {
 			building = rocket_site
 			level = 2
 		}
-		
+        
 		path = {
 			leads_to_tech = rocket_engines 
 			research_cost_coeff = 1
