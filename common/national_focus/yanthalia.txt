@@ -210,6 +210,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 	    }
+
+        completion_reward = {
+            add_political_power = 150   
+        }
 	}
 	focus = {
 		id = YAN_armiya
@@ -491,6 +495,9 @@ focus_tree = {
 			factor = 2
 	    }
 
+        completion_reward = {
+            add_stability = 0.05   
+        }
 	}
 	focus = {
 		id = YAN_metall1
@@ -844,7 +851,7 @@ focus_tree = {
 	focus = {
 		id = YAN_New_country_name
 		icon = GFX_goal_unknown
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = YAN_basic_freedom
 		}
@@ -898,7 +905,7 @@ focus_tree = {
 	focus = {
 		id = YAN_aliance
 		icon = GFX_goal_unknown
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = YAN_New_country_name
 		}
@@ -1012,16 +1019,38 @@ focus_tree = {
 		x = 31
 		y = 10
 
+        completion_reward = {
+            VRO = {YAN = {set_easy_sphere = yes}}
+            LIP = {YAN = {set_easy_sphere = yes}}
+            CHO = {YAN = {set_easy_sphere = yes}}
+        }
 	}
 	focus = {
 		id = YAN_oceanic_aliance
 		icon = GFX_goal_unknown
 		cost = 10
+        available = {
+            any_other_country = {
+                custom_trigger_tooltip = {
+                    check_variable = { sphere_owner = YAN }
+                    set_temp_variable = { temp = YAN }
+                    tooltip = is_in_sphere_tt
+                }
+            }
+        }
 		prerequisite = {
 			focus = YAN_economic_forum
 		}
 		x = 31
 		y = 11
+
+        completion_reward = {
+            custom_effect_tooltip = blank_tt
+            every_other_country = {
+                limit = {check_variable = { sphere_owner = YAN }}
+                YAN = {add_to_faction = PREV}
+            }   
+        }
 	}
 	focus = {
 		id = YAN_BPR_aliance
@@ -1657,6 +1686,7 @@ focus_tree = {
 				}
 			}
 		}
+        bypass = {PIN = {exists = no}}
 		cancel_if_invalid = yes
 		completion_reward = {
 		PIN = { country_event = { id = pin.5 days = 1 } }
@@ -1677,6 +1707,7 @@ focus_tree = {
 				LIP = { has_government = fascism }
 			}
 		}
+        bypass = {LIP = {exists = no}}
 		cancel_if_invalid = yes
 		completion_reward = {
 		YAN = { country_event = { id = yan.19 days = 1 } }
@@ -1693,6 +1724,7 @@ focus_tree = {
 		prerequisite = {
 			focus = YAN_pinka
 		}
+        bypass = {SBU = {exists = no}}
 		completion_reward = {
 		YAN = { country_event = { id = yan.20 days = 1 } }
 		}
@@ -1707,6 +1739,7 @@ focus_tree = {
 		prerequisite = {
 			focus = YAN_SBU_separatism
 		}
+        bypass = {SBU = {exists = no}}
 		completion_reward = {
 		SBU = { country_event = { id = sbu.30 days = 1 } }
 		}
@@ -1722,9 +1755,16 @@ focus_tree = {
 			focus = YAN_SBU_separatism
 			focus = YAN_LIP_fascism
 		}
+        available = {
+            SFL = {has_stability < 0.6}
+        }
+        bypass = {SFL = {exists = no}}
 		x = 41
 		y = 6
 
+        completion_reward = {
+            SFL = {country_event = {id = sfl.27 days = 1}}   
+        }
 	}
 	focus = {
 		id = YAN_IID
@@ -1734,6 +1774,7 @@ focus_tree = {
 			focus = YAN_SBU_bunt
 			focus = YAN_SFL_bunt
 		}
+        bypass = {IID = {exists = no}}
 		x = 40
 		y = 7
 
@@ -2051,6 +2092,16 @@ focus_tree = {
 		x = 42
 		y = 7
 
+        completion_reward = {
+            add_state_claim = 809
+            add_state_claim = 276
+            add_state_claim = 305
+            809 = {
+                var:OWNER = {
+                    country_event = {id = yan.25 days = 1}
+                }
+            }
+        }
 	}
 	focus = {
 		id = YAN_VRO_war
@@ -2062,6 +2113,7 @@ focus_tree = {
 		}
 		x = 44
 		y = 7
+        bypass = {VRO = {exists = no}}
 
         will_lead_to_war_with = VRO
 

@@ -1,4 +1,6 @@
 ﻿l_russian:
+  blank_tt: "   "
+
   MAPMODE_NUKING_NAME: "Цели ШПУ"
   MAPMODE_CORRUPTION_MAP_NAME: "Коррупция"
   MAPMODE_INFLUENCE_MAP_NAME: "Мировое влияние"
@@ -140,8 +142,8 @@
 
   involve_to_sphere_tt: "§Y[PREV.GetFlag][PREV.GetNameDef]§! §Rпопадет§! под сферу [THIS.GetFlag]§Y[THIS.GetAdjective]§! влияния.\n"
   remove_from_sphere_tt: "Страна §Yвыйдет§! из-под сферы [?sphere_owner.GetFlag]§Y[?sphere_owner.GetAdjective]§! влияния.\n"
-  is_in_sphere_tt: "В §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния\n"
-  is_in_sphere_tt_NOT: "Не в §Y[?temp.GetFlag][?temp.GetNameDef]§! сфере влияния\n"
+  is_in_sphere_tt: "В §Y[?temp.GetFlag][?temp.GetAdjective]§! сфере влияния\n"
+  is_in_sphere_tt_NOT: "Не в §Y[?temp.GetFlag][?temp.GetAdjective]§! сфере влияния\n"
   is_in_any_sphere_tt: "В сфере влияния\n"
   is_in_any_sphere_tt_NOT: "Не в сфере влияния\n"
   easy_involve_sphere_tooltip: "Поддвержена нашему влиянию\n"
