@@ -213,10 +213,10 @@ etredia_ach_16 = { #
 	}
 	happened = {
         date > 2020.1.1
-        custom_trigger_tooltip = {
-            tooltip = pi_master_more_then_70
-            check_variable = {pi_master > 70}
-        }
+        #custom_trigger_tooltip = {
+        #    tooltip = pi_master_more_then_70
+        #    check_variable = {pi_master > 70}
+        #}
         threat < 0.6
 	}
 }
