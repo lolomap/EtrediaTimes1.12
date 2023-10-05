@@ -139,6 +139,10 @@ bookmarks = {
 		"DIR"={
 			minor = yes
 			history = "DIR_GATHERING_STORM_DESC"
+			ideas = {
+                DIR_government_crisis
+                DIR_popular_unrest
+            }
 			ideology = neutrality
 		}
 		"TOR"={
@@ -149,11 +153,20 @@ bookmarks = {
 		"KLU"={
 			minor = yes
 			history = "KLU_GATHERING_STORM_DESC"
+			ideas = {
+                KLU_old_economy
+                KLU_caste_system
+            }
 			ideology = fascism
 		}
 		"MOA"={
 			minor = yes
 			history = "MOA_GATHERING_STORM_DESC"
+			ideas = {
+                MOA_recrut
+                MOA_difficult_construct
+				MOA_debts
+            }
 			ideology = democratic
 		}
 		"CHE"={

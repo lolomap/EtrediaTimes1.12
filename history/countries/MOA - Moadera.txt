@@ -86,9 +86,6 @@ set_popularities = {
 
 set_convoys = 1100
 
-
-recruit_character = MOA_jim_jones
-
 recruit_character = MOA_apa_sifu
 
 recruit_character = MOA_tataio_papani
