@@ -23,7 +23,7 @@ equipments = {
 		#	plane_reliability_upgrade
 		#}
 
-		reliability = 0.9
+		reliability = 0.8
 
 		# Air vs Navy - low damage / high hit chance / easy to hurt
 		# naval_strike_attack = 1
@@ -32,7 +32,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 		
-		build_cost_ic = 18
+		build_cost_ic = 40
 		resources = {
 			aluminium = 2
 		}
@@ -47,7 +47,7 @@ equipments = {
 			port_strike
 		}
 		
-		manpower = 0
+		manpower = 1
 	}
 
     # Early Drone
@@ -64,7 +64,7 @@ equipments = {
 		air_defence = 10
 		air_bombing = 30
 		
-		#build_cost_ic = 37
+		build_cost_ic = 15
 		#resources = {
 		#	#oil = 1
 		#	aluminium = 3
@@ -85,12 +85,12 @@ equipments = {
 
 		air_range = 500
 		maximum_speed = 300
-		air_agility = 30
-		air_attack = 20
-		air_defence = 25
+		air_agility = 90
+		air_attack = 25
+		air_defence = 20
 		air_bombing = 45
 		
-		#build_cost_ic = 37
+		build_cost_ic = 40
 		#resources = {
 		#	#oil = 1
 		#	aluminium = 3
@@ -122,7 +122,7 @@ equipments = {
 		#	plane_reliability_upgrade
 		#}
 
-		reliability = 0.9
+		reliability = 0.7
 
 		# Air vs Navy - low damage / high hit chance / easy to hurt
 		# naval_strike_attack = 1
@@ -131,7 +131,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 1
+		build_cost_ic = 3
 		resources = {
 			aluminium = 1
 		}
@@ -192,7 +192,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 10
+		build_cost_ic = 6
 		resources = {
 			aluminium = 1
 		}

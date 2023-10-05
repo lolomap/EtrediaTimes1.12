@@ -19,8 +19,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
-		start_year = 1990
+		research_cost = 3
+		start_year = 2016
 		folder = {
 			name = drones_techs_folder
 			position = { x = 0 y = 2 }
@@ -39,6 +39,15 @@ technologies = {
 				factor = 2
 				is_major = yes
 			}
+			modifier = {
+				factor = 2
+				date > "2016.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "2018.1.1"
+			}
 		}
 	}
 
@@ -49,8 +58,8 @@ technologies = {
 		}
 				
 
-		research_cost = 2
-		start_year = 2014
+		research_cost = 4
+		start_year = 2017
 		folder = {
 			name = drones_techs_folder
 			position = { x = 0 y = 4 }
@@ -64,7 +73,7 @@ technologies = {
 		
 		
 		ai_will_do = {
-			factor = 4
+			factor = 2
 			
 			modifier = {
 				factor = 4
@@ -72,23 +81,23 @@ technologies = {
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 2
+				date > "2017.1.1"
+			}
+			
+			modifier = {
+				factor = 1
+				date > "2018.1.1"
+			}
+			
+			modifier = {
+				factor = 1
 				date > "2019.1.1"
 			}
 			
 			modifier = {
-				factor = 1.2
+				factor = 3
 				date > "2020.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "2021.1.1"
-			}
-			
-			modifier = {
-				factor = 5
-				date > "2022.1.1"
 			}
 		}
 	}
@@ -107,8 +116,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
-		start_year = 2014
+		research_cost = 3
+		start_year = 2017
 		folder = {
 			name = drones_techs_folder
 			position = { x = -4 y = 4 }
@@ -122,31 +131,31 @@ technologies = {
 		
 		
 		ai_will_do = {
-			factor = 4
+			factor = 2
 			
 			modifier = {
-				factor = 4
+				factor = 2
 				is_major = yes
 			}
 
 			modifier = {
-				factor = 1.2
-				date > "2019.1.1"
+				factor = 1
+				date > "2017.1.1"
 			}
 			
 			modifier = {
-				factor = 1.2
+				factor = 1
+				date > "2018.1.1"
+			}
+			
+			modifier = {
+				factor = 1
 				date > "2020.1.1"
 			}
 			
 			modifier = {
-				factor = 1.2
-				date > "2021.1.1"
-			}
-			
-			modifier = {
 				factor = 5
-				date > "2022.1.1"
+				date > "2021.1.1"
 			}
 		}
 	}
@@ -157,8 +166,8 @@ technologies = {
 			copter_equipment_1
 		}
 
-		research_cost = 2
-		start_year = 2016
+		research_cost = 3
+		start_year = 2020
 		folder = {
 			name = drones_techs_folder
 			position = { x = -4 y = 6 }
@@ -172,31 +181,23 @@ technologies = {
 		
 		
 		ai_will_do = {
-			factor = 4
+			factor = 2
 			
 			modifier = {
-				factor = 4
-				is_major = yes
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "2019.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
+				factor = 2
 				date > "2020.1.1"
 			}
-			
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > "2021.1.1"
 			}
-			
+			modifier = {
+				factor = 2
+				date > "2022.1.1"
+			}
 			modifier = {
 				factor = 5
-				date > "2022.1.1"
+				date > "2024.1.1"
 			}
 		}
 	}
@@ -215,8 +216,8 @@ technologies = {
         #}
 		
 
-		research_cost = 2
-		start_year = 2010
+		research_cost = 3
+		start_year = 2018
 		folder = {
 			name = drones_techs_folder
 			position = { x = 4 y = 4 }
@@ -230,28 +231,24 @@ technologies = {
 		
 		
 		ai_will_do = {
-			factor = 4
+			factor = 2
 			
 			modifier = {
-				factor = 4
-				is_major = yes
+				factor = 2
+				is_major = no
 			}
-
 			modifier = {
-				factor = 1.2
-				date > "2019.1.1"
+				factor = 2
+				date > "2018.1.1"
 			}
-			
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > "2020.1.1"
 			}
-			
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > "2021.1.1"
 			}
-			
 			modifier = {
 				factor = 5
 				date > "2022.1.1"
