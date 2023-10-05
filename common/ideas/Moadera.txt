@@ -17,6 +17,67 @@ ideas = {
                 mobilization_laws_cost_factor = 1
 			}
 		}
+		MOA_admiral_academy_idea = {
+            picture = MOA_recrut_pic
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				navy_leader_cost_factor = -0.1
+				navy_leader_start_coordination_level = 2
+				navy_leader_start_defense_level = 2
+				navy_leader_start_maneuvering_level = 3
+			}
+		}
+		MOA_pool = {
+            picture = MOA_recrut_pic
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.1
+			}
+		}
+		MOA_banking = {
+            picture = MOA_recrut_pic
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				trade_opinion_factor = 0.25
+				consumer_goods_factor = -0.08
+			}
+		}
+		MOA_credit = {
+		picture = MOA_recrut_pic
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
 		MOA_difficult_construct = {
             picture = MOA_difficult_construct_pic
 

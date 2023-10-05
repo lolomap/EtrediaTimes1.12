@@ -263,5 +263,8 @@
   border_war_button_loc:0 "Начать пограничный конфликт\n----------------\n\nНаше отношение к ним -20 и ниже"
 
   TRIGGER_IS_LEND_LEASING: "Отправляет ленд-лиз для $COUNTRY|H$"
+  
+  moa_start_neutralize_problems:0 "§GМы начнем ликвидировать последствия землетрясений"
+  moa_neutralize_problems_2:0 "§GМы продолжим сглаживать последствия катастрофы"
 
   modcredits: "§YBunbasss\nLegatt\nD-Kjch\nMonteny\nAzorious§!\n\n\n§6Special thanks to:§!\nSvarob\nLuka (Tornikios-O)\nKit MaB\nCockroach Gosha\nSosoichi\nScapupof"
