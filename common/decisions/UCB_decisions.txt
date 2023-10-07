@@ -141,22 +141,10 @@ UCB_bop_category = {
         }
 
         ai_will_do = {
-            base = 500
+            base = 10000
             modifier = {
-                OR = {
-                    power_balance_value = {
-                        id = UCB_parlament_balance
-                        value > 0.5
-                    }
-                    AND = {
-                        has_country_leader = {character = UCB_terine_narabel}
-                        power_balance_value = {
-                            id = UCB_parlament_balance
-                            value > 0.9
-                        }
-                    }
-                }
                 factor = 0
+                check_variable = { has_high_sep < 1 }
             }
         }
     }
@@ -177,26 +165,10 @@ UCB_bop_category = {
         }
 
         ai_will_do = {
-            base = 100
+            base = 10000
             modifier = {
-                has_idea = UCB_poroh_blet
-                factor = 100
-            }
-            modifier = {
-                OR = {
-                    power_balance_value = {
-                        id = UCB_parlament_balance
-                        value > 0.5
-                    }
-                    AND = {
-                        has_country_leader = {character = UCB_terine_narabel}
-                        power_balance_value = {
-                            id = UCB_parlament_balance
-                            value > 0.9
-                        }
-                    }
-                }
                 factor = 0
+                check_variable = { has_high_sep < 1 }
             }
         }
     }

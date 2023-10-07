@@ -55,12 +55,6 @@ music = {
 }
 
 music = {
-    name = "Miss_Kittin_&_The_Hacker_-_19_MMCT"
-    file = "Miss_Kittin_&_The_Hacker_-_19.ogg"
-    volume = 0.65
-}
-
-music = {
     name = "Paul_Mudra,_Frank_Klepacki,_Dwight_Okahara_-_Command_Post_MMCT"
     file = "Paul_Mudra,_Frank_Klepacki,_Dwight_Okahara_-_Command_Post.ogg"
     volume = 0.65

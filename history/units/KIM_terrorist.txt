@@ -79,7 +79,7 @@ units = {
 	division = {
 		name = "Peoples Brigade"
 		location = 7266
-		division_template = "Mechanized Brigade"
+		division_template = "motorized"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
     }
@@ -87,7 +87,7 @@ units = {
 	division = {
 		name = "Peoples Brigade"
 		location = 7029
-		division_template = "Mechanized Brigade"
+		division_template = "motorized"
 		start_experience_factor = 0.2
         start_equipment_factor = 1
     }

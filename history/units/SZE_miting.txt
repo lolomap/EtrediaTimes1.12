@@ -1,0 +1,173 @@
+division_template = {
+	name = "Infantry Division"
+
+	division_names_group = SZE_inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		mechanized = { x = 2 y = 0 }
+		mechanized = { x = 2 y = 1 }
+		mechanized = { x = 2 y = 2 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        recon = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Militia Brigade"
+
+	division_names_group = SZE_inf_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "MNT division"		
+	division_names_group = SZE_mnt_01
+
+	regiments = {
+		modern_armor = { x = 0 y = 0 }	
+		modern_armor = { x = 0 y = 1 }
+		modern_armor = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        recon = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }	
+	}
+}
+
+units = {
+	division = {
+		name = "MNT division"
+		location = 5983
+		division_template = "MNT division"
+		start_experience_factor = 0.3
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "MNT division"
+		location = 5983
+		division_template = "MNT division"
+		start_experience_factor = 0.3
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Infantry Division"
+		location = 5983
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Infantry Division"
+		location = 5983
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Infantry Division"
+		location = 5983
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Infantry Division"
+		location = 5983
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+	
+	division = {
+		name = "Militia Brigade"
+		location = 5983
+		division_template = "Militia Brigade"
+		start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+}

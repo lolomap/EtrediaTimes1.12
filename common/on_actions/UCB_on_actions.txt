@@ -181,8 +181,9 @@ on_actions = {
                 #    remove_from_array = {UCB.modalerts = 2}
                 #}
                 if = {
-                    limit = {check_variable = {UCB.sep_@THIS > 0.6}}
+                    limit = {check_variable = {UCB.sep_@THIS > 0.6} NOT = {has_country_flag = sep_sep}}
                     set_country_flag = sep_sep
+                    UCB = {add_to_variable = { has_high_sep = 1 }}
                     every_state = {
                         limit = {is_core_of = PREV}
                         force_enable_resistance = UCB
@@ -192,6 +193,7 @@ on_actions = {
                 else_if = {
                     limit = {has_country_flag = sep_sep}
                     clr_country_flag = sep_sep
+                    UCB = {add_to_variable = { has_high_sep = -1 }}
                     every_state = {
                         limit = {is_core_of = PREV}
                         force_disable_resistance = UCB
@@ -202,8 +204,13 @@ on_actions = {
                     limit = {
                         check_variable = {UCB.sep_@THIS > 0.99}
                         OR = {
-                            is_ai = no
-                            FSC = {has_completed_focus = FSC_UcNB_separatism}
+                            UCB = {is_ai = no}
+                            AND = {
+                                FSC = {has_completed_focus = FSC_UcNB_separatism}
+                                OR = {
+                                    tag = KOL tag = KIM
+                                }
+                            }
                         }
                     }
                     UCB = {

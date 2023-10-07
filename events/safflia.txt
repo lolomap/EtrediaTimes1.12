@@ -747,7 +747,7 @@ country_event = {
             transfer_state = 185
 
             hidden_effect = {
-                load_oob = HLE_miting
+                load_oob = SZ_miting
                 add_manpower = 50000
             }
             declare_war_on = { target = SFL type = annex_everything }

@@ -788,8 +788,20 @@ focus_tree = {
 				idea = UCB_zapretnac
 				days = 150
 			}
-            KOL = {
-                add_to_variable = { var = UCB.sep_@THIS value = 0.15 tooltip = add_region_separatism_tooltip }
+            DIN = {
+                add_to_variable = { var = UCB.sep_@THIS value = 0.1 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.sep_@THIS max = 1}
+                set_temp_variable = {temp = 0.2}
+                boost_region_fas = yes
+            }
+            ORB = {
+                add_to_variable = { var = UCB.sep_@THIS value = 0.1 tooltip = add_region_separatism_tooltip }
+                clamp_variable = {var = UCB.sep_@THIS max = 1}
+                set_temp_variable = {temp = 0.2}
+                boost_region_fas = yes
+            }
+            KIM = {
+                add_to_variable = { var = UCB.sep_@THIS value = 0.1 tooltip = add_region_separatism_tooltip }
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
                 set_temp_variable = {temp = 0.2}
                 boost_region_fas = yes
@@ -2271,7 +2283,7 @@ focus_tree = {
         y = 9
         available = {}
         bypass = {}
-        allow_branch = {}
+        allow_branch = {always = no}
         prerequisite = {
             focus = UCB_yurescul_speech
         }

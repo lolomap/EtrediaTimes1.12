@@ -85,14 +85,6 @@ music = {
 }
 
 music = {
-    song = "Miss_Kittin_&_The_Hacker_-_19_MMCT"
-    chance = {
-      modifier = { factor = 1 }
-      #modifier = { factor = 0 has_war = yes } #example modifier: music will not play when at war
-    }
-}
-
-music = {
     song = "Paul_Mudra,_Frank_Klepacki,_Dwight_Okahara_-_Command_Post_MMCT"
     chance = {
       modifier = { factor = 1 }

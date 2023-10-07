@@ -48,7 +48,7 @@
 
   modalert_tooltip: "[modalert_sl]"
   modalert_polform_tt: "§YДоступно изменение политического строя!"
-  modalert_sep_tt: "§YВозможна сепарация региона§! [?modalerts_data^i.GetFlag][?modalerts_data^i.GetNameDef]\n§RУровень сепаратизма больше 75%§!"
+  modalert_sep_tt: "§YВозможна сепарация региона§! [?modalerts_data^i.GetFlag][?modalerts_data^i.GetNameDef]\n§RУровень сепаратизма больше 60%§!"
 
   SBU_division_press_rebel_cost: "£army_experience §Y30§! £command_power  §Y50§!"
   SBU_division_press_rebel_cost_blocked: "£army_experience §R30§! £command_power §R50§!"

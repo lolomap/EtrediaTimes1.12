@@ -353,3 +353,30 @@ region_event_change_law = {
     }
 }
 
+UCB_spawn_separs = {
+    load_oob = UCB_separs
+    capital_scope = {
+        create_unit = {
+            division = "name = \"Mechanized Brigade\" division_template = \"Mechanized Brigade\" start_experience_factor = 0.2"
+            owner = PREV
+        }
+        create_unit = {
+            division = "name = \"Mechanized Brigade\" division_template = \"Mechanized Brigade\" start_experience_factor = 0.2"
+            owner = PREV
+        }
+
+        create_unit = {
+            division = "name = \"Peoples Brigade\" division_template = \"motorized\" start_experience_factor = 0.2"
+            owner = PREV
+        }
+        create_unit = {
+            division = "name = \"Peoples Brigade\" division_template = \"motorized\" start_experience_factor = 0.2"
+            owner = PREV
+        }
+
+        create_unit = {
+            division = "name = \"Tank-Division\" division_template = \"Tank-Division\" start_experience_factor = 0.2"
+            owner = PREV
+        }
+    }
+}
