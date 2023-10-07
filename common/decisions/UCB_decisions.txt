@@ -316,7 +316,7 @@ UCB_bop_category = {
             modifier = {
                 check_variable = { ucb_reg_fas > 0.25 }
                 has_government = democratic
-                add = 500
+                add = 5
             }
             modifier = {
                 OR = {
