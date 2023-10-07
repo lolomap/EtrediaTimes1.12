@@ -108,7 +108,7 @@ technologies = {
 			copter_equipment_0
 		}
         enable_subunits = {
-            drones_support
+            copters_support
         }
 				
         path = {
@@ -207,6 +207,9 @@ technologies = {
 		enable_equipments = {
 			drone_suicidal_equipment_0
 		}
+        enable_subunits = {
+            drones_support
+        }
 				
         
         #on_research_complete = {

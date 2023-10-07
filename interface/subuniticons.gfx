@@ -13,8 +13,8 @@ spriteTypes = {
 	spriteType = { name = "GFX_unit_jeep_icon_medium" textureFile = "gfx/interface/counters/divisions_large/unit_jeep_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_jeep_icon_medium_white" textureFile = "gfx/interface/counters/divisions_small/onmap_unit_jeep_icon.dds" noOfFrames = 2}
 	
-	spriteType = { name = "GFX_support_unit_drones_support_icon_medium" textureFile = "gfx/interface/counters/divisions_large/support_unit_drones_support_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_onmap_unit_drones_support_icon_medium_white" textureFile = "gfx/interface/counters/divisions_small/onmap_unit_drones_support_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_drones_support_icon_medium"                         textureFile = "gfx/interface/counters/divisions_large/unit_drones_support_icon.dds" noOfFrames = 2 }
+	#spriteType = { name = "GFX_onmap_unit_drones_support_icon_medium_white"             textureFile = "gfx/interface/counters/divisions_small/onmap_unit_drones_support_icon.dds" noOfFrames = 2}
 	
 	spriteType = { name = "GFX_unit_modern_sp_artillery_brigade_icon_medium" 			textureFile = "gfx/interface/counters/divisions_large/unit_modern_armor_artillery_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_super_heavy_sp_artillery_brigade_icon_medium"		textureFile = "gfx/interface/counters/divisions_large/unit_super_heavy_armor_artillery_icon.dds" noOfFrames = 2 }
