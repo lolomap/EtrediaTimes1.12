@@ -287,7 +287,7 @@ on_actions = {
                     #if = {limit = {UCB = {has_political_power < 0}} add_to_variable = {UCB.sep_@THIS = 0.03}}
                     if = {
                         limit = {UCB = {has_idea = UCB_poroh_blet}}
-                        add_to_variable = {UCB.sep_@THIS = 0.05}
+                        add_to_variable = {UCB.sep_@THIS = 0.03}
                     }
 
                     clamp_variable = {
