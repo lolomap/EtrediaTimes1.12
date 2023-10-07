@@ -24,7 +24,7 @@ focus_tree = {
         #}
 
         completion_reward = {
-                political_power = 50
+            add_political_power = 50
         }
     }
     focus = {
@@ -45,6 +45,7 @@ focus_tree = {
         #}
 
         completion_reward = {
+            MOA = { add_ideas = MOA_admiral_academy_idea }
         }
     }
     focus = {
@@ -58,7 +59,6 @@ focus_tree = {
             focus = MOA_ocean_svetoch
         }
         available = { threat > 0.5 }
-        bypass = {}
         allow_branch = {}
         #mutually_exclusive = {
         #	focus = 
@@ -85,6 +85,7 @@ focus_tree = {
         #}
 
         completion_reward = {
+            MOA = { country_event = moa.7 days = 1 }
         }
     }
     focus = {
@@ -106,6 +107,39 @@ focus_tree = {
 
         completion_reward = {
             add_stability = 0.05
+            MOA = { add_ideas = MOA_banking }
+                random_list = {
+                    75 = {
+                        ESS = { country_event = moa.8 days = 1 }
+                        TRP = { country_event = moa.8 days = 1 }
+                    }
+                    25 = {
+                    }
+                }
+                random_list = {
+                    75 = {
+                        LIP = { country_event = moa.8 days = 1 }
+                        BOU = { country_event = moa.8 days = 1 }
+                    }
+                    25 = {
+                    }
+                }
+                random_list = {
+                    75 = {
+                        KAS = { country_event = moa.8 days = 1 }
+                        CTE = { country_event = moa.8 days = 1 }
+                    }
+                    25 = {
+                    }
+                }
+                random_list = {
+                    75 = {
+                        DID = { country_event = moa.8 days = 1 }
+                        TRB = { country_event = moa.8 days = 1 }
+                    }
+                    25 = {
+                    }
+                }
         }
     }
     focus = {
@@ -126,32 +160,39 @@ focus_tree = {
         }
 
         completion_reward = {
-            add_stability = 0.1
-                GOD = { 
-                    add_opinion_modifier = {
-					    target = MOA
-    				    modifier = partnership
-                    }
-				}
-                KOI = { 
-                    add_opinion_modifier = {
-					    target = MOA
-    				    modifier = partnership
-                    }
-				}
-                SBO = { 
-                    add_opinion_modifier = {
-					    target = MOA
-    				    modifier = partnership
-                    }
-				}
-                CHO = {
-                    add_opinion_modifier = {
-					    target = MOA
-    				    modifier = partnership
-                    }
-				}
+        add_stability = 0.1
+            GOD = { 
+                add_opinion_modifier = {
+					target = MOA
+    				modifier = partnership
+                }
+			}
+            KOI = { 
+                add_opinion_modifier = {
+					target = MOA
+    				modifier = partnership
+                }
+			}
+            SBO = { 
+                add_opinion_modifier = {
+					target = MOA
+    				modifier = partnership
+                }
+			}
+            CHO = {
+                add_opinion_modifier = {
+					target = MOA
+    				modifier = partnership
+                }
+			}
         }
+        ai_will_do = {
+		factor = 0.7
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
     }
     focus = {
         id = MOA_our_friends
@@ -171,6 +212,12 @@ focus_tree = {
         #}
 
         completion_reward = {
+            give_guarantee = TOB
+            give_guarantee = SBO
+            give_guarantee = SKI
+            give_guarantee = GOD
+            give_guarantee = KOI
+            give_guarantee = CHO
         }
     }
     focus = {
@@ -239,6 +286,17 @@ focus_tree = {
                     set_country_flag = moa_padla_flag
 				}
         }
+        ai_will_do = {
+		factor = 0.3
+            modifier = {
+				factor = 1
+				has_completed_focus = MOA_island_empire
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
     }
     focus = {
         id = MOA_on_their_own
@@ -321,6 +379,8 @@ focus_tree = {
         #}
 
         completion_reward = {
+            custom_effect_tooltip = moa_start_neutralize_problems
+            hidden_effect = { set_country_flag = moa_earthquake_neurtalize_1 }
         }
     }
     focus = {
@@ -341,6 +401,8 @@ focus_tree = {
         #}
 
         completion_reward = {
+            add_political_power = 25
+            add_ideas = socials_3
         }
     }
     focus = {
@@ -361,6 +423,7 @@ focus_tree = {
         #}
 
         completion_reward = {
+            custom_effect_tooltip = moa_neutralize_problems_2
         }
     }
     focus = {
@@ -401,6 +464,11 @@ focus_tree = {
         #}
 
         completion_reward = {
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = armor
+            }
         }
     }
     focus = {
@@ -441,6 +509,11 @@ focus_tree = {
         #}
 
         completion_reward = {
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = electronics
+            }
         }
     }
     focus = {
@@ -489,6 +562,9 @@ focus_tree = {
                 popularity = 0.1
             }
         }
+        ai_will_do = {
+		factor = 0.65
+		}
     }
     focus = {
         id = MOA_working_labor_groups
@@ -521,7 +597,6 @@ focus_tree = {
             focus = MOA_island_republic
         }
         available = {}
-        bypass = {}
         allow_branch = {}
         #mutually_exclusive = {
         #	focus = 
@@ -548,6 +623,7 @@ focus_tree = {
         #}
 
         completion_reward = {
+            MOA = { country_event = moa.6 days = 1 }
             political_power = 150
         }
     }
@@ -605,6 +681,16 @@ focus_tree = {
         #}
 
         completion_reward = {
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = industry
+            }
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = electronics
+            }
         }
     }
     focus = {
@@ -628,6 +714,7 @@ focus_tree = {
         #}
 
         completion_reward = {
+            MOA = { add_timed_idea = { idea = MOA_pool days = 360 } }
         }
     }
     focus = {
@@ -651,6 +738,17 @@ focus_tree = {
         #}
 
         completion_reward = {
+            navy_experience = 30
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = naval_equipment
+            }
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = naval_doctrine
+            }
         }
     }
     focus = {
@@ -885,6 +983,14 @@ focus_tree = {
 
         completion_reward = {
         }
+
+        ai_will_do = {
+		factor = 0.3
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
     }
     focus = {
         id = MOA_bounferte_for_peace
@@ -925,6 +1031,10 @@ focus_tree = {
 
         completion_reward = {
         }
+
+        ai_will_do = {
+		factor = 0.7
+		}
     }
     focus = {
         id = MOA_embargo_for_EB
@@ -1031,6 +1141,13 @@ focus_tree = {
                 popularity = 0.1
             }
         }
+        ai_will_do = {
+		factor = 0.35
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
     }
     focus = {
         id = MOA_our_sea

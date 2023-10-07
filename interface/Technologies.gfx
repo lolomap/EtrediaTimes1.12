@@ -15,6 +15,27 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_early_drone_medium"
+		texturefile = "gfx/interface/technologies/early_drone.dds"
+	}
+	SpriteType = {
+		name = "GFX_drone1_medium"
+		texturefile = "gfx/interface/technologies/drone1.dds"
+	}
+	SpriteType = {
+		name = "GFX_early_copter_medium"
+		texturefile = "gfx/interface/technologies/early_copter.dds"
+	}
+	SpriteType = {
+		name = "GFX_copter1_medium"
+		texturefile = "gfx/interface/technologies/copter1.dds"
+	}
+	SpriteType = {
+		name = "GFX_early_drone_suicidal_medium"
+		texturefile = "gfx/interface/technologies/early_drone_suicidal.dds"
+	}
+	
+	SpriteType = {
 		name = "GFX_basic_medium_spaa"
 		texturefile = "gfx/interface/technologies/antiair_1.dds"
 	}

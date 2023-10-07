@@ -99,7 +99,6 @@ country_event = {
 		}
 	}
 }
-
 country_event = {
 	id = moa.5
 	title = moa.5.t
@@ -117,5 +116,80 @@ country_event = {
 		MOA = { 
 			remove_idea = MOA_earthquake_3
 		}
+	}
+}
+country_event = {
+	id = moa.6
+	title = moa.6.t
+	desc = moa.6.d
+	picture = GFX_news_event
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = MOA
+    }
+	
+	option = {
+	name = moa.6.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+	id = moa.7
+	title = moa.7.t
+	desc = moa.7.d
+	picture = GFX_news_event
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = MOA
+    }
+	
+	option = {
+	name = moa.7.a
+		add_political_power = -50
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = moa.8
+	title = moa.8.t
+	desc = moa.8.d
+	picture = GFX_report_event_moa_credit
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = ROOT
+    }
+	
+	option = {
+	name = moa.8.a
+		add_political_power = -150
+		ROOT = { add_timed_idea = { idea = MOA_credit days = 360 } }
+
+		ai_chance = { factor = 0.75 }
+	}
+	option = {
+	name = moa.8.b
+
+		ai_chance = { factor = 0.25 }
 	}
 }

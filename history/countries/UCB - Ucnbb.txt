@@ -53,6 +53,8 @@ set_technology = {
 	cv_fighter1 = 1
 	CAS1 = 1
 
+	early_drone
+
 	motorised_infantry = 1
         mechanised_infantry = 1
         mechanised_infantry2 = 1
