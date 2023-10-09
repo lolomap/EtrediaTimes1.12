@@ -1141,7 +1141,7 @@ build_fucking_arms_factory = {
 	ai_strategy = {
 		type = building_target
 		id = infrastructure
-		value = 50
+		value = 40
 	}
 	ai_strategy = {
 		type = building_target
@@ -1151,7 +1151,7 @@ build_fucking_arms_factory = {
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 100
+		value = 45
 	}
 	ai_strategy = {
 		type = building_target
@@ -1161,7 +1161,7 @@ build_fucking_arms_factory = {
 	ai_strategy = {
 		type = building_target
 		id = rail_way
-		value = 70
+		value = 50
 	}
 	ai_strategy = {
 		type = building_target
@@ -1171,17 +1171,17 @@ build_fucking_arms_factory = {
 	ai_strategy = {
 		type = building_target
 		id = dockyard
-		value = 90
+		value = 35
 	}
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 50
+		value = 35
 	}
 	ai_strategy = {
 		type = building_target
 		id = fuel_silo
-		value = 25
+		value = 15
 	}
 	ai_strategy = {
 		type = building_target

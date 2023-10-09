@@ -233,6 +233,10 @@ ideas = {
 			ai_will_do = {
    				base = 5
 				modifier = {
+					add = 5
+					num_of_available_civilian_factories > 30
+				}
+				modifier = {
 					add = 10
 					num_of_available_civilian_factories < 15
 				}
@@ -246,10 +250,14 @@ ideas = {
 				}
 				modifier = {
 					add = 3
+					has_stability < 0.5
+				}
+				modifier = {
+					add = 4
 					has_stability < 0.2
 				}
 				modifier = {
-					add = 3
+					add = 5
 					has_stability < 0.1
 				}
 				modifier = {
