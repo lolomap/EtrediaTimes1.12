@@ -47,8 +47,6 @@ set_popularities = {
 set_convoys = 21
 
 
-recruit_character = BSH_lucas_taylor
-
 recruit_character = BSH_dhardon
 
 recruit_character = BSH_yungdrung_trengwa

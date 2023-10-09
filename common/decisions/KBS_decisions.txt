@@ -1,0 +1,73 @@
+KBS_AGARA_support = {
+	tranche_of_military_support = {
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 120
+		days_remove = 30
+		visible = {
+			original_tag = KBS
+			AGA = { has_war_with = TRN }
+		}
+		available = {
+			has_equipment = { infantry_equipment > 1000 }
+		}
+		
+		complete_effect = {
+			AGA = {
+				country_event = { id = agara.1 days = 1 }
+			}
+			KBS = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 6
+				AGA = { surrender_progress > 0.5 }
+			}
+			modifier = {
+				factor = -20
+				KBS = { has_war = yes }
+			}
+		}
+	}
+	send_new_volunteers = {
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 120
+		days_remove = 30
+		visible = {
+			original_tag = KBS
+			AGA = { has_war_with = TRN }
+		}
+		available = {
+			KBS = { has_manpower > 1500 }
+		}
+		
+		complete_effect = {
+			AGA = {
+				country_event = { id = agara.2 days = 1 }
+			}
+			KBS = {
+				add_manpower = -1500
+			}
+		}
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 6
+				AGA = { surrender_progress > 0.5 }
+			}
+			modifier = {
+				factor = -20
+				KBS = { has_war = yes }
+			}
+		}
+	}
+}

@@ -20,6 +20,12 @@ MTG_naval_treaties = {
 		}
 	}
 }
+KBS_AGARA_support = {
+	allowed = {
+		original_tag = KBS
+	}
+}
+
 DIB_dirian_civil_war = {
 	allowed = {
 		original_tag = DIB

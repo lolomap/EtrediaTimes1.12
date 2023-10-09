@@ -195,3 +195,4 @@ ZLD_UNIFIED = "countries/ZLD_UNIFIED.txt"
 
 MHI = "countries/Makhir.txt"
 HGN = "countries/Hirgartian.txt"
+AGA = "countries/AGARA.txt"

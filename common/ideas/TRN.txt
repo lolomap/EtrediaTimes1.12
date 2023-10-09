@@ -21,7 +21,7 @@ ideas = {
 		    removal_cost = -1
 			
 		    modifier = {
-				ai_focus_defense_factor = 0.5
+				ai_focus_defense_factor = 1
 				mobilization_laws_cost_factor = 1
 				war_support_factor = -0.35
 				surrender_limit = -0.1
