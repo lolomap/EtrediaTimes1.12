@@ -1,0 +1,44 @@
+﻿capital = 667
+
+OOB = "AGA_2014"
+
+set_research_slots = 1
+set_stability = 0.5
+set_war_support = 0.9
+
+add_ideas = {
+        WWW_bad_country
+	fifth_corruption_level
+	AGA_Akkabat
+}
+
+set_technology = {
+	basic_train = 1
+	infantry_weapons = 1
+
+	jeep_unit = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2012.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+	declare_war_on = {
+		target = TRN
+		type = annex_everything
+	}
+
+set_popularities = {
+    	democratic = 0
+    	fascism = 0
+    	communism = 0
+	neutrality = 100
+}
+
+set_convoys = 0
+

@@ -37,10 +37,45 @@ division_template = {
 units = {
 	division = {
 		name = "Infantry Division"
-		location = 884
+		location = 917
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-        start_equipment_factor = 0.7
+        start_equipment_factor = 0.6
+    }
+	division = {
+		name = "Infantry Division"
+		location = 917
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.9
+    }
+	division = {
+		name = "Infantry Division"
+		location = 911
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.9
+    }
+	division = {
+		name = "Infantry Division"
+		location = 928
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Infantry Division"
+		location = 927
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Infantry Division"
+		location = 928
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.6
     }
 	division = {
 		name = "Infantry Division"
@@ -54,74 +89,39 @@ units = {
 		location = 884
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-        start_equipment_factor = 0.7
+        start_equipment_factor = 0.6
     }
 	division = {
 		name = "Infantry Division"
-		location = 884
+		location = 869
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.7
     }
 	division = {
 		name = "Infantry Division"
-		location = 884
+		location = 927
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.7
     }
 	division = {
 		name = "Infantry Division"
-		location = 884
+		location = 911
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.7
     }
 	division = {
 		name = "Infantry Division"
-		location = 884
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.7
-    }
-	division = {
-		name = "Infantry Division"
-		location = 884
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.7
-    }
-	division = {
-		name = "Infantry Division"
-		location = 884
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.7
-    }
-	division = {
-		name = "Infantry Division"
-		location = 884
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.7
-    }
-	division = {
-		name = "Infantry Division"
-		location = 884
-		division_template = "Infantry Division"
-		start_experience_factor = 0.2
-        start_equipment_factor = 0.7
-    }
-	division = {
-		name = "Infantry Division"
-		location = 884
+		location = 918
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.7
     }
 	division = {
 		name = "Main Tank-Division"
-		location = 884
+		location = 918
 		division_template = "Main Tank-Division"
 		start_experience_factor = 0.2
         start_equipment_factor = 0.9

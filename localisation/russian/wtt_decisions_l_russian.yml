@@ -961,3 +961,6 @@
  war_time_decisions:0 "Решения военного времени"
  patriotic_speech:0 "Патриотическая речь перед народом"
  glorify_the_fallen_heroes:0 "Восславить павших героев войны"
+ KBS_AGARA_support:0 "Поддержка АГАРА"
+ tranche_of_military_support:0 "Отправить новую партию вооружений"
+ send_new_volunteers:0 "Отправить новую партию добровольцев"

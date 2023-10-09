@@ -1,0 +1,82 @@
+division_template = {
+	name = "Akkbakonzet"
+
+	division_names_group = AGA_inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Unaifeerezet"
+
+	division_names_group = AGA_inf_02
+
+	regiments = {
+		jeep = { x = 0 y = 0 }
+        jeep = { x = 0 y = 1 }
+		jeep = { x = 1 y = 0 }
+		jeep = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "Akkbakonzet"
+		location = 954
+		division_template = "Akkbakonzet"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Akkbakonzet"
+		location = 973
+		division_template = "Akkbakonzet"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.8
+    }
+	division = {
+		name = "Akkbakonzet"
+		location = 955
+		division_template = "Akkbakonzet"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.9
+    }
+	division = {
+		name = "Akkbakonzet"
+		location = 1022
+		division_template = "Akkbakonzet"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.9
+    }
+	division = {
+		name = "Akkbakonzet"
+		location = 1022
+		division_template = "Akkbakonzet"
+		start_experience_factor = 0.2
+        start_equipment_factor = 0.9
+    }
+	division = {
+		name = "Unaifeerezet"
+		location = 955
+		division_template = "Unaifeerezet"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+	division = {
+		name = "Unaifeerezet"
+		location = 1022
+		division_template = "Unaifeerezet"
+		start_experience_factor = 0.2
+        start_equipment_factor = 1
+    }
+}

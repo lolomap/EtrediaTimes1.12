@@ -1,0 +1,45 @@
+add_namespace = agara
+
+country_event = {
+	id = agara.1
+	title = agara.1.t
+	desc = agara.1.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = AGA
+    }
+
+	option = {
+	name = agara.1.a
+		AGA = { 
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_stability = 0.05
+		}
+	}
+}
+country_event = {
+	id = agara.2
+	title = agara.2.t
+	desc = agara.2.d
+	picture = GFX_news_even
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = AGA
+    }
+
+	option = {
+	name = agara.2.a
+		AGA = { 
+			add_manpower = 1500
+			add_stability = 0.05
+		}
+	}
+}
