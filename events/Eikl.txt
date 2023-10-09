@@ -1069,8 +1069,10 @@ country_event = {
 	option = {
 		name = eik.34.a
 		add_stability = -0.05
-		custom_effect_tooltip = change_party_power
-		add_to_variable = {dem_opposition = 25}
+		#custom_effect_tooltip = change_party_power
+		hidden_effect = {
+            add_to_variable = {dem_opposition = 25}
+        }
 		swap_ideas = {
 			remove_idea = EIK_democratpartizan
 		    add_idea = EIK_democratpartizan_1
