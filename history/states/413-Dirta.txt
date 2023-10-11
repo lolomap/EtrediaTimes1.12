@@ -11,7 +11,6 @@ state={
 		buildings = {
 			infrastructure = 2
                         industrial_complex = 3
-                        arms_factory = 0
 		}
 		add_core_of = EIK
 		victory_points = {

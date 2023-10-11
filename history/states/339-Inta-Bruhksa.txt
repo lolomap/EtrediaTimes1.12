@@ -2,9 +2,6 @@
 state={
 	id=339
 	name="STATE_339"
-	manpower = 160000
-	state_category = pastoral
-
 	resources={
 		steel=10.000
 	}
@@ -13,6 +10,7 @@ state={
 		owner = EIK
 		buildings = {
 			infrastructure = 1
+
 		}
 		add_core_of = EIK
 		add_core_of = KNL
@@ -21,7 +19,12 @@ state={
 		}
 
 	}
+
 	provinces={
-		13281 13300 13390 13395 13474 13499 13571 13593 13662 
+		13281 13300 13390 13395 13453 13463 13474 13499 13571 13593 
 	}
+	manpower=160000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
 }

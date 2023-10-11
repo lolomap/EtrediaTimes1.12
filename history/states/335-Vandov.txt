@@ -2,6 +2,7 @@
 state={
 	id=335
 	name="STATE_335"
+
 	history={
 		owner = EIK
 		buildings = {
@@ -16,10 +17,12 @@ state={
 		}
 
 	}
+
 	provinces={
 		14062 14071 14130 14162 14173 14185 14230 14243 14244 
 	}
 	manpower=2100000
 	buildings_max_level_factor=1.000
 	state_category=large_town
+	local_supplies=0.000
 }

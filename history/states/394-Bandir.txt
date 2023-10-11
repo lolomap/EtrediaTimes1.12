@@ -2,28 +2,30 @@
 state={
 	id=394
 	name="STATE_394"
-	manpower = 312000
-	
-	state_category = pastoral
-	
 	resources={
-		oil = 45 # was: 50
+		oil=45.000
 	}
 
 	history={
 		owner = EIK
 		buildings = {
 			infrastructure = 1
-                        industrial_complex = 0
-                        arms_factory = 0
+			industrial_complex = 0
+			arms_factory = 0
+
 		}
 		add_core_of = EIK
 		victory_points = {
-			14742 1
+			14742 1 
 		}
 
 	}
+
 	provinces={
-		14742 14746 14763 14770 14772 14776 14781 14796 14801 14808 14809 14814 14826 14844 14848 14860 14865 14866 14873 14879 14881 14883 14894 14899 
+		14580 14611 14646 14691 14692 14716 14726 14742 14745 14746 14763 14770 14772 14776 14781 14796 14801 14808 14809 14814 14826 14844 14848 14860 14865 14866 14873 14879 14881 14883 14894 14899 
 	}
+	manpower=312000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
 }

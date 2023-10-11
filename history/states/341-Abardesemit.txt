@@ -2,26 +2,27 @@
 state={
 	id=341
 	name="STATE_341"
-	manpower = 1500000
-	
-	state_category = town
-
 
 	history={
 		owner = EIK
 		buildings = {
 			infrastructure = 2
-            industrial_complex = 1
-            arms_factory = 0
-            anti_nuclear_building = 1
+			industrial_complex = 1
+			anti_nuclear_building = 1
+
 		}
 		add_core_of = EIK
 		victory_points = {
-			14009 1
+			14248 3 
 		}
 
 	}
+
 	provinces={
-		13878 13889 14009 14022 14045 14080 14120 14132 14147 14152 14248 
+		8774 13776 13878 13889 13945 13981 14009 14022 14045 14080 14111 14120 14132 14147 14148 14152 14248 
 	}
+	manpower=1500000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }

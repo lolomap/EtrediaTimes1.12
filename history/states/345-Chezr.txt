@@ -4,18 +4,17 @@ state={
 	name="STATE_345"
 	manpower = 1480000
 	
-	state_category = rural
+	state_category = town
 	
 	history={
 		owner = EIK
 		buildings = {
 			infrastructure = 2
-                        industrial_complex = 0
                         arms_factory = 2
 		}
 		add_core_of = EIK
 		victory_points = {
-			14369 2
+			14346 2
 		}
 
 	}
