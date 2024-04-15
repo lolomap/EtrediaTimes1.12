@@ -15,6 +15,7 @@ UCB_parlament_balance = {
                 guarantee_cost = 0.1
                 guarantee_tension = 0.1
                 send_volunteers_tension = 0.3
+                disabled_ideas = 1
             }
 			on_activate = {
 				set_variable = {
@@ -38,10 +39,6 @@ UCB_parlament_balance = {
                     clr_country_flag = banned_ucb_bop
                 }
             }
-
-			modifier = {
-				disabled_ideas = 1
-			}
         }
 		range = {
             id = UCB_parlament_mid_range
@@ -122,9 +119,6 @@ UCB_parlament_balance = {
             id = UCB_president_mid_range
 			min = 0.5
 			max = 0.9
-            modifier = {
-                send_volunteers_tension = 0.05
-            }
             on_activate = {
                 set_variable = {
 					var = region_ideology_factor
@@ -143,7 +137,7 @@ UCB_parlament_balance = {
 			min = 0
 			max = 0.5
             modifier = {
-                send_volunteers_tension = 0.05
+                send_volunteers_tension = -0.05
             }
 			on_activate = {
 				set_variable = {

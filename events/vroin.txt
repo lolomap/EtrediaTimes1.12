@@ -69,6 +69,6 @@ country_event = {
     option = {
 		name = vro.3.b
 		ai_chance = { factor = 30 }
-		UCB = { country_event = { id = ucbf.3 days = 1 } }
+		
 	}
 }

@@ -143,7 +143,9 @@ etredia_ach_10 = { #
         controls_state = 70
         all_other_country = {
             OR = {
-                NOT = {is_on_continent = europe}
+                capital_scope = {
+                    NOT = {is_on_continent = europe}
+                }
                 has_government = fascism
             }
         }

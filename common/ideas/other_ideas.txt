@@ -406,9 +406,11 @@ ideas = {
 
 			on_add = {
 				people_discontent_dem_power = yes
+				update_opposition_delta = yes
 			}
 			on_remove = {
 				people_discontent_dem_power_end = yes
+				update_opposition_delta = yes
 			}
 
 			modifier = {
@@ -425,9 +427,11 @@ ideas = {
 
 			on_add = {
 				people_discontent_fas_power = yes
+				update_opposition_delta = yes
 			}
 			on_remove = {
 				people_discontent_fas_power_end = yes
+				update_opposition_delta = yes
 			}
 
 			modifier = {
@@ -444,9 +448,11 @@ ideas = {
 
 			on_add = {
 				people_discontent_neu_power = yes
+				update_opposition_delta = yes
 			}
 			on_remove = {
 				people_discontent_neu_power_end = yes
+				update_opposition_delta = yes
 			}
 			
 			modifier = {
@@ -463,9 +469,11 @@ ideas = {
 
 			on_add = {
 				people_discontent_com_power = yes
+				update_opposition_delta = yes
 			}
 			on_remove = {
 				people_discontent_com_power_end = yes
+				update_opposition_delta = yes
 			}
 			
 			modifier = {
@@ -482,9 +490,11 @@ ideas = {
 
 			on_add = {
 				people_discontent_mon_power = yes
+				update_opposition_delta = yes
 			}
 			on_remove = {
 				people_discontent_mon_power_end = yes
+				update_opposition_delta = yes
 			}
 			
 			modifier = {

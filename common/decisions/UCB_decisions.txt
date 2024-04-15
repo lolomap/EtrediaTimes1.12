@@ -128,7 +128,7 @@ UCB_bop_category = {
     }
 
     UCB_visit_regions = {
-        cost = 20
+        cost = 30
 
         complete_effect = {
             every_possible_country = {
@@ -137,6 +137,10 @@ UCB_bop_category = {
                 clamp_variable = {var = UCB.oppos_@THIS max = 1}
                 add_to_variable = {var = UCB.sep_@THIS value = -0.02 tooltip = add_region_separatism_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS min = 0}
+            }
+            add_power_balance_value = {
+                id = UCB_parlament_balance
+                value = 0.05
             }
         }
 
@@ -150,17 +154,43 @@ UCB_bop_category = {
     }
 
     UCB_press_regions = {
-        cost = 30
+        cost = 20
 
         complete_effect = {
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS}}
-                add_to_variable = {var = UCB.sep_@THIS value = -0.03 tooltip = add_region_separatism_tooltip}
+                add_to_variable = {var = UCB.sep_@THIS value = -0.05 tooltip = add_region_separatism_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS min = 0}
             }
-            add_power_balance_value = {
-                id = UCB_parlament_balance
-                value = 0.1
+        }
+
+        ai_will_do = {
+            base = 10000
+            modifier = {
+                factor = 0
+                check_variable = { has_high_sep < 1 }
+            }
+        }
+    }
+
+    UCB_raids = {
+        custom_cost_trigger = {
+			command_power > 15
+		}
+		custom_cost_text = decision_cost_CP_15
+
+        available = {
+            OR = {
+                has_idea = sforces_5
+                has_idea = sforces_6
+            }
+        }
+
+        complete_effect = {
+            every_possible_country = {
+                limit = {is_in_array = {UCB.minor_countries = THIS} NOT = {tag = KIM tag = KOL}}
+                add_to_variable = {var = UCB.sep_@THIS value = -0.18 tooltip = add_region_separatism_tooltip}
+                clamp_variable = {var = UCB.sep_@THIS min = 0}
             }
         }
 
@@ -403,6 +433,7 @@ UCB_narabel_category = {
 
         complete_effect = {
             FROM = {
+                cancel_resistance = yes
                 if = { limit = {is_core_of = LEV}
                     remove_core_of = LEV
                 }
@@ -450,6 +481,7 @@ UCB_narabel_category = {
 
         complete_effect = {
             FROM = {
+                cancel_resistance = yes
                 remove_core_of = SRA
                 add_core_of = NRA
                 remove_from_array = {
@@ -481,6 +513,7 @@ UCB_narabel_category = {
 
         complete_effect = {
             FROM = {
+                cancel_resistance = yes
                 remove_core_of = FLR
                 add_core_of = KOL
                 remove_from_array = {
@@ -512,6 +545,7 @@ UCB_narabel_category = {
 
         complete_effect = {
             FROM = {
+                cancel_resistance = yes
                 if = { limit = {is_core_of = GLE}
                     remove_core_of = GLE
                 }
@@ -559,6 +593,7 @@ UCB_narabel_category = {
 
         complete_effect = {
             FROM = {
+                cancel_resistance = yes
                 if = { limit = {is_core_of = AKV}
                     remove_core_of = AKV
                 }
@@ -606,6 +641,7 @@ UCB_narabel_category = {
 
         complete_effect = {
             FROM = {
+                cancel_resistance = yes
                 if = { limit = {is_core_of = MIN}
                     remove_core_of = MIN
                 }

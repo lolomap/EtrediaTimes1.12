@@ -424,7 +424,7 @@ focus_tree = {
         #}
     
         completion_reward = {
-            SBU = { add_opinion_modifier { target = ROOT modifier = SFL_concurent } }
+            SBU = { add_opinion_modifier = { target = ROOT modifier = SFL_concurent } }
             add_political_power = 50
         }
     }
@@ -450,7 +450,7 @@ focus_tree = {
             hidden_effect = {
                 SFL = {add_ideas = SFL_tradewar_idea}
                 SBU = {
-                    add_opinion_modifier { target = ROOT modifier = SFL_tradewar }
+                    add_opinion_modifier = { target = ROOT modifier = SFL_tradewar }
                     add_ideas = SFL_tradewar_idea
                 }
                 SBU = {set_country_flag = tradewar}
@@ -475,7 +475,7 @@ focus_tree = {
                 has_political_power > 149
                 NOT = {has_non_aggression_pact_with = SBU}
             }
-            NOT = {completed_national_focus = SFL_no_monfua}
+            NOT = {has_completed_focus = SFL_no_monfua}
         }
         bypass = {NOT = {country_exists = MOF}}
         allow_branch = {}
@@ -778,7 +778,7 @@ focus_tree = {
         bypass = {
             SBU = {
                 OR = {
-                    exist = no
+                    exists = no
                     NOT = {
                         owns_state = 202
                         owns_state = 203

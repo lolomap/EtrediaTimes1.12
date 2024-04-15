@@ -1,3 +1,26 @@
+update_opposition_delta = {
+	set_variable = {dem_opposition_delta = 1}
+	set_variable = {fas_opposition_delta = 1}
+	set_variable = {neu_opposition_delta = 1}
+	set_variable = {com_opposition_delta = 1}
+	set_variable = {mon_opposition_delta = 1}
+
+	multiply_variable = {dem_opposition_delta = dem_opposition_factor}
+	multiply_variable = {fas_opposition_delta = fas_opposition_factor}
+	multiply_variable = {neu_opposition_delta = neu_opposition_factor}
+	multiply_variable = {com_opposition_delta = com_opposition_factor}
+	multiply_variable = {mon_opposition_delta = mon_opposition_factor}
+
+	if = {
+		limit = {has_country_flag = ideology_protection}
+		add_to_variable = {dem_opposition_delta = -0.5}
+		add_to_variable = {fas_opposition_delta = -0.5}
+		add_to_variable = {neu_opposition_delta = -0.5}
+		add_to_variable = {com_opposition_delta = -0.5}
+		add_to_variable = {mon_opposition_delta = -0.5}
+	}
+}
+
 people_discontent_dem_power = {
 	add_to_variable = {fas_opposition_factor = 1}
 	add_to_variable = {neu_opposition_factor = 1}

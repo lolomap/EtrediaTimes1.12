@@ -20,8 +20,8 @@ SBU_ISH_rebellion = {
 }
 
 SBU_trade_war = {
-    allowed = {original_tag = SBU}
-    visible = {OR = {original_tag = SFL original_tag = SBU} SFL = {has_country_flag = tradewar}}
+    allowed = {OR = {original_tag = SBU original_tag = SFL}}
+    visible = {SFL = {has_country_flag = tradewar}}
     priority = 100
     scripted_gui = tradewar
 }
