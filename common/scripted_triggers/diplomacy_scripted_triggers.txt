@@ -52,6 +52,13 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
             always = no
         }
     }
+    if = {
+        limit = {has_country_flag = banned_economic_faction}
+        custom_trigger_tooltip = {
+            tooltip = ALLOW_BANNED_ECONOMIC_FACTION
+            always = no
+        }
+    }
 }
 
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
@@ -66,6 +73,13 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
         limit = {FROM = {has_country_flag = banned_ucb_bop} NOT = {tag = SHE}}
         custom_trigger_tooltip = {
             tooltip = ALLOW_BANNED_UCB_BOP_OUT_tooltip
+            always = no
+        }
+    }
+    if = {
+        limit = {has_country_flag = banned_economic_faction}
+        custom_trigger_tooltip = {
+            tooltip = ALLOW_BANNED_ECONOMIC_FACTION
             always = no
         }
     }

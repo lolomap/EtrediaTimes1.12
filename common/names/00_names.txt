@@ -28,21 +28,93 @@ UCB = {
 		names = { Women }
 	}
 	surnames = {
-		Narabel Ortiz Delingo Orfier Nitago Radbo Zarchih Vairaho Roshanne Ralle Hoffmann Perepo Kisch Depiche
+		Narabel Ortiz Delingo Orfier Nitago Radbo Zarchih Vairaho Roshanne Ralle Hoffmann Perepo Kisch Depiche Naimale Kuruki Maemo
 	}
 	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
 }
 
 SBU = {
 	male = {
-		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert John Loh Bobas }
+		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert John Loh Bobas  }
 	}
 	female = {
 		names = { Women }
 	}
 	surnames = {
-		Kolert Razhko Sapat Bitjko Kolovar Kzhachich Kvasikh Norsh 
-		}
+		Kolert Razhko Sapat Bitjko Kolovar Kzhachich Kvasikh Norsh Ciglar Drobnie Vuk Zabukovec Tratnik Markovich Ficko Kukovec
+	}
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
+}
+SFL = {
+	male = {
+		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert Kirill Danilo Loh Bobas  }
+	}
+	female = {
+		names = { Women }
+	}
+	surnames = {
+		Razhko Sapat Bitjko Kolovar Kvasikh Norsh Ciglar Drobnie Vuk Zabukovec Tratnik Markovich Ficko Kukovec
+	}
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
+}
+MOF = {
+	male = {
+		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert Kirill Danilo Loh Bobas  }
+	}
+	female = {
+		names = { Women }
+	}
+	surnames = {
+		Razhko Sapat Bitjko Kolovar Kvasikh Norsh Ciglar Drobnie Vuk Zabukovec Tratnik Markovich Ficko Kukovec
+	}
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
+}
+ELR = {
+	male = {
+		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert Kirill Danilo Loh Bobas  }
+	}
+	female = {
+		names = { Women }
+	}
+	surnames = {
+		Razhko Sapat Bitjko Kolovar Kvasikh Norsh Ciglar Drobnie Vuk Zabukovec Tratnik Markovich Ficko Kukovec
+	}
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
+}
+RGY = {
+	male = {
+		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert Kirill Danilo Loh Bobas  }
+	}
+	female = {
+		names = { Women }
+	}
+	surnames = {
+		Razhko Sapat Bitjko Kolovar Kvasikh Norsh Ciglar Drobnie Vuk Zabukovec Tratnik Markovich Ficko Kukovec
+	}
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
+}
+TRB = {
+	male = {
+		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert Kirill Danilo Loh Bobas  }
+	}
+	female = {
+		names = { Women }
+	}
+	surnames = {
+		Razhko Sapat Bitjko Kolovar Kvasikh Norsh Ciglar Drobnie Vuk Zabukovec Tratnik Markovich Ficko Kukovec
+	}
+	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
+}
+TRB = {
+	male = {
+		names = { Khari Tihomir Til Brajko Vukota Sergey Dragan Ilert Kirill Danilo Loh Bobas  }
+	}
+	female = {
+		names = { Women }
+	}
+	surnames = {
+		Razhko Sapat Bitjko Kolovar Kvasikh Norsh Ciglar Drobnie Vuk Zabukovec Tratnik Markovich Ficko Kukovec
+	}
 	callsigns = { "Easy Kill" "The Lightning" "The Devil" "Grasshopper" "Handsome" "Moose" "Mouse" "Pebbles" "Sunshine" Demon }
 }
 
@@ -93,8 +165,23 @@ PIN = {
 		}
 	callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Pinka" "Dolfo" "Fighter of Cvelsfburg" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red Knight" "Reeste" }
 }
-
 SHE = {
+	male = {
+		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich 
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+		}
+	}
+	female = {
+		names = { Jessica Emma Hanna Sofia Marie Hildegard }
+	}
+	surnames = { 
+		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
+		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
+		Beisswenger Duttmann Wilbs Berglen Behrmann 
+		}
+	callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Sheregia" "Dolfo" "Fighter of Glivven" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red Knight" "Reeste" }
+}
+FIL = {
 	male = {
 		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich 
 			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl

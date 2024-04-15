@@ -7,12 +7,26 @@ ideas = {
 			removal_cost = -1
 
             picture = economic_faction
+
+            on_add = {
+                set_country_flag = banned_economic_faction
+            }
+            on_remove = {
+                clr_country_flag = banned_economic_faction
+            }
+
+            cancel = {
+                is_in_faction = no
+                faction_leader = {NOT = {has_idea = EconomicFaction}}
+            }
 			
 			modifier = {
 				trade_opinion_factor = 0.25
-		        production_speed_industrial_complex_factor = 0.05
+		        production_speed_industrial_complex_factor = 0.08
 		        production_speed_infrastructure_factor = 0.08
-		        production_speed_synthetic_refinery_factor = 0.05
+		        production_speed_synthetic_refinery_factor = 0.08
+                consumer_goods_factor = -0.08
+                winfluence_modifier = 0.1
 			}
 		}
 

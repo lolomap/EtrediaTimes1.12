@@ -1,2 +1,16 @@
 characters={
+	LIP_linepeker={
+		name=LIP_linepeker
+		portraits={
+			civilian={
+				large="gfx/leaders/LIP/portrait_Linepeker.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 }

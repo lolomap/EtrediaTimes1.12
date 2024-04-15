@@ -67,7 +67,10 @@ country_event = {
     }
 	option = {
     name = sheregia.2.b
-		ai_chance = { 
+		hidden_effect = {
+			kill_country_leader = yes
+		}
+		ai_chance = {
 			factor = 0.1 
 			modifier = {
 				factor = 0
@@ -95,7 +98,10 @@ country_event = {
 
 	option = {
 	name = sheregia.3.a
-        EIK = {
+        hidden_effect = {
+			kill_country_leader = yes
+		}
+		EIK = {
             if = {
 				limit = { SHE = { owns_state = 157 controls_state = 157 } } 
 				transfer_state = 157

@@ -317,7 +317,7 @@ region_event_change_law = {
         add_to_variable = {region_idea_change = delta}
         clamp_variable = {
             var = region_idea_change
-            min = token:isolation
+            min = token:civilian_economy
             max = token:tot_economic_mobilisation
         }
         if = {

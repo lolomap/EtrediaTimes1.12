@@ -117,21 +117,15 @@ set_popularities = {
     transfer_state = 507
 }
 
-recruit_character = CHE_lucas_walker
-
-recruit_character = CHE_jeka_uyuna
-
-recruit_character = CHE_denis_nazrakov
-
-recruit_character = CHE_dmitry_bochka
-
-recruit_character = CHE_artyom_kekulele
-
-recruit_character = CHE_ivan_vissarionovich
-
-recruit_character = CHE_timur_nafikov
-
 recruit_character = CHE_lobek_keerizhbeza
 
-recruit_character = CHE_anatoly_zhmirinovan
+recruit_character = CHE_Aiyel_Zakari
+
+recruit_character = CHE_Evinezh_Aparty
+
+recruit_character = CHE_Gandi_Baraksh
+
+recruit_character = CHE_Hoygdul_Noor
+
+recruit_character = CHE_Luon_Lagon_Naer
 

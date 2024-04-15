@@ -675,7 +675,7 @@ country_event = {
 
             add_power_balance_value = {
                 id = UCB_parlament_balance
-                value = -0.08
+                value = -0.003
             }
         }
         else_if = {

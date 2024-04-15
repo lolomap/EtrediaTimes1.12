@@ -60,4 +60,5 @@ set_popularities = {
 
 #
 
+recruit_character = LIP_linepeker
 

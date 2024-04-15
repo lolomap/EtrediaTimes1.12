@@ -117,6 +117,7 @@
   ALLOW_BANNED_UCB_BOP_OUT_tooltip: "Эта страна не может возразить Парламенту"
   banned_ucb_bop_tooltip: "§RВето Парламента§!"
   banned_ucb_bop_close_tooltip: "§GСнимается Вето Парламента§!"
+  ALLOW_BANNED_ECONOMIC_FACTION: "Наш альянс не является военным блоком"
 
   has_world_war:0 "§RУчаствует в мировой войне§!\n"
 

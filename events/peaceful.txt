@@ -10,7 +10,12 @@ country_event = {
 
 	option = {
 		name = pcf.1.a
+        add_ideas = EconomicFaction
 	}
+    option = {
+        name = pfc.1.b
+        faction_leader = {remove_from_faction = PREV}
+    }
 }
 
 country_event = {

@@ -3,54 +3,12 @@ characters={
 		name=RGY_Varvara_Dibult
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_4"
+				large="gfx/leaders/RGY/portrait_Varvara.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
 			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	RGY_ostar_karbonal={
-		name=RGY_Ostar_Karbonal
-		portraits={
-			civilian={
-				large="GFX_Portrait_europe_generic_7"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	RGY_ilya_furman={
-		name=RGY_Ilya_Furman
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_4"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	RGY_keren_lopuskay={
-		name=RGY_Keren_Lopuskay
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_6"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=stalinism
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -66,9 +24,9 @@ characters={
 			}
 		}
 		corps_commander={
-			skill=1
+			skill=2
 			attack_skill=2
-			defense_skill=1
+			defense_skill=3
 			planning_skill=1
 			logistics_skill=1
 			legacy_id=-1
@@ -91,19 +49,6 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			legacy_id=-1
-		}
-	}
-	RGY_bob_brown={
-		name=RGY_Bob_Brown
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=absolutism
-			expire="2023.1.1.12"
-			id=-1
 		}
 	}
 }

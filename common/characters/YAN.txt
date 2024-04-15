@@ -37,7 +37,7 @@ characters={
         name=YAN_Atar_Onodar
 		portraits={
 			civilian={
-				large="gfx/leaders/YAN/Portrait_yan_fascism2.dds"
+				large="gfx/leaders/YAN/Portrait_yan_Onodar.dds"
 			}
 		}
 		country_leader={

@@ -372,6 +372,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UCB_dem_anti_IID
 		}
+
+        text_icon = NORDIC_focus_style
+
 		ai_will_do = {
 			factor = 2
 		}
@@ -434,6 +437,8 @@ focus_tree = {
 		x = 21
 		y = 3
 
+        text_icon = NORDIC_focus_style
+
 		available = {
 		    #has_government = democratic
 			has_idea = UCB_resist
@@ -441,7 +446,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 150
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
@@ -750,6 +755,8 @@ focus_tree = {
 		}
 		x = 23
 		y = 7
+        
+        text_icon = NORDIC_focus_style
 
 		completion_reward = {
 			add_stability = 0.05
@@ -840,7 +847,7 @@ focus_tree = {
             has_country_leader = {character = UCB_terine_narabel}
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 150
 		}
 		x = 33
 		y = 3

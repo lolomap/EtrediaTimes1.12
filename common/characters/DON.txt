@@ -3,7 +3,7 @@ characters={
 		name=DON_Doronas_IV
 		portraits={
 			civilian={
-				large="GFX_Portrait_europe_generic_7"
+				large="gfx/leaders/DON/Portrait_don_doronas.dds"
 			}
 		}
 		country_leader={

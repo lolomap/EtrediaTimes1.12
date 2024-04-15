@@ -1,0 +1,40 @@
+on_actions = {
+
+    on_weekly = {
+        effect = {
+            if = {
+                limit = {
+                    check_variable = {world_influence > 5}
+                    NOT = {has_idea = wi_trade_influence}
+                }
+                add_ideas = wi_trade_influence
+            }
+            if = {
+                limit = {
+                    is_in_faction = yes
+                    not = {has_idea = wi_faction_trade_influence}
+                    ROOT= {
+                        faction_leader = {
+                            check_variable = {faction_influence > 29}
+                        }
+                    }
+                }
+                add_ideas = wi_faction_trade_influence
+            }
+            if = {
+                limit = {
+                    is_in_faction = yes
+                    not = {has_idea = wi_economic_faction_trade_influence}
+                    has_idea = EconomicFaction
+                    ROOT = {
+                        faction_leader = {
+                            check_variable = {faction_influence > 49}
+                        }
+                    }
+                }
+                add_ideas = wi_economic_faction_trade_influence
+            }
+        }
+    }
+
+}

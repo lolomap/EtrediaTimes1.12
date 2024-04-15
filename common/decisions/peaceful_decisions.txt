@@ -264,12 +264,29 @@ peaceful_democratic = {
 					limit = {
 						is_in_faction_with = ROOT
 					}
-					add_ideas = EconomicFaction
 					country_event = {id = pcf.1 days = 1}
 				}
 			}
 		}
-		ai_will_do = {factor = 1}
+	}
+
+    RemoveEconomicFaction = {
+		icon = generic_democracy
+
+		available = {
+			is_faction_leader = yes
+			has_idea = EconomicFaction
+		}
+
+		visible = {
+			is_faction_leader = yes
+		}
+
+		complete_effect = {
+			ROOT = {
+				remove_ideas = EconomicFaction
+			}
+		}
 	}
 	
 }

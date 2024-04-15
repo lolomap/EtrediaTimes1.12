@@ -863,8 +863,24 @@ country_event = {
         TAG = UCB
     }
 
-	option = {
-	name = ucb.30.a
+    option = {
+    	name = ucb.30.a
+    }
+    option = {
+    	name = ucb.30.a
+    	SUC = {change_tag_from = UCB}
+    }
+    option = {
+    	name = ucb.30.a
+    	BDA = {change_tag_from = UCB}
+    }
+    option = {
+    	name = ucb.30.a
+    	NCU = {change_tag_from = UCB}
+    }
+
+	immediate = {
+	#name = ucb.30.a
 		hidden_effect = {
         UCB = {
             delete_units = {

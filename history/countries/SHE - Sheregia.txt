@@ -57,17 +57,13 @@ set_popularities = {
 
 #
 
-recruit_character = SHE_walter_weber
+recruit_character = SHE_daniil_shirokov
 
-recruit_character = SHE_germen_panrudbolf
+recruit_character = SHE_Valentin_Keyserling
 
 recruit_character = SHE_karm_vihten
 
-recruit_character = SHE_ivan_vissarionovich
+recruit_character = SHE_germen_panrudbolf
 
-recruit_character = SHE_timur_nafikov
-
-recruit_character = SHE_daran_lemingauton
-
-recruit_character = SHE_daniil_shirokov
+recruit_character = SHE_anton_sturm
 

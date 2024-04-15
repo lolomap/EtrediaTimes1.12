@@ -60,17 +60,9 @@ set_popularities = {
 
 #
 
-recruit_character = RGY_jonas_jones
-
 recruit_character = RGY_eugeny_urusinh
 
 recruit_character = RGY_karl_simvols
-
-recruit_character = RGY_keren_lopuskay
-
-recruit_character = RGY_ilya_furman
-
-recruit_character = RGY_ostar_karbonal
 
 recruit_character = RGY_varvara_dibult
 
