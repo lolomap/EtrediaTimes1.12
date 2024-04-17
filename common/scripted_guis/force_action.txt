@@ -307,6 +307,7 @@ scripted_gui = {
                         set_variable = {crtoflag = political_crysis_member:to_crysis}
                     }
                     add_to_array = {political_crysis_member:crysis_senders = THIS}
+                    remove_from_array = {political_crysis_member:crysis_majors = THIS}
                 }
                 for_each_scope_loop = {
                     array = subjects
@@ -323,10 +324,11 @@ scripted_gui = {
                             set_variable = {crtoflag = political_crysis_member:to_crysis}
                         }
                         add_to_array = {political_crysis_member:crysis_senders = THIS}
+                        remove_from_array = {political_crysis_member:crysis_majors = THIS}
                     }
                 }
 
-                d_calc_crysis = yes
+                var:political_crysis_member = {d_calc_crysis = yes}
             }
             to_choose_button_click = {
                 add_to_array = {political_crysis_member:crysis_tos = ROOT}
@@ -365,7 +367,7 @@ scripted_gui = {
                     }
                 }
 
-                d_calc_crysis = yes
+                var:political_crysis_member = {d_calc_crysis = yes}
             }
 
             press_button_click = {

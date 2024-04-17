@@ -193,13 +193,13 @@ d_calc_crysis = { #call in crysis sender
 force_press = {
     if = {
         #limit = {NOT = {check_variable = {cr_d_status = 3}}}
-        limit = {has_country_flag = cr_a_allow}
+        limit = {NOT = {has_country_flag = cr_a_allow}}
         log = "FORCE PRESS FOR DEFENDERS"
         var:cr_to_op = {set_country_flag = crysis_press}
     }
     if = {
         #limit = {NOT = {check_variable = {cr_a_status = 3}}}
-        limit = {has_country_flag = cr_d_allow}
+        limit = {NOT = {has_country_flag = cr_d_allow}}
         var:cr_send_op = {set_country_flag = crysis_press}
     }
 }

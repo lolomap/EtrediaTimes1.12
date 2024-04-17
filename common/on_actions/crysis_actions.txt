@@ -199,7 +199,11 @@ on_actions = {
                     }
                 }
             }
+        }
+    }
 
+    on_weekly = {
+        effect = {
             #Уступить или возразить в кризисе
             if = {
                 limit = {
