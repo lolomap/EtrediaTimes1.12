@@ -2,7 +2,7 @@ state={
 	id=156
 	name="STATE_156"
 	manpower = 2100000
-	state_category = rural
+	state_category = large_town
 
 	resources={
 		steel=6.000
@@ -16,10 +16,19 @@ state={
 		}
 		add_core_of = SHE
 		victory_points = {
-			13730 10
+			13730 5
 		}
 		victory_points = {
-			13203 5
+			13203 10
+		}
+		victory_points = {
+			13258 5
+		}
+		victory_points = {
+			13294 1
+		}
+		victory_points = {
+			13809 1
 		}
 
 	}

@@ -1118,6 +1118,7 @@ focus_tree = {
 		completion_reward = { 
 		YAN = { country_event = { id = yan.16 days = 1 } }
 		}
+        text_icon = NORDIC_focus_style
 		ai_will_do = {
 			factor = 7
 		}
@@ -1132,6 +1133,7 @@ focus_tree = {
 		prerequisite = {
 			focus = YAN_Karcih_plan
 		}
+        text_icon = NORDIC_focus_style
 		completion_reward = {
 		YAN = { add_ideas = YAN_ambitions }
 		}
@@ -1228,6 +1230,7 @@ focus_tree = {
 		available = {
 			YAN = { has_completed_focus = YAN_armiya }
 		}
+        text_icon = NORDIC_focus_style
 		ai_will_do = {
 			factor = 5
 	    }
@@ -1370,19 +1373,19 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				YAN = { has_completed_focus = YAN_nalogi }
+				NOT = { YAN = { has_completed_focus = YAN_nalogi } }
 			}
 			modifier = {
 				factor = 0
-				YAN = { has_completed_focus = YAN_arms1 }
+				NOT = { YAN = { has_completed_focus = YAN_arms1 } }
 			}
 			modifier = {
 				factor = 0
-				YAN = { has_completed_focus = YAN_diria_bunker }
+				NOT = { YAN = { has_completed_focus = YAN_diria_bunker } }
 			}
 			modifier = {
 				factor = 0
-				YAN = { has_completed_focus = YAN_invest_to_west }
+				NOT = { YAN = { has_completed_focus = YAN_invest_to_west } }
 			}
 		}
 		x = 38
@@ -1591,8 +1594,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = YAN_annex_ZAM
 		}
+        text_icon = NORDIC_focus_style
 		x = 41
 		y = 10
+        completion_reward = {
+            add_political_power = 50   
+        }
 	}
 	
 	focus = {
@@ -1633,9 +1640,13 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = YAN_annex_IRI
 		}
+        text_icon = NORDIC_focus_style
 		x = 41
 		y = 11
-
+        
+        completion_reward = {
+            add_political_power = 50   
+        }
 	}
 
 	focus = {

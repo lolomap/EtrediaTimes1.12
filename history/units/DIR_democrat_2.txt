@@ -161,4 +161,177 @@ units = {
                 start_equipment_factor = 0.4
 
     }
+		division = {
+		name = "Democrat Militia"
+		location = 8627
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+                start_equipment_factor = 0.8
+
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+                start_equipment_factor = 0.8
+
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+                start_equipment_factor = 0.8
+
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+                start_equipment_factor = 0.8
+
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+                start_equipment_factor = 0.8
+
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+                start_equipment_factor = 0.8
+
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+	
+	division = {
+		name = "Democrat Militia"
+		location = 9862
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+		division = {
+		name = "Democrat Militia"
+		location = 10069
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10069
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10792
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10792
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10792
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+		division = {
+		name = "Democrat Militia"
+		location = 10069
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10069
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10792
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10792
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
+
+	division = {
+		name = "Democrat Militia"
+		location = 10792
+		division_template = "Democrat Militia"
+		start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+
+    }
 }

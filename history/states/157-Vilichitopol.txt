@@ -8,11 +8,22 @@ state={
 			infrastructure = 2
 			industrial_complex = 1
                         air_base = 3
-
+			13438 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SHE
 		victory_points = {
 			13589 15 
+		}
+		victory_points = {
+			13222 1 
+		}
+		victory_points = {
+			13438 1 
+		}
+		victory_points = {
+			13763 1 
 		}
 
 	}

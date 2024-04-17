@@ -559,7 +559,7 @@ focus_tree = {
             }
         }
         ai_will_do = {
-		factor = 0.65
+		factor = 1.5
 		}
     }
     focus = {
@@ -1138,7 +1138,7 @@ focus_tree = {
             }
         }
         ai_will_do = {
-		factor = 0.35
+		factor = 1
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes

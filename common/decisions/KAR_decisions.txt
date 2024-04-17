@@ -180,7 +180,7 @@ KAR_dirian_civil_war = {
 			}
 			modifier = {
 				add = 5
-				DEM = { surrender_progress > 0.5 }
+				DEM = { surrender_progress > 0.8 }
 			}
 			modifier = {
 				add = 10

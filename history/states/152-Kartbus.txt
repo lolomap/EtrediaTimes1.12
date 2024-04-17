@@ -2,9 +2,9 @@
 state={
 	id=152
 	name="STATE_152"
-	manpower = 700000
+	manpower = 950000
 	
-	state_category = rural
+	state_category = town
 	
 	resources={
                 steel = 5 # was: 5
@@ -18,10 +18,25 @@ state={
 			14151 = {
 				naval_base = 3
 			}
+			13985 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = SHE
 		victory_points = {
 			14151 10
+		}
+		victory_points = {
+			13860 3
+		}
+		victory_points = {
+			13985 1
+		}
+		victory_points = {
+			14007 1
+		}
+		victory_points = {
+			14053 1
 		}
 
 	}
