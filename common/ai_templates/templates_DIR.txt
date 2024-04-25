@@ -13,6 +13,9 @@ infantry_DIR = {
 		DEF
 		FRE
 		MOU
+		NZM
+		EDC
+		DAR
 	}
 
 	roles = {
@@ -20,13 +23,13 @@ infantry_DIR = {
 	}
 	
 	upgrade_prio = {
-		factor = 4
+		factor = 10
 
 		modifier = {
-			factor = 5
+			factor = 10
 		}
 		modifier = {
-			factor = 0
+			factor = -2
 			OR = {
 				NOT = { has_idea = DIR_revolt }
 				NOT = { has_idea = DIR_revolt_dop }
@@ -39,14 +42,14 @@ infantry_DIR = {
 	infantry_light_DIR = {
 	
 		upgrade_prio = {
-			factor = 3
+			factor = 12
 
 			modifier = {
-				factor = 3
+				factor = 12
 			}
 			modifier = {
 				factor = -3
-				num_of_factories > 20
+				num_of_factories > 50
 			}
 		}
 		
@@ -98,12 +101,10 @@ infantry_DIR = {
 			
 			support = {
 				engineer = 1
-				recon = 1
-				artillery = 1
 			}
 			
 			regiments = {
-				infantry = 9
+				infantry = 4
 			}
 		}
 		
@@ -124,17 +125,17 @@ infantry_DIR = {
 	infantry_default_DIR = {
 	
 		upgrade_prio = {
-			factor = 3
+			factor = 12
 
 			modifier = {
-				factor = 2
+				factor = 5
 			}
 			modifier = {
-				factor = 2
-				num_of_factories < 20
+				factor = 10
+				num_of_factories < 50
 			}
 			modifier = {
-			factor = 0
+			factor = -5
 			OR = {
 				NOT = { has_idea = DIR_revolt }
 				NOT = { has_idea = DIR_revolt_dop }
@@ -195,8 +196,8 @@ infantry_DIR = {
 			}
 			
 			regiments = {
-				infantry = 6
-				jeep = 3
+				infantry = 4
+				jeep = 4
 			}
 		}
 		
@@ -217,14 +218,14 @@ infantry_DIR = {
 	infantry_2_DIR = {
 	
 		upgrade_prio = {
-			factor = 4
+			factor = 10
 
 			modifier = {
-				factor = 0
-				num_of_factories < 30
+				factor = 2
+				num_of_factories < 60
 			}
 			modifier = {
-				factor = 0
+				factor = -5
 				OR = {
 				NOT = { has_idea = DIR_revolt }
 				NOT = { has_idea = DIR_revolt_dop }
@@ -320,19 +321,22 @@ armor_DIR = {
 		DEF
 		FRE
 		MOU
+		NZM
+		EDC
+		DAR
 	}
 	roles = {
 		armor
 	}
 	
 	upgrade_prio = {
-		factor = 3
+		factor = 6
 
 		modifier = {
-			factor = 2
+			factor = 4
 		}
 		modifier = {
-			factor = 0
+			factor = -2
 			OR = {
 				NOT = { has_idea = DIR_revolt }
 				NOT = { has_idea = DIR_revolt_dop }
@@ -342,10 +346,10 @@ armor_DIR = {
 	
 	light_armor_default_DIR = {
 		upgrade_prio = {
-			factor = 3
+			factor = 6
 
 			modifier = {
-				factor = 2
+				factor = 4
 			}
 		}
 		
@@ -403,8 +407,8 @@ armor_DIR = {
 			}
 			
 			regiments = {
-				modern_armor = 3
-				mechanized = 3
+				modern_armor = 2
+				mechanized = 2
 			}
 		}
 		

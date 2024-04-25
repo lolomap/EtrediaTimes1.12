@@ -940,6 +940,8 @@ country_event = {
 			EMO = { load_oob = EMO_arms }
 			DAR = { load_oob = DAR_arms }
 			FRE = { load_oob = FRE_arms }
+			BLJ = { load_oob = _BLJ }
+			REK = { load_oob = FRE_arms }
 			
 			EMO = { add_ideas = DIR_revolt_dop }
 			DAR = { add_ideas = DIR_revolt_dop }

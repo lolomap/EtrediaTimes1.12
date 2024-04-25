@@ -1,0 +1,2648 @@
+DAR_new_civil_war = {
+	DAR_war_with_MOU = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = MOU
+			is_neighbor_of = MOU
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOU
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_EDC = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = EDC
+			is_neighbor_of = EDC
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EDC
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_DNF = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = DNF
+			is_neighbor_of = DNF
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 40000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DNF
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_EMO = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = EMO
+			is_neighbor_of = EMO
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 40000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EMO
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_FRE = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = FRE
+			is_neighbor_of = FRE
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 25000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_SDI = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = SDI
+			is_neighbor_of = SDI
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = SDI
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_DEM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = DEM
+			is_neighbor_of = DEM
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEM
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_DIR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = DIR
+			is_neighbor_of = DIR
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIR
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_war_with_DIB = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DAR
+			country_exists = DIB
+			is_neighbor_of = DIB
+		}
+		available = {
+			has_war = no
+			DAR = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIB
+			}
+			hidden_effect = {
+				DAR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DAR_form_diria = {
+		fire_only_once = yes
+		cost = 10
+		visible = {
+			original_tag = DAR
+			NOT = { country_exists = MOU }
+			NOT = { country_exists = EDC }
+			NOT = { country_exists = DNF }
+			NOT = { country_exists = EMO }
+			NOT = { country_exists = FRE }
+			NOT = { country_exists = DIR }
+			NOT = { country_exists = DEM }
+			NOT = { country_exists = DIB }
+			NOT = { country_exists = SDI }
+		}
+		available = {
+			has_war = no
+			controls_state = 285
+		}
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_state_core = 285
+			hidden_effect = {
+				MOU = {
+					remove_state_core = 276
+					remove_state_core = 305
+					remove_state_core = 809
+				}
+				set_country_flag = dar_win_war
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+DIB_new_civil_war = {
+	DIB_war_with_MOU = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = MOU
+			is_neighbor_of = MOU
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOU
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_EDC = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = EDC
+			is_neighbor_of = EDC
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EDC
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_DNF = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = DNF
+			is_neighbor_of = DNF
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DNF
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_EMO = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = EMO
+			is_neighbor_of = EMO
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EMO
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_FRE = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = FRE
+			is_neighbor_of = FRE
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 25000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_SDI = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = SDI
+			is_neighbor_of = SDI
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = SDI
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_DEM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = DEM
+			is_neighbor_of = DEM
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEM
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_DIR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = DIR
+			is_neighbor_of = DIR
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIR
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_war_with_DAR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIB
+			country_exists = DAR
+			is_neighbor_of = DAR
+		}
+		available = {
+			has_war = no
+			DIB = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DAR
+			}
+			hidden_effect = {
+				DIB = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIB_form_diria = {
+		fire_only_once = yes
+		cost = 10
+		visible = {
+			original_tag = DIB
+			NOT = { country_exists = MOU }
+			NOT = { country_exists = EDC }
+			NOT = { country_exists = DNF }
+			NOT = { country_exists = EMO }
+			NOT = { country_exists = FRE }
+			NOT = { country_exists = DIR }
+			NOT = { country_exists = DEM }
+			NOT = { country_exists = DAR }
+			NOT = { country_exists = SDI }
+		}
+		available = {
+			has_war = no
+			controls_state = 285
+		}
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_state_core = 285
+			hidden_effect = {
+				MOU = {
+					remove_state_core = 276
+					remove_state_core = 305
+					remove_state_core = 809
+				}
+				set_country_flag = dib_win_war
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+DNF_new_civil_war = {
+	DNF_war_with_MOU = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = MOU
+			is_neighbor_of = MOU
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOU
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_EDC = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = EDC
+			is_neighbor_of = EDC
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EDC
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_DAR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = DAR
+			is_neighbor_of = DAR
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DAR
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_EMO = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = EMO
+			is_neighbor_of = EMO
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EMO
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_FRE = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = FRE
+			is_neighbor_of = FRE
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 25000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_SDI = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = SDI
+			is_neighbor_of = SDI
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = SDI
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_DEM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = DEM
+			is_neighbor_of = DEM
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEM
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_DIR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = DIR
+			is_neighbor_of = DIR
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIR
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_HEK = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = HEK
+			is_neighbor_of = HEK
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 40000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = HEK
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_NZM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DNF
+			country_exists = NZM
+			is_neighbor_of = NZM
+		}
+		available = {
+			has_war = no
+			DNF = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = NZM
+			}
+			hidden_effect = {
+				DNF = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_war_with_REK = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = DNF
+			is_neighbor_of = DNF
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DNF
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DNF_form_diria = {
+		fire_only_once = yes
+		cost = 10
+		visible = {
+			original_tag = DNF
+			NOT = { country_exists = MOU }
+			NOT = { country_exists = EDC }
+			NOT = { country_exists = EMO }
+			NOT = { country_exists = DIB }
+			NOT = { country_exists = FRE }
+			NOT = { country_exists = DIR }
+			NOT = { country_exists = DEM }
+			NOT = { country_exists = DAR }
+			NOT = { country_exists = SDI }
+		}
+		available = {
+			has_war = no
+			controls_state = 285
+		}
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_state_core = 285
+			hidden_effect = {
+				MOU = {
+					remove_state_core = 276
+					remove_state_core = 305
+					remove_state_core = 809
+				}
+				set_country_flag = dnf_win_war
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+EMO_new_civil_war = {
+	EMO_war_with_MOU = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = MOU
+			is_neighbor_of = MOU
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOU
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_EDC = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = EDC
+			is_neighbor_of = EDC
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EDC
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_DAR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = DAR
+			is_neighbor_of = DAR
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DAR
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_DNF = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = DNF
+			is_neighbor_of = DNF
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DNF
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_FRE = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = FRE
+			is_neighbor_of = FRE
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 25000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_SDI = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = SDI
+			is_neighbor_of = SDI
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = SDI
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_DEM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = DEM
+			is_neighbor_of = DEM
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEM
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_DIR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = DIR
+			is_neighbor_of = DIR
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIR
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_HEK = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = HEK
+			is_neighbor_of = HEK
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 40000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = HEK
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_NZM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = NZM
+			is_neighbor_of = NZM
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = NZM
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_war_with_REK = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = EMO
+			country_exists = REK
+			is_neighbor_of = REK
+		}
+		available = {
+			has_war = no
+			EMO = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = REK
+			}
+			hidden_effect = {
+				EMO = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	EMO_form_diria = {
+		fire_only_once = yes
+		cost = 10
+		visible = {
+			original_tag = EMO
+			NOT = { country_exists = MOU }
+			NOT = { country_exists = EDC }
+			NOT = { country_exists = DNF }
+			NOT = { country_exists = DIB }
+			NOT = { country_exists = FRE }
+			NOT = { country_exists = DIR }
+			NOT = { country_exists = DEM }
+			NOT = { country_exists = DAR }
+			NOT = { country_exists = SDI }
+		}
+		available = {
+			has_war = no
+			controls_state = 285
+		}
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_state_core = 285
+			hidden_effect = {
+				MOU = {
+					remove_state_core = 276
+					remove_state_core = 305
+					remove_state_core = 809
+				}
+				set_country_flag = emo_win_war
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+SDI_new_civil_war = {
+	SDI_war_with_MOU = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = MOU
+			is_neighbor_of = MOU
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOU
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_war_with_EDC = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = EDC
+			is_neighbor_of = EDC
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EDC
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_war_with_DAR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = DAR
+			is_neighbor_of = DAR
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DAR
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_war_with_DNF = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = DNF
+			is_neighbor_of = DNF
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 70000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DNF
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_war_with_FRE = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = FRE
+			is_neighbor_of = FRE
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 25000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_war_with_EMO = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = EMO
+			is_neighbor_of = EMO
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EMO
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_war_with_DEM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = DEM
+			is_neighbor_of = DEM
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 100000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEM
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_war_with_DIR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = SDI
+			country_exists = DIR
+			is_neighbor_of = DIR
+		}
+		available = {
+			has_war = no
+			SDI = { has_army_manpower  = { size > 70000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIR
+			}
+			hidden_effect = {
+				SDI = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	SDI_form_diria = {
+		fire_only_once = yes
+		cost = 10
+		visible = {
+			original_tag = SDI
+			NOT = { country_exists = MOU }
+			NOT = { country_exists = EDC }
+			NOT = { country_exists = DNF }
+			NOT = { country_exists = DIB }
+			NOT = { country_exists = FRE }
+			NOT = { country_exists = DIR }
+			NOT = { country_exists = DEM }
+			NOT = { country_exists = DAR }
+			NOT = { country_exists = EMO }
+		}
+		available = {
+			has_war = no
+			controls_state = 285
+		}
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_state_core = 285
+			hidden_effect = {
+				MOU = {
+					remove_state_core = 276
+					remove_state_core = 305
+					remove_state_core = 809
+				}
+				set_country_flag = sdi_win_war
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+DIR_new_civil_war = {
+	DIR_war_with_MOU = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = MOU
+			is_neighbor_of = MOU
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOU
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_war_with_EDC = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = EDC
+			is_neighbor_of = EDC
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EDC
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_war_with_DAR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = DAR
+			is_neighbor_of = DAR
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DAR
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_war_with_DNF = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = DNF
+			is_neighbor_of = DNF
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DNF
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_war_with_FRE = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = FRE
+			is_neighbor_of = FRE
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 25000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_war_with_EMO = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = EMO
+			is_neighbor_of = EMO
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 70000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EMO
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_war_with_DEM = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = DEM
+			is_neighbor_of = DEM
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEM
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_war_with_SDI = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DIR
+			country_exists = DIR
+			is_neighbor_of = DIR
+		}
+		available = {
+			has_war = no
+			DIR = { has_army_manpower  = { size > 70000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIR
+			}
+			hidden_effect = {
+				DIR = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DIR_form_diria = {
+		fire_only_once = yes
+		cost = 10
+		visible = {
+			original_tag = DIR
+			NOT = { country_exists = MOU }
+			NOT = { country_exists = EDC }
+			NOT = { country_exists = DNF }
+			NOT = { country_exists = DIB }
+			NOT = { country_exists = FRE }
+			NOT = { country_exists = SDI }
+			NOT = { country_exists = DEM }
+			NOT = { country_exists = DAR }
+			NOT = { country_exists = EMO }
+		}
+		available = {
+			has_war = no
+			controls_state = 285
+		}
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_state_core = 285
+			hidden_effect = {
+				MOU = {
+					remove_state_core = 276
+					remove_state_core = 305
+					remove_state_core = 809
+				}
+				set_country_flag = dir_win_war
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+DEM_new_civil_war = {
+	DEM_war_with_MOU = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = MOU
+			is_neighbor_of = MOU
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOU
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_war_with_EDC = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = EDC
+			is_neighbor_of = EDC
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 60000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EDC
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_war_with_DAR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = DAR
+			is_neighbor_of = DAR
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 50000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DAR
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_war_with_DNF = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = DNF
+			is_neighbor_of = DNF
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 80000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DNF
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_war_with_FRE = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = FRE
+			is_neighbor_of = FRE
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 25000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRE
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_war_with_EMO = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = EMO
+			is_neighbor_of = EMO
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 70000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EMO
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_war_with_DIR = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = DIR
+			is_neighbor_of = DIR
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 100000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DIR
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_war_with_SDI = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			original_tag = DEM
+			country_exists = DEM
+			is_neighbor_of = DEM
+		}
+		available = {
+			has_war = no
+			DEM = { has_army_manpower  = { size > 70000 } }
+		}
+		days_re_enable = 90
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEM
+			}
+			hidden_effect = {
+				DEM = {
+					set_country_flag = {
+						flag = debil_ne_zhmi_drugie_resheniya
+						days = 120
+						value = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = -100
+				has_country_flag = debil_ne_zhmi_drugie_resheniya
+			}
+		}
+	}
+	DEM_form_diria = {
+		fire_only_once = yes
+		cost = 10
+		visible = {
+			original_tag = DEM
+			NOT = { country_exists = MOU }
+			NOT = { country_exists = EDC }
+			NOT = { country_exists = DNF }
+			NOT = { country_exists = DIB }
+			NOT = { country_exists = FRE }
+			NOT = { country_exists = SDI }
+			NOT = { country_exists = DIR }
+			NOT = { country_exists = DAR }
+			NOT = { country_exists = EMO }
+		}
+		available = {
+			has_war = no
+			controls_state = 285
+		}
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_state_core = 285
+			hidden_effect = {
+				MOU = {
+					remove_state_core = 276
+					remove_state_core = 305
+					remove_state_core = 809
+				}
+				set_country_flag = dir_win_war
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

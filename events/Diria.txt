@@ -807,6 +807,7 @@ country_event = {
 			MOU = { load_oob = MOU_arms }
 			HEK = { load_oob = HEK_arms }
 			NZM = { load_oob = NZM_arms }
+			SDI = { load_oob = DIR_syndicat }
 			
 			DNF = { add_ideas = DIR_revolt_dop }
 			EDC = { add_ideas = DIR_revolt_dop }

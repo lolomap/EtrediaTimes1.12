@@ -385,7 +385,7 @@ political_actions = {
 			stability_weekly = 0.002
 		}
 		days_remove = 84
-		days_re_enable = 360
+		days_re_enable = 600
 		cost = 100
 
 		complete_effect = {
@@ -442,7 +442,7 @@ political_actions = {
 			base = 0.1
 			modifier = {
 				add = 1
-				has_stability > 0.7
+				has_stability > 0.9
 			}
 			modifier = {
 				add = 1
@@ -471,6 +471,26 @@ political_actions = {
 			modifier = {
 				add = 1
 				has_idea = sixth_corruption_level
+			}
+			modifier = {
+				add = 0.5
+				has_idea = fifth_corruption_level
+			}
+			modifier = {
+				add = -0.5
+				has_idea = fourth_corruption_level
+			}
+			modifier = {
+				add = -1
+				has_idea = third_corruption_level
+			}
+			modifier = {
+				add = -1
+				has_idea = second_corruption_level
+			}
+			modifier = {
+				add = -1
+				has_idea = first_corruption_level
 			}
 		}
 	}

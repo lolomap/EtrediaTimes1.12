@@ -32,6 +32,42 @@ DIB_dirian_civil_war = {
 	}
 }
 
+DEM_new_civil_war = {
+	allowed = {
+		original_tag = DEM
+	}
+}
+DIR_new_civil_war = {
+	allowed = {
+		original_tag = DIR
+	}
+}
+EMO_new_civil_war = {
+	allowed = {
+		original_tag = EMO
+	}
+}
+SDI_new_civil_war = {
+	allowed = {
+		original_tag = SDI
+	}
+}
+DNF_new_civil_war = {
+	allowed = {
+		original_tag = DNF
+	}
+}
+DAR_new_civil_war = {
+	allowed = {
+		original_tag = DAR
+	}
+}
+DIB_new_civil_war = {
+	allowed = {
+		original_tag = DIB
+	}
+}
+
 war_measures = {
 	icon = generic_propaganda
 
