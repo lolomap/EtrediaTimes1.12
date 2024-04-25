@@ -558,18 +558,18 @@ country_event = {	# ивенты на коорупцию (случайные)
 		if = {
 
 			random_list = {
-				3 = { if = {limit = {has_stability < 0.8} country_event = mechanics.26 } }
+				2 = { if = {limit = {has_stability < 0.8} country_event = mechanics.26 } }
 				3 = { if = {limit = {has_stability < 0.5} country_event = mechanics.27 } }
 				3 = { if = {limit = {has_stability < 0.3} country_event = mechanics.28 } }
-				4 = { if = {limit = {has_stability < 0.1} country_event = mechanics.29 } }
-				1 = { if = {limit = {has_war_support < 0.5} country_event = mechanics.30 } }
-				1 = { if = {limit = {has_war_support < 0.1} country_event = mechanics.31 } }
+				3 = { if = {limit = {has_stability < 0.1} country_event = mechanics.29 } }
+				2 = { if = {limit = {has_war_support < 0.5} country_event = mechanics.30 } }
+				3 = { if = {limit = {has_war_support < 0.1} country_event = mechanics.31 } }
 				2 = { if = {limit = {has_idea = total_nonfree_press} country_event = mechanics.32 } }
 				2 = { if = {limit = {has_idea = nonfree_press} country_event = mechanics.33 } }
 				2 = { if = {limit = {has_idea = closed_entry} country_event = mechanics.34 } }
 				2 = { if = {limit = {has_idea = total_free_press} country_event = mechanics.35 } }
 
-				77 = {
+				76 = {
 
 				}
 			}
@@ -590,17 +590,16 @@ country_event = { # Скандал из-за госзакупок
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -615,7 +614,7 @@ country_event = { # Скандал из-за госзакупок
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -633,17 +632,16 @@ country_event = { # Скандал из-за госзакупок
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -658,7 +656,7 @@ country_event = { # Скандал из-за госзакупок
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -676,17 +674,16 @@ country_event = { # государственный тенд
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -701,7 +698,7 @@ country_event = { # государственный тенд
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -719,17 +716,16 @@ country_event = { # недобор бюджетных средств
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -744,7 +740,7 @@ country_event = { # недобор бюджетных средств
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -762,17 +758,16 @@ country_event = { # фиксация налоговых махинаций
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -787,7 +782,7 @@ country_event = { # фиксация налоговых махинаций
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -805,17 +800,16 @@ country_event = { # устаревшая техника
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -830,7 +824,7 @@ country_event = { # устаревшая техника
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -848,17 +842,16 @@ country_event = { # утрата боеспособности армии
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -873,7 +866,7 @@ country_event = { # утрата боеспособности армии
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -891,17 +884,16 @@ country_event = { # чиновники паразитируют на гос см
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -916,7 +908,7 @@ country_event = { # чиновники паразитируют на гос см
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -934,17 +926,16 @@ country_event = { # нереалистичные расходы
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -959,7 +950,7 @@ country_event = { # нереалистичные расходы
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
@@ -977,17 +968,16 @@ country_event = { # организованная коррупция на гра�
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = sixth_corruption_level
-			add_stability = -0.1
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = -0.08
+			add_stability = -0.05
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
@@ -1002,12 +992,12 @@ country_event = { # организованная коррупция на гра�
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = -0.02
+			add_stability = -0.03
 		}
 	}
 }
 
-country_event = { # Скандал из-за госзакупок
+country_event = { # СМИ расскрыли коррупционную схему
 	id = mechanics.35
 	title = mechanics.35.t
 	desc = mechanics.35.d
@@ -1020,32 +1010,32 @@ country_event = { # Скандал из-за госзакупок
 		if = {
 			limit = { has_idea = sixth_corruption_level }
 			add_ideas = fifth_corruption_level
-			add_stability = 0.05
+			add_stability = 0.1
 		}
 		else_if = {
 			limit = { has_idea = fifth_corruption_level }
 			add_ideas = fourth_corruption_level
-			add_stability = 0.04
+			add_stability = 0.08
 		}
 		else_if = {
 			limit = { has_idea = fourth_corruption_level }
 			add_ideas = third_corruption_level
-			add_stability = 0.03
+			add_stability = 0.08
 		}
 		else_if = {
 			limit = { has_idea = third_corruption_level }
 			add_ideas = second_corruption_level
-			add_stability = 0.02
+			add_stability = 0.05
 		}
 		else_if = {
 			limit = { has_idea = second_corruption_level }
 			add_ideas = first_corruption_level
-			add_stability = 0.02
+			add_stability = 0.03
 		}
 		else_if = {
 			limit = { has_idea = first_corruption_level }
 			add_ideas = first_corruption_level
-			add_stability = 0.01
+			add_stability = 0.03
 		}
 	}
 }

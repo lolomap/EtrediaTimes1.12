@@ -5,6 +5,8 @@
  political_form: "Политический строй"
 
  resources_debuff: "Дефицит сырья"
+ army_at_down: "Армия в упадке"
+ government_at_down: "Правительство в упадке"
  
  corp_influence:0 "Власть корпораций"
  thousand_year_of_failure:0 "1000 лет неудач"
