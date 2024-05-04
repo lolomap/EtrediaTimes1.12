@@ -1375,11 +1375,11 @@ escalation_category = {
         priority = 1000
 
         timeout_effect  = {
-            add_to_variable = {
-                var = escalation_member:escalation_hotness
-                value = -15
-                tooltip=escalation_hotness_change_tooltip
-            }
+            # add_to_variable = {
+            #     var = escalation_member:escalation_hotness
+            #     value = -15
+            #     tooltip=escalation_hotness_change_tooltip
+            # }
             hidden_effect = {
                 set_country_flag = escalation_timeout
                 every_country = {
