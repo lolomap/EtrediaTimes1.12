@@ -86,9 +86,9 @@ focus_tree = {
         prerequisite = {
             focus = SFL_exit_isolation
         }
-        #mutually_exclusive = {
-        #	focus = 
-        #}
+        mutually_exclusive = {
+        	focus = SFL_return_past
+        }
     
         completion_reward = {
             add_stability = 0.05
@@ -799,4 +799,216 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = SFL_return_past
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -8
+        y = 0
+        relative_position_id = SFL_past_present_future
+        prerequisite = {
+            focus = SFL_exit_isolation
+        }
+        mutually_exclusive = {
+            focus = SFL_past_present_future
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_invite_king
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_return_past
+        prerequisite = {
+            focus = SFL_return_past
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_restore_monarchism
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_invite_king
+        prerequisite = {
+            focus = SFL_invite_king
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_historical_union
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = SFL_restore_monarchism
+        prerequisite = {
+            focus = SFL_restore_monarchism
+        }
+        mutually_exclusive = {
+            focus = SFL_great_safflia_course
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_great_safflia_course
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_restore_monarchism
+        prerequisite = {
+            focus = SFL_restore_monarchism
+        }
+        mutually_exclusive = {
+            focus = SFL_historical_union
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_invade_MOF
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = SFL_great_safflia_course
+        prerequisite = {
+            focus = SFL_great_safflia_course
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_RGY_protection
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_great_safflia_course
+        prerequisite = {
+            focus = SFL_great_safflia_course
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_loiman_question
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 2
+        relative_position_id = SFL_great_safflia_course
+        prerequisite = {
+            focus = SFL_invade_MOF
+        }
+        prerequisite = {
+            focus = SFL_RGY_protection
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_crash_gegemon
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_historical_union
+        prerequisite = {
+            focus = SFL_historical_union
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_no_life_without_crown
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_crash_gegemon
+        prerequisite = {
+            focus = SFL_crash_gegemon
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_elnia_question
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = SFL_crash_gegemon
+        prerequisite = {
+            focus = SFL_crash_gegemon
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_royal_coup
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_no_life_without_crown
+        prerequisite = {
+            focus = SFL_no_life_without_crown
+        }
+        prerequisite = {
+            focus = SFL_elnia_question
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_two_countries_two_heads
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_royal_coup
+        prerequisite = {
+            focus = SFL_royal_coup
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_destroy_enemy
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 3
+        y = 1
+        relative_position_id = SFL_royal_coup
+        prerequisite = {
+            focus = SFL_royal_coup
+        }
+        prerequisite = {
+            focus = SFL_loiman_question
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_regional_union
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_destroy_enemy
+        prerequisite = {
+            focus = SFL_destroy_enemy
+        }
+        completion_reward = { }
+    }
 }
