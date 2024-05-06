@@ -4,7 +4,7 @@ oob = "SFL_2014"
 set_naval_oob = "SFL_2014_naval_legacy"
 
 set_research_slots = 3
-set_stability = 0.7
+set_stability = 0.5
 set_war_support = 0.4
 
 add_ideas = {

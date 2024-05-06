@@ -140,6 +140,8 @@ focus_tree = {
             hidden_effect = {
                 release_puppet_on_controlled = HLR
                 SZE = {transfer_state = 185}
+                SZE = {transfer_state = 167}
+                SZE = {transfer_state = 187}
             }
             set_autonomy = {
                 target = HLR
@@ -155,6 +157,7 @@ focus_tree = {
             }
             
             add_ideas = regionalism
+            mark_focus_tree_layout_dirty = yes
         }
     }
 
@@ -516,7 +519,7 @@ focus_tree = {
         y = 1
         relative_position_id = SFL_influence_MOF
         available = {}
-        bypass = {}
+        bypass = {MOF = {exists = no}}
         allow_branch = {}
         prerequisite = {
             focus = SFL_influence_MOF
@@ -564,6 +567,11 @@ focus_tree = {
                     min = 0
                 }
             }
+
+            if = {
+                limit = {MOF = {exists = no}}
+                add_political_power = 100
+            }
         }
     }
 
@@ -605,7 +613,7 @@ focus_tree = {
                 }
             }
         }
-        bypass = {}
+        bypass = {MOF = {exists = no}}
         allow_branch = {}
         prerequisite = {
             focus = SFL_cultural_connections
@@ -812,7 +820,11 @@ focus_tree = {
         mutually_exclusive = {
             focus = SFL_past_present_future
         }
-        completion_reward = { }
+        completion_reward = {
+            add_war_support = 0.15
+            add_stability = -0.2
+            add_ideas = continuity_d
+        }
     }
 
     focus = {
@@ -825,7 +837,17 @@ focus_tree = {
         prerequisite = {
             focus = SFL_return_past
         }
-        completion_reward = { }
+        completion_reward = {
+            add_country_leader_role = {
+                character = SFL_mikhaylo_philippovic
+                #promote_leader = yes
+                country_leader = {
+                    ideology = parlament_monarchism
+                    expire = "1965.1.1.1"   
+                    traits = { sfl_revanchism }
+                }
+            }
+        }
     }
 
     focus = {
@@ -838,7 +860,18 @@ focus_tree = {
         prerequisite = {
             focus = SFL_invite_king
         }
-        completion_reward = { }
+        completion_reward = {
+            if = {
+                limit = {SFL_mikhaylo_philippovic = {has_ideology = parlament_monarchism}}
+                promote_character = {
+                    character = SFL_mikhaylo_philippovic
+                    ideology = parlament_monarchism
+                }
+            }
+            else = {
+                promote_character = SFL_mikhaylo_philippovic
+            }
+        }
     }
 
     focus = {
@@ -870,7 +903,10 @@ focus_tree = {
         mutually_exclusive = {
             focus = SFL_historical_union
         }
-        completion_reward = { }
+        completion_reward = {
+            SFL = {set_cosmetic_tag = GRT_SFL}
+            add_ideas = SFL_great_safflia_course
+        }
     }
 
     focus = {
@@ -883,7 +919,17 @@ focus_tree = {
         prerequisite = {
             focus = SFL_great_safflia_course
         }
-        completion_reward = { }
+        
+        bypass = {
+            MOF = {exists = no}
+        }
+        will_lead_to_war_with = MOF
+        completion_reward = { 
+            create_wargoal = {
+				type = annex_everything
+				target = MOF
+			}
+        }
     }
 
     focus = {
@@ -896,7 +942,23 @@ focus_tree = {
         prerequisite = {
             focus = SFL_great_safflia_course
         }
-        completion_reward = { }
+        bypass = {
+            RGY = {exists = no}
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    RGY = {is_subject = no}
+                }
+                RGY = {country_event = {id = rgy.5 days = 1}}
+            }
+            else = {
+                create_wargoal = {
+                    type = puppet_wargoal_focus
+                    target = RGY
+                }
+            }
+        }
     }
 
     focus = {
@@ -992,8 +1054,6 @@ focus_tree = {
         relative_position_id = SFL_royal_coup
         prerequisite = {
             focus = SFL_royal_coup
-        }
-        prerequisite = {
             focus = SFL_loiman_question
         }
         completion_reward = { }

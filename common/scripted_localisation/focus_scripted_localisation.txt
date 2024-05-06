@@ -10,3 +10,16 @@ defined_text = {
         localization_key = SFL_influence_MOF_default
     }
 }
+
+defined_text = {
+    name = SFL_create_MSAC_sl
+    text = {
+        trigger = {
+            SFL = {has_completed_focus = SFL_federalization}
+        }
+        localization_key = SFL_create_MSAC_fed
+    }
+    text = {
+        localization_key = SFL_create_MSAC_default
+    }
+}
