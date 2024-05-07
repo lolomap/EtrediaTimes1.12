@@ -53,11 +53,11 @@ DIB_dirian_civil_war = {
 		complete_effect = {
 			hidden_effect = {
 				random_list = {
-					30 = {
+					50 = {
 						DEM = { country_event = { id = dirnews.19 days = 5 } }
 						DIB = { country_event = { id = dsnr.2 days = 5 } }
 					}
-					70 = {
+					50 = {
 						DEM = { country_event = { id = dirnews.20 days = 5 } }
 						DIB = { country_event = { id = dsnr.3 days = 5 } }
 					}
@@ -89,11 +89,11 @@ DIB_dirian_civil_war = {
 		complete_effect = {
 			hidden_effect = {
 				random_list = {
-					50 = {
+					70 = {
 						DIR = { country_event = { id = dircom.30 days = 5 } }
 						DIB = { country_event = { id = dsnr.4 days = 5 } }
 					}
-					50 = {
+					30 = {
 						DIR = { country_event = { id = dircom.31 days = 5 } }
 						DIB = { country_event = { id = dsnr.5 days = 5 } }
 					}

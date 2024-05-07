@@ -25,7 +25,22 @@ KBS_AGARA_support = {
 		original_tag = KBS
 	}
 }
-
+POST_DIRIANS_CORE_IT = {
+	allowed = {
+		OR = {
+			original_tag = DAR
+			original_tag = DEM
+			original_tag = DIR
+			original_tag = DNF
+			original_tag = DIB
+			original_tag = SDI
+			original_tag = EMO
+			original_tag = EDC
+			original_tag = MOU
+			original_tag = FRE
+		}
+	}
+}
 DIB_dirian_civil_war = {
 	allowed = {
 		original_tag = DIB

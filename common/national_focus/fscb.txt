@@ -326,7 +326,11 @@ focus_tree = {
 			UCB = { country_event = { id = ucnb.2 } }
 		}
 		ai_will_do = {
-		factor = 0.5
+		factor = 1
+			modifier = {
+			factor = -1
+			date < 2017.1.1
+			}
 			modifier = {
 			factor = 5
 			SBU = { has_completed_focus = SBU_aldeko_operation }

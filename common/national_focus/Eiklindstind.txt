@@ -1001,10 +1001,37 @@ focus_tree = {
 			}
 			hidden_effect = {
 				LIP = { country_event = { id = lip.2 days = 1 } }
+				create_wargoal = {
+					type = annex_everything
+					target = DIB
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FRE
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = EMO
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SDI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = DNF
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = DAR
+				}
 			}
 		}
-		available = { 
-		KAS = { has_army_manpower  = { size < 99999 } }
+		available = {
+			OR = {
+				KAS = { has_army_manpower  = { size < 99999 } }
+				KAS = { is_puppet_of = EIK }
+			}
 		}
 		ai_will_do = {
 			factor = 1

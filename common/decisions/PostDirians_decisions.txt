@@ -1,3 +1,537 @@
+POST_DIRIANS_CORE_IT = {
+	dirians_core_265 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 265
+			}
+			NOT = { 265 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 265
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 265 }
+		}
+	}
+	dirians_core_267 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 267
+			}
+			NOT = { 267 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 267
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 267 }
+		}
+	}
+	dirians_core_307 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 307
+			}
+			NOT = { 307 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 307
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 307 }
+		}
+	}
+	dirians_core_270 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 270
+			}
+			NOT = { 270 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 270
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 270 }
+		}
+	}
+	dirians_core_271 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 271
+			}
+			NOT = { 271 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 271
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 271 }
+		}
+	}
+	dirians_core_272 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 272
+			}
+			NOT = { 272 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 272
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 272 }
+		}
+	}
+	dirians_core_275 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 275
+			}
+			NOT = { 275 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 275
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 275 }
+		}
+	}
+	dirians_core_276 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 276
+			}
+			NOT = { 276 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 276
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 276 }
+		}
+	}
+	dirians_core_277 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 277
+			}
+			NOT = { 277 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 277
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 277 }
+		}
+	}
+	dirians_core_278 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 278
+			}
+			NOT = { 278 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 278
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 278 }
+		}
+	}
+	dirians_core_279 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 279
+			}
+			NOT = { 279 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 279
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 279 }
+		}
+	}
+	dirians_core_280 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 280
+			}
+			NOT = { 280 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 280
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 280 }
+		}
+	}
+	dirians_core_281 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 281
+			}
+			NOT = { 281 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 281
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 281 }
+		}
+	}
+	dirians_core_282 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 282
+			}
+			NOT = { 282 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 282
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 282 }
+		}
+	}
+	dirians_core_283 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 283
+			}
+			NOT = { 283 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 283
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 283 }
+		}
+	}
+	dirians_core_284 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 284
+			}
+			NOT = { 284 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 284
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 284 }
+		}
+	}
+	dirians_core_305 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 305
+			}
+			NOT = { 305 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 305
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 305 }
+		}
+	}
+	dirians_core_306 = {
+		fire_only_once = no
+		cost = 25
+		visible = {
+			OR = {
+				original_tag = DAR
+				original_tag = DEM
+				original_tag = DIR
+				original_tag = DNF
+				original_tag = DIB
+				original_tag = SDI
+				original_tag = EMO
+				original_tag = EDC
+				original_tag = MOU
+				original_tag = FRE
+			}
+			OR = {
+				controls_state = 306
+				controls_state = 256
+				controls_state = 257
+				controls_state = 258
+				controls_state = 259
+				controls_state = 260
+				controls_state = 261
+				controls_state = 262
+				controls_state = 263
+				controls_state = 264
+				controls_state = 266
+				controls_state = 268
+				controls_state = 269
+				controls_state = 285
+				controls_state = 286
+				controls_state = 287
+				controls_state = 288
+				controls_state = 786
+				controls_state = 788
+				controls_state = 789
+				controls_state = 790
+				controls_state = 792
+				controls_state = 793
+				controls_state = 794
+				controls_state = 795
+				controls_state = 796
+				controls_state = 797
+				controls_state = 809
+			}
+			NOT = { 306 = { is_core_of = ROOT } }
+		}
+		available = {
+			controls_state = 306
+		}
+		complete_effect = {
+			ROOT = { add_state_core = 306 }
+		}
+	}
+}
+
 DAR_new_civil_war = {
 	DAR_war_with_MOU = {
 		fire_only_once = no
@@ -2286,6 +2820,7 @@ DIR_new_civil_war = {
 			NOT = { country_exists = DEM }
 			NOT = { country_exists = DAR }
 			NOT = { country_exists = EMO }
+			NOT = { has_idea = DIR_collapse }
 		}
 		available = {
 			has_war = no
@@ -2622,6 +3157,7 @@ DEM_new_civil_war = {
 			NOT = { country_exists = DIR }
 			NOT = { country_exists = DAR }
 			NOT = { country_exists = EMO }
+			NOT = { has_idea = DIR_collapse }
 		}
 		available = {
 			has_war = no

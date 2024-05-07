@@ -133,6 +133,58 @@ country_event = {
 	option = {
 		name = dsnr.6.a
 		hidden_effect = {
+			DIR = {
+				delete_units = {
+					division_template = "Dir motorized"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Dir motorized 2"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Tank-Division"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Tank-Division 2"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Mechanized Division"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Mechanized Division 2"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Communist Militia"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Communist Militia 2"
+					disband = yes
+				}
+			}
+			DEM = {
+				delete_units = {
+					division_template = "Dir motorized"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Tank-Division""
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Mechanized Division"
+					disband = yes
+				}
+				delete_units = {
+					division_template = "Democrat Militia 2"
+					disband = yes
+				}
+			}
 			DIR = { white_peace = DEM }
 			DIR = { white_peace = SDI }
 			DIR = { white_peace = BLJ }
@@ -254,5 +306,13 @@ country_event = {
 		DEM = { add_ideas = DIR_revolt_dop }
 		SDI = { add_ideas = DIR_revolt_dop }
 		DIB = { add_ideas = DIR_revolt_dop }
+			REK = {
+				every_state = {
+					limit = {is_core_of = REK}
+					teleport_armies = {
+						to_state = 790
+					}
+				}
+			}
 	}
 }

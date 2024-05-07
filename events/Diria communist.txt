@@ -948,6 +948,14 @@ country_event = {
 			FRE = { add_ideas = DIR_revolt_dop }
 			DIR = { add_ideas = DIR_revolt_dop }
 			DIB = { add_ideas = DIR_revolt_dop }
+			REK = {
+				every_state = {
+					limit = {is_core_of = REK}
+					teleport_armies = {
+						to_state = 790
+					}
+				}
+			}
 		}
 	}
 }

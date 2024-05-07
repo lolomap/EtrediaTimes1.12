@@ -93,7 +93,10 @@ focus_tree = {
 			add_stability = 0.05
 			add_war_support = 0.05
 			hidden_effect = {
-				country_event = { id = dirnews.6 days = 160 }
+				if = {
+					limit = { NOT = { has_idea = DIR_collapse } }
+					country_event = { id = dirnews.6 days = 160 }
+				}
 			}
 		}
 		ai_will_do = {
