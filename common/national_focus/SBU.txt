@@ -403,6 +403,9 @@ focus_tree = {
             RGY = {remove_from_sphere = yes}
             ELR = {remove_from_sphere = yes}
 		}
+		available = {
+			SFL = {has_government = democratic}
+		}
 		ai_will_do = {
 		factor = 70
 		}

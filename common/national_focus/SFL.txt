@@ -86,9 +86,9 @@ focus_tree = {
         prerequisite = {
             focus = SFL_exit_isolation
         }
-        #mutually_exclusive = {
-        #	focus = 
-        #}
+        mutually_exclusive = {
+        	focus = SFL_return_past
+        }
     
         completion_reward = {
             add_stability = 0.05
@@ -140,6 +140,8 @@ focus_tree = {
             hidden_effect = {
                 release_puppet_on_controlled = HLR
                 SZE = {transfer_state = 185}
+                SZE = {transfer_state = 167}
+                SZE = {transfer_state = 187}
             }
             set_autonomy = {
                 target = HLR
@@ -155,6 +157,7 @@ focus_tree = {
             }
             
             add_ideas = regionalism
+            mark_focus_tree_layout_dirty = yes
         }
     }
 
@@ -516,7 +519,7 @@ focus_tree = {
         y = 1
         relative_position_id = SFL_influence_MOF
         available = {}
-        bypass = {}
+        bypass = {MOF = {exists = no}}
         allow_branch = {}
         prerequisite = {
             focus = SFL_influence_MOF
@@ -564,6 +567,11 @@ focus_tree = {
                     min = 0
                 }
             }
+
+            if = {
+                limit = {MOF = {exists = no}}
+                add_political_power = 100
+            }
         }
     }
 
@@ -605,7 +613,7 @@ focus_tree = {
                 }
             }
         }
-        bypass = {}
+        bypass = {MOF = {exists = no}}
         allow_branch = {}
         prerequisite = {
             focus = SFL_cultural_connections
@@ -799,4 +807,268 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = SFL_return_past
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -8
+        y = 0
+        relative_position_id = SFL_past_present_future
+        prerequisite = {
+            focus = SFL_exit_isolation
+        }
+        mutually_exclusive = {
+            focus = SFL_past_present_future
+        }
+        completion_reward = {
+            add_war_support = 0.15
+            add_stability = -0.2
+            add_ideas = continuity_d
+        }
+    }
+
+    focus = {
+        id = SFL_invite_king
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_return_past
+        prerequisite = {
+            focus = SFL_return_past
+        }
+        completion_reward = {
+            add_country_leader_role = {
+                character = SFL_mikhaylo_philippovic
+                #promote_leader = yes
+                country_leader = {
+                    ideology = parlament_monarchism
+                    expire = "1965.1.1.1"   
+                    traits = { sfl_revanchism }
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = SFL_restore_monarchism
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_invite_king
+        prerequisite = {
+            focus = SFL_invite_king
+        }
+        completion_reward = {
+            if = {
+                limit = {SFL_mikhaylo_philippovic = {has_ideology = parlament_monarchism}}
+                promote_character = {
+                    character = SFL_mikhaylo_philippovic
+                    ideology = parlament_monarchism
+                }
+            }
+            else = {
+                promote_character = SFL_mikhaylo_philippovic
+            }
+        }
+    }
+
+    focus = {
+        id = SFL_historical_union
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = SFL_restore_monarchism
+        prerequisite = {
+            focus = SFL_restore_monarchism
+        }
+        mutually_exclusive = {
+            focus = SFL_great_safflia_course
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_great_safflia_course
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 1
+        y = 1
+        relative_position_id = SFL_restore_monarchism
+        prerequisite = {
+            focus = SFL_restore_monarchism
+        }
+        mutually_exclusive = {
+            focus = SFL_historical_union
+        }
+        completion_reward = {
+            SFL = {set_cosmetic_tag = GRT_SFL}
+            add_ideas = SFL_great_safflia_course
+        }
+    }
+
+    focus = {
+        id = SFL_invade_MOF
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = SFL_great_safflia_course
+        prerequisite = {
+            focus = SFL_great_safflia_course
+        }
+        
+        bypass = {
+            MOF = {exists = no}
+        }
+        will_lead_to_war_with = MOF
+        completion_reward = { 
+            create_wargoal = {
+				type = annex_everything
+				target = MOF
+			}
+        }
+    }
+
+    focus = {
+        id = SFL_RGY_protection
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_great_safflia_course
+        prerequisite = {
+            focus = SFL_great_safflia_course
+        }
+        bypass = {
+            RGY = {exists = no}
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    RGY = {is_subject = no}
+                }
+                RGY = {country_event = {id = rgy.5 days = 1}}
+            }
+            else = {
+                create_wargoal = {
+                    type = puppet_wargoal_focus
+                    target = RGY
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = SFL_loiman_question
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 2
+        relative_position_id = SFL_great_safflia_course
+        prerequisite = {
+            focus = SFL_invade_MOF
+        }
+        prerequisite = {
+            focus = SFL_RGY_protection
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_crash_gegemon
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_historical_union
+        prerequisite = {
+            focus = SFL_historical_union
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_no_life_without_crown
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_crash_gegemon
+        prerequisite = {
+            focus = SFL_crash_gegemon
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_elnia_question
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -2
+        y = 1
+        relative_position_id = SFL_crash_gegemon
+        prerequisite = {
+            focus = SFL_crash_gegemon
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_royal_coup
+        icon = GFX_goal_unknown
+        cost = 10
+        x = -1
+        y = 1
+        relative_position_id = SFL_no_life_without_crown
+        prerequisite = {
+            focus = SFL_no_life_without_crown
+        }
+        prerequisite = {
+            focus = SFL_elnia_question
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_two_countries_two_heads
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_royal_coup
+        prerequisite = {
+            focus = SFL_royal_coup
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_destroy_enemy
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 3
+        y = 1
+        relative_position_id = SFL_royal_coup
+        prerequisite = {
+            focus = SFL_royal_coup
+            focus = SFL_loiman_question
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SFL_regional_union
+        icon = GFX_goal_unknown
+        cost = 10
+        x = 0
+        y = 1
+        relative_position_id = SFL_destroy_enemy
+        prerequisite = {
+            focus = SFL_destroy_enemy
+        }
+        completion_reward = { }
+    }
 }

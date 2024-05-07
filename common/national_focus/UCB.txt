@@ -922,6 +922,9 @@ focus_tree = {
 		x = 35
 		y = 6
 
+		completion_reward = {
+			remove_ideas = UCB_corruption
+		}
 	}
 	focus = {
 		id = UCB_arms1
@@ -988,23 +991,23 @@ focus_tree = {
 		y = 9
 
 	}
-	focus = {
-		id = UCB_fasc_optimizy
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = UCB_arms2
-		}
-		x = 35
-		y = 9
+	# focus = {
+	# 	id = UCB_fasc_optimizy
+	# 	icon = GFX_goal_unknown
+	# 	cost = 10
+	# 	prerequisite = {
+	# 		focus = UCB_arms2
+	# 	}
+	# 	x = 35
+	# 	y = 9
 
-	}
+	# }
 	focus = {
 		id = UCB_fasc_doctrine
 		icon = GFX_goal_unknown
 		cost = 10
 		prerequisite = {
-			focus = UCB_fasc_optimizy
+			focus = UCB_arms2
 		}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1894,6 +1897,13 @@ focus_tree = {
 		x = 28
 		y = 7
 
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+
 	}
 	focus = {
 		id = UCB_fasc_sami
@@ -1906,7 +1916,7 @@ focus_tree = {
 			focus = UCB_fasc_IID_investors
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 150
 			add_stability = 0.08
 		}
 		x = 30
@@ -1920,8 +1930,42 @@ focus_tree = {
 		prerequisite = {
 			focus = UCB_fasc_IID_investors
 		}
+		available = {
+			FSC = {
+				has_opinion = {
+					target = ROOT
+					value > -1
+				}
+			}
+		}
+
+		bypass = {
+			NOT = {
+				country_exists = FSC
+				FSC = {owns_state = 44}
+				UCB = {owns_state = 31}
+			}
+		}
+
 		x = 28
 		y = 8
+
+		completion_reward = {
+			44 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			31 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1944,11 +1988,14 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = UCB_fasc_support_forbusines
-			focus = UCB_fasc_fsc_trade
+			focus = UCB_fasc_IID_investors
 		}
 		x = 29
 		y = 9
 
+		completion_reward = {
+			add_ideas = generic_electronics_concern
+		}
 	}
 	focus = {
 		id = UCB_fasc_factory2
@@ -2733,7 +2780,7 @@ focus_tree = {
                 limit = {TRP = {is_ai = yes}}
                 send_equipment = {
                     equipment = infantry_equipment
-                    amount = 350
+                    amount = 1000
                     target = TRP
                 }
                 puppet = TRP
@@ -2773,7 +2820,7 @@ focus_tree = {
     focus = {
 		id = UCB_fasc_OIK_friend_regime
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UCB_assental_pogrom
 		}
@@ -2781,6 +2828,9 @@ focus_tree = {
 		x = 52
 		y = 13
 
+		completion_reward = {
+			OIK = {UCB = {set_easy_sphere = yes}}
+		}
 	}
 
     focus = {

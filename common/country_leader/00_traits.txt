@@ -13,6 +13,12 @@
 ###Todo remove commented advisor experience gains
 
 leader_traits = {
+	sfl_revanchism = {
+		random = no
+
+		monarchism_drift = 0.02
+	}
+
 	dragan_kzhachich = {
 		random = no
 

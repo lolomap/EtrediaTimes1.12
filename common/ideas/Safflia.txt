@@ -271,11 +271,8 @@ ideas = {
 
 		modifier = {
 		    political_power_gain = 0.3
-		    stability_factor = 0.15
-		    war_support_factor = 0.15
-		    fascism_drift = 0.02
-		    neutrality_drift = 0.02
-		    monarchism_drift = 0.02
+		    war_support_factor = 0.1
+		    neutrality_drift = 0.01
 		}
 	}
 	
