@@ -887,7 +887,24 @@ focus_tree = {
         mutually_exclusive = {
             focus = SFL_great_safflia_course
         }
-        completion_reward = { }
+        completion_reward = {
+            every_country = {
+                limit = {
+                    OR = {
+                        original_tag = NER
+                        original_tag = MOF
+                        original_tag = TRB
+                        original_tag = HLR
+                        original_tag = SZE
+                        original_tag = ELN
+                        original_tag = SVT
+                        original_tag = RGY
+                    }
+                }
+
+                add_ideas = SFL_monarchist_union
+            }
+        }
     }
 
     focus = {
@@ -974,7 +991,43 @@ focus_tree = {
         prerequisite = {
             focus = SFL_RGY_protection
         }
-        completion_reward = { }
+
+        bypass = {
+            ELR = {exists = no}
+        }
+
+        available = {
+            if = {
+                limit = {ELR = {is_ai = no}}
+                hidden_trigger = {
+                    always = yes
+                }
+            }
+            else = {
+                has_war_support > 0.6
+            }
+        }
+
+        completion_reward = {
+            if = {
+                limit = {ELR = {is_ai = no}}
+                create_wargoal = {
+                    type = annex_everything
+                    target = ELR
+                }
+            }
+            else = {
+                annex_country = {
+                    target = ELR
+                }
+                ELR = {
+                    every_core_state = {
+                        remove_core_of = ELR
+                        add_core_of = MOF
+                    }
+                }
+            }
+        }
     }
 
     focus = {
@@ -987,7 +1040,42 @@ focus_tree = {
         prerequisite = {
             focus = SFL_historical_union
         }
-        completion_reward = { }
+
+        available = {
+            SBU = {
+                OR = {
+                    has_stability < 0.51
+                    has_war = yes
+                    democratic < 0.45
+                }
+            }
+        }
+
+        completion_reward = { 
+            SBU = {
+                every_core_state = {
+                    add_claim_by = SFL
+                }
+            }
+            HLR = {
+                SFL = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}
+			    transfer_state = 209
+				transfer_state = 210
+				transfer_state = 211
+				load_oob = HLE_miting
+				add_manpower = 50000
+	            declare_war_on = { target = SBU type = annex_everything }
+			}
+            SVT = {
+                SFL = {involve_sphere = yes custom_effect_tooltip = involve_to_sphere_tt}
+			    transfer_state = 206
+				transfer_state = 203
+				transfer_state = 207
+				load_oob = SVT_miting
+				add_manpower = 70000
+	            declare_war_on = { target = SBU type = annex_everything } 
+			}
+        }
     }
 
     focus = {
@@ -1000,7 +1088,9 @@ focus_tree = {
         prerequisite = {
             focus = SFL_crash_gegemon
         }
-        completion_reward = { }
+        completion_reward = {
+            custom_effect_tooltip = SFL_integrate_mon_union_unlock
+        }
     }
 
     focus = {
@@ -1013,7 +1103,9 @@ focus_tree = {
         prerequisite = {
             focus = SFL_crash_gegemon
         }
-        completion_reward = { }
+        completion_reward = {
+            
+        }
     }
 
     focus = {
@@ -1029,7 +1121,22 @@ focus_tree = {
         prerequisite = {
             focus = SFL_elnia_question
         }
-        completion_reward = { }
+        available = {
+            monarchism > 0.4
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = monarchism
+                popularity = 0.15
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
+            add_stability = -0.1
+            add_ideas = sforces_6
+            set_cosmetic_tag = SBU_monarchism
+        }
     }
 
     focus = {
@@ -1042,7 +1149,40 @@ focus_tree = {
         prerequisite = {
             focus = SFL_royal_coup
         }
-        completion_reward = { }
+
+        available = {
+            SBU = {is_subject_of = SFL}
+            MOF = {is_subject_of = SFL}
+            RGY = {is_subject_of = SFL}
+        }
+
+        completion_reward = {
+            every_state = {
+                limit = {
+                    is_core_of = SBU
+                    NOT = { is_owned_by = SBU }
+                }
+                transfer_state_to = SBU
+            }
+            SBU = {
+                annex_country = {
+                    target = RGY
+                    transfer_troops = yes
+                }
+                set_cosmetic_tag = SBU_ISH_autonomy
+            }
+            annex_country = {
+                target = MOF
+            }
+            create_wargoal = {
+                target = ELR
+                type = annex_everything
+            }
+            set_autonomy = {
+                target = SBU
+                autonomy_state = autonomy_wtt_imperial_subject
+            }
+        }
     }
 
     focus = {

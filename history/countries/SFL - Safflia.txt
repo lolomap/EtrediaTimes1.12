@@ -5,7 +5,7 @@ set_naval_oob = "SFL_2014_naval_legacy"
 
 set_research_slots = 3
 set_stability = 0.5
-set_war_support = 0.4
+set_war_support = 0.3
 
 add_ideas = {
         WWW_best_country

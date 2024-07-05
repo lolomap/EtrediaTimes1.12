@@ -187,6 +187,9 @@ UCB_bop_category = {
         }
 
         complete_effect = {
+            hidden_effect = {
+                add_command_power = -15
+            }
             every_possible_country = {
                 limit = {is_in_array = {UCB.minor_countries = THIS} NOT = {tag = KIM tag = KOL}}
                 add_to_variable = {var = UCB.sep_@THIS value = -0.18 tooltip = add_region_separatism_tooltip}
