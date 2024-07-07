@@ -754,3 +754,52 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = sfl.28
+    title = sfl.28.t
+    desc = sfl.28.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = sfl.28.a
+        trigger = {
+            OR = {
+                TRB = {is_subject_of = SFL}
+                NOT = {country_exists = TRB}
+            }
+        }
+
+        SBU = {
+            release = ELN
+        }
+        TRB = {
+            release = ELN
+        }
+        set_autonomy = {
+            target = ELN
+            autonomy_state = autonomy_wtt_imperial_subject
+        }
+    }
+
+    option = {
+        name = sfl.28.b
+        trigger = {
+            country_exists = TRB
+        }
+
+        ELN = {
+            every_core_state = {
+                transfer_state_to = TRB
+            }
+        }
+    }
+
+    option = {
+        name = sfl.28.c
+        SBU = {
+            release = ELN
+        }
+    }
+}

@@ -1103,8 +1103,21 @@ focus_tree = {
         prerequisite = {
             focus = SFL_crash_gegemon
         }
+        available = {
+            OR = {
+                country_exists = ELN
+                NOT = {country_exists = SBU}
+                SBU = {
+                        is_subject_of = SFL
+                }
+                AND = {
+                    country_exists = HLR
+                    country_exists = SVT
+                }
+            }
+        }
         completion_reward = {
-            
+            country_event = {id = sfl.28 days = 1}
         }
     }
 
@@ -1196,7 +1209,34 @@ focus_tree = {
             focus = SFL_royal_coup
             focus = SFL_loiman_question
         }
-        completion_reward = { }
+        bypass = {
+            OR = {
+                NOT = {country_exists = SBU}
+                SBU = {is_subject_of = SFL}
+            }
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    country_exists = HLR
+                    country_exists = SVT
+                    SBU = {
+                        NOT = {has_war_with = HLR}
+                        NOT = {has_war_with = SVT}
+                    }
+                }
+                annex_country = {
+                    target = SBU
+                    transfer_troops = no
+                }
+            }
+            else = {
+                create_wargoal = {
+                    target = SBU
+                    type = puppet_wargoal_focus
+                }
+            }
+        }
     }
 
     focus = {
@@ -1209,6 +1249,8 @@ focus_tree = {
         prerequisite = {
             focus = SFL_destroy_enemy
         }
-        completion_reward = { }
+        completion_reward = {
+            
+        }
     }
 }
