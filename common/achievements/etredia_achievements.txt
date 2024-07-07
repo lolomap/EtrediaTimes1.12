@@ -563,8 +563,12 @@ etredia_ach_38 = { #
 	happened = {
 		all_other_country = {
             OR = {
-                is_on_continent = africa
-                is_on_continent = north_america
+                capital_scope = {
+                    is_on_continent = africa
+                }
+                capital_scope = {
+                    is_on_continent = north_america
+                }
                 has_idea = SBU_high_sburska_zvezda
             }
         }

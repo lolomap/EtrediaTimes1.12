@@ -216,7 +216,7 @@
 			not = {
 				AND = {
 					is_ai = yes
-					is_historical_focus = yes
+					is_historical_focus_on = yes
 				}
 			}
 		}
@@ -233,7 +233,7 @@
 				not = {has_government = fascism}
 			}
 		}
-		is_good = no;
+		is_good = no
 		days_mission_timeout = 30
 		timeout_effect = {
 			country_event = {id = eik.14 days = 1}
@@ -262,7 +262,7 @@
 				has_country_leader_with_trait = Army_general
 			}
 		}
-		is_good = no;
+		is_good = no
 		days_mission_timeout = 30
 		timeout_effect = {
 			country_event = {id = eik.15 days = 1}
@@ -285,16 +285,6 @@ EIK_release_diria_minors = {
 		}
 
 		fire_only_once = yes
-		activation = {			
-		263 = { is_controlled_by = EIK }
-		264 = { is_controlled_by = EIK }
-		795 = { is_controlled_by = EIK }
-		796 = { is_controlled_by = EIK }
-		797 = { is_controlled_by = EIK }
-			NOV = {
-				exists = no
-			}
-		}
 
 		visible = {
 		263 = { is_controlled_by = EIK }
@@ -341,14 +331,6 @@ EIK_release_diria_minors = {
 		}
 
 		fire_only_once = yes
-		activation = {			
-		260 = { is_controlled_by = EIK }
-		256 = { is_controlled_by = EIK }
-		257 = { is_controlled_by = EIK }
-			BLJ = {
-				exists = no
-			}
-		}
 
 		visible = {
 		260 = { is_controlled_by = EIK }
@@ -392,17 +374,6 @@ EIK_release_diria_minors = {
 		}
 
 		fire_only_once = yes
-		activation = {			
-		269 = { is_controlled_by = EIK }
-		272 = { is_controlled_by = EIK }
-		270 = { is_controlled_by = EIK }
-		267 = { is_controlled_by = EIK }
-		268 = { is_controlled_by = EIK }
-		271 = { is_controlled_by = EIK }
-			FER = {
-				exists = no
-			}
-		}
 
 		visible = {
 		269 = { is_controlled_by = EIK }
@@ -450,12 +421,6 @@ EIK_release_diria_minors = {
 		}
 
 		fire_only_once = yes
-		activation = {			
-		307 = { is_controlled_by = EIK }
-			KRS = {
-				exists = no
-			}
-		}
 
 		visible = {
 		307 = { is_controlled_by = EIK }
@@ -467,7 +432,7 @@ EIK_release_diria_minors = {
 			KRS = {
                 transfer_state = 307
                 add_state_core = 307
-			    load_oob = _KRS
+			    #load_oob = _KRS ТАКОГО ФАЙЛА В ПАПКЕ НЕ БЫЛО!
             }
 		puppet = KRS
 		}
@@ -493,17 +458,6 @@ EIK_release_diria_minors = {
 		}
 
 		fire_only_once = yes
-		activation = {			
-		283 = { is_controlled_by = EIK }
-		288 = { is_controlled_by = EIK }
-		286 = { is_controlled_by = EIK }
-		287 = { is_controlled_by = EIK }
-		266 = { is_controlled_by = EIK }
-		285 = { is_controlled_by = EIK }
-			EDI = {
-				exists = no
-			}
-		}
 
 		visible = {
 		283 = { is_controlled_by = EIK }
@@ -566,13 +520,6 @@ EIK_release_diria_minors = {
 		}
 
 		fire_only_once = yes
-		activation = {			
-		280 = { is_controlled_by = EIK }
-		278 = { is_controlled_by = EIK }
-			ESD = {
-				exists = no
-			}
-		}
 
 		visible = {
 		280 = { is_controlled_by = EIK }

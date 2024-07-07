@@ -254,7 +254,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS value = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -265,7 +265,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS value = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -276,7 +276,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c2 = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS value = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -288,7 +288,7 @@ UCB_bop_category = {
                     set_temp_variable = {prev_c3 = THIS}
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS value = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
                 random_scope_in_array = {
@@ -300,7 +300,7 @@ UCB_bop_category = {
                     }
                     set_temp_variable = {temp = -0.15}
                     debuff_region_dem = yes
-                    add_to_variable = {var = UCB.sep_@THIS val = 0.3 tooltip = add_region_separatism_tooltip}
+                    add_to_variable = {var = UCB.sep_@THIS value = 0.3 tooltip = add_region_separatism_tooltip}
                     clamp_variable = {var = UCB.sep_@THIS max = 1}
                 }
             }
@@ -389,7 +389,7 @@ UCB_bop_category = {
             random_scope_in_array = {
                 array = minor_countries
                 set_temp_variable = {prev_c = THIS}
-                add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
+                add_to_variable = {var = UCB.sep_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
             random_scope_in_array = {
@@ -398,7 +398,7 @@ UCB_bop_category = {
                     NOT = {tag = var:prev_c}
                 }
                 set_temp_variable = {prev_c = THIS}
-                add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
+                add_to_variable = {var = UCB.sep_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
             random_scope_in_array = {
@@ -407,7 +407,7 @@ UCB_bop_category = {
                     NOT = {tag = var:prev_c}
                 }
                 set_temp_variable = {prev_c = THIS}
-                add_to_variable = {var = UCB.sep_@THIS val = 0.05 tooltip = add_region_opposition_tooltip}
+                add_to_variable = {var = UCB.sep_@THIS value = 0.05 tooltip = add_region_opposition_tooltip}
                 clamp_variable = {var = UCB.sep_@THIS max = 1}
             }
         }

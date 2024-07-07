@@ -15,13 +15,11 @@ SBU_sburska_zvezda_war = {
 					has_resources_amount = {
 						resource = steel
 						amount > 5
-						state = PREV
 					}
 				}
-				destroy_resource = {
+				add_resource = {
 					type = steel
-					amount = 6
-					state = PREV
+					amount = -6
 				}
 			}
 			add_ideas = SBU_arms_buy_from_sz_idea
@@ -66,9 +64,9 @@ SBU_sburska_zvezda_war = {
 				name = SZ_mtank 
 				type =  modern_tank_equipment_3
 				upgrades = { 
-				    reliability_upgrade = 3 
-				    engine_upgrade = 3 
-				    gun_upgrade = 1
+				    tank_reliability_upgrade = 3 
+				    tank_engine_upgrade = 3 
+				    tank_gun_upgrade = 1
 				}
 			}
 
@@ -756,7 +754,7 @@ SBU_ISH_rebellion = {
 
 SBU_trade_war = {
     SBU_blank = {
-        available = {custom_trigger_tooltip = {always = no}}
+        available = {custom_trigger_tooltip = {tooltip = blant_tt always = no}}
 
 		complete_effect = {
 		}

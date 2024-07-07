@@ -222,13 +222,6 @@ news_event = {
 
 	option = {
 		name = newss.6.a
-		NOT = {
-			TAG = SBU
-			TAG = UCB
-			TAG = VRO
-			TAG = SFL
-			TAG = FSC
-		}
 	}
 }
 

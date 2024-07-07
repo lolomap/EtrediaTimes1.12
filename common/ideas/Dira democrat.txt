@@ -226,10 +226,8 @@ ideas = {
 				always = no
 			}
 			cancel = {
-				if = {
+				OR = {
 					DEM = { has_war = no }
-				}
-				else_if = {
 					KAR = { has_idea = closed_entry }
 				}
 			}

@@ -42,8 +42,8 @@ country_event = {
     trigger = {
         TAG = DIR
         date > 2014.1.30
-        NOT = { has_goverment = neutrality }
-	    NOT = { has_goverment = democratic }
+        NOT = { has_government = neutrality }
+	    NOT = { has_government = democratic }
 	}
 
     option = {
@@ -395,7 +395,7 @@ country_event = {
 	option = {
 		name = dirnews.8.a
 		UCB = { country_event = { id = ucnb.15 days = 1 } }
-		add_ideas = { DIR_eik }
+		#add_ideas = { DIR_eik } Такого нац духа не существует и я не нашел того который мог бы тут быть
 		ai_chance = { 
 			factor = 0.9
 		}

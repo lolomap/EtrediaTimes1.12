@@ -731,7 +731,7 @@ GKZ_moment = {
 
 					add_state_core = 54
 					add_state_core = 58
-					available = 57 
+					add_state_core = 57 
 				}
 				puppet = KPA
 				KPA = {

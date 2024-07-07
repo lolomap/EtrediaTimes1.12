@@ -42,7 +42,7 @@ crysis_startable = {
     threat > 0.04
 
     if = {
-        limit = {NOT = {has_global_flag = CRYSIS_ALLOWED}}}
+        limit = {NOT = {has_global_flag = CRYSIS_ALLOWED}}
         has_game_rule = {
             rule = allow_crysis
             option = FREE

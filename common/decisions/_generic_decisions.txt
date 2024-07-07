@@ -524,11 +524,12 @@ war_time_decisions = {
 		}
 
 		complete_effect = {
+			hidden_effect = {
+				add_command_power = -40
+			}
 			add_to_variable = {var = wtire value = -10 tooltip = wtire_boost}
 		}
-		hidden_effect = {
-			add_command_power = -40
-		}
+		
 
 		ai_will_do = {
 			base = 0.5
@@ -581,10 +582,11 @@ war_time_decisions = {
 
 		complete_effect = {
 			add_to_variable = {var = wtire value = -5 tooltip = wtire_boost}
+			hidden_effect = {
+				add_command_power = -20
+			}
 		}
-		hidden_effect = {
-			add_command_power = -20
-		}
+		
 
 		ai_will_do = {
 			base = 0.5
@@ -1108,10 +1110,6 @@ foreign_support = {
 
 		cost = 0
 
-		modifier = {
-
-		}
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1278,10 +1276,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -1455,10 +1449,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -1639,10 +1629,6 @@ foreign_support = {
 
 		cost = 0
 
-		modifier = {
-
-		}
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1796,10 +1782,6 @@ foreign_support = {
 
  		cost = 0
 
- 		modifier = {
-
- 		}
-
  		ai_will_do = {
  			factor = 1
 			modifier = {
@@ -1937,10 +1919,6 @@ foreign_support = {
  		fire_only_once = no
 
  		cost = 0
-
- 		modifier = {
-
- 		}
 
  		ai_will_do = {
  			factor = 1
@@ -2096,10 +2074,6 @@ foreign_support = {
 		fire_only_once = no
 
 		cost = 0
-
-		modifier = {
-
-		}
 
 		ai_will_do = {
 			factor = 1

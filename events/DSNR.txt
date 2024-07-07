@@ -62,7 +62,7 @@ country_event = {
 	option = {
 		name = dsnr.2.a
 		add_stability = 0.1
-		add_war_support  0.1
+		add_war_support = 0.1
 		add_political_power = 50
 	}
 }
@@ -97,7 +97,7 @@ country_event = {
 	option = {
 		name = dsnr.4.a
 		add_stability = 0.1
-		add_war_support  0.1
+		add_war_support = 0.1
 		add_political_power = 50
 	}
 }
@@ -173,7 +173,7 @@ country_event = {
 					disband = yes
 				}
 				delete_units = {
-					division_template = "Tank-Division""
+					division_template = "Tank-Division"
 					disband = yes
 				}
 				delete_units = {
@@ -237,8 +237,11 @@ country_event = {
 			add_state_core = 288
 			add_state_core = 286
 			add_state_core = 287
-			promote_character = {
-				character = EMO_Detskitch_Pukesch
+			#promote_character = {
+			#	character = EMO_Detskitch_Pukesch
+			#}
+			EMO_Detskitch_Pukesch = {
+				promote_character = yes
 			}
 		}
 		EDC = {
@@ -306,13 +309,13 @@ country_event = {
 		DEM = { add_ideas = DIR_revolt_dop }
 		SDI = { add_ideas = DIR_revolt_dop }
 		DIB = { add_ideas = DIR_revolt_dop }
-			REK = {
-				every_state = {
-					limit = {is_core_of = REK}
-					teleport_armies = {
-						to_state = 790
-					}
+		REK = {
+			every_state = {
+				limit = {is_core_of = REK}
+				teleport_armies = {
+					to_state = 790
 				}
 			}
+		}
 	}
 }

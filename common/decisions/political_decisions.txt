@@ -380,10 +380,6 @@ fascism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_fascism = yes
 		}
 		
-		remove_trigger = {
-			has_government = fascism
-		}
-		
 		fire_only_once = yes
 		
 		cost = 75
@@ -413,10 +409,6 @@ fascism_on_the_rise = {
 			has_country_flag = open_up_political_discourse_fascism
 			NOT = { has_government = fascism }
 			check_has_focus_tree_to_switch_to_fascism = yes
-		}
-		
-		remove_trigger = {
-			has_government = fascism
 		}
 		
 		fire_only_once = yes
@@ -476,9 +468,6 @@ fascism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_fascism = yes
 		}
 		
-		remove_trigger = {
-			has_government = fascism
-		}
 		
 		fire_only_once = yes
 		
@@ -879,10 +868,6 @@ democratic_on_the_rise = {
 			check_has_focus_tree_to_switch_to_democratic = yes
 		}
 		
-		remove_trigger = {
-			has_government = democratic
-		}
-		
 		fire_only_once = yes
 		
 		cost = 75
@@ -914,9 +899,6 @@ democratic_on_the_rise = {
 			check_has_focus_tree_to_switch_to_democratic = yes
 		}
 		
-		remove_trigger = {
-			has_government = democratic
-		}
 		
 		fire_only_once = yes
 		
@@ -975,9 +957,6 @@ democratic_on_the_rise = {
 			check_has_focus_tree_to_switch_to_democratic = yes
 		}
 		
-		remove_trigger = {
-			has_government = democratic
-		}
 		
 		fire_only_once = yes
 		
@@ -1378,9 +1357,6 @@ communism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_communism = yes
 		}
 		
-		remove_trigger = {
-			has_government = communism
-		}
 		
 		fire_only_once = yes
 		
@@ -1413,9 +1389,6 @@ communism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_communism = yes
 		}
 		
-		remove_trigger = {
-			has_government = communism
-		}
 		
 		fire_only_once = yes
 		
@@ -1474,9 +1447,6 @@ communism_on_the_rise = {
 			check_has_focus_tree_to_switch_to_communism = yes
 		}
 		
-		remove_trigger = {
-			has_government = communism
-		}
 		
 		fire_only_once = yes
 		
@@ -1497,105 +1467,6 @@ communism_on_the_rise = {
 }
 
 political_actions = {
-	give_refuge_ger = {
-
-		icon = generic_research
-
-        allowed = {
-            OR = {
-                original_tag = ENG
-                original_tag = USA
-                original_tag = FRA
-                original_tag = CAN
-            }
-        }
-
-	visible = {
-            NOT = { has_government = fascism }
-            NOT = { has_government = communism }
-	}
-
-        cost = 100
-        fire_only_once = yes
-        
-        days_remove = -1
-
-        available = {
-            GER = { NOT = { has_government = ROOT } }
-        }
-
-        modifier = {
-            research_speed_factor = 0.05
-            stability_factor = -0.05
-        }
-
-        remove_trigger = {
-            OR = {
-                GER = { has_government = ROOT }
-                AND = {
-                    country_exists = WGR
-                    WGR = { has_government = ROOT }
-                }
-                AND = {
-                    country_exists = DDR
-                    DDR = { has_government = ROOT }
-                }
-            }
-        }
-
-        ai_will_do = {
-			factor = 1
-			modifier = {
-				tag = ENG
-				has_War = no
-				date < 1937.3.1
-				factor = 0
-			}
-		}
-    }
-    give_refuge_ita = {
-
-    	icon = generic_research
-
-        allowed = {
-            OR = {
-                original_tag = ENG
-                original_tag = USA
-                original_tag = FRA
-                original_tag = CAN
-            }
-	}
-
-	visible = {
-            NOT = { has_government = fascism }
-            NOT = { has_government = communism }
-        }
-        cost = 100
-        fire_only_once = yes
-        days_remove = -1
-
-        available = {
-            ITA = { NOT = { has_government = ROOT } }
-        }
-
-        modifier = {
-            research_speed_factor = 0.05
-            stability_factor = -0.05
-        }
-
-        remove_trigger = {
-            ITA = { has_government = ROOT }
-        }
-        ai_will_do = {
-			factor = 1
-			modifier = {
-				tag = ENG
-				has_War = no
-				date < 1937.3.1
-				factor = 0
-			}
-		}
-    }
 
     anti_fascist_raids = {
 
@@ -1626,24 +1497,6 @@ political_actions = {
 		
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 1
-				tag = AUS
-				fascism > 0.45
-				is_historical_focus_on = no
-			}
-			modifier = {
-				add = 10
-				tag = AUS
-				fascism > 0.45
-				GER = { has_completed_focus = GER_reestablish_free_elections }
-			}
-			modifier = {
-				add = 10
-				tag = AUS
-				fascism > 0.45
-				has_completed_focus = liberty_ethos
-			}
 		}
     }
 

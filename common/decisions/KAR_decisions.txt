@@ -17,7 +17,7 @@ KAR_dirian_civil_war = {
 		
 		complete_effect = {
 			DEM = {
-				country_event = { id = demnews.16 days = 1 }
+				country_event = { id = dirnews.16 days = 1 }
 			}
 			KAR = { 
 				add_equipment_to_stockpile = {
@@ -84,7 +84,7 @@ KAR_dirian_civil_war = {
 		
 		complete_effect = {
 			DEM = {
-				country_event = { id = demnews.17 days = 1 }
+				country_event = { id = dirnews.17 days = 1 }
 			}
 			KAR = { 
 				add_equipment_to_stockpile = {
@@ -137,7 +137,7 @@ KAR_dirian_civil_war = {
 		}
 		
 		complete_effect = {
-			custom_effect_tooltip = { kar_political_support_tooltip }
+			custom_effect_tooltip = kar_political_support_tooltip
 			hidden_effect = {
 				DEM = {
 					country_event = { id = dirnews.18 days = 1 }

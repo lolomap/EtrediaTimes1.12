@@ -88,15 +88,15 @@ ucbminors_decisions = {
 		    }
 			modifier = {
 	            factor = 10
-		        ruling_party = fascism
+		        has_government  = fascism
 		    }
 			modifier = {
 	            factor = 10
-		        ruling_party = neutrality
+		        has_government = neutrality
 		    }
 			modifier = {
 	            factor = 10
-		        ruling_party = monarchism
+		        has_government = monarchism
 		    }
 		}
 	}
@@ -237,11 +237,6 @@ IND_decisions = {
 		
 		fire_only_once = no
 		
-		activation = {			
-		10 = { NOT = { is_owned_and_controlled_by = IND } }
-		7 = { NOT = { is_owned_and_controlled_by = IND } }
-		}
-		
 		available = {
 		10 = { NOT = { is_owned_and_controlled_by = IND } }
 		7 = { NOT = { is_owned_and_controlled_by = IND } }
@@ -281,11 +276,6 @@ ARS_decisions = {
 	    icon = generic_nationalism
 		
 		fire_only_once = no
-		
-		activation = {			
-		9 = { NOT = { is_owned_and_controlled_by = ARS } }
-		7 = { NOT = { is_owned_and_controlled_by = ARS } }
-		}
 		
 		available = {
 		9 = { NOT = { is_owned_and_controlled_by = ARS } }

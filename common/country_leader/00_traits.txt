@@ -480,19 +480,6 @@ leader_traits = {
 #ai_focus_naval_air_factor
 #ai_focus_aviation_factor
 
-	dislikes_germany = {
-		random = no
-		ai_strategy = {
-			type = antagonize
-			id = "GER"
-			value = 200
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tenacious_defender = {
 		random = no
 
@@ -1316,19 +1303,6 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.05
 		justify_war_goal_time = -0.15
-	}
-
-	likes_turkey = {
-		random = no
-		ai_strategy = {
-			type = befriend
-			id = "TUR"
-			value = 50
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
 	}
 
 	archon_basileus = {
