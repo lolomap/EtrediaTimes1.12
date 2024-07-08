@@ -1,6 +1,36 @@
 spriteTypes = {
 
 SpriteType = {
+	name = "GFX_goal_sfl_restore_monarchism"
+	texturefile="gfx/interface/goals/goal_sfl_restore_monarchism.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_invite_king"
+	texturefile="gfx/interface/goals/goal_sfl_invite_king.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_return_past"
+	texturefile="gfx/interface/goals/goal_sfl_return_past.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_great_safflia_course"
+	texturefile="gfx/interface/goals/goal_sfl_great_safflia_course.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_goal_sfl_great_safflia_course"
+	texturefile="gfx/interface/goals/goal_sfl_great_safflia_course.dds"
+}
+
+
+SpriteType = {
 	name = "GFX_goal_UCB_destroy_dem"
 	texturefile="gfx/interface/goals/goal_UCB_destroy_dem.dds"
 }
