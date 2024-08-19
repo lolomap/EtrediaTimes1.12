@@ -4,6 +4,45 @@ on_actions = {
         effect = {
             if = {
                 limit = {
+                    has_idea = SBU_little_sburska_zvezda
+                    NOT = {has_country_flag = little_sz_counted}
+                }
+
+                SBU = {add_to_variable = {sz_influence_count = 0.1}}
+                set_country_flag = little_sz_counted
+            }
+            if = {
+                limit = {
+                    has_idea = SBU_medium_sburska_zvezda
+                    NOT = {has_country_flag = medium_sz_counted}
+                }
+
+                SBU = {add_to_variable = {sz_influence_count = 0.1}}
+                set_country_flag = medium_sz_counted
+            }
+            if = {
+                limit = {
+                    has_idea = SBU_high_sburska_zvezda
+                    NOT = {has_country_flag = high_sz_counted}
+                }
+
+                SBU = {add_to_variable = {sz_influence_count = 0.2}}
+                set_country_flag = high_sz_counted
+            }
+            if = {
+                limit = {
+                    tag = SBU
+                    has_idea = SBU_siburian_star
+                    check_variable = {sz_influence_count > 0}
+                    NOT = {has_dynamic_modifier = {modifier = sz_influence}}
+                }
+                add_dynamic_modifier = {
+                    modifier = sz_influence
+                }
+            }
+
+            if = {
+                limit = {
                     check_variable = {world_influence > 5}
                     NOT = {has_idea = wi_trade_influence}
                 }

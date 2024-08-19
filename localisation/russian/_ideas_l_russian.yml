@@ -385,6 +385,7 @@
  SBU_medium_sburska_zvezda:0 "Среднее влияние Sburska Zvezda"
  SBU_high_sburska_zvezda:0 "Сильное влияние Sburska Zvezda"
  sz_bonus: "Мощности Sburska Zvezda"
+ sz_influence: "Мировое влияние SZ"
  SZ_debuff: "Эксплуатация от Sburska Zvezda"
  SBU_pyatiletka:0 "Годовой план"
  SBU_militarism:0 "Сибурский милитаризм"
