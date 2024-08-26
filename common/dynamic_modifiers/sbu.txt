@@ -4,3 +4,8 @@ sz_bonus = {
     production_factory_efficiency_gain_factor = sz_eff_bonus
     industrial_capacity_factory = sz_cap_bonus
 }
+
+sz_influence = {
+	icon = siburian_zvezda
+	political_power_gain = sz_influence_count
+}
