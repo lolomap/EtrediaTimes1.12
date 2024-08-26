@@ -132,6 +132,14 @@ fascism_on_the_rise = {
 	}
 }
 
+neutrality_on_the_rise = {
+	icon = generic_fascism
+	
+	visible = {
+        NOT = {has_variable = ideology_protection}
+	}
+}
+
 democratic_on_the_rise = {
 	icon = generic_democracy
 
