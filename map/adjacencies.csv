@@ -234,6 +234,26 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 7672;7853;impassable;-1;-1;-1;-1;-1;;gy
 7798;7853;impassable;-1;-1;-1;-1;-1;;gy
 
+10348;10198;impassable;-1;-1;-1;-1;-1;;yotsfield
+10360;10198;impassable;-1;-1;-1;-1;-1;;yotsfield
+10360;10347;impassable;-1;-1;-1;-1;-1;;yotsfield
+10539;10347;impassable;-1;-1;-1;-1;-1;;yotsfield
+10539;10525;impassable;-1;-1;-1;-1;-1;;yotsfield
+10637;10507;impassable;-1;-1;-1;-1;-1;;brul
+10637;10524;impassable;-1;-1;-1;-1;-1;;brul
+10637;10695;impassable;-1;-1;-1;-1;-1;;brul
+10757;10695;impassable;-1;-1;-1;-1;-1;;brul
+10757;10842;impassable;-1;-1;-1;-1;-1;;brul
+10757;10895;impassable;-1;-1;-1;-1;-1;;brul
+10718;10895;impassable;-1;-1;-1;-1;-1;;brul
+10718;10963;impassable;-1;-1;-1;-1;-1;;brul
+9929;9915;impassable;-1;-1;-1;-1;-1;;grossdorp
+10033;9915;impassable;-1;-1;-1;-1;-1;;grossdorp
+10105;9915;impassable;-1;-1;-1;-1;-1;;grossdorp
+10105;9950;impassable;-1;-1;-1;-1;-1;;grossdorp
+10120;9950;impassable;-1;-1;-1;-1;-1;;grossdorp
+10120;9960;impassable;-1;-1;-1;-1;-1;;grossdorp
+
 7870;7727;impassable;-1;-1;-1;-1;-1;;diria
 7870;7689;impassable;-1;-1;-1;-1;-1;;diria
 7870;7771;impassable;-1;-1;-1;-1;-1;;diria

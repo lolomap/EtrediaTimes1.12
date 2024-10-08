@@ -31,7 +31,7 @@ characters={
 		name=HOR_Anoopjot_Jondah
 		portraits={
 			civilian={
-				large="GFX_Portrait_europe_generic_7"
+				large="gfx/leaders/HOR/portrait_hor_neutrality_1.dds"
 			}
 		}
 		country_leader={
@@ -52,19 +52,6 @@ characters={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=stalinism
 			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	HOR_bob_wilson={
-		name=HOR_Bob_Wilson
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			expire="2023.1.1.12"
 			id=-1
 		}
 	}

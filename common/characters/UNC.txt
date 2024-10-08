@@ -31,13 +31,13 @@ characters={
 		name=UNC_Amanjeevan_Malhah
 		portraits={
 			civilian={
-				large="GFX_Portrait_Europe_Generic_3"
+				large="gfx/leaders/UNC/portrait_UNC_monarchism_1.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
-			expire="1965.1.1.1"
+			ideology=absolutism
+			expire="2045.1.1.1"
 			id=-1
 		}
 	}
@@ -110,19 +110,6 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 			legacy_id=-1
-		}
-	}
-	UNC_lucas_williams={
-		name=UNC_Lucas_Williams
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			expire="2023.1.1.12"
-			id=-1
 		}
 	}
 }

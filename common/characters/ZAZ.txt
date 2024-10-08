@@ -3,33 +3,13 @@ characters={
 		name=ZAZ_Baki_Kalhoro
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_8"
+				large="gfx/leaders/ZAZ/portrait_zaz_demcoratic_1.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
 			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	ZAZ_kamel_rimitti={
-		name=ZAZ_Kamel_Rimitti
-		portraits={
-			civilian={
-				large="GFX_Portrait_Europe_Generic_3"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
-			expire="1965.1.1.1"
+			expire="2024.1.1.1"
 			id=-1
 		}
 	}
@@ -37,7 +17,7 @@ characters={
 		name=ZAZ_Nasrallah_Chagatai
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_8"
+				large="gfx/leaders/ZAZ/portrait_zaz_communism_1.dds"
 			}
 		}
 		country_leader={

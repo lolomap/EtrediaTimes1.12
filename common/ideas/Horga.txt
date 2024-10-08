@@ -1,0 +1,17 @@
+ideas = {
+    country = {	
+		HOR_no_to_kings = {
+            picture = fff
+			allowed = {
+				always = no
+			}	
+			removal_cost = -1
+	
+			modifier = {
+				monarchism_drift = -0.05
+				communism_drift = 0.03
+				democratic_drift = 0.03
+			}
+       }
+	}
+}

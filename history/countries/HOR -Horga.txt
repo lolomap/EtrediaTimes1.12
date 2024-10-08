@@ -10,8 +10,9 @@ add_ideas = {
         WWW_bad_country
         total_nonfree_press
 	fifth_corruption_level
-    sforces_1
+    sforces_2
 	socials_0
+	HOR_no_to_kings
 }
 
 set_technology = {basic_train = 1
@@ -43,8 +44,6 @@ set_popularities = {
 
 set_convoys = 0
 
-
-recruit_character = HOR_bob_brown
 
 recruit_character = HOR_kaliq_salem
 

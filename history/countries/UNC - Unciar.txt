@@ -9,8 +9,11 @@ set_war_support = 0.7
 add_ideas = {
         WWW_bad_country
         nonfree_press
-	fifth_corruption_level
-    sforces_3
+		fifth_corruption_level
+		sforces_3
+		socials_1
+		UNC_locked_in_the_mainland
+		UNC_royal_army
 }
 
 set_autonomy = {

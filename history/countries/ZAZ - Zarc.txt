@@ -54,13 +54,9 @@ set_popularities = {
 set_convoys = 0
 
 
-recruit_character = ZAZ_peter_jones
-
 recruit_character = ZAZ_shahyar_qureshi
 
 recruit_character = ZAZ_nasrallah_chagatai
-
-recruit_character = ZAZ_kamel_rimitti
 
 recruit_character = ZAZ_baki_kalhoro
 
