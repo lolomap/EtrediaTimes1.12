@@ -2367,7 +2367,7 @@ focus_tree = {
 		available = {
 			tag = SBU
 			has_country_leader = {
-				name = "Iret Kolert"
+				character = SBU_Iret_Kolert
 				ruling_only = yes
 			}
             if = {

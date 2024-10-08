@@ -1411,3 +1411,57 @@ country_event = {
 		}
 	}
 }
+
+# political.29 neutrality
+
+country_event = {
+	id = political.29
+	title = political.29.t
+	desc = political.29.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	#trigger = {
+	#	neutrality > 0.5
+	#	NOT = { has_government = neutrality }
+	#	NOT = { has_idea = fascist_revolutionaries }
+	#	NOT = { has_idea = reign_of_terror }
+	#	is_puppet = no
+	#	has_civil_war = no
+	#}
+
+	#mean_time_to_happen = {
+	#	days = 30
+	#}
+
+	#option = {
+	#	name = political.29.a
+	#	add_political_power = -100
+	#	add_popularity = {
+	#		ideology = neutrality
+	#		popularity = -0.10
+	#	}
+	#	add_timed_idea = {
+	#		idea = fascist_revolutionaries
+	#		days = 365
+	#	}
+	#}
+
+	#option = {
+	#	name = political.29.b
+	#	add_timed_idea = {
+	#		idea = fascist_revolutionaries
+	#		days = 365
+	#	}
+	#}
+
+	option = {
+		name = political.29.c
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		add_stability = -0.05
+	}
+}
