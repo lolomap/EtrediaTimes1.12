@@ -31,12 +31,12 @@ characters={
 		name=GAR_Roshan_Dall
 		portraits={
 			civilian={
-				large="GFX_Portrait_Europe_Generic_3"
+				large="gfx/leaders/GAR/portrait_gar_monarchism_1.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
+			ideology=absolutism
 			expire="1.1.1.1"
 			id=-1
 		}

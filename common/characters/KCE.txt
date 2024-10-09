@@ -17,7 +17,7 @@ characters={
 		name=KCE_Qaqambile_Ngxanga
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_8"
+				large="gfx/leaders/KCE/portrait_kce_fascism_1.dds"
 			}
 		}
 		country_leader={
@@ -91,20 +91,6 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=-1
-		}
-	}
-	KCE_jim_smith={
-		name=KCE_Jim_Smith
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			traits={ financial_expert silent_workhorse }
-			expire="2027.1.1.12"
-			id=-1
 		}
 	}
 }

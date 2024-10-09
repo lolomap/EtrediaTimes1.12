@@ -17,7 +17,7 @@ characters={
 		name=BSH_Choedon_Wangpo
 		portraits={
 			civilian={
-				large="GFX_Portrait_Europe_Generic_3"
+				large="gfx/leaders/BSH/portrait_bsh_fascism_1.dds"
 			}
 		}
 		country_leader={

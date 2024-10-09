@@ -31,13 +31,13 @@ characters={
 		name=SOL_Askarbek_Sabirov
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_6"
+				large="gfx/leaders/SOL/portrait_sol_neutrality_1.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
-			expire="1965.1.1.1"
+			ideology=conservatism
+			expire="2034.1.1.1"
 			id=-1
 		}
 	}

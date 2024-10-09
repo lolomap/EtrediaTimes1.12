@@ -9,6 +9,8 @@ set_war_support = 0.5
 add_ideas = {
         WWW_medium_country
         free_press
+		ZAZ_beacon_of_hope
+		ZAZ_awful_military
 }
 
 set_autonomy = {

@@ -3,32 +3,12 @@ characters={
 		name=LOD_Ndothusile_Sikali
 		portraits={
 			civilian={
-				large="GFX_Portrait_Europe_Generic_2"
+				large="gfx/leaders/LOD/portrait_lod_democratic_1.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOH_ZAHIR_SHAH_DESC"
 			ideology=liberalism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	LOD_kamel_rimitti={
-		name=LOD_Kamel_Rimitti
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_4"
-			}
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-			ideology=oligarchism
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -44,20 +24,6 @@ characters={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=stalinism
 			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	LOD_alex_taylor={
-		name=LOD_Alex_Taylor
-		portraits={
-			civilian={
-				large="GFX_portrait_unknown"
-			}
-		}
-		country_leader={
-			ideology=teocracy
-			traits={ armaments_organizer appeaser }
-			expire="2025.1.1.12"
 			id=-1
 		}
 	}
