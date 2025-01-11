@@ -2,27 +2,29 @@
 state={
 	id=640
 	name="STATE_640"
-	manpower = 4580000
-	
-	state_category = rural
-	
 	resources={
-        chromium = 4 # was: 4
+		chromium=4.000
 	}
 
 	history={
 		owner = GAR
 		buildings = {
 			infrastructure = 1
-                        industrial_complex = 1
+			industrial_complex = 1
+
 		}
 		add_core_of = GAR
 		victory_points = {
-			5035 5
+			5418 5 
 		}
 
 	}
+
 	provinces={
-		4707 4728 4779 4780 4813 5035 5066 5087 5107 5214 5289 5313 5418 5584 5595 5634 
+		4457 4525 4707 4779 4780 4813 5035 5066 5087 5107 5214 5289 5313 5418 5584 5595 5634 
 	}
+	manpower=4580000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

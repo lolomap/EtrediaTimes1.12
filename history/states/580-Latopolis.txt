@@ -2,27 +2,29 @@
 state={
 	id=580
 	name="STATE_580"
-	manpower = 1340000
-	
-	state_category = rural
-	
 	resources={
-		steel = 4 # was: 6
+		steel=4.000
 	}
 
 	history={
 		owner = ZHE
 		buildings = {
 			infrastructure = 2
-                        industrial_complex = 1
+			industrial_complex = 1
+
 		}
 		add_core_of = ZHE
 		victory_points = {
-			3698 1
+			3623 1 
 		}
 
 	}
+
 	provinces={
-		3507 3525 3556 3576 3584 3585 3617 3623 3651 3698 3699 3765 
+		3507 3525 3556 3576 3584 3585 3617 3623 3651 
 	}
+	manpower=1340000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

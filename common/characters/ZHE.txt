@@ -31,7 +31,7 @@ characters={
 		name=ZHE_Braydon_Godfredo_Dinguinbayan_Caparas
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_5"
+				large="gfx/leaders/ZHE/portrait_zhe_neutrality_1.dds"
 			}
 		}
 		country_leader={

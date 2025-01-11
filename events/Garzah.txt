@@ -1,0 +1,61 @@
+add_namespace = gar
+
+country_event = {
+	id = gar.1
+	title = gar.1.t
+	desc = gar.1.d
+	picture = GFX_news_event
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = GAR
+    }
+    	
+	option = {
+    name = gar.1.a
+		trigger = { TAG = GAR }
+		add_political_power = 100
+		army_experience = 25
+		GAR = {
+			transfer_state = 811
+		}
+	}
+	option = {
+    name = gar.1.b
+		trigger = { TAG = UNC }
+		add_political_power = -150
+		add_stability = -0.15
+		add_war_support = -0.15
+		army_experience = 10
+	}
+}
+country_event = {
+	id = gar.2
+	title = gar.2.t
+	desc = gar.2.d
+	picture = GFX_news_event
+	
+    is_triggered_only = yes
+
+	trigger = {
+        TAG = GAR
+    }
+    	
+	option = {
+    name = gar.2.a
+		trigger = { TAG = GAR }
+		add_political_power = -50
+		add_stability = -0.05
+		add_war_support = -0.05
+		army_experience = 10
+	}
+	option = {
+    name = gar.2.b
+		trigger = { TAG = UNC }
+		add_political_power = 100
+		army_experience = 25
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}

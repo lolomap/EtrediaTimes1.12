@@ -2,6 +2,7 @@
 state={
 	id=588
 	name="STATE_588"
+
 	history={
 		owner = ZHE
 		buildings = {
@@ -15,10 +16,12 @@ state={
 		}
 
 	}
+
 	provinces={
-		3484 3512 3530 3544 3552 3566 3572 3609 3618 3629 3630 3636 3655 3665 3681 3695 3718 3741 3780 3785 
+		3484 3512 3530 3543 3544 3552 3566 3572 3609 3618 3629 3630 3636 3642 3655 3665 3681 3686 3694 3695 3718 3741 3785 
 	}
 	manpower=2840000
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

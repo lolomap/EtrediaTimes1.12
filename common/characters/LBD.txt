@@ -31,12 +31,18 @@ characters={
 		name=LBD_Zulkarnain_bin_Dumadi
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_5"
+				large=""gfx/leaders/LBD/portrait_lbd_neutrality_1.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
 			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=liberalism
 			expire="1965.1.1.1"
 			id=-1
 		}

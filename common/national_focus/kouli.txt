@@ -577,7 +577,7 @@ focus_tree = {
 			focus = KLU_west_integration
 		}
 		available = {
-		NOT = { has_war_with = ZAZ }
+			NOT = { has_war_with = ZAZ }
 		}
 		cancel_if_invalid = yes
 		x = 12
@@ -588,8 +588,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-			ZHE = { NOT = { has_war_with = CHE } }
-			factor = -5
+				ZHE = { NOT = { has_war_with = CHE } }
+				factor = -1
+			}
+			modifier = {
+				date > 2020.1.1
+				factor = 1
+			}
+			modifier = {
+				date > 2021.1.1
+				factor = 2
+			}
+			modifier = {
+				date > 2022.1.1
+				factor = 4
 			}
 		}
 	}

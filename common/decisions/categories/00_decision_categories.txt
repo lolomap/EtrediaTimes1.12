@@ -46,6 +46,11 @@ DIB_dirian_civil_war = {
 		original_tag = DIB
 	}
 }
+GAR_external_politics = {
+	allowed = {
+		original_tag = GAR
+	}
+}
 
 DEM_new_civil_war = {
 	allowed = {

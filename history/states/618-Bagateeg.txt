@@ -20,6 +20,7 @@ state={
 			}
 		}
 		add_core_of = KLU
+		add_claim_by = HOR
 		victory_points = {
 			5176 15
 		}

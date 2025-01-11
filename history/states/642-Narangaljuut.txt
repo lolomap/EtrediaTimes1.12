@@ -8,6 +8,7 @@ state={
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+
 		}
 		add_core_of = UNC
 		victory_points = {
@@ -17,7 +18,7 @@ state={
 	}
 
 	provinces={
-		6971 6972 7116 7217 7218 7358 7550 7551 
+		6971 6972 7116 7217 7358 7550 7551 
 	}
 	manpower=2820000
 	buildings_max_level_factor=1.000

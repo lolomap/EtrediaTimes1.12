@@ -2,28 +2,30 @@
 state={
 	id=639
 	name="STATE_639"
-	manpower = 8120000
-	
-	state_category = town
-	
 	resources={
-        chromium = 12 # was: 12
+		chromium=12.000
 	}
 
 	history={
 		owner = GAR
 		buildings = {
 			infrastructure = 2
-                        industrial_complex = 1
-                        arms_factory = 1
+			industrial_complex = 1
+			arms_factory = 1
+
 		}
 		add_core_of = GAR
 		victory_points = {
-			4225 10
+			4225 10 
 		}
 
 	}
+
 	provinces={
-		3801 3838 3878 3925 3982 4069 4087 4095 4096 4180 4225 4312 4339 4410 4457 4473 4525 4693 
+		3801 3838 3878 3925 3982 4069 4087 4095 4096 4180 4225 4312 4339 4410 4473 4693 4728 
 	}
+	manpower=8120000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }

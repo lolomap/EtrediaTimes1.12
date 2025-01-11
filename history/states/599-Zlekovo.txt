@@ -2,27 +2,29 @@
 state={
 	id=599
 	name="STATE_599"
-	manpower = 2670000
-	
-	state_category = town
-	
 	resources={
-		aluminium = 24 # was: 32
+		aluminium=24.000
 	}
 
 	history={
 		owner = ZHE
 		buildings = {
 			infrastructure = 2
-                        industrial_complex = 2
+			industrial_complex = 2
+
 		}
 		add_core_of = ZHE
 		victory_points = {
-			3789 5
+			3789 5 
 		}
 
 	}
+
 	provinces={
-		3686 3694 3727 3789 3803 3813 3837 3845 3857 3898 3978 4003 4104 4235 
+		3727 3780 3789 3803 3813 3837 3857 3898 3978 3995 4003 4104 
 	}
+	manpower=2670000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }

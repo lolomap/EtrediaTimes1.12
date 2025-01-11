@@ -219,9 +219,9 @@ ideologies = {
 			justify_war_goal_when_in_major_war_time = -0.10
 		    puppet_cost_factor = -0.1
 			civilian_intel_to_others = 15.0
-			army_intel_to_others = 5.0
+			army_intel_to_others = 8.0
 			navy_intel_to_others = 5.0
-			airforce_intel_to_others = 10.0
+			airforce_intel_to_others = 8.0
 		}
 		
 		faction_modifiers = {

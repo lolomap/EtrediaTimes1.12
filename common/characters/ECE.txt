@@ -31,7 +31,7 @@ characters={
 		name=ECE_Disorn_Tangwongsan
 		portraits={
 			civilian={
-				large="gfx/leaders/ECE/portrait_ece_mop.dds"
+				large="gfx/leaders/ECE/portrait_ece_neutrality_1.dds"
 			}
 		}
 		country_leader={

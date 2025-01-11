@@ -1,0 +1,156 @@
+GAR_external_politics = {
+	invasion_in_Permin = {
+		fire_only_once = no
+		cost = 50
+		visible = {
+			original_tag = GAR
+			country_exists = UNC
+			is_neighbor_of = UNC
+			UNC = { controls_state = 811 }
+			NOT = { GAR = { controls_state = 811 } }
+		}
+		available = {
+			GAR = { has_army_manpower  = { size > 90000 } }
+		}
+		days_re_enable = 360
+
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 640
+					num_provinces = 4
+					on_win = gar.1
+					on_lose = gar.2
+					modifier = 0.1
+				}
+				defender = {
+					state = 811
+					num_provinces = 4
+					on_win = gar.1
+					on_lose = gar.2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				UNC = { has_war = yes }
+			}
+		}
+	}
+	core_Permin = {
+		fire_only_once = yes
+		cost = 150
+		visible = {
+			original_tag = GAR
+			GAR = { controls_state = 811 }
+		}
+
+		complete_effect = {
+			GAR = { add_state_core = 811 }
+			UNC = { remove_state_core = 811 }
+			811 = { add_manpower = -450000 }
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	core_Lodjung = {
+		fire_only_once = yes
+		cost = 150
+		visible = {
+			original_tag = GAR
+			GAR = { controls_state = 635 }
+		}
+
+		complete_effect = {
+			GAR = { add_state_core = 635 }
+			635 = { add_manpower = -1100000 }
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	core_Zargong = {
+		fire_only_once = yes
+		cost = 150
+		visible = {
+			original_tag = GAR
+			GAR = { controls_state = 634 }
+		}
+
+		complete_effect = {
+			GAR = { add_state_core = 634 }
+			634 = { add_manpower = -1100000 }
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	invasion_in_Zargong = {
+		fire_only_once = yes
+		cost = 50
+		visible = {
+			original_tag = GAR
+			country_exists = ZOG
+			is_neighbor_of = ZOG
+		}
+		available = {
+			GAR = { has_army_manpower  = { size > 90000 } }
+		}
+
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = ZOG
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 5
+				has_army_manpower  = { size > 110000 }
+			}
+			modifier = {
+				factor = 100
+				ZOG = { has_war = yes }
+			}
+		}
+	}
+	invasion_in_Lodjung = {
+		fire_only_once = yes
+		cost = 50
+		visible = {
+			original_tag = GAR
+			country_exists = LOD
+			is_neighbor_of = LOD
+		}
+		available = {
+			GAR = { has_army_manpower  = { size > 90000 } }
+		}
+
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = LOD
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 5
+				has_army_manpower  = { size > 100000 }
+			}
+			modifier = {
+				factor = 5
+				has_army_manpower  = { size > 120000 }
+			}
+			modifier = {
+				factor = 100
+				LOD = { has_war = yes }
+			}
+		}
+	}
+}

@@ -50,3 +50,4 @@ set_popularities = {
 
 set_convoys = 0
 
+recruit_character = HGN_brijmohan_magar

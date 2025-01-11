@@ -8,7 +8,6 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
-
 		}
 		add_core_of = ZAZ
 		victory_points = {
@@ -18,7 +17,7 @@ state={
 	}
 
 	provinces={
-		4049 4130 4131 4224 4424 4441 4592 4656 4727 
+		4049 4085 4130 4131 4224 4424 4441 4592 4656 4727 4856 
 	}
 	manpower=3190000
 	buildings_max_level_factor=1.000

@@ -1,0 +1,26 @@
+
+state={
+	id=811
+	name="STATE_811"
+
+	history={
+		owner = UNC
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = UNC
+		add_claim_by = GAR
+		victory_points = {
+			6036 2
+		}
+
+	}
+
+	provinces={
+		5765 5819 5974 5975 6036 6105 6281 6428 6724 7007 
+	}
+	manpower=1900000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -2,22 +2,25 @@
 state={
 	id=597
 	name="STATE_597"
-	manpower = 1430000
-	
-	state_category = large_city
 
 	history={
 		owner = ZHE
 		buildings = {
 			infrastructure = 2
-}
+
+		}
 		add_core_of = ZHE
 		victory_points = {
-			3738 5
+			3738 10 
 		}
 
 	}
+
 	provinces={
-		3654 3664 3701 3702 3715 3716 3738 3739 3779 3784 3794 3812 3820 3855 3856 3870 3871 3935 
+		3608 3653 3654 3660 3664 3677 3678 3701 3702 3715 3716 3738 3739 3754 3777 3778 3779 3784 3794 3812 3820 3856 3870 3871 
 	}
+	manpower=1430000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
 }
