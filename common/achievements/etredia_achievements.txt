@@ -470,9 +470,13 @@ etredia_ach_34 = { #
 etredia_ach_35 = { #
 	possible = {
 		achievs_available = yes
-        tag = GKD
+        OR = {
+            tag = GKD
+            tag = IID
+        }
 	}
 	happened = {
+        tag = GKD
         is_in_faction = no
         OR = {
             IID = {is_subject_of = GKD}
@@ -487,9 +491,10 @@ etredia_ach_35 = { #
 etredia_ach_36 = { #
 	possible = {
 		achievs_available = yes
-        tag = FBU
+        tag = SBU
 	}
 	happened = {
+        tag = FBU
 		all_core_state = {
             is_controlled_by = FBU
         }
@@ -578,7 +583,10 @@ etredia_ach_38 = { #
 etredia_ach_39 = { #
 	possible = {
 		achievs_available = yes
-        tag = CTE
+        OR = {
+            tag = UCB
+            tag = CTE
+        }
 	}
 	happened = {
         all_state = {
