@@ -920,6 +920,22 @@ on_actions = {
 				}
 				SOL = {set_cosmetic_tag = SOL_WIN}
 			}
+
+			if = {
+				limit = {
+					FROM = {
+						tag = FSC
+					}
+					ROOT = {
+						tag = UCB
+					}
+					FSC = {
+						has_completed_focus = FSC_ortostan_ultimatum
+					}
+				}
+
+				UCB = {set_country_flag = unstable_ach}
+			}
 		}
 	}
 

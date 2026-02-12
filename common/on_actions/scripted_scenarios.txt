@@ -6,10 +6,10 @@ on_actions = {
                     FROM = {tag = FSC}
                     ROOT = {
                         OR = {
-                            tag = ANR
-                            tag = ORB
-                            tag = KLU
-                            tag = NER
+                            AND = {tag = ANR ANR = {is_subject = no}}
+                            AND = {tag = ORB ORB = {is_subject = no}}
+                            AND = {tag = KLU KLU = {is_subject = no}}
+                            AND = {tag = NER NER = {is_subject = no}}
                         }
                     }
                 }
